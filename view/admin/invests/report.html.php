@@ -228,7 +228,7 @@ foreach ($this['invests'] as $invest) {
             <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['first']['goteo'], 2) ?></td>
             <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['second']['goteo'], 2) ?></td>
             <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['total']['goteo'], 2) ?></td>
-            <td><?php echo Text::_("8% del neto"); ?></td>
+            <td><?php echo Text::_("8%% del neto"); ?></td>
         </tr>
         <tr>
             <?php
@@ -240,7 +240,7 @@ foreach ($this['invests'] as $invest) {
             <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['first']['project'], 2) ?></td>
             <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['second']['project'], 2) ?></td>
             <td style="text-align:right;"><?php echo \amount_format($Data['tpv']['total']['project'], 2) ?></td>
-            <td><?php echo Text::_("92% del neto"); ?></td>
+            <td><?php echo Text::_("92%% del neto"); ?></td>
         </tr>
     </table>
 <?php endif; ?>
@@ -298,7 +298,7 @@ foreach ($this['invests'] as $invest) {
             <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['goteo'], 2) ?></td>
             <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['goteo'], 2) ?></td>
             <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['goteo'], 2) ?></td>
-            <td><?php echo Text::_("8% de las operaciones correctas"); ?></td>
+            <td><?php echo Text::_("8%% de las operaciones correctas"); ?></td>
         </tr>
         <tr>
             <?php
@@ -310,7 +310,7 @@ foreach ($this['invests'] as $invest) {
             <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['project'], 2) ?></td>
             <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['project'], 2) ?></td>
             <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['project'], 2) ?></td>
-            <td><?php echo Text::_("92% de las operaciones correctas"); ?></td>
+            <td><?php echo Text::_("92%% de las operaciones correctas"); ?></td>
         </tr>
         <tr>
             <?php
@@ -322,7 +322,7 @@ foreach ($this['invests'] as $invest) {
             <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['fee_goteo'], 2) ?></td>
             <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['fee_goteo'], 2) ?></td>
             <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['fee_goteo'], 2) ?></td>
-            <td><?php echo Text::_("0,35 por operacion + 3,4% del importe de goteo (8% del correcto)"); ?></td>
+            <td><?php echo Text::_("0,35 por operacion + 3,4%% del importe de goteo (8%% del correcto)"); ?></td>
         </tr>
         <tr>
             <?php
@@ -334,7 +334,7 @@ foreach ($this['invests'] as $invest) {
             <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['first']['fee_project'], 2) ?></td>
             <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['second']['fee_project'], 2) ?></td>
             <td style="text-align:right;"><?php echo \amount_format($Data['paypal']['total']['fee_project'], 2) ?></td>
-            <td><?php echo Text::_("0,35 por operacion + 3,4% del importe del proyecto (8% del correcto)"); ?></td>
+            <td><?php echo Text::_("0,35 por operacion + 3,4%% del importe del proyecto (8%% del correcto)"); ?></td>
         </tr>
         <tr>
             <?php

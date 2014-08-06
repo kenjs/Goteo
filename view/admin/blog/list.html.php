@@ -37,12 +37,12 @@ $pagedResults = new \Paginated($this['posts'], 10, isset($_GET['page']) ? $_GET[
 ?>
 <a href="/admin/blog/add" class="button"><?php echo Text::_("Nueva entrada"); ?></a>
 &nbsp;&nbsp;&nbsp;
-<a href="/admin/blog/reorder" class="button">Ordenar la portada</a>
+<a href="/admin/blog/reorder" class="button"><?php echo Text::_("Ordenar la portada"); ?></a>
 
 <div class="widget board">
     <form id="filter-form" action="/admin/blog" method="get">
         <div style="float:left;margin:5px;">
-            <label for="show-filter">Mostrar:</label><br />
+            <label for="show-filter"><?php echo Text::_("Mostrar:"); ?></label><br />
             <select id="show-filter" name="show" onchange="document.getElementById('filter-form').submit();">
             <?php foreach ($this['show'] as $itemId=>$itemName) : ?>
                 <option value="<?php echo $itemId; ?>"<?php if ($filters['show'] == $itemId) echo ' selected="selected"';?>><?php echo $itemName; ?></option>
@@ -52,7 +52,7 @@ $pagedResults = new \Paginated($this['posts'], 10, isset($_GET['page']) ? $_GET[
 
         <?php if ($filters['show'] == 'updates') : ?>
         <div style="float:left;margin:5px;">
-            <label for="blog-filter">Del proyecto:</label><br />
+            <label for="blog-filter"><?php echo Text::_("Del proyecto:"); ?></label><br />
             <select id="blog-filter" name="blog" onchange="document.getElementById('filter-form').submit();">
                 <option value="">Cualquiera</option>
             <?php foreach ($this['blogs'] as $itemId=>$itemName) : ?>
@@ -64,7 +64,7 @@ $pagedResults = new \Paginated($this['posts'], 10, isset($_GET['page']) ? $_GET[
 
         <?php if ($filters['show'] == 'entries') : ?>
         <div style="float:left;margin:5px;">
-            <label for="blog-filter">Del nodo:</label><br />
+            <label for="blog-filter"><?php echo Text::_("Del nodo:"); ?></label><br />
             <select id="blog-filter" name="blog" onchange="document.getElementById('filter-form').submit();">
                 <option value="">Cualquiera</option>
             <?php foreach ($this['blogs'] as $itemId=>$itemName) : ?>
@@ -107,28 +107,28 @@ $pagedResults = new \Paginated($this['posts'], 10, isset($_GET['page']) ? $_GET[
                 <td><?php echo $post->user->name . ' (' . $post->owner_name . ')'; ?></td>
             </tr>
             <tr>
-                <td><a href="/blog/<?php echo $post->id; ?>?preview=<?php echo $_SESSION['user']->id ?>" target="_blank">[Ver]</a></td>
+                <td><a href="/blog/<?php echo $post->id; ?>?preview=<?php echo $_SESSION['user']->id ?>" target="_blank"><?php echo Text::_("[Ver]"); ?></a></td>
                 <td><?php if (($post->owner_type == 'node' && $post->owner_id == $node) || $node == \GOTEO_NODE) : ?>
-                    <a href="/admin/blog/edit/<?php echo $post->id; ?>">[Editar]</a>
+                    <a href="/admin/blog/edit/<?php echo $post->id; ?>"><?php echo Text::_("[Editar]"); ?></a>
                 <?php endif; ?></td>
                 <td><?php if (isset($this['homes'][$post->id])) {
-                        echo '<a href="/admin/blog/remove_home/'.$post->id.'" style="color:red;">[Quitar de portada]</a>';
+                        echo '<a href="/admin/blog/remove_home/'.$post->id.'" style="color:red;">' . Text::_("[Quitar de portada]") . ' </a>';
                     } elseif ($post->publish) {
-                        echo '<a href="/admin/blog/add_home/'.$post->id.'" style="color:blue;">[Poner en portada]</a>';
+                        echo '<a href="/admin/blog/add_home/'.$post->id.'" style="color:blue;">' . Text::_("[Poner en portada]") . ' </a>';
                     } ?></td>
                 <td><?php if (empty($_SESSION['admin_node']) || $_SESSION['admin_node'] == \GOTEO_NODE) {
                         if (isset($this['footers'][$post->id])) {
-                            echo '<a href="/admin/blog/remove_footer/'.$post->id.'" style="color:red;">[Quitar del footer]</a>';
+                            echo '<a href="/admin/blog/remove_footer/'.$post->id.'" style="color:red;">' . Text::_("[Quitar del footer]") . ' </a>';
                         } elseif ($post->publish) {
-                            echo '<a href="/admin/blog/add_footer/'.$post->id.'" style="color:blue;">[Poner en footer]</a>';
+                            echo '<a href="/admin/blog/add_footer/'.$post->id.'" style="color:blue;">' . Text::_("[Poner en footer]") . ' </a>';
                         }
                     } ?></td>
                 <td>
-                <?php if ($translator && $node == \GOTEO_NODE) : ?><a href="/translate/post/edit/<?php echo $post->id; ?>" >[Traducir]</a><?php endif; ?>
-                <?php if ($node != \GOTEO_NODE && $transNode && ($post->owner_type == 'node' && $post->owner_id == $node)) : ?><a href="/translate/node/<?php echo $node ?>/post/edit/<?php echo $post->id; ?>" target="_blank">[Traducir]</a><?php endif; ?>
+                <?php if ($translator && $node == \GOTEO_NODE) : ?><a href="/translate/post/edit/<?php echo $post->id; ?>" ><?php echo Text::_("[Traducir]"); ?></a><?php endif; ?>
+                <?php if ($node != \GOTEO_NODE && $transNode && ($post->owner_type == 'node' && $post->owner_id == $node)) : ?><a href="/translate/node/<?php echo $node ?>/post/edit/<?php echo $post->id; ?>" target="_blank"><?php echo Text::_("[Traducir]"); ?></a><?php endif; ?>
                 </td>
                 <td><?php if (!$post->publish && (($post->owner_type == 'node' && $post->owner_id == $_SESSION['admin_node']) || !isset($_SESSION['admin_node']))) : ?>
-                    <a href="/admin/blog/remove/<?php echo $post->id; ?>" onclick="return confirm('Seguro que deseas eliminar este registro?');">[Eliminar]</a>
+                    <a href="/admin/blog/remove/<?php echo $post->id; ?>" onclick="return confirm('Seguro que deseas eliminar este registro?');"><?php echo Text::_("[Eliminar]"); ?></a>
                 <?php endif; ?></td>
                 <td></td>
             </tr>
@@ -144,5 +144,5 @@ $pagedResults = new \Paginated($this['posts'], 10, isset($_GET['page']) ? $_GET[
         echo $pagedResults->fetchPagedNavigation(str_replace('?', '&', $the_filters)); ?>
 </ul>
 <?php else : ?>
-<p>No se han encontrado registros</p>
+<p><?php echo Text::_("No se han encontrado registros"); ?></p>
 <?php endif; ?>

@@ -62,7 +62,7 @@ $filters = $this['filters'];
         </div>
         <?php endforeach; ?>
         <div style="float:left;margin:5px;">
-            <label for="date-filter-from">Fecha desde</label><br />
+            <label for="date-filter-from"><?php echo Text::_("Fecha desde"); ?></label><br />
             <input type="text" id ="date-filter-from" name="date_from" value ="" />
         </div>
         <div style="float:left;margin:5px;">
@@ -74,7 +74,7 @@ $filters = $this['filters'];
         </div>
     </form>
     <br clear="both" />
-    <a href="/admin/accounts">Quitar filtros</a>
+    <a href="/admin/accounts"><?php echo Text::_("Quitar filtros"); ?></a>
 </div>
 
 <div class="widget board">
@@ -125,6 +125,6 @@ $filters = $this['filters'];
 
     </table>
 <?php else : ?>
-    <p>No hay transacciones que cumplan con los filtros.</p>
+    <p><? echo Text::_("No hay transacciones que cumplan con los filtros."); ?></p>
 <?php endif;?>
 </div>
