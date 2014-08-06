@@ -20,7 +20,7 @@
 
 use Goteo\Library\Page;
 
-$pages = Page::getAll($_SESSION['translator_lang']);
+$pages = Page::getAll($_SESSION['translate_lang']);
 ?>
 <div class="widget board">
     <table>
