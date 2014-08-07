@@ -49,13 +49,13 @@ $admins = Home::_admins();
  */ ?>
 <?php if ($node != \GOTEO_NODE) : ?>
 <div class="widget board" style="width:350px; float:left; margin-right: 5px;">
-    <h4 class="title">Laterales</h4>
+    <h4 class="title"><?php echo Text::_('Laterales'); ?></h4>
     <?php if (!empty($side_items)) : ?>
     <table>
         <thead>
             <tr>
-                <th>Posición</th> <!-- order -->
-                <th>Elemento</th> <!-- item -->
+                <th><?php echo Text::_('Posición'); ?></th> <!-- order -->
+                <th><?php echo Text::_('Elemento'); ?></th> <!-- item -->
                 <th><!-- Subir --></th>
                 <th><!-- Bajar --></th>
                 <th><!-- Quitar--></th>
@@ -74,7 +74,7 @@ $admins = Home::_admins();
                 ?></td>
                 <td><a href="/admin/home/up/<?php echo $item->item; ?>/side">[&uarr;]</a></td>
                 <td><a href="/admin/home/down/<?php echo $item->item; ?>/side">[&darr;]</a></td>
-                <td><a href="/admin/home/remove/<?php echo $item->item; ?>/side">[Quitar]</a></td>
+                <td><a href="/admin/home/remove/<?php echo $item->item; ?>/side">[<?php echo Text::_("Quitar"); ?>]</a></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
@@ -91,7 +91,7 @@ $admins = Home::_admins();
     <input type="hidden" name="order" value="<?php echo $side_new->order ?>" />
 
     <p>
-        <label for="home-item">Nuevo elemento:</label><br />
+        <label for="home-item"><?php echo Text::_('Nuevo elemento'); ?>:</label><br />
         <select id="home-item" name="item">
         <?php foreach ($side_availables as $item=>$name) : ?>
             <option value="<?php echo $item; ?>"><?php echo $name; ?></option>
@@ -107,13 +107,13 @@ $admins = Home::_admins();
 </div>
 <?php endif; ?>
 <div class="widget board" <?php if ($node != \GOTEO_NODE) : ?>style="width:350px; float:left;"<?php endif; ?>>
-    <h4 class="title">Central</h4>
+    <h4 class="title"><?php echo Text::_('Central'); ?></h4>
     <?php if (!empty($items)) : ?>
     <table>
         <thead>
             <tr>
-                <th>Posición</th> <!-- order -->
-                <th>Elemento</th> <!-- item -->
+                <th><?php echo Text::_('Posición'); ?></th> <!-- order -->
+                <th><?php echo Text::_('Elemento'); ?></th> <!-- item -->
                 <th><!-- Subir --></th>
                 <th><!-- Bajar --></th>
                 <th><!-- Quitar--></th>
@@ -132,7 +132,7 @@ $admins = Home::_admins();
                 ?></td>
                 <td><a href="/admin/home/up/<?php echo $item->item; ?>/main">[&uarr;]</a></td>
                 <td><a href="/admin/home/down/<?php echo $item->item; ?>/main">[&darr;]</a></td>
-                <td><a href="/admin/home/remove/<?php echo $item->item; ?>/main">[Quitar]</a></td>
+                <td><a href="/admin/home/remove/<?php echo $item->item; ?>/main">[<?php echo Text::_("Quitar"); ?>]</a></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
@@ -149,7 +149,7 @@ $admins = Home::_admins();
     <input type="hidden" name="order" value="<?php echo $new->order ?>" />
 
     <p>
-        <label for="home-item">Nuevo elemento:</label><br />
+        <label for="home-item"><?php echo Text::_('Nuevo elemento'); ?>:</label><br />
         <select id="home-item" name="item">
         <?php foreach ($availables as $item=>$name) : ?>
             <option value="<?php echo $item; ?>"><?php echo $name; ?></option>

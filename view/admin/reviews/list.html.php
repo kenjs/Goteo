@@ -26,7 +26,7 @@ $filters = $this['filters'];
 <div class="widget board">
 <form id="filter-form" action="/admin/reviews" method="get">
    
-    <label for="project-filter">Del proyecto:</label>
+    <label for="project-filter"><?php echo Text::_('Del proyecto'); ?>:</label>
     <select id="project-filter" name="project" onchange="document.getElementById('filter-form').submit();">
         <option value="">--</option>
         <?php foreach ($this['projects'] as $projId=>$projName) : ?>
@@ -36,17 +36,17 @@ $filters = $this['filters'];
 
     <br />
 
-    <label for="status-filter">Mostrar por estado:</label>
+    <label for="status-filter"><?php echo Text::_('Mostrar por estado'); ?>:</label>
     <select id="status-filter" name="status" onchange="document.getElementById('filter-form').submit();">
-        <option value="">Todas</option>
+        <option value=""><?php echo Text::_('Todas'); ?></option>
     <?php foreach ($this['status'] as $statusId=>$statusName) : ?>
         <option value="<?php echo $statusId; ?>"<?php if ($filters['status'] == $statusId) echo ' selected="selected"';?>><?php echo $statusName; ?></option>
     <?php endforeach; ?>
     </select>
 
-    <label for="checker-filter">Asignados a:</label>
+    <label for="checker-filter"><?php echo Text::_('Asignados a'); ?>:</label>
     <select id="checker-filter" name="checker" onchange="document.getElementById('filter-form').submit();">
-        <option value="">De todos</option>
+        <option value=""><?php echo Text::_('De todos'); ?></option>
     <?php foreach ($this['checkers'] as $checker) : ?>
         <option value="<?php echo $checker->id; ?>"<?php if ($filters['checker'] == $checker->id) echo ' selected="selected"';?>><?php echo $checker->name; ?></option>
     <?php endforeach; ?>
@@ -60,10 +60,10 @@ $filters = $this['filters'];
             <table>
                 <thead>
                     <tr>
-                        <th width="30%">Proyecto</th> <!-- edit -->
-                        <th width="20%">Creador</th> <!-- mailto -->
+                        <th width="30%"><?php echo Text::_("Proyecto"); ?></th> <!-- edit -->
+                        <th width="20%"><?php echo Text::_("Creador"); ?></th> <!-- mailto -->
                         <th width="5%">%</th> <!-- segun estado -->
-                        <th width="5%">Puntos</th> <!-- segun estado -->
+                        <th width="5%"><?php echo Text::_('Puntos'); ?></th> <!-- segun estado -->
                         <th>
                             <!-- Iniciar revision si no tiene registro de revision -->
                             <!-- Editar si tiene registro -->
@@ -80,19 +80,19 @@ $filters = $this['filters'];
                         <td><?php echo $project->progress; ?></td>
                         <td><?php echo $project->score . ' / ' . $project->max; ?></td>
                         <?php if (!empty($project->review)) : ?>
-                        <td><a href="/admin/reviews/edit/<?php echo $project->project; ?>">[Editar]</a></td>
-                        <td><a href="/admin/reviews/report/<?php echo $project->project; ?>" target="_blank">[Ver informe]</a></td>
+                        <td><a href="/admin/reviews/edit/<?php echo $project->project; ?>">[<?php echo Text::_("Editar"); ?>]</a></td>
+                        <td><a href="/admin/reviews/report/<?php echo $project->project; ?>" target="_blank">[<?php echo Text::_("Ver informe"); ?>]</a></td>
                             <?php if ( $project->status > 0 ) : ?>
-                        <td><a href="/admin/reviews/close/<?php echo $project->review; ?>">[Cerrar]</a></td>
+                        <td><a href="/admin/reviews/close/<?php echo $project->review; ?>">[<?php echo Text::_("Cerrar"); ?>]</a></td>
                             <?php else : ?>
-                        <td>Revisión cerrada</td>
+                        <td><?php echo Text::_('Revisión cerrada'); ?></td>
                             <?php endif; ?>
                         <?php else : ?>
-                        <td><a href="/admin/reviews/add/<?php echo $project->project; ?>">[Iniciar revision]</a></td>
+                        <td><a href="/admin/reviews/add/<?php echo $project->project; ?>">[<?php echo Text::_("Iniciar revision"); ?>]</a></td>
                         <td></td>
                         <?php endif; ?>
-                        <td><?php if ($project->translate) : ?><a href="<?php echo "/admin/translates/edit/{$project->project}"; ?>">[Ir a traducción]</a>
-                        <?php else : ?><a href="<?php echo "/admin/translates/add/?project={$project->project}"; ?>">[Habilitar traducción]</a><?php endif; ?></td>
+                        <td><?php if ($project->translate) : ?><a href="<?php echo "/admin/translates/edit/{$project->project}"; ?>">[<?php echo Text::_("Ir a traducción"); ?>]</a>
+                        <?php else : ?><a href="<?php echo "/admin/translates/add/?project={$project->project}"; ?>">[<?php echo Text::_("Habilitar traducción"); ?>]</a><?php endif; ?></td>
 
 
                     </tr>
@@ -103,17 +103,17 @@ $filters = $this['filters'];
             <?php if (!empty($project->review)) : ?>
             <table>
                 <tr>
-                    <th>Revisor</th>
-                    <th>Puntos</th>
-                    <th>Listo</th>
+                    <th><?php echo Text::_('Revisor'); ?></th>
+                    <th><?php echo Text::_('Puntos'); ?></th>
+                    <th><?php echo Text::_('Listo'); ?></th>
                     <th></th>
                 </tr>
                 <?php foreach ($project->checkers as $user=>$checker) : ?>
                 <tr>
                     <td><?php echo $checker->name; ?></td>
                     <td><?php echo $checker->score . '/' . $checker->max; ?></td>
-                    <td><?php if ($checker->ready) : ?>Listo <a href="/admin/reviews/unready/<?php echo $project->review; ?>/?user=<?php echo $user; ?>">[Reabrir]</a><?php endif ?></td>
-                    <td><a href="/admin/reviews/unassign/<?php echo $project->review; ?>/?user=<?php echo $user; ?>">[Desasignar]</a></td>
+                    <td><?php if ($checker->ready) : ?><?php echo Text::_('Listo '); ?><a href="/admin/reviews/unready/<?php echo $project->review; ?>/?user=<?php echo $user; ?>">[<?php echo Text::_("Reabrir"); ?>]</a><?php endif ?></td>
+                    <td><a href="/admin/reviews/unassign/<?php echo $project->review; ?>/?user=<?php echo $user; ?>">[<?php echo Text::_("Desasignar"); ?>]</a></td>
                 </tr>
                 <?php endforeach; ?>
                 <?php if ($project->status > 0) : ?>
@@ -121,7 +121,7 @@ $filters = $this['filters'];
                     <form id="form-assign-<?php echo $project->review; ?>" action="/admin/reviews/assign/<?php echo $project->review; ?>/" method="get">
                     <td colspan="2">
                         <select name="user">
-                            <option value="">Selecciona un nuevo revisor</option>
+                            <option value=""><?php echo Text::_('Selecciona un nuevo revisor'); ?></option>
                             <?php foreach ($this['checkers'] as $user) :
                                 if (in_array($user->id, array_keys($project->checkers))) continue;
                                 ?>
@@ -129,7 +129,7 @@ $filters = $this['filters'];
                             <?php endforeach; ?>
                         </select>
                     </td>
-                    <td><a href="#" onclick="document.getElementById('form-assign-<?php echo $project->review; ?>').submit(); return false;">[Asignar]</a></td>
+                    <td><a href="#" onclick="document.getElementById('form-assign-<?php echo $project->review; ?>').submit(); return false;">[<?php echo Text::_("Asignar"); ?>]</a></td>
                     </form>
                 </tr>
                 <?php endif; ?>
@@ -139,5 +139,5 @@ $filters = $this['filters'];
         </div>
     <?php endforeach; ?>
 <?php else : ?>
-<p>No se han encontrado registros</p>
+<p><?php echo Text::_("No se han encontrado registros"); ?></p>
 <?php endif; ?>

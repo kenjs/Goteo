@@ -36,16 +36,16 @@ use Goteo\Library\Text;
             <?php endforeach; ?>
         </select>
 <br />
-        <label for="license-name">Nombre:</label><br />
+        <label for="license-name"><?php echo Text::_('Nombre'); ?>:</label><br />
         <input type="text" name="name" id="license-name" value="<?php echo $this['license']->name; ?>" />
 <br />
-        <label for="license-description">Texto tooltip:</label><br />
+        <label for="license-description"><?php echo Text::_('Texto tooltip'); ?>:</label><br />
         <textarea name="description" id="license-description" cols="60" rows="10"><?php echo $this['license']->description; ?></textarea>
 <br />
-        <label for="license-url">Url:</label><br />
+        <label for="license-url"><?php echo Text::_('Url'); ?>:</label><br />
         <input type="text" name="url" id="license-url" value="<?php echo $this['license']->url; ?>" />
 <br />
-        <label for="license-icons">Tipos:</label><br />
+        <label for="license-icons"><?php echo Text::_('Tipos'); ?>:</label><br />
         <select id="license-icons" name="icons[]" multiple size="6">
             <?php foreach ($this['icons'] as $icon) : ?>
             <option value="<?php echo $icon->id; ?>"<?php if (in_array($icon->id, $this['license']->icons)) echo ' selected="selected"'; ?>><?php echo $icon->name; ?></option>

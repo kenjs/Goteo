@@ -34,7 +34,7 @@ $users = $this['users'];
     <p><?php echo Text::_("Buscábamos comunicarnos con ") . $_SESSION['mailing']['filters_txt']; ?><?php echo Text::_(" y finalmente hemos enviado a los siguientes destinatarios: "); ?></p>
         <blockquote><?php foreach ($users as $usr) {
                 echo $receivers[$usr]->ok ? Text::_("Enviado a ") : Text::_("Fallo al enviar a ");
-                echo '<strong>' .$receivers[$usr]->name . '</strong> ('.$receivers[$usr]->id.') <?php echo Text::_("al mail "); ?><strong>' . $receivers[$usr]->email . '</strong><br />';
+                echo '<strong>' .$receivers[$usr]->name . '</strong> ('.$receivers[$usr]->id.')' . Text::_("al mail ") . '<strong>' . $receivers[$usr]->email . '</strong><br />';
         } ?></blockquote>
 </div>
 

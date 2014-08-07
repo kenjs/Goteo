@@ -27,21 +27,21 @@ $nodes = $this['nodes'];
     <form action="/admin/tasks/<?php echo ($this['action'] == 'add') ? 'add' : 'edit/'.$task->id ?>" method="post">
         <input type="hidden" name="node" value="<?php echo \GOTEO_NODE; ?>" />
         <p>
-            <label for="task-text">Explicación:</label><br />
+            <label for="task-text"><?php echo Text::_('Explicación'); ?>:</label><br />
             <textarea id="task-text" name="text" style="width:500px;height:200px;" ><?php echo $task->text ?></textarea>
         </p>
         <p>
-            <label for="task-url">Url:</label><br />
+            <label for="task-url"><?php echo Text::_('Url'); ?>:</label><br />
             <input type="text" id="task-url" name="url" value="<?php echo $task->url ?>" style="width:500px" />
         </p>
 
         <p>
-            <label>Estado:</label><br />
+            <label><?php echo Text::_('Estado'); ?>:</label><br />
             <?php if (empty($task->done)) : ?>
-            <span style="color:red;" >PENDIENTE</span>
+            <span style="color:red;" ><?php echo Text::_('PENDIENTE'); ?></span>
             <?php else : ?>
-            <span style="color:green;" >Realizada por:</span> <strong><?php echo $task->user->name; ?></strong><br />
-            <label><input type="checkbox" name="undone" value="1" />Reabrirla</label>
+            <span style="color:green;" ><?php echo Text::_('Realizada por'); ?>:</span> <strong><?php echo $task->user->name; ?></strong><br />
+            <label><input type="checkbox" name="undone" value="1" /><?php echo Text::_('Reabrirla'); ?></label>
             <?php endif; ?>
         </p>
 

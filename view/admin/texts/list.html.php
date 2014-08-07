@@ -24,8 +24,8 @@ use Goteo\Library\Text,
 $translator = ACL::check('/translate') ? true : false;
 $filters = $this['filters'];
 $botones = array(
-    'edit' => '[Editar]',
-    'remove' => '[Quitar]',
+    'edit' => '[' . Text::_('Editar') . ']',
+    'remove' => '[' . Text::_('Quitar') . ']',
     'up' => '[&uarr;]',
     'down' => '[&darr;]'
 );
@@ -65,25 +65,25 @@ $per = 100 / $cols;
 <!-- lista -->
 <div class="widget board">
     <?php if ($filters['filtered'] != 'yes') : ?>
-        <p>Es necesario poner algun filtro, hay demasiados registros!</p>
+        <p><?php echo Text::_("Es necesario poner algun filtro, hay demasiados registros!"); ?></p>
     <?php elseif (!empty($this['data'])) : ?>
         <table>
             <thead>
             <tr>
                 <th><!-- Editar --></th>
-                <th>Texto</th>
-                <th>Agrupación</th>
+                <th><?php echo Text::_('Texto'); ?></th>
+                <th><?php echo Text::_('Agrupación'); ?></th>
                 <th><!-- Traducir --></th>
             </tr>
             </thead>
             <tbody>
             <?php foreach ($this['data'] as $item) : ?>
                 <tr>
-                    <td><a href="/admin/texts/edit/<?php echo $item->id; ?>">[Editar]</a></td>
+                    <td><a href="/admin/texts/edit/<?php echo $item->id; ?>">[<?php echo Text::_("Editar"); ?>]</a></td>
                     <td><?php echo $item->text; ?></td>
                     <td><?php echo $item->group; ?></td>
                     <?php if ($translator) : ?>
-                        <td><a href="/translate/texts/edit/<?php echo $item->id; ?>" >[Traducir]</a></td>
+                        <td><a href="/translate/texts/edit/<?php echo $item->id; ?>" >[<?php echo Text::_("Traducir"); ?>]</a></td>
                     <?php endif; ?>
                 </tr>
             <?php endforeach; ?>
@@ -92,6 +92,6 @@ $per = 100 / $cols;
     <?php else :
         //var_dump($this);
         ?>
-        <p>No se han encontrado registros</p>
+        <p><?php echo Text::_("No se han encontrado registros"); ?></p>
     <?php endif; ?>
 </div>

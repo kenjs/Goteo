@@ -51,41 +51,41 @@ foreach ($filters as $key=>$value) {
 
 $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] : 1);
 ?>
-<a href="/admin/users/add" class="button">Crear usuario</a>
+<a href="/admin/users/add" class="button"><?php echo Text::_('Crear usuario'); ?></a>
 
 <div class="widget board">
     <form id="filter-form" action="/admin/users" method="get">
         <table>
             <tr>
                 <td>
-                    <label for="role-filter">Con rol:</label><br />
+                    <label for="role-filter"><?php echo Text::_('Con rol'); ?>:</label><br />
                     <select id="role-filter" name="role" onchange="document.getElementById('filter-form').submit();">
-                        <option value="">Cualquier rol</option>
+                        <option value=""><?php echo Text::_('Cualquier rol'); ?></option>
                     <?php foreach ($this['roles'] as $roleId=>$roleName) : ?>
                         <option value="<?php echo $roleId; ?>"<?php if ($filters['role'] == $roleId) echo ' selected="selected"';?>><?php echo $roleName; ?></option>
                     <?php endforeach; ?>
                     </select>
                 </td>
                 <td>
-                    <label for="interest-filter">Mostrar usuarios interesados en:</label><br />
+                    <label for="interest-filter"><?php echo Text::_('Mostrar usuarios interesados en'); ?>:</label><br />
                     <select id="interest-filter" name="interest" onchange="document.getElementById('filter-form').submit();">
-                        <option value="">Cualquier interés</option>
+                        <option value=""><?php echo Text::_('Cualquier interés'); ?></option>
                     <?php foreach ($this['interests'] as $interestId=>$interestName) : ?>
                         <option value="<?php echo $interestId; ?>"<?php if ($filters['interest'] == $interestId) echo ' selected="selected"';?>><?php echo $interestName; ?></option>
                     <?php endforeach; ?>
                     </select>
                 </td>
                 <td>
-                    <label for="role-filter">Mostrar usuarios con rol:</label><br />
+                    <label for="role-filter"><?php echo Text::_('Mostrar usuarios con rol'); ?>:</label><br />
                     <select id="role-filter" name="role" onchange="document.getElementById('filter-form').submit();">
-                        <option value="">Cualquier rol</option>
+                        <option value=""><?php echo Text::_('Cualquier rol'); ?></option>
                     <?php foreach ($this['roles'] as $roleId=>$roleName) : ?>
                         <option value="<?php echo $roleId; ?>"<?php if ($filters['role'] == $roleId) echo ' selected="selected"';?>><?php echo $roleName; ?></option>
                     <?php endforeach; ?>
                     </select>
                 </td>
                 <td colspan="2">
-                    <label for="name-filter">Por nombre o email:</label><br />
+                    <label for="name-filter"><?php echo Text::_('Por nombre o email'); ?>:</label><br />
                     <input id="name-filter" name="name" value="<?php echo $filters['name']; ?>" />
                 </td>
             </tr>
@@ -94,7 +94,7 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
                     <input type="submit" name="filter" value="Buscar">
                 </td>
                 <td>
-                    <label for="order-filter">Ver por:</label><br />
+                    <label for="order-filter"><?php echo Text::_('Ver por'); ?>:</label><br />
                     <select id="order-filter" name="order" onchange="document.getElementById('filter-form').submit();">
                     <?php foreach ($this['orders'] as $orderId=>$orderName) : ?>
                         <option value="<?php echo $orderId; ?>"<?php if ($filters['order'] == $orderId) echo ' selected="selected"';?>><?php echo $orderName; ?></option>
@@ -106,22 +106,22 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
 
     </form>
     <br clear="both" />
-    <a href="/admin/users/?reset=filters">Quitar filtros</a>
+    <a href="/admin/users/?reset=filters"><?php echo Text::_("Quitar filtros"); ?></a>
 </div>
 
 <div class="widget board">
 <?php if ($filters['filtered'] != 'yes') : ?>
-    <p>Es necesario poner algun filtro, hay demasiados registros!</p>
+    <p><?php echo Text::_("Es necesario poner algun filtro, hay demasiados registros!"); ?></p>
 <?php elseif (!empty($users)) : ?>
     <table>
         <thead>
             <tr>
-                <th>Alias</th> <!-- view profile -->
-                <th>User</th>
-                <th>Email</th>
-                <th>Proyectos</th>
-                <th>Cantidad</th>
-                <th>Alta</th>
+                <th><?php echo Text::_('Alias'); ?></th> <!-- view profile -->
+                <th><?php echo Text::_('User'); ?></th>
+                <th><?php echo Text::_('Email'); ?></th>
+                <th><?php echo Text::_('Proyectos'); ?></th>
+                <th><?php echo Text::_('Cantidad'); ?></th>
+                <th><?php echo Text::_('Alta'); ?></th>
             </tr>
         </thead>
 
@@ -138,12 +138,12 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
                 <td><?php echo $user->register_date; ?></td>
             </tr>
             <tr>
-                <td><a href="/admin/users/manage/<?php echo $user->id; ?>" title="Gestionar">[Gestionar]</a></td>
+                <td><a href="/admin/users/manage/<?php echo $user->id; ?>" title="Gestionar">[<?php echo Text::_("Gestionar"); ?>]</a></td>
                 <td><?php if ($user->nprojs > 0) {
                     if (!isset($_SESSION['admin_node']) || (isset($_SESSION['admin_node']) && $user->node == $_SESSION['admin_node'])) : ?>
-                <a href="/admin/accounts/?name=<?php echo $user->email; ?>" title="Ver sus aportes">[Aportes]</a>
+                <a href="/admin/accounts/?name=<?php echo $user->email; ?>" title="Ver sus aportes">[<?php echo Text::_("Aportes"); ?>]</a>
                 <?php else:  ?>
-                <a href="/admin/invests/?name=<?php echo $user->email; ?>" title="Ver sus aportes">[Aportes]</a>
+                <a href="/admin/invests/?name=<?php echo $user->email; ?>" title="Ver sus aportes">[<?php echo Text::_("Aportes"); ?>]</a>
                 <?php endif; } ?></td>
                 <td colspan="5" style="color:blue;">
                     <?php echo (!$user->active && $user->hide) ? ' Baja ' : ''; ?>
@@ -170,5 +170,5 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
         echo $pagedResults->fetchPagedNavigation($the_filters); ?>
 </ul>
 <?php else : ?>
-<p>No se han encontrado registros</p>
+<p><?php echo Text::_("No se han encontrado registros"); ?></p>
 <?php endif; ?>

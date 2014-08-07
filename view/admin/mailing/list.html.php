@@ -43,7 +43,7 @@ $filters = $_SESSION['mailing']['filters'];
                 <td>
                     <label for="status-filter"><?php echo Text::_("En estado"); ?></label><br />
                     <select id="status-filter" name="status">
-                        <option value="-1"<?php if ($filters['status'] == -1) echo ' selected="selected"';?>>Cualquier estado</option>
+                        <option value="-1"<?php if ($filters['status'] == -1) echo ' selected="selected"';?>><?php echo Text::_('Cualquier estado'); ?></option>
                     <?php foreach ($this['status'] as $statusId=>$statusName) : ?>
                         <option value="<?php echo $statusId; ?>"<?php if ($filters['status'] == $statusId) echo ' selected="selected"';?>><?php echo $statusName; ?></option>
                     <?php endforeach; ?>

@@ -51,7 +51,7 @@ jQuery(document).ready(function ($) {
                 <?php endforeach; ?>
             </select>
         <?php else : ?>
-            <label for="criteria-section">Sección: <?php echo $this['sections'][$this['criteria']->section]; ?></label><br />
+            <label for="criteria-section"><?php echo Text::_('Sección:'); ?>: <?php echo $this['sections'][$this['criteria']->section]; ?></label><br />
             <input type="hidden" name="section" value="<?php echo $this['criteria']->section; ?>" />
         <?php endif; ?>
         </p>

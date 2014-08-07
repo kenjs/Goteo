@@ -66,7 +66,7 @@ $filters = $this['filters'];
             <input type="text" id ="date-filter-from" name="date_from" value ="" />
         </div>
         <div style="float:left;margin:5px;">
-            <label for="date-filter-until">Fecha hasta</label><br />
+            <label for="date-filter-until"><?php echo Text::_('Fecha hasta'); ?></label><br />
             <input type="text" id ="date-filter-until" name="date_until" value ="<?php echo date('Y-m-d') ?>" />
         </div>
         <div style="float:left;margin:5px;">

@@ -54,7 +54,7 @@ $pagedResults = new \Paginated($this['posts'], 10, isset($_GET['page']) ? $_GET[
         <div style="float:left;margin:5px;">
             <label for="blog-filter"><?php echo Text::_("Del proyecto:"); ?></label><br />
             <select id="blog-filter" name="blog" onchange="document.getElementById('filter-form').submit();">
-                <option value="">Cualquiera</option>
+                <option value=""><?php echo Text::_('Cualquiera'); ?></option>
             <?php foreach ($this['blogs'] as $itemId=>$itemName) : ?>
                 <option value="<?php echo $itemId; ?>"<?php if ($filters['blog'] == $itemId) echo ' selected="selected"';?>><?php echo $itemName; ?></option>
             <?php endforeach; ?>
@@ -66,7 +66,7 @@ $pagedResults = new \Paginated($this['posts'], 10, isset($_GET['page']) ? $_GET[
         <div style="float:left;margin:5px;">
             <label for="blog-filter"><?php echo Text::_("Del nodo:"); ?></label><br />
             <select id="blog-filter" name="blog" onchange="document.getElementById('filter-form').submit();">
-                <option value="">Cualquiera</option>
+                <option value=""><?php echo Text::_('Cualquiera'); ?></option>
             <?php foreach ($this['blogs'] as $itemId=>$itemName) : ?>
                 <option value="<?php echo $itemId; ?>"<?php if ($filters['blog'] == $itemId) echo ' selected="selected"';?>><?php echo $itemName; ?></option>
             <?php endforeach; ?>
@@ -84,14 +84,14 @@ $pagedResults = new \Paginated($this['posts'], 10, isset($_GET['page']) ? $_GET[
                 <th><!-- published --></th>
                 <th colspan="6"><?php echo Text::_("Título"); ?></th> <!-- title -->
                 <th><?php echo Text::_("Fecha"); ?></th> <!-- date -->
-                <th>Autor</th>
+                <th><?php echo Text::_('Autor'); ?></th>
             </tr>
         </thead>
 
         <tbody>
             <?php while ($post = $pagedResults->fetchPagedRow()) : ?>
             <tr>
-                <td><?php if ($post->publish) echo '<strong style="color:#20b2b3;font-size:10px;">Publicada</sttrong>'; ?></td>
+                <td><?php if ($post->publish) echo '<strong style="color:#20b2b3;font-size:10px;">' . Text::_('Publicada') . '</sttrong>'; ?></td>
                 <td colspan="6"><?php
                         $style = '';
                         if (isset($this['homes'][$post->id]))
@@ -128,7 +128,7 @@ $pagedResults = new \Paginated($this['posts'], 10, isset($_GET['page']) ? $_GET[
                 <?php if ($node != \GOTEO_NODE && $transNode && ($post->owner_type == 'node' && $post->owner_id == $node)) : ?><a href="/translate/node/<?php echo $node ?>/post/edit/<?php echo $post->id; ?>" target="_blank"><?php echo Text::_("[Traducir]"); ?></a><?php endif; ?>
                 </td>
                 <td><?php if (!$post->publish && (($post->owner_type == 'node' && $post->owner_id == $_SESSION['admin_node']) || !isset($_SESSION['admin_node']))) : ?>
-                    <a href="/admin/blog/remove/<?php echo $post->id; ?>" onclick="return confirm('Seguro que deseas eliminar este registro?');"><?php echo Text::_("[Eliminar]"); ?></a>
+                    <a href="/admin/blog/remove/<?php echo $post->id; ?>" onclick="return confirm('<?php echo Text::_("Seguro que deseas eliminar este registro?"); ?>');"><?php echo Text::_("[Eliminar]"); ?></a>
                 <?php endif; ?></td>
                 <td></td>
             </tr>

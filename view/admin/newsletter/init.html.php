@@ -27,15 +27,15 @@ $link = SITE_URL.'/mail/'.base64_encode(md5(uniqid()).'¬any¬'.$mailing->mail).
 // mostrar enlace de si no ves y boton para activar
 ?>
 <div class="widget">
-    <p>La newsletter está lista para enviar con <a href="<?php echo $link; ?>" target="_blank">este contenido</a> a <?php echo $mailing->receivers ?> destinatarios.</p>
-    <p>Si todo está bien pulsar el botón para activar los envíos automáticos.<br /> <a href="/admin/newsletter/activate/<?php echo $mailing->id; ?>" class="button" onclick="return confirm('Se comenzará a enviar automáticamente')">ACTIVAR!</a></p>
+    <p><?php echo Text::_('La newsletter está lista para enviar con '); ?><a href="<?php echo $link; ?>" target="_blank"><?php echo Text::_('este contenido'); ?></a> a <?php echo $mailing->receivers ?> destinatarios.</p>
+    <p><?php echo Text::_('Si todo está bien pulsar el botón para activar los envíos automáticos.'); ?><br /> <a href="/admin/newsletter/activate/<?php echo $mailing->id; ?>" class="button" onclick="return confirm('<?php echo Text::_("Se comenzará a enviar automáticamente"); ?>')"><?php echo Text::_('ACTIVAR!'); ?>:</a></p>
 
-    <h3>Lista de destinatarios</h3>
+    <h3><?php echo Text::_('Lista de destinatarios'); ?></h3>
     <table>
         <tr>
-            <th>Email</th>
-            <th>Alias</th>
-            <th>Usuario</th>
+            <th><?php echo Text::_('Email'); ?></th>
+            <th><?php echo Text::_('Alias'); ?></th>
+            <th><?php echo Text::_('Usuario'); ?></th>
         </tr>
         <?php foreach ($this['receivers'] as $user) : ?>
         <tr>

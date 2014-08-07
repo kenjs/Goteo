@@ -83,7 +83,7 @@ $(document).ready(function(){
 				['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
 				['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
 				['Link','Unlink','Anchor'],
-                ['Image','Format','FontSize'],
+                ['Image','Format','FontSize']
 			  ],
 		skin: 'kama',
 		language: 'es',

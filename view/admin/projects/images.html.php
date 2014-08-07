@@ -47,11 +47,11 @@ function move (img, direction, section) {
 }
 </script>
 
-<a href="/admin/projects" class="button">Volver</a>
+<a href="/admin/projects" class="button"><?php echo Text::_('Volver'); ?></a>
 &nbsp;&nbsp;&nbsp;
-<a href="/project/<?php echo $project->id; ?>" class="button" target="_blank">Ver proyecto</a>
+<a href="/project/<?php echo $project->id; ?>" class="button" target="_blank"><?php echo Text::_('Ver proyecto'); ?></a>
 &nbsp;&nbsp;&nbsp;
-<a href="/project/edit/<?php echo $project->id; ?>" class="button" target="_blank">Editar proyecto</a>
+<a href="/project/edit/<?php echo $project->id; ?>" class="button" target="_blank"><?php echo Text::_('Editar proyecto'); ?></a>
 <div class="widget board">
     <?php if (!empty($images)) : ?>
     <form id="images_form" action="/admin/projects/images/<?php echo $project->id; ?>" method="post">
@@ -82,10 +82,10 @@ function move (img, direction, section) {
                 <td>
                     <table>
                         <tr>
-                            <td><label>Sección:<br /><?php echo the_section($image->section, $image->image, $sections); ?></label></td>
+                            <td><label><?php echo Text::_('Sección'); ?>:<br /><?php echo the_section($image->section, $image->image, $sections); ?></label></td>
                         </tr>
                         <tr>
-                            <td><label>Enlace:<br /><?php echo the_link($image->url, $image->image); ?></label></td>
+                            <td><label><?php echo Text::_('Enlace'); ?>:<br /><?php echo the_link($image->url, $image->image); ?></label></td>
                         </tr>
                     </table>
                 </td>
@@ -101,7 +101,7 @@ function move (img, direction, section) {
         <input type="submit" name="apply_changes" value="Aplicar" />
     </form>
     <?php else : ?>
-    <p>No se han encontrado registros</p>
+    <p><?php echo Text::_("No se han encontrado registros"); ?></p>
     <?php endif; ?>
 </div>
 <form id="sec_form" action="/admin/projects/image_section/<?php echo $project->id; ?>" method="post">

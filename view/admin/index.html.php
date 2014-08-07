@@ -97,7 +97,7 @@ include 'view/header.html.php';
                         <table>
                             <?php foreach ($this['tasks'] as $task) : ?>
                                 <tr>
-                                    <td><?php if (!empty($task->url)) { echo ' <a href="'.$task->url.'">[IR]</a>';} ?></td>
+                                    <td><?php if (!empty($task->url)) { echo ' <a href="'.$task->url.'">[' . Text::_("IR") . ']</a>';} ?></td>
                                     <td><?php echo $task->text; ?></td>
                                 </tr>
                             <?php endforeach; ?>
@@ -147,7 +147,7 @@ include 'view/header.html.php';
                             <?php endforeach; ?>
                         </div>
 
-                        <a href="/admin/recent/<?php echo isset($_GET['feed']) ? '?feed='.$_GET['feed'] : ''; ?>" style="margin-top:10px;float:right;text-transform:uppercase">Ver más</a>
+                        <a href="/admin/recent/<?php echo isset($_GET['feed']) ? '?feed='.$_GET['feed'] : ''; ?>" style="margin-top:10px;float:right;text-transform:uppercase"><?php echo Text::_('Ver más'); ?></a>
 
                     </div>
                 </div>

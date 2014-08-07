@@ -55,21 +55,21 @@ $filters = $this['filters'];
         <tbody>
             <?php foreach ($this['faqs'] as $faq) : ?>
             <tr>
-                <td><a href="/admin/faq/edit/<?php echo $faq->id; ?>">[Editar]</a></td>
+                <td><a href="/admin/faq/edit/<?php echo $faq->id; ?>">[<?php echo Text::_("Editar"); ?>]</a></td>
                 <td><?php echo $faq->title; ?></td>
                 <td><?php echo $faq->order; ?></td>
                 <td><a href="/admin/faq/up/<?php echo $faq->id; ?>">[&uarr;]</a></td>
                 <td><a href="/admin/faq/down/<?php echo $faq->id; ?>">[&darr;]</a></td>
                 <?php if ($translator) : ?>
-                <td><a href="/translate/faq/edit/<?php echo $faq->id; ?>" >[Traducir]</a></td>
+                <td><a href="/translate/faq/edit/<?php echo $faq->id; ?>" >[<?php echo Text::_("Traducir"); ?>]</a></td>
                 <?php endif; ?>
-                <td><a href="/admin/faq/remove/<?php echo $faq->id; ?>" onclick="return confirm('Seguro que deseas eliminar este registro?');">[Quitar]</a></td>
+                <td><a href="/admin/faq/remove/<?php echo $faq->id; ?>" onclick="return confirm('<?php echo Text::_("Seguro que deseas eliminar este registro?"); ?>');">[<?php echo Text::_("Quitar"); ?>]</a></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
 
     </table>
     <?php else : ?>
-    <p>No se han encontrado registros</p>
+    <p><?php echo Text::_("No se han encontrado registros"); ?></p>
     <?php endif; ?>
 </div>

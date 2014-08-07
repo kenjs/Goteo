@@ -32,19 +32,19 @@ array_walk($rewards, function (&$reward) { $reward = $reward->reward; });
 ?>
 <div class="widget">
     <p>
-        <strong>Proyecto:</strong> <?php echo $project->name ?> (<?php echo $this['status'][$project->status] ?>)
-        <strong>Usuario: </strong><?php echo $user->name ?> [<?php echo $user->email ?>]
+        <strong><?php echo Text::_('Proyecto'); ?>:</strong> <?php echo $project->name ?> (<?php echo $this['status'][$project->status] ?>)
+        <strong><?php echo Text::_('Usuario'); ?>: </strong><?php echo $user->name ?> [<?php echo $user->email ?>]
     </p>
     <p>
         <?php if ($project->status == 3 && ($invest->status < 1 || ($invest->method == 'tpv' && $invest->status < 2) ||($invest->method == 'cash' && $invest->status < 2))) : ?>
         <a href="/admin/invests/cancel/<?php echo $invest->id ?>"
-            onclick="return confirm(Text::_("¿Estás seguro de querer cancelar este aporte y su preapproval?"));"
-            class="button red">Cancelar este aporte</a>&nbsp;&nbsp;&nbsp;
+            onclick="return confirm(<?php echo Text::_("¿Estás seguro de querer cancelar este aporte y su preapproval?") ?>);"
+            class="button red"><?php echo Text::_('Cancelar este aporte'); ?></a>&nbsp;&nbsp;&nbsp;
         <?php endif; ?>
 
         <?php if ($project->status == 3 && $invest->method == 'paypal' && $invest->status == 0) : ?>
         <a href="/admin/invests/execute/<?php echo $invest->id ?>"
-            onclick="return confirm(Text::_("¿Seguro que quieres ejecutar ahora? ¿No quieres esperar a la ejecución automática al final de la ronda? ?"));"
+            onclick="return confirm(<?php echo Text::_("¿Seguro que quieres ejecutar ahora? ¿No quieres esperar a la ejecución automática al final de la ronda? ?") ?>);"
             class="button red"><?php echo Text::_("Ejecutar cargo ahora"); ?></a>
         <?php endif; ?>
 
@@ -65,12 +65,12 @@ array_walk($rewards, function (&$reward) { $reward = $reward->reward; });
     </dl>
     
     <dl>
-        <dt>Estado:</dt>
-        <dd><?php echo $this['investStatus'][$invest->status]; if ($invest->status < 0) echo ' <span style="font-weight:bold; color:red;"><?php echo Text::_("OJO! que este aporte no fue confirmado."); ?><span>';  ?></dd>
+        <dt><?php echo Text::_('Estado'); ?>:</dt>
+        <dd><?php echo $this['investStatus'][$invest->status]; if ($invest->status < 0) echo ' <span style="font-weight:bold; color:red;">' . Text::_("OJO! que este aporte no fue confirmado.") . '<span>';  ?></dd>
     </dl>
 
     <dl>
-        <dt>Fecha del aporte:</dt>
+        <dt><?php echo Text::_('Fecha del aporte'); ?>:</dt>
         <dd><?php echo $invest->invested . '  '; ?>
             <?php
                 if (!empty($invest->charged))
@@ -83,7 +83,7 @@ array_walk($rewards, function (&$reward) { $reward = $reward->reward; });
     </dl>
 
     <dl>
-        <dt>Método de pago:</dt>
+        <dt><?php echo Text::_('Método de pago'); ?>:</dt>
         <dd><?php echo $invest->method . '   '; ?>
             <?php
                 if (!empty($invest->anonymous))

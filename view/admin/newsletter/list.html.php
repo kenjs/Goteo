@@ -35,14 +35,14 @@ $template = Template::get($tpl);
 
 ?>
 <div class="widget board">
-    <p>Seleccionar la plantilla. Se utilizará el contenido traducido, quizás quieras <a href="/admin/templates?group=massive" target="_blank">revisarlas</a></p>
-    <p><strong>NOTA:</strong> con este sistema no se pueden añadir variables en el contenido, se genera el mismo contenido para todos los destinatarios.<br/>
-    Para contenido personalizado hay que usar la funcionalidad <a href="/admin/mailing" >Comunicaciones</a>.</p>
+    <p><?php echo Text::_('Seleccionar la plantilla. Se utilizará el contenido traducido, quizás quieras '); ?><a href="/admin/templates?group=massive" target="_blank"><?php echo Text::_('revisarlas'); ?></a></p>
+    <p><strong><?php echo Text::_('NOTA'); ?>:</strong> <?php echo Text::_('con este sistema no se pueden añadir variables en el contenido, se genera el mismo contenido para todos los destinatarios.'); ?><br/>
+        <?php echo Text::_('Para contenido personalizado hay que usar la funcionalidad'); ?> <a href="/admin/mailing" ><?php echo Text::_('Comunicaciones'); ?></a>.</p>
 
-    <form action="/admin/newsletter/init" method="post" onsubmit="return confirm('El envio se activará automáticamente, seguimos?');">
+    <form action="/admin/newsletter/init" method="post" onsubmit="return confirm('<?php echo Text::_("El envio se activará automáticamente, seguimos?"); ?>');">
 
     <p>
-        <label>Plantillas masivas: 
+        <label><?php echo Text::_('Plantillas masivas'); ?>:
             <select id="template" name="template" >
             <?php foreach ($templates as $tplId=>$tplName) : ?>
                 <option value="<?php echo $tplId; ?>" <?php if ( $tplId == $tpl) echo 'selected="selected"'; ?>><?php echo $tplName; ?></option>
@@ -51,7 +51,7 @@ $template = Template::get($tpl);
         </label>
     </p>
     <p>
-        <label><input type="checkbox" name="test" value="1" checked="checked"/> Es una prueba (se envia a los destinatarios de pruebas)</label>
+        <label><input type="checkbox" name="test" value="1" checked="checked"/> <?php echo Text::_('Es una prueba (se envia a los destinatarios de pruebas)'); ?></label>
     </p>
         
     <p>
@@ -71,8 +71,8 @@ $template = Template::get($tpl);
         <thead>
             <tr>
                 <th></th>
-                <th>Fecha</th>
-                <th>Asunto</th>
+                <th><?php echo Text::_('Fecha'); ?></th>
+                <th><?php echo Text::_('Asunto'); ?></th>
                 <th></th>
                 <th></th>
                 <th></th>
@@ -82,12 +82,12 @@ $template = Template::get($tpl);
         <tbody>
             <?php foreach ($list as $item) : ?>
             <tr>
-                <td><a href="/admin/newsletter/detail/<?php echo $item->id; ?>">[Detalles]</a></td>
+                <td><a href="/admin/newsletter/detail/<?php echo $item->id; ?>">[<?php echo Text::_("Detalles"); ?>]</a></td>
                 <td><?php echo $item->date; ?></td>
                 <td><?php echo $item->subject; ?></td>
-                <td><?php echo $item->active ? '<span style="color:green;font-weight:bold;">Activo</span>' : '<span style="color:red;font-weight:bold;">Inactivo</span>'; ?></td>
+                <td><?php echo $item->active ? '<span style="color:green;font-weight:bold;">' . Text::_('Activo') . '</span>' : '<span style="color:red;font-weight:bold;">' . Text::_('Inactivo') . '</span>'; ?></td>
                 <td><?php echo $item->bloqued ? 'Bloqueado' : ''; ?></td>
-                <td><a href="<?php echo $item->link; ?>" target="_blank">[Si no ves]</a></td>
+                <td><a href="<?php echo $item->link; ?>" target="_blank">[<?php echo Text::_("Si no ves"); ?>]</a></td>
             </tr>
             <?php endforeach; ?>
         </tbody>

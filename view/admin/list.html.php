@@ -26,9 +26,9 @@ $translator = ACL::check('/translate') ? true : false;
 $filters = $this['filters'];
 
 $botones = array(
-    'edit' => '[Editar]',
-    'remove' => '[Quitar]',
-    'translate' => '[Traducir]',
+    'edit' => '[' . Text::_('Editar') . ']',
+    'remove' => '[' . Text::_('Quitar') . ']',
+    'translate' => '[' . Text::_('Traducir') . ']',
     'up' => '[&uarr;]',
     'down' => '[&darr;]'
 );
@@ -85,10 +85,10 @@ $per = 100 / $cols;
             <tr>
             <?php foreach ($this['columns'] as $key=>$label) : ?>
                 <?php if ($key == 'translate') : ?>
-                    <td width="5%"><?php if ($translator) : ?><a href="/translate/<?php echo $this['model'].'/edit/'.$item->id; ?>" >[Traducir]</a><?php endif; ?>
+                    <td width="5%"><?php if ($translator) : ?><a href="/translate/<?php echo $this['model'].'/edit/'.$item->id; ?>" >[<?php echo Text::_("Traducir"); ?>]</a><?php endif; ?>
                     </td>
                 <?php elseif ($key == 'remove') : ?>
-                    <td width="5%"><a href="<?php echo $this['url']?>/remove/<?php echo (is_object($item)) ? $item->id : $item['id']; ?>" onclick="return confirm('Seguro que deseas eliminar este registro?');">[Quitar]</a></td>
+                    <td width="5%"><a href="<?php echo $this['url']?>/remove/<?php echo (is_object($item)) ? $item->id : $item['id']; ?>" onclick="return confirm('<?php echo Text::_("Seguro que deseas eliminar este registro?"); ?>');">[<?php echo Text::_('Quitar'); ?>]</a></td>
                 <?php elseif (in_array($key, array('edit', 'up', 'down'))) :
                     $id = (is_object($item)) ? $item->id : $item['id'];?>
                     <td width="5%">
@@ -105,6 +105,6 @@ $per = 100 / $cols;
         </tbody>
     </table>
     <?php else : ?>
-    <p>No se han encontrado registros</p>
+    <p><?php echo Text::_("No se han encontrado registros"); ?></p>
     <?php endif; ?>
 </div>

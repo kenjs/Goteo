@@ -44,24 +44,24 @@ if (!$project instanceof Model\Project) {
     }
 </script>
 <div class="widget">
-    <p>OJO! Cambiar la Id del proyecto afecta a <strong>TODO</strong> lo referente al proyecto!.</p>
+    <p><?php echo Text::_('OJO! Cambiar la Id del proyecto afecta a'); ?> <strong><?php echo Text::_('TODO'); ?></strong> <?php echo Text::_('lo referente al proyecto!.'); ?></p>
 
     <form method="post" action="/admin/projects/rebase/<?php echo $project->id; ?>" onsubmit="return idverify();">
         <input type="hidden" name="id" value="<?php echo $project->id ?>" />
         <input type="hidden" name="oldid" value="<?php echo $project->id ?>" />
 
         <p>
-            <label>Nueva ID para el proyecto:<br />
-                <input type="text" name="newid"  id="newid"
+            <label><?php echo Text::_('Nueva ID para el proyecto'); ?>:<br />
+                <input type="text" name="newid"  id="newid" />
                        
             </label>
         </p>
 
         <?php if ($project->status >= 3) : ?>
-        <h3>OJO!! El proyecto est&aacute; publicado</h3>
+        <h3><?php echo Text::_('OJO!! El proyecto est&aacute; publicado'); ?></h3>
         <p>
-            Debes marcar expresamente la siguiente casilla, sino dar&aacute; error por estado de proyecto.<br />
-            <label>Marcar que se quiere aplicar aunque el proyecto que no est&aacute; ni en Edici&oacute;n ni en Revisi&oacute;n:<br />
+            <?php echo Text::_('Debes marcar expresamente la siguiente casilla, sino dar&aacute; error por estado de proyecto.'); ?><br />
+            <label><?php echo Text::_('Marcar que se quiere aplicar aunque el proyecto que no est&aacute; ni en Edici&oacute;n ni en Revisi&oacute;n'); ?>:<br />
                 <input type="checkbox" name="force" value="1" />
             </label>
 

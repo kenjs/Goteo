@@ -32,8 +32,8 @@ foreach ($sections as $sectionId=>$sectionName) {
 }
 ?>
 <div>
-    <p>Informe de revisión del proyecto '<?php echo $review->name; ?>' de <?php echo $review->owner_name; ?></p>
-    <p>La edición del proyecto alcanzó el <strong><?php echo $review->progress; ?>%</strong> y la puntuación promedio de la revisión: <span id="total-score"><?php echo $review->score . '/' . $review->max; ?></span></p>
+    <p><?php echo Text::_('Informe de revisión del proyecto'); ?> '<?php echo $review->name; ?>' <?php echo Text::_('de'); ?> <?php echo $review->owner_name; ?></p>
+    <p><?php echo Text::_('La edición del proyecto alcanzó el '); ?><strong><?php echo $review->progress; ?>%</strong> <?php echo Text::_('y la puntuación promedio de la revisión'); ?>: <span id="total-score"><?php echo $review->score . '/' . $review->max; ?></span></p>
 </div>
 
 <?php foreach ($sections as $sectionId=>$sectionName) : ?>
@@ -41,7 +41,7 @@ foreach ($sections as $sectionId=>$sectionName) {
     <h2 class="title"><?php echo $sectionName; ?></h2>
     <?php foreach ($review->checkers as $user=>$user_data) : ?>
     <p>
-        <strong><?php echo $user_data->name ?></strong> otorga puntos porque:<br />
+        <strong><?php echo $user_data->name ?></strong> <?php echo Text::_('otorga puntos porque'); ?>:<br />
         <blockquote>
         <?php foreach ($criteria[$sectionId] as $crit) :
             if ($evaluation[$user]['criteria'][$crit->id] > 0) echo '· ' . $crit->title . '<br />';
@@ -51,11 +51,11 @@ foreach ($sections as $sectionId=>$sectionName) {
     <?php endforeach; ?>
     <?php foreach ($review->checkers as $user=>$user_data) : ?>
     <p>
-        <strong><?php echo $user_data->name ?></strong> evalua <?php echo strtolower($sectionName); ?>:<br />
+        <strong><?php echo $user_data->name ?></strong> <?php echo Text::_('evalua'); ?> <?php echo strtolower($sectionName); ?>:<br />
         <blockquote><?php echo $evaluation[$user][$sectionId]['evaluation']; ?></blockquote>
     </p>
     <p>
-        <strong><?php echo $user_data->name ?></strong> propone <?php echo strtolower($sectionName); ?>:<br />
+        <strong><?php echo $user_data->name ?></strong> <?php echo Text::_('propone'); ?> <?php echo strtolower($sectionName); ?>:<br />
         <blockquote><?php echo $evaluation[$user][$sectionId]['recommendation']; ?></blockquote>
     </p>
     <?php endforeach; ?>

@@ -43,7 +43,7 @@ $filters = $this['filters'];
             <tr>
                 <th><!-- Editar --></th>
                 <th> <?php echo Text::_("Nombre"); ?></th> <!-- name -->
-                <th>Tooltip</th> <!-- descripcion -->
+                <th><?php echo Text::_('Tooltip'); ?></th> <!-- descripcion -->
                 <th><?php echo Text::_("Agrupación"); ?></th> <!-- group -->
                 <th><!-- Traducir--></th>
 <!--                        <th> Remove </th>  -->

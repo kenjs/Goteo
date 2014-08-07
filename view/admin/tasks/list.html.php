@@ -22,25 +22,25 @@ use Goteo\Library\Text;
 
 $filters = $this['filters'];
 ?>
-<a href="/admin/tasks/add" class="button">Nueva Tarea</a>
+<a href="/admin/tasks/add" class="button"><?php echo Text::_('Nueva Tarea'); ?></a>
 
 <div class="widget board">
     <form id="filter-form" action="/admin/tasks" method="get">
         <table>
             <tr>
                 <td>
-                    <label for="status-filter">Mostrar por estado:</label><br />
+                    <label for="status-filter"><?php echo Text::_('Mostrar por estado'); ?>:</label><br />
                     <select id="status-filter" name="done" onchange="document.getElementById('filter-form').submit();">
-                        <option value="">Cualquier estado</option>
+                        <option value=""><?php echo Text::_('Cualquier estado'); ?></option>
                     <?php foreach ($this['status'] as $statusId=>$statusName) : ?>
                         <option value="<?php echo $statusId; ?>"<?php if ($filters['done'] == $statusId) echo ' selected="selected"';?>><?php echo $statusName; ?></option>
                     <?php endforeach; ?>
                     </select>
                 </td>
                 <td>
-                    <label for="user-filter">Realizadas por:</label><br />
+                    <label for="user-filter"><?php echo Text::_('Realizadas por'); ?>:</label><br />
                     <select id="user-filter" name="user" onchange="document.getElementById('filter-form').submit();">
-                        <option value="">Cualquier admin</option>
+                        <option value=""><?php echo Text::_('Cualquier admin'); ?></option>
                     <?php foreach ($this['admins'] as $adminId=>$adminName) : ?>
                         <option value="<?php echo $adminId; ?>"<?php if ($filters['user'] == $adminId) echo ' selected="selected"';?>><?php echo $adminName; ?></option>
                     <?php endforeach; ?>
@@ -58,9 +58,9 @@ $filters = $this['filters'];
         <thead>
             <tr>
                 <th></th> <!-- edit -->
-                <th>Nodo</th>
-                <th>Tarea</th>
-                <th>Estado</th>
+                <th><?php echo Text::_("Nodo"); ?></th>
+                <th><?php echo Text::_('Tarea'); ?></th>
+                <th><?php echo Text::_("Estado"); ?></th>
                 <th></th> <!-- remove -->
             </tr>
         </thead>
@@ -68,17 +68,17 @@ $filters = $this['filters'];
         <tbody>
             <?php foreach ($this['tasks'] as $task) : ?>
             <tr>
-                <td><a href="/admin/tasks/edit/<?php echo $task->id; ?>" title="Editar">[Editar]</a></td>
+                <td><a href="/admin/tasks/edit/<?php echo $task->id; ?>" title="Editar">[<?php echo Text::_("Editar"); ?>]</a></td>
                 <td><strong><?php echo $this['nodes'][$task->node]; ?></strong></td>
                 <td><?php echo substr($task->text, 0, 150); ?></td>
                 <td><?php echo (empty($task->done)) ? 'Pendiente' : 'Realizada ('.$task->user->name.')';?></td>
-                <td><a href="/admin/tasks/remove/<?php echo $task->id; ?>" title="Eliminar" onclick="return confirm('La tarea se eliminará irreversiblemente, ok?')">[Eliminar]</a></td>
+                <td><a href="/admin/tasks/remove/<?php echo $task->id; ?>" title="Eliminar" onclick="return confirm('<?php echo Text::_("La tarea se eliminará irreversiblemente, ok?"); ?>')">[<?php echo Text::_("Eliminar"); ?>]</a></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
 
     </table>
     <?php else : ?>
-    <p>No se han encontrado registros</p>
+    <p><?php echo Text::_("No se han encontrado registros"); ?></p>
     <?php endif; ?>
 </div>

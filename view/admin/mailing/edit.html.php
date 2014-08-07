@@ -33,7 +33,7 @@ $templates = array(
 jQuery(document).ready(function ($) {
 
     $('#template_load').click(function () {
-       if (confirm(Text::_("El asunto y el contenido actual se substiruira por el que hay en la plantilla. Seguimos?"))) {
+       if (confirm(<?php echo Text::_("El asunto y el contenido actual se substiruira por el que hay en la plantilla. Seguimos?")?>)) {
 
            if ($('#template').val() == '0') {
             $('#mail_subject').val('');
@@ -100,14 +100,14 @@ jQuery(document).ready(function ($) {
                            id="receiver_<?php echo $usr->id; ?>"
                            value="1"
                            checked="checked" />
-                    <label for="receiver_<?php echo $usr->id; ?>"><?php echo $usr->name.' ['.$usr->email.']'; if (!empty($usr->project)) echo ' Proyecto: <strong>'.$usr->project.'</strong>'; ?></label>
+                    <label for="receiver_<?php echo $usr->id; ?>"><?php echo $usr->name.' ['.$usr->email.']'; if (!empty($usr->project)) echo Text::_("Proyecto") . ': <strong>'.$usr->project.'</strong>'; ?></label>
                 </li>
                 <?php endforeach; ?>
             </ul>
         </dd>
     </dl>
 
-    <input type="submit" name="send" value="Enviar"  onclick="return confirm(Text::_("Has revisado el contenido y comprobado los destinatarios?"));"/>
+    <input type="submit" name="send" value="Enviar"  onclick="return confirm(<?php echo Text::_("Has revisado el contenido y comprobado los destinatarios?")?>);"/>
 
     </form>
 </div>

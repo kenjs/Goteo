@@ -28,12 +28,12 @@ $worth = $this['worth'];
     <input type="hidden" name="id" value="<?php echo $worth->id; ?>" />
 
 <p>
-    <label for="worth-name">Nombre del nivel:</label><br />
+    <label for="worth-name"><?php echo Text::_('Nombre del nivel'); ?>:</label><br />
     <input id="worth-name" name="name" value="<?php echo $worth->name ?>" />
 </p>
 
 <p>
-    <label for="worth-amount">Caudal:</label><br />
+    <label for="worth-amount"><?php echo Text::_('Caudal'); ?>:</label><br />
     <input id="worth-amount" name="amount" value="<?php echo $worth->amount ?>" />
 </p>
 
