@@ -30,14 +30,14 @@ define('GOTEO_ADMIN_NOCACHE', true);
 
 $filter = $this['filter'];
 
-$data = Text::getAll($this['filters'], $_SESSION['translate_lang']);
+$data = Text::getAll($this['filters'], $_SESSION['translator_lang']);
 
 $pagedResults = new \Paginated($data, 20, isset($_GET['page']) ? $_GET['page'] : 1);
 
 // valores de filtro
-//$idfilters = Text::filters();
-$idfilters = array();
+$idfilters = Text::filters();
 $groups    = Text::groups();
+
 // metemos el todos
 \array_unshift($idfilters, 'Todos los textos');
 \array_unshift($groups, 'Todas las agrupaciones');

@@ -26,7 +26,7 @@ $bodyClass = 'admin';
 $table = $this['table'];
 $id = $this['id'];
 
-$content = Content::get($table, $id, $_SESSION['translate_lang']);
+$content = Content::get($table, $id, $_SESSION['translator_lang']);
 
 $sizes = array(
     'title'       => 'cols="100" rows="2"',
@@ -43,7 +43,7 @@ $fields = Content::_fields();
     <form action="/translate/<?php echo $table ?>/edit/<?php echo $id ?>/<?php echo $this['filter'] . '&page=' . $_GET['page'] ?>" method="post" >
         <input type="hidden" name="table" value="<?php echo $table ?>" />
         <input type="hidden" name="id" value="<?php echo $id ?>" />
-        <input type="hidden" name="lang" value="<?php echo $_SESSION['translate_lang'] ?>" />
+        <input type="hidden" name="lang" value="<?php echo $_SESSION['translator_lang'] ?>" />
 
 
         <?php foreach ($fields[$table] as $field=>$fieldName) : ?>
