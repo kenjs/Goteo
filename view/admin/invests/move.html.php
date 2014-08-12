@@ -45,10 +45,10 @@ foreach ($query->fetchAll(\PDO::FETCH_CLASS) as $item) {
 
 ?>
 <div class="widget">
-    <p>Movemos el aporte de <strong><?php echo $user->name ?></strong> al proyecto <strong><?php echo $project->name; ?></strong> de <strong><?php echo $original->amount; ?> &euro;</strong> mediante <strong><?php echo $original->method; ?></strong> del d&iacute;a <strong><?php echo date('d-m-Y', strtotime($original->invested)); ?></strong>.</p>
+    <p><?php echo Text::_('Movemos el aporte de '); ?><strong><?php echo $user->name ?></strong> <?php echo Text::_('al proyecto'); ?> <strong><?php echo $project->name; ?></strong> <?php echo Text::_('de'); ?> <strong><?php echo $original->amount; ?> &euro;</strong> mediante <strong><?php echo $original->method; ?></strong> del d&iacute;a <strong><?php echo date('d-m-Y', strtotime($original->invested)); ?></strong>.</p>
     <form id="filter-form" action="/admin/invests/move/<?php echo $original->id ?>" method="post">
         <p>
-            <label for="invest-project">Al proyecto:</label><br />
+            <label for="invest-project"><?php echo Text::_('Al proyecto'); ?>:</label><br />
             <select id="invest-project" name="project">
                 <option value=""><?php echo Text::_("Seleccionar el proyecto al que se mueve el aporte"); ?></option>
             <?php foreach ($projects as $projectId=>$projectName) :

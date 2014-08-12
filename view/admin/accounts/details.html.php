@@ -31,12 +31,12 @@ $user = $this['user'];
 $rewards = $invest->rewards;
 array_walk($rewards, function (&$reward) { $reward = $reward->reward; });
 ?>
-<a href="/admin/accounts/update/<?php echo $invest->id ?>" onclick="return confirm('Seguro que deseas cambiarle el estado a este aporte?, esto es delicado')" class="button">Cambiarle el estado</a>
+<a href="/admin/accounts/update/<?php echo $invest->id ?>" onclick="return confirm('<?php echo Text::_("Seguro que deseas cambiarle el estado a este aporte?, esto es delicado"); ?>')" class="button"><?php echo Text::_("Cambiarle el estado"); ?></a>
 &nbsp;&nbsp;&nbsp;
-<a href="/admin/rewards/edit/<?php echo $invest->id ?>" class="button">Gestionar recompensa / dirección</a>
+<a href="/admin/rewards/edit/<?php echo $invest->id ?>" class="button"><?php echo Text::_("Gestionar recompensa / dirección"); ?></a>
 <?php if ($invest->issue) : ?>
 &nbsp;&nbsp;&nbsp;
-<a href="/admin/accounts/solve/<?php echo $invest->id ?>" onclick="return confirm('Esta incidencia se dará por resuelta: se va a cancelar el preaproval, el aporte pasará a ser de tipo Cash y en estado Cobrado por goteo, seguimos?')" class="button">Nos han hecho la transferencia</a>
+<a href="/admin/accounts/solve/<?php echo $invest->id ?>" onclick="return confirm('<?php echo Text::_("Esta incidencia se dará por resuelta: se va a cancelar el preaproval, el aporte pasará a ser de tipo Cash y en estado Cobrado por goteo, seguimos?"); ?>')" class="button"><?php echo Text::_("Nos han hecho la transferencia"); ?></a>
 <?php endif; ?>
 <div class="widget">
     <p>
@@ -46,22 +46,22 @@ array_walk($rewards, function (&$reward) { $reward = $reward->reward; });
     <p>
         <?php if ($invest->status < 1 || ($invest->method == 'tpv' && $invest->status < 2) ||($invest->method == 'cash' && $invest->status < 2)) : ?>
         <a href="/admin/accounts/cancel/<?php echo $invest->id ?>"
-            onclick="return confirm('¿Estás seguro de querer cancelar este aporte y su preapproval?');"
-            class="button">Cancelar este aporte</a>&nbsp;&nbsp;&nbsp;
+            onclick="return confirm('<?php echo Text::_("¿Estás seguro de querer cancelar este aporte y su preapproval?"); ?>');"
+            class="button"><?php echo Text::_("Cancelar este aporte"); ?></a>&nbsp;&nbsp;&nbsp;
         <?php endif; ?>
 
         <?php if ($invest->method == 'paypal' && $invest->status == 0) : ?>
         <a href="/admin/accounts/execute/<?php echo $invest->id ?>"
-            onclick="return confirm('¿Seguro que quieres ejecutar ahora el cargo del preapproval?');"
-            class="button">Ejecutar cargo ahora</a>
+            onclick="return confirm('<?php echo Text::_("¿Seguro que quieres ejecutar ahora el cargo del preapproval?"); ?>');"
+            class="button"><?php echo Text::_("Ejecutar cargo ahora"); ?></a>
         <?php endif; ?>
 
         <?php if ($invest->method != 'paypal' && $invest->status == 1) : ?>
-        <a href="/admin/accounts/move/<?php echo $invest->id ?>" class="button">Reubicar este aporte</a>
+        <a href="/admin/accounts/move/<?php echo $invest->id ?>" class="button"><?php echo Text::_("Reubicar este aporte"); ?></a>
         <?php endif; ?>
 
         <?php if (!$invest->resign && $invest->status == 1 && $invest->status == 3) : ?>
-        <a href="/admin/accounts/resign/<?php echo $invest->id ?>/?token=<?php echo md5('resign'); ?>" class="button">Es donativo</a>
+        <a href="/admin/accounts/resign/<?php echo $invest->id ?>/?token=<?php echo md5('resign'); ?>" class="button"><?php echo Text::_("Es donativo"); ?></a>
         <?php endif; ?>
     </p>
     
@@ -78,7 +78,7 @@ array_walk($rewards, function (&$reward) { $reward = $reward->reward; });
 
     <dl>
         <dt><?php echo Text::_("Estado"); ?>:</dt>
-        <dd><?php echo $this['investStatus'][$invest->status]; if ($invest->status < 0) echo ' <span style="font-weight:bold; color:red;">OJO! que este aporte no fue confirmado.<span>'; if ($invest->issue) echo ' <span style="font-weight:bold; color:red;">INCIDENCIA!<span>'; ?></dd>
+        <dd><?php echo $this['investStatus'][$invest->status]; if ($invest->status < 0) echo ' <span style="font-weight:bold; color:red;">' . Text::_("OJO! que este aporte no fue confirmado.") . ' <span>'; if ($invest->issue) echo ' <span style="font-weight:bold; color:red;">' . Text::_("INCIDENCIA!") . '<span>'; ?></dd>
     </dl>
 
     <dl>
@@ -109,7 +109,7 @@ array_walk($rewards, function (&$reward) { $reward = $reward->reward; });
                     echo '<br />'.Text::_('Capital riego');
 
                 if (!empty($invest->anonymous))
-                    echo '<br />'.Text::_(Aporte anónimo');
+                    echo '<br />'.Text::_('Aporte anónimo');
 
                 if (!empty($invest->resign))
                     echo "<br />".Text::_('Donativo de').": {$invest->address->name} [{$invest->address->nif}]";
@@ -184,7 +184,7 @@ array_walk($rewards, function (&$reward) { $reward = $reward->reward; });
 </div>
 
 <div class="widget">
-    <h3>Log</h3>
+    <h3><?php echo Text::_('Log'); ?></h3>
     <?php foreach (\Goteo\Model\Invest::getDetails($invest->id) as $log)  {
         echo "{$log->date} : {$log->log} ({$log->type})<br />";
     } ?>

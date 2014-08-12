@@ -24,7 +24,7 @@ use Goteo\Library\Text,
 $translator = ACL::check('/translate') ? true : false;
 ?>
 <?php if (!isset($_SESSION['admin_node'])) : ?>
-<a href="/admin/pages/add" class="button">Nueva P&aacute;gina</a>
+<a href="/admin/pages/add" class="button"><?php echo Text::_('Nueva P&aacute;gina'); ?></a>
 <?php endif; ?>
 
 <div class="widget board">
@@ -33,8 +33,8 @@ $translator = ACL::check('/translate') ? true : false;
         <thead>
             <tr>
                 <th><!-- Editar --></th>
-                <th>Página</th>
-                <th>Descripción</th>
+                <th><?php echo Text::_('Página'); ?></th>
+                <th><?php echo Text::_('Descripción'); ?></th>
                 <th><!-- Abrir --></th>
                 <th><!-- Traducir --></th>
             </tr>
@@ -42,13 +42,13 @@ $translator = ACL::check('/translate') ? true : false;
         <tbody>
             <?php foreach ($this['pages'] as $page) : ?>
             <tr>
-                <td><a href="/admin/pages/edit/<?php echo $page->id; ?>">[Editar]</a></td>
+                <td><a href="/admin/pages/edit/<?php echo $page->id; ?>">[<?php echo Text::_("Editar"); ?>]</a></td>
                 <td><?php echo $page->name; ?></td>
                 <td><?php echo $page->description; ?></td>
-                <td><a href="<?php echo $page->url; ?>" target="_blank">[Ver]</a></td>
+                <td><a href="<?php echo $page->url; ?>" target="_blank">[<?php echo Text::_("Ver"); ?>]</a></td>
                 <td>
                 <?php if ($translator && $node == \GOTEO_NODE) : ?>
-                <a href="/translate/pages/edit/<?php echo $page->id; ?>" >[Traducir]</a>
+                <a href="/translate/pages/edit/<?php echo $page->id; ?>" >[<?php echo Text::_("Traducir"); ?>]</a>
                 <?php endif; ?>
                 </td>
             </tr>
@@ -56,6 +56,6 @@ $translator = ACL::check('/translate') ? true : false;
         </tbody>
     </table>
     <?php else : ?>
-    <p>No se han encontrado registros</p>
+    <p><?php echo Text::_("No se han encontrado registros"); ?></p>
     <?php endif; ?>
 </div>

@@ -49,7 +49,7 @@ $filters = $this['filters'];
         'first' =>  Text::_("Todos"))
 ); ?>
 <div class="widget board">
-    <h3 class="title">Filtros</h3>
+    <h3 class="title"><?php echo Text::_('Filtros'); ?></h3>
     <form id="filter-form" action="/admin/invests" method="get">
         <input type="hidden" name="filtered" value="yes" />
         <?php foreach ($the_filters as $filter=>$data) : ?>
@@ -66,7 +66,7 @@ $filters = $this['filters'];
         <br clear="both" />
 
         <div style="float:left;margin:5px;">
-            <label for="name-filter">Alias/Email del usuario:</label><br />
+            <label for="name-filter"><?php echo Text::_('Alias/Email del usuario'); ?>:</label><br />
             <input type="text" id ="name-filter" name="name" value ="<?php echo $filters['name']?>" />
         </div>
 
@@ -85,8 +85,8 @@ $filters = $this['filters'];
     <p><?php echo Text::_("Es necesario poner algun filtro, hay demasiados registros!"); ?></p>
 <?php elseif (!empty($this['list'])) : ?>
 <?php $Total = 0; foreach ($this['list'] as $invest) { $Total += $invest->amount; } ?>
-    <p><strong>TOTAL:</strong>  <?php echo number_format($Total, 0, '', '.') ?> &euro;</p>
-    <p><strong>OJO!</strong> Resultado limitado a 999 registros como máximo.</p>
+    <p><strong><?php echo Text::_('TOTAL'); ?>:</strong>  <?php echo number_format($Total, 0, '', '.') ?> &euro;</p>
+    <p><?php echo Text::_("OJO! Resultado limitado a 999 registros como máximo."); ?></p>
     
     <table width="100%">
         <thead>
@@ -107,7 +107,7 @@ $filters = $this['filters'];
         <tbody>
             <?php foreach ($this['list'] as $invest) : ?>
             <tr>
-                <td><a href="/admin/invests/details/<?php echo $invest->id ?>">[Detalles]</a></td>
+                <td><a href="/admin/invests/details/<?php echo $invest->id ?>">[<?php echo Text::_("Detalles"); ?>]</a></td>
                 <td><?php echo $invest->id ?></td>
                 <td><?php echo $invest->invested ?></td>
                 <td><?php echo $this['users'][$invest->user] ?></td>
@@ -129,6 +129,6 @@ $filters = $this['filters'];
 
     </table>
 <?php else : ?>
-    <p>No hay aportes que cumplan con los filtros.</p>
+    <p><?php echo Text::_('No hay aportes que cumplan con los filtros.'); ?></p>
 <?php endif;?>
 </div>

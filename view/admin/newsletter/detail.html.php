@@ -39,24 +39,24 @@ $title = array(
            Asunto: <strong><?php echo $mailing->subject ?></strong><br />
            Iniciado el: <strong><?php echo $mailing->date ?></strong><br />
            Estado del envío automático: <?php echo ($mailing->active) 
-               ? '<span style="color:green;font-weight:bold;">Activo</span>'
-               : '<span style="color:red;font-weight:bold;">Inactivo</span>' ?>
+               ? '<span style="color:green;font-weight:bold;">' . Text::_('Activo') . '</span>'
+               : '<span style="color:red;font-weight:bold;">' . Text::_('Inactivo') . '</span>' ?>
         </p>
 
     <table>
         <thead>
             <tr>
                 <th><!-- Si no ves --></th>
-                <th>Fecha</th>
-                <th><a href="/admin/newsletter/detail/<?php echo $mailing->id; ?>?show=receivers" title="Ver destinatarios">Destinatarios</a></th>
-                <th><a href="/admin/newsletter/detail/<?php echo $mailing->id; ?>?show=sended" title="Ver enviados">Enviados</a></th>
-                <th><a href="/admin/newsletter/detail/<?php echo $mailing->id; ?>?show=failed" title="Ver fallidos">Fallidos</a></th>
-                <th><a href="/admin/newsletter/detail/<?php echo $mailing->id; ?>?show=pending" title="Ver pendientes">Pendientes</a></th>
+                <th><?php echo Text::_('Fecha'); ?></th>
+                <th><a href="/admin/newsletter/detail/<?php echo $mailing->id; ?>?show=receivers" title="Ver destinatarios"><?php echo Text::_('Destinatarios'); ?></a></th>
+                <th><a href="/admin/newsletter/detail/<?php echo $mailing->id; ?>?show=sended" title="Ver enviados"><?php echo Text::_('Enviados'); ?></a></th>
+                <th><a href="/admin/newsletter/detail/<?php echo $mailing->id; ?>?show=failed" title="Ver fallidos"><?php echo Text::_('Fallidos'); ?></a></th>
+                <th><a href="/admin/newsletter/detail/<?php echo $mailing->id; ?>?show=pending" title="Ver pendientes"><?php echo Text::_('Pendientes'); ?></a></th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><a href="<?php echo $link; ?>" target="_blank">[Si no ves]</a></td>
+                <td><a href="<?php echo $link; ?>" target="_blank">[<?php echo Text::_("Si no ves"); ?>]</a></td>
                 <td><?php echo $mailing->date; ?></td>
                 <td style="width:15%"><?php echo $mailing->receivers; ?></td>
                 <td style="width:15%"><?php echo $mailing->sended; ?></td>
@@ -69,13 +69,13 @@ $title = array(
 <?php endif; ?>
 
 <?php if (!empty($detail)) : ?>
-<h3>Viendo el listado completo de los <?php echo $title[$detail] ?></h3>
+<h3><?php echo Text::_('Viendo el listado completo de los '); ?><?php echo $title[$detail] ?></h3>
 <div class="widget board">
     <table>
         <tr>
-            <th>Email</th>
-            <th>Alias</th>
-            <th>Usuario</th>
+            <th><?php echo Text::_('Email'); ?></th>
+            <th><?php echo Text::_('Alias'); ?></th>
+            <th><?php echo Text::_('Usuario'); ?></th>
         </tr>
         <?php foreach ($list as $user) : ?>
         <tr>

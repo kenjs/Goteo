@@ -30,16 +30,16 @@ $filters = $this['filters'];
         <table>
             <tr>
                 <td>
-                    <label for="group-filter">Filtrar agrupaci&oacute;n:</label><br />
+                    <label for="group-filter"><?php echo Text::_('Filtrar agrupaci&oacute;n'); ?>:</label><br />
                     <select id="group-filter" name="group">
-                        <option value="">Todas las agrupaciones</option>
+                        <option value=""><?php echo Text::_('Todas las agrupaciones'); ?></option>
                     <?php foreach ($this['groups'] as $groupId=>$groupName) : ?>
                         <option value="<?php echo $groupId; ?>"<?php if ($filters['group'] == $groupId) echo ' selected="selected"';?>><?php echo $groupName; ?></option>
                     <?php endforeach; ?>
                     </select>
                 </td>
                 <td>
-                    <label for="name-filter">Filtrar por nombre o asunto:</label><br />
+                    <label for="name-filter"><?php echo Text::_('Filtrar por nombre o asunto'); ?>:</label><br />
                     <input type="text" id ="name-filter" name="name" value ="<?php echo $filters['name']?>" />
                 </td>
             </tr>
@@ -58,25 +58,25 @@ $filters = $this['filters'];
         <thead>
             <tr>
                 <th><!-- Editar --></th>
-                <th>Plantilla</th>
-                <th>Descripción</th>
+                <th><?php echo Text::_('Plantilla'); ?></th>
+                <th><?php echo Text::_('Descripción'); ?></th>
                 <th><!-- traducir --></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($this['templates'] as $template) : ?>
             <tr>
-                <td><a href="/admin/templates/edit/<?php echo $template->id; ?>">[Editar]</a></td>
+                <td><a href="/admin/templates/edit/<?php echo $template->id; ?>">[<?php echo Text::_("Editar"); ?>]</a></td>
                 <td><?php echo $template->name; ?></td>
                 <td><?php echo $template->purpose; ?></td>
                 <?php if ($translator) : ?>
-                <td><a href="/translate/template/edit/<?php echo $template->id; ?>" >[Traducir]</a></td>
+                <td><a href="/translate/template/edit/<?php echo $template->id; ?>" >[<?php echo Text::_("Traducir"); ?>]</a></td>
                 <?php endif; ?>
             </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
     <?php else : ?>
-    <p>No se han encontrado registros</p>
+    <p><?php echo Text::_("No se han encontrado registros"); ?></p>
     <?php endif; ?>
 </div>

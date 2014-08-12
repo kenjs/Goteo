@@ -27,8 +27,8 @@ use Goteo\Library\Text;
         <thead>
             <tr>
                 <th><!-- Editar--></th>
-                <th>Nivel</th>
-                <th>Caudal</th>
+                <th><?php echo Text::_('Nivel'); ?></th>
+                <th><?php echo Text::_('Caudal'); ?></th>
                 <th></th>
             </tr>
         </thead>
@@ -36,7 +36,7 @@ use Goteo\Library\Text;
         <tbody>
             <?php foreach ($this['worthcracy'] as $worth) : ?>
             <tr>
-                <td width="5%"><a href="/admin/worth/edit/<?php echo $worth->id; ?>">[Editar]</a></td>
+                <td width="5%"><a href="/admin/worth/edit/<?php echo $worth->id; ?>">[<?php echo Text::_("Editar"); ?>]</a></td>
                 <td width="15%"><?php echo $worth->name; ?></td>
                 <td width="15%"><?php echo $worth->amount; ?> &euro;</td>
                 <td></td>
@@ -46,6 +46,6 @@ use Goteo\Library\Text;
 
     </table>
     <?php else : ?>
-    <p>IMPOSIBLE!!! No se han encontrado registros</p>
+    <p><?php echo Text::_('IMPOSIBLE!!! No se han encontrado registros'); ?>:</p>
     <?php endif; ?>
 </div>

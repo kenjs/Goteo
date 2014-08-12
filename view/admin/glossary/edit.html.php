@@ -56,7 +56,7 @@ $(document).ready(function(){
 				['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
 				['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
 				['Link','Unlink','Anchor'],
-                ['Image','Format','FontSize'],
+                ['Image','Format','FontSize']
 			  ],
 		skin: 'kama',
 		language: 'es',
@@ -68,7 +68,7 @@ $(document).ready(function(){
 
 <form method="post" action="/admin/glossary/<?php echo $this['action']; ?>/<?php echo $post->id; ?>" enctype="multipart/form-data">
 
-    <?php echo new NormalForm(array(
+    <?php echo new Goteo\Library\NormalForm\Element(array(
 
         'action'        => '',
         'level'         => 3,
