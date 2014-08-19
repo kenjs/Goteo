@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Goteo\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-07 11:09+0900\n"
-"PO-Revision-Date: 2014-08-10 18:00+0900\n"
+"PO-Revision-Date: 2014-08-19 08:55+0900\n"
 "Last-Translator: Masaki Ike <ike@info-lounge.jp>\n"
 "Language-Team: Goteo translations\n"
 "Language: ja_JP\n"
@@ -11,16 +11,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
-"X-Poedit-Basepath: /Users/m454k1/PhpstormProjects/goteo_il3c\n"
+"X-Poedit-Basepath: C:\\Users\\soutaito\\Dropbox (Info Lounge　LLC)\\working"
+"\\PhpstormProjects\\goteo\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Generator: Poedit 1.5.7\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Poedit-SearchPath-0: /Users/m454k1/PhpstormProjects/goteo_il3c\n"
+"X-Poedit-SearchPath-0: C:\\Users\\soutaito\\Dropbox (Info Lounge　"
+"LLC)\\working\\PhpstormProjects\\goteo\n"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:62
-#, fuzzy
 msgid "Gestión de aportes"
-msgstr "Project administration"
+msgstr "貢献を管理する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:64
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:79
@@ -68,39 +69,37 @@ msgstr "Project administration"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:581
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:588
 msgid "Listando"
-msgstr "Listing"
+msgstr "リスト"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:65
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:154
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/details.html.php:56
 msgid "Detalles del aporte"
-msgstr "Contribution details"
+msgstr "貢献の詳細"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:66
-#, fuzzy
 msgid "Cambiando el estado al aporte"
-msgstr "Relocating a contribution"
+msgstr "貢献の状態を変更する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:67
 msgid "Aporte manual"
-msgstr "Manual contribution"
+msgstr "マニュアルで貢献する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:68
 msgid "Reubicando el aporte"
-msgstr "Relocating a contribution"
+msgstr "貢献を移転する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:69
-#, fuzzy
 msgid "Ejecución del cargo"
-msgstr "Execute the charges inmediately"
+msgstr "支払いを実行する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:70
 msgid "Cancelando aporte"
-msgstr "Cancelling contribution"
+msgstr "貢献をキャンセルする"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:71
 msgid "Informe de proyecto"
-msgstr "Project report"
+msgstr "プロジェクトレポート"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:72
 msgid "Viendo logs"
@@ -131,118 +130,113 @@ msgstr "バナーを翻訳"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:579
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/content.php:43
 msgid "Blog"
-msgstr "Blog"
+msgstr "ブログ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:89
 msgid "Nueva Entrada"
-msgstr "New Entry"
+msgstr "新規エントリー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:90
 msgid "Editando Entrada"
-msgstr "Editing Entry"
+msgstr "エントリーを編集する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:91
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:446
 msgid "Traduciendo Entrada"
-msgstr "Translating Entry"
+msgstr "エントリーを翻訳する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:92
 msgid "Ordenando las entradas en Portada"
 msgstr "表紙のエントリーを配置"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:93
-#, fuzzy
 msgid "Ordenando las entradas en el Footer"
 msgstr "フッターのエントリーを配置"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:98
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/content.php:40
-#, fuzzy
 msgid "Categorías"
 msgstr "カテゴリー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:101
 msgid "Nueva Categoría"
-msgstr "New Category"
+msgstr "新しいカテゴリー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:102
 msgid "Editando Categoría"
-msgstr "Editing Category"
+msgstr "カテゴリーを編集する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:103
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:474
 msgid "Traduciendo Categoría"
-msgstr "Translating Category"
+msgstr "カテゴリーを翻訳する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:104
 msgid "Palabras clave"
-msgstr ""
-"管理者%sはプロジェクト%sの<span class=\"red\">日付変更に失敗</span>しました"
+msgstr "キーワード"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:108
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:499
 msgid "Criterios de revisión"
-msgstr "Review criteria"
+msgstr "レビュー基準"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:111
 msgid "Nuevo Criterio"
-msgstr "New Criterium"
+msgstr "新しい基準"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:112
 msgid "Editando Criterio"
-msgstr "Editing Criterium"
+msgstr "基準を編集する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:113
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:502
 msgid "Traduciendo Criterio"
-msgstr "Translating Criterium"
+msgstr "基準を翻訳する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:118
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:457
 msgid "FAQs"
-msgstr "FAQs"
+msgstr "FAQ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:121
 msgid "Nueva Pregunta"
-msgstr "New Question"
+msgstr "新しい質問"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:122
 msgid "Editando Pregunta"
-msgstr "Editing Question"
+msgstr "質問を編集する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:123
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:460
 msgid "Traduciendo Pregunta"
-msgstr "Translating Question"
+msgstr "質問を翻訳する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:128
-#, fuzzy
 msgid "Elementos en portada"
-msgstr "Featured on frontpage"
+msgstr "フロントページにフィーチャーする"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:130
-#, fuzzy
 msgid "Gestionando"
-msgstr "ユーザー管理"
+msgstr "管理"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:134
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:513
 msgid "Glosario"
-msgstr "Glossary"
+msgstr "用語集"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:137
 msgid "Editando Término"
-msgstr "Editing Term"
+msgstr "用語を編集する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:138
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:516
 msgid "Traduciendo Término"
-msgstr "Translating Term"
+msgstr "用語を翻訳する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:142
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:485
 msgid "Tipos de Retorno"
-msgstr "Types of Return"
+msgstr "リターンのタイプ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:145
 msgid "Editando Tipo"
@@ -267,16 +261,16 @@ msgstr "寄付"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:478
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/content.php:39
 msgid "Licencias"
-msgstr "Licenses"
+msgstr "ライセンス"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:162
 msgid "Editando Licencia"
-msgstr "Editing License"
+msgstr "ライセンスを編集する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:163
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:481
 msgid "Traduciendo Licencia"
-msgstr "Translating License"
+msgstr "ライセンスを翻訳する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:168
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/list.html.php:40
@@ -302,39 +296,32 @@ msgstr "Micronews"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:181
 msgid "Nueva Micronoticia"
-msgstr "New Microblog Entry"
+msgstr "新しいマイクロブログ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:182
 msgid "Editando Micronoticia"
-msgstr "Editing Microblog Entry"
+msgstr "マイクロブログを編集する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:183
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:542
 msgid "Traduciendo Micronoticia"
-msgstr "Translating Microblog Entry"
+msgstr "マイクロブログを翻訳する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:187
 msgid "Boletín"
-msgstr ""
-"管理者%sはプロジェクト%sの状態を<span class=\"red\">Review</span>にセットしま"
-"した"
+msgstr "ニュース"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:189
 msgid "Estado del envío automático"
-msgstr ""
-"管理者%sはプロジェクト%sの状態を<span class=\"red\">Review</span>にセットでき"
-"ませんでした"
+msgstr "自動送信の状態"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:190
-#, fuzzy
 msgid "Iniciando un nuevo boletín"
-msgstr "Adding a new term"
+msgstr "新しいニュース"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:191
 msgid "Viendo listado completo"
-msgstr ""
-"Admin %s has set the project %s to state <span class=\"red\">in Campaign</"
-"span>"
+msgstr "全リストを表示"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:195
 msgid "Páginas"
@@ -342,75 +329,67 @@ msgstr "ページ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:198
 msgid "Editando Página"
-msgstr "Editing Page"
+msgstr "ページを編集する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:199
-#, fuzzy
 msgid "Nueva Página"
-msgstr "New Question"
+msgstr "新しい質問"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:200
 msgid "Traduciendo Página"
-msgstr "Translating Page"
+msgstr "ページを翻訳する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:204
 msgid "Gestión de proyectos"
-msgstr "Project administration"
+msgstr "プロジェクト管理"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:207
-#, fuzzy
 msgid "Fechas del proyecto"
-msgstr "Project administration"
+msgstr "プロジェクト日付"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:208
-#, fuzzy
 msgid "Cuentas del proyecto"
-msgstr "Project listing"
+msgstr "プロジェクトアカウント"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:209
-#, fuzzy
 msgid "Imágenes del proyecto"
-msgstr "Project report"
+msgstr "プロジェクト画像"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:210
-#, fuzzy
 msgid "Moviendo a otro Nodo el proyecto"
-msgstr "Manage project accounts"
+msgstr "プロジェクトを別ノードに移動する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:211
-#, fuzzy
 msgid "Asignando a una Convocatoria el proyecto"
-msgstr "Manage project accounts"
+msgstr "プロジェクトにスポンサーを割り当てる"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:212
-#, fuzzy
 msgid "Informe Financiero del proyecto"
-msgstr "Project report"
+msgstr "プロジェクトの財務レポート"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:213
-#, fuzzy
 msgid "Cambiando Id de proyecto"
-msgstr "Changed project dates"
+msgstr "プロジェクトのIDを変更する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:218
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:546
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/content.php:36
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/home.php:44
 msgid "Proyectos destacados"
-msgstr "特集プロジェクト"
+msgstr "ピックアッププロジェクト"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:221
 msgid "Nuevo Destacado"
-msgstr "新規特集"
+msgstr "新規ピックアップ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:222
 msgid "Editando Destacado"
-msgstr "特集の編集"
+msgstr "ピックアップの編集"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:223
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:549
 msgid "Traduciendo Destacado"
-msgstr "特集の翻訳"
+msgstr "ピックアップの翻訳"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:227
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/home.php:46
@@ -419,15 +398,15 @@ msgstr "最新のアクティビティ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:233
 msgid "Revisiones"
-msgstr "Reviews"
+msgstr "レビュー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:236
 msgid "Iniciando briefing"
-msgstr "Initializing briefing"
+msgstr "ブリーフィングを初期化する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:237
 msgid "Editando briefing"
-msgstr "Editing briefing"
+msgstr "ブリーフィングを編集する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:238
 msgid "Informe"
@@ -435,36 +414,32 @@ msgstr "レポート"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:243
 msgid "Recompensas"
-msgstr ""
-"Failed for admin %s when trying to set the project %s to state <span class="
-"\"red\">in Campaign</span>"
+msgstr "報酬"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:246
-#, fuzzy
 msgid "Gestionando recompensa"
 msgstr "ユーザー管理"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:251
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/manage.html.php:108
-#, fuzzy
 msgid "Historial envíos"
-msgstr "History of dispatches"
+msgstr "送信履歴"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:253
 msgid "Emails enviados"
-msgstr "Emails dispatched"
+msgstr "送信済みメールアドレス"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:258
 msgid "Apoyos institucionales"
-msgstr "Institutional Supports"
+msgstr "制度サポート"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:261
 msgid "Nuevo Patrocinador"
-msgstr "New Sponsor"
+msgstr "新しいスポンサー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:262
 msgid "Editando Patrocinador"
-msgstr "Editing Sponsor"
+msgstr "スポンサーを編集する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:266
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:492
@@ -487,35 +462,34 @@ msgstr "タグの翻訳"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:275
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:506
 msgid "Plantillas de email"
-msgstr "Email templates"
+msgstr "メールテンプレート"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:278
 msgid "Editando Plantilla"
-msgstr "Editing template"
+msgstr "テンプレートを編集する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:279
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:509
 msgid "Traduciendo Plantilla"
-msgstr "Translating Template"
+msgstr "テンプレートを翻訳する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:284
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:450
 msgid "Textos interficie"
-msgstr "Interface texts"
+msgstr "インターフェーステキスト"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:287
 msgid "Editando Original"
-msgstr "Editing Original"
+msgstr "オリジナルを編集する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:288
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:453
 msgid "Traduciendo Texto"
-msgstr "Translating Text"
+msgstr "テキストを翻訳する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:293
-#, fuzzy
 msgid "Traducciones de proyectos"
-msgstr "Translation of this project"
+msgstr "プロジェクトを翻訳する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:296
 msgid "Habilitando traducción"
@@ -547,8 +521,7 @@ msgstr "成り済ましユーザー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:309
 msgid "Moviendo a otro Nodo el usuario "
-msgstr ""
-"Admin %s has set the project %s to state <span class=\"red\">Discarded</span>"
+msgstr "ユーザーを別ノードに移動する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:314
 msgid "Niveles de meritocracia"
@@ -560,14 +533,11 @@ msgstr "レベルを編集"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:361
 msgid "Admin"
-msgstr ""
-"Failed for admin %s when trying to set the project %s to state <span class="
-"\"red\">Discarded</span>"
+msgstr "管理者"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:540
 msgid "Contenidos"
-msgstr ""
-"Admin %s has set the project %s to state <span class=\"red\">Edit</span>"
+msgstr "コンテンツ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:541
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:408
@@ -589,31 +559,24 @@ msgid "Portada"
 msgstr "表紙"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:544
-#, fuzzy
 msgid "Textos y Traducciones"
 msgstr "テキストと翻訳の管理"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin.php:545
 msgid "Servicios"
-msgstr ""
-"Failed for admin %s when trying to set the project %s to state <span class="
-"\"red\">Edit</span>"
+msgstr "サービス"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/home.php:76
 msgid "Todos los elementos disponibles ya estan en portada"
-msgstr ""
-"Admin %s has set the project %s to state <span class=\"red\">Financed</span>"
+msgstr "全てのアイテムは既にカバー上です"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/home.php:96
 msgid "Todos los elementos laterales disponibles ya estan en portada"
-msgstr ""
-"Failed for admin %s when trying to set the project %s to state <span class="
-"\"red\">Financed</span>"
+msgstr "全てのサイドよそは既にカバー上です"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/pages.php:90
-#, fuzzy
 msgid "modificacion de página institucional (admin)"
-msgstr "edit license (admin)"
+msgstr "組織ページを変更する（管理者）"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/projects.php:81
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/translates.php:87
@@ -663,46 +626,38 @@ msgid "Se han actualizado las cuentas del proyecto "
 msgstr "プロジェクトアカウントが更新されました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/projects.php:113
-#, fuzzy
 msgid "No se ha podido actualizar campo"
-msgstr "Term could not be removed"
+msgstr "フィールドを更新できませんでした"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/projects.php:119
-#, fuzzy
 msgid "Se han actualizado los datos"
-msgstr "プロジェクトアカウントが更新されました"
+msgstr "日付が更新されました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/projects.php:135
 msgid "Ya hay un proyecto con ese Id."
-msgstr ""
-"Admin %s has set the project %s to state <span class=\"red\">Return "
-"fulfilled</span>"
+msgstr "そのIDのプロジェクトは既存です"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/projects.php:140
 msgid "El proyecto no está ni en Edición ni en Revisión, no se modifica nada."
 msgstr ""
-"Failed for admin %s when trying to set the project %s to state <span class="
-"\"red\">Return fulfilled</span>"
+"そのプロジェクトは編集中でもレビュー中でもありません、何も変化していません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/projects.php:145
-#, fuzzy
 msgid "Verificar el proyecto"
-msgstr "Project report"
+msgstr "プロジェクトをチェック"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/projects.php:148
-#, fuzzy
 msgid "Ha fallado algo en el rebase, verificar el proyecto"
-msgstr "Has failed to relocate the contribution"
+msgstr "プロジェクトを確認して下さい。編集？に失敗しました。"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/projects.php:224
-#, fuzzy
 msgid "Cambio estado/fechas/cuentas/nodo de un proyecto desde el admin"
-msgstr "State/date has been changed from the admin console for a project"
+msgstr "管理者によるプロジェクトへの状態、日付、カウントなどの変更"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/projects.php:351
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/translates.php:63
 msgid "No hay proyecto sobre el que operar"
-msgstr "There's no project to apply to"
+msgstr "操作できるプロジェクトはありません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/projects.php:391
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/content.php:70
@@ -734,22 +689,20 @@ msgid "valoración iniciada (admin)"
 msgstr "評価が開始されました (管理者)"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/reviews.php:72
-#, fuzzy
 msgid "Iniciado"
-msgstr "Initializing briefing"
+msgstr "オリジナル"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/reviews.php:81
 msgid "Datos editados correctamente"
 msgstr "情報が正常に編集されました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/reviews.php:86
-#, fuzzy
 msgid "No se han podido grabar los datos. "
-msgstr "Could not delete entry"
+msgstr "セーブできませんでした"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/reviews.php:108
 msgid "La revisión se ha cerrado"
-msgstr "レビューがクローズされました"
+msgstr "レビューがクローズしました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/reviews.php:113
 msgid "valoración finalizada (admin)"
@@ -760,18 +713,16 @@ msgid "Finalizada"
 msgstr "終了"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/reviews.php:123
-#, fuzzy
 msgid "La revisión no se ha podido cerrar. "
-msgstr "レビューがクローズされました"
+msgstr "レビューのクローズに失敗しました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/reviews.php:159
-#, fuzzy
 msgid "Revisión asignada correctamente"
 msgstr "レビューが正常に開始されました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/reviews.php:164
 msgid "asignar revision (admin)"
-msgstr "assign review (admin)"
+msgstr "レビューを割り当てる（管理者）"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/reviews.php:167
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/translates.php:82
@@ -779,14 +730,12 @@ msgid "Asignado"
 msgstr "アサイン済み"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/reviews.php:196
-#, fuzzy
 msgid "Revisión desasignada correctamente"
 msgstr "レビューが正常に開始されました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/reviews.php:201
-#, fuzzy
 msgid "Desasignar revision (admin)"
-msgstr "assign review (admin)"
+msgstr "レビューの割り当てを外す（管理者）"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/reviews.php:204
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/translates.php:91
@@ -794,30 +743,27 @@ msgid "Desasignado"
 msgstr "未アサイン"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/reviews.php:248
-#, fuzzy
 msgid "No iniciada"
-msgstr "News item"
+msgstr "未開始"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/reviews.php:249
-#, fuzzy
 msgid "Abierta"
-msgstr "Opened"
+msgstr "オープン"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/reviews.php:250
-#, fuzzy
 msgid "Cerrada"
-msgstr "Closed"
+msgstr "クローズ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/sponsors.php:54
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/tags.php:52
 msgid "Añadir"
-msgstr "追加"
+msgstr "追加する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/sponsors.php:70
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/sponsors.php:162
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/sponsors.php:216
 msgid "Patrocinador"
-msgstr "Sponsor"
+msgstr "スポンサー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/sponsors.php:75
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/sponsors.php:167
@@ -845,10 +791,9 @@ msgstr "ロゴ"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/licenses/list.html.php:58
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/promote/list.html.php:35
 msgid "Posición"
-msgstr "Position"
+msgstr "役職"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/sponsors.php:127
-#, fuzzy
 msgid "Datos grabados correctamente"
 msgstr "情報が正常に編集されました"
 
@@ -872,19 +817,16 @@ msgstr "情報が正常に編集されました"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/user.php:309
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/user.php:341
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/user.php:506
-#, fuzzy
 msgid "No se ha grabado correctamente. "
 msgstr "正常に保存されませんでした"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/sponsors.php:199
-#, fuzzy
 msgid "Se ha eliminado el registro"
-msgstr "Term could not be removed"
+msgstr "登録を解除する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/sponsors.php:202
-#, fuzzy
 msgid "No se ha podido eliminar el registro"
-msgstr "Term could not be removed"
+msgstr "登録解除できませんでした"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/sponsors.php:212
 msgid "Nuevo patrocinador"
@@ -905,12 +847,10 @@ msgid "Tag"
 msgstr "タグ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/tags.php:87
-#, fuzzy
 msgid "El tag ha sido actualizado"
-msgstr "Data updated"
+msgstr "更新されたデータ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/tags.php:90
-#, fuzzy
 msgid "No se ha guardado correctamente"
 msgstr "正常に保存されませんでした"
 
@@ -919,14 +859,12 @@ msgid "Nuevo tag"
 msgstr "新規タグ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/tags.php:145
-#, fuzzy
 msgid "Entradas"
-msgstr "Excerpt"
+msgstr "エントリー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/templates.php:49
-#, fuzzy
 msgid "La plantilla se ha actualizado correctamente"
-msgstr "Entry has been updated successfully"
+msgstr "テンプレートの更新に成功しました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/texts.php:38
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/templates/list.html.php:35
@@ -955,28 +893,24 @@ msgid "Buscar texto:"
 msgstr "検索テキスト:"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/texts.php:103
-#, fuzzy
 msgid "El texto ha sido actualizado"
-msgstr "Data updated"
+msgstr "テキストが更新されました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/texts.php:132
 msgid "Aplicar"
 msgstr "適用する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/translates.php:46
-#, fuzzy
 msgid "No hay más proyectos disponibles para traducir"
-msgstr "There's no project to apply to"
+msgstr "翻訳するプロジェクトがありません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/translates.php:84
-#, fuzzy
 msgid "Traducción asignada correctamente"
-msgstr "レビューが正常に開始されました"
+msgstr "翻訳の割り当てに成功しました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/translates.php:93
-#, fuzzy
 msgid "Traducción desasignada correctamente"
-msgstr "レビューが正常に開始されました"
+msgstr "翻訳の割り当てを外しました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/translates.php:125
 msgid "Hemos perdido de vista el proyecto"
@@ -984,28 +918,27 @@ msgstr "プロジェクトが見つかりません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/translates.php:135
 msgid "Datos de traducción actualizados"
-msgstr "Translation details were updated"
+msgstr "翻訳データが更新されました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/translates.php:142
 msgid "proyecto habilitado para traducirse (admin)"
-msgstr "project is available for translation (admin)"
+msgstr "プロジェクトの翻訳が可能です（管理者）"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/translates.php:157
 msgid "Ha fallado al habilitar la traducción del proyecto "
-msgstr "Failed to enable translation for project"
+msgstr "プロジェクトを翻訳可能にすることに失敗しました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/translates.php:159
-#, fuzzy
 msgid "Ha fallado al actualizar los datos de la traducción"
-msgstr "Failed to enable translation for project"
+msgstr "翻訳データの更新に失敗しました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/translates.php:224
 msgid "traducción finalizada (admin)"
-msgstr "translation complete (admin)"
+msgstr "翻訳完了（管理者）"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/translates.php:234
 msgid "Falló al finalizar la traducción"
-msgstr "Failed to finalize translation"
+msgstr "翻訳の完了に失敗しました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:39
 msgid "Desactivado"
@@ -1025,27 +958,27 @@ msgstr "非表示"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:55
 msgid "Hecho revisor"
-msgstr "Made into a reviewer"
+msgstr "レビュワーに追加する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:59
 msgid "Quitado de revisor"
-msgstr "Removed as reviewer"
+msgstr "レビュワーから外す"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:63
 msgid "Hecho traductor"
-msgstr "Added as translator"
+msgstr "翻訳者に追加する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:67
 msgid "Quitado de traductor"
-msgstr "Removed as translator"
+msgstr "翻訳者から外す"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:71
 msgid "Hecho admin"
-msgstr "Added as admin"
+msgstr "管理者に追加する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:75
 msgid "Quitado de admin"
-msgstr "Removed as admin"
+msgstr "管理者から外す"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:144
 msgid "el email"
@@ -1057,13 +990,12 @@ msgstr "パスワード"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:156
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:255
-#, fuzzy
 msgid "Operación sobre usuario"
-msgstr "Perform task on user (admin)"
+msgstr "ユーザー操作"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:165
 msgid "Datos actualizados"
-msgstr "Data updated"
+msgstr "更新されたデータ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:294
 msgid "Hemos perdido de vista al usuario"
@@ -1083,18 +1015,17 @@ msgstr "選択した言語の翻訳者です。"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/detail.html.php:42
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/list.html.php:88
 msgid "Activo"
-msgstr "Active"
+msgstr "アクティブ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:392
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/detail.html.php:43
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/list.html.php:88
 msgid "Inactivo"
-msgstr "Inactive"
+msgstr "非アクティブ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:396
-#, fuzzy
 msgid "Solo usuario"
-msgstr "Glossary"
+msgstr "単一ユーザー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:398
 msgid "Impulsores"
@@ -1103,16 +1034,15 @@ msgstr "drivers"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:399
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:146
 msgid "Cofinanciadores"
-msgstr "Co-financiers"
+msgstr "共同出資者"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:400
-#, fuzzy
 msgid "Colaboradores"
-msgstr "Co-financiers"
+msgstr "貢献者"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:404
 msgid "Fecha de alta"
-msgstr "Date of creation"
+msgstr "日付"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/users.php:405
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/detail.html.php:77
@@ -1137,26 +1067,23 @@ msgstr "数量"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/worth.php:47
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/admin/worth.php:51
 msgid "Nivel de meritocracia modificado"
-msgstr "Level of meritocracy has been updated"
+msgstr "能力主義のレベルが変更されました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:45
-#, fuzzy
 msgid "No tienes ningún idioma, contacta con el administrador"
-msgstr "You don't have any blog space, please contact us"
+msgstr "あなたには言語が設定されていません。サイト管理者に問い合わせて下さい"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:433
 msgid "Gestión de Textos y Traducciones"
 msgstr "テキストと翻訳の管理"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:464
-#, fuzzy
 msgid "Contenidos institucionales"
-msgstr "Institutional Supports"
+msgstr "組織コンテンツ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:467
-#, fuzzy
 msgid "Traduciendo contenido de Página"
-msgstr "Translating Page"
+msgstr "ウェブサイトの内容を翻訳する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:471
 msgid "Categorias e Intereses"
@@ -1168,25 +1095,21 @@ msgstr "Ideas about"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:523
 msgid "Traduciendo Idea"
-msgstr "Translate Idea"
+msgstr "アイディアを翻訳する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:527
-#, fuzzy
 msgid "Meritocracia"
 msgstr "実力レベル"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:530
-#, fuzzy
 msgid "Traduciendo Nivel"
 msgstr "タイプの翻訳"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:553
-#, fuzzy
 msgid "Proyectos recomendados"
 msgstr "特集プロジェクト"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:556
-#, fuzzy
 msgid "Traduciendo recomendado"
 msgstr "特集の翻訳"
 
@@ -1214,28 +1137,24 @@ msgid "Descripción"
 msgstr "説明"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:568
-#, fuzzy
 msgid "Traduciendo"
 msgstr "タグの翻訳"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:575
-#, fuzzy
 msgid "Traduciendo banner"
 msgstr "バナーを翻訳"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:582
-#, fuzzy
 msgid "Traduciendo entrada"
-msgstr "Translating Entry"
+msgstr "エントリーを翻訳する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:586
 msgid "Páginas institucionales"
-msgstr "Institutional pages"
+msgstr "組織のページ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/controller/translate.php:589
-#, fuzzy
 msgid "Traduciendo página"
-msgstr "Translating Page"
+msgstr "ページを翻訳する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/PHP-Gettext/tests/ExtensionTest.php:10
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/PHP-Gettext/tests/ExtensionTest.php:25
@@ -1297,19 +1216,16 @@ msgid_plural "Foobar"
 msgstr[0] "ほげほげ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/content.php:37
-#, fuzzy
 msgid "Proyectos apadrinados"
 msgstr "特集プロジェクト"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/content.php:38
-#, fuzzy
 msgid "Tipos de retorno/recompensa"
-msgstr "Types of Return"
+msgstr "リターンのタイプ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/content.php:41
-#, fuzzy
 msgid "Noticias"
-msgstr "News item"
+msgstr "News"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/content.php:42
 msgid "Faq"
@@ -1321,16 +1237,14 @@ msgid "Tags"
 msgstr "タグ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/content.php:46
-#, fuzzy
 msgid "Criterios de evaluación"
-msgstr "Review criteria"
+msgstr "評価基準"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/content.php:47
 msgid "Meritocrácia"
 msgstr "能力主義"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/content.php:48
-#, fuzzy
 msgid "Plantillas emails automáticos"
 msgstr "Email templates"
 
@@ -1339,7 +1253,6 @@ msgid "Glosario de términos"
 msgstr "用語集"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/content.php:50
-#, fuzzy
 msgid "Ideas de about"
 msgstr "Ideas about"
 
@@ -1370,9 +1283,8 @@ msgid "Entradilla"
 msgstr "抜粋"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/content.php:92
-#, fuzzy
 msgid "Texto entrada"
-msgstr "Translating Entry"
+msgstr "テキスト入力"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/content.php:93
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/content.php:111
@@ -1415,7 +1327,6 @@ msgstr "管理者"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/detail.html.php:78
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/init.html.php:38
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/rewards/edit.html.php:18
-#, fuzzy
 msgid "Usuario"
 msgstr "ユーザー"
 
@@ -1440,7 +1351,6 @@ msgstr "ユーザー"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/rewards/list.html.php:13
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/rewards/list.html.php:56
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/translates/list.html.php:54
-#, fuzzy
 msgid "Proyecto"
 msgstr "プロジェクト"
 
@@ -1448,7 +1358,7 @@ msgstr "プロジェクト"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:178
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/list.html.php:45
 msgid "Convocatoria"
-msgstr "Call"
+msgstr "スポンサー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/feed.php:72
 msgid "Transferencias"
@@ -1467,7 +1377,6 @@ msgid "Registro sin titulo"
 msgstr "タイトル無しで登録する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/template.php:149
-#, fuzzy
 msgid "Registro sin contenido"
 msgstr "コンテンツを書く"
 
@@ -1477,27 +1386,22 @@ msgid "Propósito general"
 msgstr "汎用"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/template.php:198
-#, fuzzy
 msgid "Registro y acceso usuario"
 msgstr "ユーザーリスト"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/template.php:199
-#, fuzzy
 msgid "Actividad proyecto"
 msgstr "最新のアクティビティ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/template.php:200
 msgid "Auto-tips difusión"
-msgstr ""
-"Something (indeterminate) has failed when creating the manual contribution"
+msgstr "自動でコツを広めます"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/template.php:201
-#, fuzzy
 msgid "Proceso aporte"
-msgstr "Cancelling contribution"
+msgstr "貢献を処理する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/template.php:202
-#, fuzzy
 msgid "Comunicación"
 msgstr "コミュニケーション"
 
@@ -1506,7 +1410,6 @@ msgid "Avisos al autor"
 msgstr "作者へのお知らせ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:330
-#, fuzzy
 msgid "Pagina de perfil de usuario"
 msgstr "ユーザーリスト"
 
@@ -1515,12 +1418,10 @@ msgid "Proyecto, pública y formulario"
 msgstr "Project, public and form"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:332
-#, fuzzy
 msgid "Generales del formulario de proyecto"
-msgstr "Project report"
+msgstr "プロジェクトの一般フォーム"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:333
-#, fuzzy
 msgid "Gestión de perfil del usuario"
 msgstr "ユーザー管理"
 
@@ -1529,53 +1430,44 @@ msgid "Datos personales del usuario"
 msgstr "ユーザーの個人情報"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:335
-#, fuzzy
 msgid "Descripción del proyecto"
-msgstr "Project administration"
+msgstr "プロジェクトの説明"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:336
-#, fuzzy
 msgid "Costes del proyecto"
-msgstr "Project report"
+msgstr "プロジェクトコスト"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:337
-#, fuzzy
 msgid "Retornos y recompensas del proyecto"
-msgstr "Manage project accounts"
+msgstr "プロジェクトのリターンと報酬"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:338
-#, fuzzy
 msgid "Colaboraciones del proyecto"
-msgstr "Translation of this project"
+msgstr "コラボレーションしているプロジェクト"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:339
-#, fuzzy
 msgid "Previsualización del proyecto"
-msgstr "Project administration"
+msgstr "プロジェクトのプレビュー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:340
-#, fuzzy
 msgid "Dashboard del usuario"
-msgstr "ユーザーリスト"
+msgstr "ユーザーダッシュボード"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:341
-#, fuzzy
 msgid "Registro de usuarios"
-msgstr "ユーザーリスト"
+msgstr "ユーザー登録"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:342
-#, fuzzy
 msgid "Pagina de login"
-msgstr "ブログタグ"
+msgstr "ログインページ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:343
-#, fuzzy
 msgid "Sección descubre proyectos"
-msgstr "Project administration"
+msgstr "プロジェクト発見セクション"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:344
 msgid "Sección comunidad"
-msgstr "section community"
+msgstr "コミュニティセクション"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:346
 msgid "Blog/Actualizaciones"
@@ -1591,7 +1483,7 @@ msgstr "お問い合わせページ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:349
 msgid "Banderolos"
-msgstr ""
+msgstr "バナー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:350
 msgid "Pagina de aportar a un proyecto"
@@ -1614,14 +1506,12 @@ msgid "Cuentas de redes sociales"
 msgstr "ソーシャルネットワークアカウント"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:355
-#, fuzzy
 msgid "Panel revisor"
-msgstr "Made into a reviewer"
+msgstr "レビュワーパネル"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:356
-#, fuzzy
 msgid "Panel traductor"
-msgstr "Added as translator"
+msgstr "翻訳者パネル"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:357
 msgid "Menu superior"
@@ -1632,32 +1522,28 @@ msgid "Eventos recientes"
 msgstr "最近のイベント"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:359
-#, fuzzy
 msgid "Emails automaticos"
-msgstr "Emails dispatched"
+msgstr "自動配信メール"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:360
 msgid "Avisos azules"
-msgstr "Avisos azules"
+msgstr "青いニュース"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:361
 msgid "Errores catastroficos"
 msgstr "致命的なエラー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:362
-#, fuzzy
 msgid "Convocatorias: publicos"
-msgstr "スポンサーの呼びかけ"
+msgstr "スポンサー：公式"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:363
-#, fuzzy
 msgid "Convocatorias: formulario"
-msgstr "スポンサーの呼びかけ"
+msgstr "スポンサー：フォーム"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:364
-#, fuzzy
 msgid "Convocatorias: dashboard"
-msgstr "スポンサーの呼びかけ"
+msgstr "スポンサー：ダッシュボード"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/library/text.php:365
 msgid "Wall of friends"
@@ -1675,9 +1561,8 @@ msgstr "問い合わせフォーム"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/invest.php:309
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/message.php:142
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/review.php:61
-#, fuzzy
 msgid "Falta proyecto"
-msgstr "プロジェクト"
+msgstr "プロジェクトがありません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/banner.php:176
 msgid "Falta imagen"
@@ -1698,9 +1583,8 @@ msgid "Falta nombre"
 msgstr "名前がありません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/criteria.php:83
-#, fuzzy
 msgid "Falta seccion"
-msgstr "to the address"
+msgstr "セクションがありません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/criteria.php:86
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/faq.php:165
@@ -1719,9 +1603,8 @@ msgid "Falta nodo"
 msgstr "ノードがありません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/faq.php:162
-#, fuzzy
 msgid "Falta sección"
-msgstr "to the address"
+msgstr "セクションがありません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/home.php:36
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/home/list.html.php:52
@@ -1741,9 +1624,8 @@ msgid "Novedades"
 msgstr "ニュース"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/home.php:62
-#, fuzzy
 msgid "Selector proyectos"
-msgstr "of any project"
+msgstr "プロジェクトの選択"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/home.php:63
 msgid "Categorias de proyectos"
@@ -1755,7 +1637,7 @@ msgstr "プロジェクト概要"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/home.php:65
 msgid "Resumen convocatorias"
-msgstr "Summary calls"
+msgstr "スポンサーの該上"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/home.php:66
 msgid "Patrocinadores"
@@ -1795,9 +1677,8 @@ msgid "Pendientes"
 msgstr "保留"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/invest.php:112
-#, fuzzy
 msgid "Cumplidos"
-msgstr "Accomplished"
+msgstr "達成済み"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/invest.php:300
 msgid "La cantidad no es correcta"
@@ -1821,28 +1702,24 @@ msgid "Preaprobado"
 msgstr "事前承認の"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/invest.php:1011
-#, fuzzy
 msgid "Cobrado"
-msgstr "Shown"
+msgstr "受け取る"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/invest.php:1012
-#, fuzzy
 msgid "Cancelado"
-msgstr "Cancelling contribution"
+msgstr "キャンセル済み"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/invest.php:1013
-#, fuzzy
 msgid "Pagado al proyecto"
-msgstr "Project listing"
+msgstr "支払われたプロジェクト"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/invest.php:1014
 msgid "Archivado (devuelto)"
-msgstr "アーカイブ済み"
+msgstr "アーカイブされた（戻ってきた）"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/invest.php:1015
-#, fuzzy
 msgid "Reubicado"
-msgstr "Published"
+msgstr "再配置された"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/invest.php:1031
 msgid "Paypal"
@@ -1859,9 +1736,8 @@ msgid "Manual"
 msgstr "マニュアル"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/invest.php:1086
-#, fuzzy
 msgid "El aporte PayPal"
-msgstr "Manual contribution"
+msgstr "PayPalでの貢献"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/invest.php:1086
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/invest.php:1102
@@ -1882,7 +1758,7 @@ msgstr ""
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/invest.php:1327
 msgid "No se ha calculado bien el parametro $act_eq"
-msgstr ""
+msgstr "$act_eqはまだ計算されていません。"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/news.php:93
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/sponsor.php:115
@@ -1894,12 +1770,10 @@ msgid "Sin datos"
 msgstr "データがありません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/project.php:186
-#, fuzzy
 msgid "El nuevo proyecto de "
 msgstr "プロジェクト"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/project.php:545
-#, fuzzy
 msgid "El proyecto no tiene id"
 msgstr "プロジェクト"
 
@@ -1928,16 +1802,14 @@ msgid "Campaña completada"
 msgstr "キャンペーン終了"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/promote.php:139
-#, fuzzy
 msgid "Se muestra y no tiene proyecto"
-msgstr "Project listing"
+msgstr "表示できるプロジェクトはありません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/user.php:1056
 msgid "Admin Goteo"
 msgstr "Goteoの管理者"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/user.php:1057
-#, fuzzy
 msgid "El usuario "
 msgstr "ユーザー"
 
@@ -1976,14 +1848,12 @@ msgid "No hay una traducción para asignar"
 msgstr "担当している翻訳はありません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/user/web.php:92
-#, fuzzy
 msgid "No se ha podido quitar la web "
-msgstr "Could not delete entry"
+msgstr "ウェブを削除できませんでした"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/model/user/web.php:92
-#, fuzzy
 msgid " del usuario "
-msgstr "ユーザーリスト"
+msgstr "ユーザー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:34
 msgid "Seguro que deseas cambiarle el estado a este aporte?, esto es delicado"
@@ -2025,36 +1895,30 @@ msgstr "事前承認を実行しますか？"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:56
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/details.html.php:48
-#, fuzzy
 msgid "Ejecutar cargo ahora"
-msgstr "Execute the charges inmediately"
+msgstr "手数料の実行をすぐにしてください"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:60
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/details.html.php:52
-#, fuzzy
 msgid "Reubicar este aporte"
-msgstr "Relocating a contribution"
+msgstr "貢献を再配置する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:64
-#, fuzzy
 msgid "Es donativo"
-msgstr "Only donations"
+msgstr "寄付"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:68
-#, fuzzy
 msgid "Detalles de la transaccion"
-msgstr "Transaction details"
+msgstr "取引の詳細"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:70
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/rewards/edit.html.php:19
-#, fuzzy
 msgid "Cantidad aportada"
-msgstr "Cancelling contribution"
+msgstr "貢献の総量"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:74
-#, fuzzy
 msgid "Campaña: "
-msgstr "Campaign"
+msgstr "キャンペーン"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:80
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/list.html.php:95
@@ -2067,9 +1931,8 @@ msgstr "Campaign"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/rewards/list.html.php:58
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/tasks/edit.html.php:39
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/tasks/list.html.php:63
-#, fuzzy
 msgid "Estado"
-msgstr "in state"
+msgstr "状態"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:81
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/details.html.php:69
@@ -2082,15 +1945,13 @@ msgstr "注意！"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:85
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/details.html.php:73
-#, fuzzy
 msgid "Fecha del aporte"
-msgstr "Date of creation"
+msgstr "貢献した日付"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:89
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/details.html.php:77
-#, fuzzy
 msgid "Cargo ejecutado el: "
-msgstr "Charges executed (admin)"
+msgstr "執行済みの手数料"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:92
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/details.html.php:80
@@ -2100,9 +1961,8 @@ msgstr "獲得額"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:98
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/list.html.php:123
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/rewards/edit.html.php:30
-#, fuzzy
 msgid "Donativo"
-msgstr "Inactive"
+msgstr "寄付"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:100
 msgid "SI"
@@ -2126,31 +1986,27 @@ msgstr "Capital riego"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:112
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/details.html.php:90
-#, fuzzy
 msgid "Aporte anónimo"
-msgstr "Cancelled contribution"
+msgstr "匿名の貢献"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:115
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/details.html.php:93
-#, fuzzy
 msgid "Donativo de"
-msgstr "Inactive"
+msgstr "寄付"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:118
-#, fuzzy
 msgid "Manual generado por admin"
-msgstr "new entry at Goteo blog (admin)"
+msgstr "管理者によってマニュアルで作成された"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:124
 msgid "Códigos de seguimiento"
 msgstr ""
-"Admin %s has cancelled a TPV charge of %s of %s via TPV (id: %s) to projecct "
+"Admin %s has cancelled a TPV charge of %s of %s via TPV (id: %s) to project "
 "%s on date %s"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:124
-#, fuzzy
 msgid "Ir al aporte"
-msgstr "Cancelling contribution"
+msgstr "貢献に進む"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:139
 msgid "Recompensas elegidas"
@@ -2159,7 +2015,6 @@ msgstr ""
 "%s on date %s"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:147
-#, fuzzy
 msgid "Dirección"
 msgstr "説明"
 
@@ -2168,9 +2023,8 @@ msgid "Mostrar detalles técnicos"
 msgstr "技術詳細を表示する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:165
-#, fuzzy
 msgid "Detalles de la devolución"
-msgstr "Transaction details"
+msgstr "リターンの詳細"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:166
 msgid "Hay que ir al panel de paypal para ver los detalles de una devolución"
@@ -2197,48 +2051,40 @@ msgid "Ver aporte completo de riego"
 msgstr "riegoからの貢献を見る"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:187
-#, fuzzy
 msgid "Log"
-msgstr "Logo"
+msgstr "ログ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:195
-#, fuzzy
 msgid "Detalles técnicos de la transaccion"
-msgstr "Transaction details"
+msgstr "取引の技術詳細"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:200
-#, fuzzy
 msgid "Detalles del preapproval"
-msgstr "Contribution details"
+msgstr "事前承認の詳細"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/details.html.php:209
-#, fuzzy
 msgid "Detalles del cargo"
-msgstr "Contribution details"
+msgstr "手数料の詳細"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/list.html.php:30
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/list.html.php:31
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/rewards/list.html.php:15
-#, fuzzy
 msgid "Todos los proyectos"
-msgstr "Project listing"
+msgstr "全てのプロジェクト"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/list.html.php:33
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/list.html.php:34
-#, fuzzy
 msgid "Todos los usuarios"
 msgstr "ユーザーリスト"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/list.html.php:36
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/licenses/list.html.php:40
-#, fuzzy
 msgid "Todos los tipos"
-msgstr "Only donations"
+msgstr "全てのタイプ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/list.html.php:38
-#, fuzzy
 msgid "Estado del aporte"
-msgstr "Contribution details"
+msgstr "貢献の状態"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/list.html.php:39
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/list.html.php:40
@@ -2253,12 +2099,10 @@ msgid "Campaña"
 msgstr "キャンペーン"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/list.html.php:42
-#, fuzzy
 msgid "Todas las campañas"
 msgstr "New campaign"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/list.html.php:44
-#, fuzzy
 msgid "Para revisión"
 msgstr "レビューに回す"
 
@@ -2280,15 +2124,13 @@ msgstr "フィルター"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/list.html.php:65
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/sended/list.html.php:58
-#, fuzzy
 msgid "Fecha desde"
-msgstr "Date of creation"
+msgstr "開始日付"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/list.html.php:69
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/sended/list.html.php:62
-#, fuzzy
 msgid "Fecha hasta"
-msgstr "Date of creation"
+msgstr "終了日付"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/list.html.php:77
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/list.html.php:80
@@ -2316,16 +2158,14 @@ msgstr "合計"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/list.html.php:91
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/list.html.php:95
-#, fuzzy
 msgid "Aporte ID"
 msgstr "寄付"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/list.html.php:93
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/list.html.php:97
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/rewards/list.html.php:55
-#, fuzzy
 msgid "Cofinanciador"
-msgstr "Co-financiers"
+msgstr "共同出資者"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/list.html.php:96
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/list.html.php:100
@@ -2334,15 +2174,13 @@ msgstr "方法"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/list.html.php:97
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/list.html.php:101
-#, fuzzy
 msgid "Estado aporte"
-msgstr "Cancelling contribution"
+msgstr "貢献の状態"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/list.html.php:98
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/list.html.php:102
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:191
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:285
-#, fuzzy
 msgid "Importe"
 msgstr "寄付"
 
@@ -2363,9 +2201,8 @@ msgid "Anónimo "
 msgstr "匿名"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/list.html.php:119
-#, fuzzy
 msgid "Donativo "
-msgstr "Inactive"
+msgstr "寄付"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/list.html.php:128
 msgid "No hay transacciones que cumplan con los filtros."
@@ -2376,32 +2213,28 @@ msgid "Seleccionar log por tipo y fecha"
 msgstr "日付とタイプでログを選ぶ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/viewer.html.php:46
-#, fuzzy
 msgid "Tipo de proceso"
-msgstr "Types of Return"
+msgstr "処理のタイプ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/viewer.html.php:49
 msgid "Cargos"
 msgstr "手数料"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/viewer.html.php:50
-#, fuzzy
 msgid "Verificaciones"
-msgstr "コミュニケーション"
+msgstr "チェック"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/viewer.html.php:51
-#, fuzzy
 msgid "Avisos"
-msgstr "Reviewer"
+msgstr "お知らせ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/viewer.html.php:52
 msgid "Pagos"
 msgstr "支払い"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/viewer.html.php:56
-#, fuzzy
 msgid "Fecha del log"
-msgstr "Date of creation"
+msgstr "日別ログ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/accounts/viewer.html.php:65
 msgid "archivo"
@@ -2433,7 +2266,6 @@ msgid "Guardar"
 msgstr "保存"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/banners/list.html.php:25
-#, fuzzy
 msgid "Nuevo banner"
 msgstr "新規バナー"
 
@@ -2476,9 +2308,8 @@ msgstr "編集"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/list.html.php:91
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/promote/list.html.php:63
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/texts/list.html.php:28
-#, fuzzy
 msgid "Quitar"
-msgstr "Removed"
+msgstr "削除"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/banners/list.html.php:58
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/list.html.php:147
@@ -2499,9 +2330,8 @@ msgstr "Removed"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/texts/list.html.php:95
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/translates/list.html.php:75
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/list.html.php:173
-#, fuzzy
 msgid "No se han encontrado registros"
-msgstr "We could not fin recipients for"
+msgstr "見つかりませんでした"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/edit.html.php:49
 msgid "Sí"
@@ -2517,9 +2347,8 @@ msgid "Quitar imagen"
 msgstr "画像を取り除く"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/edit.html.php:137
-#, fuzzy
 msgid "Texto de la entrada"
-msgstr "Removed from frontpage"
+msgstr "テキストエントリー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/edit.html.php:167
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/glossary/edit.html.php:130
@@ -2527,9 +2356,8 @@ msgid "Vídeo"
 msgstr "動画"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/edit.html.php:199
-#, fuzzy
 msgid "Fecha de publicación"
-msgstr "Date of creation"
+msgstr "公開日"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/edit.html.php:205
 msgid "Permite comentarios"
@@ -2538,35 +2366,29 @@ msgstr "コメントを許可する"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/edit.html.php:214
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/promote/edit.html.php:62
 msgid "Publicado"
-msgstr "Published"
+msgstr "公開済み"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/edit.html.php:223
-#, fuzzy
 msgid "En portada"
 msgstr "表紙"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/edit.html.php:232
-#, fuzzy
 msgid "Enlace en footer"
 msgstr "フッターエントリー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/list.html.php:38
-#, fuzzy
 msgid "Nueva entrada"
-msgstr "New Entry"
+msgstr "新しいエントリー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/list.html.php:40
-#, fuzzy
 msgid "Ordenar la portada"
-msgstr "Removed from frontpage"
+msgstr "カバーをなr日帰る"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/list.html.php:45
-#, fuzzy
 msgid "Mostrar:"
-msgstr "Shown"
+msgstr "表示:"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/list.html.php:55
-#, fuzzy
 msgid "Del proyecto:"
 msgstr "プロジェクト"
 
@@ -2574,24 +2396,20 @@ msgstr "プロジェクト"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/list.html.php:69
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/list.html.php:66
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/list.html.php:79
-#, fuzzy
 msgid "Cualquiera"
-msgstr "in any state"
+msgstr "どの"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/list.html.php:67
-#, fuzzy
 msgid "Del nodo:"
-msgstr "New node"
+msgstr "新しいノード"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/list.html.php:87
-#, fuzzy
 msgid "Autor"
-msgstr "Authors"
+msgstr "作成者"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/list.html.php:94
-#, fuzzy
 msgid "Publicada"
-msgstr "Published"
+msgstr "公開済み"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/list.html.php:110
 msgid "[Ver]"
@@ -2603,14 +2421,12 @@ msgid "[Editar]"
 msgstr "[編集]"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/list.html.php:115
-#, fuzzy
 msgid "[Quitar de portada]"
-msgstr "Removed from frontpage"
+msgstr "[カバーを削除]"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/list.html.php:117
-#, fuzzy
 msgid "[Poner en portada]"
-msgstr "Featured on frontpage"
+msgstr "[カバーに設定する]"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/blog/list.html.php:121
 msgid "[Quitar del footer]"
@@ -2646,9 +2462,8 @@ msgstr "セクション:"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/criteria/edit.html.php:48
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/faq/edit.html.php:47
-#, fuzzy
 msgid "Elige la sección"
-msgstr "to the address"
+msgstr "セクションを選ぶ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/criteria/edit.html.php:60
 msgid "Título:"
@@ -2659,9 +2474,8 @@ msgid "Descripción:"
 msgstr "説明:"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/criteria/edit.html.php:70
-#, fuzzy
 msgid "Posición:"
-msgstr "Position"
+msgstr "役職"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/criteria/edit.html.php:72
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/faq/edit.html.php:71
@@ -2679,9 +2493,8 @@ msgid "Después de "
 msgstr "後ろ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/criteria/list.html.php:27
-#, fuzzy
 msgid "Añadir criterio"
-msgstr "Translating Criterium"
+msgstr "基準を追加する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/criteria/list.html.php:31
 msgid "Mostrar los criterios de la sección:"
@@ -2698,21 +2511,18 @@ msgstr "このセクションの課題を表示する"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/promote/list.html.php:61
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/templates/list.html.php:73
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/texts/list.html.php:86
-#, fuzzy
 msgid "Traducir"
-msgstr "Translator"
+msgstr "翻訳者"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/faq/edit.html.php:45
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/faq/edit.html.php:53
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/images.html.php:85
-#, fuzzy
 msgid "Sección"
 msgstr "説明"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/faq/list.html.php:27
-#, fuzzy
 msgid "Añadir pregunta"
-msgstr "Translating Question"
+msgstr "質問を追加する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/faq/list.html.php:31
 msgid "Mostrar las preguntas de:"
@@ -2726,19 +2536,15 @@ msgstr "取り除く"
 msgid ""
 "Termino de glosario, descripción, imágenes y media (vimeo, youtube, presi, "
 "slideshare)"
-msgstr ""
-"Project doesn't have a PayPal account!!! add it to the Contract section of "
-"the author's dashboard."
+msgstr "用語集、説明、画像や各種メディア（vimeo, youtube,slideshareなど）"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/glossary/edit.html.php:95
-#, fuzzy
 msgid "Término"
-msgstr "Editing Term"
+msgstr "用語"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/glossary/edit.html.php:102
-#, fuzzy
 msgid "Explicación del término"
-msgstr "Editing Term"
+msgstr "用語説明"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/glossary/edit.html.php:115
 msgid "Subir una imagen"
@@ -2764,9 +2570,8 @@ msgstr "要素"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/home/list.html.php:94
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/home/list.html.php:152
-#, fuzzy
 msgid "Nuevo elemento"
-msgstr "New node"
+msgstr "新しい要素"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/home/list.html.php:110
 msgid "Central"
@@ -2790,7 +2595,6 @@ msgid "Texto tooltip:"
 msgstr "テキストツールチップ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/icons/list.html.php:29
-#, fuzzy
 msgid "Mostrar los tipos para:"
 msgstr "タイプでフィルター:"
 
@@ -2800,7 +2604,6 @@ msgid "Tooltip"
 msgstr "ツールチップ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/index.html.php:68
-#, fuzzy
 msgid "Textos"
 msgstr "テキスト"
 
@@ -2813,9 +2616,8 @@ msgid "Mailings"
 msgstr "メール"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/index.html.php:95
-#, fuzzy
 msgid "Tareas pendientes"
-msgstr "Pending"
+msgstr "保留中のタスク"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/index.html.php:100
 msgid "IR"
@@ -2827,20 +2629,18 @@ msgstr "保留はありません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/index.html.php:130
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/recent/list.html.php:24
-#, fuzzy
 msgid "actividad reciente"
 msgstr "最新のアクティビティ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/index.html.php:131
 msgid "Ver Feeds por:"
-msgstr "See feeds by:"
+msgstr "フィードを絞り込む:"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/index.html.php:150
 msgid "Ver más"
 msgstr "もっと見る"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/add.html.php:28
-#, fuzzy
 msgid "Importe:"
 msgstr "寄付"
 
@@ -2857,14 +2657,12 @@ msgid "Seleccionar el proyecto al que se aporta"
 msgstr "貢献するプロジェクトを選択する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/add.html.php:51
-#, fuzzy
 msgid "Aporte anónimo:"
-msgstr "Cancelled contribution"
+msgstr "匿名での貢献"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/add.html.php:55
-#, fuzzy
 msgid "Generar aporte"
-msgstr "Cancelling contribution"
+msgstr "貢献をする"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/details.html.php:47
 msgid ""
@@ -2875,30 +2673,26 @@ msgstr ""
 "(id: %s) to project %s on date %s"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/details.html.php:58
-#, fuzzy
 msgid "Cantidad aportada:"
-msgstr "Cancelling contribution"
+msgstr "供給された量"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/details.html.php:96
-#, fuzzy
 msgid "Manual generado por admin: "
-msgstr "new entry at Goteo blog (admin)"
+msgstr "管理者によってマニュアルで作成された:"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/details.html.php:102
 msgid "Códigos de seguimiento: "
 msgstr "トラッキングコード:"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/details.html.php:102
-#, fuzzy
 msgid "Ir a la transacción"
-msgstr "Transaction details"
+msgstr "取引に進む"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/details.html.php:115
 msgid "Recompensas elegidas:"
 msgstr "選択した報酬"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/details.html.php:123
-#, fuzzy
 msgid "Dirección:"
 msgstr "説明"
 
@@ -2907,22 +2701,19 @@ msgid "Todos los métodos"
 msgstr "全ての方法"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/list.html.php:39
-#, fuzzy
 msgid "Estado de proyecto"
-msgstr "Project listing"
+msgstr "プロジェクトの状態"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/list.html.php:42
-#, fuzzy
 msgid "Estado de aporte"
-msgstr "Removed from frontpage"
+msgstr "貢献の状態"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/list.html.php:46
 msgid "Todas las convocatorias"
-msgstr "All calls"
+msgstr "全てのスポンサー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/list.html.php:69
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/rewards/list.html.php:23
-#, fuzzy
 msgid "Alias/Email del usuario"
 msgstr "ユーザーリスト"
 
@@ -2941,12 +2732,10 @@ msgid "No hay aportes que cumplan con los filtros."
 msgstr "絞り込みに一致する貢献はありません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/move.html.php:48
-#, fuzzy
 msgid "Movemos el aporte de "
-msgstr "Contribution details"
+msgstr "貢献を移動する、"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/move.html.php:48
-#, fuzzy
 msgid "al proyecto"
 msgstr "プロジェクト"
 
@@ -2956,13 +2745,12 @@ msgid "de"
 msgstr "of"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/move.html.php:51
-#, fuzzy
 msgid "Al proyecto"
 msgstr "プロジェクト"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/move.html.php:53
 msgid "Seleccionar el proyecto al que se mueve el aporte"
-msgstr "Select the project to which the input moves"
+msgstr "貢献を移動したいプロジェクトを選択する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/move.html.php:61
 msgid "Reubicar"
@@ -2973,60 +2761,53 @@ msgid ""
 "El aporte original va a desaparecer de los cofinanciadores y no se va a "
 "tratar automaticamente al final de ronda, ¿Seguimos?"
 msgstr ""
-"Admin %s has executed charge to %s for its contribution of %s via TPV (id: "
-"%s) to project %s on date %s"
+"オリジナルの貢献は自動で消え、プロジェクトは最終ラウンドとして扱われます。よ"
+"ろしいですか？"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:74
 msgid "Informe de financiación de "
 msgstr "会計報告"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:75
-#, fuzzy
 msgid "Se encuentra en estado "
 msgstr "in any state"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:80
-#, fuzzy
 msgid "El proyecto tiene un "
 msgstr "プロジェクト"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:80
 msgid "conseguidos "
-msgstr ""
+msgstr "達成済み"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:82
-#, fuzzy
 msgid "Informe de aportes"
-msgstr "Project report"
+msgstr "貢献レポート"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:83
 msgid ""
 "Cantidades en bruto (no se tiene en cuenta ejecuciones fallidas ni "
 "comisiones PayPal ni SaNostra)"
-msgstr ""
-"Admin %s has set manual contribution to the name of %s as executed, amount "
-"%s (id: %s) to project %s on date %s"
+msgstr "総量（エラーやPayPalの手数料は除く）"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:85
-#, fuzzy
 msgid "Por destinatario"
 msgstr "受領者の選択"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:88
 msgid "M&eacute;todo"
-msgstr ""
+msgstr "方法"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:90
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:227
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:297
 msgid "Goteo"
-msgstr ""
+msgstr "Goteo"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:94
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:124
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:144
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:249
-#, fuzzy
 msgid "PayPal"
 msgstr "Rev. PayPal"
 
@@ -3034,61 +2815,57 @@ msgstr "Rev. PayPal"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:125
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:145
 msgid "Tpv"
-msgstr ""
+msgstr "TPV"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:106
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:126
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:146
 msgid "Cash"
-msgstr ""
+msgstr "現金"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:119
-#, fuzzy
 msgid "Por estado"
-msgstr "in state"
+msgstr "状態によって"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:139
-#, fuzzy
 msgid "Por cofinanciadores"
-msgstr "Co-financiers"
+msgstr "共同出資によって"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:163
-#, fuzzy
 msgid "Informe de transacciones correctas"
-msgstr "Monetary transactions"
+msgstr "成功した取引"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:164
 msgid ""
 "Las incidencias NO se tienen en cuenta en el conteo de usuarios/operaciones "
 "ni en importes ni en comisiones ni en netos."
-msgstr ""
+msgstr "不正な手続きはカウントに含まれていません。"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:167
 msgid "TPV"
-msgstr ""
+msgstr "TPV"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:171
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:253
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:377
 msgid "1a Ronda"
-msgstr ""
+msgstr "ファーストラウンド"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:172
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:254
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:378
 msgid "2a Ronda"
-msgstr ""
+msgstr "セカンドラウンド"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:173
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:255
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:379
 msgid "Total"
-msgstr ""
+msgstr "合計"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:177
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:259
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:383
-#, fuzzy
 msgid "Nº Usuarios"
 msgstr "ユーザー"
 
@@ -3096,319 +2873,293 @@ msgstr "ユーザー"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:266
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:390
 msgid "Nº Operaciones"
-msgstr ""
+msgstr "操作No."
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:215
 msgid "Neto"
-msgstr ""
+msgstr "ネット"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:231
 #, php-format
 msgid "8%% del neto"
-msgstr ""
+msgstr "ネットの8％"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:243
 #, php-format
 msgid "92%% del neto"
-msgstr ""
+msgstr "ネットの92%%"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:263
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:270
-#, fuzzy
 msgid "Sin incidencias"
-msgstr "Licenses"
+msgstr "不正はありませんでした"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:273
 msgid "Importe Incidencias"
-msgstr ""
+msgstr "不正の合計"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:289
-#, fuzzy
 msgid "Preapprovals ejecutados correctamente"
 msgstr "情報が正常に編集されました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:301
 #, php-format
 msgid "8%% de las operaciones correctas"
-msgstr ""
+msgstr "正常な操作の8%%"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:313
 #, php-format
 msgid "92%% de las operaciones correctas"
-msgstr ""
+msgstr "正常な操作の92%%"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:321
 msgid "Fee a Goteo"
-msgstr ""
+msgstr "Goteoへの手数料"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:325
 #, php-format
 msgid "0,35 por operacion + 3,4%% del importe de goteo (8%% del correcto)"
-msgstr ""
+msgstr "0.35 + 3.4 %% operation the amount of drip (8 %% correct)"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:333
 msgid "Fee al Promotor"
-msgstr ""
+msgstr "プロモーターの手数料"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:337
 #, php-format
 msgid "0,35 por operacion + 3,4%% del importe del proyecto (8%% del correcto)"
-msgstr ""
+msgstr "0.35 + 3.4 %% operation of the project amount (8 %% correct)"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:345
 msgid "Neto Goteo"
-msgstr ""
+msgstr "Goteoのネット"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:357
-#, fuzzy
 msgid "Neto Proyecto"
 msgstr "プロジェクト"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:367
 msgid "CASH"
-msgstr ""
+msgstr "現金"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:397
-#, fuzzy
 msgid "Incidencias"
-msgstr "Licenses"
+msgstr "トラブル"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:401
 msgid "Aportes mediante PayPal, TPV o de Capital Riego activos"
-msgstr ""
+msgstr "PayPal、TPV、またはCapital Riegoを通じた貢献"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:404
 msgid "Correcto"
-msgstr ""
+msgstr "正常"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:408
 msgid "Aportes de cash anteriores a la campa&ntilde;a"
-msgstr ""
+msgstr "キャンペーン前の現金による貢献"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/invests/report.html.php:414
 msgid "Notas"
-msgstr ""
+msgstr "注意"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/licenses/edit.html.php:31
 msgid "Grupo:"
-msgstr ""
+msgstr "グループ:"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/licenses/edit.html.php:33
 msgid "Ninguno"
-msgstr ""
+msgstr "なし"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/licenses/edit.html.php:42
 msgid "Texto tooltip"
-msgstr ""
+msgstr "テキストツールチップ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/licenses/edit.html.php:45
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/tasks/edit.html.php:34
 msgid "Url"
-msgstr ""
+msgstr "URL"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/licenses/edit.html.php:48
 msgid "Tipos"
-msgstr ""
+msgstr "タイプ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/licenses/list.html.php:30
-#, fuzzy
 msgid "Mostrar por grupo:"
 msgstr "タイプでフィルター:"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/licenses/list.html.php:32
 msgid "Todos los grupos"
-msgstr ""
+msgstr "全てのグループ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/licenses/list.html.php:38
-#, fuzzy
 msgid "Mostrar por tipo de retorno:"
 msgstr "タイプでフィルター:"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/edit.html.php:27
 msgid "Base"
-msgstr ""
+msgstr "基礎"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/edit.html.php:28
 msgid "Aviso a los talleristas"
-msgstr ""
+msgstr "ワークショップのお知らせ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/edit.html.php:36
 msgid ""
 "El asunto y el contenido actual se substiruira por el que hay en la "
 "plantilla. Seguimos?"
-msgstr ""
+msgstr "テンプレート中のタイトルと本文は置き換えられます。よろしいですか？"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/edit.html.php:52
 msgid "Las siguientes variables se sustituir&aacute;n en el contenido:"
-msgstr ""
+msgstr "下記の変数は置き換えられます。"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/edit.html.php:54
-#, fuzzy
 msgid " Para el id de acceso del destinatario"
-msgstr "受領者の選択"
+msgstr "受領者のIDにアクセスするため"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/edit.html.php:55
-#, fuzzy
 msgid " Para el email del destinatario"
-msgstr "受領者の選択"
+msgstr "受領者のemailのため"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/edit.html.php:56
 msgid " Para el nombre del destinatario"
-msgstr ""
+msgstr "受信者の名前のため"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/edit.html.php:57
 msgid " Para la url de esta plataforma "
-msgstr ""
+msgstr "プラットフォームのURLのため"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/edit.html.php:59
-#, fuzzy
 msgid " Para el id del proyecto"
-msgstr "Translation of this project"
+msgstr "プロジェクトのIDのため"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/edit.html.php:60
-#, fuzzy
 msgid " Para el nombre del proyecto"
-msgstr "Project report"
+msgstr "プロジェクトの名前のため"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/edit.html.php:61
-#, fuzzy
 msgid " Para la url del proyecto"
-msgstr "Changed project dates"
+msgstr "プロジェクトURLのため"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/edit.html.php:66
 msgid "Vamos a comunicarnos con "
-msgstr ""
+msgstr "連絡を取る"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/edit.html.php:69
 msgid "Seleccionar plantilla:"
-msgstr ""
+msgstr "テンプレートを選択:"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/edit.html.php:72
-#, fuzzy
 msgid "Sin plantilla"
-msgstr "Editing template"
+msgstr "テンプレートがありません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/edit.html.php:77
 msgid "Cargar"
-msgstr ""
+msgstr "課金する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/edit.html.php:81
 msgid "Asunto:"
-msgstr ""
+msgstr "タイトル:"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/edit.html.php:87
 msgid ""
 "Contenido: (en c&oacute;digo html; los saltos de linea deben ser con &lt;br /"
 "&gt;)"
-msgstr ""
+msgstr "内容: (HTML可, 改行はbrタグで)"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/edit.html.php:93
-#, fuzzy
 msgid "Lista destinatarios:"
-msgstr "ユーザーリスト"
+msgstr "受領者のリスト"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/edit.html.php:110
 msgid "Has revisado el contenido y comprobado los destinatarios?"
-msgstr ""
+msgstr "内容を確認し、受信者を見つけましたか？"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/list.html.php:32
 msgid "A los"
-msgstr ""
+msgstr "at"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/list.html.php:40
-#, fuzzy
 msgid "De proyectos que el nombre contenga"
-msgstr "project whose name contain"
+msgstr "その名前を含んだプロジェクト"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/list.html.php:44
-#, fuzzy
 msgid "En estado"
-msgstr "in state"
+msgstr "状態"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/list.html.php:46
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/tasks/list.html.php:34
-#, fuzzy
 msgid "Cualquier estado"
-msgstr "in any state"
+msgstr "どの状態でも"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/list.html.php:53
-#, fuzzy
 msgid "Aportado mediante"
-msgstr "via"
+msgstr "に貢献されています"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/list.html.php:55
-#, fuzzy
 msgid "Cualquier metodo"
-msgstr "in any state"
+msgstr "どんな方法でも"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/list.html.php:64
-#, fuzzy
 msgid "Interesados en fin"
-msgstr "interested in end"
+msgstr "興味順"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/list.html.php:73
-#, fuzzy
 msgid "Que el nombre o email contenga"
-msgstr "whose name or email contain"
+msgstr "その名前かemailを含んでいる"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/list.html.php:77
-#, fuzzy
 msgid "Que sean"
 msgstr "that are"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/list.html.php:87
-#, fuzzy
 msgid "Buscar destinatarios"
 msgstr "受領者の選択"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/send.html.php:31
 msgid "La comunicación se ha enviado correctamente con este contenido:"
-msgstr ""
+msgstr "コミュニケーションの送信が完了しました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/send.html.php:34
 msgid "Buscábamos comunicarnos con "
-msgstr ""
+msgstr "コミュニケーションしたかった人々:"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/send.html.php:34
 msgid " y finalmente hemos enviado a los siguientes destinatarios: "
-msgstr ""
+msgstr "以下の受信者に送信しました。"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/send.html.php:36
-#, fuzzy
 msgid "Enviado a "
 msgstr "レビューに回す"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/send.html.php:36
-#, fuzzy
 msgid "Fallo al enviar a "
-msgstr "Failed to cancel contribution"
+msgstr "送信失敗"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/mailing/send.html.php:37
 msgid "al mail "
-msgstr ""
+msgstr "メール"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/detail.html.php:51
-#, fuzzy
 msgid "Destinatarios"
 msgstr "ユーザー管理"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/detail.html.php:52
-#, fuzzy
 msgid "Enviados"
-msgstr "Emails dispatched"
+msgstr "送信済み"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/detail.html.php:53
 msgid "Fallidos"
-msgstr ""
+msgstr "初期"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/detail.html.php:59
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/list.html.php:90
 msgid "Si no ves"
-msgstr ""
+msgstr "If you do not see"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/detail.html.php:72
 msgid "Viendo el listado completo de los "
-msgstr ""
+msgstr "全ての一覧を表示する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/detail.html.php:76
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/init.html.php:36
@@ -3419,11 +3170,11 @@ msgstr ""
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/list.html.php:121
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/manage.html.php:38
 msgid "Email"
-msgstr ""
+msgstr "Email"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/init.html.php:30
 msgid "La newsletter está lista para enviar con "
-msgstr ""
+msgstr "ニュースレターを送信する準備ができました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/init.html.php:30
 msgid "este contenido"
@@ -3431,15 +3182,15 @@ msgstr "このコンテンツ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/init.html.php:31
 msgid "Si todo está bien pulsar el botón para activar los envíos automáticos."
-msgstr ""
+msgstr "問題なければ、OKを押して自動送信を設定します"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/init.html.php:31
 msgid "Se comenzará a enviar automáticamente"
-msgstr ""
+msgstr "自動送信を開始する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/init.html.php:31
 msgid "ACTIVAR!"
-msgstr ""
+msgstr "有効にする"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/init.html.php:33
 msgid "Lista de destinatarios"
@@ -3449,51 +3200,51 @@ msgstr "受領者リスト"
 msgid ""
 "Seleccionar la plantilla. Se utilizará el contenido traducido, quizás "
 "quieras "
-msgstr ""
+msgstr "テンプレートを選択すると、翻訳済みの内容が表示されます"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/list.html.php:38
 msgid "revisarlas"
-msgstr ""
+msgstr "レビューする"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/list.html.php:39
 msgid "NOTA"
-msgstr ""
+msgstr "注意"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/list.html.php:39
 msgid ""
 "con este sistema no se pueden añadir variables en el contenido, se genera el "
 "mismo contenido para todos los destinatarios."
 msgstr ""
+"内容の中に変数を埋め込むことはできません。全ての受信者に同じ内容が生成されま"
+"す。"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/list.html.php:40
 msgid "Para contenido personalizado hay que usar la funcionalidad"
-msgstr ""
+msgstr "内容をカスタマイズするには機能を使わなければいけません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/list.html.php:42
 msgid "El envio se activará automáticamente, seguimos?"
-msgstr ""
+msgstr "自動送信されます。続けますか？"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/list.html.php:45
-#, fuzzy
 msgid "Plantillas masivas"
 msgstr "Email templates"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/list.html.php:54
 msgid "Es una prueba (se envia a los destinatarios de pruebas)"
-msgstr ""
+msgstr "テスト送信"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/newsletter/list.html.php:75
 msgid "Asunto"
-msgstr ""
+msgstr "題名"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/pages/edit.html.php:56
 msgid "Cabecera"
-msgstr ""
+msgstr "ヘッダー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/pages/list.html.php:27
-#, fuzzy
 msgid "Nueva P&aacute;gina"
-msgstr "New Question"
+msgstr "新しいページ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/pages/list.html.php:36
 msgid "Página"
@@ -3502,7 +3253,7 @@ msgstr "ページ"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/pages/list.html.php:48
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/promote/list.html.php:48
 msgid "Ver"
-msgstr ""
+msgstr "View"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/accounts.html.php:36
 msgid ""
@@ -3510,14 +3261,16 @@ msgid ""
 "cargos. La cuenta bancaria es solamente para tener toda la información en el "
 "mismo entorno pero no se utiliza en ningún proceso de este sistema."
 msgstr ""
+"支払いのためにはPayPalアカウントが必要です。銀行の口座情報は情報を持つだけで"
+"支払いには用いられません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/accounts.html.php:42
 msgid "Cuenta bancaria"
-msgstr ""
+msgstr "口座情報"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/accounts.html.php:47
 msgid "Titular de la cuenta bancaria"
-msgstr ""
+msgstr "所有者の口座情報"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/accounts.html.php:52
 msgid "Cuenta PayPal"
@@ -3529,25 +3282,25 @@ msgstr "PayPalアカウントの所有者"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/accounts.html.php:62
 msgid "Permite uso de PayPal"
-msgstr ""
+msgstr "PayPalの使用を許可する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/dates.html.php:77
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/dates.html.php:82
 msgid "El proyecto terminará la primera ronda el día"
-msgstr ""
+msgstr "このプロジェクトのファーストラウンドを終了します"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/dates.html.php:79
 msgid "Aunque debería haberla terminado el día "
-msgstr ""
+msgstr "その日を終了しているべきですが、"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/dates.html.php:87
 msgid ""
 "Cambiar las fechas puede causar cambios en los días de campaña del proyecto."
-msgstr ""
+msgstr "日付を変更するとプロジェクトのキャンペーン日付も変更されます"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/images.html.php:50
 msgid "Volver"
-msgstr ""
+msgstr "戻す"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/images.html.php:52
 msgid "Ver proyecto"
@@ -3563,7 +3316,7 @@ msgstr "翻訳を割当"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:43
 msgid "Alias/Email del autor"
-msgstr ""
+msgstr "作者のEmail"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:47
 msgid "De la categoría"
@@ -3580,13 +3333,12 @@ msgstr "プロジェクト名"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:62
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/list.html.php:39
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/tasks/list.html.php:32
-#, fuzzy
 msgid "Mostrar por estado"
 msgstr "タイプでフィルター:"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:65
 msgid "En negociacion"
-msgstr ""
+msgstr "交渉中"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:79
 msgid "Ordenar por"
@@ -3600,63 +3352,63 @@ msgstr "作成者"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:110
 msgid "Recibido"
-msgstr ""
+msgstr "受領済"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:113
 msgid "M&iacute;nimo"
-msgstr ""
+msgstr "最小"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:114
 msgid "&Oacute;ptimo"
-msgstr ""
+msgstr "最適な"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:123
 msgid "En negociación"
-msgstr ""
+msgstr "交渉中"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:131
 msgid "Conseguido"
-msgstr ""
+msgstr "しなければいけない"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:131
 msgid "Cofin"
-msgstr ""
+msgstr "かご"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:131
 msgid "Colab"
-msgstr ""
+msgstr "Colab"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:136
 msgid "IR A"
-msgstr ""
+msgstr "進む"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:138
 msgid "Impulsor"
-msgstr ""
+msgstr "推進する人"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:147
 msgid "Informe Financiacion"
-msgstr ""
+msgstr "財務レポート"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:153
 msgid "Fechas"
-msgstr ""
+msgstr "日付"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:154
 msgid "Cuentas"
-msgstr ""
+msgstr "アカウント"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:155
 msgid "Esto es MUY DELICADO, seguimos?"
-msgstr ""
+msgstr "この操作は非常に繊細です。続けますか？"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:155
 msgid "Id"
-msgstr ""
+msgstr "ID"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:157
 msgid "El creador no podrá editarlo más, ok?"
-msgstr ""
+msgstr "作成者は変更できません。よろしいですか？"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:157
 msgid "A revisión"
@@ -3666,7 +3418,7 @@ msgstr "レビュー"
 msgid ""
 "El proyecto va a comenzar los 40 dias de la primera ronda de campaña, "
 "¿comenzamos?"
-msgstr ""
+msgstr "プロジェクトは40日のファーストラウンドから始まります"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:158
 msgid "Publicar"
@@ -3674,27 +3426,25 @@ msgstr "発行"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:159
 msgid "Mucho Ojo! si el proyecto esta en campaña, ¿Reabrimos la edicion?"
-msgstr ""
+msgstr "もしキャンペーン中なら注意してください。レビューを再開しますか？"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:159
 msgid "Reabrir edición"
-msgstr ""
+msgstr "編集を再開する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:160
 msgid "El proyecto pasara a ser un caso de éxito, ok?"
-msgstr ""
+msgstr "このプロジェクトを成功済にします。よろしいですか？"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:160
-#, fuzzy
 msgid "Retorno Cumplido"
 msgstr "Accomplished"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:161
 msgid "Lo echamos un paso atras, ok?"
-msgstr ""
+msgstr "手続きを戻します。よろしいですか？"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:161
-#, fuzzy
 msgid "Retorno Pendiente"
 msgstr "Pending"
 
@@ -3702,103 +3452,96 @@ msgstr "Pending"
 msgid ""
 "El proyecto va a desaparecer del admin, solo se podra recuperar desde la "
 "base de datos, Ok?"
-msgstr ""
+msgstr "このプロジェクトは管理から消えました。データベースから復元しますか？"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:162
 msgid "Descartar"
-msgstr ""
+msgstr "捨てる"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:167
 msgid "GESTIONAR"
-msgstr ""
+msgstr "管理"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:168
 msgid "Se va a iniciar revisión de un proyecto en estado Edición, ok?"
-msgstr ""
+msgstr "下書きのレビューを開始します。よろしいですか？"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:168
 msgid "Iniciar revisión"
-msgstr "レビューに回す"
+msgstr "レビューを開始する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:169
-#, fuzzy
 msgid "Ir a la revisión"
-msgstr "to the address"
+msgstr "レビューに行く"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:170
-#, fuzzy
 msgid "Ir a la traducción"
-msgstr "翻訳を有効化"
+msgstr "翻訳を行う"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:171
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/list.html.php:95
-#, fuzzy
 msgid "Habilitar traducción"
-msgstr "翻訳を有効化"
+msgstr "翻訳を有効化する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:172
 msgid "Organizar imágenes"
-msgstr ""
+msgstr "画像を編成する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:173
 msgid "Se va a enviar un mail automáticamente pero no cambiará el estado, ok?"
-msgstr ""
+msgstr "自動でメールを送りますが、状態に変化はありません。よろしいですか？"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/list.html.php:173
 msgid "Rechazo express"
-msgstr ""
+msgstr "不合格"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/rebase.html.php:47
-#, fuzzy
 msgid "OJO! Cambiar la Id del proyecto afecta a"
-msgstr "Changed project dates"
+msgstr "注意！IDの変更はプロジェクトに影響を与えます"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/rebase.html.php:47
 msgid "TODO"
-msgstr ""
+msgstr "TODO"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/rebase.html.php:47
-#, fuzzy
 msgid "lo referente al proyecto!."
-msgstr "Contributions to Projects"
+msgstr "プロジェクトに注意を払って下さい"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/rebase.html.php:54
-#, fuzzy
 msgid "Nueva ID para el proyecto"
-msgstr "Translation of this project"
+msgstr "プロジェクトの新しいID"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/rebase.html.php:61
 msgid "OJO!! El proyecto est&aacute; publicado"
-msgstr ""
+msgstr "プロジェクトは公開されています"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/rebase.html.php:63
 msgid ""
 "Debes marcar expresamente la siguiente casilla, sino dar&aacute; error por "
 "estado de proyecto."
-msgstr ""
+msgstr "下の欄を確認して下さい。プロジェクトにエラーがあります"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/projects/rebase.html.php:64
 msgid ""
 "Marcar que se quiere aplicar aunque el proyecto que no est&aacute; ni en "
 "Edici&oacute;n ni en Revisi&oacute;n"
-msgstr ""
+msgstr "もしこのレビューでないプロジェクトを実行したければマークしてください"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/promote/edit.html.php:42
-#, fuzzy
 msgid "Seleccionar el proyecto a destacar"
 msgstr "受領者の選択"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/promote/edit.html.php:51
 msgid "Máximo 24 caracteres"
-msgstr ""
+msgstr "24文字まで"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/promote/edit.html.php:56
 msgid "Máximo 100 caracteres"
-msgstr ""
+msgstr "100文字まで"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/promote/edit.html.php:63
 msgid "SÍ"
-msgstr ""
+msgstr "はい"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/promote/list.html.php:25
 msgid "Nuevo destacado"
@@ -3814,45 +3557,42 @@ msgstr "表示する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/recent/list.html.php:25
 msgid "Ver Feeds por"
-msgstr ""
+msgstr "フィードを見る"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/edit.html.php:28
 msgid "Comentario de"
-msgstr ""
+msgstr "コメント"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/edit.html.php:38
 msgid "Comentario para el revisor"
-msgstr ""
+msgstr "レビュワーへのコメント"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/edit.html.php:43
 msgid "Comentario para el productor"
-msgstr ""
+msgstr "プロデューサーへのコメント"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/list.html.php:29
-#, fuzzy
 msgid "Del proyecto"
 msgstr "プロジェクト"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/list.html.php:41
 msgid "Todas"
-msgstr ""
+msgstr "全て"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/list.html.php:47
-#, fuzzy
 msgid "Asignados a"
 msgstr "アサイン済み"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/list.html.php:49
 msgid "De todos"
-msgstr ""
+msgstr "全て"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/list.html.php:66
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/list.html.php:107
 msgid "Puntos"
-msgstr ""
+msgstr "ポイント"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/list.html.php:84
-#, fuzzy
 msgid "Ver informe"
 msgstr "レポート"
 
@@ -3865,12 +3605,10 @@ msgid "Revisión cerrada"
 msgstr "レビューはクローズされました"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/list.html.php:91
-#, fuzzy
 msgid "Iniciar revision"
 msgstr "レビューに回す"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/list.html.php:94
-#, fuzzy
 msgid "Ir a traducción"
 msgstr "翻訳を割当"
 
@@ -3879,32 +3617,28 @@ msgid "Revisor"
 msgstr "レビュワー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/list.html.php:108
-#, fuzzy
 msgid "Listo"
 msgstr "Listing"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/list.html.php:115
-#, fuzzy
 msgid "Listo "
 msgstr "Listing"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/list.html.php:115
 msgid "Reabrir"
-msgstr ""
+msgstr "再開"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/list.html.php:116
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/translates/edit.html.php:52
-#, fuzzy
 msgid "Desasignar"
 msgstr "未アサイン"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/list.html.php:124
 msgid "Selecciona un nuevo revisor"
-msgstr ""
+msgstr "新しいレビュワーを選ぶ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/list.html.php:132
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/translates/edit.html.php:67
-#, fuzzy
 msgid "Asignar"
 msgstr "アサイン済み"
 
@@ -3913,33 +3647,32 @@ msgid "Informe de revisión del proyecto"
 msgstr "プロジェクトのレビュー報告"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/report.html.php:36
-#, fuzzy
 msgid "La edición del proyecto alcanzó el "
 msgstr "Translation of this project"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/report.html.php:36
 msgid "y la puntuación promedio de la revisión"
-msgstr ""
+msgstr "平均レビュースコア"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/report.html.php:44
 msgid "otorga puntos porque"
-msgstr ""
+msgstr "のポイントを与える"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/report.html.php:54
 msgid "evalua"
-msgstr ""
+msgstr "評価する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/reviews/report.html.php:58
 msgid "propone"
-msgstr ""
+msgstr "提案済"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/rewards/edit.html.php:37
 msgid "Ninguna recompensa."
-msgstr ""
+msgstr "報酬なし"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/rewards/list.html.php:28
 msgid "Mostrar por estado de recompensa"
-msgstr ""
+msgstr "報酬の状態別に表示する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/rewards/list.html.php:66
 msgid "Modificar"
@@ -3951,20 +3684,19 @@ msgstr "保留"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/rewards/list.html.php:72
 msgid "Marcar cumplida"
-msgstr ""
+msgstr "達成済みにする"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/rewards/list.html.php:74
 msgid "Cumplido"
 msgstr "達成"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/rewards/list.html.php:75
-#, fuzzy
 msgid "Marcar pendiente"
 msgstr "Pending"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/sended/list.html.php:39
 msgid "ID, nombre o email del destinatario"
-msgstr ""
+msgstr "受信者のIDまたは名前またはemail"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/sended/list.html.php:44
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/sended/list.html.php:81
@@ -3974,7 +3706,7 @@ msgstr "テンプレート"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/sended/list.html.php:46
 msgid "Todas las plantillas"
-msgstr ""
+msgstr "全てのテンプレート"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/sended/list.html.php:80
 msgid "Destinatario"
@@ -3982,7 +3714,7 @@ msgstr "受領者"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/sended/list.html.php:96
 msgid "Reenviar"
-msgstr ""
+msgstr "前の"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/tasks/edit.html.php:30
 msgid "Explicación"
@@ -3990,16 +3722,15 @@ msgstr "説明"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/tasks/edit.html.php:41
 msgid "PENDIENTE"
-msgstr ""
+msgstr "保留中"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/tasks/edit.html.php:43
-#, fuzzy
 msgid "Realizada por"
 msgstr "終了"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/tasks/edit.html.php:44
 msgid "Reabrirla"
-msgstr ""
+msgstr "再開"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/tasks/list.html.php:25
 msgid "Nueva Tarea"
@@ -4007,23 +3738,21 @@ msgstr "新規タスク"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/tasks/list.html.php:41
 msgid "Realizadas por"
-msgstr ""
+msgstr "によって行われる"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/tasks/list.html.php:43
-#, fuzzy
 msgid "Cualquier admin"
 msgstr "in any state"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/tasks/list.html.php:62
 msgid "Tarea"
-msgstr ""
+msgstr "ホームワーク"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/tasks/list.html.php:75
 msgid "La tarea se eliminará irreversiblemente, ok?"
-msgstr ""
+msgstr "タスクの削除は元に戻せません。よろしいですか？"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/tasks/list.html.php:75
-#, fuzzy
 msgid "Eliminar"
 msgstr "Removed"
 
@@ -4049,7 +3778,7 @@ msgstr "べつの翻訳者を選択する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/translates/edit.html.php:72
 msgid "Seguro que deseas dar por finalizada esta traducción?"
-msgstr ""
+msgstr "翻訳を終了してよろしいですか？"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/translates/edit.html.php:72
 msgid "Cerrar la traducción"
@@ -4061,10 +3790,9 @@ msgstr "メールは自動送信されますが、よろしいですか?"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/translates/edit.html.php:73
 msgid "Avisar al autor"
-msgstr ""
+msgstr "作成者に警告する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/translates/edit.html.php:82
-#, fuzzy
 msgid "Proyecto que habilitamos"
 msgstr "特集プロジェクト"
 
@@ -4073,7 +3801,6 @@ msgid "Selecciona el proyecto"
 msgstr "プロジェクトの選択"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/translates/edit.html.php:93
-#, fuzzy
 msgid "Idioma original del proyecto"
 msgstr "Translation of this project"
 
@@ -4082,13 +3809,12 @@ msgid "Nuevo proyecto para traducir"
 msgstr "新しいプロジェクトの翻訳"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/translates/list.html.php:29
-#, fuzzy
 msgid "Proyectos del usuario"
 msgstr "特集プロジェクト"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/translates/list.html.php:31
 msgid "Todos los productores"
-msgstr ""
+msgstr "全てのプロデューサー"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/translates/list.html.php:37
 msgid "Asignados a traductor"
@@ -4100,42 +3826,42 @@ msgstr "すべての翻訳者"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/translates/list.html.php:56
 msgid "Idioma"
-msgstr ""
+msgstr "言語"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/add.html.php:28
 msgid "Login"
-msgstr ""
+msgstr "ログイン"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/add.html.php:28
 msgid ""
 "Solo letras, números y guion '-'. Sin espacios ni tildes ni 'ñ' ni 'ç' ni "
 "otros caracteres que no sean letra, número o guión."
-msgstr ""
+msgstr "英数字とハイフンのみ使用できます"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/add.html.php:32
 msgid "Nombre público"
-msgstr ""
+msgstr "公開名"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/add.html.php:36
 msgid "Que sea válido."
-msgstr ""
+msgstr "有効である"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/add.html.php:40
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/edit.html.php:58
 msgid "Contraseña"
-msgstr ""
+msgstr "パスワード"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/add.html.php:40
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/edit.html.php:58
 msgid "Mínimo 6 caracteres. Se va a encriptar y no se puede consultar"
-msgstr ""
+msgstr "最小6文字です。暗号化され見られることはありません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/add.html.php:45
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/edit.html.php:29
 msgid ""
 "Atención! Le llegará email de verificación al usuario como si se hubiera "
 "registrado."
-msgstr ""
+msgstr "emailアドレスは閲覧されることがあります"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/edit.html.php:32
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/impersonate.html.php:30
@@ -4147,7 +3873,7 @@ msgstr "ユーザー名"
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/impersonate.html.php:34
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/manage.html.php:34
 msgid "Login de acceso"
-msgstr ""
+msgstr "ログインアクセス"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/edit.html.php:44
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/impersonate.html.php:42
@@ -4162,29 +3888,32 @@ msgstr "アカウント状態"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/edit.html.php:54
 msgid "Que sea válido. Se verifica que no esté repetido"
-msgstr ""
+msgstr "同じものが二回入力されていません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/edit.html.php:62
 msgid ""
 "Entiendes que vas a cambiar datos críticos de la cuenta de este usuario?"
-msgstr ""
+msgstr "アカウントの重要なデータを変更しようとしています。よろしいですか？"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/edit.html.php:63
 msgid ""
 "Atención! Se están substituyendo directamente los datos introducidos, no "
 "habrá email de autorización."
-msgstr ""
+msgstr "入力したデータがそのまま登録されます。確認のメールは送られません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/impersonate.html.php:49
 msgid "Estás completamente seguro de entender lo que esás haciendo?"
-msgstr ""
+msgstr "実行しようとしている内容を理解していますか？"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/impersonate.html.php:50
 msgid ""
-"Atención!! Con esto vas a dejar de estar logueado como el superadmin que "
-"eres y pasarás a estar logueado como este usuario con todos sus permisos y "
+"Atención!! Con esto vas a dejar de estar logueado como el superadmin queeres "
+"y pasarás a estar logueado como este usuario con todos sus permisos y "
 "restricciones."
 msgstr ""
+"Attention !! With this you will stop being logged as superadmin want and "
+"you'll have to be logged in as this user with all permissions and "
+"restrictions."
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/list.html.php:54
 msgid "Crear usuario"
@@ -4192,7 +3921,7 @@ msgstr "ユーザー作成"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/list.html.php:61
 msgid "Con rol"
-msgstr ""
+msgstr "ロール"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/list.html.php:63
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/list.html.php:81
@@ -4201,28 +3930,27 @@ msgstr "すべての役割"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/list.html.php:70
 msgid "Mostrar usuarios interesados en"
-msgstr ""
+msgstr "ユーザーの興味を表示する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/list.html.php:72
 msgid "Cualquier interés"
-msgstr ""
+msgstr "興味"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/list.html.php:79
 msgid "Mostrar usuarios con rol"
-msgstr ""
+msgstr "ユーザーのロールを表示する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/list.html.php:88
-#, fuzzy
 msgid "Por nombre o email"
-msgstr "whose name or email contain"
+msgstr "名前かemailによって"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/list.html.php:97
 msgid "Ver por"
-msgstr ""
+msgstr "表示する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/list.html.php:124
 msgid "Alta"
-msgstr ""
+msgstr "高い"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/list.html.php:141
 msgid "Gestionar"
@@ -4230,7 +3958,7 @@ msgstr "ユーザー管理"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/manage.html.php:63
 msgid "Roles disponibles"
-msgstr ""
+msgstr "存在するロール"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/manage.html.php:81
 msgid "Activa"
@@ -4242,11 +3970,11 @@ msgstr "非アクティブ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/manage.html.php:88
 msgid "Visibilidad"
-msgstr ""
+msgstr "表示の可否"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/manage.html.php:91
 msgid "Visible"
-msgstr ""
+msgstr "表示中"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/manage.html.php:93
 msgid "Oculto"
@@ -4254,15 +3982,15 @@ msgstr "非表示"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/manage.html.php:101
 msgid "Cambiar email/contraseña"
-msgstr ""
+msgstr "emailかパスワードを変更する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/manage.html.php:102
 msgid "Mover a otro Nodo"
-msgstr ""
+msgstr "別のノードに移動する"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/manage.html.php:103
 msgid "Suplantar"
-msgstr ""
+msgstr "まねをする"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/manage.html.php:105
 msgid "Crear aporte"
@@ -4278,510 +4006,501 @@ msgstr "言語翻訳者"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/users/manage.html.php:119
 msgid "¡No tiene ningún idioma asignado!"
-msgstr ""
+msgstr "割り当てられた言語がありません"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/worth/edit.html.php:31
 msgid "Nombre del nivel"
-msgstr ""
+msgstr "レベル名"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/worth/edit.html.php:36
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/worth/list.html.php:31
 msgid "Caudal"
-msgstr ""
+msgstr "流れ"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/worth/list.html.php:30
 msgid "Nivel"
-msgstr ""
+msgstr "レベル"
 
 #: /Users/m454k1/PhpstormProjects/goteo_il3c/view/admin/worth/list.html.php:49
 msgid "IMPOSIBLE!!! No se han encontrado registros"
 msgstr "IMPOSIBLE!!! 記録が見つかりません"
 
-#~ msgid "Panel principal de administración"
-#~ msgstr "メイン管理パネル"
-
-#~ msgid ""
-#~ "El admin %s ha <span class=\"red\">tocado las fechas</span> del proyecto "
-#~ "%s"
-#~ msgstr ""
-#~ "管理者%sはプロジェクト%sの<span class=\"red\">日付を変更</span>しました"
-
-#~ msgid ""
-#~ "Al admin %s le ha <span class=\"red\">fallado al tocar las fechas</span> "
-#~ "del proyecto %s"
-#~ msgstr ""
-#~ "管理者%sはプロジェクト%sの<span class=\"red\">日付変更に失敗</span>しまし"
-#~ "た"
-
-#~ msgid ""
-#~ "El admin %s ha pasado el proyecto %s al estado <span class=\"red"
-#~ "\">Revisión</span>"
-#~ msgstr ""
-#~ "管理者%sはプロジェクト%sの状態を<span class=\"red\">Review</span>にセット"
-#~ "しました"
-
-#~ msgid ""
-#~ "Al admin %s le ha fallado al pasar el proyecto %s al estado <span class="
-#~ "\"red\">Revisión</span>"
-#~ msgstr ""
-#~ "管理者%sはプロジェクト%sの状態を<span class=\"red\">Review</span>にセット"
-#~ "できませんでした"
-
-#~ msgid ""
-#~ "El admin %s ha pasado el proyecto %s al estado <span class=\"red\">en "
-#~ "Campaña</span>"
-#~ msgstr ""
-#~ "Admin %s has set the project %s to state <span class=\"red\">in Campaign</"
-#~ "span>"
-
-#~ msgid ""
-#~ "Al admin %s le ha fallado al pasar el proyecto %s al estado <span class="
-#~ "\"red\">en Campaña</span>"
-#~ msgstr ""
-#~ "Failed for admin %s when trying to set the project %s to state <span "
-#~ "class=\"red\">in Campaign</span>"
-
-#~ msgid ""
-#~ "El admin %s ha pasado el proyecto %s al estado <span class=\"red"
-#~ "\">Descartado</span>"
-#~ msgstr ""
-#~ "Admin %s has set the project %s to state <span class=\"red\">Discarded</"
-#~ "span>"
-
-#~ msgid ""
-#~ "Al admin %s le ha fallado al pasar el proyecto %s al estado <span class="
-#~ "\"red\">Descartado</span>"
-#~ msgstr ""
-#~ "Failed for admin %s when trying to set the project %s to state <span "
-#~ "class=\"red\">Discarded</span>"
-
-#~ msgid ""
-#~ "El admin %s ha pasado el proyecto %s al estado <span class=\"red"
-#~ "\">Edición</span>"
-#~ msgstr ""
-#~ "Admin %s has set the project %s to state <span class=\"red\">Edit</span>"
-
-#~ msgid ""
-#~ "Al admin %s le ha fallado al pasar el proyecto %s al estado <span class="
-#~ "\"red\">Edición</span>"
-#~ msgstr ""
-#~ "Failed for admin %s when trying to set the project %s to state <span "
-#~ "class=\"red\">Edit</span>"
-
-#~ msgid ""
-#~ "El admin %s ha pasado el proyecto %s al estado <span class=\"red"
-#~ "\">Financiado</span>"
-#~ msgstr ""
-#~ "Admin %s has set the project %s to state <span class=\"red\">Financed</"
-#~ "span>"
-
-#~ msgid ""
-#~ "Al admin %s le ha fallado al pasar el proyecto %s al estado <span class="
-#~ "\"red\">Financiado</span>"
-#~ msgstr ""
-#~ "Failed for admin %s when trying to set the project %s to state <span "
-#~ "class=\"red\">Financed</span>"
-
-#~ msgid ""
-#~ "El admin %s ha pasado el proyecto %s al estado <span class=\"red"
-#~ "\">Retorno cumplido</span>"
-#~ msgstr ""
-#~ "Admin %s has set the project %s to state <span class=\"red\">Return "
-#~ "fulfilled</span>"
-
-#~ msgid ""
-#~ "Al admin %s le ha fallado al pasar el proyecto %s al estado <span class="
-#~ "\"red\">Retorno cumplido</span>"
-#~ msgstr ""
-#~ "Failed for admin %s when trying to set the project %s to state <span "
-#~ "class=\"red\">Return fulfilled</span>"
-
-#~ msgid "El admin %s ha %s la valoración de %s"
-#~ msgstr "管理者%sは%sと評価しました%sで"
+msgid "Panel principal de administración"
+msgstr "メイン管理パネル"
+
+msgid ""
+"El admin %s ha <span class=\"red\">tocado las fechas</span> del proyecto %s"
+msgstr ""
+"管理者%sはプロジェクト%sの<span class=\"red\">日付を変更</span>しました"
+
+msgid ""
+"Al admin %s le ha <span class=\"red\">fallado al tocar las fechas</span> del "
+"proyecto %s"
+msgstr ""
+"管理者%sはプロジェクト%sの<span class=\"red\">日付変更に失敗</span>しました"
+
+msgid ""
+"El admin %s ha pasado el proyecto %s al estado <span class=\"red\">Revisión</"
+"span>"
+msgstr ""
+"管理者%sはプロジェクト%sの状態を<span class=\"red\">Review</span>にセットしま"
+"した"
+
+msgid ""
+"Al admin %s le ha fallado al pasar el proyecto %s al estado <span class=\"red"
+"\">Revisión</span>"
+msgstr ""
+"管理者%sはプロジェクト%sの状態を<span class=\"red\">Review</span>にセットでき"
+"ませんでした"
+
+msgid ""
+"El admin %s ha pasado el proyecto %s al estado <span class=\"red\">en "
+"Campaña</span>"
+msgstr ""
+"Admin %s has set the project %s to state <span class=\"red\">in Campaign</"
+"span>"
+
+msgid ""
+"Al admin %s le ha fallado al pasar el proyecto %s al estado <span class=\"red"
+"\">en Campaña</span>"
+msgstr ""
+"Failed for admin %s when trying to set the project %s to state <span class="
+"\"red\">in Campaign</span>"
+
+msgid ""
+"El admin %s ha pasado el proyecto %s al estado <span class=\"red"
+"\">Descartado</span>"
+msgstr ""
+"Admin %s has set the project %s to state <span class=\"red\">Discarded</span>"
+
+msgid ""
+"Al admin %s le ha fallado al pasar el proyecto %s al estado <span class=\"red"
+"\">Descartado</span>"
+msgstr ""
+"Failed for admin %s when trying to set the project %s to state <span class="
+"\"red\">Discarded</span>"
+
+msgid ""
+"El admin %s ha pasado el proyecto %s al estado <span class=\"red\">Edición</"
+"span>"
+msgstr ""
+"Admin %s has set the project %s to state <span class=\"red\">Edit</span>"
+
+msgid ""
+"Al admin %s le ha fallado al pasar el proyecto %s al estado <span class=\"red"
+"\">Edición</span>"
+msgstr ""
+"Failed for admin %s when trying to set the project %s to state <span class="
+"\"red\">Edit</span>"
+
+msgid ""
+"El admin %s ha pasado el proyecto %s al estado <span class=\"red"
+"\">Financiado</span>"
+msgstr ""
+"Admin %s has set the project %s to state <span class=\"red\">Financed</span>"
+
+msgid ""
+"Al admin %s le ha fallado al pasar el proyecto %s al estado <span class=\"red"
+"\">Financiado</span>"
+msgstr ""
+"Failed for admin %s when trying to set the project %s to state <span class="
+"\"red\">Financed</span>"
+
+msgid ""
+"El admin %s ha pasado el proyecto %s al estado <span class=\"red\">Retorno "
+"cumplido</span>"
+msgstr ""
+"Admin %s has set the project %s to state <span class=\"red\">Return "
+"fulfilled</span>"
+
+msgid ""
+"Al admin %s le ha fallado al pasar el proyecto %s al estado <span class=\"red"
+"\">Retorno cumplido</span>"
+msgstr ""
+"Failed for admin %s when trying to set the project %s to state <span class="
+"\"red\">Return fulfilled</span>"
+
+msgid "El admin %s ha %s la valoración de %s"
+msgstr "管理者%sは%sと評価しました%sで"
+
+msgid "El admin %s ha dado por %s la valoración de %s"
+msgstr "管理者%sは%sと評価しました%sについて"
 
-#~ msgid "El admin %s ha dado por %s la valoración de %s"
-#~ msgstr "管理者%sは%sと評価しました%sについて"
+msgid "El admin %s ha %s a %s la revisión de %s"
+msgstr "Admin %s has %s to %s the valuation of %s"
 
-#~ msgid "El admin %s ha %s a %s la revisión de %s"
-#~ msgstr "Admin %s has %s to %s the valuation of %s"
+msgid " traduccion (admin)"
+msgstr "翻訳 (管理者)"
 
-#~ msgid " traduccion (admin)"
-#~ msgstr "翻訳 (管理者)"
+msgid "El admin %s ha %s a %s la traducción del proyecto %s"
+msgstr "Admin %s has %s to %s the translation of project %s"
 
-#~ msgid "El admin %s ha %s a %s la traducción del proyecto %s"
-#~ msgstr "Admin %s has %s to %s the translation of project %s"
+msgid " se ha habilitado para traducir"
+msgstr "は翻訳可能です"
 
-#~ msgid " se ha habilitado para traducir"
-#~ msgstr " is available for translation"
+msgid "El admin %s ha %s la traducción del proyecto %s"
+msgstr "Admin %s has %s the translation of project %s"
 
-#~ msgid "El admin %s ha %s la traducción del proyecto %s"
-#~ msgstr "Admin %s has %s the translation of project %s"
+msgid "Habilitado"
+msgstr "可能"
 
-#~ msgid "Habilitado"
-#~ msgstr "Enabled"
+msgid "Ha fallado informar a"
+msgstr "通知失敗"
 
-#~ msgid "Ha fallado informar a"
-#~ msgstr "Failed to report to"
+msgid "de la posibilidad de traducción de su proyecto"
+msgstr "プロジェクトの翻訳可能性"
 
-#~ msgid "de la posibilidad de traducción de su proyecto"
-#~ msgstr "of the possibility to translate your project"
+msgid " se ha finalizado"
+msgstr "完了済み"
 
-#~ msgid " se ha finalizado"
-#~ msgstr " is complete"
+msgid "El admin %s ha dado por %s la traducción de %s"
+msgstr "Admin %s has set as %s the translation of %s"
 
-#~ msgid "El admin %s ha dado por %s la traducción de %s"
-#~ msgstr "Admin %s has set as %s the translation of %s"
+msgid "Proyecto destacado correctamente"
+msgstr "プロジェクトは正しくハイライトされました"
 
-#~ msgid "Proyecto destacado correctamente"
-#~ msgstr "Project has been featured correctly"
+msgid "nuevo proyecto destacado en portada (admin)"
+msgstr "カバー上の新規ピックアップアッププロジェクト（管理者）"
 
-#~ msgid "nuevo proyecto destacado en portada (admin)"
-#~ msgstr "new project featured on front page (admin)"
+msgid "El admin %s ha %s el proyecto %s"
+msgstr "管理者 %s は %s project　を持っています　 %s"
 
-#~ msgid "El admin %s ha %s el proyecto %s"
-#~ msgstr "Admin %s has %s project %s"
+msgid "Destacado actualizado correctamente"
+msgstr "ハイライトは正しく更新されました"
 
-#~ msgid "Destacado actualizado correctamente"
-#~ msgstr "Featured was updated correctly"
+msgid "proyecto quitado portada (admin)"
+msgstr "プロジェクトカバーは外されました（管理者）"
 
-#~ msgid "proyecto quitado portada (admin)"
-#~ msgstr "project was removed from front page (admin)"
+msgid "Proyecto quitado correctamente"
+msgstr "プロジェクトの削除に成功しました"
 
-#~ msgid "Proyecto quitado correctamente"
-#~ msgstr "Project removed correctly"
+msgid "Datos guardados"
+msgstr "保存されたデータ"
 
-#~ msgid "Datos guardados"
-#~ msgstr "Data saved"
+msgid "nuevo banner de proyecto destacado en portada (admin)"
+msgstr "カバー上にピックアップされる新しいバナープロジェクト"
 
-#~ msgid "nuevo banner de proyecto destacado en portada (admin)"
-#~ msgstr "new project banner featured on front page (admin)"
+msgid "El admin %s ha %s del proyecto %s"
+msgstr "管理者は %s は %s を持っています %s プロジェクトにおいて"
 
-#~ msgid "El admin %s ha %s del proyecto %s"
-#~ msgstr "Admin %s has %s in project %s"
+msgid "Publicado un banner"
+msgstr "公開されたバナー"
 
-#~ msgid "Publicado un banner"
-#~ msgstr "Published a banner"
+msgid "banner de proyecto quitado portada (admin)"
+msgstr "プロジェクトバナーはフロントページから取り除かれました"
 
-#~ msgid "banner de proyecto quitado portada (admin)"
-#~ msgstr "project banner removed from front page (admin)"
+msgid "Pregunta añadida correctamente"
+msgstr "質問が正しく追加されました"
 
-#~ msgid "Pregunta añadida correctamente"
-#~ msgstr "Question added successfully"
+msgid "Pregunta editado correctamente"
+msgstr "質問が正しく更新されました"
 
-#~ msgid "Pregunta editado correctamente"
-#~ msgstr "Question has been edited successfully"
+msgid "Criterio añadido correctamente"
+msgstr "基準の追加に成功しました"
 
-#~ msgid "Criterio añadido correctamente"
-#~ msgstr "Criterium added successfully"
+msgid "Criterio editado correctamente"
+msgstr "基準の編集に成功しました"
 
-#~ msgid "Criterio editado correctamente"
-#~ msgstr "Criterium edited successfully"
+msgid "Nuevo tipo añadido correctamente"
+msgstr "新しいタイプの追加に成功しました"
 
-#~ msgid "Nuevo tipo añadido correctamente"
-#~ msgstr "New type added successfully"
+msgid "Tipo editado correctamente"
+msgstr "タイプの更新に成功しました"
 
-#~ msgid "Tipo editado correctamente"
-#~ msgstr "Type edited successfully"
+msgid "modificacion de tipo de retorno/recompensa (admin)"
+msgstr "変更されたリターンまたは報酬（管理者）"
 
-#~ msgid "modificacion de tipo de retorno/recompensa (admin)"
-#~ msgstr "altered the type of return/reward (admin)"
+msgid "El admin %s ha %s el tipo de retorno/recompensa %s"
+msgstr "Admin %s has %s the type of return/rewards %s"
 
-#~ msgid "El admin %s ha %s el tipo de retorno/recompensa %s"
-#~ msgstr "Admin %s has %s the type of return/rewards %s"
+msgid "Licencia añadida correctamente"
+msgstr "ライセンスの追加に成功しました"
 
-#~ msgid "Licencia añadida correctamente"
-#~ msgstr "License added successfully"
+msgid "Licencia editada correctamente"
+msgstr "ライセンスの編集に成功しました"
 
-#~ msgid "Licencia editada correctamente"
-#~ msgstr "License edited successfully"
+msgid "El admin %s ha %s la licencia %s"
+msgstr "Admin %s has %s license %s"
 
-#~ msgid "El admin %s ha %s la licencia %s"
-#~ msgstr "Admin %s has %s license %s"
+msgid "Entrada colocada en la portada correctamente"
+msgstr "適切にカバーに配置されているか確認して下さい"
 
-#~ msgid "Entrada colocada en la portada correctamente"
-#~ msgstr "Entry was successfully placed on front page"
+msgid "Entrada colocada en el footer correctamente"
+msgstr "エントリーはフッターに配置されました"
 
-#~ msgid "Entrada colocada en el footer correctamente"
-#~ msgstr "Entry was successfully placed on footer"
+msgid "Prioridad"
+msgstr "プライオリティー"
 
-#~ msgid "Prioridad"
-#~ msgstr "プライオリティー"
+msgid "El admin %s ha %s del usuario %s"
+msgstr "Admin %s has %s of user %s"
 
-#~ msgid "El admin %s ha %s del usuario %s"
-#~ msgstr "Admin %s has %s of user %s"
+msgid "Ha <strong>%s</strong> al usuario <strong>%s</strong> CORRECTAMENTE"
+msgstr "Has <strong>%s</strong> to user <strong>%s</strong> CORRECTLY"
 
-#~ msgid "Ha <strong>%s</strong> al usuario <strong>%s</strong> CORRECTAMENTE"
-#~ msgstr "Has <strong>%s</strong> to user <strong>%s</strong> CORRECTLY"
+msgid "El admin %s ha %s al usuario %s"
+msgstr "Admin %s has %s to user %s"
 
-#~ msgid "El admin %s ha %s al usuario %s"
-#~ msgstr "Admin %s has %s to user %s"
+msgid "Ha FALLADO cuando ha <strong>%s</strong> al usuario <strong>%s</strong>"
+msgstr "FAILED when <strong>%s</strong> to user <strong>%s</strong>"
 
-#~ msgid ""
-#~ "Ha FALLADO cuando ha <strong>%s</strong> al usuario <strong>%s</strong>"
-#~ msgstr "FAILED when <strong>%s</strong> to user <strong>%s</strong>"
+msgid "Al admin %s le ha <strong>FALLADO</strong> cuando ha %s al usuario %s"
+msgstr "Admin %s <strong>FAILED</strong> when %s to user %s"
 
-#~ msgid ""
-#~ "Al admin %s le ha <strong>FALLADO</strong> cuando ha %s al usuario %s"
-#~ msgstr "Admin %s <strong>FAILED</strong> when %s to user %s"
+msgid "No se puede reubicar este aporte!"
+msgstr "This contribution can not be relocated!"
 
-#~ msgid "No se puede reubicar este aporte!"
-#~ msgstr "This contribution can not be relocated!"
+msgid "Aporte reubicado"
+msgstr "再配置された貢献"
 
-#~ msgid "Aporte reubicado"
-#~ msgstr "Contribution relocated"
+msgid "%s ha aportado %s al proyecto %s en nombre de %s"
+msgstr "%s has contributed %s to project %s in the name of %s"
 
-#~ msgid "%s ha aportado %s al proyecto %s en nombre de %s"
-#~ msgstr "%s has contributed %s to project %s in the name of %s"
+msgid "Aporte reubicado correctamente"
+msgstr "貢献の再配置に成功しました"
 
-#~ msgid "Aporte reubicado correctamente"
-#~ msgstr "Contribution relocated successfully"
+msgid "A fallado al cambiar el estado del aporte original (%s)"
+msgstr "貢献をオリジナルの状態に戻すことに失敗しました (%s)"
 
-#~ msgid "A fallado al cambiar el estado del aporte original (%s)"
-#~ msgstr "Failed to change the original state of the contribution (%s)"
+msgid "Aporte manual creado correctamente"
+msgstr "マニュアルでの貢献の作成に成功しました"
 
-#~ msgid "Aporte manual creado correctamente"
-#~ msgstr "Manual contribution created correctly"
+msgid "Ha fallado algo al crear el aporte manual"
+msgstr "マニュアルでの入力を作成することに失敗しました"
 
-#~ msgid "Ha fallado algo al crear el aporte manual"
-#~ msgstr ""
-#~ "Something (indeterminate) has failed when creating the manual contribution"
+msgid "Solo los anónimos"
+msgstr "匿名のみ"
 
-#~ msgid "Solo los anónimos"
-#~ msgstr "Only anonymous"
+msgid "Solo los de Bolsa"
+msgstr "交換のみ"
 
-#~ msgid "Solo los de Bolsa"
-#~ msgstr "Only those from \"Market\""
+msgid "Instancia de proyecto no valida"
+msgstr "プロジェクトが不正です"
 
-#~ msgid "Instancia de proyecto no valida"
-#~ msgstr "Project instance isn't valid"
+msgid ""
+"No debería poderse cancelar un aporte cuando el proyecto ya está financiado. "
+"Si es imprescindible, hacerlo desde el panel de paypal o tpv"
+msgstr ""
+"It shouldn't be possible to cancel a contribution once the project is fully "
+"financed. If you absolutely must, do it from the PayPal panel or the TPV."
 
-#~ msgid ""
-#~ "No debería poderse cancelar un aporte cuando el proyecto ya está "
-#~ "financiado. Si es imprescindible, hacerlo desde el panel de paypal o tpv"
-#~ msgstr ""
-#~ "It shouldn't be possible to cancel a contribution once the project is "
-#~ "fully financed. If you absolutely must, do it from the PayPal panel or "
-#~ "the TPV."
+msgid "Preaproval paypal cancelado."
+msgstr "キャンセルされたPayPalの事前支払い"
 
-#~ msgid "Preaproval paypal cancelado."
-#~ msgstr "Cancelled PayPal pre-approval."
+msgid ""
+"El admin %s ha cancelado aporte y preapproval de %s de %s mediante PayPal "
+"(id: %s) al proyecto %s del dia %s"
+msgstr ""
+"Admin %s has cancelled the contribution and preapproval of %s of %s via "
+"PayPal (id: %s) to project %s on date %s"
 
-#~ msgid ""
-#~ "El admin %s ha cancelado aporte y preapproval de %s de %s mediante PayPal "
-#~ "(id: %s) al proyecto %s del dia %s"
-#~ msgstr ""
-#~ "Admin %s has cancelled the contribution and preapproval of %s of %s via "
-#~ "PayPal (id: %s) to project %s on date %s"
+msgid "Fallo al cancelar el preapproval en paypal: "
+msgstr "PayPalによる事前支払いのキャンセルに失敗しました"
 
-#~ msgid "Fallo al cancelar el preapproval en paypal: "
-#~ msgstr "Failed to cancel preapproval in PayPal:"
+msgid ""
+"El admin %s ha fallado al cancelar el aporte de %s de %s mediante PayPal "
+"(id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes "
+"errores: "
+msgstr ""
+"Admin %s has failed to cancel contribution %s for %s via PayPal (id: %s) to "
+"project %s on date %s. <br/>Has the following errors:"
 
-#~ msgid ""
-#~ "El admin %s ha fallado al cancelar el aporte de %s de %s mediante PayPal "
-#~ "(id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes "
-#~ "errores: "
-#~ msgstr ""
-#~ "Admin %s has failed to cancel contribution %s for %s via PayPal (id: %s) "
-#~ "to project %s on date %s. <br/>Has the following errors:"
+msgid "Aporte cancelado correctamente. "
+msgstr "貢献のキャンセルに成功しました"
 
-#~ msgid "Aporte cancelado correctamente. "
-#~ msgstr "Contribution cancelled successfully."
+msgid ""
+"El admin %s ha anulado el cargo tpv de %s de %s mediante TPV (id: %s) al "
+"proyecto %s del dia %s"
+msgstr ""
+"Admin %s has cancelled a TPV charge of %s of %s via TPV (id: %s) to projecct "
+"%s on date %s"
 
-#~ msgid ""
-#~ "El admin %s ha anulado el cargo tpv de %s de %s mediante TPV (id: %s) al "
-#~ "proyecto %s del dia %s"
-#~ msgstr ""
-#~ "Admin %s has cancelled a TPV charge of %s of %s via TPV (id: %s) to "
-#~ "projecct %s on date %s"
+msgid "Fallo en la operación. "
+msgstr "タスクに失敗しました"
 
-#~ msgid "Fallo en la operación. "
-#~ msgstr "Task failed."
+msgid ""
+"El admin %s ha cancelado aporte manual de %s de %s (id: %s) al proyecto %s "
+"del dia %s"
+msgstr ""
+"Admin %s has cancelled a manual contribution of %s of %s (id: %s) to project "
+"%s on date %s"
 
-#~ msgid ""
-#~ "El admin %s ha cancelado aporte manual de %s de %s (id: %s) al proyecto "
-#~ "%s del dia %s"
-#~ msgstr ""
-#~ "Admin %s has cancelled a manual contribution of %s of %s (id: %s) to "
-#~ "project %s on date %s"
+msgid ""
+"El admin %s ha fallado al cancelar el aporte manual de %s de %s (id: %s) al "
+"proyecto %s del dia %s. "
+msgstr ""
+"Admin %s has failed to cancel a manual contribution of %s to %s (id: %s) to "
+"project %s on date %s."
 
-#~ msgid ""
-#~ "El admin %s ha fallado al cancelar el aporte manual de %s de %s (id: %s) "
-#~ "al proyecto %s del dia %s. "
-#~ msgstr ""
-#~ "Admin %s has failed to cancel a manual contribution of %s to %s (id: %s) "
-#~ "to project %s on date %s."
+msgid "Cargo cancelado (admin)"
+msgstr "キャンセルされた課金（管理者）"
 
-#~ msgid "Cargo cancelado (admin)"
-#~ msgstr "Charges cancelled (admin)"
+msgid ""
+"El proyecto no tiene cuenta paypal!!, ponersela en la seccion Contrato del "
+"dashboard del autor"
+msgstr ""
+"プロジェクトにPayPalアカウントがありません。ダッシュボードで設定して下さい"
 
-#~ msgid ""
-#~ "El proyecto no tiene cuenta paypal!!, ponersela en la seccion Contrato "
-#~ "del dashboard del autor"
-#~ msgstr ""
-#~ "Project doesn't have a PayPal account!!! add it to the Contract section "
-#~ "of the author's dashboard."
+msgid "proyecto sin cuenta paypal (admin)"
+msgstr "PayPalアカウント無しのプロジェクト (admin)"
 
-#~ msgid "proyecto sin cuenta paypal (admin)"
-#~ msgstr "Project without PayPal account (admin)"
+msgid "El proyecto %s aun no ha puesto su %s !!!"
+msgstr "プロジェクト%s はまだ %s にセットされていません"
 
-#~ msgid "El proyecto %s aun no ha puesto su %s !!!"
-#~ msgstr "Project %s has not yet set %s!!!"
+msgid "Cargo paypal correcto"
+msgstr "PayPalへの課金に成功しました"
 
-#~ msgid "Cargo paypal correcto"
-#~ msgstr "PayPal was charged correctly"
+msgid ""
+"El admin %s ha ejecutado el cargo a %s por su aporte de %s mediante PayPal "
+"(id: %s) al proyecto %s del dia %s"
+msgstr ""
+"Admin %s has executed a charge to %s for its contribution of %s via PayPal "
+"(id: %s) to project %s on date %s"
 
-#~ msgid ""
-#~ "El admin %s ha ejecutado el cargo a %s por su aporte de %s mediante "
-#~ "PayPal (id: %s) al proyecto %s del dia %s"
-#~ msgstr ""
-#~ "Admin %s has executed a charge to %s for its contribution of %s via "
-#~ "PayPal (id: %s) to project %s on date %s"
+msgid "Fallo al ejecutar cargo paypal: "
+msgstr "PayPalでの支払いに失敗しました:"
 
-#~ msgid "Fallo al ejecutar cargo paypal: "
-#~ msgstr "Failed to charge PayPal:"
+msgid "Cargo sermepa correcto"
+msgstr "SERPEMA (Servicaixa) による正しい支払い"
 
-#~ msgid "Cargo sermepa correcto"
-#~ msgstr "SERPEMA (Servicaixa) charge was correct"
+msgid ""
+"El admin %s ha ejecutado el cargo a %s por su aporte de %s mediante TPV (id: "
+"%s) al proyecto %s del dia %s"
+msgstr ""
+"Admin %s has executed charge to %s for its contribution of %s via TPV (id: "
+"%s) to project %s on date %s"
 
-#~ msgid ""
-#~ "El admin %s ha ejecutado el cargo a %s por su aporte de %s mediante TPV "
-#~ "(id: %s) al proyecto %s del dia %s"
-#~ msgstr ""
-#~ "Admin %s has executed charge to %s for its contribution of %s via TPV "
-#~ "(id: %s) to project %s on date %s"
+msgid "Fallo al ejecutar cargo sermepa: "
+msgstr "SERMEPAによる支払いに失敗しました"
 
-#~ msgid "Fallo al ejecutar cargo sermepa: "
-#~ msgstr "Failed to execute SERPEMA (Servicaixa) charge: "
+msgid "Aporte al contado, nada que ejecutar."
+msgstr "まだ支払われていない現金による貢献"
 
-#~ msgid "Aporte al contado, nada que ejecutar."
-#~ msgstr "Cash contribution, nothing to execute."
+msgid ""
+"El admin %s ha dado por ejecutado el aporte manual a nombre de %s por la "
+"cantidad de %s (id: %s) al proyecto %s del dia %s"
+msgstr ""
+"Admin %s has set manual contribution to the name of %s as executed, amount "
+"%s (id: %s) to project %s on date %s"
 
-#~ msgid ""
-#~ "El admin %s ha dado por ejecutado el aporte manual a nombre de %s por la "
-#~ "cantidad de %s (id: %s) al proyecto %s del dia %s"
-#~ msgstr ""
-#~ "Admin %s has set manual contribution to the name of %s as executed, "
-#~ "amount %s (id: %s) to project %s on date %s"
+msgid "Recaudado"
+msgstr "収益"
 
-#~ msgid "Recaudado"
-#~ msgstr "Collected"
+msgid "Rev. TPV"
+msgstr "Rev. TPV"
 
-#~ msgid "Rev. TPV"
-#~ msgstr "Rev. TPV"
+msgid "Pagos Online"
+msgstr "オンラインで支払い"
 
-#~ msgid "Pagos Online"
-#~ msgstr "Online payments"
+msgid "Lo sentimos, el blog para este nodo esta desactivado"
+msgstr "このノードではブログは許可されていません"
 
-#~ msgid "Lo sentimos, el blog para este nodo esta desactivado"
-#~ msgstr "We are sorry but the blog is disabled for this node"
+msgid "No se ha encontrado ningún blog para este nodo"
+msgstr "このノードにはブログが見つかりませんでした"
 
-#~ msgid "No se ha encontrado ningún blog para este nodo"
-#~ msgstr "We couldn't find any blog for this node"
+msgid "Se ha añadido una nueva entrada"
+msgstr "新しいエントリーが追加されました"
 
-#~ msgid "Se ha añadido una nueva entrada"
-#~ msgstr "A new entry was added sucessfully"
+msgid "El admin %s ha %s en el blog Goteo la entrada \"%s\""
+msgstr "Admin %s has %s the entry \"%s\" in the Goteo blog"
 
-#~ msgid "El admin %s ha %s en el blog Goteo la entrada \"%s\""
-#~ msgstr "Admin %s has %s the entry \"%s\" in the Goteo blog"
+msgid "Ha habido algun problema al guardar los datos"
+msgstr "データ保存時に問題が発生しました"
 
-#~ msgid "Ha habido algun problema al guardar los datos"
-#~ msgstr "Some problem (indeterminate) occurred while saving data"
+msgid "entrada quitada (admin)"
+msgstr "削除されたエントリー（管理者）"
 
-#~ msgid "entrada quitada (admin)"
-#~ msgstr "entry removed (admin)"
+msgid "El admin %s ha %s la entrada \"%s\" del blog de Goteo"
+msgstr "Admin %s has %s entry \"%s\" from the Goteo blog"
 
-#~ msgid "El admin %s ha %s la entrada \"%s\" del blog de Goteo"
-#~ msgstr "Admin %s has %s entry \"%s\" from the Goteo blog"
+msgid "Entrada eliminada"
+msgstr "削除されたエントリー"
 
-#~ msgid "Entrada eliminada"
-#~ msgstr "Entry was deleted"
+msgid "Añadiendo una nueva entrada"
+msgstr "エントリーを追加する"
 
-#~ msgid "Añadiendo una nueva entrada"
-#~ msgstr "Adding a new entry"
+msgid "La entrada esta corrupta, contacte con nosotros."
+msgstr "エントリーが壊れています。運営者に連絡を取って下さい"
 
-#~ msgid "La entrada esta corrupta, contacte con nosotros."
-#~ msgstr "This entry is corrupt, please get in contact with us."
+msgid "Editando una entrada existente"
+msgstr "既存のエントリーを編集する"
 
-#~ msgid "Editando una entrada existente"
-#~ msgstr "Editing an existing entry"
+msgid "El término se ha actualizado correctamente"
+msgstr "用語は正しく更新されました"
 
-#~ msgid "El término se ha actualizado correctamente"
-#~ msgstr "Term was updated successfully"
+msgid "Se ha añadido un nuevo término"
+msgstr "新しい用語が追加されました"
 
-#~ msgid "Se ha añadido un nuevo término"
-#~ msgstr "A new term has been added"
+msgid "Término eliminado"
+msgstr "削除された用語"
 
-#~ msgid "Término eliminado"
-#~ msgstr "Term removed"
+msgid "Editando un término existente"
+msgstr "既存の用語を編集する"
 
-#~ msgid "Editando un término existente"
-#~ msgstr "Editing an existing term"
+msgid "Añadido"
+msgstr "追加済み"
 
-#~ msgid "Añadido"
-#~ msgstr "Added"
+msgid "modificacion de idea about (admin)"
+msgstr "edit Idea About  (admin)"
 
-#~ msgid "modificacion de idea about (admin)"
-#~ msgstr "edit Idea About  (admin)"
+msgid "El admin %s ha %s la Idea de fuerza \"%s\""
+msgstr "Admin %s has %s the idea of strength \"%s\""
 
-#~ msgid "El admin %s ha %s la Idea de fuerza \"%s\""
-#~ msgstr "Admin %s has %s the idea of strength \"%s\""
+msgid "quitar de idea about (admin)"
+msgstr "remove Idea About (admin)"
 
-#~ msgid "quitar de idea about (admin)"
-#~ msgstr "remove Idea About (admin)"
+msgid "nueva micronoticia (admin)"
+msgstr "新しいマイクロブログ（管理者）"
 
-#~ msgid "nueva micronoticia (admin)"
-#~ msgstr "new microblog (admin)"
+msgid "El admin %s ha %s la micronoticia \"%s\""
+msgstr "Admin %s has %s the microblog \"%s\""
 
-#~ msgid "El admin %s ha %s la micronoticia \"%s\""
-#~ msgstr "Admin %s has %s the microblog \"%s\""
+msgid "micronoticia quitada (admin)"
+msgstr "マイクロブログが削除されました（管理者）"
 
-#~ msgid "micronoticia quitada (admin)"
-#~ msgstr "microblog entry removed (admin)"
+msgid "Nueva noticia"
+msgstr "新しいお知らせ"
 
-#~ msgid "Nueva noticia"
-#~ msgstr "Add news item"
+msgid "mediante cualquier metodo"
+msgstr "どんな方法でも"
 
-#~ msgid "mediante cualquier metodo"
-#~ msgstr "via any method"
+msgid "que su contraseña sea igual que su email"
+msgstr "パスワードをメールに送信しました"
 
-#~ msgid "que su contraseña sea igual que su email"
-#~ msgstr "whose password is identical to its email"
+msgid "Fallo el SQL!!!!!"
+msgstr "SQLエラー"
 
-#~ msgid "Fallo el SQL!!!!!"
-#~ msgstr "SQL failure!!!"
+msgid "modificacion de meritocracia (admin)"
+msgstr "能力主義を編集する（管理者）"
 
-#~ msgid "modificacion de meritocracia (admin)"
-#~ msgstr "Edit meritocracy (admin)"
+msgid "El admin %s ha %s el nivel de meritocrácia %s"
+msgstr "Admin %s has %s the level of meritocracy %s"
 
-#~ msgid "El admin %s ha %s el nivel de meritocrácia %s"
-#~ msgstr "Admin %s has %s the level of meritocracy %s"
+msgid "Editando Idea"
+msgstr "アイディアを編集する"
 
-#~ msgid "Editando Idea"
-#~ msgstr "Editing Idea"
+msgid "Conteo de palabras"
+msgstr "文字数"
 
-#~ msgid "Conteo de palabras"
-#~ msgstr "Word Count"
+msgid "Traducciones"
+msgstr "翻訳"
 
-#~ msgid "Traducciones"
-#~ msgstr "翻訳"
+msgid "Gestión de retornos colectivos cumplidos"
+msgstr "共同体へのリターンを管理する"
 
-#~ msgid "Gestión de retornos colectivos cumplidos"
-#~ msgstr "Management of fulfilled collective returns"
+msgid "Gestión de aportes y transacciones"
+msgstr "貢献と送金を管理する"
 
-#~ msgid "Gestión de aportes y transacciones"
-#~ msgstr "Management of Contributions and Transactions"
+msgid "Carrusel de blog"
+msgstr "ブログカルーセル"
 
-#~ msgid "Carrusel de blog"
-#~ msgstr "Blog Carroussel"
+msgid "Gestión de campañas"
+msgstr "キャンペーン管理"
 
-#~ msgid "Gestión de campañas"
-#~ msgstr "Campaign Management"
+msgid "Nueva Campaña"
+msgstr "新しいキャンペーン"
 
-#~ msgid "Nueva Campaña"
-#~ msgstr "New Campaign"
+msgid "Editando Campaña"
+msgstr "キャンペーンを編集する"
 
-#~ msgid "Editando Campaña"
-#~ msgstr "Editing Campaign"
-
-#~ msgid "Informe de estado de la Campaña"
-#~ msgstr "Report on the state of Campaign"
+msgid "Informe de estado de la Campaña"
+msgstr "キャンペーンの状態レポート"
