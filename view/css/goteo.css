@@ -16,9 +16,14 @@
  *  along with Goteo.  If not, see <http://www.gnu.org/licenses/agpl.txt>.
  *
  */
+
+/*--------------------
+  後日importを直接読み込みに書き換えること
+------------------- */
 @import url('common.css');
 @import url('header.css');
 @import url('footer.css');
+@import url('base.css');
 @import url('home.css');
 @import url('superform.css');
 @import url('admin.css');

@@ -392,6 +392,7 @@ namespace Goteo\Controller {
 
             $view = new View (
                 "view/project/edit.html.php",
+                
                 $viewData
             );
 

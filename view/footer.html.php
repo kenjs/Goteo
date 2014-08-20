@@ -37,8 +37,9 @@ jQuery(document).ready(function($) {
 });
 </script>
 
-    <div id="footer">
-		<div class="w940">
+    <!-- <div id="footer"> -->
+    <div class="footer">
+		<div class="w940 inner">
         	<div class="block categories">
                 <h8 class="title"><?php echo Text::get('footer-header-categories') ?></h8>
                 <ul class="scroll-pane">
@@ -128,12 +129,10 @@ jQuery(document).ready(function($) {
 		</div>
     </div>
 
-    <div id="sub-footer">
+    <!-- <div id="sub-footer"> -->
+    <div class="foot_bar_wrapper">
 		<div class="w940">
-		
-           
-                
-                <ul>
+                <ul class="foot_bar_inner">
                     <li><a href="/legal/terms"><?php echo Text::get('regular-footer-terms'); ?></a></li>
                     <li><a href="/legal/privacy"><?php echo Text::get('regular-footer-privacy'); ?></a></li>
                 </ul>

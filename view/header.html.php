@@ -26,49 +26,75 @@ use Goteo\Library\Text,
 <?php include 'view/header/lang.html.php' ?> 
 
 
-<div id="header">
+<div id="header" class="header">
     <h1><?php echo Text::get('regular-main-header'); ?></h1>
-    <div id="super-header">
-	   <?php include 'view/header/highlights.html.php' ?>
-    
-	   <div id="rightside" style="float:right;">
-           <div id="about">
-                <ul>
-                    <li><a href="/about"><?php echo Text::get('regular-header-about'); ?></a></li>
-                    <li><a href="/blog"><?php echo Text::get('regular-header-blog'); ?></a></li>
-                    <li><a href="/faq"><?php echo Text::get('regular-header-faq'); ?></a></li>  
-                    <li id="lang"><a href="#" ><?php echo Lang::get(LANG)->short ?></a></li>
-                    <script type="text/javascript">
-                    jQuery(document).ready(function ($) {
-						 $("#lang").hover(function(){
-						   //desplegar idiomas
-						   try{clearTimeout(TID_LANG)}catch(e){};
-						   var pos = $(this).offset().left;
-						   $('ul.lang').css({left:pos+'px'});
-						   $("ul.lang").fadeIn();
-					       $("#lang").css("background","#808285 url('/view/css/bolita.png') 4px 7px no-repeat");
+    <div class="head_bar_wrapper">
+        <div id="super-header">
+    	   <?php include 'view/header/highlights.html.php' ?>
+            <div class="head_bar_inner">
+                <span>横浜の地域課題プラットフォーム</span>
+                <div id="rightside" style="float:right;">
+                <div id="about">
+                    <ul>
+                        <li><a href="/about"><?php echo Text::get('regular-header-about'); ?></a></li>
+                        <li><a href="/blog"><?php echo Text::get('regular-header-blog'); ?></a></li>
+                        <li><a href="/faq"><?php echo Text::get('regular-header-faq'); ?></a></li>  
+                        <li id="lang"><a href="#" ><?php echo Lang::get(LANG)->short ?></a></li>
+                        <script type="text/javascript">
+                        jQuery(document).ready(function ($) {
+    						 $("#lang").hover(function(){
+    						   //desplegar idiomas
+    						   try{clearTimeout(TID_LANG)}catch(e){};
+    						   var pos = $(this).offset().left;
+    						   $('ul.lang').css({left:pos+'px'});
+    						   $("ul.lang").fadeIn();
+    					       $("#lang").css("background","#808285 url('/view/css/bolita.png') 4px 7px no-repeat");
 
-					   },function() {
-						   TID_LANG = setTimeout('$("ul.lang").hide()',100);
-						});
-						$('ul.lang').hover(function(){
-							try{clearTimeout(TID_LANG)}catch(e){};
-						},function() {
-						   TID_LANG = setTimeout('$("ul.lang").hide()',100);
-						   $("#lang").css("background","#59595C url('/view/css/bolita.png') 4px 7px no-repeat");
-						});
-						
-						
-					});
-					</script>                                  
+    					   },function() {
+    						   TID_LANG = setTimeout('$("ul.lang").hide()',100);
+    						});
+    						$('ul.lang').hover(function(){
+    							try{clearTimeout(TID_LANG)}catch(e){};
+    						},function() {
+    						   TID_LANG = setTimeout('$("ul.lang").hide()',100);
+    						   $("#lang").css("background","#59595C url('/view/css/bolita.png') 4px 7px no-repeat");
+    						});
+    						
+    					});
+    					</script>
+                    </ul>
+                </div>
+        		</div>
+            </div><!--.head_bar_inner-->
+        </div>
+    </div>
+        <div class="logo_wrapper">
+            <div class="inner">
+                <h1 style="display:block"><a href="http://yokohama.localgood.jp.il3c.com"><img src="/view/css/header/logo.png" alt="LOCAL GOOD YOKOHAMA"/></a></h1>
+                <div class="catchcopy">
+                    このまち、わたしから未来を創る
+                </div>
+                <a class="earth_view" href="http://yokohama.mapping.jp/" target="_blank"><img src="http://yokohama.localgood.jp.il3c.com/wp-content/themes/localgood/images/earth_view_icon.png" alt="Earth View" /></a>
+            </div>
+        </div>
+        <div class="nav_wrapper">
+            <div class="nav_inner">
+                <ul>
+                    <li class="active"><a href="http://yokohama.localgood.jp.il3c.com">ホーム</a></li>
+                    <li ><a href="http://goteo.il3c.com/project">プロジェクト</a></li>
+                    <li ><a href="http://yokohama.localgood.jp.il3c.com/earth_view/">課題を知る</a>
+                        <ul class="sub">
+                            <li><a href="http://yokohama.localgood.jp.il3c.com/submit_subject/">課題を投稿する</a></li>
+                            <li><a href="http://yokohama.localgood.jp.il3c.com/subject/">課題を見る</a></li>
+                            <li><a href="">つぶやきを見る</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="http://yokohama.localgood.jp.il3c.com/data/">データを見る</a></li>
+                    <li ><a href="http://yokohama.localgood.jp.il3c.com/posts_archive/">人 & 活動</a></li>
+                    <li ><a href="http://yokohama.localgood.jp.il3c.com/about/">このサイトについて</a></li>
                 </ul>
             </div>
-            
-            
-		</div>
-     
-
-    </div>
+        </div>
 
     <?php include 'view/header/menu.html.php' ?>
 

@@ -50,15 +50,14 @@ div#super-header + * {
 
 div#super-header a {
     color: #e9e3dc;
-    font-size: 11px;    
+    font-size: 11px;
 }
 
 div#super-header a:hover {
     color: #8ed9d8 !important;
 }
 
-
-/* Sub-header */ 
+/* Sub-header */
 div#sub-header,
 div#sub-header-secondary { 
     clear: both;
