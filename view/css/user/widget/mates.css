@@ -16,8 +16,10 @@
  *  along with Goteo.  If not, see <http://www.gnu.org/licenses/agpl.txt>.
  *
  */
-div.widget.user-mates{padding-top: 15px;padding-bottom:0;
+div.widget.user-mates{
+    padding-bottom:0;
 }
+
 div.widget.user-mates h3.supertitle{margin-bottom:8px}
 
 div.widget.user-mates div.users,div.widget.user-mates div.categories{height:auto;overflow:visible;}
@@ -33,7 +35,7 @@ div.widget.user-mates div.categories ul li a:hover{color:#20B3B2}
 
 div.widget.user-mates div.users{clear:both;};
 div.widget.user-mates div.users h3.supertitle{border-top: 1px solid #808285;border-bottom:1px dashed #818284;padding:5px 0 5px 5px;color:#20B3B2;font-size:12px;margin-bottom:8px}
-div.widget.user-mates .users ul > li {        
+div.widget.user-mates .users ul > li {
 float: left;
 height: 62px;
 margin-bottom: 8px;
@@ -42,6 +44,13 @@ overflow: hidden;
 padding-top: 5px;
 position: relative;
 width: 127px;		
+}
+
+div.center div.widget.user-mates div.users{
+    padding: 15px 20px;
+}
+div.center div.widget.user-mates a.more {
+    padding-right: 20px;
 }
 
 div.widget.user-mates .users ul > li.nomarginright{margin-right:0}
@@ -125,11 +134,11 @@ div.widget.user-mates a.more  {
     text-decoration: none;
 	line-height:1em;
 	height:1em;
-	margin-bottom:15px;   
+	margin-bottom:15px;
 	margin-top: 15px;
 }
 
-div.widget.user-mates a:hover.more  {    
+div.widget.user-mates a:hover.more  {
     color: #20b3b2;
 }
 

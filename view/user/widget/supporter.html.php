@@ -21,7 +21,7 @@
 use Goteo\Core\View,
     Goteo\Library\Text,
     Goteo\Library\Worth;
-
+// var_dump($this);
 $user = $this['user'];
 
 $worthcracy = Worth::getAll();
@@ -54,10 +54,10 @@ $worthcracy = Worth::getAll();
 	        </dd>
 	
 	        <dt class="amount"><?php echo Text::get('profile-worth-title'); ?></dt>
-	        <dd class="amount<?php if ($user->campaign) echo ' campaign'; ?>"><strong><?php echo \amount_format($user->amount) ?></strong> <span class="euro">&euro;</span></dd>
+	        <dd class="amount<?php if ($user->campaign) echo ' campaign'; ?>"><strong><?php echo \amount_format($user->amount) ?></strong> <span>円</span></dd>
 	
 	        <dt class="date"><?php echo Text::get('profile-last_worth-title'); ?></dt>
-	        <dd class="date"><?php echo $user->date; ?></dd>
+	        <dd class="date"><?php echo date('Y年n月j日', strtotime($user->date)); ?></dd>
 	    </dl>
 	</div>
 </div>

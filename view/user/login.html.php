@@ -74,6 +74,7 @@ jQuery(document).ready(function($) {
 });
 </script>
 
+<?/*
 <div id="sub-header">
 	<div class="clearfix">
 		<div class="subhead-banner">
@@ -82,6 +83,7 @@ jQuery(document).ready(function($) {
 		<div class="mod-pojctopen"><?php echo Text::html('open-banner-header', $fbCode); ?></div>
 	</div>
 </div>
+*/?>
 
 <?php if(isset($_SESSION['messages'])) { include 'view/header/message.html.php'; } ?>
 
@@ -128,24 +130,24 @@ jQuery(document).ready(function($) {
 
 				//l'ordre que es vulgui...
                 $logins = array(
-					'facebook' => '<a href="/user/oauth?provider=facebook">' . Text::get('login-signin-facebook') . '</a>',
+					// 'facebook' => '<a href="/user/oauth?provider=facebook">' . Text::get('login-signin-facebook') . '</a>',
 					'twitter' => '<a href="/user/oauth?provider=twitter">' . Text::get('login-signin-twitter') . '</a>',
-					'Google' => '<a href="/user/oauth?provider=Google">' . Text::get('login-signin-google') . '</a>',
-					'Yahoo' => '<a href="/user/oauth?provider=Yahoo">' . Text::get('login-signin-yahoo') . '</a>',
-					'myOpenid' => '<a href="/user/oauth?provider=myOpenid">' . Text::get('login-signin-myopenid') . '</a>',
-					'linkedin' => '<a href="/user/oauth?provider=linkedin">' . Text::get('login-signin-linkedin') . '</a>',
-					'openid' => ''
+					// 'Google' => '<a href="/user/oauth?provider=Google">' . Text::get('login-signin-google') . '</a>',
+					// 'Yahoo' => '<a href="/user/oauth?provider=Yahoo">' . Text::get('login-signin-yahoo') . '</a>',
+					// 'myOpenid' => '<a href="/user/oauth?provider=myOpenid">' . Text::get('login-signin-myopenid') . '</a>',
+					// 'linkedin' => '<a href="/user/oauth?provider=linkedin">' . Text::get('login-signin-linkedin') . '</a>',
+					// 'openid' => ''
                 );
-                $is_openid = !array_key_exists($openid,$logins);
-                $logins['openid'] = '<form><input type="text"'.($is_openid ? ' class="used"' : '').' name="openid" value="' . htmlspecialchars( $is_openid ? $openid : Text::get('login-signin-openid')) . '" /><a href="/user/oauth" class="button">' . Text::get('login-signin-openid-go') . '&rarr;</a></form>';
+                // $is_openid = !array_key_exists($openid,$logins);
+                // $logins['openid'] = '<form><input type="text"'.($is_openid ? ' class="used"' : '').' name="openid" value="' . htmlspecialchars( $is_openid ? $openid : Text::get('login-signin-openid')) . '" /><a href="/user/oauth" class="button">' . Text::get('login-signin-openid-go') . '&rarr;</a></form>';
                 //si se ha guardado la preferencia, lo ponemos primero
                 $key = '';
-                if($openid) {
-					$key = array_key_exists($openid,$logins) ? $openid : 'openid';
-					echo '<li class="'.strtolower($key).'">'.$logins[$key].'</li>';
-					echo '<li class="more">&rarr;<a href="#">'.Text::get('login-signin-view-more').'</a></li>';
+    //             if($openid) {
+				// 	$key = array_key_exists($openid,$logins) ? $openid : 'openid';
+				// 	echo '<li class="'.strtolower($key).'">'.$logins[$key].'</li>';
+				// 	echo '<li class="more">&rarr;<a href="#">'.Text::get('login-signin-view-more').'</a></li>';
 
-				}
+				// }
                 foreach($logins as $k => $v) {
 					if($key != $k) echo '<li class="'.strtolower($k) .'"'. ( $openid ? ' style="display:none"' :'') .'>'.$v.'</li>';
 				}

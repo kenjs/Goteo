@@ -137,19 +137,19 @@ div.widget.user-supporters .supporters ul li dl dd.amount {
     right: 10px;
     font-size: 18px;
     font-weight: normal;
-    color: #96238f;
+    color: #990033;
 }
 
 div.widget.user-supporters .supporters ul li dl dd.amount {
-    background: url("/view/css/euro/violet/s.png") no-repeat scroll right center transparent;        
-    height: 20px;    
+    /*background: url("/view/css/euro/violet/s.png") no-repeat scroll right center transparent;        */
+    height: 20px;
     line-height: 21px;
-    padding-right: 18px;
+    /*padding-right: 18px;*/
 }
 
-div.widget.user-supporters .supporters ul li dl dd.amount .euro {
+/*div.widget.user-supporters .supporters ul li dl dd.amount .euro {
     display: none;
-}
+}*/
 
 div.widget.user-supporters .supporters ul li dl dt.date {
     display: none;
@@ -226,8 +226,9 @@ div.widget.user-supporters a.more  {
     text-transform: uppercase;
     float: right;
     clear: both;
-    text-decoration: none;  
-	margin-top: 15px;
+    text-decoration: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 div.widget.user-supporters a:hover.more  {
@@ -237,13 +238,20 @@ div.widget.user-supporters a:hover.more  {
 
 /* = solo widget lateral
 ************************/
-div.widget.user-supporters .supporters > ul > li{height:80px}
+div.widget.user-supporters .supporters > ul > li{height:90px}
 div.widget.user-supporters .supporters > ul > li > div.supporter h4{padding-bottom:3px;border-bottom:#D5D5D6 1px solid;overflow:hidden;margin-bottom:6px}
 div.widget.user-supporters .supporters > ul > li > div.supporter h4 > a{
 max-height: 6px;max-width: 175px;overflow: hidden;}
 div.widget.user-supporters .supporters > ul > li .avatar{left:6px}
 div.widget.user-supporters .supporters > ul > li dl dt.amount{top:20px}
-div.widget.user-supporters .supporters > ul > li dl dd.amount{top:32px}
+div.widget.user-supporters .supporters > ul > li dl dd.amount{top:38px}
+div.widget.user-supporters .supporters > ul > li dl dd.amount strong{
+    position: relative;
+    right: -4px;
+}
+div.widget.user-supporters .supporters > ul > li dl dd.amount span{
+    font-size: 8px;
+}
 div.widget.user-supporters .supporters > ul > li dl dt.projects, div.widget.user-supporters .supporters > ul > li dl dd.projects{font-size:0.8em}
 div.widget.user-supporters .supporters ul li dl dd.worthcracy{margin-top:5px}
 div.widget.user-supporters .supporters ul li dl dd.date{top:55px}
