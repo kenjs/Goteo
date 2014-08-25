@@ -1,6 +1,6 @@
 <?php
 /*
- *  Copyright (C) 2012 Platoniq y FundaciÃ³n Fuentes Abiertas (see README for details)
+ *  Copyright (C) 2012 Platoniq y Fundaci¨®n Fuentes Abiertas (see README for details)
  *	This file is part of Goteo.
  *
  *  Goteo is free software: you can redistribute it and/or modify
@@ -75,7 +75,7 @@ $per = 100 / $cols;
         <thead>
             <tr>
                 <?php foreach ($this['columns'] as $key=>$label) : ?>
-                    <th><?php echo $label; ?></th>
+                    <th><?php echo !empty($label) ? Text::_($label) : $label; ?></th>
                 <?php endforeach; ?>
             </tr>
         </thead>
