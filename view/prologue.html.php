@@ -25,7 +25,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title><?php echo GOTEO_META_TITLE ?></title>
-        <link rel="icon" type="image/png" href="/myicon.png" />
+        <link rel="icon" type="image/png" href="/favicon.ico" />
         <meta name="description" content="<?php echo GOTEO_META_DESCRIPTION ?>" />
         <meta name="keywords" content="<?php echo GOTEO_META_KEYWORDS ?>" />
         <meta name="author" content="<?php echo GOTEO_META_AUTHOR ?>" />
@@ -81,6 +81,8 @@
 		  <!-- vigilante de sesi�n -->
 		  <script type="text/javascript" src="<?php echo SITE_URL ?>/view/js/watchdog.js"></script>
 
+            <script type="text/javascript" src="<?php echo SITE_URL ?>/view/js/localgood.js"></script>
+
         <?php endif; ?>
 
         <?php if (isset($jsreq_autocomplete)) : ?>
@@ -90,7 +92,7 @@
 
     </head>
 
-    <body<?php if (isset($bodyClass)) echo ' class="' . htmlspecialchars($bodyClass) . '"' ?>>
+    <body id="page_top" <?php if (isset($bodyClass)) echo ' class="' . htmlspecialchars($bodyClass) . '"' ?>>
 <?php /* 
 *
 *** Uncomment this lines and change __YOUR_APP_ID__
@@ -113,7 +115,7 @@ if (isset($fbCode)) : ?>
                 $('body').addClass('js');
                 $('.tipsy').tipsy();
                 /* Rolover sobre los cuadros de color */
-                $("li").hover(
+                $("li").not(".header .nav_wrapper ul li").hover(
                         function () { $(this).addClass('active') },
                         function () { $(this).removeClass('active') }
                 );
@@ -127,5 +129,4 @@ if (isset($fbCode)) : ?>
             });
         </script>
         <noscript><!-- Please enable JavaScript --></noscript>
-
         <div id="wrapper">
