@@ -47,7 +47,7 @@
 		</script>
     <?php endif; ?>
 	<h<?php echo $level + 1?>><a href="<?php echo $url.$post->id; ?>"><?php echo $post->title; ?></a></h<?php echo $level + 1?>>
-	<span class="date"><?php echo $post->fecha; ?></span>
+	<span class="date"><?php echo date('Y年n月j日', strtotime($post->fecha)); ?></span>
 	<?php if (!empty($post->tags)) : $sep = '';?>
 		<span class="categories">
             <?php foreach ($post->tags as $key => $value) :
