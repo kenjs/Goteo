@@ -37,35 +37,35 @@ if (!$project instanceof Model\Project) {
 $elements = array(
     'created' => array(
         'type'      => 'datebox',
-        'title'     => 'Fecha de creación',
+        'title'     => Text::_('Fecha de creación'),
         'value'     => !empty($project->created) ? $project->created : null
     ),
     'updated' => array(
         'type'      => 'datebox',
-        'title'     => 'Fecha de enviado a revisión',
+        'title'     => Text::_('Fecha de enviado a revisión'),
         'value'     => !empty($project->updated) ? $project->updated : null
     ),
     'published' => array(
         'type'      => 'datebox',
-        'title'     => 'Fecha de inicio de campaña',
-        'subtitle'  => '(Segun esta fecha se calculan los días)',
+        'title'     => Text::_('Fecha de inicio de campaña'),
+        'subtitle'  => Text::_('(Segun esta fecha se calculan los días)'),
         'value'     => !empty($project->published) ? $project->published : null
     ),
     'success' => array(
         'type'      => 'datebox',
-        'title'     => 'Fecha de éxito',
-        'subtitle'  => '(marca fin de segunda ronda)',
+        'title'     => Text::_('Fecha de éxito'),
+        'subtitle'  => Text::_('(marca fin de segunda ronda)'),
         'value'     => !empty($project->success) ? $project->success : null
     ),
     'closed' => array(
         'type'      => 'datebox',
-        'title'     => 'Fecha de cierre',
+        'title'     => Text::_('Fecha de cierre'),
         'value'     => !empty($project->closed) ? $project->closed : null
     ),
     'passed' => array(
         'type'      => 'datebox',
-        'title'     => 'Fecha de paso a segunda ronda',
-        'subtitle'  => '(marca fin de primera ronda)',
+        'title'     => Text::_('Fecha de paso a segunda ronda'),
+        'subtitle'  => Text::_('(marca fin de primera ronda)'),
         'value'     => !empty($project->passed) ? $project->passed : null
     )
 
