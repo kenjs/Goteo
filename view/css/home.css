@@ -18,14 +18,14 @@
  */
 @import url("project/widget/projects.css");
 
-body.home div#main div.learn {    
+body.home div#main div.learn {
     margin-bottom: 16px;
     position: relative;
 }
 
-body.home div#main div.widget.projects h2.title {
+/*body.home div#main div.widget.projects h2.title {
 	margin-left:-47px;
-}
+}*/
 body.home div#main div.widget.projects h3.title{
 	margin-left:3px;
 }

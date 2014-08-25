@@ -230,7 +230,7 @@ body.dashboard div#meter-big dl dt.reached {
 }
 
 body.dashboard div#meter-big dl dd.reached {
-	left: 70px;
+	left: 100px;
 	color: #96238F;
 	font-size: 16px;
 }
@@ -247,7 +247,7 @@ body.dashboard div#meter-big dl .supporters {
     line-height: 1.5em;
     font-weight: bold;
     color: #1b5b9e;
-    left: 420px;
+    left: 340px;
 }
 
 body.dashboard div#meter-big dl dt.supporters {
@@ -257,7 +257,7 @@ body.dashboard div#meter-big dl dt.supporters {
 
 body.dashboard div#meter-big dl dd.supporters {
 	font-size: 16px;
-	left: 545px;	
+	left: 390px;	
 }
 
 body.dashboard div#meter-big dl span.euro {
@@ -281,7 +281,7 @@ body.dashboard div#meter-big dl .days {
     font-size: 12px;
     line-height: 1.5em;
     font-weight: bold;
-    left: 215px;
+    left: 200px;
 }
 
 body.dashboard div#meter-big dl dt.days {
@@ -290,7 +290,7 @@ body.dashboard div#meter-big dl dt.days {
 }
 
 body.dashboard div#meter-big dl dd.days {
-    left: 275px;
+    left: 240px;
     font-size: 16px;
 }
 

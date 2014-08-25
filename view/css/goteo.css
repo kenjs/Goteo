@@ -43,7 +43,7 @@
 div#sub-header > div,
 div#sub-header-secondary > div {
     display: block;
-    max-width: 940px;
+    max-width: 960px;
     margin: 0 auto;
 }
 
@@ -53,8 +53,8 @@ div#sub-header > div > h2 {
 }
 
 /* Main container */
-div#main {    
-    width: 940px;
+div#main {
+    width: 960px;
     margin: 10px auto;
     clear: both;
     overflow-y: hidden;
@@ -70,28 +70,53 @@ div#main {
 div.widget {
     background-color: white;
     padding: 15px 20px;
-    overflow: hidden;    
+    overflow: hidden;
 }
 
- 
+div.center.home div.widget,
+div.center.supporters div.widget,
+div.center.profile div.widget {
+    margin-bottom: 0!important;
+    border-bottom: 1px dashed #c0c0c0;
+}
+
+body.user-profile div#main div.center div.widget.user-mates {
+    margin-bottom: 0!important;
+    padding-bottom: 10px;
+}
+
+div.center div.widget:last-child,
+div.center div.widget.project-media,
+div.center div.widget.project-supporters,
+div.center div.widget.worthcracy {
+    border-bottom: none;
+}
+
  div.widget .supertitle {
-    font-size: 12px;
     font-weight: normal;
     margin: 0;
-    padding: 0 2px .5em;
+    padding: .5em 2px ;
     border-bottom: 1px solid #21b0b0;
-    margin-bottom: 1em;
+    /*margin-bottom: 1em;*/
+    font-size: 18px;
+    background-color: #21b0b0;
+    color: #f5f5f5;
+    padding-left: 8px;
 }
 
 div.widget .title{
     font-size: 16px;
     font-weight: bold;
-    padding: 0 0 0 20px;
-    margin: 0 0 .8em -20px;
+    padding: 0 0 0 24px;
+    /*margin: 0 0 .8em -20px;*/
     text-decoration: none;
-	background: url("arrowH2-section.gif") no-repeat -5px -16px;
+	/*background: url("arrowH2-section.gif") no-repeat -5px -16px;*/
 }
 
+div.side div.widget h3.title,
+div.side div.widget h4.title{
+    padding-left: 0;
+}
 
 /**
  * User profile 
@@ -136,9 +161,9 @@ div.read_more a:hover {
 }
 /** end readmore **/
 
-div#message{background: none repeat scroll 0 0 #19B4B2;color: #FFFFFF;padding: 20px 0;font-size: 14px;width: 100%;}
-div#message div#message-content{width:940px;margin:0 auto;position:relative;}
-div#message div#message-content input.message-close{ background:url('/view/css/message-close.png') no-repeat; width:34px;height:33px;border:none;position:absolute;top:-8px;right:0;z-index:100; cursor:pointer;}
+div#message{background: none repeat scroll 0 0 #ffa375;color: #333333;padding: 25px 0;font-size: 14px;width: 100%;}
+div#message div#message-content{width:960px;margin:0 auto;position:relative;}
+div#message div#message-content input.message-close{ background:url('/view/css/message-close.png') no-repeat; width:11px;height:10px;border:none;position:absolute;top:-8px;right:0;z-index:100; cursor:pointer;}
 div#message div#message-content ul{list-style:none;margin:0;padding:0;}
 
 
@@ -146,11 +171,29 @@ div#message div#message-content ul{list-style:none;margin:0;padding:0;}
 /*no mostrar muesca en los widgets laterales*/
 div.side div.widget .title{background:none;}
 
+div.side div.widget.project-collaborations,
+div.side div.widget.project-rewards {
+    padding: 0;
+}
+div.side div.widget.project-collaborations ul li,
+div.side div.widget.project-rewards ul li {
+    padding-left: 0;
+}
+div.side div.widget.project-collaborations ul li strong,
+div.side div.widget.project-rewards h4.name {
+    height: 40px;
+    padding-left: 42px;
+    line-height: 40px;
+}
+div.side div.widget.project-collaborations ul li strong {
+    display: inline-block;
+}
+
 /*widget embed code for project*/
-body.project-embed{min-width:250px !important;max-width:250px !important;margin:0;padding:0}
+body.project-embed{min-width:250px !important;max-width:320px !important;margin:0;padding:0;background-color:#fff!important;}
 body.project-embed > div#wrapper{width:250px;margin:0;padding:0;}
-body.project-embed > div#wrapper > div.alone-project{width:250px;margin:0;padding:0;}
-body.project-embed > div#wrapper > div.alone-project > div.widget.project{width:250px;margin:0;padding:10px 0 0 0; position:relative;background-color:#EBEAEB;height:420px;}
+body.project-embed > div#wrapper > div.alone-project{width:320px;margin:0;padding:0;}
+body.project-embed > div#wrapper > div.alone-project > div.widget.project{width:320px;margin:0;padding:10px 0 0 0; position:relative;background-color:#fff;height:480px;}
 body.project-embed > div#wrapper > div.alone-project > div.widget.project a.expand{position:absolute;top:0;bottom:0;width:100%;z-index:100}
 body.project-embed > div#wrapper > div.alone-project > div.widget.project.active{background-color:#F8F8F8 !important;}
 div.alone-project > div.widget.project > div.buttons > a.button{padding: 0.6em 1em}

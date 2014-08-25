@@ -46,7 +46,7 @@ body.dashboard div#sub-header img{
 
 body.dashboard div#dashboard-menu {
     display: block;
-    max-width: 940px;
+    max-width: 960px;
     font-size: 13px;
     margin: -2.6em auto 0;    
 /*    background-color: #78d1d1; */

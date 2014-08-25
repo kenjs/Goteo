@@ -30,7 +30,7 @@ div.widget.worthcracy ul {
     list-style: none;
     position: relative;
     display: inline-block;
-    background: url('../euro/xl.png') no-repeat right center;
+    background: url('../yen/xl.png') no-repeat right center;
 }
 
 div.widget.worthcracy ul li {
@@ -111,12 +111,12 @@ div.widget.worthcracy  ul li.done.worth-5.active {
 
 /* Para el mini legend del lateral */
 div.side-worthcracy ul {
-    margin: 0 0 0 4px;
+    margin: 0 0 10px 4px;
     list-style: none;
     position: relative;
     display: inline-block;
-    background: url('/view/css/euro/s.png') no-repeat right 11px;
-	padding: 2em 20px 1em 0;
+    background: url('/view/css/yen/s.png') no-repeat right 25px;
+	padding: 2em 25px 1em 0;
 }
 
 div.side-worthcracy ul li {
@@ -140,6 +140,7 @@ div.side-worthcracy  ul li > em {
 div.side-worthcracy  ul li > span.threshold {
     top: -14px;
     font-size: 9px;
+    line-height: 18px;
 }
 
 div.side-worthcracy  ul li > em,
@@ -147,6 +148,7 @@ div.side-worthcracy  ul li > strong {
     top: 10px;
     width: 301px;
     left: 50%;
+    margin-top: 6px;
     margin-left: -150px;
     color: #808285;
 }
@@ -185,7 +187,7 @@ div.side-worthcracy  ul li.done.worth-5 {
 div.widget.user-worthcracy div.worth-amount {
     display: inline;
     float:left;
-    color: #95268D;
+    color: #990033;
     font-weight: bold;
     font-size: 30px;
     position: relative;
@@ -194,6 +196,9 @@ div.widget.user-worthcracy div.worth-amount {
     line-height: 33px;
     padding-right: 30px;
     background: url('/view/css/euro/violet/l.png') no-repeat center right;
-    border-bottom: 1px solid #95268D;
+    border-bottom: 1px solid #990033;
 }
 
+div.widget.user-worthcracy h3.title {
+padding-left: 0;
+}

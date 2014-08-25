@@ -24,6 +24,8 @@ body.discover div#main div.widget {
 body.discover div#main div.searcher {
 	background-color: transparent;
 	padding-bottom: 0;
+    padding-left:0;
+    padding-right:0;
 	border-bottom: 1px solid #d1d3d4;
 }
 
