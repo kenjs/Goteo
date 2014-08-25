@@ -16,24 +16,22 @@
  *  along with Goteo.  If not, see <http://www.gnu.org/licenses/agpl.txt>.
  *
  */
-div.widget.project-support {
-    position: relative;
-}
 
 /* Detalle de la linea roja (y otras cosillas) en el supertitle del termometro*/
 div.widget.project-support h4.supertitle {
-    border-bottom: 1px solid #96238F !important;
+    background-color: #3399cc;
 }
 
 div.widget.project-support dl {
     margin: 0;
-    padding: 0 0 0 20px;
     float: left;
-    margin-left: 15px;
+    margin-bottom: 120px;
 }
 
 body.js div.widget.project-support dl {
     padding-left: 0;
+    float: right;
+    width: 250px;
 }
 
 div.widget.project-support dl {
@@ -51,94 +49,145 @@ div.widget.project-support dl dd {
     display: block;
     min-height: 1.5em;
     line-height: 1.5em;
-	margin-left: 5.5em;
 }
 
-div.widget.project-support dl dd * {   
+div.widget.project-support dl dd * {
     font-weight: bold;
+    font-size: 18px;
+    word-wrap: break-word;
+}
+
+div.widget.project-support dl dd span {
     font-size: 16px;
 }
 
 div.widget.project-support dl dt.optimum{
-	color:#BB70B6;
+	color:#6699cc;
 }
 
 div.widget.project-support dl dt.optimum,
 div.widget.project-support dl dt.minimum {
-    width: 5.5em;
+    width: 80px;
     float: left;
     margin-left: 0;
-    line-height: 45px;
-    height: 45px;
+    line-height: 46px;
+    height: 35px;
     margin-top: 0;
     text-indent: 10px;
-    background: no-repeat left center;    
+    background: no-repeat left center;
 }
 
+div.widget.project-support dl dt {
+    float: left;
+    width: 80px;
+    height: 20px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    margin-left: 30px;
+    overflow: hidden;
+}
+div.widget.project-support dl dd {
+    float: left;
+    width: 120px;
+    height: 20px;
+    padding-right: 0;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    text-align: right;
+    white-space: nowrap;
+}
 
-
-div.widget.project-support dl dt.optimum {
+/*div.widget.project-support dl dt.optimum {
     background-image: url('/view/css/project/widget/support/here-optimum.png');
-}
+}*/
 
-div.widget.project-support dl dt.minimum {
+/*div.widget.project-support dl dt.minimum {
     background-image: url('/view/css/project/widget/support/here-minimum.png');
     clear: left;
-}
+}*/
 
 div.widget.project-support dl dd.optimum,
 div.widget.project-support dl dd.minimum {
     float: left;
+    width: 160px;
+    height: 40px;
     margin-left: 0;
-    line-height: 45px;    
-    height: 45px;
+    line-height: 35px;
     margin-top: 0;
-    padding-right: 28px;
-    background: url('/view/css/euro/light-violet/l.png') no-repeat right center;
+    /*padding-right: 28px;*/
+    /*background: url('/view/css/euro/light-violet/l.png') no-repeat right center;*/
     display: inline-block;
+    text-align: right;
 }
 
 div.widget.project-support dl dd.minimum {
-    background-image: url('/view/css/euro/violet/l.png');
+    /*background-image: url('/view/css/euro/violet/l.png');*/
 }
 
 div.widget.project-support dl dd.optimum strong{
-	color:#BB70B6;
+	color:#6699cc;
 }
 
 div.widget.project-support dl dd.optimum strong,
 div.widget.project-support dl dd.minimum strong {
     font-size: 30px;
+    font-weight: normal;
 }
 
-div.widget.project-support dl dd.optimum span.euro,
+/*div.widget.project-support dl dd.optimum span.euro,
 div.widget.project-support dl dd.minimum span.euro {
     display: none;
+}*/
+
+div.widget.project-support dl dt.optimum,
+div.widget.project-support dl dd.optimum {
+    color: #6699cc;
 }
 
 div.widget.project-support dl dt.minimum,
 div.widget.project-support dl dd.minimum {
-    color: #96238F;
+    color: #cc6600;
+}
+
+div.widget.project-support dl dt.reached,
+div.widget.project-support dl dd.reached {
+    margin-top: 16px;
 }
 
 div.widget.project-support dl dt.reached {
     clear: both;
 }
-
-div.widget.project-support dl dd.reached {        
-    padding-right: 20px;
-    background: url('/view/css/euro/violet/s.png') no-repeat right top;
-    display: inline-block;
-	color:#96238F;
+div.widget.project-support dl dt.reached span {
+    color: #666633;
 }
 
-div.widget.project-support dl dd.reached span.euro {
+div.widget.project-support dl dd.reached {
+    /*padding-right: 20px;*/
+    /*background: url('/view/css/euro/violet/s.png') no-repeat right top;*/
+    display: inline-block;
+	color:#990033;
+    width: 118px;
+}
+/*div.widget.project-support dl dd.reached span.euro {
     display: none;
+}*/
+
+div.widget.project-support dl dd.days,
+div.widget.project-support dl dd.supporters {
+    width: 118px;
+}
+div.widget.project-support dl dd.days strong,
+div.widget.project-support dl dd.supporters strong {
+    color: #82656f;
 }
 
 div.widget.project-support dl dt.supporters,
 div.widget.project-support dl dd.supporters {
     color: #313b96;
+}
+
+div.widget.project-support dl dt.supporters span {
+    color: #666633;
 }
 
 /* Animated/static meter */
@@ -148,40 +197,41 @@ div.widget.project-support > div.meter {
 }
 
 body.project-show div#main > div.side > div.widget h3.title.ronda {
-	color:#20B3B2;
-	position:absolute;
-	top: 55px;
-	right:15px;
+	color:#999900;
     text-transform: lowercase;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: right;
 }
 
 div.widget.project-support div.graph {
     background: url('/view/css/project/widget/support/over.png') no-repeat center top;
-    width: 26px;
-    overflow: visible;            
-    border-bottom: 2px solid #20B3B2;
+    width: 20px;
+    overflow: visible;
+    border-bottom: 5px solid #CAD95A;
     font-size: 0;
     margin-left: 14px;
-/*    margin-top: 22px; */
     float: left;
     padding-top: 22px;
 }
 
 div.widget.project-support div.graph > div.optimum,
 div.widget.project-support div.graph > div.minimum {
-    width: 26px;
+    width: 20px;
     overflow: visible;
 }
 
 div.widget.project-support div.graph > div.optimum {
+    border-top: 5px solid #BCCCD8;
     background: url('/view/css/project/widget/support/optimum.png') no-repeat center top;
     height: 45px;
 }
 
-div.widget.project-support div.graph > div.minimum {    
+div.widget.project-support div.graph > div.minimum {
     background: url('/view/css/project/widget/support/minimum.png') no-repeat center top;
-    position: relative;    
+    position: relative;
     min-height: 145px !important;
+    border-top: 5px solid #dc940f;
 }
 
 div.widget.project-support div.graph > div.minimum > div.done {
@@ -198,18 +248,17 @@ div.widget.project-support div.meter.ver div.graph .minimum .done {
 
 div.widget.project-support div.graph > div.minimum > div.done strong {
     background: url('/view/css/project/widget/support/marker.png') no-repeat center center;
-    width: 30px;  
-    padding: 0 8px 0 4px;
-    height: 20px;    
-    margin-top: -9px;    
-    color: white;    
-    font-size: 9px;
-    font-weight: normal;    
+    width: 30px;
+    padding: 0 8px 0 8px;
+    height: 20px;
+    margin-top: -9px;
+    color: #000000;
+    font-size: 10px;
+    font-weight: normal;
     line-height: 20px;
-    margin-left: -16px;    
+    margin-left: -23px;
     text-align: center;
 	display: block;
-	letter-spacing: 0.2em;
 }
 
 div.widget.project-support div.buttons {
@@ -221,8 +270,22 @@ div.widget.project-support div.buttons {
     right: 20px;
 }
 
-div.widget.project-support a.button {    
+div.widget.project-support a.button {
+    width: 200px;
+    height: 50px;
     margin: 0;
+    padding: 0;
+    background: none;
+    background: #f2bb67; /* Old browsers */
+    background: -moz-linear-gradient(top,  #f2bb67 0%, #ff9900 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2bb67), color-stop(100%,#ff9900)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #f2bb67 0%,#ff9900 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #f2bb67 0%,#ff9900 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #f2bb67 0%,#ff9900 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #f2bb67 0%,#ff9900 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2bb67', endColorstr='#ff9900',GradientType=0 ); /* IE6-9 */
+    font-size: 14px;
+    line-height: 50px;
 }
 
 div.widget.project-support a.more {
@@ -234,15 +297,11 @@ div.widget.project-support a.more {
 
 /* Tagmark termometro */
 div.widget.project-support div.tagmark {
-    position: absolute;
-    z-index: 9999;
     text-align: left;
     color: #ffffff;
     font-size: 1.2em;
     font-weight: normal;
     text-transform: uppercase;
-    margin-left: -20px;
-    top: 0px;
     width: 235px;
     height: 40px;
     padding: 0 30px 0px 38px;

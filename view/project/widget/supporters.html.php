@@ -51,10 +51,10 @@ $pagedResults = new \Paginated($investors, 20, isset($_GET['page']) ? $_GET['pag
     
     <dl class="summary">
         <dt class="supporters"><?php echo Text::get('project-menu-supporters'); ?></dt>
-        <dd class="supporters"><?php echo $supporters ?></dd>
+        <dd class="supporters"><?php echo $supporters ?>人</dd>
         
         <dt class="reached"><?php echo Text::get('project-invest-total'); ?></dt>
-        <dd class="reached"><?php echo $reached ?> <span class="euro">&euro;</span></dd>
+        <dd class="reached"><?php echo $reached ?> <span>円</span></dd>
         
     </dl>   
         
@@ -63,7 +63,7 @@ $pagedResults = new \Paginated($investors, 20, isset($_GET['page']) ? $_GET['pag
         <?php while ($investor = $pagedResults->fetchPagedRow()) : ?>
             <li><?php echo new View('view/user/widget/supporter.html.php', array('user' => $investor, 'worthcracy' => $worthcracy)) ?></li>
         <?php endwhile ?>
-        </ul>            
+        </ul>
     </div>        
 
     <ul id="pagination">

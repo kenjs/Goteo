@@ -16,6 +16,16 @@
  *  along with Goteo.  If not, see <http://www.gnu.org/licenses/agpl.txt>.
  *
  */
+
+div.widget.project-schedule {
+    padding-left: 0;
+    padding-right: 0;
+}
+body.project-show div#main > div.center > div.widget.project-schedule {
+    max-width: 620px;
+}
+
+
 div.widget.project-schedule table {
     border-collapse: separate;
     width: 100%;
@@ -38,9 +48,10 @@ div.widget.project-schedule thead.weeks {
 }
 
 div.widget.project-schedule thead.months tr th {
-    font-weight: normal;    
-    border: solid #e0e0e0;
-    border-width: 0 1px 0 0;
+    font-weight: normal;
+    /*border: solid #e0e0e0;
+    border-width: 0 1px 0 0;*/
+    font-size: 14px;
 }
 
 div.widget.project-schedule thead tr th:last-child {
@@ -121,7 +132,7 @@ div.widget.project-schedule table tbody td.on.structure {
 
 /* Coste imprescindible */
 div.widget.project-schedule table tbody td.on.req {
-    background-color: #e4c9e2;
+    background-color: #c7d8b6;
 }
 
 /* Coste adicional */
@@ -145,7 +156,7 @@ div.widget.project-schedule table tbody tr:nth-child(4n+4) td.on {
 
 
 div.widget.project-schedule table tbody td span {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: normal;
     text-align: center;
     height: 5em;

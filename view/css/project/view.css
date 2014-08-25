@@ -88,7 +88,7 @@ body.project-show div#sub-header div.project-by {
 
 body.project-show div#sub-header div.project-by a {
     font-weight: normal;
-    color: #20B3B2;
+    color: #cc6600;
     font-size: 12px;
     text-decoration: none;
 }
@@ -138,76 +138,78 @@ body.project-show div.project-menu ul {
     margin: 0;
     list-style: none;
     font-size: 0;
-    height: 28px;
 }
 
 body.project-show div.project-menu ul li {
     display: inline-block;
-    margin-right: 1px;    
-	height:30px;
+    margin-right: 1px;
 }
 
 body.project-show div.project-menu ul li span.digits{
 	display:inline-block;
-	width:30px;
+	/*width:30px;*/
 	text-align:center;
 }
 
 body.project-show div.project-menu ul li a {
     display: inline-block;
-/*    padding: .6em 2em .2em .6em; */
-    padding: 8px 8px 1px 8px;
-    color: white;
+    /*width: 140px;*/
+    height:50px;
+    padding: 0 16px;
+    color: #666666;
     text-transform: uppercase;
     text-decoration: none;
-    height: 28px;
-    background-image: url('/view/css/project/view/menu/regular_menu.png');
-    background-position: left top !important;
-    background-repeat: repeat-x;
-	font-size:11px;	
+    text-align: center;
+    line-height: 49px;
+    /*background-image: url('/view/css/project/view/menu/regular_menu.png');*/
+    background: #ffffcc; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffcc 0%, #e5e5b9 100%, #e8e8bb 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffcc), color-stop(100%,#e5e5b9), color-stop(100%,#e8e8bb)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffcc 0%,#e5e5b9 100%,#e8e8bb 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffcc 0%,#e5e5b9 100%,#e8e8bb 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffcc 0%,#e5e5b9 100%,#e8e8bb 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffffcc 0%,#e5e5b9 100%,#e8e8bb 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffcc', endColorstr='#e8e8bb',GradientType=0 ); /* IE6-9 */
+    border-top: 1px solid #cccc99;
+    border-right: 1px solid #cccc99;
+    border-left: 1px solid #cccc99;
+    color: #999966;
+    font-size: 14px;
+    font-weight: bolder;
 }
 
 body.project-show div.project-menu ul li.active a {
-    background-image: url('/view/css/project/view/menu/hover_menu.png');
+    /*width: 142px;*/
+    height: 50px;
+    padding: 0 16px;
+    /*background-image: url('/view/css/project/view/menu/hover_menu.png');*/
+    background: none;
+    background-color: #dae121;
+    border: none;
+    color: #666666;
 }
 
 body.project-show div.project-menu ul li.show a {
-    background-image: url('/view/css/project/view/menu/active_menu.png') !important;
-    background-repeat: no-repeat !important;
-}
-
-body.project-show div.project-menu ul li.messages a {
-    background-color: #00b05b;
-}
-
-body.project-show div.project-menu ul li.home a {
-    background-color: #1fb0b0;
-	padding-right:45px;
-} 
-
-body.project-show div.project-menu ul li.needs a {
-    background-color: #96238F;
-	padding-right:35px;
-} 
-
-body.project-show div.project-menu ul li.supporters a {
-    background-color: #313b96;
-}
-
-body.project-show div.project-menu ul li.updates a {
-    background-color: #c8babc;
+    /*background-image: url('/view/css/project/view/menu/active_menu.png') !important;*/
+    /*background-repeat: no-repeat !important;*/
+    width: 142px;
+    height: 50px;
+    background: none;
+    background-color: #dae121;
+    border: none;
+    color: #666666;
 }
 
 body.project-show div#main div.widget {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 body.project-show div#main div.widget.project-support {
-    min-height: 350px;
+    min-height: 450px;
 }
 
 body.project-show div#main > div.side > div.widget {
-    width: 260px;
+    width: 330px;
     float: right;
     clear: right;
 }
@@ -239,4 +241,49 @@ div.widget.projects #widget-code{	width:350px;	float:left; margin: 0 0 0 20px;}
 div.widget.projects  #widget-code .wc-embed{background: url("/view/css/social/embed.png") no-repeat; min-height:20px;text-transform:uppercase;padding: 3px 0 0 25px;}
 div.widget.projects  #widget-code textarea{width:200px;	margin: 10px 0;	padding:10px;	background:#E7E7E7;border:none;font-size:11px;resize:none;}
 
+/* sideber */
+div.widget h4.supertitle {
+    height: 50px;
+    padding: 0;
+    padding-left: 20px;
+    /*border-bottom: 1px solid #96238F !important;*/
+    border-bottom: none;
+    line-height: 50px;
+    color: #ffffff;
+}
 
+div#project-support,
+div#project-investors,
+div#project-collaborations,
+div#project-rewards,
+div.widget.user,
+div.widget.project-investors,
+div.widget.user-mates,
+div.widget.user-mates,
+div.widget.user,
+div.widget.user-supporters {
+    padding: 0;
+}
+
+div#project-support .project-widget-box,
+div#project-investors .project-widget-box,
+div#project-collaborations .project-widget-box,
+div.widget.user .project-widget-box,
+div.widget.project-investors .project-widget-box,
+div.widget.user-mates .project-widget-box,
+div.widget.user-supporters .project-widget-box
+{
+    padding: 15px 20px;
+}
+
+div.widget.project-support {
+    position: relative;
+}
+
+div.widge dl {
+    margin: 0;
+    padding: 0 0 0 20px;
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 60px;
+}

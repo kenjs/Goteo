@@ -21,7 +21,10 @@
 	use Goteo\Core\View,
         Goteo\Library\Text;
 
-	$url = SITE_URL . '/widget/project/' . $this['project']->id;
+	$url = SITE_URL . '/widget/project/' . urlencode($this['project']->id);
+
+
+
     if (LANG != 'es')
         $url .= '?lang=' . LANG;
 

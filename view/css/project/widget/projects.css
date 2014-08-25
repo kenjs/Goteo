@@ -23,11 +23,11 @@ div.widget.projects > .title {
 }
 
 div.widget.projects div.project {
-    background-color: #ebeaeb;
+    background-color: #fff;
     margin: 0 0 3.33% 3.33%;
     float: left;    
     padding: 0;
-    width: 250px;
+    width: 260px;
 	position:relative;
 	z-index:98;
 }
@@ -121,6 +121,10 @@ div.widget.projects > #widget-code textarea  {
 	border:none;
 	font-size:11px;
 	resize:none;
+}
+
+div.widget.projects h2.title {
+padding-left: 0;
 }
 
 

@@ -121,7 +121,7 @@ $bodyClass = 'project-show'; include 'view/prologue.html.php' ?>
             </div>
 
             <?php $printSendMsg = false; ?>
-            <div class="center">
+            <div class="center <?php echo $show; ?>">
 			<?php
                 // los modulos centrales son diferentes segun el show
                 switch ($show) {

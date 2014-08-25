@@ -30,7 +30,8 @@ div.widget.project-summary h6 {
 div.widget.project-summary h1,
 div.widget.project-summary h2,
 div.widget.project-summary h3 {
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: normal;
 }
 
 div.widget.project-summary h4 {
@@ -46,6 +47,7 @@ div.widget.project-summary h8 {
 
 div.widget.project-summary > div {
     margin-bottom: 2em;
+    font-size: 14px;
 }
 
 div.widget.project-summary div.prjct-gallery-container {

@@ -30,15 +30,15 @@ div.widget.project-supporters .title {
 div.widget.project-supporters dl.summary {
     margin: 0 0 20px;
     background-color: white;
-    padding: 20px;    
-    line-height: 30px;    
+    padding: 20px;
+    line-height: 30px;
     overflow: hidden;
 }
 
 div.widget.project-supporters dl.summary dt,
-div.widget.project-supporters dl.summary dd {        
+div.widget.project-supporters dl.summary dd {
     margin: 0;
-    float: left;    
+    float: left;
     height: 1.5em;
     line-height: 1.5em;
 }
@@ -58,44 +58,50 @@ div.widget.project-supporters dl.summary .supporters {
 }
 
 div.widget.project-supporters dl.summary dd.supporters {
-    clear: left;    
+    clear: left;
 }
 
 div.widget.project-supporters dl.summary dt.reached {
-    margin-top: -1.5em;    
-    color: #96238F;
+    margin-top: -1.5em;
+    color: #666633;
 }
 
 div.widget.project-supporters dl.summary dd.reached {
-    background: url("/view/css/euro/violet/l.png") no-repeat scroll right center transparent;        
-    padding-right: 30px;
-    color: #96238F;
+    /*background: url("/view/css/euro/violet/l.png") no-repeat scroll right center transparent;        */
+    /*padding-right: 30px;*/
+    color: #990033;
 }
 
 
-div.widget.project-supporters dl.summary dd.reached .euro {
+/*div.widget.project-supporters dl.summary dd.reached .euro {
     display: none;
-}
+}*/
 
 
 div.widget.project-supporters .supporters ul {
+    background-color: #ffffff;
+    overflow: hidden;
     list-style: none;
-    margin: -20px 0 0 -20px;
+    margin: -20px 0 0 0;
     padding: 0;
 }
 
 div.widget.project-supporters .supporters > ul > li {
     background-color:  white;
-    /*padding: 10px 10px 10px 70px;*/
     float: left;
-    margin: 20px 0 0 20px;
+    width: 310px;
     height: 4.5em;
     position: relative;
+    border-top: 1px dashed #c0c0c0;
+}
+div.widget.project-supporters .supporters > ul > li:nth-child(odd) {
+    width: 309px;
+    border-right: 1px dashed #c0c0c0;
 }
 
 div.widget.project-supporters .supporters > ul > li div.supporterContainer {
 	padding: 10px 10px 10px 65px;
-	width: 220px;
+	width: 230px;
 }
 
 div.widget.project-supporters .supporters ul li.active {
@@ -133,7 +139,7 @@ div.widget.project-supporters .supporters ul li h6 {
     font-size: 11px;
     font-weight: bold;
     margin: 0 0 .5em;
-    height: 13px;
+    /*height: 13px;*/
     text-transform: none;
 }
 
@@ -162,6 +168,7 @@ div.widget.project-supporters .supporters ul li h6 a {
 }
 
 div.widget.project-supporters .supporters ul li h4 {
+    font-size: 14px;
     overflow: hidden;
 }
 
@@ -184,33 +191,41 @@ div.widget.project-supporters .supporters ul li dl dt {
 
 div.widget.project-supporters .supporters ul li dl dt.amount {
     position: absolute;
-    right: 10px;
+    right: 16px;
     top: 10px;
     margin: 0;
-    font-size: 11px;
-    color: #313b96;
+    font-size: 12px;
+    color: #666633;
 }
 
 div.widget.project-supporters .supporters ul li dl dd.amount {
     position: absolute;
     top: 25px;
-    right: 10px;
-    font-size: 20px;
+    right: 16px;
+    width: 96px;
+    /*font-size: 20px;*/
+    font-size: 16px;
     font-weight: bold;
-    color: #96238F;
+    color: #990033;
 	line-height: 26px;
 	padding-top: 2px;
+    text-align: right;
 }
 
 div.widget.project-supporters .supporters ul li dl dd.amount {
-    background: url('/view/css/euro/violet/m.png') no-repeat scroll right center;
-    padding-right: 22px;
+    /*background: url('/view/css/euro/violet/m.png') no-repeat scroll right center;*/
+    /*padding-right: 22px;*/
 	height: 25px;
 }
 
-div.widget.project-supporters .supporters ul li dl dd.amount .euro {
-    display: none;
+div.widget.project-supporters .supporters ul li dl dd.amount strong {
+    font-size: 18px;
+    word-wrap: nowrap;
 }
+
+/*div.widget.project-supporters .supporters ul li dl dd.amount .euro {
+    display: none;
+}*/
 
 div.widget.project-supporters .supporters ul li dl dt.date {
     display: none;
@@ -218,15 +233,20 @@ div.widget.project-supporters .supporters ul li dl dt.date {
 
 div.widget.project-supporters .supporters ul li dl dd.date {
     position: absolute;
-    right: 10px;
-    bottom: 10px;    
+    right: 16px;
+    bottom: 10px;
     color: #a6a8ab;
     font-size: 11px;
-	margin-top: 8px;
+	margin-top: 5px;
 }
 
 div.widget.project-supporters .supporters ul li dl dt.worthcracy {
     display: none;
+}
+
+div.widget.project-supporters .supporters ul li dl dd.worthcracy {
+    position: absolute;
+    top: 28px;
 }
 
 div.widget.project-supporters .supporters ul li dl dd.worthcracy ul {
@@ -422,17 +442,23 @@ div.widget.project-investors .investors ul li dl dd.amount {
     right: 10px;
     font-size: 18px;
     font-weight: normal;
-    color: #96238F;
+    color: #990033;
 	line-height: 28px;
 }
 
-div.widget.project-investors .investors ul li dl dd.amount {
+/*div.widget.project-investors .investors ul li dl dd.amount {
     background: transparent url('/view/css/euro/violet/s.png') no-repeat scroll right center;
     padding-right: 18px;
-}
-
-div.widget.project-investors .investors ul li dl dd.amount .euro {
+}*/
+/*div.widget.project-investors .investors ul li dl dd.amount .euro {
     display: none;
+}*/
+div.widget.project-investors .investors ul li dl dd.amount strong {
+    position: relative;
+    right: -5px;
+}
+div.widget.project-investors .investors ul li dl dd.amount span {
+    font-size: 8px;
 }
 
 div.widget.project-investors .investors ul li dl dt.date {
@@ -512,8 +538,14 @@ div.widget.project-supporters .supporters > ul > li > div.supporter h4{padding-b
 div.widget.project-supporters .supporters > ul > li > div.supporter h4 > a{
 max-height: 6px;max-width: 175px;overflow: hidden;}
 div.widget.project-supporters .supporters > ul > li .avatar{left:6px}
-div.widget.project-supporters .supporters > ul > li dl dt.amount{top: 20px}
-div.widget.project-supporters .supporters > ul > li dl dd.amount{top: 32px}
+div.widget.project-supporters .supporters > ul > li dl dt.amount{top: 8px}
+div.widget.project-supporters .supporters > ul > li dl dd.amount{
+    top: 28px;
+/*    position: relative;
+    left: 3px;
+*/    font-size:8px;
+    line-height: 16px;
+}
 div.widget.project-supporters .supporters > ul > li dl dt.projects, div.widget.project-supporters .supporters > ul > li dl dd.projects{font-size: 0.8em}
 div.widget.project-supporters .supporters ul li dl dd.worthcracy{margin-top: 5px}
 div.widget.project-supporters .supporters ul li dl dd.date{top: 55px}
@@ -523,8 +555,13 @@ div.widget.project-investors .investors ul li > div.supporter h4{padding-bottom:
 div.widget.project-investors .investors ul li > div.supporter h4 > a{
 max-height: 6px;max-width: 175px;overflow: hidden;}
 div.widget.project-investors .investors ul li .avatar{left:6px}
-div.widget.project-investors .investors ul li dl dt.amount{top:20px}
-div.widget.project-investors .investors ul li dl dd.amount{top:32px}
+/*div.widget.project-investors .investors ul li dl dt.amount{top:20px}
+div.widget.project-investors .investors ul li dl dd.amount{top:32px}*/
 div.widget.project-investors .investors ul li dl dt.projects, div.widget.project-investors .investors ul li dl dd.projects{font-size:0.8em}
 div.widget.project-investors .investors ul li dl dd.worthcracy{margin-top:5px}
-div.widget.project-investors .investors ul li dl dd.date{top:55px}
+div.widget.project-investors .investors ul li dl dd.date{top:50px}
+
+
+div.widget.project-investors h4.supertitle {
+    background-color: #33cc99;
+}

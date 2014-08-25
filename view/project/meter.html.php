@@ -79,7 +79,7 @@ $minimum_ratio =  min(100, round(($minimum / $optimum) * 100));
 ?>        
     <div class="meter <?php echo $horizontal ? 'hor' : 'ver'; echo $big ? ' big' : ''; echo $activable ? ' activable' : ''; ?>">
         
-        <h<?php echo $level ?> class="title investment"><?php echo Text::get('project-view-metter-investment'); ?></h<?php echo $level ?>>
+        <!--<h<?php //echo $level ?> class="title investment"><?php //echo Text::get('project-view-metter-investment'); ?></h<?php //echo $level ?>>-->
         <?php if (!empty($project->round)) : ?><h<?php echo $level ?> class="title ronda"><?php echo $project->round . Text::get('regular-round'); ?></h<?php echo $level ?>><?php endif; ?>
         <?php if ($activable) : ?><h<?php echo $level ?> class="title obtained"><?php echo Text::get('project-view-metter-got'); ?></h<?php echo $level ?>><?php endif; ?>
         <div class="graph">
@@ -95,25 +95,25 @@ $minimum_ratio =  min(100, round(($minimum / $optimum) * 100));
 
         <dl>
             <dt class="optimum"><?php echo Text::get('project-view-metter-optimum'); ?></dt>
-            <dd class="optimum"><strong><?php echo \amount_format($optimum) ?></strong> <span class="euro">&euro;</span></dd>
+            <dd class="optimum"><strong><?php echo \amount_format($optimum) ?> </strong><span>円</span></dd>
 
             <dt class="minimum" style="<?php echo $horizontal ? 'width' : 'height' ?>: <?php echo number_format($minimum_ratio) ?>%"><span><?php echo Text::get('project-view-metter-minimum'); ?></span></dt>
-            <dd class="minimum" style="<?php echo $horizontal ? 'width' : 'height' ?>: <?php echo number_format($minimum_ratio) ?>%"><strong><?php echo \amount_format($minimum) ?> <span class="euro">&euro;</span></strong> </dd>
+            <dd class="minimum" style="<?php echo $horizontal ? 'width' : 'height' ?>: <?php echo number_format($minimum_ratio) ?>%"><strong><?php echo \amount_format($minimum) ?> </strong><span>円</span></dd>
 
             <dt class="reached"><span><?php echo Text::get('project-view-metter-got'); ?></span></dt>
-            <dd class="reached"><strong><?php echo \amount_format($reached) ?> <span class="euro">&euro;</span></strong></dd>
+            <dd class="reached"><strong><?php echo \amount_format($reached) ?> </strong><span>円</span></dd>
 
             <dt class="days"><span><?php echo Text::get('project-view-metter-days'); ?></span></dt>
             <dd class="days"><strong><?php echo number_format($days) ?></strong> <?php echo Text::get('regular-days'); ?></dd>
 
             <dt class="supporters"><span><?php echo Text::get('project-view-metter-investors'); ?></span></dt>
-            <dd class="supporters"><strong><?php echo number_format($supporters) ?></strong></dd>                
+            <dd class="supporters"><strong><?php echo number_format($supporters) ?></strong></dd>
 
         </dl>
 
         <?php if ($activable) : ?>
         <div class="obtained">
-            <strong><?php echo \amount_format($reached) ?> <span class="euro">&euro;</span></strong>
+            <strong><?php echo \amount_format($reached) ?> <span>円</span></strong>
             <span class="percent"><?php echo number_format($minimum_done_per) ?>%</span>
         </div>
         <?php endif; ?>

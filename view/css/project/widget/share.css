@@ -34,7 +34,7 @@ div.widget.project-share div.right{
 
 
 div.widget.project-share h4{
-	font-weight:normal;
+	font-weight:bolder;
 	margin-top:0;
 }
 
@@ -89,6 +89,9 @@ div.widget.project-share li.proyecto{
 div.widget.project-share li.proyecto a{
 	color:#fff;
 }
+div.widget.project-share li.proyecto a#a-proyecto:link{
+    font-size: 10px;
+}
 
 div.widget.project-share li.google {
     background-image: url('/view/css/social/google.png');	
@@ -102,6 +105,9 @@ div.widget.project-share li.identica {
 
 div.widget.project-share li.url {
     background-image: url('/view/css/social/url.png'); 
+}
+div.widget.project-share li.url input {
+    width: 265px;
 }
 
 div.widget.project-share li.embed {

@@ -24,8 +24,8 @@ $project = $this['project'];
 $types   = $this['types'];
 $level = (int) $this['level'] ?: 3;
 
-$minimum    = \amount_format($project->mincost) . ' &euro;';
-$optimum    = \amount_format($project->maxcost) . ' &euro;';
+$minimum    = \amount_format($project->mincost) . ' 円';
+$optimum    = \amount_format($project->maxcost) . ' 円';
 
 // separar los costes por tipo
 $costs = array();
@@ -35,8 +35,8 @@ foreach ($project->costs as $cost) {
     $costs[$cost->type][] = (object) array(
         'name' => $cost->cost,
         'description' => $cost->description,
-        'min' => $cost->required == 1 ? \amount_format($cost->amount) . ' &euro;' : '',
-        'opt' => \amount_format($cost->amount) . ' &euro;',
+        'min' => $cost->required == 1 ? \amount_format($cost->amount) . ' 円' : '',
+        'opt' => \amount_format($cost->amount) . ' 円',
         'req' => $cost->required
     );
 }
@@ -89,7 +89,7 @@ foreach ($project->costs as $cost) {
         <?php endforeach ?>
                                         
         <tfoot>
-            <tr>
+            <tr class="sum">
                 <th class="total"><?php echo Text::get('regular-total'); ?></th>
                 <th class="min"><?php echo $minimum ?></th>
                 <th class="max"><?php echo $optimum ?></th>

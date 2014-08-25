@@ -74,3 +74,6 @@ div.widget.project-message .button {
     margin: 1em 0 0;
 }
 
+div.widget.project-message h3.title {
+	padding-left: 0;
+}
