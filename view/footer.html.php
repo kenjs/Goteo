@@ -39,6 +39,7 @@ jQuery(document).ready(function($) {
 
     <!-- <div id="footer"> -->
     <div class="footer">
+<?/*
 		<div class="w940 inner">
         	<div class="block categories">
                 <h8 class="title"><?php echo Text::get('footer-header-categories') ?></h8>
@@ -127,9 +128,57 @@ jQuery(document).ready(function($) {
             </div>
 
 		</div>
+*/?>
+
+        <div class="footer_link_wrapper">
+            <div id="to_page_top" style="bottom:0; margin-left: 880px;">
+                <a href="#page_top"><img src="/view/css/page_topBtn.png" alt="ページの上部へ" /></a>
+            </div><!--#to_page_top-->
+            <div class="inner cf">
+                <ul>
+                    <li><a href="#">LOCAL GOODについて</a></li>
+                    <li><a href="#">利用規約</a></li>
+                    <li><a href="#">プライバシーポリシー</a></li>
+                    <li><a href="#">メルマガ登録</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                </ul>
+                <ul class="sns_link">
+                    <li class="fb_btn"><a href="https://www.facebook.com/LOCALGOODYOKOHAMA" target="_blank"><img src="/view/css/fb_btn.png" alt="facebook" /></a></li>
+                    <li class="tw_btn"><a href="https://twitter.com/LogooYOKOHAMA" target="_blank"><img src="/view/css/tw_btn.png" alt="twitter" /></a></li>
+                    <li class="g_plus"><a href="https://plus.google.com/112981975493826894716/" target="_blank"><img src="/view/css/gplus_btn.png" alt="google plus" /></a></li>
+                    <li class="rss"><a href="#/view/css/rss_btn.png" alt="rss" /><img src="/view/css/rss_btn.png" alt="google plus" /></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="foot_bar_wrapper">
+            <div class="foot_bar_inner cf">
+                <a class="labo" href="http://yokohamalab.jp/" target="_blank"><img src="/view/css/ycdl_logo.png" alt="Yokohama Community Design Lab." /></a>
+                <a class="accenture" href="http://www.accenture.com/jp-ja/Pages/index.aspx" target="_blank"><img src="/view/css/accenture_logo.png" alt="accenture" /></a>
+                <img class="open_yokohama" src="/view/css/open_yokohama_logo.png" alt="Open Yokohama" />
+                <p class="copyright">
+                    <span>COPYRIGHT&copy; Local Good YOKOHAMA. Some rights reserved.</span>
+                </p>
+
+            <div class="platoniq">
+    <?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>    
+               <span class="text"><a href="http://goteo.org" target="_blank" class="poweredby">Powered by Goteo.org</a></span>
+    <?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>    
+               <span class="logo"><a href="http://fuentesabiertas.org" target="_blank" class="foundation">FFA</a></span>
+    <?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>    
+               <span class="logo"><a href="https://github.com/Goteo/Goteo" target="_blank" class="growby">GNU-AGPL-3</a></span>
+    <?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>    
+            </div>
+
+
+            </div>
+        </div>
+
+
     </div>
 
     <!-- <div id="sub-footer"> -->
+
+<?/*
     <div class="foot_bar_wrapper">
 		<div class="w940">
                 <ul class="foot_bar_inner">
@@ -138,16 +187,17 @@ jQuery(document).ready(function($) {
                 </ul>
 
                 <div class="platoniq">
-<?php /* You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 */?>    
+<?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>    
                    <span class="text"><a href="http://goteo.org" class="poweredby">Powered by Goteo.org</a></span>
-<?php /* You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 */?>    
+<?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>    
                    <span class="logo"><a href="http://fuentesabiertas.org" target="_blank" class="foundation">FFA</a></span>
-<?php /* You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 */?>    
+<?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>    
                    <span class="logo"><a href="https://github.com/Goteo/Goteo" target="_blank" class="growby">GNU-AGPL-3</a></span>
-<?php /* You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 */?>    
+<?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>    
                 </div>
-    
        
         </div>
 
     </div>
+*/?>
+

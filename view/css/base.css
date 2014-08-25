@@ -270,7 +270,7 @@ footer
 --------------------------------------------------*/
 
 .footer {
-    height: 112px;
+    height: 116px;
     margin-top: 80px;
     background-color: #fff;
 }
@@ -311,6 +311,11 @@ footer
 .footer ul {
     width: 810px;
     float: left;
+    margin: 16px 0;
+}
+
+.footer ul a:link {
+    text-decoration: none;
 }
 
 .footer ul.sns_link {
@@ -350,6 +355,7 @@ footer
 
 .footer .foot_bar_inner {
     color: #999999;
+    position: relative;
 }
 
 .footer .foot_bar_inner .site_ttl {
@@ -360,7 +366,7 @@ footer
 
 .footer .foot_bar_inner .copyright {
     float: right;
-    margin-top: 24px;
+    margin-top: 14px;
     font-size: 12px;
 }
 .footer .foot_bar_inner .accenture {
@@ -395,6 +401,15 @@ footer
     text-align: left;
 }
 
+.footer .platoniq {
+    position: absolute;
+    right: 0;
+    top: 32px;
+}
+.footer .platoniq a {
+    text-decoration: none;
+    color: #999999;
+}
 
 /*--------------------------------------------------
    wrapper_base
@@ -440,11 +455,7 @@ body.home #social_bookmark {
 /*--------------------------------------------------
    for only GOTEO
 --------------------------------------------------*/
-/*div#super-header {
-    height: 30px;
+
+div#sub-header {
+    margin-bottom: 12px;
 }
-div#super-header + * {
-    font-size: 12px;
-    border-top: 2.5em solid #000000;
-    margin-top: -2.5em;
-}*/

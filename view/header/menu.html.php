@@ -26,10 +26,10 @@
         <h2><?php echo Text::get('regular-menu'); ?></h2>
         
         <ul>
-            <li class="home"><a href="/"><?php echo Text::get('regular-home'); ?></a></li>
+            <?/*<li class="home"><a href="/"><?php echo Text::get('regular-home'); ?></a></li>*/?>
             <li class="explore"><a class="button red" href="/discover"><?php echo Text::get('regular-discover'); ?></a></li>
             <li class="create"><a class="button aqua" href="/project/create"><?php echo Text::get('regular-create'); ?></a></li>
-            <li class="search">
+            <?/*<li class="search">
                 <form method="get" action="/discover/results">
                     <fieldset>
                         <legend><?php echo Text::get('regular-search'); ?></legend>
@@ -37,7 +37,7 @@
                         <input type="submit" value="Buscar" >
                     </fieldset>
                 </form>
-            </li>
+            </li>*/?>
             <?php if (!empty($_SESSION['user'])): ?>
             <li class="community"><a href="/community"><span><?php echo Text::get('community-menu-main'); ?></span></a>
                 <div>
