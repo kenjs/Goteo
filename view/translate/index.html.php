@@ -25,8 +25,8 @@ use Goteo\Library\Text,
 $langs = Lang::getAll();
 
 // hay que elegir un idioma al que traducir, no se puede traducir a español, español es el idioma original
-if ($_SESSION['trancelate_lang'] == 'es') {
-    unset($_SESSION['trancelate_lang']);
+if ($_SESSION['translate_lang'] == 'es') {
+    unset($_SESSION['translate_lang']);
     unset($this['section']);
     unset($this['action']);
 }
