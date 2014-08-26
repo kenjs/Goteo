@@ -116,6 +116,7 @@ namespace Goteo\Library\i18n {
 				_log(\GoteoLogLevel::WARNING, "GETTEXT not supported on this server, all texts will appear in spanish");
 				return;
 			}
+			$locale .= ".UTF-8";
 
 			\setlocale(\LC_TIME, $locale);
 			\putenv("LANG={$locale}");

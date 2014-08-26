@@ -643,7 +643,7 @@ namespace Goteo\Model {
                     user.avatar as avatar,
                     user.worth as worth,
                     invest.amount as amount,
-                    DATE_FORMAT(invest.invested, '%d/%m/%Y') as date,
+                    DATE_FORMAT(invest.invested, '%Y/%m/%d') as date,
                     ";
             $sql .= "user.hide as hide,
                      invest.anonymous as anonymous

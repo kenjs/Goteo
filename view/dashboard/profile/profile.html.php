@@ -1,6 +1,6 @@
 <?php
 /*
- *  Copyright (C) 2012 Platoniq y FundaciÃ³n Fuentes Abiertas (see README for details)
+ *  Copyright (C) 2012 Platoniq y Fundaci¨®n Fuentes Abiertas (see README for details)
  *	This file is part of Goteo.
  *
  *  Goteo is free software: you can redistribute it and/or modify
@@ -45,6 +45,16 @@ foreach ($this['interests'] as $value => $label) {
         'value'     => $value,
         'label'     => $label,
         'checked'   => in_array($value, $user->interests)
+        );
+}
+
+$skills = array();
+
+foreach ($this['skills'] as $value => $label) {
+    $skills[] =  array(
+        'value'     => $value,
+        'label'     => $label,
+        'checked'   => in_array($value, $user->skills)
         );
 }
 
@@ -202,6 +212,17 @@ $sfid = 'sf-project-profile';
             'errors'    => !empty($errors['interests']) ? array($errors['interests']) : array(),
             'ok'        => !empty($okeys['interests']) ? array($okeys['interests']) : array(),
             'options'   => $interests
+        ),
+        'skills' => array(
+            'type'      => 'checkboxes',
+            'required'  => true,
+            'class'     => 'cols_3',
+            'name'      => 'user_skills[]',
+            'title'     => Text::get('profile-field-skills'),
+            'hint'      => Text::get('tooltip-user-skills'),
+            'errors'    => !empty($errors['skills']) ? array($errors['skills']) : array(),
+            'ok'        => !empty($okeys['skills']) ? array($okeys['skills']) : array(),
+            'options'   => $skills
         ),
         'user_keywords' => array(
             'type'      => 'textbox',

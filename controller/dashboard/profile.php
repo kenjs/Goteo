@@ -86,6 +86,8 @@ namespace Goteo\Controller\Dashboard {
             if (in_array('15', $user->interests)) $_POST['user_interests'][] = '15';
             $user->interests = $_POST['user_interests'];
 
+            $user->skills = $_POST['user_skills'];
+
             //tratar webs existentes
             foreach ($user->webs as $i => &$web) {
                 // luego aplicar los cambios

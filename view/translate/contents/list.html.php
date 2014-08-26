@@ -30,7 +30,7 @@ $filter = $this['filter'];
 $table  = $this['table'];
 $this['filters']['table'] = $table;
 
-$data = Content::getAll($this['filters'], $_SESSION['translator_lang']);
+$data = Content::getAll($this['filters'], $_SESSION['translate_lang']);
 
 //recolocamos los post para la paginacion
 $list = array();
@@ -68,7 +68,7 @@ $types = $fields[$table];
         <label for="filter-<?php echo $id; ?>">Buscar texto:</label>
         <input name="<?php echo $id; ?>" value="<?php echo (string) $this['filters']['text']; ?>" />
 
-        <input type="submit" name="filter" value="Buscar">
+        <input type="submit" name="filter" value="<?php echo Text::_('Buscar') ?>">
     </form>
 </div>
 

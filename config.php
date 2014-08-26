@@ -1,6 +1,6 @@
 <?php
 /*
- *  Copyright (C) 2012 Platoniq y Fundación Fuentes Abiertas (see README for details)
+ *  Copyright (C) 2012 Platoniq y Fundaciï¿½n Fuentes Abiertas (see README for details)
  *	This file is part of Goteo.
  *
  *  Goteo is free software: you can redistribute it and/or modify
@@ -22,7 +22,7 @@ define('GOTEO_PATH', __DIR__ . DIRECTORY_SEPARATOR);
 if (function_exists('ini_set')) {
     ini_set('include_path', GOTEO_PATH . PATH_SEPARATOR . '.');
 } else {
-    throw new Exception("No puedo añadir la API GOTEO al include_path.");
+    throw new Exception("No puedo aï¿½adir la API GOTEO al include_path.");
 }
 
 // Nodo actual
@@ -32,7 +32,7 @@ define('PEAR', GOTEO_PATH . 'library' . '/' . 'pear' . '/');
 if (function_exists('ini_set')) {
     ini_set('include_path', ini_get('include_path') . PATH_SEPARATOR . PEAR);
 } else {
-    throw new Exception("No puedo añadir las librerías PEAR al include_path.");
+    throw new Exception("No puedo aï¿½adir las librerï¿½as PEAR al include_path.");
 }
 
 /******************************************************
@@ -62,7 +62,7 @@ if (!defined('OAUTH_LIBS')) {
 define('GOTEO_DATA_PATH', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR);
 
 /**
- * Carga de configuración local si existe
+ * Carga de configuraciï¿½n local si existe
  * Si no se carga el real (si existe)
 **/
 if (file_exists('local-settings.php')) //en .gitignore
@@ -115,9 +115,9 @@ define('GOTEO_CONTACT_MAIL', 'info@example.com');
 define('GOTEO_FAIL_MAIL', 'fail@example.com');
 define('GOTEO_LOG_MAIL', 'sitelog@example.com');
 
-//Quota de envio máximo para goteo en 24 horas
+//Quota de envio mï¿½ximo para goteo en 24 horas
 define('GOTEO_MAIL_QUOTA', 50000);
-//Quota de envio máximo para newsletters para goteo en 24 horas
+//Quota de envio mï¿½ximo para newsletters para goteo en 24 horas
 define('GOTEO_MAIL_SENDER_QUOTA', round(GOTEO_MAIL_QUOTA * 0.8));
 //clave de Amazon SNS para recopilar bounces automaticamente: 'arn:aws:sns:us-east-1:XXXXXXXXX:amazon-ses-bounces'
 //la URL de informacion debe ser: goteo_url.tld/aws-sns.php
@@ -230,4 +230,13 @@ else {
     define('GOTEO_MAINTENANCE', null); // to show the maintenance page
     define('GOTEO_EASY', null); // to take user overload easy
 	define('GOTEO_FREE', true); // used somewhere...
+}
+
+/*
+ *  LocalGood Server Environment
+ */
+if(strpos($_SERVER['SERVER_NAME'], 'il3c') > 0){
+    define('LOCALGOOD_WP_BASE_URL', 'http://yokohama.localgood.jp.il3c.com');
+}else{
+    define('LOCALGOOD_WP_BASE_URL', '');
 }

@@ -19,6 +19,7 @@
  */
 
 use Goteo\Model\User\Interest,
+    Goteo\Model\User\Skill,
     Goteo\Library\Text;
 
 $user = $this['user'];
@@ -26,6 +27,7 @@ $user = $this['user'];
 $user->about = nl2br(Text::urlink($user->about));
 
 $interests = Interest::getAll();
+$skills = Skill::getAll();
 ?>
 
 <div class="widget user-about">
@@ -46,6 +48,19 @@ $interests = Interest::getAll();
         foreach ($user->interests as $interest) {
             if ($c > 0) echo ', ';
             echo $interests[$interest];
+            $c++;
+        } ?></p>                
+    </div>    
+    <?php endif ?>
+        
+    <?php if (!empty($user->skills)): ?>    
+    <div class="skills">        
+        <h4><?php echo Text::get('profile-skills-header'); ?></h4>
+        <p><?php
+        $c = 0;
+        foreach ($user->skills as $skill) {
+            if ($c > 0) echo ', ';
+            echo $skills[$skill];
             $c++;
         } ?></p>                
     </div>    

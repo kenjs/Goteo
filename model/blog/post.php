@@ -62,7 +62,7 @@ namespace Goteo\Model\Blog {
                         post.image as `image`,
                         IFNULL(post_lang.media, post.media) as `media`,
                         post.date as `date`,
-                        DATE_FORMAT(post.date, '%d | %m | %Y') as fecha,
+                        DATE_FORMAT(post.date, '%Y/%m/%d') as fecha,
                         post.allow as allow,
                         post.publish as publish,
                         post.home as home,

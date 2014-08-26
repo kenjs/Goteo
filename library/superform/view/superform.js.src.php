@@ -54,8 +54,9 @@ if (!('Superform' in window)) {
             
             updateElement: function (el, nel, html) {                            
                         
-                try {       
-                
+                try {
+
+
                     el = $(el);
                     
                     el.addClass('updating busy');                                        

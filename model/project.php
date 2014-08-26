@@ -240,7 +240,7 @@ namespace Goteo\Model {
 
             try {
 				// metemos los datos del proyecto en la instancia
-				$query = self::query("SELECT * FROM project WHERE id = ?", array($id));
+				$query = self::query("SELECT * FROM project WHERE id = ?", array(urldecode($id)));
 				$project = $query->fetchObject(__CLASS__);
 
                 if (!$project instanceof \Goteo\Model\Project) {
@@ -1059,8 +1059,8 @@ namespace Goteo\Model {
 
             if (empty($this->description)) {
                 $errors['overview']['description'] = Text::get('mandatory-project-field-description');
-            } elseif (!Check::words($this->description, 80)) {
-                 $errors['overview']['description'] = Text::get('validate-project-field-description');
+/*            } elseif (!Check::words($this->description, 80)) {
+                 $errors['overview']['description'] = Text::get('validate-project-field-description');*/
             } else {
                  $okeys['overview']['description'] = 'ok';
                  ++$score;

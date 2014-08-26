@@ -69,9 +69,9 @@ define('PROXY_PORT', '808');
 
 /***** 3token API credentials *****************/
 define('API_AUTHENTICATION_MODE','3token');
-define('API_USERNAME', '');
-define('API_PASSWORD', '');
-define('API_SIGNATURE', '');
+define('API_USERNAME', 'info+merchant_api1.info-lounge.jp');
+define('API_PASSWORD', '5APFNYQZWNGRYVA2');
+define('API_SIGNATURE', 'AvYlFj.0rSgKRwmYQ.NLBnTbUP6bA1NXJSOs-ICVSjEMtOiTcmqL8pvW');
 
 /**
  * Use the following setting (false) if you are testing or using SDK against live PayPal's production server

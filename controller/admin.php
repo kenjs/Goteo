@@ -104,6 +104,16 @@ namespace Goteo\Controller {
                         'keywords' => array('label' => Text::_('Palabras clave'), 'item' => false)
                     )
                 ),
+                'skills' => array(
+                    'label' => Text::_('Skills'),
+                    'actions' => array(
+                        'list' => array('label' => Text::_('Listando'), 'item' => false),
+                        'add' => array('label' => Text::_('Nueva Skill'), 'item' => false),
+                        'edit' => array('label' => Text::_('Editando Skill'), 'item' => true),
+                        'translate' => array('label' => Text::_('Traduciendo Skill'), 'item' => true),
+                        'keywords' => array('label' => Text::_('Palabras clave'), 'item' => false)
+                    )
+                ),
                 'criteria' => array(
                     'label' => Text::_('Criterios de revisión'),
                     'actions' => array(
@@ -609,6 +619,7 @@ namespace Goteo\Controller {
                                 'faq' => $options['faq'],
                                 'pages' => $options['pages'],
                                 'categories' => $options['categories'],
+                                'skills' => $options['skills'],
                                 'licenses' => $options['licenses'],
                                 'icons' => $options['icons'],
                                 'tags' => $options['tags'],
