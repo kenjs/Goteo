@@ -70,7 +70,7 @@ namespace Goteo\Library {
 		            resulting errors
 		            */
 		           $preapprovalRequest = new \PreapprovalRequest();
-                   $preapprovalRequest->memo = "Aporte de {$invest->amount} EUR al proyecto: {$project->name}";
+                   $preapprovalRequest->memo = "{$project->name}への貢献額 {$invest->amount} 円";
 		           $preapprovalRequest->cancelUrl = $cancelURL;
 		           $preapprovalRequest->returnUrl = $returnURL;
 		           $preapprovalRequest->clientDetails = new \ClientDetailsType();
@@ -78,7 +78,7 @@ namespace Goteo\Library {
 		           $preapprovalRequest->clientDetails->applicationId = PAYPAL_APPLICATION_ID;
 		           $preapprovalRequest->clientDetails->deviceId = PAYPAL_DEVICE_ID;
 		           $preapprovalRequest->clientDetails->ipAddress = $_SERVER['REMOTE_ADDR'];
-		           $preapprovalRequest->currencyCode = "EUR";
+		           $preapprovalRequest->currencyCode = "JPY";
 		           $preapprovalRequest->startingDate = $startDate;
 		           $preapprovalRequest->endingDate = $endDate;
 		           $preapprovalRequest->maxNumberOfPayments = 1;
@@ -86,7 +86,7 @@ namespace Goteo\Library {
 		           $preapprovalRequest->feesPayer = 'EACHRECEIVER';
 		           $preapprovalRequest->maxTotalAmountOfAllPayments = $invest->amount;
 		           $preapprovalRequest->requestEnvelope = new \RequestEnvelope();
-		           $preapprovalRequest->requestEnvelope->errorLanguage = "es_ES";
+		           $preapprovalRequest->requestEnvelope->errorLanguage = "ja_JP";
 
 		           $ap = new \AdaptivePayments();
 		           $response=$ap->Preapproval($preapprovalRequest);
@@ -156,7 +156,7 @@ namespace Goteo\Library {
 
                 // Create request object
                 $payRequest = new \PayRequest();
-                $payRequest->memo = "Cargo del aporte de {$invest->amount} EUR del usuario '{$userData->name}' al proyecto '{$project->name}'";
+                $payRequest->memo = "{$invest->amount}円　ユーザー：{$userData->name} プロジェクト：{$project->name}";
                 $payRequest->cancelUrl = SITE_URL.'/invest/charge/fail/' . $invest->id;
                 $payRequest->returnUrl = SITE_URL.'/invest/charge/success/' . $invest->id;
                 $payRequest->clientDetails = new \ClientDetailsType();
@@ -164,7 +164,7 @@ namespace Goteo\Library {
                 $payRequest->clientDetails->applicationId = PAYPAL_APPLICATION_ID;
                 $payRequest->clientDetails->deviceId = PAYPAL_DEVICE_ID;
                 $payRequest->clientDetails->ipAddress = PAYPAL_IP_ADDRESS;
-                $payRequest->currencyCode = 'EUR';
+                $payRequest->currencyCode = 'JPY';
            		$payRequest->preapprovalKey = $invest->preapproval;
                 $payRequest->actionType = 'PAY_PRIMARY';
                 $payRequest->feesPayer = 'EACHRECEIVER';
@@ -172,7 +172,7 @@ namespace Goteo\Library {
 //                $payRequest->trackingId = $invest->id;
                 // SENDER no vale para chained payments   (PRIMARYRECEIVER, EACHRECEIVER, SECONDARYONLY)
                 $payRequest->requestEnvelope = new \RequestEnvelope();
-                $payRequest->requestEnvelope->errorLanguage = 'es_ES';
+                $payRequest->requestEnvelope->errorLanguage = 'ja_JP';
 
                 // Primary receiver, Goteo Business Account
                 $receiverP = new \receiver();
@@ -223,7 +223,7 @@ namespace Goteo\Library {
                                 $log->populate('Aporte cancelado por preaproval cancelado por el usuario paypal', '/admin/accounts',
                                     \vsprintf('Se ha <span class="red">Cancelado</span> el aporte de %s de %s (id: %s) al proyecto %s del dia %s por preapproval cancelado', array(
                                         Feed::item('user', $userData->name, $userData->id),
-                                        Feed::item('money', $invest->amount.' &euro;'),
+                                        Feed::item('money', $invest->amount.' &yen;'),
                                         Feed::item('system', $invest->id),
                                         Feed::item('project', $project->name, $project->id),
                                         Feed::item('system', date('d/m/Y', strtotime($invest->invested)))
@@ -241,7 +241,7 @@ namespace Goteo\Library {
                                 $log->populate('Cuenta del proyecto no confirmada en PayPal', '/admin/accounts',
                                     \vsprintf('Ha <span class="red">fallado al ejecutar</span> el aporte de %s de %s (id: %s) al proyecto %s del dia %s porque la cuenta del proyecto <span class="red">no está confirmada</span> en PayPal', array(
                                         Feed::item('user', $userData->name, $userData->id),
-                                        Feed::item('money', $invest->amount.' &euro;'),
+                                        Feed::item('money', $invest->amount.' &yen;'),
                                         Feed::item('system', $invest->id),
                                         Feed::item('project', $project->name, $project->id),
                                         Feed::item('system', date('d/m/Y', strtotime($invest->invested)))
@@ -259,7 +259,7 @@ namespace Goteo\Library {
                                 $log->populate('El mail del preaproval no esta registrado en PayPal', '/admin/accounts',
                                     \vsprintf('Ha <span class="red">fallado al ejecutar</span> el aporte de %s de %s (id: %s) al proyecto %s del dia %s porque el mail del preaproval <span class="red">no está registrado</span> en PayPal', array(
                                         Feed::item('user', $userData->name, $userData->id),
-                                        Feed::item('money', $invest->amount.' &euro;'),
+                                        Feed::item('money', $invest->amount.' &yen;'),
                                         Feed::item('system', $invest->id),
                                         Feed::item('project', $project->name, $project->id),
                                         Feed::item('system', date('d/m/Y', strtotime($invest->invested)))
@@ -276,7 +276,7 @@ namespace Goteo\Library {
                                 $log->populate('La cuenta esta restringida por PayPal', '/admin/accounts',
                                     \vsprintf('Ha <span class="red">fallado al ejecutar</span> el aporte de %s de %s (id: %s) al proyecto %s del dia %s porque la cuenta <span class="red">está restringida</span> por PayPal', array(
                                         Feed::item('user', $userData->name, $userData->id),
-                                        Feed::item('money', $invest->amount.' &euro;'),
+                                        Feed::item('money', $invest->amount.' &yen;'),
                                         Feed::item('system', $invest->id),
                                         Feed::item('project', $project->name, $project->id),
                                         Feed::item('system', date('d/m/Y', strtotime($invest->invested)))
@@ -293,7 +293,7 @@ namespace Goteo\Library {
                                 $log->populate('Se ha usado la misma cuenta que del proyecto', '/admin/accounts',
                                     \vsprintf('Ha <span class="red">fallado al ejecutar</span> el aporte de %s de %s (id: %s) al proyecto %s del dia %s porque la cuenta <span class="red">es la misma</span> que la del proyecto', array(
                                         Feed::item('user', $userData->name, $userData->id),
-                                        Feed::item('money', $invest->amount.' &euro;'),
+                                        Feed::item('money', $invest->amount.' &yen;'),
                                         Feed::item('system', $invest->id),
                                         Feed::item('project', $project->name, $project->id),
                                         Feed::item('system', date('d/m/Y', strtotime($invest->invested)))
@@ -310,7 +310,7 @@ namespace Goteo\Library {
                                 $log->populate('Está fuera del rango de fechas', '/admin/accounts',
                                     \vsprintf('Ha <span class="red">fallado al ejecutar</span> el aporte de %s de %s (id: %s) al proyecto %s del dia %s porque estamos <span class="red">fuera del rango de fechas</span> del preapproval', array(
                                         Feed::item('user', $userData->name, $userData->id),
-                                        Feed::item('money', $invest->amount.' &euro;'),
+                                        Feed::item('money', $invest->amount.' &yen;'),
                                         Feed::item('system', $invest->id),
                                         Feed::item('project', $project->name, $project->id),
                                         Feed::item('system', date('d/m/Y', strtotime($invest->invested)))
@@ -327,7 +327,7 @@ namespace Goteo\Library {
                                 $log->populate('Problema con los importes', '/admin/accounts',
                                     \vsprintf('Ha <span class="red">fallado al ejecutar</span> el aporte de %s de %s (id: %s) al proyecto %s del dia %s porque ha habido <span class="red">algun problema con los importes</span>', array(
                                         Feed::item('user', $userData->name, $userData->id),
-                                        Feed::item('money', $invest->amount.' &euro;'),
+                                        Feed::item('money', $invest->amount.' &yen;'),
                                         Feed::item('system', $invest->id),
                                         Feed::item('project', $project->name, $project->id),
                                         Feed::item('system', date('d/m/Y', strtotime($invest->invested)))
@@ -344,7 +344,7 @@ namespace Goteo\Library {
                                 $log->populate('Error interno de PayPal', '/admin/accounts',
                                     \vsprintf('Ha <span class="red">fallado al ejecutar</span> el aporte de %s de %s (id: %s) al proyecto %s del dia %s porque ha habido <span class="red">un error interno en PayPal</span>', array(
                                         Feed::item('user', $userData->name, $userData->id),
-                                        Feed::item('money', $invest->amount.' &euro;'),
+                                        Feed::item('money', $invest->amount.' &yen;'),
                                         Feed::item('system', $invest->id),
                                         Feed::item('project', $project->name, $project->id),
                                         Feed::item('system', date('d/m/Y', strtotime($invest->invested)))
@@ -362,7 +362,7 @@ namespace Goteo\Library {
                                 $log->populate('Error interno de PayPal', '/admin/accounts',
                                     \vsprintf('Ha <span class="red">fallado al ejecutar</span> el aporte de %s de %s (id: %s) al proyecto %s del dia %s <span class="red">NO es soapFault pero no es Success</span>, se ha reportado el error.', array(
                                         Feed::item('user', $userData->name, $userData->id),
-                                        Feed::item('money', $invest->amount.' &euro;'),
+                                        Feed::item('money', $invest->amount.' &yen;'),
                                         Feed::item('system', $invest->id),
                                         Feed::item('project', $project->name, $project->id),
                                         Feed::item('system', date('d/m/Y', strtotime($invest->invested)))
@@ -376,7 +376,7 @@ namespace Goteo\Library {
                                 $log->populate('Error interno de PayPal', '/admin/accounts',
                                     \vsprintf('Ha <span class="red">fallado al ejecutar</span> el aporte de %s de %s (id: %s) al proyecto %s del dia %s <span class="red">'.$action.' '.$errorMsg.' ['.$errorId.']</span>', array(
                                         Feed::item('user', $userData->name, $userData->id),
-                                        Feed::item('money', $invest->amount.' &euro;'),
+                                        Feed::item('money', $invest->amount.' &yen;'),
                                         Feed::item('system', $invest->id),
                                         Feed::item('project', $project->name, $project->id),
                                         Feed::item('system', date('d/m/Y', strtotime($invest->invested)))
@@ -490,7 +490,7 @@ namespace Goteo\Library {
                                 $log->populate('Aporte cancelado por preaproval cancelado por el usuario paypal', '/admin/invests',
                                     \vsprintf('Se ha <span class="red">Cancelado</span> el aporte de %s de %s (id: %s) al proyecto %s del dia %s por preapproval cancelado', array(
                                         Feed::item('user', $userData->name, $userData->id),
-                                        Feed::item('money', $invest->amount.' &euro;'),
+                                        Feed::item('money', $invest->amount.' &yen;'),
                                         Feed::item('system', $invest->id),
                                         Feed::item('project', $project->name, $project->id),
                                         Feed::item('system', date('d/m/Y', strtotime($invest->invested)))
