@@ -38,7 +38,7 @@ $data = $this['data'];
         </p>
         <p>
             <label for="user-password"><?php echo Text::_('Contraseña'); ?>:</label><span style="font-style:italic;"><?php echo Text::_('Mínimo 6 caracteres. Se va a encriptar y no se puede consultar'); ?></span><br />
-            <input type="text" id="user-password" name="password" value="<?php echo $data['password'] ?>" style="width:500px" maxlength="255"/>
+            <input type="password" id="user-password" name="password" value="<?php echo $data['password'] ?>" style="width:500px" maxlength="255"/>
         </p>
 
         <input type="submit" name="add" value="Crear este usuario" /><br />
