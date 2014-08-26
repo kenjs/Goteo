@@ -72,7 +72,7 @@ $worthcracy = Worth::getAll();
 
 <div id="main">
 
-    <div class="center">
+    <div class="center profile">
 
         <?php echo new View('view/user/widget/worth.html.php', array('worthcracy' => $worthcracy, 'level' => $user->worth)) ?>
 

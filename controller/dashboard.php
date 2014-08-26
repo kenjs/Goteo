@@ -151,6 +151,7 @@ namespace Goteo\Controller {
             switch ($option) {
                 case 'profile':
                     $viewData['interests'] = Model\User\Interest::getAll();
+                    $viewData['skills'] = Model\User\Skill::getAll();
 
                     if ($_POST) {
                         foreach ($_POST as $k => $v) {

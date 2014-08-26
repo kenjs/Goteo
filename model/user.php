@@ -54,6 +54,7 @@ namespace Goteo\Model {
             $created,
             $modified,
             $interests = array(),
+            $skills = array(),
             $webs = array(),
             $roles = array();
 
@@ -266,6 +267,27 @@ namespace Goteo\Model {
                             $_interest->id = $interest;
                             $_interest->user = $this->id;
                             $_interest->remove($errors);
+                        }
+                    }
+                    // Skill
+                    $skills = User\Skill::get($this->id);
+                    if(!empty($this->skills)) {
+                        foreach($this->skills as $skill) {
+                            if(!in_array($skill, $skills)) {
+                                $_skills = new User\Skill();
+                                $_skills->id = $skill;
+                                $_skills->user = $this->id;
+                                $_skills->save($errors);
+                                $skills[] = $_skills;
+                            }
+                        }
+                    }
+                    foreach($skills as $key => $skill) {
+                        if(!in_array($skill, $this->skills)) {
+                            $_skills = new User\Skill();
+                            $_skills->id = $skill;
+                            $_skills->user = $this->id;
+                            $_skills->remove($errors);
                         }
                     }
 
@@ -577,6 +599,7 @@ namespace Goteo\Model {
                     $user->avatar = Image::get(1);
                 }
                 $user->interests = User\Interest::get($id);
+                $user->skills = User\Skill::get($id);
                 $user->webs = User\Web::get($id);
 
                 // si es traductor cargamos sus idiomas
