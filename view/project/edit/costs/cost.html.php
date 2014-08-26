@@ -31,7 +31,7 @@ $cost = $this['data']['cost'] ?>
     
     <div class="description">
         <?php echo htmlspecialchars($cost->description) ?>
-        <p><?php echo (int) $cost->amount ?> &euro;
+        <p><?php echo (int) $cost->amount ?> 円
             <strong><?php echo $cost->required ? Text::get('costs-field-required_cost-yes') : Text::get('costs-field-required_cost-no') ?></strong>
         </p>
 

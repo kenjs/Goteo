@@ -92,14 +92,15 @@ div.widget.project-invest.address table tr td label {
     padding-left: 10px;
 }
 div.widget.project-invest #amount {
-    background: url('/view/css/euro/violet/l.png') no-repeat left center #E7E7E7;
+    background: url('/view/css/yen/violet/l.png') no-repeat 5px center #E7E7E7;
     color: #96238F;
     padding-left: 40px;
-    width: 100px;
+    width: 150px;
     height: 24px;
     font-size: 24px;
     font-weight: bold;
     margin-right: 20px;
+    line-height: 40px;
 }
 div.widget.project-invest #fullname,
 div.widget.project-invest #address {

@@ -40,16 +40,18 @@ body.project-edit div#main div.project-preview div.widget.project-support,
 body.project-edit div#main div.project-preview div.widget.project-collaborations,
 body.project-edit div#main div.project-preview div.widget.project-rewards, 
 body.project-edit div#main div.project-preview div.widget.user {
-    width: 260px;
+    width: 330px;
     float: right;
-    clear: right;    
+    clear: right;
 }
 
 body.project-edit div#main div.project-preview div.widget.project-summary,
-body.project-edit div#main div.project-preview div.widget.project-share,
+body.project-edit div#main div.project-preview div.widget.project-share {
+    max-width: 580px;
+}
 body.project-edit div#main div.project-preview div.widget.project-needs, 
 body.project-edit div#main div.project-preview div.widget.project-schedule {
-    max-width: 580px;
+    max-width: 620px;
     margin-right: 20px;
 }
 

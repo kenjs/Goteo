@@ -51,7 +51,7 @@ uasort($project->individual_rewards,
             <h<?php echo $level + 1 ?> class="title"><?php echo Text::get('project-rewards-social_reward-title'); ?></h<?php echo $level + 1 ?>>
             <ul>
             <?php foreach ($project->social_rewards as $social) : ?>
-                <li class="<?php echo $social->icon ?>">                
+                <li class="<?php echo $social->icon ?>">
                     <h<?php echo $level + 1 ?> class="name"><?php echo htmlspecialchars($social->icon_name) . ': ' .htmlspecialchars($social->reward) ?></h<?php echo $level + 1 ?>
                     <p><?php echo htmlspecialchars($social->description)?></p>
                     <?php if (!empty($social->license) && array_key_exists($social->license, $licenses)): ?>

@@ -281,21 +281,21 @@ echo new SuperForm(array(
 <script type="text/javascript">
 $(function () {
     
-    var costs = $('div#<?php echo $sfid ?> li.element#costs');    
+    var costs = $('div#<?php echo $sfid ?> li.element#costs');
     
     costs.delegate('li.element.cost input.edit', 'click', function (event) {
         var data = {};
         data[this.name] = '1';
         //Superform.update(this, data);
-        Superform.update(costs, data); 
+        Superform.update(costs, data);
         event.preventDefault();
     });
     
     costs.delegate('li.element.editcost input.ok', 'click', function (event) {
         var data = {};
         data[this.name.substring(0, 9) + 'edit'] = '0';
-        //Superform.update($(this).parents('li.element.editcost'), data);        
-        Superform.update(costs, data);         
+        //Superform.update($(this).parents('li.element.editcost'), data);
+        Superform.update(costs, data);
         event.preventDefault();
     });
     
@@ -309,7 +309,7 @@ $(function () {
     costs.delegate('#cost-add input', 'click', function (event) {
        var data = {};
        data[this.name] = '1';
-       Superform.update(costs, data); 
+       Superform.update(costs, data);
        event.preventDefault();
     });
     
@@ -317,6 +317,6 @@ $(function () {
         Superform.updateElement($('li#cost-meter'), null, html);
         Superform.updateElement($('li#schedule'), null, html);
     });
-        
+    
 });
 </script>

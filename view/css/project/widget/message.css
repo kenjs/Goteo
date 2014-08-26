@@ -61,14 +61,16 @@ div.widget.project-message textarea {
 div.widget.project-message a.preview{
 	color: #2EAB58;
 	font-weight: normal;
-	left: 52px;
-	position: relative;
+	/*left: 52px;*/
+	/*position: relative;*/
 	text-decoration: none;
 	text-transform: uppercase;
-	top: 10px;
+	/*top: 10px;*/
 	font-style: normal;
+	position: absolute;
+	left: 80px;
+	top: 210px;
 }
-
 div.widget.project-message .button {
     float: right;
     margin: 1em 0 0;

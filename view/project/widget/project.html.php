@@ -111,7 +111,7 @@ if (isset($this['investor']) && is_object($this['investor'])) {
                endforeach ?>
            <?php if ($q < 5) foreach ($project->individual_rewards as $individual): ?>
             <li class="<?php echo $individual->icon ?> activable">
-                <a href="<?php echo SITE_URL ?>/project/<?php echo $project->id ?>/rewards" title="<?php echo htmlspecialchars("{$individual->icon_name}: {$individual->reward} {$individual->amount}") ?> &euro;" class="tipsy"<?php echo $blank; ?>><?php echo htmlspecialchars($individual->reward) ?></a>
+                <a href="<?php echo SITE_URL ?>/project/<?php echo $project->id ?>/rewards" title="<?php echo htmlspecialchars("{$individual->icon_name}: {$individual->reward} {$individual->amount}") ?> 円" class="tipsy"<?php echo $blank; ?>><?php echo htmlspecialchars($individual->reward) ?></a>
             </li>
            <?php if ($q >= 5) break; $q++;
            endforeach ?>
