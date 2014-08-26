@@ -203,7 +203,7 @@ body.dashboard div#main div.widget.gestrew div.reward.last{margin-right:0;}
 body.dashboard div#main div.widget.gestrew div.reward div.orden{color:#fff;display:inline-block;font-weight:bold;font-size:13pt;background-color:#e7e7e7;border:2px solid #a7a9ac;color:#a7a9ac;width:20px;text-align:center;}
 body.dashboard div#main div.widget.gestrew div.reward span.aporte{color: #96238F;display: inline-block;font-size: 8pt;text-transform: uppercase;line-height:22px;}
 body.dashboard div#main div.widget.gestrew div.reward span.num{font-size:12pt;}
-body.dashboard div#main div.widget.gestrew div.reward span.aporte > span.euro{ background:url('/view/css/euro/violet/m.png') no-repeat; height:20px; width:20px;display:inline-block;}
+body.dashboard div#main div.widget.gestrew div.reward span.aporte > span.euro{ background:url('/view/css/yen/violet/m.png') no-repeat; height:20px; width:20px;display:inline-block;}
 body.dashboard div#main div.widget.gestrew div.reward span.cofinanciadores{color:#40509F;display:block;text-transform:uppercase;margin-left:29px;font-size:8pt;line-height:20px;}
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec{display:block;border-bottom:#8D878E 1px solid;margin-bottom:5px;}
 body.dashboard div#main div.widget.gestrew div.reward ul { list-style: none outside none; padding:0px; margin: 0px 0px 3px 0px; float:none; font-size:12px; }
