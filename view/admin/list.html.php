@@ -1,6 +1,6 @@
 <?php
 /*
- *  Copyright (C) 2012 Platoniq y Fundación Fuentes Abiertas (see README for details)
+ *  Copyright (C) 2012 Platoniq y Fundaci��n Fuentes Abiertas (see README for details)
  *	This file is part of Goteo.
  *
  *  Goteo is free software: you can redistribute it and/or modify
@@ -61,7 +61,7 @@ $per = 100 / $cols;
             <br />
             <label for="filter-<?php echo $id; ?>"><?php echo $fil['label']; ?></label>
             <input name="<?php echo $id; ?>" value="<?php echo (string) $fil['value']; ?>" />
-            <input type="submit" name="filter" value="Buscar">
+            <input type="submit" name="filter" value="<?php echo Text::_('Buscar') ?>">
         <?php endif; ?>
         <?php endforeach; ?>
     </form>
@@ -75,7 +75,7 @@ $per = 100 / $cols;
         <thead>
             <tr>
                 <?php foreach ($this['columns'] as $key=>$label) : ?>
-                    <th><?php echo $label; ?></th>
+                    <th><?php echo !empty($label) ? Text::_($label) : $label; ?></th>
                 <?php endforeach; ?>
             </tr>
         </thead>

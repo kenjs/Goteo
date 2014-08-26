@@ -91,7 +91,7 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
             </tr>
             <tr>
                 <td>
-                    <input type="submit" name="filter" value="Buscar">
+                    <input type="submit" name="filter" value="<?php echo Text::_('Buscar') ?>">
                 </td>
                 <td>
                     <label for="order-filter"><?php echo Text::_('Ver por'); ?>:</label><br />

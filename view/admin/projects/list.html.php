@@ -73,7 +73,7 @@ $pagedResults = new \Paginated($this['projects'], 10, isset($_GET['page']) ? $_G
             </tr>
             <tr>
                 <td>
-                    <input type="submit" name="filter" value="Buscar">
+                    <input type="submit" name="filter" value="<?php echo Text::_('Buscar') ?>">
                 </td>
                 <td>
                     <label for="order-filter"><?php echo Text::_("Ordenar por"); ?>:</label><br />

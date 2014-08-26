@@ -34,7 +34,7 @@
                     <fieldset>
                         <legend><?php echo Text::get('regular-search'); ?></legend>
                         <input type="text" name="query"  />
-                        <input type="submit" value="Buscar" >
+                        <input type="submit" value="<?php echo Text::_('Buscar') ?>" >
                     </fieldset>
                 </form>
             </li>*/?>

@@ -111,7 +111,7 @@ switch ($order) {
         return false;
     }
 </script><div class="widget gestrew">
-    <h2 class="title">Gestionar retornos</h2>
+    <h2 class="title"><?php echo Text::_("Gestionar retornos"); ?></h2>
     <a name="gestrew"></a>
    <form id="invests-filter-form" name="filter_form" action="<?php echo '/dashboard/projects/rewards/filter#gestrew'; ?>" method="post">
        <input type="hidden" id="invests-filter" name="filter" value="<?php echo $filter; ?>" />
