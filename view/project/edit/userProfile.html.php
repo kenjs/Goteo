@@ -48,6 +48,16 @@ foreach ($this['interests'] as $value => $label) {
         );
 }
 
+$skills = array();
+foreach ($this['skills'] as $key => $value) {
+    $skills[] =  array(
+        'value'     => $value->id,
+        'label'     => $value->name,
+        'category'     => $value->parent_skill_id,
+        'checked'   => in_array($value->id, $user->skills)
+    );
+}
+
 $user_webs = array();
 
 foreach ($user->webs as $web) {
@@ -192,6 +202,17 @@ echo new SuperForm(array(
             'errors'    => !empty($errors['interests']) ? array($errors['interests']) : array(),
             'ok'        => !empty($okeys['interests']) ? array($okeys['interests']) : array(),
             'options'   => $interests
+        ),
+        'skills' => array(
+            'type'      => 'checkboxescustom',
+            'required'  => true,
+            'class'     => 'cols_3',
+            'name'      => 'user_skills[]',
+            'title'     => Text::get('profile-field-skills'),
+            'hint'      => Text::get('tooltip-user-skills'),
+            'errors'    => !empty($errors['skills']) ? array($errors['skills']) : array(),
+            'ok'        => !empty($okeys['skills']) ? array($okeys['skills']) : array(),
+            'options'   => $skills
         ),
         'user_keywords' => array(
             'type'      => 'textbox',

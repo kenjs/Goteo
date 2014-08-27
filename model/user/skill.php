@@ -39,7 +39,7 @@ namespace Goteo\Model\User {
          * @param user isset get all skills of a user
          * @return array
          */
-		public static function getAll ($user = null) {
+		public static function getAll ($user = null,$child=false) {
             $array = array ();
             try {
                 $values = array(':lang'=>\LANG);
@@ -60,13 +60,16 @@ namespace Goteo\Model\User {
                                 ";
                     $values[':user'] = $user;
                 }
+                if($child){
+                $sql .= " WHERE skill.parent_skill_id is not null
+                        ";
+                }
                 $sql .= "ORDER BY name ASC
                         ";
 
                 $query = static::query($sql, $values);
                 $skills = $query->fetchAll();
                 foreach ($skills as $int) {
-                    if ($int[0] == 15) continue;
                     $array[$int[0]] = $int[1];
                 }
 

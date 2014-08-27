@@ -268,12 +268,14 @@ div.superform div.elements li.element.textbox.linkedin > div.contents {
 /* Checkboxes & radios */
 
 div.superform div.elements > ol > li.element.checkboxes,
+div.superform div.elements > ol > li.element.checkboxescustom,
 div.superform div.elements > ol > li.element.radios,
 div.superform div.elements > ol > li.element.slider {
     padding-bottom: 0;
 }
 
 div.superform div.elements > ol > li.element.checkboxes > div.contents > ul,
+div.superform div.elements > ol > li.element.checkboxescustom > div.contents > ul,
 div.superform div.elements > ol > li.element.radios > div.contents > ul,
 div.superform div.elements > ol > li.element.slider > div.contents > ul {
     padding: 0;
@@ -284,6 +286,7 @@ div.superform div.elements > ol > li.element.slider > div.contents > ul {
 }
 
 div.superform div.elements > ol > li.element.checkboxes > div.contents > ul > li,
+div.superform div.elements > ol > li.element.checkboxescustom > div.contents > ul > li,
 div.superform div.elements > ol > li.element.radios > div.contents > ul > li,
 div.superform div.elements > ol > li.element.slider > div.contents > ul > li {
 /*    float: left;   width: 50%;    */
@@ -295,6 +298,7 @@ div.superform div.elements > ol > li.element.slider > div.contents > ul > li {
 }
 
 div.superform div.elements > ol > li.element.checkboxes.inline > div.contents > ul > li,
+div.superform div.elements > ol > li.element.checkboxescustom.inline > div.contents > ul > li,
 div.superform div.elements > ol > li.element.radios.inline > div.contents > ul > li,
 div.superform div.elements > ol > li.element.slider.inline > div.contents > ul > li {
     margin-bottom: 0;
@@ -302,6 +306,7 @@ div.superform div.elements > ol > li.element.slider.inline > div.contents > ul >
 
 div.superform div.elements > ol > li.radio > div.contents > label,
 div.superform div.elements > ol > li.element.checkboxes > div.contents > ul > li > label,
+div.superform div.elements > ol > li.element.checkboxescustom > div.contents > ul > li > label,
 div.superform div.elements > ol > li.element.radios > div.contents > ul > li > label,
 div.superform div.elements > ol > li.element.slider > div.contents > ul > li > label {
     position: relative;
@@ -311,12 +316,14 @@ div.superform div.elements > ol > li.element.slider > div.contents > ul > li > l
 }
 
 div.superform div.elements > ol > li.element.checkboxes.cols_1 > div.contents > ul > li,
+div.superform div.elements > ol > li.element.checkboxescustom.cols_1 > div.contents > ul > li,
 div.superform div.elements > ol > li.element.radios.cols_1 > div.contents > ul > li,
 div.superform div.elements > ol > li.element.slider.cols_1 > div.contents > ul > li {
     width: 100%;
 }
 
 div.superform div.elements > ol > li.element.checkboxes.cols_2 > div.contents > ul > li,
+div.superform div.elements > ol > li.element.checkboxescustom.cols_2 > div.contents > ul > li,
 div.superform div.elements > ol > li.element.radios.cols_2 > div.contents > ul > li,
 div.superform div.elements > ol > li.element.slider.cols_2 > div.contents > ul > li {
     width: 49.8%;
@@ -324,6 +331,7 @@ div.superform div.elements > ol > li.element.slider.cols_2 > div.contents > ul >
 }
 
 div.superform div.elements > ol > li.element.checkboxes.cols_3 > div.contents > ul > li,
+div.superform div.elements > ol > li.element.checkboxescustom.cols_3 > div.contents > ul > li,
 div.superform div.elements > ol > li.element.radios.cols_3 > div.contents > ul > li,
 div.superform div.elements > ol > li.element.slider.cols_3 > div.contents > ul > li {
     width: 33.16%;
@@ -331,6 +339,7 @@ div.superform div.elements > ol > li.element.slider.cols_3 > div.contents > ul >
 }
 
 div.superform div.elements > ol > li.element.checkboxes.cols_4 > div.contents > ul > li,
+div.superform div.elements > ol > li.element.checkboxescustom.cols_4 > div.contents > ul > li,
 div.superform div.elements > ol > li.element.radios.cols_4 > div.contents > ul > li,
 div.superform div.elements > ol > li.element.slider.cols_4 > div.contents > ul > li {
     width: 24.8%;
@@ -338,12 +347,14 @@ div.superform div.elements > ol > li.element.slider.cols_4 > div.contents > ul >
 }
 
 div.superform div.elements > ol > li.element.checkboxes.cols_5 > div.contents > ul > li,
+div.superform div.elements > ol > li.element.checkboxescustom.cols_5 > div.contents > ul > li,
 div.superform div.elements > ol > li.element.radios.cols_5 > div.contents > ul > li,
 div.superform div.elements > ol > li.element.slider.cols_5 > div.contents > ul > li {
     width: 20%;
 }
 
 div.superform div.elements > ol > li.element.checkboxes.cols_6 > div.contents > ul > li,
+div.superform div.elements > ol > li.element.checkboxescustom.cols_6 > div.contents > ul > li,
 div.superform div.elements > ol > li.element.radios.cols_6 > div.contents > ul > li,
 div.superform div.elements > ol > li.element.slider.cols_6 > div.contents > ul > li {
     width: 16.66%;
@@ -352,6 +363,7 @@ div.superform div.elements > ol > li.element.slider.cols_6 > div.contents > ul >
 
 div.superform div.elements > ol > li.radio > div.contents > label > input[type="radio"],
 div.superform div.elements > ol > li.element.checkboxes > div.contents > ul > li > label > input[type="checkbox"],
+div.superform div.elements > ol > li.element.checkboxescustom > div.contents > ul > li > label > input[type="checkbox"],
 div.superform div.elements > ol > li.element.radios > div.contents > ul > li > label > input[type="radio"],
 div.superform div.elements > ol > li.element.slider > div.contents > ul > li > label > input[type="radio"] {
     position: absolute;

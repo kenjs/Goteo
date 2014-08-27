@@ -49,6 +49,17 @@ foreach ($this['categories'] as $value => $label) {
         );            
 }
 
+$skills = array();
+
+foreach ($this['skills'] as $key => $value) {
+    $skills[] =  array(
+        'value'     => $value->id,
+        'label'     => $value->name,
+        'category'     => $value->parent_skill_id,
+        'checked'   => in_array($value->id, $project->skills)
+    );
+}
+
 $currently = array();
 
 foreach ($this['currently'] as $value => $label) {
@@ -250,7 +261,18 @@ $superform = array(
             'hint'      => Text::get('tooltip-project-category'),
             'errors'    => !empty($errors['categories']) ? array($errors['categories']) : array(),
             'ok'        => !empty($okeys['categories']) ? array($okeys['categories']) : array()
-        ),       
+        ),     
+        'skills' => array(
+            'type'      => 'checkboxescustom',
+            'name'      => 'skills[]',
+            'title'     => Text::get('overview-field-skills'),
+            'required'  => true,
+            'class'     => 'cols_3',
+            'options'   => $skills,
+            'hint'      => Text::get('tooltip-user-skills'),
+            'errors'    => !empty($errors['skills']) ? array($errors['skills']) : array(),
+            'ok'        => !empty($okeys['skills']) ? array($okeys['skills']) : array(),
+        ),  
 
         'keywords' => array(
             'type'      => 'textbox',

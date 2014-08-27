@@ -87,6 +87,7 @@ namespace Goteo\Model {
              $related,
              $reward, // nueva sección, solo editable por admines y traductores
             $categories = array(),
+            $skills = array(),
             $media, // video principal
              $media_usubs, // universal subtitles para el video principal
             $keywords, // por ahora se guarda en texto tal cual
@@ -295,8 +296,11 @@ namespace Goteo\Model {
                     }
                 }
 
-				// categorias
+                // categorias
                 $project->categories = Project\Category::get($id);
+
+                // skills
+                $project->skills = Project\Skill::get($id);
 
 				// costes y los sumammos
 				$project->costs = Project\Cost::getAll($id, $lang);
@@ -415,8 +419,11 @@ namespace Goteo\Model {
                 // imagen
                 $project->image = Project\Image::getFirst($project->id);
 
-				// categorias
+                // categorias
                 $project->categories = Project\Category::getNames($id, 2);
+
+                // skills
+                $project->skills = Project\Skill::getNames($id, 2);
 
 				// retornos colectivos
 				$project->social_rewards = Project\Reward::getAll($id, 'social', $lang);
@@ -686,6 +693,28 @@ namespace Goteo\Model {
                 // recuperamos las que le quedan si ha cambiado alguna
                 if (!empty($quita) || !empty($guarda))
                     $this->categories = Project\Category::get($this->id);
+
+                //skills
+                $tiene = Project\Skill::get($this->id);
+                $viene = $this->skills;
+                $quita = array_diff_assoc($tiene, $viene);
+                $guarda = array_diff_assoc($viene, $tiene);
+                foreach ($quita as $key=>$item) {
+                    $skill = new Project\Skill(
+                        array(
+                            'id'=>$item,
+                            'project'=>$this->id)
+                    );
+                    if (!$skill->remove($errors))
+                        $fail = true;
+                }
+                foreach ($guarda as $key=>$item) {
+                    if (!$item->save($errors))
+                        $fail = true;
+                }
+                // recuperamos las que le quedan si ha cambiado alguna
+                if (!empty($quita) || !empty($guarda))
+                    $this->skills = Project\Skill::get($this->id);
 
                 //costes
                 $tiene = Project\Cost::getAll($this->id);
@@ -1094,6 +1123,13 @@ namespace Goteo\Model {
                 $errors['overview']['categories'] = Text::get('mandatory-project-field-category');
             } else {
                  $okeys['overview']['categories'] = 'ok';
+                 ++$score;
+            }
+
+            if (empty($this->skills)) {
+                $errors['overview']['skills'] = Text::get('mandatory-project-field-skill');
+            } else {
+                 $okeys['overview']['skills'] = 'ok';
                  ++$score;
             }
 
@@ -1519,6 +1555,7 @@ namespace Goteo\Model {
             try {
                 //borrar todos los registros
                 self::query("DELETE FROM project_category WHERE project = ?", array($this->id));
+                self::query("DELETE FROM project_skill WHERE project = ?", array($this->id));
                 self::query("DELETE FROM cost WHERE project = ?", array($this->id));
                 self::query("DELETE FROM reward WHERE project = ?", array($this->id));
                 self::query("DELETE FROM support WHERE project = ?", array($this->id));
@@ -1559,6 +1596,7 @@ namespace Goteo\Model {
                     if (self::query("START TRANSACTION")) {
                         try {
                             self::query("UPDATE project_category SET project = :newid WHERE project = :id", array(':newid'=>$newid, ':id'=>$this->id));
+                            self::query("UPDATE project_skill SET project = :newid WHERE project = :id", array(':newid'=>$newid, ':id'=>$this->id));
                             self::query("UPDATE cost SET project = :newid WHERE project = :id", array(':newid'=>$newid, ':id'=>$this->id));
                             self::query("UPDATE reward SET project = :newid WHERE project = :id", array(':newid'=>$newid, ':id'=>$this->id));
                             self::query("UPDATE support SET project = :newid WHERE project = :id", array(':newid'=>$newid, ':id'=>$this->id));
@@ -1635,6 +1673,7 @@ namespace Goteo\Model {
                             self::query("UPDATE cost SET project = :newid WHERE project = :id", array(':newid'=>$newid, ':id'=>$this->id));
                             self::query("UPDATE message SET project = :newid WHERE project = :id", array(':newid'=>$newid, ':id'=>$this->id));
                             self::query("UPDATE project_category SET project = :newid WHERE project = :id", array(':newid'=>$newid, ':id'=>$this->id));
+                            self::query("UPDATE project_skill SET project = :newid WHERE project = :id", array(':newid'=>$newid, ':id'=>$this->id));
                             self::query("UPDATE project_image SET project = :newid WHERE project = :id", array(':newid'=>$newid, ':id'=>$this->id));
                             self::query("UPDATE project_lang SET id = :newid WHERE id = :id", array(':newid'=>$newid, ':id'=>$this->id));
                             self::query("UPDATE reward SET project = :newid WHERE project = :id", array(':newid'=>$newid, ':id'=>$this->id));
@@ -2097,6 +2136,14 @@ namespace Goteo\Model {
                     WHERE category = :category
                     )";
                 $values[':category'] = $filters['category'];
+            }
+            if (!empty($filters['skill'])) {
+                $sqlFilter .= " AND id IN (
+                    SELECT project
+                    FROM project_skill
+                    WHERE skill = :skill
+                    )";
+                $values[':skill'] = $filters['skill'];
             }
 
             //el Order

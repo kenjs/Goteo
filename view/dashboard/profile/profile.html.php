@@ -1,6 +1,6 @@
 <?php
 /*
- *  Copyright (C) 2012 Platoniq y Fundaci¨®n Fuentes Abiertas (see README for details)
+ *  Copyright (C) 2012 Platoniq y FundaciÂ¨Â®n Fuentes Abiertas (see README for details)
  *	This file is part of Goteo.
  *
  *  Goteo is free software: you can redistribute it and/or modify
@@ -49,13 +49,13 @@ foreach ($this['interests'] as $value => $label) {
 }
 
 $skills = array();
-
-foreach ($this['skills'] as $value => $label) {
+foreach ($this['skills'] as $key => $value) {
     $skills[] =  array(
-        'value'     => $value,
-        'label'     => $label,
-        'checked'   => in_array($value, $user->skills)
-        );
+        'value'     => $value->id,
+        'label'     => $value->name,
+        'category'     => $value->parent_skill_id,
+        'checked'   => in_array($value->id, $user->skills)
+    );
 }
 
 $user_webs = array();
@@ -214,7 +214,7 @@ $sfid = 'sf-project-profile';
             'options'   => $interests
         ),
         'skills' => array(
-            'type'      => 'checkboxes',
+            'type'      => 'checkboxescustom',
             'required'  => true,
             'class'     => 'cols_3',
             'name'      => 'user_skills[]',

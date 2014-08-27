@@ -280,6 +280,7 @@ namespace Goteo\Controller {
                     }
                     $viewData['user'] = $owner;
                     $viewData['interests'] = Model\User\Interest::getAll();
+                    $viewData['skills'] = Model\Skill::getAll();
 
                     if ($_POST) {
                         foreach ($_POST as $k => $v) {
@@ -302,6 +303,7 @@ namespace Goteo\Controller {
                 
                 case 'overview':
                     $viewData['categories'] = Model\Project\Category::getAll();
+                    $viewData['skills'] = Model\Skill::getAll();
 //                    $viewData['currently'] = Model\Project::currentStatus();
 //                    $viewData['scope'] = Model\Project::scope();
                     break;
@@ -616,6 +618,7 @@ namespace Goteo\Controller {
             }
 
             $user->interests = $_POST['user_interests'];
+            $user->skills = $_POST['user_skills'];
 
             //tratar webs existentes
             foreach ($user->webs as $i => &$web) {
@@ -789,6 +792,28 @@ namespace Goteo\Controller {
             }
 
             $quedan = $project->categories; // truki para xdebug
+
+            //skills
+            // añadir las que vienen y no tiene
+            $tiene = $project->skills;
+            if (isset($_POST['skills'])) {
+                $viene = $_POST['skills'];
+                $quita = array_diff($tiene, $viene);
+            } else {
+                $quita = $tiene;
+            }
+            $guarda = array_diff($viene, $tiene);
+            foreach ($guarda as $key=>$cat) {
+                $skill = new Model\Project\Skill(array('id'=>$cat,'project'=>$project->id));
+                $project->skills[] = $skill;
+            }
+
+            // quitar las que tiene y no vienen
+            foreach ($quita as $key=>$cat) {
+                unset($project->skills[$key]);
+            }
+
+            $quedan = $project->skills; // truki para xdebug
 
             return true;
         }
