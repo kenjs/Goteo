@@ -27,7 +27,7 @@ $user = $this['user'];
 $user->about = nl2br(Text::urlink($user->about));
 
 $interests = Interest::getAll();
-$skills = Skill::getAll();
+$skills = Skill::getAll(null,true);
 ?>
 
 <div class="widget user-about">
