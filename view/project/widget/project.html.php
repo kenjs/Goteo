@@ -42,7 +42,7 @@ if (isset($this['investor']) && is_object($this['investor'])) {
 }
 ?>
 
-<div class="widget project activable<?php if (isset($this['balloon'])) echo ' balloon' ?>">
+<div class="widget project activable heightLine-project<?php if (isset($this['balloon'])) echo ' balloon' ?>">
 	<a href="<?php echo SITE_URL ?>/project/<?php echo $project->id ?>" class="expand"<?php echo $blank; ?>></a>
     <?php if (isset($this['balloon'])): ?>
     <div class="balloon"><?php echo $this['balloon'] ?></div>

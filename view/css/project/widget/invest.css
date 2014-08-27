@@ -93,7 +93,8 @@ div.widget.project-invest.address table tr td label {
 }
 div.widget.project-invest #amount {
     background: url('/view/css/yen/violet/l.png') no-repeat 5px center #E7E7E7;
-    color: #96238F;
+    /*color: #96238F;*/
+    color: #990033;
     padding-left: 40px;
     width: 150px;
     height: 24px;
@@ -120,7 +121,8 @@ div.widget.project-invest #email {
     width: 350px;
 }
 div.widget.project-invest div.individual ul li label.amount {
-    color: #96238f;
+    /*color: #96238f;*/
+    color: #993300;
     font-weight: bold;
 }
 

@@ -73,13 +73,14 @@
 		  <!-- sliders -->
 		  <script type="text/javascript" src="<?php echo SRC_URL ?>/view/js/jquery.slides.min.js"></script>
 		  <!-- end sliders -->
-          <!-- fancybox-->   
+          <!-- fancybox-->
 		  <script type="text/javascript" src="<?php echo SRC_URL ?>/view/js/jquery.fancybox.min.js"></script>
 		  <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/fancybox/jquery.fancybox.min.css" media="screen" />
-          <!-- end custom fancybox-->          
+          <!-- end custom fancybox-->
 
 		  <!-- vigilante de sesi�n -->
 		  <script type="text/javascript" src="<?php echo SITE_URL ?>/view/js/watchdog.js"></script>
+            <script type="text/javascript" src="<?php echo SITE_URL ?>/view/js/heightLine.js"></script>
 
             <script type="text/javascript" src="<?php echo SITE_URL ?>/view/js/localgood.js"></script>
 
