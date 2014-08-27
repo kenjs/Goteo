@@ -121,6 +121,9 @@ $uri = strtok($_SERVER['REQUEST_URI'], '?');
 
 // Get requested segments
 $segments = preg_split('!\s*/+\s*!', $uri, -1, \PREG_SPLIT_NO_EMPTY);
+foreach($segments as $key => $value){
+    $segments[$key] = urldecode($value);
+}
 
 // Normalize URI
 $uri = '/' . implode('/', $segments);
