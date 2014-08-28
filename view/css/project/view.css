@@ -101,7 +101,7 @@ body.project-show div#sub-header div.categories {
 	position: absolute;
     right: 10px;
     text-align: right;
-	max-width:240px;
+	/*max-width:240px;*/
 	top: 0;
 }
 

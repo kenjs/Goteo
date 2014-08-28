@@ -79,21 +79,28 @@ body.dashboard div#meter-big h8 {
 
 body.dashboard div#meter-big div.meter.hor.big {
     padding-top: 30px;
+    width: 420px;
 }
 
 body.dashboard div#meter-big div.meter.hor.big h3 {
     position: relative;
     top: -40px;
+    padding-left: 0;
 }
+body.dashboard div#meter-big div.meter.hor.big h3.ronda {
+    right: -20px;
+    top: -70px;
+    text-align: right;
+}
+
 body.dashboard div#meter-big div.graph {
     background-color: #BB70B6;
     height: 8px;
     border-right: 40px solid #DFBDDD;
-    margin: 30px 5px 70px;
+    margin: 40px 5px 70px;
     position: relative;
+    top: -70px;
 }
-
-
 body.dashboard div#meter-big div.graph .minimum {
     background-color: #96238F;
     height: 100%;
@@ -150,7 +157,15 @@ body.dashboard div#meter-big div.graph .optimum {
 body.dashboard div#meter-big dl {
     margin: -78px 40px 0 0;
     position: relative;
+    top: -70px;
 }
+
+
+body.dashboard div#meter-big div.graph,
+body.dashboard div#meter-big dl {
+    top: 0;
+}
+
 
 body.dashboard div#meter-big dl * {
     margin: 0;
@@ -195,6 +210,18 @@ body.dashboard div#meter-big dl .optimum {
     clear: right;
     margin-right: -40px;
 }
+body.dashboard div#meter-big dl .minimum span,
+body.dashboard div#meter-big dl .optimum span {
+    position: relative;
+    left: -3px;
+}
+
+
+
+body.dashboard div#meter-big dl .minimum span {
+    font-weight: normal;
+}
+
 
 body.dashboard div#meter-big dl .minimum {
     color: #96238F;
@@ -230,6 +257,16 @@ body.dashboard div#meter-big dl dt.minimum {
     position: absolute;
     top: -60px;
 }
+
+/*body.dashboard div#meter-big dl dd.minimum {
+    margin-left: 30px;
+}
+body.dashboard div#meter-big dl dt.minimum {
+    margin-left: 80px;
+}*/
+
+
+
 /*body.dashboard div#meter-big dl dt.minimum span {
     left: 0;
 }*/

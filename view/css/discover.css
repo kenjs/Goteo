@@ -20,6 +20,9 @@ body.discover div#main div.widget {
     overflow: hidden;
 	margin-bottom: 24px;
 }
+/*body.discover div#main div.widget div.widget.project.activable:nth-child(4n) {
+    clear: left;
+}*/
 
 body.discover div#main div.searcher {
 	background-color: transparent;
@@ -62,6 +65,7 @@ div.searcher form {
     /*font-size: 0.9em;*/
     font-size: 16px;
     float: right;
+    
 }
 
 /*
