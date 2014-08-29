@@ -318,7 +318,7 @@ namespace Goteo\Controller {
                         'impersonate' => array('label' => Text::_('Suplantando al Usuario'), 'item' => true),
                         'move' => array('label' => Text::_('Moviendo a otro Nodo el usuario '), 'item' => true)
                     ),
-                    'filters' => array('interest' => '', 'role' => '', 'node' => '', 'id' => '', 'name' => '', 'order' => '', 'project' => '', 'type' => '')
+                    'filters' => array('interest' => '','skill' => '', 'role' => '', 'node' => '', 'id' => '', 'name' => '', 'order' => '', 'project' => '', 'type' => '')
                 ),
                 'worth' => array(
                     'label' => Text::_('Niveles de meritocracia'),
