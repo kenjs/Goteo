@@ -40,7 +40,7 @@ include 'view/header.html.php';
         <div id="sub-header">
             <div>
                 <h2>
-                    <?php echo 'Mi panel de revisor / ' . $this['menu'][$this['section']]['label']; ?></h2>
+                    <?php echo Text::_('Mi panel de revisor / ') . $this['menu'][$this['section']]['label']; ?></h2>
             </div>
         </div>
 

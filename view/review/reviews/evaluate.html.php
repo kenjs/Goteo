@@ -19,7 +19,8 @@
  */
 
 use Goteo\Core\View,
-    Goteo\Model\Criteria;
+    Goteo\Model\Criteria,
+    Goteo\Library\Text;
 
 echo new View ('view/review/reviews/selector.html.php', $this);
 
@@ -53,7 +54,7 @@ $disabled = $review->ready == 1 ? 'disabled' : '';
         <?php endforeach; ?>
     </ul>
     <p>
-        <label for="<?php echo 'evaluate-' . $sectionId . '-evaluation'; ?>">Evaluación <?php echo strtolower($sectionName); ?>:</label><br />
+        <label for="<?php echo 'evaluate-' . $sectionId . '-evaluation'; ?>"><?php echo Text::_('Evaluación '); ?><?php echo strtolower($sectionName); ?>:</label><br />
         <textarea class="evaluate-comment" <?php echo $disabled; ?>
                   name="<?php echo $sectionId; ?>-evaluation"
                   id="<?php echo 'evaluate-' . $sectionId . '-evaluation'; ?>"
@@ -61,7 +62,7 @@ $disabled = $review->ready == 1 ? 'disabled' : '';
         <span id="<?php echo $sectionId; ?>-evaluation-result"></span>
     </p>
     <p>
-        <label for="<?php echo 'evaluate-' . $sectionId . '-recommendation'; ?>">Que mejorarías <?php echo strtolower($sectionName); ?>:</label><br />
+        <label for="<?php echo 'evaluate-' . $sectionId . '-recommendation'; ?>"><?php echo Text::_('Que mejorarías'); ?><?php echo strtolower($sectionName); ?>:</label><br />
         <textarea class="evaluate-comment" <?php echo $disabled; ?>
                   name="<?php echo $sectionId; ?>-recommendation"
                   id="<?php echo 'evaluate-' . $sectionId . '-recommendation'; ?>"
@@ -72,7 +73,7 @@ $disabled = $review->ready == 1 ? 'disabled' : '';
 <?php endforeach; ?>
 
 <div class="widget">
-    Puntuación final de tu revisión: <span id="total-score"><?php echo $evaluation['score'] . '/' . $evaluation['max']; ?></span>
+    <?php echo Text::_('Puntuación final de tu revisión: '); ?><span id="total-score"><?php echo $evaluation['score'] . '/' . $evaluation['max']; ?></span>
 </div>
 
 <script type="text/javascript">

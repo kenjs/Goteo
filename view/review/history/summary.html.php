@@ -19,7 +19,8 @@
  */
 
 use Goteo\Core\View,
-    Goteo\Model;
+    Goteo\Model,
+    Goteo\Library\Text;
 
 ?>
 <?php if (!empty($this['reviews'])) : ?>
@@ -27,8 +28,8 @@ use Goteo\Core\View,
     <?php foreach ($this['reviews'] as $review) : ?>
         <div class="widget">
             <p>El proyecto <strong><?php echo $review->name; ?></strong> de <strong><?php echo $review->owner_name; ?></strong></p>
-            <p>La edición del proyecto alcanzó el <strong><?php echo $review->progress; ?>%</strong>, la puntuación de la revisión fue de <strong><?php echo $review->score; ?>/<?php echo $review->max; ?></strong></p>
-            <p><a href="/review/history/details/<?php echo $review->id; ?>">Ver detalles de la revisión</a></p>
+            <p><?php echo Text::_('La edición del proyecto alcanzó el '); ?><strong><?php echo $review->progress; ?>%</strong>, <?php echo Text::_('la puntuación de la revisión fue de '); ?><strong><?php echo $review->score; ?>/<?php echo $review->max; ?></strong></p>
+            <p><a href="/review/history/details/<?php echo $review->id; ?>"><?php echo Text::_('Ver detalles de la revisión') ?></a></p>
         </div>
     <?php endforeach; ?>
 <?php endif; ?>

@@ -19,7 +19,9 @@
  */
 
 use Goteo\Core\View,
-    Goteo\Model\Criteria;
+    Goteo\Model\Criteria,
+    Goteo\Library\Text;
+
 
 echo new View ('view/review/reviews/selector.html.php', $this);
 
@@ -34,13 +36,13 @@ foreach ($sections as $sectionId=>$sectionName) {
 
 ?>
 <div class="widget">
-    Puntuación de tu revisión: <span id="total-score"><?php echo $evaluation['score'] . '/' . $evaluation['max']; ?></span>
+    <?php echo Text::_('Puntuación de tu revisión: '); ?><span id="total-score"><?php echo $evaluation['score'] . '/' . $evaluation['max']; ?></span>
 </div>
 <?php foreach ($sections as $sectionId=>$sectionName) : ?>
 <div class="widget">
     <h2 class="title"><?php echo $sectionName; ?></h2>
     <p>
-        Otrogas puntos porque:<br />
+        <?php echo Text::_('Otrogas puntos porque:'); ?><br />
         <blockquote>
         <?php foreach ($criteria[$sectionId] as $crit) :
             if ($evaluation['criteria'][$crit->id] > 0) echo '· ' . $crit->title . '<br />';
@@ -48,11 +50,11 @@ foreach ($sections as $sectionId=>$sectionName) {
         </blockquote>
     </p>
     <p>
-        Tu evaluación <?php echo strtolower($sectionName); ?>:<br />
+        <?php echo Text::_('Tu evaluación ') ?><?php echo strtolower($sectionName); ?>:<br />
         <blockquote><?php echo nl2br($evaluation[$sectionId]['evaluation']); ?></blockquote>
     </p>
     <p>
-        Las mejoras que harías <?php echo strtolower($sectionName); ?>:<br />
+        <?php echo Text::_('Las mejoras que harías '); ?><?php echo strtolower($sectionName); ?>:<br />
         <blockquote><?php echo nl2br($evaluation[$sectionId]['recommendation']); ?></blockquote>
     </p>
 </div>

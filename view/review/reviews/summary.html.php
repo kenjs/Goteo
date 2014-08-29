@@ -18,7 +18,8 @@
  *
  */
 
-use Goteo\Core\View;
+use Goteo\Core\View,
+    Goteo\Library\Text;
 
 echo new View ('view/review/reviews/selector.html.php', $this);
 
@@ -28,20 +29,20 @@ $review = $this['review'];
 
 <div class="widget">
     <p>El proyecto <strong><?php echo $review->name; ?></strong> de <strong><?php echo $review->owner_name; ?></strong></p>
-    <p>La edición del proyecto alcanzó el <strong><?php echo $review->progress; ?>%</strong>, la puntuación actual de la revisión es de <strong><?php echo $review->score; ?>/<?php echo $review->max; ?></strong></p>
-    <p><a href="<?php echo SITE_URL . '/project/' . $review->project; ?>" target="_blank">Abrir el proyecto</a><br /><a href="<?php echo SITE_URL . '/user/' . $review->owner; ?>" target="_blank">Abrir el perfil del creador</a></p>
+    <p><?php echo Text::_('La edición del proyecto alcanzó el '); ?><strong><?php echo $review->progress; ?>%</strong>, <?php echo Text::_('la puntuación actual de la revisión es de '); ?><strong><?php echo $review->score; ?>/<?php echo $review->max; ?></strong></p>
+    <p><a href="<?php echo SITE_URL . '/project/' . $review->project; ?>" target="_blank"><?php echo Text::_('Abrir el proyecto') ?></a><br /><a href="<?php echo SITE_URL . '/user/' . $review->owner; ?>" target="_blank"><?php echo Text::_('Abrir el perfil del creador') ?></a></p>
 </div>
 
 <div class="widget">
-    Comentario del administrador:<br />
+    <?php echo Text::_('Comentario del administrador:') ?><br />
     <blockquote><?php echo $review->comment; ?></blockquote>
 </div>
 
 <div class="widget">
-    <p>Tu revisión está <?php echo $review->ready == 1 ? 'Lista' : 'Pendiente'; ?><?php if ($review->ready != 1) : ?> Puedes completarla en <a href="/review/reviews/evaluate/open/<?php echo $review->id; ?>">tus revisiones</a><?php endif; ?></p>
+    <p><?php echo Text::_('Tu revisión está '); ?><?php echo $review->ready == 1 ? Text::_('Lista') : Text::_('Pendiente'); ?><?php if ($review->ready != 1) : ?><?php echo Text::_(' Puedes completarla en ') ?><a href="/review/reviews/evaluate/open/<?php echo $review->id; ?>"><?php echo Text::_('tus revisiones') ?></a><?php endif; ?></p>
     <?php
     if ($review->ready == 0) {
-        echo '<a href="/review/reviews/summary/ready/' . $review->id . '">[Dar por terminada mi revisión]</a>';
+        echo '<a href="/review/reviews/summary/ready/' . $review->id . '">[' . Text::_('Dar por terminada mi revisión') . ']</a>';
     } else {
         echo 'Continúa con otra o espera instrucciones.';
     }

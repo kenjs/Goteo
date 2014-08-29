@@ -47,7 +47,7 @@ namespace Goteo\Controller {
             $reviews = Model\Review::assigned($user->id);
             // si no hay proyectos asignados no tendria que estar aqui
             if (count($reviews) == 0) {
-                $message = 'No tienes asignada ninguna revisión de proyectos';
+                $message = Text::_('No tienes asignada ninguna revisión de proyectos');
             }
             
             return new View (
@@ -76,7 +76,7 @@ namespace Goteo\Controller {
             $reviews = Model\Review::assigned($user->id);
             // si no hay proyectos asignados no tendria que estar aqui
             if (count($reviews) == 0) {
-                $message = 'No tienes asignada ninguna revisión de proyectos';
+                $message = Text::_('No tienes asignada ninguna revisión de proyectos');
             }
 
             // resumen de los proyectos que tengo actualmente asignados
@@ -126,7 +126,7 @@ namespace Goteo\Controller {
                                     'id'   => $id
                                 ));
                 if ($ready->ready($errors)) {
-                    $message = 'Se ha dado por terminada tu revisión';
+                    $message = Text::_('Se ha dado por terminada tu revisión');
                     $review = Model\Review::getData($review->id);
 
                     // Evento Feed
@@ -205,7 +205,7 @@ namespace Goteo\Controller {
             $reviews = Model\Review::history($user->id);
             // si no hay proyectos asignados no tendria que estar aqui
             if (count($reviews) == 0) {
-                $message = 'No hay revisiones anteriores';
+                $message = Text::_('No hay revisiones anteriores');
             }
 
             $viewData = array(
@@ -239,23 +239,23 @@ namespace Goteo\Controller {
             // todos los textos del menu review
             $menu = array(
                 'activity' => array(
-                    'label'   => 'Mi actividad',
+                    'label'   => Text::_('Mi actividad'),
                     'options' => array (
-                        'summary' => 'Resumen'
+                        'summary' => Text::_('Resumen')
                     )
                 ),
                 'reviews' => array(
-                    'label' => 'Mis revisiones',
+                    'label' => Text::_('Mis revisiones'),
                     'options' => array (
-                        'summary'  => 'Resumen',
-                        'evaluate' => 'Evaluar',
-                        'report'   => 'Informe'
+                        'summary'  => Text::_('Resumen'),
+                        'evaluate' => Text::_('Evaluar'),
+                        'report'   => Text::_('Informe')
                     )
                 ),
                 'history' => array(
-                    'label'   => 'Mi historial',
+                    'label'   => Text::_('Mi historial'),
                     'options' => array (
-                        'summary'  => 'Listado'
+                        'summary'  => Text::_('Listado')
                     )
                 )
             );

@@ -40,7 +40,7 @@ include 'view/header.html.php'; ?>
         <div id="sub-header">
             <div>
                 <h2>Informe de revisión del proyecto '<?php echo $review->name; ?>' de <?php echo $review->owner_name; ?></h2>
-                La edición del proyecto alcanzó el <strong><?php echo $review->progress; ?>%</strong> y la puntuación promedio de la revisión: <span id="total-score"><?php echo $review->score . '/' . $review->max; ?></span>
+                <?php echo Text::_('La edición del proyecto alcanzó el '); ?><strong><?php echo $review->progress; ?>%</strong> y la puntuación promedio de la revisión: <span id="total-score"><?php echo $review->score . '/' . $review->max; ?></span>
             </div>
         </div>
 
