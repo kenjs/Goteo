@@ -132,7 +132,7 @@ echo new SuperForm(array(
                     'value'     => $project->contract_name
                 ),
 
-                'contract_nif' => array(
+                /*'contract_nif' => array(
                     'type'      => 'textbox',
                     'class'     => 'inline',
                     'required'  => true,
@@ -142,7 +142,7 @@ echo new SuperForm(array(
                     'errors'    => !empty($errors['contract_nif']) ? array($errors['contract_nif']) : array(),
                     'ok'        => !empty($okeys['contract_nif']) ? array($okeys['contract_nif']) : array(),
                     'value'     => $project->contract_nif
-                ),
+                ),*/
 
                 'phone' => array(
                     'type'      => 'textbox',
