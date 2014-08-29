@@ -25,5 +25,5 @@ use Goteo\Library\Text;
 <?php if (isset($this['amount'])) : ?>
     <div class="worth-amount"><?php echo number_format($this['amount'], 0, '',',') ?></div>
 <?php endif ?>
-<?php include 'view/worth/base.html.php' ?>
+<?php // include 'view/worth/base.html.php' ?>
 </div>

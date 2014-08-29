@@ -49,9 +49,10 @@ $worthcracy = Worth::getAll();
             <a class="more" href="/project/<?php echo $project->id; ?>/supporters"><?php echo Text::get('regular-see_more'); ?></a><br />
 
             </div>
-
+<? /*
         <div class="side-worthcracy">
         <?php include 'view/worth/base.html.php' ?>
         </div>
+*/ ?>
     </div>
 </div>
