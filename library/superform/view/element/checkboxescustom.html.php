@@ -3,7 +3,7 @@
 <?php if(empty($checkbox['category'])) : ?>
 <?php if($key != 0) : ?></ul><?php endif;?>
 <p><?php echo $checkbox->label;?></p>
-<ul>
+<ul class="heightLineParent">
 <?php else : ?>
     <li><?php echo $checkbox->getInnerHTML() ?></li>
 <?php endif; ?>
