@@ -222,7 +222,7 @@ namespace Goteo\Controller {
                         'report' => array('label' => Text::_('Informe Financiero del proyecto'), 'item' => true),
                         'rebase' => array('label' => Text::_('Cambiando Id de proyecto'), 'item' => true)
                     ),
-                    'filters' => array('status' => '-1', 'category' => '', 'proj_name' => '', 'name' => '', 'node' => '', 'called' => '', 'order' => '')
+                    'filters' => array('status' => '-1', 'category' => '', 'skill' => '', 'proj_name' => '', 'name' => '', 'node' => '', 'called' => '', 'order' => '')
                 ),
                 'promote' => array(
                     'label' => Text::_('Proyectos destacados'),

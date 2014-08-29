@@ -92,7 +92,7 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
                 <td collspan="5">
                     <label for="skill-filter"><?php echo Text::_('Mostrar usuarios interesados en'); ?>:</label><br />
                     <select id="skill-filter" name="skill" onchange="document.getElementById('filter-form').submit();">
-                    <option value=""><?php echo Text::_('Cualquier interés'); ?></option>
+                    <option value=""><?php echo Text::_('Cualquier skill'); ?></option>
                      
                     <?php foreach ($this['skills'] as $key=>$value) : ?>
                         <?php if(empty($value->parent_skill_id)) : ?>
