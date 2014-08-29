@@ -61,11 +61,18 @@ div.searcher form {
 	color: #808184;
 	padding: 4px 5px 4px 10px;
 	/*border:none;*/
-	width: 740px;
+	/*width: 740px;*/
     /*font-size: 0.9em;*/
     font-size: 16px;
-    float: right;
-    
+    /*float: right;*/
+    float: left;
+    width: 600px;
+    margin-left: 16px;
+}
+
+.searcher form div button#searcher {
+    position: relative;
+    top: -55px;
 }
 
 /*

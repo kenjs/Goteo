@@ -191,7 +191,8 @@ div.widget.user-worthcracy div.worth-amount {
     font-weight: bold;
     font-size: 30px;
     position: relative;
-    top: 25px;
+    /*top: 25px;*/
+    top: -10px;
     left: 35px;
     line-height: 33px;
     padding-right: 30px;

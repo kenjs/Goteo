@@ -50,6 +50,10 @@ div.widget.project-collaborations ul li.lend {
     background-image: url('/view/css/icon/m/lend.png');
 }
 
+div.widget.project-collaborations ul li {
+    background-position: left top;
+}
+
 div.widget.project-collaborations a.more {
     display: block;
     float: right;

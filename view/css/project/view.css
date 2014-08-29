@@ -154,6 +154,7 @@ body.project-show div.project-menu ul li span.digits{
 body.project-show div.project-menu ul li a {
     display: inline-block;
     /*width: 140px;*/
+    min-width: 80px !important;
     height:50px;
     padding: 0 16px;
     color: #666666;
@@ -180,24 +181,28 @@ body.project-show div.project-menu ul li a {
 
 body.project-show div.project-menu ul li.active a {
     /*width: 142px;*/
+    /*background-image: url('/view/css/project/view/menu/hover_menu.png');*/
+    min-width: 80px !important;
     height: 50px;
     padding: 0 16px;
-    /*background-image: url('/view/css/project/view/menu/hover_menu.png');*/
     background: none;
     background-color: #dae121;
     border: none;
     color: #666666;
+    text-align: center;
 }
 
 body.project-show div.project-menu ul li.show a {
     /*background-image: url('/view/css/project/view/menu/active_menu.png') !important;*/
     /*background-repeat: no-repeat !important;*/
     /*width: 142px;*/
+    min-width: 80px !important;
     height: 50px;
     background: none;
     background-color: #dae121;
     border: none;
     color: #666666;
+    text-align: center;
 }
 
 body.project-show div#main div.widget {

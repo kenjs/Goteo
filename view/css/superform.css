@@ -27,7 +27,7 @@ body.js div.superform .jshidden {
 }
 
 div.superform fieldset {
-    border: 1px solid #99a2a5;    
+    border: 1px solid #99a2a5;
 }
 
 div.superform fieldset legend {
@@ -35,38 +35,41 @@ div.superform fieldset legend {
 }
 
 div.superform h3 {
-    font-size: 30px;    
+    font-size: 30px;
 }
 
 div.superform li.element > h4,
 div.superform li.element > h5,
 div.superform li.element > h6,
 div.superform li.element > h7,
-div.superform li.element > h8 {    
-    margin: 0 0 .5em;    
+div.superform li.element > h8 {
+    margin: 0 0 .5em;
     font-size: 14px;
+}
+div.superform li.element > h4 {
+    font-size: 20px;
 }
 
 div.superform li.element > label {
-    font-weight: bold;        
+    font-weight: bold;
     text-transform: uppercase;
     margin: 1em 0;
     display: block;
 }
 
 div.superform > div.hint,
-div.superform > div.elements {    
+div.superform > div.elements {
     overflow: visible;
 }
 
 div.superform > div.hint {
-    color: #7f8183;    
+    color: #7f8183;
     overflow: hidden;
 }
 
 body.js div.superform > div.hint {
-    background: url('superform/wizard.png') no-repeat right top;     
-    border-right: 1px dashed #b7c2c5;      
+    background: url('superform/wizard.png') no-repeat right top;
+    border-right: 1px dashed #b7c2c5;
 }
 
 div.superform > div.elements {
@@ -75,17 +78,17 @@ div.superform > div.elements {
 }
 
 div.superform > div.hint h4,
-div.superform > div.hint blockquote {    
+div.superform > div.hint blockquote {
     background-color: #ffffff;
 /*
     background: url('/view/css/superform/guide.png') 20px 20px;
     padding-left: 60px;
 */
-    padding: 20px;    
+    padding: 20px;
     vertical-align: top;
     border: dashed #b7c2c5;
     border-width: 1px 0 0;
-    margin: 0;    
+    margin: 0;
 }
 
 div.superform > div.hint h4 {
@@ -94,9 +97,12 @@ div.superform > div.hint h4 {
 }
 
 div.superform > div.hint blockquote {
-    font-size: 12px;
+    /*font-size: 12px;*/
     border-right-width: 1px;
     min-height: 3em;
+    font-size: 14px;
+    border-top: none;
+    padding-left: 0;
 }
 
 body.js div.superform > div.hint blockquote {
@@ -108,13 +114,17 @@ div.superform > div.hint blockquote p {
 }
 
 div.superform div.elements > ol {
-    padding: 0;    
+    padding: 0;
     margin: 0;
     list-style: none;
 }
 
 div.superform > div.elements div.elements > ol {
-    padding-left: 2em;    
+    padding-left: 2em;
+}
+
+div.superform ol #interests div.contents > ul {
+    border-left: 1px dashed #B7C2C5;
 }
 
 div.superform li.element > div.contents + div.children > div.elements > ol,
@@ -125,7 +135,7 @@ div.superform li.element > div.contents + div.feedback + div.children > div.elem
 div.superform li.element {
     position: relative;
     padding: 1em 0;
-    border-top: 1px dashed #B7C2C5;
+    /*border-top: 1px dashed #B7C2C5;*/
     clear: both;
 }
 
@@ -136,6 +146,9 @@ div.superform li.element:last-child {
 div.superform > div.elements > ol > li.element {
     padding: 2em 2em 2em 0;
 }
+div#main.profile div.superform > div.elements > ol > li.element {
+    padding: 30px 2em 22px 0;
+}
 
 div.superform > div.elements > ol > li.element.inline {
     border-top: none;
@@ -143,12 +156,17 @@ div.superform > div.elements > ol > li.element.inline {
 }
 
 div.superform li.element > * + div.contents {
-    margin-top: 1em;
+    /*margin-top: 1em;*/
+    margin-top: 6px;
 }
 
 body.js div.superform > div.elements > ol > li.element {
     margin-right: 251px;
     border-right: 1px dashed #b7c2c5;
+}
+
+body.js div.superform > div.elements > ol > li.element div.contents {
+    font-size: 14px;
 }
 
 body.js div.superform > div.elements > ol > li.element li.element {
@@ -171,9 +189,12 @@ div.superform div.elements > ol > li > div.contents + div.children > div.element
 div.superform input[type='text'],
 div.superform input[type='password'],
 div.superform textarea {
-    padding: .4em;    
-    background-color: #d7d9da;
-    border: 1px solid #58595b;
+    padding: .4em;
+    /*background-color: #d7d9da;
+    border: 1px solid #58595b;*/
+    min-height: 27px;
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
 }
 
 div.superform textarea {
@@ -181,7 +202,7 @@ div.superform textarea {
 }
 
 /* Full-width elements */
-div.superform li.element.fullwidth {    
+div.superform li.element.fullwidth {
     border-right: none !important;
     background-color: #e7e7e7 !important;
     margin-right: -2px !important;
@@ -230,7 +251,10 @@ div.superform li.element.textarea > div.contents > textarea {
     width: 99%;
     min-width: 99%;
     max-width: 99%;
-    margin: 0;    
+    margin: 0;
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    min-height: 27px;
 }
 
 /* Custom textboxes */
@@ -269,8 +293,8 @@ div.superform div.elements li.element.textbox.linkedin > div.contents {
 
 div.superform div.elements > ol > li.element.checkboxes,
 div.superform div.elements > ol > li.element.checkboxescustom,
-div.superform div.elements > ol > li.element.radios,
-div.superform div.elements > ol > li.element.slider {
+div.superform div.elements > ol > li.element.radios/*,
+div.superform div.elements > ol > li.element.slider*/ {
     padding-bottom: 0;
 }
 
@@ -279,7 +303,7 @@ div.superform div.elements > ol > li.element.checkboxescustom > div.contents > u
 div.superform div.elements > ol > li.element.radios > div.contents > ul,
 div.superform div.elements > ol > li.element.slider > div.contents > ul {
     padding: 0;
-    margin: 0;    
+    border-left: 1px dashed #B7C2C5;    margin: 0;
     list-style: none;
     overflow: hidden;
     border-top: 1px dashed #bcbdbf;
@@ -293,7 +317,6 @@ div.superform div.elements > ol > li.element.slider > div.contents > ul > li {
     border-bottom: 1px dashed #bcbdbf;
     border-right: 1px dashed #bcbdbf;
 /*    margin-left: -1px; */
-    margin-bottom: -1px;
     padding: 0;
 }
 
@@ -311,8 +334,13 @@ div.superform div.elements > ol > li.element.radios > div.contents > ul > li > l
 div.superform div.elements > ol > li.element.slider > div.contents > ul > li > label {
     position: relative;
     padding: .8em 1em;
-    display: block;    
+    display: block;
     cursor: pointer;
+}
+
+div.superform div.elements > ol > li.element.checkboxescustom > div.contents > ul > li > label {
+    width: 181px;
+    padding-right: 23px;
 }
 
 div.superform div.elements > ol > li.element.checkboxes.cols_1 > div.contents > ul > li,
@@ -536,7 +564,7 @@ div.superform.green div.elements > ol > li.busy > .title {
 div.superform input[type="submit"] {
     padding: 0.3em 1.2em !important;
     font-weight: bold;
-    font-size: 12px !important;
+    font-size: 16px;
 }
 
 div.superform button.image-remove {
@@ -557,8 +585,8 @@ div.superform button.image-remove:hover {
 div.superform input.next,
 div.superform input.confirm,
 div.superform input.retry {
-    padding: 0.6em 1.6em !important;
-    font-size: 15px !important;
+    padding: 0.6em 1.6em;
+    font-size: 15px;
 }
 
 /* titulos */
@@ -614,4 +642,13 @@ div.superform li#supports,
 div.superform li#social_rewards,
 div.superform li#individual_rewards {
     border-bottom: 1px dashed #b7c2c5;
+}
+
+/* button size mini */
+div.superform div.elements li.element div.contents input[type="submit"] {
+    width: auto;
+    height: auto;
+    line-height: 16px;
+    font-size: 12px;
+    font-weight: normal;
 }

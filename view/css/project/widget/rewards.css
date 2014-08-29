@@ -236,7 +236,12 @@ div.widget.project-rewards ul li.other,
 }
 
 div.widget.project-rewards ul li.other {
-    background-position: left 34px;
+    /*background-position: left 34px;*/
+}
+
+div.widget.project-rewards ul li {
+    padding-top: 0;
+    background-position: left top;
 }
 
 div.widget.project-rewards a.more {

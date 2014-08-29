@@ -25,6 +25,10 @@ body.dashboard div#main {
     overflow: visible;
 }
 
+body.dashboard div#main hr {
+    display: none;
+}
+
 body.dashboard div#main div.widget {
     margin-bottom: 20px;
 }
@@ -32,11 +36,16 @@ body.dashboard div#main div.widget {
 body.dashboard div#sub-header {
     padding-bottom: 4em;
     margin-bottom: 0;
-    
+    height: 145px;
 }
 
 body.dashboard div#sub-header div.dashboard-header{
     min-height: 100px;
+}
+
+body.dashboard div#sub-header div.dashboard-header h2 span {
+    font-size: 30px;
+    color: #666666;
 }
 
 body.dashboard div#sub-header img{
@@ -46,10 +55,13 @@ body.dashboard div#sub-header img{
 
 body.dashboard div#dashboard-menu {
     display: block;
-    max-width: 960px;
+    /*max-width: 960px;*/
     font-size: 13px;
-    margin: -2.6em auto 0;    
+    margin: -2.6em auto 0;
 /*    background-color: #78d1d1; */
+    border-bottom: 40px solid #3399cc;
+    margin-top: -90px;
+    margin-bottom: 40px;
 }
 
 body.dashboard div#dashboard-menu ul {
@@ -57,6 +69,12 @@ body.dashboard div#dashboard-menu ul {
     margin: 0;
     padding: 0;
     position: relative;
+}
+body.dashboard div#dashboard-menu > ul {
+    width: 960px;
+    margin-left: -480px;
+    left: 50%;
+    top: 40px;
 }
 
 body.dashboard div#dashboard-menu ul li {
@@ -111,41 +129,80 @@ body.dashboard div#dashboard-menu ul li.section.active ul {
 }
 
 body.dashboard div#dashboard-menu ul li.section a.section {
-    background-color: #c7ecec;
-    color: #20b3b2;
+    /*background-color: #c7ecec;*/
+    /*color: #20b3b2;*/
     min-width: 80px !important;
+    background: #ccf4ff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ccf4ff 0%, #c0e4ed 60%, #b1cfd3 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccf4ff), color-stop(60%,#c0e4ed), color-stop(100%,#b1cfd3)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ccf4ff 0%,#c0e4ed 60%,#b1cfd3 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ccf4ff 0%,#c0e4ed 60%,#b1cfd3 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ccf4ff 0%,#c0e4ed 60%,#b1cfd3 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ccf4ff 0%,#c0e4ed 60%,#b1cfd3 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccf4ff', endColorstr='#b1cfd3',GradientType=0 ); /* IE6-9 */
+    height: 35px;
+    line-height: 35px;
+    border-top: 1px solid #99b8cc;
+    border-left: 1px solid #99b8cc;
+    border-right: 1px solid #99b8cc;
+    color: #669999;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 14px;
 }
 
 body.dashboard div#dashboard-menu ul li.section.active a.section {
-    color: #ffffff;
-    background-color: #79d1d1;
+    /*color: #ffffff;
+    background-color: #79d1d1;*/
+    color: #f5f5f5;
+    background: none;
+    background-color: #3399cc;
 }
 
 body.dashboard div#dashboard-menu ul li.section.current a.section {
-    color: #ffffff;
+    /*color: #ffffff;*/
+    color: #f5f5f5;
+    background: none;
+    background-color: #3399cc;
 }
 
 body.dashboard div#dashboard-menu ul li.section.current a.section,
 body.dashboard div#dashboard-menu ul li.section.current ul,
 body.dashboard div#dashboard-menu ul li.section.active a.section,
 body.dashboard div#dashboard-menu ul li.section.active ul {
-    background-color: #808285;
+    /*background-color: #808285;*/
+    background-color: #3399cc;
+    color: #f5f5f5;
+    font-weight: bolder;
+    height: 40px;
+}
+
+/*ie8*/
+body.dashboard div#dashboard-menu ul li.section a:hover.section,
+body.dashboard div#dashboard-menu ul li.section ul:hover {
+    background-color: #3399cc;
 }
 
 body.dashboard div#dashboard-menu li.option a {
-    color: #c7ecec !important;
+    /*color: #c7ecec !important;*/
+    color: #ccffff;
+    height: 25px;
+    line-height: 25px;
 }
 
 body.dashboard div#dashboard-menu li.option.current a, 
 body.dashboard div#dashboard-menu li.option.active a {
-    color: #ffffff !important;
-    background-color: #79d1d1 !important;
+    /*color: #ffffff !important;
+    background-color: #79d1d1 !important;*/
+    height: 18px;
+    color: #f5f5f5;
+    border-bottom: 5px solid #ff9933;
 }
 
-body.dashboard div#dashboard-menu li.section.current a {
+/*body.dashboard div#dashboard-menu li.section.current a {
     color: #ffffff;
     background-color: #808285;
-}
+}*/
 
 
 /* El superform con el fondo blanco */
@@ -161,6 +218,14 @@ body.dashboard div#project-selector {
     background-color: #ffffff;
     margin-bottom: 20px;
     padding: 20px;
+}
+
+body.dashboard div#project-selector #selector-form #selector {
+    height: 40px;
+}
+
+body.dashboard div#main > .widget > p > strong {
+    font-size: 16px;
 }
 
 body.dashboard div#project-selector label{

@@ -89,4 +89,8 @@ div.widget.user dl dd.message a:hover {
 
 div.widget.user a.button {
     margin: 1.5em 0 10px;
+    padding: 0;
+    min-width: 200px;
+    height: 50px;
+    line-height: 50px;
 }
