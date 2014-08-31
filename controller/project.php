@@ -80,7 +80,7 @@ namespace Goteo\Controller {
                 && !isset($_SESSION['user']->roles['superadmin']) // no es superadmin
                 && (isset($_SESSION['user']->roles['checker']) && !Model\User\Review::is_assigned($_SESSION['user']->id, $project->id)) // no lo tiene asignado
                 ) {
-                Message::Info('No tienes permiso para editar este proyecto');
+                Message::Info(Text::_('No tienes permiso para editar este proyecto'));
                 throw new Redirection('/admin/projects');
             }
 

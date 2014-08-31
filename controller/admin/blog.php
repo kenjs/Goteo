@@ -40,19 +40,19 @@ namespace Goteo\Controller\Admin {
             if (!$blog instanceof \Goteo\Model\Blog) {
                 $blog = new Model\Blog(array('type'=>'node', 'owner'=>$node, 'active'=>1));
                 if ($blog->save($errors)) {
-                    Message::Info('Se ha inicializado su espacio de blog');
+                    Message::Info(Text::_('Se ha inicializado su espacio de blog'));
                 } else {
-                    Message::Error('No tiene espacio de blog, contacte con nosotros');
+                    Message::Error(Text::_('No tiene espacio de blog, contacte con nosotros'));
                     throw new Redirection('/admin');
                 }
             } elseif (!$blog->active) {
-                Message::Error('Lo sentimos, la gestión de blog esta desactivada');
+                Message::Error(Text::_('Lo sentimos, la gestión de blog esta desactivada'));
                 throw new Redirection('/admin');
             }
 
             // primero comprobar que tenemos blog
             if (!$blog instanceof Model\Blog) {
-                Message::Error('No se ha encontrado ningún blog, contacte con nosotros');
+                Message::Error(Text::_('No se ha encontrado ningún blog, contacte con nosotros'));
                 throw new Redirection('/admin');
             }
 
@@ -60,7 +60,7 @@ namespace Goteo\Controller\Admin {
 
 			if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     if (empty($_POST['blog'])) {
-                        Message::Error('Hemos perdido de vista su blog!!!');
+                        Message::Error(Text::_('Hemos perdido de vista su blog!!!'));
                         break;
                     }
 
@@ -138,9 +138,9 @@ namespace Goteo\Controller\Admin {
                     /// este es el único save que se lanza desde un metodo process_
                     if ($post->save($errors)) {
                         if ($action == 'edit') {
-                            Message::Info('La entrada se ha actualizado correctamente');
+                            Message::Info(Text::_('La entrada se ha actualizado correctamente'));
                         } else {
-                            Message::Info('Se ha añadido una nueva entrada');
+                            Message::Info(Text::_('Se ha añadido una nueva entrada'));
                             $id = $post->id;
                         }
                         $action = $editing ? 'edit' : 'list';
@@ -169,7 +169,7 @@ namespace Goteo\Controller\Admin {
                         }
 
                     } else {
-                        Message::Error('Ha habido algun problema al guardar los datos:<br />' . \implode('<br />', $errors));
+                        Message::Error(Text::_('Ha habido algun problema al guardar los datos') . ':<br />' . \implode('<br />', $errors));
                     }
             }
 
@@ -255,18 +255,18 @@ namespace Goteo\Controller\Admin {
                     break;
                 case 'edit':
                     if (empty($id)) {
-                        Message::Error('No se ha encontrado la entrada');
+                        Message::Error(Text::_('No se ha encontrado la entrada'));
                         throw new Redirection('/admin/blog');
                         break;
                     } else {
                         $post = Model\Blog\Post::get($id);
 
                         if (!$post instanceof Model\Blog\Post) {
-                            Message::Error('La entrada esta corrupta, contacte con nosotros.');
+                            Message::Error(Text::_('La entrada esta corrupta, contacte con nosotros.'));
                             $action = 'list';
                             break;
                         } elseif ($node != \GOTEO_NODE && $post->owner_type == 'node' && $post->owner_id != $node) {
-                            Message::Error('No puedes editar esta entrada.');
+                            Message::Error(Text::_('No puedes editar esta entrada.'));
                             throw new Redirection('/admin/blog/list');
                         }
                     }
@@ -289,7 +289,7 @@ namespace Goteo\Controller\Admin {
                     // eliminar una entrada
                     $tempData = Model\Blog\Post::get($id);
                     if ($node != \GOTEO_NODE && $tempData->owner_type == 'node' && $tempData->owner_id != $node ) {
-                        Message::Error('No puedes eliminar esta entrada.');
+                        Message::Error(Text::_('No puedes eliminar esta entrada.'));
                         throw new Redirection('/admin/blog');
                     }
                     if (Model\Blog\Post::delete($id)) {
@@ -305,9 +305,9 @@ namespace Goteo\Controller\Admin {
                         $log->doAdmin('admin');
                         unset($log);
 
-                        Message::Info('Entrada eliminada');
+                        Message::Info(Text::_('Entrada eliminada'));
                     } else {
-                        Message::Error('No se ha podido eliminar la entrada');
+                        Message::Error(Text::_('No se ha podido eliminar la entrada'));
                     }
                     throw new Redirection('/admin/blog/list');
                     break;
@@ -349,9 +349,9 @@ namespace Goteo\Controller\Admin {
                         $next = Model\Post::next_node($node);
                         $data = (object) array('post' => $id, 'node' => $node, 'order' => $next);
                         if (Model\Post::update_node($data, $errors)) {
-                            Message::Info('Entrada colocada en la portada correctamente');
+                            Message::Info(Text::_('Entrada colocada en la portada correctamente'));
                         } else {
-                            Message::Error('Ha habido algun problema:<br />' . \implode('<br />', $errors));
+                            Message::Error(Text::_('Ha habido algun problema') . ':<br />' . \implode('<br />', $errors));
                         }
                     } else {
                         $next = Model\Post::next('home');
@@ -362,9 +362,9 @@ namespace Goteo\Controller\Admin {
                         ));
 
                         if ($post->update($errors)) {
-                            Message::Info('Entrada colocada en la portada correctamente');
+                            Message::Info(Text::_('Entrada colocada en la portada correctamente'));
                         } else {
-                            Message::Error('Ha habido algun problema:<br />' . \implode('<br />', $errors));
+                            Message::Error(Text::_('Ha habido algun problema') . ':<br />' . \implode('<br />', $errors));
                         }
                     }
                     throw new Redirection('/admin/blog/list');
@@ -378,9 +378,9 @@ namespace Goteo\Controller\Admin {
                         $ok = Model\Post::remove($id, 'home');
                     }
                     if ($ok) {
-                        Message::Info('Entrada quitada de la portada correctamente');
+                        Message::Info(Text::_('Entrada quitada de la portada correctamente'));
                     } else {
-                        Message::Error('No se ha podido quitar esta entrada de la portada');
+                        Message::Error(Text::_('No se ha podido quitar esta entrada de la portada'));
                     }
                     throw new Redirection('/admin/blog/list');
                     break;
@@ -431,9 +431,9 @@ namespace Goteo\Controller\Admin {
                         ));
 
                         if ($post->update($errors)) {
-                            Message::Info('Entrada colocada en el footer correctamente');
+                            Message::Info(Text::_('Entrada colocada en el footer correctamente'));
                         } else {
-                            Message::Error('Ha habido algun problema:<br />' . \implode('<br />', $errors));
+                            Message::Error(Text::_('Ha habido algun problema') . ':<br />' . \implode('<br />', $errors));
                         }
                     }
                     throw new Redirection('/admin/blog');
@@ -442,9 +442,9 @@ namespace Goteo\Controller\Admin {
                     if ($node == \GOTEO_NODE) {
                         // se quita del footer solamente
                         if (Model\Post::remove($id, 'footer')) {
-                            Message::Info('Entrada quitada del footer correctamente');
+                            Message::Info(Text::_('Entrada quitada del footer correctamente'));
                         } else {
-                            Message::Error('No se ha podido quitar esta entrada del footer');
+                            Message::Error(Text::_('No se ha podido quitar esta entrada del footer'));
                         }
                     }
                     throw new Redirection('/admin/blog/list');

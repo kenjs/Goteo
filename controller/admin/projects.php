@@ -44,7 +44,7 @@ namespace Goteo\Controller\Admin {
 
                 $projData = Model\Project::get($_POST['id']);
                 if (empty($projData->id)) {
-                    Message::Error('El proyecto '.$_POST['id'].' no existe');
+                    Message::Error(Text::_('El proyecto ').$_POST['id'].Text::_(' no existe'));
                     throw new Redirection('/admin/projects/images/'.$id);
                 }
 
@@ -366,9 +366,9 @@ namespace Goteo\Controller\Admin {
                     $mailHandler->html = true;
                     $mailHandler->template = $template->id;
                     if ($mailHandler->send()) {
-                        Message::Info('Se ha enviado un email a <strong>'.$project->user->name.'</strong> a la dirección <strong>'.$project->user->email.'</strong>');
+                        Message::Info(Text::_('Se ha enviado un email a') . '<strong>'.$project->user->name.'</strong>' . Text::_('a la dirección') . '<strong>'.$project->user->email.'</strong>');
                     } else {
-                        Message::Error('Ha fallado al enviar el mail a <strong>'.$project->user->name.'</strong> a la dirección <strong>'.$project->user->email.'</strong>');
+                        Message::Error(Text::_('Ha fallado al enviar el mail a') . '<strong>'.$project->user->name.'</strong>' . Text::_('a la dirección') . '<strong>'.$project->user->email.'</strong>');
                     }
                     unset($mailHandler);
                 }

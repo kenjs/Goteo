@@ -26,6 +26,7 @@ namespace Goteo\Controller {
         Goteo\Core\View,
         Goteo\Library\Feed,
         Goteo\Library\Message,
+        Goteo\Library\Text,
 		Goteo\Model\User;
 
 	class Impersonate extends \Goteo\Core\Controller {
@@ -69,7 +70,7 @@ namespace Goteo\Controller {
                 
             }
             else {
-                Message::Error('Ha ocurrido un error');
+                Message::Error(Text::_('Ha ocurrido un error'));
                 throw new Redirection('/dashboard');
             }
 		}

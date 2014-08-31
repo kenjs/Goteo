@@ -27,6 +27,7 @@ namespace Goteo\Controller\Admin {
 		Goteo\Library\Paypal,
 		Goteo\Library\Feed,
 		Goteo\Library\Message,
+        Goteo\Library\Text,
         Goteo\Model;
 
     class Accounts {
@@ -45,7 +46,7 @@ namespace Goteo\Controller\Admin {
 
                 //el original tiene que ser de tpv o cash y estar como 'cargo ejecutado'
                 if ($original->method == 'paypal' || $original->status != 1) {
-                    Message::Error('No se puede reubicar este aporte!');
+                    Message::Error(Text::_('No se puede reubicar este aporte!'));
                     throw new Redirection('/admin/accounts');
                 }
 
@@ -106,7 +107,7 @@ namespace Goteo\Controller\Admin {
                             $log->doAdmin('money');
                             unset($log);
 
-                            Message::Info('Aporte reubicado correctamente');
+                            Message::Info(Text::_('Aporte reubicado correctamente'));
                             throw new Redirection('/admin/accounts');
                         } else {
                             $errors[] = 'A fallado al cambiar el estado del aporte original ('.$original->id.')';
@@ -139,7 +140,7 @@ namespace Goteo\Controller\Admin {
                 // el aporte original
                 $invest = Model\Invest::get($id);
                 if (!$invest instanceof Model\Invest) {
-                    Message::Error('No tenemos registro del aporte '.$id);
+                    Message::Error(Text::_('No tenemos registro del aporte ').$id);
                     throw new Redirection('/admin/accounts');
                 }
 
@@ -150,7 +151,7 @@ namespace Goteo\Controller\Admin {
                 if ($invest->issue && $_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update']) && $_POST['resolve'] == 1) {
                     Model\Invest::unsetIssue($id);
                     Model\Invest::setDetail($id, 'issue-solved', 'La incidencia se ha dado por resuelta por el usuario ' . $_SESSION['user']->name);
-                    Message::Info('La incidencia se ha dado por resuelta');
+                    Message::Info(Text::_('La incidencia se ha dado por resuelta'));
                 }
 
                 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update']) && isset($new) && isset($status[$new])) {
@@ -158,12 +159,12 @@ namespace Goteo\Controller\Admin {
                     if ($new != $invest->status) {
                         if (Model\Invest::query("UPDATE invest SET status=:status WHERE id=:id", array(':id'=>$id, ':status'=>$new))) {
                             Model\Invest::setDetail($id, 'status-change'.rand(0, 9999), 'El admin ' . $_SESSION['user']->name . ' ha cambiado el estado del apote a '.$status[$new]);
-                            Message::Info('Se ha actualizado el estado del aporte');
+                            Message::Info(Text::_('Se ha actualizado el estado del aporte'));
                         } else {
-                            Message::Error('Ha fallado al actualizar el estado del aporte');
+                            Message::Error(Text::_('Ha fallado al actualizar el estado del aporte'));
                         }
                     } else {
-                        Message::Error('No se ha cambiado el estado');
+                        Message::Error(Text::_('No se ha cambiado el estado'));
                     }
                     throw new Redirection('/admin/accounts/details/'.$id);
                 }
@@ -184,7 +185,7 @@ namespace Goteo\Controller\Admin {
                 // el aporte original
                 $invest = Model\Invest::get($id);
                 if (!$invest instanceof Model\Invest) {
-                    Message::Error('No tenemos registro del aporte '.$id);
+                    Message::Error(Text::_('No tenemos registro del aporte ').$id);
                     throw new Redirection('/admin/accounts');
                 }
                 $projectData = Model\Project::getMini($invest->project);
@@ -260,7 +261,7 @@ namespace Goteo\Controller\Admin {
                     $log->doAdmin('admin');
                     unset($log);
 
-                    Message::Info('La incidencia se ha dado por resuelta, el aporte se ha pasado a manual y cobrado');
+                    Message::Info(Text::_('La incidencia se ha dado por resuelta, el aporte se ha pasado a manual y cobrado'));
                     throw new Redirection('/admin/accounts');
                 } else {
                     // Evento Feed
@@ -274,7 +275,7 @@ namespace Goteo\Controller\Admin {
                     $log->doAdmin('admin');
                     unset($log);
 
-                    Message::Error('Ha fallado al resolver la incidencia: ' . implode (',', $errors));
+                    Message::Error(Text::_('Ha fallado al resolver la incidencia') . ': ' . implode (',', $errors));
                     throw new Redirection('/admin/accounts/details/'.$id);
                 }
            }
@@ -329,7 +330,7 @@ namespace Goteo\Controller\Admin {
                         unset($log);
 
                         Model\Invest::setDetail($invest->id, 'admin-created', 'Este aporte ha sido creado manualmente por el admin ' . $_SESSION['user']->name);
-                        Message::Info('Aporte manual creado correctamente, seleccionar recompensa y dirección de entrega.');
+                        Message::Info(Text::_('Aporte manual creado correctamente, seleccionar recompensa y dirección de entrega.'));
                         throw new Redirection('/admin/rewards/edit/'.$invest->id);
                     } else{
                         $errors[] = 'Ha fallado algo al crear el aporte manual';
@@ -360,7 +361,7 @@ namespace Goteo\Controller\Admin {
                 // estados de aporte
                 $project = Model\Project::get($id);
                 if (!$project instanceof Model\Project) {
-                    Message::Error('Instancia de proyecto no valida');
+                    Message::Error(Text::_('Instancia de proyecto no valida'));
                     throw new Redirection('/admin/accounts');
                 }
                 $invests = Model\Invest::getAll($id);
@@ -390,7 +391,7 @@ namespace Goteo\Controller\Admin {
             if ($action == 'cancel') {
                 $invest = Model\Invest::get($id);
                 if (!$invest instanceof Model\Invest) {
-                    Message::Error('No tenemos objeto para el aporte '.$id);
+                    Message::Error(Text::_('No tenemos objeto para el aporte ').$id);
                     throw new Redirection('/admin/accounts');
                 }
                 $project = Model\Project::get($invest->project);
@@ -463,7 +464,7 @@ namespace Goteo\Controller\Admin {
             if ($action == 'execute' && $invest->status == 0) {
                 $invest = Model\Invest::get($id);
                 if (!$invest instanceof Model\Invest) {
-                    Message::Error('No tenemos objeto para el aporte '.$id);
+                    Message::Error(Text::_('No tenemos objeto para el aporte ').$id);
                     throw new Redirection('/admin/accounts');
                 }
                 $project = Model\Project::get($invest->project);

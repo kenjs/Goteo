@@ -83,15 +83,15 @@ namespace Goteo\Controller\Admin {
                     /// este es el único save que se lanza desde un metodo process_
                     if ($post->save($errors)) {
                         if ($action == 'edit') {
-                            Message::Info('El término se ha actualizado correctamente');
+                            Message::Info(Text::_('El término se ha actualizado correctamente'));
                         } else {
-                            Message::Info('Se ha añadido un nuevo término');
+                            Message::Info(Text::_('Se ha añadido un nuevo término'));
                             $id = $post->id;
                         }
                         $action = $editing ? 'edit' : 'list';
                     } else {
                         Message::Error(implode('<br />', $errors));
-                        Message::Error('Ha habido algun problema al guardar los datos');
+                        Message::Error(Text::_('Ha habido algun problema al guardar los datos'));
                     }
             }
 
@@ -99,9 +99,9 @@ namespace Goteo\Controller\Admin {
                 case 'remove':
                     // eliminar un término
                     if (Model\Glossary::delete($id)) {
-                        Message::Info('Término eliminado');
+                        Message::Info(Text::_('Término eliminado'));
                     } else {
-                        Message::Error('No se ha podido eliminar el término');
+                        Message::Error(Text::_('No se ha podido eliminar el término'));
                     }
                     break;
                 case 'add':
@@ -130,7 +130,7 @@ namespace Goteo\Controller\Admin {
                         $post = Model\Glossary::get($id);
 
                         if (!$post instanceof Model\Glossary) {
-                            Message::Error('La entrada esta corrupta, contacte con nosotros.');
+                            Message::Error(Text::_('La entrada esta corrupta, contacte con nosotros.'));
                             $action = 'list';
                             break;
                         }

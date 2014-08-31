@@ -351,12 +351,12 @@ namespace Goteo\Controller {
             if (!empty($id) && isset($_SESSION['user']->id)) {
                 $task = Model\Task::get($id);
                 if ($task->setDone($errors)) {
-                    Message::Info('La tarea se ha marcado como realizada');
+                    Message::Info(Text::_('La tarea se ha marcado como realizada'));
                 } else {
                     Message::Error(implode('<br />', $errors));
                 }
             } else {
-                Message::Error('Faltan datos');
+                Message::Error(Text::_('Faltan datos'));
             }
             throw new Redirection('/admin');
         }

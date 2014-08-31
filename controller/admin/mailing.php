@@ -28,6 +28,7 @@ namespace Goteo\Controller\Admin {
         Goteo\Library\Template,
         Goteo\Library\Mail,
         Goteo\Library\Newsletter,
+        Goteo\Library\Text,
         Goteo\Model;
 
     class Mailing {
@@ -165,7 +166,7 @@ namespace Goteo\Controller\Admin {
                                 ";
                             $_SESSION['mailing']['filters_txt'] .= 'que haya hecho algun donativo ';
                         } else {
-                            Message::Error('Solo se filtran donantes si se envia "A los: Cofinanciadores"');
+                            Message::Error(Text::_('Solo se filtran donantes si se envia "A los: Cofinanciadores"'));
                         }
                     }
 
@@ -198,7 +199,7 @@ namespace Goteo\Controller\Admin {
                             $_SESSION['mailing']['receivers'][$receiver->id] = $receiver;
                         }
                     } else {
-                        Message::Error('Fallo el SQL!!!!! <br />' . $sql . '<pre>'.print_r($values, 1).'</pre>');
+                        Message::Error(Text::_('Fallo el SQL!') . '<br />' . $sql . '<pre>'.print_r($values, 1).'</pre>');
                     }
 
                     // si no hay destinatarios, salta a la lista con mensaje de error

@@ -26,7 +26,7 @@ use Goteo\Library\Text,
 $project = $this['project'];
 
 if (!$project instanceof Model\Project) {
-    Message::Error('Instancia de proyecto corrupta');
+    Message::Error(Text::_('Instancia de proyecto corrupta'));
     throw new Redirection('/admin/projects');
 }
 

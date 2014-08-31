@@ -27,6 +27,7 @@ namespace Goteo\Controller\Admin {
         Goteo\Library\Mail,
 		Goteo\Library\Template,
 		Goteo\Library\Message,
+        Goteo\Library\Text,
         Goteo\Model;
 
     class Translates {
@@ -129,7 +130,7 @@ namespace Goteo\Controller\Admin {
                         $sql = "UPDATE project SET lang = :lang, translate = 1 WHERE id = :id";
                         if (Model\Project::query($sql, array(':lang'=>$_POST['lang'], ':id'=>$id))) {
                             if ($action == 'add') {
-                                Message::Info('El proyecto '.$project->name.' se ha habilitado para traducir');
+                                Message::Info(Text::_('El proyecto ') .$project->name. Text::_(' se ha habilitado para traducir'));
                             } else {
                                 Message::Info(Text::_('Datos de traducción actualizados'));
                             }
@@ -180,9 +181,9 @@ namespace Goteo\Controller\Admin {
                         $mailHandler->html = true;
                         $mailHandler->template = $template->id;
                         if ($mailHandler->send()) {
-                            Message::Info('Se ha enviado un email a <strong>'.$project->user->name.'</strong> a la dirección <strong>'.$project->user->email.'</strong>');
+                            Message::Info(Text::_('Se ha enviado un email a') . ' <strong>'.$project->user->name.'</strong>' . Text::_('a la dirección') . '<strong>'.$project->user->email.'</strong>');
                         } else {
-                            Message::Error('Ha fallado al enviar el mail a <strong>'.$project->user->name.'</strong> a la dirección <strong>'.$project->user->email.'</strong>');
+                            Message::Error(Text::_('Ha fallado al enviar el mail a') . '<strong>'.$project->user->name.'</strong>' . Text::_('a la dirección') . '<strong>'.$project->user->email.'</strong>');
                         }
                         unset($mailHandler);
                         $action = 'edit';
@@ -213,7 +214,7 @@ namespace Goteo\Controller\Admin {
                     // el campo translate del proyecto $id a false
                     $sql = "UPDATE project SET translate = 0 WHERE id = :id";
                     if (Model\Project::query($sql, array(':id'=>$id))) {
-                        Message::Info('La traducción del proyecto '.$project->name.' se ha finalizado');
+                        Message::Info(Text::_('La traducción del proyecto ').$project->name.Text::_(' se ha finalizado'));
 
                         Model\Project::query("DELETE FROM user_translate WHERE type = 'project' AND item = :id", array(':id'=>$id));
 

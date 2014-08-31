@@ -211,17 +211,17 @@ namespace Goteo\Controller\Admin {
                             switch ($subaction) {
                                 case 'admin':
                                     if ($onNode->assign($id)) {
-                                        Message::Info('El nuevo admin se ha añadido a los administradores del nodo <strong>'.$onNode->name.'</strong>.');
+                                        Message::Info(Text::_('El nuevo admin se ha añadido a los administradores del nodo') . '<strong>'.$onNode->name.'</strong>.');
                                     } else{
-                                        Message::Error('ERROR!!! El nuevo admin no se ha podido añadir a los administradores del nodo <strong>'.$onNode->name.'</strong>. Contactar con el superadmin');
+                                        Message::Error(Text::_('ERROR!!! El nuevo admin no se ha podido añadir a los administradores del nodo') . '<strong>'.$onNode->name.'</strong>.' .  Text::_('Contactar con el superadmin'));
                                     }
                                     break;
 
                                 case 'noadmin':
                                     if ($onNode->unassign($id)) {
-                                        Message::Info('El ex-admin se ha quitado de los administradores del nodo <strong>'.$onNode->name.'</strong>.');
+                                        Message::Info(Text::_('El ex-admin se ha quitado de los administradores del nodo') . '<strong>'.$onNode->name.'</strong>.');
                                     } else{
-                                        Message::Error('ERROR!!! El ex-admin no se ha podido quitar de los administradores del nodo <strong>'.$onNode->name.'</strong>. Contactar con el superadmin');
+                                        Message::Error(Text::_('ERROR!!! El ex-admin no se ha podido quitar de los administradores del nodo') . '<strong>'.$onNode->name.'</strong>.' .  Text::_('Contactar con el superadmin'));
                                     }
                                     break;
 
@@ -242,8 +242,8 @@ namespace Goteo\Controller\Admin {
                         } else {
 
                             // mensaje de error y volvemos a la gestion del usuario
-                            Message::Error('Ha FALLADO cuando ha <strong>' . $log_action . '</strong> al usuario <strong>'.$id.'</strong>');
-                            $log_text = 'Al admin %s le ha <strong>FALLADO</strong> cuando ha %s al usuario %s';
+                            Message::Error(Text::_('Ha FALLADO cuando ha') . ' <strong>' . $log_action . '</strong> ' . Text::_('al usuario') . '<strong>'.$id.'</strong>');
+                            $log_text = Text::_('Al admin %s le ha <strong>FALLADO</strong> cuando ha %s al usuario %s');
 
                         }
 
