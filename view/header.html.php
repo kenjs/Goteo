@@ -81,7 +81,7 @@ use Goteo\Library\Text,
         <div class="nav_inner">
             <ul>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>">ホーム</a></li>
-                <li class="active"><a href="/discover">プロジェクト</a></li>
+                <li class="active"><a href="/">プロジェクト</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/earth_view/">課題を知る</a>
                     <ul class="sub">
                         <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/submit_subject/">課題を投稿する</a></li>
