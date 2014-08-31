@@ -130,9 +130,9 @@ jQuery(document).ready(function($) {
 
 				//l'ordre que es vulgui...
                 $logins = array(
-					// 'facebook' => '<a href="/user/oauth?provider=facebook">' . Text::get('login-signin-facebook') . '</a>',
+					'facebook' => '<a href="/user/oauth?provider=facebook">' . Text::get('login-signin-facebook') . '</a>',
 					'twitter' => '<a href="/user/oauth?provider=twitter">' . Text::get('login-signin-twitter') . '</a>',
-					// 'Google' => '<a href="/user/oauth?provider=Google">' . Text::get('login-signin-google') . '</a>',
+					'Google' => '<a href="/user/oauth?provider=Google">' . Text::get('login-signin-google') . '</a>',
 					// 'Yahoo' => '<a href="/user/oauth?provider=Yahoo">' . Text::get('login-signin-yahoo') . '</a>',
 					// 'myOpenid' => '<a href="/user/oauth?provider=myOpenid">' . Text::get('login-signin-myopenid') . '</a>',
 					// 'linkedin' => '<a href="/user/oauth?provider=linkedin">' . Text::get('login-signin-linkedin') . '</a>',
