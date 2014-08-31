@@ -269,7 +269,7 @@ div.widget.project-rewards ul li div.license h8,
 #rewards-summary ul li div.license h6,
 #rewards-summary ul li div.license h7,
 #rewards-summary ul li div.license h8 {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: bold;
     text-transform: none;
     border-bottom: 1px dashed #c8c8c8;
@@ -295,7 +295,7 @@ div.widget.project-rewards ul li div.license > a strong,
 div.widget.project-invest ul li div.license,
 div.widget.project-rewards ul li div.license,
 #rewards-summary ul li div.license {
-    font-size: 11px;
+    font-size: 12px;
 }
 
 div.widget.project-invest ul li div.license  p,

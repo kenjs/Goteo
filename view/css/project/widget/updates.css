@@ -64,7 +64,7 @@ div.widget.project-updates > div {
     display:block;
 	color: #808285;
 	margin: 10px 0 0;
-	font-size: 11px;
+	font-size: 12px;
 }
 .project-updates .post .categories{
     display:block;
@@ -151,7 +151,7 @@ div.post-comments div.message .user {
 div.post-comments div.message .date {
     float: right;
     color: #808080;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 div.post-comments div.message blockquote {
@@ -178,14 +178,14 @@ div.post-comments div.message blockquote {
 	height:20px;
 	float:left;
 	padding: 0 0 0 25px;
-	font-size: 11px;
+	font-size: 12px;
 	line-height: 20px;
 }
 .project-updates .post ul.share-goteo li.sharetext{
 	height:20px;
 	float:left;
 	color: #808285;
-	font-size: 11px;
+	font-size: 12px;
 }
 .project-updates .post ul.share-goteo li.twitter a{
 	background: transparent url('/view/css/twitter.png') scroll no-repeat  0 0;

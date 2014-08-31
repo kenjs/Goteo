@@ -65,7 +65,7 @@ div.project-messages div.message .date,
 div.project-messages div.child .date {
     float: right;
     color: #808080;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 div.project-messages div.message blockquote,
@@ -85,7 +85,7 @@ div.project-messages div.child .actions {
 div.project-messages div.message .actions a,
 div.project-messages div.child .actions a {
     color: #808080;
-    font-size: 11px;
+    font-size: 12px;
     text-decoration: none;
 }
 

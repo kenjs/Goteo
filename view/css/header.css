@@ -50,7 +50,7 @@ div#super-header + * {
 
 div#super-header a {
     color: #e9e3dc;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 div#super-header a:hover {
@@ -202,7 +202,7 @@ div#sub-header > div > div.slides_container > div.slides_control > div.subhead-b
 div#sub-header > div > div.slides_container > div.slides_control > div.subhead-banner .shb-info .financ-meter{
     float:right;
 	width:75px;
-	font-size: 11px;
+	font-size: 12px;
     font-weight: normal;
 	list-style:none;
 	margin: -11px 0 0 20px;
@@ -423,7 +423,7 @@ div#sub-header-secondary > div > ul.share-goteo li.rss a{
 	height:20px;
 	float:left;
 	padding: 4px 0 0 30px;
-	font-size: 11px;
+	font-size: 12px;
 }
 div#sub-header-secondary > div > ul.share-goteo li.twitter a{
 	background: #d7eaeb url('sprite-socials-icons.gif') scroll no-repeat  0 0;
@@ -508,7 +508,7 @@ div#header div#highlights > ul > li,
 div#header div#highlights > ul > li > a {
     font-weight: normal;
     text-transform: none;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 2.2em;
     height: 2.2em;
 }
@@ -520,7 +520,7 @@ div#header div#highlights > h2 {
 }
 
 div#header div#highlights > h2 a{
-	font-size:11px;
+	font-size:12px;
 	text-transform:uppercase;	
 }
 
@@ -631,7 +631,7 @@ div#header div#menu > ul > li.search fieldset {
     padding: 0 1.5em 0 0;
     border: 1px solid #808184;
     position: relative;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 div#header div#menu > ul > li.search fieldset legend {
@@ -643,7 +643,7 @@ div#header div#menu > ul > li.search fieldset input[type="text"] {
     height: 11px;
     padding: .2em;
     background-color: transparent;
-    font-size: 11px;
+    font-size: 12px;
     width: 12em;
 }
 
@@ -685,12 +685,19 @@ div#header div#menu{
 div#header div#menu > ul > li.community,
 div#header div#menu > ul > li.dashboard {
     background: transparent url('header/down-black.png') no-repeat right 30px;
-	position:relative;
-	top:3px;
 }
+/*div#header div#menu > ul > li.dashboard {
+    position:relative;
+    top:3px;
+}
+*/
+/*div#header div#menu > ul > li.dashboard {
+    position: absolute;
+    top:-3px;
+}*/
 
 div#header div#menu > ul > li.login fieldset > * {
-    display: none;        
+    display: none;
 }
 
 div#header div#menu > ul > li.login form,
@@ -723,8 +730,10 @@ div#header div#menu > ul > li.dashboard > a {
 }
 
 div#header div#menu > ul > li.dashboard > a > img{
+    vertical-align: middle;
 	position:relative;
-	left:10px; top:4px;
+	left:10px;
+    /*top:4px;*/
 }
 
 div#header div#menu > h2,
@@ -830,7 +839,7 @@ ul.lang li:hover {
 ul.lang li>a{
 	bottom: 0;
 	color: #FFFFFF;
-	font-size: 11px;
+	font-size: 12px;
 	position: relative;
 	text-decoration: none;
 	text-transform: uppercase;

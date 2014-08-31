@@ -65,18 +65,23 @@ div.widget.user-supporters .supporters ul li .avatar img {
 div.widget.user-supporters .supporters ul li h3,
 div.widget.user-supporters .supporters ul li h4,
 div.widget.user-supporters .supporters ul li h5,
-div.widget.user-supporters .supporters ul li h6 {    
-    font-size: 11px;
+div.widget.user-supporters .supporters ul li h6 {
+    font-size: 12px;
     font-weight: bold;
     margin: 0 0 .5em;
-    height: 13px;
     text-transform: none;
 }
+
+div.side div.widget.user-supporters .supporters ul li h4 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
 
 div.widget.user-supporters .supporters ul li.active h3,
 div.widget.user-supporters .supporters ul li.active h4,
 div.widget.user-supporters .supporters ul li.active h5,
-div.widget.user-supporters .supporters ul li.active h6 {    
+div.widget.user-supporters .supporters ul li.active h6 {
 	color: #20B3B2;
 }
 
@@ -84,7 +89,7 @@ div.widget.user-supporters .supporters ul li h3 a,
 div.widget.user-supporters .supporters ul li h4 a,
 div.widget.user-supporters .supporters ul li h5 a,
 div.widget.user-supporters .supporters ul li h6 a {
-    font-size: 11px !important;
+    font-size: 12px !important;
     text-transform: none !important;
     text-decoration: none;
     position: absolute;
@@ -109,7 +114,7 @@ div.widget.user-supporters .supporters ul li dl,
 div.widget.user-supporters .supporters ul li dl dt,
 div.widget.user-supporters .supporters ul li dl dd {
     margin: 0;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 div.widget.user-supporters .supporters ul li dl dt {
@@ -123,7 +128,7 @@ div.widget.user-supporters .supporters ul li dl dt.amount {
     right: 10px;
     top: 10px;
     margin: 0;
-    font-size: 9px;
+    font-size: 12px;
     color: #313B96;
 }
 
@@ -160,7 +165,7 @@ div.widget.user-supporters .supporters ul li dl dd.date {
     right: 8px;
     bottom: 8px;
     color: #a6a8ab;
-    font-size: 11px;
+    font-size: 12px;
 	margin-top: 5px;
 }
 
@@ -222,7 +227,7 @@ div.widget.user-supporters .supporters ul li dl dd.worthcracy ul li > strong {
 
 div.widget.user-supporters a.more  {
     color: #58595b;
-    font-size: 11px !important;
+    font-size: 12px !important;
     text-transform: uppercase;
     float: right;
     clear: both;
@@ -250,8 +255,8 @@ div.widget.user-supporters .supporters > ul > li dl dd.amount strong{
     right: -4px;
 }
 div.widget.user-supporters .supporters > ul > li dl dd.amount span{
-    font-size: 8px;
+    font-size: 12px;
 }
-div.widget.user-supporters .supporters > ul > li dl dt.projects, div.widget.user-supporters .supporters > ul > li dl dd.projects{font-size:0.8em}
+div.widget.user-supporters .supporters > ul > li dl dt.projects, div.widget.user-supporters .supporters > ul > li dl dd.projects{font-size:1em}
 div.widget.user-supporters .supporters ul li dl dd.worthcracy{margin-top:5px}
 div.widget.user-supporters .supporters ul li dl dd.date{top:55px}

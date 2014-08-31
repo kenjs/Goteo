@@ -59,9 +59,17 @@ div.widget.project-collaborations a.more {
     float: right;
     text-decoration: none;
     text-align: right;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    line-height: 38px;
 }
+
+/*div.side div.widget a.more {
+    top: 0;
+    padding: 0;
+    line-height: 38px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}*/
+
 
 /*div.widget.project-support div.buttons {
     padding: 1em 0 0;

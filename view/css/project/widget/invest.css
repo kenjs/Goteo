@@ -77,7 +77,8 @@ div.invest-message span.message {
 
 div.widget.project-invest h3.beak {
     background-color: #cce7e8 !important;
-    padding: 20px 0px 30px 20px;
+    /*padding: 20px 0px 30px 20px;*/
+    padding: 20px 20px 40px 20px;
     background: url("/view/css/project/view/invest/header_beak.png") no-repeat left bottom;
     font-size: 1em !important;
     text-transform: uppercase !important;
@@ -220,7 +221,8 @@ div.widget.project-invest p label input[type="checkbox"] {
 }
 
 div.widget.project-invest p label {
-	cursor: pointer;	
+	cursor: pointer;
+    line-height: 14px;
 }
 
 div.widget.project-invest p label input[type="checkbox"] + span.chkbox {

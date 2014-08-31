@@ -94,7 +94,7 @@ div#footer div#services{
 
 /*hijos de div.block*/
 div#footer div.block h8{
-	font-size:11px;
+	font-size:12px;
 	color:#59595C;
 }
 
@@ -170,11 +170,11 @@ div#slides_sponsor .slidersponsors-ctrl .next:hover {
 div#footer div.block ul li{
 	line-height:12px;
     margin-bottom:5px;
-    font-size:11px;
+    font-size:12px;
 }
 
 div#footer div.block ul li a{
-	font-size:11px;
+	font-size:12px;
 	color:#808285;
 }
 
@@ -205,13 +205,13 @@ div#footer div.social ul{
 
 div#footer div.social ul li{
 	height:18px;
-	font-size:11px;	
+	font-size:12px;
 	margin-bottom:5px;
 }
 
 div#footer div.social ul li a{
 	margin:0;
-	font-size:11px; 
+	font-size:12px;
     padding-left: 30px;
     display: block;
     background: no-repeat left center;
@@ -332,7 +332,7 @@ div#sub-footer ul {
 
 div#sub-footer a {
     color: #e9e3dc;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 div#sub-footer a:hover {

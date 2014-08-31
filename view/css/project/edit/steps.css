@@ -126,7 +126,7 @@ body.project-edit div#main #project-steps span.step > button > strong.number {
     position: absolute;
     bottom: 0;
     left: 0;
-    font-size: 10px;    
+    font-size: 12px;
     color: white;
     font-style: normal;
     text-align: center;
@@ -160,7 +160,7 @@ body.project-edit div#main #project-steps fieldset fieldset > legend {
     top: 100%;
     color: #e13028;
     display: block;
-    font-size: 10px;
+    font-size: 12px;
     margin-top: 1.4em;
     left: 0;
     position: absolute;

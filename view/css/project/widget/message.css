@@ -40,7 +40,7 @@ div.project-message button{
 	float:right;
 	margin-top: 25px;
 	font-weight: normal;
-	padding: 5px 20px;
+	/*padding: 5px 20px;*/
 	margin-bottom: 0;
 	font-style: normal;
 }

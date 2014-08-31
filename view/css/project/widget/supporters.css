@@ -44,7 +44,7 @@ div.widget.project-supporters dl.summary dd {
 }
 
 div.widget.project-supporters dl.summary dt {
-    font-size: 11px;
+    font-size: 12px;
     text-transform: uppercase;
 }
 
@@ -89,14 +89,17 @@ div.widget.project-supporters .supporters ul {
 div.widget.project-supporters .supporters > ul > li {
     background-color:  white;
     float: left;
-    width: 310px;
+    /*width: 310px;*/
+    width: 205px;
     height: 4.5em;
     position: relative;
     border-top: 1px dashed #c0c0c0;
-}
-div.widget.project-supporters .supporters > ul > li:nth-child(odd) {
-    width: 309px;
     border-right: 1px dashed #c0c0c0;
+}
+div.widget.project-supporters .supporters > ul > li:nth-child(3n+3) {
+    /*width: 309px;*/
+    width: 206px;
+    border-right: none;
 }
 
 div.widget.project-supporters .supporters > ul > li div.supporterContainer {
@@ -136,7 +139,7 @@ div.widget.project-supporters .supporters ul li h3,
 div.widget.project-supporters .supporters ul li h4,
 div.widget.project-supporters .supporters ul li h5,
 div.widget.project-supporters .supporters ul li h6 {
-    font-size: 11px;
+    font-size: 12px;
     font-weight: bold;
     margin: 0 0 .5em;
     /*height: 13px;*/
@@ -154,7 +157,7 @@ div.widget.project-supporters .supporters ul li h3 a,
 div.widget.project-supporters .supporters ul li h4 a,
 div.widget.project-supporters .supporters ul li h5 a,
 div.widget.project-supporters .supporters ul li h6 a {
-    font-size: 11px !important;
+    font-size: 12px !important;
     text-transform: none !important;
     text-decoration: none;
     position: absolute;
@@ -168,7 +171,8 @@ div.widget.project-supporters .supporters ul li h6 a {
 }
 
 div.widget.project-supporters .supporters ul li h4 {
-    font-size: 14px;
+    font-size: 16px;
+    margin-bottom: 2px;
     overflow: hidden;
 }
 
@@ -180,7 +184,7 @@ div.widget.project-supporters .supporters ul li dl,
 div.widget.project-supporters .supporters ul li dl dt,
 div.widget.project-supporters .supporters ul li dl dd {
     margin: 0;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 div.widget.project-supporters .supporters ul li dl dt {
@@ -236,7 +240,7 @@ div.widget.project-supporters .supporters ul li dl dd.date {
     right: 16px;
     bottom: 10px;
     color: #a6a8ab;
-    font-size: 11px;
+    font-size: 12px;
 	margin-top: 5px;
 }
 
@@ -311,12 +315,14 @@ div.widget.project-investors a.more {
     display: inline-block;
     float: right;
     text-decoration: none;
-    color: #0C4E99;
+    /*color: #0C4E99;*/
 }
 
 div.widget.project-investors div.investors {
     padding-bottom: 10px;
     border-bottom: 1px solid #808285;
+    border-bottom: 1px dashed #cccccc;
+    border-right: 1px dashed #cccccc;
 }
 
 div.widget.project-investors .investors ul {
@@ -375,7 +381,7 @@ div.widget.project-investors .investors ul li h3,
 div.widget.project-investors .investors ul li h4,
 div.widget.project-investors .investors ul li h5,
 div.widget.project-investors .investors ul li h6 {
-	font-size: 11px !important;
+	font-size: 12px !important;
     margin: 0 0 .5em;
     height: 13px;
 }
@@ -391,7 +397,7 @@ div.widget.project-investors .investors ul li h3 a,
 div.widget.project-investors .investors ul li h4 a,
 div.widget.project-investors .investors ul li h5 a,
 div.widget.project-investors .investors ul li h6 a {
-    font-size: 11px !important;
+    font-size: 12px !important;
     text-transform: none !important;
     text-decoration: none;
     position: absolute;
@@ -418,7 +424,7 @@ div.widget.project-investors .investors ul li dl,
 div.widget.project-investors .investors ul li dl dt,
 div.widget.project-investors .investors ul li dl dd {
     margin: 0;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 div.widget.project-investors .investors ul li dl dt {
@@ -432,7 +438,7 @@ div.widget.project-investors .investors ul li dl dt.amount {
     right: 10px;
     top: 10px;
     margin: 0;
-    font-size: 11px;
+    font-size: 12px;
     color: #313b96;
 }
 
@@ -470,7 +476,7 @@ div.widget.project-investors .investors ul li dl dd.date {
     right: 10px;
     bottom: 15px;
     color: #a6a8ab;
-    font-size: 11px;
+    font-size: 12px;
 	margin-top: 5px;
 }
 

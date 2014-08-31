@@ -179,7 +179,7 @@ body div.superform > div.elements li.element li.element.inline {
 }
 
 div.superform div.elements > ol > li div.element {
-    display: inline;    
+    display: inline;
 }
 
 div.superform div.elements > ol > li > div.contents + div.children > div.elements {
@@ -516,8 +516,8 @@ div.superform.red textarea {
 }
 
 div.superform.red > div.hint h4,
-div.superform.red > div.hint blockquote {    
-    background-color: #fdedec;    
+div.superform.red > div.hint blockquote {
+    background-color: #fdedec;
     color: #ee4843;
 }
 
@@ -534,11 +534,11 @@ div.superform.green li.element > div.feedback > div {
     color: white;
 }
 
-div.superform.green li.element > div.feedback {    
-    background-image: url('superform/tooltip/beak/green/n.png');    
+div.superform.green li.element > div.feedback {
+    background-image: url('superform/tooltip/beak/green/n.png');
 }
 
-body.js div.superform.green li.element > div.feedback  {    
+body.js div.superform.green li.element > div.feedback  {
     background-image: url('superform/tooltip/beak/green/w.png');
 }
 
@@ -550,8 +550,8 @@ div.superform.green textarea {
 }
 
 div.superform.green > div.hint h4,
-div.superform.green > div.hint blockquote {    
-    background-color: #e7f3e8;    
+div.superform.green > div.hint blockquote {
+    background-color: #e7f3e8;
     color: #00b05b;
 }
 
@@ -561,10 +561,18 @@ div.superform.green div.elements > ol > li.busy > .title {
 
 /* Estilos específicos*/
 /* botones */
-div.superform input[type="submit"] {
+div.superform input.edit[type="submit"],
+div.superform input.remove[type="submit"],
+div.superform input.add[type="submit"],
+a.button.red,
+a.button,
+a.button.weak {
     padding: 0.3em 1.2em !important;
     font-weight: bold;
     font-size: 16px;
+}
+div.superform li#user_avatar li.avatar_upload input[type="submit"] {
+    padding: 0.3em 1.2em !important;
 }
 
 div.superform button.image-remove {
@@ -587,6 +595,10 @@ div.superform input.confirm,
 div.superform input.retry {
     padding: 0.6em 1.6em;
     font-size: 15px;
+}
+
+div.superform input.next {
+    padding: 0;
 }
 
 /* titulos */
@@ -645,7 +657,14 @@ div.superform li#individual_rewards {
 }
 
 /* button size mini */
-div.superform div.elements li.element div.contents input[type="submit"] {
+div.superform li.element div.contents input.add[type="submit"],
+div.superform li.element div.contents input.remove[type="submit"],
+div.superform li.element div.contents input.edit[type="submit"],
+div.superform li.element div.contents input.erase[type="submit"],
+div.superform li.element.avatar_upload div.contents input[type="submit"],
+a.button.red,
+a.button,
+a.button.weak {
     width: auto;
     height: auto;
     line-height: 16px;

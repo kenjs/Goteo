@@ -253,7 +253,7 @@ div.widget.project-support div.graph > div.minimum > div.done strong {
     height: 20px;
     margin-top: -9px;
     color: #000000;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: normal;
     line-height: 20px;
     margin-left: -23px;
@@ -291,8 +291,9 @@ div.widget.project-support a.button {
 div.widget.project-support a.more {
     float: right;
     text-decoration: none;
-	position: relative;
-	top: 16px;
+	/*position: relative;
+	top: 16px;*/
+    line-height: 38px;
 }
 
 /* Tagmark termometro */

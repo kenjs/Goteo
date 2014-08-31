@@ -29,15 +29,15 @@ div.widget.user-mates div.categories ul{overflow:hidden}
 div.widget.user-mates div.categories ul li{display:inline-block;margin-right:5px;
 	margin-bottom: 5px;
 }
-div.widget.user-mates div.categories ul li a{color:#636466;text-transform:uppercase;text-decoration:none;font-size:11px;
+div.widget.user-mates div.categories ul li a{color:#636466;text-transform:uppercase;text-decoration:none;font-size:12px;
 }
 div.widget.user-mates div.categories ul li a:hover{color:#20B3B2}
 
-div.widget.user-mates div.users{clear:both;};
+div.widget.user-mates div.users{clear:both;}
 div.widget.user-mates div.users h3.supertitle{border-top: 1px solid #808285;border-bottom:1px dashed #818284;padding:5px 0 5px 5px;color:#20B3B2;font-size:12px;margin-bottom:8px}
 div.widget.user-mates .users ul > li {
 float: left;
-height: 62px;
+/*height: 62px;*/
 margin-bottom: 8px;
 margin-right: 3px;
 overflow: hidden;
@@ -86,12 +86,12 @@ div.widget.user-mates .users ul > li h4,
 div.widget.user-mates .users ul > li h5,
 div.widget.user-mates .users ul > li h6 {
     margin: 0;
-    font-size: 11px;
+    font-size: 12px;
 	line-height:1em;
 }
 
 div.widget.user-mates .users ul li a {
-    font-size: 11px !important;
+    font-size: 12px !important;
     text-transform: none !important;
     text-decoration: none;
 }
@@ -104,7 +104,7 @@ div.widget.user-mates .users ul > li h3 a,
 div.widget.user-mates .users ul > li h4 a,
 div.widget.user-mates .users ul > li h5 a,
 div.widget.user-mates .users ul > li h6 a {
-    font-size: 11px !important;
+    font-size: 12px !important;
     font-weight: normal;
 }
 
@@ -112,7 +112,7 @@ div.widget.user-mates .users ul li div.user h4{margin-top:4px;}
 div.widget.user-mates .users ul li div.user h4 a{font-weight:bold;display:inline-block;}
 
 div.widget.user-mates .users ul > li span {
-    font-size: 9px;
+    font-size: 12px;
 	padding-top: 4px;
 }
 
@@ -127,7 +127,7 @@ div.widget.user-mates .users ul > li span.invests {
 
 div.widget.user-mates a.more  {    
     color: #58595b;
-    font-size: 11px !important;
+    font-size: 12px !important;
     text-transform: uppercase;
     float: right;
     clear: both;

@@ -35,6 +35,8 @@ body.discover div#main div.searcher {
 /* Buscador */
 div.searcher form {
 	/*padding-left:75px !important;*/
+    width: 820px;
+    margin: 0 auto;
 }
 
 .searcher .text-filter{
@@ -66,13 +68,16 @@ div.searcher form {
     font-size: 16px;
     /*float: right;*/
     float: left;
-    width: 600px;
+    width: 520px;
     margin-left: 16px;
 }
 
 .searcher form div button#searcher {
-    position: relative;
-    top: -55px;
+    /*position: relative;*/
+    /*top: -55px;*/
+    position: absolute;
+    top: 20px;
+    right: 100px;
 }
 
 /*
@@ -87,6 +92,9 @@ div.searcher form {
 	width:238px;
 	margin-right:35px;
 	position:relative;
+}
+.searcher .filter:last-child{
+    margin-right: 0;
 }
 
 .searcher .filter label{

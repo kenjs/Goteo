@@ -54,7 +54,7 @@ div.widget.blog-content-module .date,
     display:block;
 	color: #808285;
 	margin: 10px 0 0;
-	font-size: 11px;
+	font-size: 12px;
 }
 div.widget.blog-content-module .categories,
 #blog-content .post .categories{
@@ -65,7 +65,7 @@ div.widget.blog-content-module .categories a,
 #blog-content .post .categories a {
 	color:#808285;
     text-decoration: none;
-	font-size: 11px;
+	font-size: 12px;
 }
 div.widget.blog-content-module .categories a:hover,
 #blog-content .post .categories a:hover {
@@ -233,7 +233,7 @@ div.post-comments div.message h3.user a:hover{color:#20B3B2;}
 div.post-comments div.message .date {
     float: right;
     color: #808080;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 div.post-comments div.message blockquote {
@@ -265,7 +265,7 @@ div.widget.blog-content-module ul.share-goteo li.rss a,
 	height:20px;
 	float:left;
 	padding: 0 0 0 25px;
-	font-size: 11px;
+	font-size: 12px;
 	line-height: 20px;
 }
 div.widget.blog-content-module ul.share-goteo li.sharetext,
@@ -273,7 +273,7 @@ div.widget.blog-content-module ul.share-goteo li.sharetext,
 	height:20px;
 	float:left;
 	color: #808285;
-	font-size: 11px;
+	font-size: 12px;
 }
 div.widget.blog-content-module ul.share-goteo li.twitter a,
 #blog-content .post ul.share-goteo li.twitter a{
@@ -349,7 +349,7 @@ div.widget.blog-content-module ul.share-goteo li.facebook a:hover,
 #blog-content div.message .date {
     float: right;
     color: #808080;
-    font-size: 11px;
+    font-size: 12px;
 }
 #blog-content div.message blockquote {
     margin: 0;

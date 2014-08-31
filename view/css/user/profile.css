@@ -114,11 +114,11 @@ div.center > div.widget.categorylist ul li a:hover{color:#19B4B2}
 
 div.center > div.widget.categorylist > h3.title{font-size: 19px;font-weight: bold;margin: 0 0 1em -20px;padding-left: 20px;}
 div.center > div.widget.categorylist > div.filters{border-bottom: 1px solid #D5D5D6;border-top: 1px solid #D5D5D6;padding: 5px;}
-	div.center > div.widget.categorylist > div.filters > span{font-size:11px;}
+	div.center > div.widget.categorylist > div.filters > span{font-size:12px;}
 	div.center > div.widget.categorylist > div.filters > ul{margin-left:1em;}
 	div.center > div.widget.categorylist > div.filters > ul > li{margin-right:5px;}
 	div.center > div.widget.categorylist > div.filters > ul > li > a{display:inline-block;
-	background:url('/view/css/user/grey-triangle-down.png') no-repeat left; padding-left:15px;font-size:11px;}
+	background:url('/view/css/user/grey-triangle-down.png') no-repeat left; padding-left:15px;font-size:12px;}
 	div.center > div.widget.categorylist > div.filters > ul > li > a.active{background:url('/view/css/user/blue-triangle-down.png') no-repeat left;}
 
 div.center > div.widget.categorylist > div.list{

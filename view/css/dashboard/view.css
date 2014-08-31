@@ -254,7 +254,7 @@ body.dashboard div#main div.post strong {
 
 body.dashboard div#main div.post span {
     font-weight: normal;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 body.dashboard div#main div.widget.gestrew div.message{background:url("/view/css/project/view/invest/header_beak.png") #CCE5E6 no-repeat left bottom; color:#58595B;padding:20px 20px 30px 20px; height:auto;overflow:auto;}

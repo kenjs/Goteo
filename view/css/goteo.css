@@ -66,7 +66,7 @@ div#main {
 /**
  * Widgets
  */
- 
+
 div.widget {
     background-color: white;
     padding: 15px 20px;
@@ -88,11 +88,12 @@ body.user-profile div#main div.center div.widget.user-mates {
 div.center div.widget:last-child,
 div.center div.widget.project-media,
 div.center div.widget.project-supporters,
-div.center div.widget.worthcracy {
+div.center div.widget.worthcracy,
+div.center div.widget.invest-message {
     border-bottom: none;
 }
 
- div.widget .supertitle {
+div.widget .supertitle {
     font-weight: normal;
     margin: 0;
     padding: .5em 2px ;
@@ -110,7 +111,7 @@ div.widget .title{
     padding: 0 0 0 24px;
     /*margin: 0 0 .8em -20px;*/
     text-decoration: none;
-	/*background: url("arrowH2-section.gif") no-repeat -5px -16px;*/
+    /*background: url("arrowH2-section.gif") no-repeat -5px -16px;*/
 }
 
 div.side div.widget h3.title,
@@ -131,10 +132,10 @@ body.user-profile div#sub-header h2 {
 }
 
 body.user-profile div#sub-header h2 img {
-    position: absolute;    
+    position: absolute;
     width: 55px;
-    height: 55px;        
-/*    border: 1px solid #e2e2e2; */
+    height: 55px;
+    /*    border: 1px solid #e2e2e2; */
     left: 0;
 }
 
@@ -149,12 +150,12 @@ body.user-profile div#sub-header h2 em {
 /* read more */
 div.read_more {
     text-align: right;
-	margin-top: 16px;
+    margin-top: 16px;
 }
 div.read_more a {
     text-decoration: none;
     text-transform: uppercase;
-	font-size: 11px;
+    font-size: 12px;
 }
 div.read_more a:hover {
     color: #20B3B2;

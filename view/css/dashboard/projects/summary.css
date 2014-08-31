@@ -133,7 +133,7 @@ body.dashboard div#meter-big div.graph .minimum .done strong {
     right: 0;
     width: 25px;
     color: #ffffff;
-    font-size: 9px;
+    font-size: 12px;
     text-align: center;
 }
 
@@ -188,7 +188,7 @@ body.dashboard div#meter-big dl .minimum {
 
 body.dashboard div#meter-big dl dt.optimum,
 body.dashboard div#meter-big dl dt.minimum {
-    font-size: 10px;
+    font-size: 12px;
     text-transform: uppercase;
 }
 
@@ -210,11 +210,11 @@ body.dashboard div#meter-big dl .optimum {
     clear: right;
     margin-right: -40px;
 }
-body.dashboard div#meter-big dl .minimum span,
+/*body.dashboard div#meter-big dl .minimum span,
 body.dashboard div#meter-big dl .optimum span {
     position: relative;
     left: -3px;
-}
+}*/
 
 
 

@@ -120,7 +120,7 @@ div.widget.project div.image div.investor img {
 div.widget.project div.image div.investor div.invest {
     text-transform: uppercase;
     text-align: left;
-    font-size: 9px;
+    font-size: 12px;
     line-height: 9px;
     color: #58595B;
     float: left;
@@ -209,14 +209,13 @@ div.widget.project.balloon > .title a {
 
 div.widget.project > .author {
     padding: 2px 0px 0px 12px;
-	max-height:1.2em;
 	overflow:hidden;
 }
 
 div.widget.project > .author,
 div.widget.project > .author a {
     font-weight: bold;
-    font-size: 11px;
+    font-size: 12px;
     text-decoration: none;
     text-transform: none;
 	position:relative;
@@ -231,7 +230,7 @@ div.widget.project > .title a:hover{
 div.widget.project div.description {
     padding: 2px 12px;
     min-height: 42px;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 div.widget.project div.meter {
@@ -426,7 +425,7 @@ div.widget.project div.meter dl .minimum {
 
 div.widget.project div.meter dl dt.optimum,
 div.widget.project div.meter dl dt.minimum {
-    font-size: 10px;
+    font-size: 12px;
     text-transform: uppercase;
 }
 
@@ -469,7 +468,7 @@ div.widget.project div.meter dl dd.optimum strong {
 }*/
 div.widget.project div.meter dl dd.minimum span,
 div.widget.project div.meter dl dd.optimum span {
-    font-size: 11px;
+    font-size: 12px;
     vertical-align: bottom;
 }
 div.widget.project div.meter dl dd.optimum span {
