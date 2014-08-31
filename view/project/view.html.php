@@ -23,6 +23,7 @@ use Goteo\Core\View,
     Goteo\Model\Project\Cost,
     Goteo\Model\Project\Support,
     Goteo\Model\Project\Category,
+    Goteo\Model\Project\Skill,
     Goteo\Model\Blog,
     Goteo\Library\Text;
 
@@ -36,6 +37,8 @@ $user    = $_SESSION['user'];
 $personalData = ($user instanceof User) ? User::getPersonal($user->id) : new stdClass();
 
 $categories = Category::getNames($project->id);
+
+$skills = Skill::getNames($project->id);
 
 if (!empty($project->investors)) {
     $supporters = ' (' . $project->num_investors . ')';
@@ -64,6 +67,19 @@ $bodyClass = 'project-show'; include 'view/prologue.html.php' ?>
                 <a href="/user/<?php echo $project->owner; ?>"><img src="<?php echo $project->user->avatar->getLink(56,56, true) ?>" /></a>
                 <h2><span><?php echo htmlspecialchars($project->name) ?></span></h2>
                 <div class="project-subtitle"><?php echo htmlspecialchars($project->subtitle) ?></div>
+                <div class="wants-skills">
+                    スキル: <?php
+                        // スキル表示
+                        if (!empty($skills)):
+                            foreach( $skills as $_skill_id => $_skill_name):
+                                ?>
+                                <a href=""><?php echo $_skill_name ?></a>
+                                <?
+                            endforeach;
+                        endif;
+                    ?>
+                </div>
+
                 <div class="project-by"><a href="/user/<?php echo $project->owner; ?>"><?php echo Text::get('regular-by') ?> <?php echo $project->user->name; ?></a></div>
                 <br clear="both" />
 

@@ -21,6 +21,7 @@
 use Goteo\Core\View,
     Goteo\Library\Text,
     Goteo\Model\Project\Category,
+    Goteo\Model\Project\Skill,
     Goteo\Model\Invest,
     Goteo\Model\Image;
 
@@ -94,6 +95,20 @@ if (isset($this['investor']) && is_object($this['investor'])) {
     <h<?php echo $level ?> class="title"><a href="<?php echo SITE_URL ?>/project/<?php echo $project->id ?>"<?php echo $blank; ?>><?php echo htmlspecialchars(Text::recorta($project->name,50)) ?></a></h<?php echo $level ?>>
 
     <h<?php echo $level + 1 ?> class="author"><?php echo Text::get('regular-by')?> <a href="<?php echo SITE_URL ?>/user/profile/<?php echo htmlspecialchars($project->user->id) ?>"<?php echo $blank; ?>><?php echo htmlspecialchars(Text::recorta($project->user->name,40)) ?></a></h<?php echo $level + 1?>>
+
+    <div class="skills">
+        <?php
+        // スキル表示
+        $skills = Skill::getNames($project->id);
+        if (!empty($skills)):
+            foreach ($skills as $_skill_id => $_skill_name):
+                ?>
+                <a href=""><?php echo $_skill_name ?></a>
+                <?
+            endforeach;
+        endif;
+        ?>
+    </div>
 
     <div class="description"><?php echo Text::recorta($project->description, 100); ?></div>
 
