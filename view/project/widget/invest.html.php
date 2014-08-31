@@ -117,10 +117,10 @@ if ($step == 'start') : ?>
                 <label for="fullname"><?php echo Text::get('invest-address-name-field') ?></label><br />
                 <input type="text" id="fullname" name="fullname" value="<?php echo $personal->contract_name; ?>" />
             </td>
-            <td><?php /* Para ocultar el campo nif:  id="donation-data" style="display:none;"  */ ?>
+            <!--<td><?php /* Para ocultar el campo nif:  id="donation-data" style="display:none;"  */ ?>
                 <label for="nif"><?php echo Text::get('invest-address-nif-field') ?></label><br />
                 <input type="text" id="nif" name="nif" value="<?php echo $personal->contract_nif; ?>" />
-            </td>
+            </td>-->
         </tr>
         <tr>
             <td>

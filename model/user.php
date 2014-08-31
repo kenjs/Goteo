@@ -675,6 +675,14 @@ namespace Goteo\Model {
                     ) ";
                 $values[':interest'] = $filters['interest'];
             }
+            if (!empty($filters['skill'])) {
+                $sqlFilter .= " AND id IN (
+                    SELECT user
+                    FROM user_skill
+                    WHERE skill = :skill
+                    ) ";
+                $values[':skill'] = $filters['skill'];
+            }
             if (!empty($filters['role']) && $filters['role'] != 'user') {
                 $sqlFilter .= " AND id IN (
                     SELECT user_id

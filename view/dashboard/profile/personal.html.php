@@ -56,7 +56,7 @@ echo new SuperForm(array(
             'value'     => $personal->contract_name
         ),
 
-        'contract_nif' => array(
+        /*'contract_nif' => array(
             'type'      => 'textbox',
             'required'  => true,
             'title'     => Text::get('personal-field-contract_nif'),
@@ -64,7 +64,7 @@ echo new SuperForm(array(
             'hint'      => Text::get('tooltip-project-contract_nif'),
             'errors'    => !empty($errors['contract_nif']) ? array($errors['contract_nif']) : array(),
             'value'     => $personal->contract_nif
-        ),
+        ),*/
 
         'phone' => array(
             'type'  => 'textbox',

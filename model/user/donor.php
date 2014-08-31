@@ -269,9 +269,9 @@ namespace Goteo\Model\User {
             if (empty($this->year)) 
                 $this->year = self::$currYear;
 
-            if (!empty($this->nif) && !Check::nif($this->nif)) {
+            /*if (!empty($this->nif) && !Check::nif($this->nif)) {
                 $errors['nif'] = Text::get('validate-project-value-contract_nif');
-            }
+            }*/
         }
 
         /*

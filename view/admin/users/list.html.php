@@ -48,7 +48,6 @@ $the_filters = '';
 foreach ($filters as $key=>$value) {
     $the_filters .= "&{$key}={$value}";
 }
-
 $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] : 1);
 ?>
 <a href="/admin/users/add" class="button"><?php echo Text::_('Crear usuario'); ?></a>
@@ -87,6 +86,24 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
                 <td colspan="2">
                     <label for="name-filter"><?php echo Text::_('Por nombre o email'); ?>:</label><br />
                     <input id="name-filter" name="name" value="<?php echo $filters['name']; ?>" />
+                </td>
+            </tr>
+            <tr>
+                <td collspan="5">
+                    <label for="skill-filter"><?php echo Text::_('Mostrar usuarios interesados en'); ?>:</label><br />
+                    <select id="skill-filter" name="skill" onchange="document.getElementById('filter-form').submit();">
+                    <option value=""><?php echo Text::_('Cualquier skill'); ?></option>
+                     
+                    <?php foreach ($this['skills'] as $key=>$value) : ?>
+                        <?php if(empty($value->parent_skill_id)) : ?>
+                        <?php if(!empty($this['skills'][$key-1])) : ?></optgroup><?php endif;?>
+                        <optgroup label="<?php echo $value->name?>">
+                        <?php else : ?>
+                            <option value="<?php echo $key; ?>"<?php if ($filters['skill'] == $key) echo ' selected="selected"';?>><?php echo $key.$value->name; ?></option>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                        </optgroup>
+                    </select>
                 </td>
             </tr>
             <tr>

@@ -384,6 +384,7 @@ namespace Goteo\Controller\Admin {
             }
             $status = Model\Project::status();
             $categories = Model\Project\Category::getAll();
+            $skills = Model\Skill::getAll();
             //@CONTRACTSYS
             $calls = array();
             // la lista de nodos la hemos cargado arriba
@@ -401,6 +402,7 @@ namespace Goteo\Controller\Admin {
                     'filters' => $filters,
                     'status' => $status,
                     'categories' => $categories,
+                    'skills' => $skills,
 //                    'contracts' => $contracts,
                     'calls' => $calls,
                     'nodes' => $nodes,

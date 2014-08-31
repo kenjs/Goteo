@@ -222,7 +222,7 @@ namespace Goteo\Controller {
                         'report' => array('label' => Text::_('Informe Financiero del proyecto'), 'item' => true),
                         'rebase' => array('label' => Text::_('Cambiando Id de proyecto'), 'item' => true)
                     ),
-                    'filters' => array('status' => '-1', 'category' => '', 'proj_name' => '', 'name' => '', 'node' => '', 'called' => '', 'order' => '')
+                    'filters' => array('status' => '-1', 'category' => '', 'skill' => '', 'proj_name' => '', 'name' => '', 'node' => '', 'called' => '', 'order' => '')
                 ),
                 'promote' => array(
                     'label' => Text::_('Proyectos destacados'),
@@ -318,7 +318,7 @@ namespace Goteo\Controller {
                         'impersonate' => array('label' => Text::_('Suplantando al Usuario'), 'item' => true),
                         'move' => array('label' => Text::_('Moviendo a otro Nodo el usuario '), 'item' => true)
                     ),
-                    'filters' => array('interest' => '', 'role' => '', 'node' => '', 'id' => '', 'name' => '', 'order' => '', 'project' => '', 'type' => '')
+                    'filters' => array('interest' => '','skill' => '', 'role' => '', 'node' => '', 'id' => '', 'name' => '', 'order' => '', 'project' => '', 'type' => '')
                 ),
                 'worth' => array(
                     'label' => Text::_('Niveles de meritocracia'),

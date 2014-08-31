@@ -390,6 +390,8 @@ namespace Goteo\Controller\Admin {
                                 'inactive' => Text::_('Inactivo')
                             );
                     $interests = Model\User\Interest::getAll();
+                    $skills = Model\Skill::getAll();
+
                     $roles = Model\User::getRolesList();
                     $roles['user'] = Text::_('Solo usuario');
                     $types = array(
@@ -417,6 +419,7 @@ namespace Goteo\Controller\Admin {
                             'filters' => $filters,
                             'status' => $status,
                             'interests' => $interests,
+                            'skills' => $skills,
                             'roles' => $roles,
                             'types' => $types,
                             'nodes' => $nodes,

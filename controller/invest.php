@@ -38,8 +38,8 @@ namespace Goteo\Controller {
         // metodos habilitados
         public static function _methods() {
              return array(
-                    'cash' => 'cash',
-                    'tpv' => 'tpv',
+                    /*'cash' => 'cash',
+                    'tpv' => 'tpv',*/
                     'paypal' => 'paypal'
                 );
         }
