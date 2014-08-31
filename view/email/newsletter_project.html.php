@@ -74,7 +74,7 @@ if ($q < 5) foreach ($project->individual_rewards as $individual) {
     <div style="font-size: 14px;vertical-align: top;text-transform: uppercase; padding-bottom:10px;"><?php echo Text::get('project-view-metter-investment'); ?>: <span style="font-size:14px;color:#96238F;font-weight: bold;"><?php echo Text::get('project-view-metter-minimum') . ' ' . \amount_format($project->mincost) . ' '.  utf8_encode(html_entity_decode('&euro;')); ?></span>  <span style="color:#FFF;">_</span>  <span style="font-size:14px;color:#ba6fb6;font-weight: bold;"><?php echo Text::get('project-view-metter-optimum') . ' ' . \amount_format($project->maxcost) . ' '.  utf8_encode(html_entity_decode('&euro;')); ?></span>
     </div>
     <!--
-    <div style="font-size: 10px;color: #434343;text-transform: uppercase;"><?php echo Text::get('project-rewards-header'); ?>&nbsp;
+    <div style="font-size: 12px;color: #434343;text-transform: uppercase;"><?php echo Text::get('project-rewards-header'); ?>&nbsp;
     <?php foreach ($icons as $icon) : ?><img src="http://www.goteo.org/view/css/icon/s/<?php echo $icon ?>.png" width="22" height="22" alt="<?php echo $icon ?>"/><?php endforeach ?>
     </div>
     -->
