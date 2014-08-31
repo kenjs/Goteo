@@ -198,11 +198,11 @@ namespace Goteo\Controller\Admin {
                         $err = array();
                         if (Paypal::cancelPreapproval($invest, $err)) {
                             $errors[] = 'Preaproval paypal cancelado.';
-                            $log_text = "El admin %s ha cancelado aporte y preapproval de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s";
+                            $log_text = Text::_("El admin %s ha cancelado aporte y preapproval de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s");
                         } else {
                             $txt_errors = implode('; ', $err);
                             $errors[] = 'Fallo al cancelar el preapproval en paypal: ' . $txt_errors;
-                            $log_text = "El admin %s ha fallado al cancelar el aporte de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores: $txt_errors";
+                            $log_text = Text::_("El admin %s ha fallado al cancelar el aporte de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores: ") . $txt_errors;
                             if ($invest->cancel()) {
                                 $errors[] = 'Aporte cancelado';
                             } else{
@@ -215,19 +215,19 @@ namespace Goteo\Controller\Admin {
                         if (Tpv::cancelPreapproval($invest, $err)) {
                             $txt_errors = implode('; ', $err);
                             $errors[] = 'Aporte cancelado correctamente. ' . $txt_errors;
-                            $log_text = "El admin %s ha anulado el cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s";
+                            $log_text = Text::_("El admin %s ha anulado el cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s");
                         } else {
                             $txt_errors = implode('; ', $err);
                             $errors[] = 'Fallo en la operación. ' . $txt_errors;
-                            $log_text = "El admin %s ha fallado al solicitar la cancelación del cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores: $txt_errors";
+                            $log_text = Text::_("El admin %s ha fallado al solicitar la cancelación del cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores:") . $txt_errors;
                         }
                         break;
                     case 'cash':
                         if ($invest->cancel()) {
-                            $log_text = "El admin %s ha cancelado aporte manual de %s de %s (id: %s) al proyecto %s del dia %s";
+                            $log_text = Text::_("El admin %s ha cancelado aporte manual de %s de %s (id: %s) al proyecto %s del dia %s");
                             $errors[] = 'Aporte cancelado';
                         } else{
-                            $log_text = "El admin %s ha fallado al cancelar el aporte manual de %s de %s (id: %s) al proyecto %s del dia %s. ";
+                            $log_text = Text::_("El admin %s ha fallado al cancelar el aporte manual de %s de %s (id: %s) al proyecto %s del dia %s. ");
                             $errors[] = 'Fallo al cancelar el aporte';
                         }
                         break;
@@ -407,11 +407,11 @@ namespace Goteo\Controller\Admin {
                         $err = array();
                         if (Paypal::cancelPreapproval($invest, $err)) {
                             $errors[] = 'Preaproval paypal cancelado.';
-                            $log_text = "El admin %s ha cancelado aporte y preapproval de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s";
+                            $log_text = Text::_("El admin %s ha cancelado aporte y preapproval de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s");
                         } else {
                             $txt_errors = implode('; ', $err);
                             $errors[] = 'Fallo al cancelar el preapproval en paypal: ' . $txt_errors;
-                            $log_text = "El admin %s ha fallado al cancelar el aporte de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores: $txt_errors";
+                            $log_text = Text::_("El admin %s ha fallado al cancelar el aporte de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores:") . $txt_errors;
                             if ($invest->cancel()) {
                                 $errors[] = 'Aporte cancelado';
                             } else{
@@ -424,19 +424,19 @@ namespace Goteo\Controller\Admin {
                         if (Tpv::cancelPreapproval($invest, $err)) {
                             $txt_errors = implode('; ', $err);
                             $errors[] = 'Aporte cancelado correctamente. ' . $txt_errors;
-                            $log_text = "El admin %s ha anulado el cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s";
+                            $log_text = Text::_("El admin %s ha anulado el cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s");
                         } else {
                             $txt_errors = implode('; ', $err);
                             $errors[] = 'Fallo en la operación. ' . $txt_errors;
-                            $log_text = "El admin %s ha fallado al solicitar la cancelación del cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores: $txt_errors";
+                            $log_text = Text::_("El admin %s ha fallado al solicitar la cancelación del cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores:") . $txt_errors;
                         }
                         break;
                     case 'cash':
                         if ($invest->cancel()) {
-                            $log_text = "El admin %s ha cancelado aporte manual de %s de %s (id: %s) al proyecto %s del dia %s";
+                            $log_text = Text::_("El admin %s ha cancelado aporte manual de %s de %s (id: %s) al proyecto %s del dia %s");
                             $errors[] = 'Aporte cancelado';
                         } else{
-                            $log_text = "El admin %s ha fallado al cancelar el aporte manual de %s de %s (id: %s) al proyecto %s del dia %s. ";
+                            $log_text = Text::_("El admin %s ha fallado al cancelar el aporte manual de %s de %s (id: %s) al proyecto %s del dia %s. ");
                             $errors[] = 'Fallo al cancelar el aporte';
                         }
                         break;
@@ -497,7 +497,7 @@ namespace Goteo\Controller\Admin {
                         $invest->account = $projectAccount->paypal;
                         if (Paypal::pay($invest, $errors)) {
                             $errors[] = 'Cargo paypal correcto';
-                            $log_text = "El admin %s ha ejecutado el cargo a %s por su aporte de %s mediante PayPal (id: %s) al proyecto %s del dia %s";
+                            $log_text = Text::_("El admin %s ha ejecutado el cargo a %s por su aporte de %s mediante PayPal (id: %s) al proyecto %s del dia %s");
                             $invest->status = 1;
                             
                             // si era incidencia la desmarcamos
@@ -510,24 +510,24 @@ namespace Goteo\Controller\Admin {
                         } else {
                             $txt_errors = implode('; ', $errors);
                             $errors[] = 'Fallo al ejecutar cargo paypal: ' . $txt_errors . '<strong>POSIBLE INCIDENCIA NO COMUNICADA Y APORTE NO CANCELADO, HAY QUE TRATARLA MANUALMENTE</strong>';
-                            $log_text = "El admin %s ha fallado al ejecutar el cargo a %s por su aporte de %s mediante PayPal (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores: $txt_errors";
+                            $log_text = Text::_("El admin %s ha fallado al ejecutar el cargo a %s por su aporte de %s mediante PayPal (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores:") . $txt_errors;
                         }
                         break;
                     case 'tpv':
                         if (Tpv::pay($invest, $errors)) {
                             $errors[] = 'Cargo sermepa correcto';
-                            $log_text = "El admin %s ha ejecutado el cargo a %s por su aporte de %s mediante TPV (id: %s) al proyecto %s del dia %s";
+                            $log_text = Text::_("El admin %s ha ejecutado el cargo a %s por su aporte de %s mediante TPV (id: %s) al proyecto %s del dia %s");
                             $invest->status = 1;
                         } else {
                             $txt_errors = implode('; ', $errors);
                             $errors[] = 'Fallo al ejecutar cargo sermepa: ' . $txt_errors;
-                            $log_text = "El admin %s ha fallado al ejecutar el cargo a %s por su aporte de %s mediante TPV (id: %s) al proyecto %s del dia %s <br />Se han dado los siguientes errores: $txt_errors";
+                            $log_text = Text::_("El admin %s ha fallado al ejecutar el cargo a %s por su aporte de %s mediante TPV (id: %s) al proyecto %s del dia %s <br />Se han dado los siguientes errores:") . $txt_errors;
                         }
                         break;
                     case 'cash':
                         $invest->setStatus('1');
                         $errors[] = 'Aporte al contado, nada que ejecutar.';
-                        $log_text = "El admin %s ha dado por ejecutado el aporte manual a nombre de %s por la cantidad de %s (id: %s) al proyecto %s del dia %s";
+                        $log_text = Text::_("El admin %s ha dado por ejecutado el aporte manual a nombre de %s por la cantidad de %s (id: %s) al proyecto %s del dia %s");
                         $invest->status = 1;
                         break;
                 }

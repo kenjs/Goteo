@@ -198,7 +198,7 @@ namespace Goteo\Controller {
                     }
                     $_POST['result'] = 'Transaccion ok';
 
-                    $log_text = "%s ha aportado %s al proyecto %s mediante TPV";
+                    $log_text = Text::_("%s ha aportado %s al proyecto %s mediante TPV");
                     $doPublic = true;
 
                     echo '$*$OKY$*$';
@@ -211,7 +211,7 @@ namespace Goteo\Controller {
                     $invest->cancel('ERR '.$Cerr);
                     $_POST['result'] = 'Fail';
 
-                    $log_text = 'Ha habido un <span class="red">ERROR de TPV (Codigo: '.$Cerr.' '.$errTxt.')</span> en el aporte de %s de %s al proyecto %s mediante TPV';
+                    $log_text = Text::_('Ha habido un <span class="red">ERROR de TPV (Codigo: ').$Cerr.' '.$errTxt.Text::_(')</span> en el aporte de %s de %s al proyecto %s mediante TPV');
                     $doPublic = false;
                 }
 

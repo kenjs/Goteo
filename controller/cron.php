@@ -197,13 +197,13 @@ namespace Goteo\Controller {
                         $cancelAll = true;
                         $errors = array();
                         if ($project->fail($errors)) {
-                            $log_text = 'El proyecto %s ha %s obteniendo %s';
+                            $log_text = Text::_('El proyecto %s ha %s obteniendo %s');
                         } else {
                             @mail(\GOTEO_FAIL_MAIL,
                                 'Fallo al archivar ' . SITE_URL,
                                 'Fallo al marcar el proyecto '.$project->name.' como archivado ' . implode(',', $errors));
                             echo 'ERROR::' . implode(',', $errors);
-                            $log_text = 'El proyecto %s ha fallado al, %s obteniendo %s';
+                            $log_text = Text::_('El proyecto %s ha fallado al, %s obteniendo %s');
                         }
                         echo '<br />';
                         
@@ -249,13 +249,13 @@ namespace Goteo\Controller {
 
                             $errors = array();
                             if ($project->succeed($errors)) {
-                                $log_text = 'El proyecto %s ha sido %s obteniendo %s';
+                                $log_text = Text::_('El proyecto %s ha sido %s obteniendo %s');
                             } else {
                                 @mail(\GOTEO_FAIL_MAIL,
                                     'Fallo al marcar financiado ' . SITE_URL,
                                     'Fallo al marcar el proyecto '.$project->name.' como financiado ' . implode(',', $errors));
                                 echo 'ERROR::' . implode(',', $errors);
-                                $log_text = 'El proyecto %s ha fallado al ser, %s obteniendo %s';
+                                $log_text = Text::_('El proyecto %s ha fallado al ser, %s obteniendo %s');
                             }
 
                             // Evento Feed y mails solo si ejecucion automatica
@@ -437,27 +437,27 @@ namespace Goteo\Controller {
                                 case 'paypal':
                                     $err = array();
                                     if (Paypal::cancelPreapproval($invest, $err, true)) {
-                                        $log_text = "Se ha cancelado aporte y preapproval de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s";
+                                        $log_text = Text::_("Se ha cancelado aporte y preapproval de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s");
                                     } else {
                                         $txt_errors = implode('; ', $err);
-                                        $log_text = "Ha fallado al cancelar el aporte de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores: $txt_errors";
+                                        $log_text = Text::_("Ha fallado al cancelar el aporte de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores:") . $txt_errors;
                                     }
                                     break;
                                 case 'tpv':
                                     // se habre la operación en optra ventana
                                     $err = array();
                                     if (Tpv::cancelPreapproval($invest, $err, true)) {
-                                        $log_text = "Se ha anulado el cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s";
+                                        $log_text = Text::_("Se ha anulado el cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s");
                                     } else {
                                         $txt_errors = implode('; ', $err);
-                                        $log_text = "Ha fallado al anular el cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores: $txt_errors";
+                                        $log_text = Text::_("Ha fallado al anular el cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores: ") . $txt_errors;
                                     }
                                     break;
                                 case 'cash':
                                     if ($invest->cancel(true)) {
-                                        $log_text = "Se ha cancelado aporte manual de %s de %s (id: %s) al proyecto %s del dia %s";
+                                        $log_text = Text::_("Se ha cancelado aporte manual de %s de %s (id: %s) al proyecto %s del dia %s");
                                     } else{
-                                        $log_text = "Ha fallado al cancelar el aporte manual de %s de %s (id: %s) al proyecto %s del dia %s. ";
+                                        $log_text = Text::_("Ha fallado al cancelar el aporte manual de %s de %s (id: %s) al proyecto %s del dia %s. ");
                                     }
                                     break;
                         }
@@ -497,7 +497,7 @@ namespace Goteo\Controller {
                                     $invest->account = $projectAccount->paypal;
                                     $err = array();
                                     if (Paypal::pay($invest, $err)) {
-                                        $log_text = "Se ha ejecutado el cargo a %s por su aporte de %s mediante PayPal (id: %s) al proyecto %s del dia %s";
+                                        $log_text = Text::_("Se ha ejecutado el cargo a %s por su aporte de %s mediante PayPal (id: %s) al proyecto %s del dia %s");
                                         if ($debug) echo ' -> Ok';
                                         Model\Invest::setDetail($invest->id, 'executed', 'Se ha ejecutado el preapproval, ha iniciado el pago encadenado. Proceso cron/execute');
                                         // si era incidencia la desmarcamos
@@ -816,12 +816,12 @@ namespace Goteo\Controller {
 
                 if (Paypal::doPay($invest, $errors)) {
                     echo 'Aporte (id: '.$invest->id.') pagado al proyecto. Ver los detalles en la <a href="/admin/accounts/details/'.$invest->id.'">gestion de transacciones</a><br />';
-                    $log_text = "Se ha realizado el pago de %s PayPal al proyecto %s por el aporte de %s (id: %s) del dia %s";
+                    $log_text = Text::_("Se ha realizado el pago de %s PayPal al proyecto %s por el aporte de %s (id: %s) del dia %s");
                     Model\Invest::setDetail($invest->id, 'payed', 'Se ha realizado el pago secundario al proyecto. Proceso cron/doPay');
 
                 } else {
                     echo 'Fallo al pagar al proyecto el aporte (id: '.$invest->id.'). Ver los detalles en la <a href="/admin/accounts/details/'.$invest->id.'">gestion de transacciones</a><br />' . implode('<br />', $errors);
-                    $log_text = "Ha fallado al realizar el pago de %s PayPal al proyecto %s por el aporte de %s (id: %s) del dia %s";
+                    $log_text = Text::_("Ha fallado al realizar el pago de %s PayPal al proyecto %s por el aporte de %s (id: %s) del dia %s");
                     Model\Invest::setDetail($invest->id, 'pay-failed', 'Fallo al realizar el pago secundario: ' . implode('<br />', $errors) . '. Proceso cron/doPay');
                 }
 

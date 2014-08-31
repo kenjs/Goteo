@@ -203,7 +203,7 @@ namespace Goteo\Controller\Admin {
 
                             // mensaje de ok y volvemos a la gestion del usuario
 //                            Message::Info('Ha <strong>' . $log_action . '</strong> al usuario <strong>'.$user->name.'</strong> CORRECTAMENTE');
-                            $log_text = 'El admin %s ha %s al usuario %s';
+                            $log_text = Text::_('El admin %s ha %s al usuario %s');
 
                             $onNode = \GOTEO_NODE;
 
@@ -341,9 +341,9 @@ namespace Goteo\Controller\Admin {
                         try {
                             $sql = "UPDATE user SET node = :node WHERE id = :id";
                             if (Model\User::query($sql, $values)) {
-                                $log_text = 'El admin %s ha <span class="red">movido</span> el usuario %s al nodo %s';
+                                $log_text = Text::_('El admin %s ha <span class="red">movido</span> el usuario %s al nodo %s');
                             } else {
-                                $log_text = 'Al admin %s le ha <span class="red">fallado al mover</span> el usuario %s al nodo %s';
+                                $log_text = Text::_('Al admin %s le ha <span class="red">fallado al mover</span> el usuario %s al nodo %s');
                             }
                             // Evento Feed
                             $log = new Feed();

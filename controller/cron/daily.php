@@ -316,17 +316,17 @@ namespace Goteo\Controller\Cron {
                 $doFeed = false;
                 switch ($days) {
                     case 7:
-                        $log_text = 'Falta una semana para que acabe la convocatoria %s';
+                        $log_text = Text::_('Falta una semana para que acabe la convocatoria %s');
                         $log_text_public = 'Falta una semana para que se cierre la aplicación de proyectos';
                         $doFeed = true;
                         break;
                     case 3:
-                        $log_text = 'Faltan 3 dias para que acabe la convocatoria %s';
+                        $log_text = Text::_('Faltan 3 dias para que acabe la convocatoria %s');
                         $log_text_public = 'Faltan 3 dias para que se cierre la aplicación de proyectos';
                         $doFeed = true;
                         break;
                     case 1:
-                        $log_text = 'Ultimo día para la convocatoria %s';
+                        $log_text = Text::_('Ultimo día para la convocatoria %s');
                         $log_text_public = 'Hoy es el último día para aplicar proyectos!';
                         $doFeed = true;
                         break;

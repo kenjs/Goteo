@@ -377,7 +377,7 @@ namespace Goteo\Controller {
                 $log->title = 'Aporte PayPal';
                 $log->url = '/admin/invests';
                 $log->type = 'money';
-                $log_text = "%s ha aportado %s al proyecto %s mediante PayPal";
+                $log_text = Text::_("%s ha aportado %s al proyecto %s mediante PayPal");
                 $items = array(
                     Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
                     Feed::item('money', $confirm->amount.' &euro;'),
