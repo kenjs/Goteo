@@ -21,7 +21,8 @@
 
 namespace Goteo\Model\User {
 
-    use Goteo\Model;
+    use Goteo\Model,
+        Goteo\Library\Text;
 
     class Review extends \Goteo\Core\Model {
 
