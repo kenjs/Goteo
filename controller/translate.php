@@ -331,7 +331,7 @@ namespace Goteo\Controller {
                     if ($action == 'edit' && $_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['save'])) {
 
                         if (!in_array($table, \array_keys(Content::_tables()))) {
-                            $errors[] = "Tabla $table desconocida";
+                            $errors[] = Text::_("Tabla ") . $table . Text::_(" desconocida");
                             break;
                         }
 
