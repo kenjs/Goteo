@@ -151,7 +151,7 @@ namespace Goteo\Library {
 
                 return $mailing;
             } catch(\PDOException $e) {
-                $errors[] = "HA FALLADO!!" . $e->getMessage();
+                $errors[] = Text::_("HA FALLADO!!") . $e->getMessage();
                 return false;
             }
         }

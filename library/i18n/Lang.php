@@ -83,7 +83,7 @@ namespace Goteo\Library\i18n {
 				return true;
 			}
 			else {
-				$errors[] = 'Error al insertar los datos ' . \trace($data);
+				$errors[] = Text::_('Error al insertar los datos ') . \trace($data);
 				return false;
 			}
 		}

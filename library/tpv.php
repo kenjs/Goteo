@@ -22,6 +22,7 @@ namespace Goteo\Library {
 
     use Goteo\Model\Invest,
         Goteo\Model\Project,
+        Goteo\Library\Text,
         Goteo\Core\Redirection;
 
 // this library depends on bank system. Contact us for development services or make it work somehow.
@@ -39,7 +40,7 @@ namespace Goteo\Library {
 
         public static function pay($invest, &$errors = array()) {
             if (\GOTEO_FREE) {
-                $errors[] = 'Bank not implemented. Contact us for development services or make it work somehow';
+                $errors[] = Text::_('Bank not implemented. Contact us for development services or make it work somehow');
                 return false;
             }
 
@@ -77,7 +78,7 @@ namespace Goteo\Library {
 			}
 			catch(Exception $ex) {
                 Invest::setDetail($invest->id, 'tpv-conection-fail', 'Ha fallado la comunicacion con el tpv. Proceso libary/tpv::pay');
-                $errors[] = 'Error fatal en la comunicacion con el TPV, se ha reportado la incidencia. Disculpe las molestias.';
+                $errors[] = Text::_('Error fatal en la comunicacion con el TPV, se ha reportado la incidencia. Disculpe las molestias.');
                 @mail(\GOTEO_FAIL_MAIL, 'Error fatal en comunicacion TPV Sermepa', 'ERROR en ' . __FUNCTION__ . '<br />' . $ex->getMessage());
                 return false;
 			}
@@ -89,7 +90,7 @@ namespace Goteo\Library {
         }
         public static function cancelPay($invest, &$errors = array(), $fail = false) {
             if (\GOTEO_FREE) {
-                $errors[] = 'Bank not implemented. Contact us for development services or make it work somehow';
+                $errors[] = Text::_('Bank not implemented. Contact us for development services or make it work somehow');
                 return false;
             }
 
@@ -105,7 +106,7 @@ namespace Goteo\Library {
 			}
 			catch(Exception $ex) {
                 Invest::setDetail($invest->id, 'tpv-cancel-conection-fail', 'Ha fallado la comunicacion con el tpv al anular la operacion. Proceso libary/tpv::cancelPay');
-                $errors[] = 'Error fatal en la comunicación con el TPV, se ha reportado la incidencia. Disculpe las molestias.';
+                $errors[] = Text::_('Error fatal en la comunicación con el TPV, se ha reportado la incidencia. Disculpe las molestias.');
                 @mail(\GOTEO_FAIL_MAIL, 'Error fatal en comunicacion TPV Sermepa', 'ERROR en ' . __FUNCTION__ . '<br /><pre>' . print_r($handler, 1) . '</pre>');
                 return false;
 			}

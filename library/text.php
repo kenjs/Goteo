@@ -293,7 +293,7 @@ namespace Goteo\Library {
 			if (Model::query($sql, array(':text' => $data['text'], ':id' => $data['id'], ':lang' => $data['lang']))) {
 				return true;
 			} else {
-				$errors[] = 'Error al insertar los datos <pre>' . print_r($data, 1) . '</pre>';
+				$errors[] = Text::_('Error al insertar los datos <pre>') . print_r($data, 1) . '</pre>';
 				return false;
 			}
 		}
@@ -315,7 +315,7 @@ namespace Goteo\Library {
 			if (Model::query($sql, array(':text' => $data['text'], ':id' => $data['id']))) {
 				return true;
 			} else {
-				$errors[] = 'Error al insertar los datos <pre>' . print_r($data, 1) . '</pre>';
+				$errors[] = Text::_('Error al insertar los datos <pre>') . print_r($data, 1) . '</pre>';
 				return false;
 			}
 		}

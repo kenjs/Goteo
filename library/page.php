@@ -21,6 +21,7 @@
 namespace Goteo\Library {
 
 	use Goteo\Core\Model,
+        Goteo\Library\Text,
         Goteo\Core\Exception;
 
 	/*
@@ -158,22 +159,22 @@ namespace Goteo\Library {
             $allok = true;
 
             if (empty($this->id)) {
-                $errors[] = 'Registro sin id';
+                $errors[] = Text::_('Registro sin id');
                 $allok = false;
             }
 
             if (empty($this->lang)) {
-                $errors[] = 'Registro sin lang';
+                $errors[] = Text::_('Registro sin lang');
                 $allok = false;
             }
 
             if (empty($this->node)) {
-                $errors[] = 'Registro sin node';
+                $errors[] = Text::_('Registro sin node');
                 $allok = false;
             }
 
             if (empty($this->name)) {
-                $errors[] = 'Registro sin nombre';
+                $errors[] = Text::_('Registro sin nombre');
                 $allok = false;
             }
 
@@ -204,12 +205,12 @@ namespace Goteo\Library {
 				if (Model::query($sql, $values)) {
                     return true;
                 } else {
-                    $errors[] = "Ha fallado $sql con <pre>" . print_r($values, 1) . "</pre>";
+                    $errors[] = Text::_("Ha fallado ") . $sql . Text::_('con') . " <pre>" . print_r($values, 1) . "</pre>";
                     return false;
                 }
                 
 			} catch(\PDOException $e) {
-                $errors[] = 'Error sql al grabar el contenido de la pagina. ' . $e->getMessage();
+                $errors[] = Text::_('Error sql al grabar el contenido de la pagina. ') . $e->getMessage();
                 return false;
 			}
 
@@ -235,12 +236,12 @@ namespace Goteo\Library {
 				if (Model::query($sql, $values)) {
                     return true;
                 } else {
-                    $errors[] = "Ha fallado $sql con <pre>" . print_r($values, 1) . "</pre>";
+                    $errors[] = Text::_("Ha fallado ") . $sql . Text::_('con') . " <pre>" . print_r($values, 1) . "</pre>";
                     return false;
                 }
 
 			} catch(\PDOException $e) {
-                $errors[] = 'Error sql al grabar el contenido de la pagina. ' . $e->getMessage();
+                $errors[] = Text::_('Error sql al grabar el contenido de la pagina. ') . $e->getMessage();
                 return false;
 			}
 
@@ -270,12 +271,12 @@ namespace Goteo\Library {
 				if (Model::query($sql, $values)) {
                     return true;
                 } else {
-                    $errors[] = "Ha fallado $sql con <pre>" . print_r($values, 1) . "</pre>";
+                    $errors[] = Text::_("Ha fallado ") . $sql . Text::_('con') . " <pre>" . print_r($values, 1) . "</pre>";
                     return false;
                 }
 
 			} catch(\PDOException $e) {
-                $errors[] = 'Error sql al grabar el contenido de la pagina. ' . $e->getMessage();
+                $errors[] = Text::_('Error sql al grabar el contenido de la pagina. ') . $e->getMessage();
                 return false;
 			}
 

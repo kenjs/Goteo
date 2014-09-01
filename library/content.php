@@ -311,11 +311,11 @@ namespace Goteo\Library {
             $fields = static::_fields();
 
             if (empty($data)) {
-                $errors[] = "Sin datos";
+                $errors[] = Text::_("Sin datos");
                 return false;
             }
             if (empty($data['lang']) || $data['lang'] == 'original') {
-                $errors[] = "No se peude traducir el contenido original, seleccionar un idioma para traducir";
+                $errors[] = Text::_("No se peude traducir el contenido original, seleccionar un idioma para traducir");
                 return false;
             }
 
@@ -341,12 +341,12 @@ namespace Goteo\Library {
 				if (Model::query($sql, $values)) {
                     return true;
                 } else {
-                    $errors[] = "Ha fallado $sql con <pre>" . print_r($values, 1) . "</pre>";
+                    $errors[] = Text::_("Ha fallado ") . $sql . Text::_('con') . " <pre>" . print_r($values, 1) . "</pre>";
                     return false;
                 }
                 
 			} catch(\PDOException $e) {
-                $errors[] = 'Error sql al grabar el contenido multiidioma. ' . $e->getMessage();
+                $errors[] = Text::_('Error sql al grabar el contenido multiidioma. ') . $e->getMessage();
                 return false;
 			}
 

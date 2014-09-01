@@ -97,11 +97,11 @@ namespace Goteo\Library {
 		public static function save($data, &$errors = array()) {
 
             if (empty($data)) {
-                $errors[] = "Sin datos";
+                $errors[] = Text::_("Sin datos");
                 return false;
             }
             if (empty($data['name']) || empty($data['amount']) || empty($data['id'])) {
-                $errors[] = "No se guardar sin nombre y cantidad";
+                $errors[] = Text::_("No se guardar sin nombre y cantidad");
                 return false;
             }
 
@@ -116,12 +116,13 @@ namespace Goteo\Library {
 				if (Model::query($sql, $values)) {
                     return true;
                 } else {
-                    $errors[] = "Ha fallado $sql con <pre>" . print_r($values, 1) . "</pre>";
+                                        $errors[] = Text::_("Ha fallado ") . $sql . Text::_('con') . " <pre>" . print_r($values, 1) . "</pre>";
+
                     return false;
                 }
 
 			} catch(\PDOException $e) {
-                $errors[] = 'Error sql al grabar el nivel de meritocracia. ' . $e->getMessage();
+                $errors[] = Text::_('Error sql al grabar el nivel de meritocracia. ') . $e->getMessage();
                 return false;
 			}
 

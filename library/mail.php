@@ -23,6 +23,7 @@ namespace Goteo\Library {
 
 	use Goteo\Core\Model,
         Goteo\Core\Exception,
+        Goteo\Library\Text,
         Goteo\Core\View;
 
     class Mail {
@@ -159,12 +160,12 @@ namespace Goteo\Library {
                     if ($mail->Send($errors)) {
                         return true;
                     } else {
-                        $errors[] = 'Fallo del servidor de correo interno';
+                        $errors[] = Text::_('Fallo del servidor de correo interno');
                         return false;
                     }
 
             	} catch(\PDOException $e) {
-                    $errors[] = "No se ha podido enviar el mensaje: " . $e->getMessage();
+                    $errors[] = Text::_("No se ha podido enviar el mensaje: ") . $e->getMessage();
                     return false;
     			} catch(phpmailerException $e) {
     			    $errors[] = $e->getMessage();

@@ -177,12 +177,13 @@ namespace Goteo\Library {
 				if (Model::query($sql, $values)) {
                     return true;
                 } else {
-                    $errors[] = "Ha fallado $sql con <pre>" . print_r($values, 1) . "</pre>";
+                                        $errors[] = Text::_("Ha fallado ") . $sql . Text::_('con') . " <pre>" . print_r($values, 1) . "</pre>";
+
                     return false;
                 }
                 
 			} catch(\PDOException $e) {
-                $errors[] = 'Error sql al grabar el contenido de la palntilla. ' . $e->getMessage();
+                $errors[] = Text::_('Error sql al grabar el contenido de la palntilla. ') . $e->getMessage();
                 return false;
 			}
 
