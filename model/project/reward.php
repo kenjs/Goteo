@@ -21,6 +21,7 @@
 namespace Goteo\Model\Project {
 
     use \Goteo\Model\Icon,
+        \Goteo\Library\Text,
         \Goteo\Model\License;
 
     class Reward extends \Goteo\Core\Model {
@@ -117,7 +118,7 @@ namespace Goteo\Model\Project {
         public function validate(&$errors = array()) {
             // Estos son errores que no permiten continuar
             if (empty($this->project))
-                $errors[] = 'No hay proyecto al que asignar la recompensa/rettorno';
+                $errors[] = Text::_('No hay proyecto al que asignar la recompensa/rettorno');
             //Text::get('validate-reward-noproject');
             /*
               if (empty($this->reward))
@@ -169,7 +170,7 @@ namespace Goteo\Model\Project {
                     $this->id = self::insertId();
                 return true;
             } catch (\PDOException $e) {
-                $errors[] = "El retorno {$this->reward} no se ha grabado correctamente. Por favor, revise los datos." . $e->getMessage();
+                $errors[] = Text::_("El retorno ") . $this->reward . Text::_(" no se ha grabado correctamente. Por favor, revise los datos.") . $e->getMessage();
                 return false;
             }
         }
@@ -200,7 +201,7 @@ namespace Goteo\Model\Project {
 
                 return true;
             } catch (\PDOException $e) {
-                $errors[] = "El retorno {$this->reward} no se ha grabado correctamente. Por favor, revise los datos." . $e->getMessage();
+                $errors[] = Text::_("El retorno ") . $this->reward . Text::_(" no se ha grabado correctamente. Por favor, revise los datos.") . $e->getMessage();
                 return false;
             }
         }
@@ -223,7 +224,7 @@ namespace Goteo\Model\Project {
                 self::query("DELETE FROM reward WHERE id = :id AND project = :project", $values);
                 return true;
             } catch (\PDOException $e) {
-                $errors[] = 'No se ha podido quitar el retorno ' . $this->id . '. ' . $e->getMessage();
+                $errors[] = Text::_('No se ha podido quitar el retorno ') . $this->id . '. ' . $e->getMessage();
                 //Text::get('remove-reward-fail');
                 return false;
             }

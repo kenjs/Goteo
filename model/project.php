@@ -227,7 +227,7 @@ namespace Goteo\Model {
 
                 return $this->id;
             } catch (\PDOException $e) {
-                $errors[] = "ERROR al crear un nuevo proyecto<br />$sql<br /><pre>" . print_r($values, 1) . "</pre>";
+                $errors[] = Text::_("ERROR al crear un nuevo proyecto") . "<br />$sql<br /><pre>" . print_r($values, 1) . "</pre>";
                 \trace($this);
                 die($errors[0]);
                 return false;
@@ -1577,7 +1577,7 @@ namespace Goteo\Model {
                 self::query("ROLLBACK");
 				$sql = "UPDATE project SET status = :status WHERE id = :id";
 				self::query($sql, array(':status'=>0, ':id'=>$this->id));
-                $errors[] = "Fallo en la transaccion, el proyecto ha quedado como descartado";
+                $errors[] = Text::_("Fallo en la transaccion, el proyecto ha quedado como descartado");
                 return false;
             }
         }

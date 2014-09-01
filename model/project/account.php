@@ -20,6 +20,8 @@
 
 namespace Goteo\Model\Project {
 
+    use Goteo\Library\Text;
+
     class Account extends \Goteo\Core\Model {
 
         public
@@ -57,7 +59,7 @@ namespace Goteo\Model\Project {
 		public function validate(&$errors = array()) {
             // Estos son errores que no permiten continuar
             if (empty($this->project)) {
-                $errors[] = 'No hay ningun proyecto al que asignar cuentas';
+                $errors[] = Text::_('No hay ningun proyecto al que asignar cuentas');
                 //Text::get('validate-account-noproject');
                 return false;
             }
@@ -74,7 +76,7 @@ namespace Goteo\Model\Project {
 				self::query($sql, $values);
 				return true;
 			} catch(\PDOException $e) {
-				$errors[] = "Las cuentas no se han asignado correctamente. Por favor, revise los datos." . $e->getMessage();
+				$errors[] = Text::_("Las cuentas no se han asignado correctamente. Por favor, revise los datos.") . $e->getMessage();
                 return false;
 			}
 

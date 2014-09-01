@@ -101,7 +101,7 @@ namespace Goteo\Model\User {
                 self::query("DELETE FROM user_review WHERE review = :review AND user = :user", $values);
 				return true;
 			} catch(\PDOException $e) {
-                $errors[] = 'No se ha podido desasignar la revision ' . $this->id . ' del usuario ' . $this->user . ' ' . $e->getMessage();
+                $errors[] = Text::_('No se ha podido desasignar la revision ') . $this->id . Text::_(' del usuario ') . $this->user . ' ' . $e->getMessage();
                 return false;
 			}
 		}
@@ -123,7 +123,7 @@ namespace Goteo\Model\User {
 
 				return true;
 			} catch(\PDOException $e) {
-                $errors[] = 'No se ha podido marcar la revision ' . $this->id . ' del usuario ' . $this->user . ' como lista. ' . $e->getMessage();
+                $errors[] = Text::_('No se ha podido marcar la revision ') . $this->id . Text::_(' del usuario ') . $this->user . Text::_(' como lista. ') . $e->getMessage();
                 return false;
 			}
 		}
@@ -145,7 +145,7 @@ namespace Goteo\Model\User {
 
 				return true;
 			} catch(\PDOException $e) {
-                $errors[] = 'No se ha podido reabrir la revision ' . $this->id . ' del usuario ' . $this->user . '. ' . $e->getMessage();
+                $errors[] = Text::_('No se ha podido reabrir la revision ') . $this->id . Text::_(' del usuario ') . $this->user . '. ' . $e->getMessage();
                 return false;
 			}
 		}
@@ -316,7 +316,7 @@ namespace Goteo\Model\User {
                 return $query->fetchObject();
 
             } catch(\PDOException $e) {
-                $errors[] = "No se ha aplicado la puntuacion. " . $e->getMessage();
+                $errors[] = Text::_("No se ha aplicado la puntuacion. ") . $e->getMessage();
                 return false;
             }
         }

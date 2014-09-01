@@ -128,7 +128,7 @@ namespace Goteo\Model\User {
                 self::query("DELETE FROM user_skill WHERE skill = :skill AND user = :user", $values);
 				return true;
 			} catch(\PDOException $e) {
-                $errors[] = 'No se ha podido quitar el interes ' . $this->id . ' del usuario ' . $this->user . ' ' . $e->getMessage();
+                $errors[] = Text::_('No se ha podido quitar el interes ') . $this->id . Text::_(' del usuario ') . $this->user . ' ' . $e->getMessage();
                 //Text::get('remove-skill-fail');
                 return false;
 			}

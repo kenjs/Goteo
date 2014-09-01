@@ -25,6 +25,7 @@ namespace Goteo\Model {
         Goteo\Model\Project,
         Goteo\Model\User,
         Goteo\Model\Node,
+        Goteo\Library\Text,
         Goteo\Library\Check;
 
     class Post extends \Goteo\Core\Model {
@@ -386,7 +387,7 @@ namespace Goteo\Model {
             }
 
             if ($set == '') {
-                $errors[] = 'Sin datos';
+                $errors[] = Text::_('Sin datos');
                 return false;
             }
 
@@ -396,7 +397,7 @@ namespace Goteo\Model {
 
                 return true;
             } catch(\PDOException $e) {
-                $errors[] = "Ha fallado!!! " . $e->getMessage();
+                $errors[] = Text::_("Ha fallado!!! ") . $e->getMessage();
                 return false;
             }
         }

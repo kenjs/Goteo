@@ -20,6 +20,8 @@
 
 namespace Goteo\Model\Blog\Post {
 
+    use Goteo\Library\Text;
+
     class Tag extends \Goteo\Core\Model {
 
         public
@@ -117,7 +119,7 @@ namespace Goteo\Model\Blog\Post {
 
         public function validate (&$errors = array()) { 
             if (empty($this->name))
-                $errors[] = 'Falta nombre';
+                $errors[] = Text::_('Falta nombre');
                 //Text::get('validate-tag-name');
 
             if (empty($errors))

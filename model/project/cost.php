@@ -81,7 +81,7 @@ namespace Goteo\Model\Project {
 		public function validate(&$errors = array()) {
             // Estos son errores que no permiten continuar
             if (empty($this->project))
-                $errors[] = 'No hay proyecto al que asignar el coste';
+                $errors[] = Text::_('No hay proyecto al que asignar el coste');
                 //Text::get('validate-cost-noproject');
 /*
             if (empty($this->cost))
@@ -136,7 +136,7 @@ namespace Goteo\Model\Project {
             	if (empty($this->id)) $this->id = self::insertId();
 				return true;
 			} catch(\PDOException $e) {
-                $errors[] = "El coste {$this->cost} no se ha grabado correctamente. Por favor, revise los datos." . $e->getMessage();
+                $errors[] = Text::_("El coste ") . $this->cost . Text::_(" no se ha grabado correctamente. Por favor, revise los datos.") . $e->getMessage();
                 return false;
 			}
 		}
@@ -165,7 +165,7 @@ namespace Goteo\Model\Project {
             	
 				return true;
 			} catch(\PDOException $e) {
-                $errors[] = "El coste {$this->cost} no se ha grabado correctamente. Por favor, revise los datos." . $e->getMessage();
+                $errors[] = Text::_("El coste ") . $this->cost . Text::_(" no se ha grabado correctamente. Por favor, revise los datos.") . $e->getMessage();
                 return false;
 			}
 		}
@@ -188,7 +188,7 @@ namespace Goteo\Model\Project {
                 self::query("DELETE FROM cost WHERE id = :id AND project = :project", $values);
 				return true;
 			} catch (\PDOException $e) {
-                $errors[] = 'No se ha podido quitar el coste del proyecto ' . $this->project . ' ' . $e->getMessage();
+                $errors[] = Text::_('No se ha podido quitar el coste del proyecto ') . $this->project . ' ' . $e->getMessage();
                 //Text::get('remove-cost-fail');
                 return false;
 			}

@@ -73,7 +73,7 @@ namespace Goteo\Model\Project {
 		public function validate(&$errors = array()) {
             // Estos son errores que no permiten continuar
             if (empty($this->project))
-                $errors[] = 'No hay proyecto al que asignar la colaboración';
+                $errors[] = Text::_('No hay proyecto al que asignar la colaboración');
                 //Text::get('validate-collaboration-noproject');
 /*
             if (empty($this->support))
@@ -122,7 +122,7 @@ namespace Goteo\Model\Project {
     			if (empty($this->id)) $this->id = self::insertId();
 				return true;
 			} catch(\PDOException $e) {
-				$errors[] = "La colaboración {$data['support']} no se ha grabado correctamente. Por favor, revise los datos." . $e->getMessage();
+                $errors[] = Text::_("La colaboración ") . $data['support'] . Text::_(" no se ha grabado correctamente. Por favor, revise los datos.") . $e->getMessage();
                 return false;
 			}
 		}
@@ -150,7 +150,7 @@ namespace Goteo\Model\Project {
     			
 				return true;
 			} catch(\PDOException $e) {
-				$errors[] = "La colaboración {$data['support']} no se ha grabado correctamente. Por favor, revise los datos." . $e->getMessage();
+                $errors[] = Text::_("La colaboración ") . $data['support'] . Text::_(" no se ha grabado correctamente. Por favor, revise los datos.") . $e->getMessage();
                 return false;
 			}
 		}
@@ -178,7 +178,7 @@ namespace Goteo\Model\Project {
 
 				return true;
 			} catch (\PDOException $e) {
-                $errors[] = 'No se ha podido quitar la colaboracion del proyecto ' . $this->project . ' ' . $e->getMessage();
+                $errors[] = Text::_('No se ha podido quitar la colaboracion del proyecto ') . $this->project . ' ' . $e->getMessage();
                 //Text::get('remove-collaboration-fail');
                 return false;
 			}

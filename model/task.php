@@ -20,6 +20,7 @@
 
 namespace Goteo\Model {
 
+    use Goteo\Library\Text;
     class Task extends \Goteo\Core\Model {
 
         public
@@ -122,7 +123,7 @@ namespace Goteo\Model {
                 self::query($sql, $values);
                 return true;
             } catch (\PDOException $e) {
-                $errors[] = "HA FALLADO!!! " . $e->getMessage();
+                $errors[] = Text::_("HA FALLADO!!! ") . $e->getMessage();
                 return false;
             }
         }
@@ -169,11 +170,11 @@ namespace Goteo\Model {
                 if (self::query($sql, $values)) {
                     return true;
                 } else {
-                    $errors[] = 'Algo ha fallado';
+                    $errors[] = Text::_('Algo ha fallado');
                     return false;
                 }
             } catch (\PDOException $e) {
-                $errors[] = "HA FALLADO!!! " . $e->getMessage();
+                $errors[] = Text::_("HA FALLADO!!! ") . $e->getMessage();
                 return false;
             }
         }
@@ -190,11 +191,11 @@ namespace Goteo\Model {
                 if (self::query($sql, $values)) {
                     return true;
                 } else {
-                    $errors[] = 'Algo ha fallado';
+                    $errors[] = Text::_('Algo ha fallado');
                     return false;
                 }
             } catch (\PDOException $e) {
-                $errors[] = "HA FALLADO!!! " . $e->getMessage();
+                $errors[] = Text::_("HA FALLADO!!! ") . $e->getMessage();
                 return false;
             }
         }

@@ -20,6 +20,7 @@
 
 
 namespace Goteo\Model\Project {
+    use Goteo\Library\Text;
 
     class Skill extends \Goteo\Core\Model {
 
@@ -126,11 +127,11 @@ namespace Goteo\Model\Project {
 		public function validate(&$errors = array()) {
             // Estos son errores que no permiten continuar
             if (empty($this->id))
-                $errors[] = 'No hay ninguna skill para guardar';
+                $errors[] = Text::_('No hay ninguna skill para guardar');
                 //Text::get('validate-skill-empty');
 
             if (empty($this->project))
-                $errors[] = 'No hay ningun proyecto al que asignar';
+                $errors[] = Text::_('No hay ningun proyecto al que asignar');
                 //Text::get('validate-skill-noproject');
 
             //cualquiera de estos errores hace fallar la validación
@@ -149,7 +150,7 @@ namespace Goteo\Model\Project {
 				self::query($sql, $values);
 				return true;
 			} catch(\PDOException $e) {
-				$errors[] = "La skill {$skill} no se ha asignado correctamente. Por favor, revise los datos." . $e->getMessage();
+				$errors[] = Text::_("La skill") . $skill .  Text::_("no se ha asignado correctamente. Por favor, revise los datos.") . $e->getMessage();
                 return false;
 			}
 
@@ -173,7 +174,7 @@ namespace Goteo\Model\Project {
                 self::query("DELETE FROM project_skill WHERE skill = :skill AND project = :project", $values);
 				return true;
 			} catch(\PDOException $e) {
-				$errors[] = 'No se ha podido quitar la skill ' . $this->id . ' del proyecto ' . $this->project . ' ' . $e->getMessage();
+				$errors[] = Text::_('No se ha podido quitar la skill ') . $this->id . Text::_(' del proyecto ') . $this->project . ' ' . $e->getMessage();
                 //Text::get('remove-skill-fail');
                 return false;
 			}

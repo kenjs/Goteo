@@ -21,6 +21,8 @@
 
 namespace Goteo\Model\Project {
 
+    use Goteo\Library\Text;
+
     class Category extends \Goteo\Core\Model {
 
         public
@@ -126,11 +128,11 @@ namespace Goteo\Model\Project {
 		public function validate(&$errors = array()) {
             // Estos son errores que no permiten continuar
             if (empty($this->id))
-                $errors[] = 'No hay ninguna categoria para guardar';
+                $errors[] = Text::_('No hay ninguna categoria para guardar');
                 //Text::get('validate-category-empty');
 
             if (empty($this->project))
-                $errors[] = 'No hay ningun proyecto al que asignar';
+                $errors[] = Text::_('No hay ningun proyecto al que asignar');
                 //Text::get('validate-category-noproject');
 
             //cualquiera de estos errores hace fallar la validación
@@ -149,7 +151,7 @@ namespace Goteo\Model\Project {
 				self::query($sql, $values);
 				return true;
 			} catch(\PDOException $e) {
-				$errors[] = "La categoria {$category} no se ha asignado correctamente. Por favor, revise los datos." . $e->getMessage();
+				$errors[] = Text::_("La categoria") . $category . Text::_(" no se ha asignado correctamente. Por favor, revise los datos.") . $e->getMessage();
                 return false;
 			}
 
@@ -173,7 +175,7 @@ namespace Goteo\Model\Project {
                 self::query("DELETE FROM project_category WHERE category = :category AND project = :project", $values);
 				return true;
 			} catch(\PDOException $e) {
-				$errors[] = 'No se ha podido quitar la categoria ' . $this->id . ' del proyecto ' . $this->project . ' ' . $e->getMessage();
+				$errors[] = Text::_('No se ha podido quitar la categoria ') . $this->id . ' del proyecto ' . $this->project . ' ' . $e->getMessage();
                 //Text::get('remove-category-fail');
                 return false;
 			}

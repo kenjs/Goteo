@@ -353,7 +353,7 @@ namespace Goteo\Model {
                 if (empty($this->id)) {
                     $this->id = self::insertId();
                     if (empty($this->id)) {
-                        $errors[] = 'No ha conseguido Id de aporte';
+                        $errors[] = Text::_('No ha conseguido Id de aporte');
                         return false;
                     }
 
@@ -435,7 +435,7 @@ namespace Goteo\Model {
 
             } catch (\PDOException $e) {
                 self::query("ROLLBACK");
-                $errors[] = "Envíanos esto: <br />" . $e->getMessage();
+                $errors[] = Text::_("Envíanos esto: <br />") . $e->getMessage();
                 return false;
             }
         }

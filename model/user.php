@@ -544,7 +544,7 @@ namespace Goteo\Model {
 
                 return true;
             } catch(\PDOException $e) {
-                $errors[] = "HA FALLADO!!! " . $e->getMessage();
+                $errors[] = Text::_("HA FALLADO!!! ") . $e->getMessage();
                 return false;
             }
 

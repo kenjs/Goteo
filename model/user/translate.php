@@ -21,6 +21,7 @@
 namespace Goteo\Model\User {
 
     use Goteo\Core\ACL,
+        Goteo\Library\Text,
         Goteo\Model;
 
     class Translate extends \Goteo\Core\Model {
@@ -179,7 +180,7 @@ namespace Goteo\Model\User {
 		public function validate(&$errors = array()) {
             // Estos son errores que no permiten continuar
             if (empty($this->type) || !in_array($this->type, self::$types))
-                $errors[] = 'No hay tipo de contenido o no el tipo no esta habilitado';
+                $errors[] = Text::_('No hay tipo de contenido o no el tipo no esta habilitado');
 
             if (empty($this->id))
                 $errors[] = Text::_('No hay una traducción para asignar');
@@ -209,7 +210,7 @@ namespace Goteo\Model\User {
                     ACL::allow('/translate/'.$this->type.'/'.$this->item.'/*', '*', 'translator', $this->user);
     				return true;
                 } else {
-                    $errors[] = 'No se ha creado el registro `user_translate`';
+                    $errors[] = Text::_('No se ha creado el registro `user_translate`');
                     return false;
                 }
 			} catch(\PDOException $e) {
@@ -262,7 +263,7 @@ namespace Goteo\Model\User {
     				return true;
                 }
 			} catch(\PDOException $e) {
-                $errors[] = 'No se ha podido marcar la traduccion ' . $this->type .':'. $this->item . ' del usuario ' . $this->user . ' como lista. ' . $e->getMessage();
+                $errors[] = Text::_('No se ha podido marcar la traduccion ') . $this->type .':'. $this->item . Text::_(' del usuario ') . $this->user . Text::_(' como lista. ') . $e->getMessage();
                 //Text::get('review-set_ready-fail');
 			}
             
@@ -284,7 +285,7 @@ namespace Goteo\Model\User {
     				return true;
                 }
 			} catch(\PDOException $e) {
-                $errors[] = 'No se ha podido reabrir la traduccion ' . $this->type .':'. $this->item . ' del usuario ' . $this->user . '. ' . $e->getMessage();
+                $errors[] = Text::_('No se ha podido reabrir la traduccion ') . $this->type .':'. $this->item . Text::_(' del usuario ') . $this->user . '. ' . $e->getMessage();
 			}
             
             return false;

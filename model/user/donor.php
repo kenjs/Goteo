@@ -309,7 +309,7 @@ namespace Goteo\Model\User {
                 self::query($sql, $values);
                 return true;
             } catch (\PDOException $e) {
-                $errors[] = "Los datos no se han guardado correctamente. Por favor, revise los datos." . $e->getMessage();
+                $errors[] = Text::_("Los datos no se han guardado correctamente. Por favor, revise los datos.") . $e->getMessage();
                 return false;
             }
 
@@ -326,7 +326,7 @@ namespace Goteo\Model\User {
                     return false;
                 }
             } catch (\PDOException $e) {
-                $errors[] = "Los datos no se han guardado correctamente. Por favor, revise los datos." . $e->getMessage();
+                $errors[] = Text::_("Los datos no se han guardado correctamente. Por favor, revise los datos.") . $e->getMessage();
                 return false;
             }
         }
@@ -344,7 +344,7 @@ namespace Goteo\Model\User {
                     return false;
                 }
             } catch (\PDOException $e) {
-                $errors[] = "Los datos no se han guardado correctamente. Por favor, revise los datos." . $e->getMessage();
+                $errors[] = Text::_("Los datos no se han guardado correctamente. Por favor, revise los datos.") . $e->getMessage();
                 return false;
             }
         }
@@ -365,7 +365,7 @@ namespace Goteo\Model\User {
                     return false;
                 }
             } catch (\PDOException $e) {
-                $errors[] = "Los datos no se han guardado correctamente. Por favor, revise los datos." . $e->getMessage();
+                $errors[] = Text::_("Los datos no se han guardado correctamente. Por favor, revise los datos.") . $e->getMessage();
                 return false;
             }
         }
