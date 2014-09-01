@@ -160,7 +160,6 @@ $pagedResults = new \Paginated($this['projects'], 10, isset($_GET['page']) ? $_G
                     <a href="/admin/invests/?projects=<?php echo $project->id; ?>" title="Ver sus aportes">[<?php echo Text::_("Aportes"); ?>]</a>
                     <?php endif; ?>
                     <a href="/admin/users/?project=<?php echo $project->id; ?>" title="Ver sus cofinanciadores">[<?php echo Text::_("Cofinanciadores"); ?>]</a>
-                    <a href="/admin/projects/report/<?php echo $project->id; ?>" target="_blank">[<?php echo Text::_("Informe Financiacion"); ?>]</a>
                 </td>
             </tr>
             <tr>
