@@ -78,6 +78,15 @@ namespace Goteo\Library {
             $where   = array();
             $values  = array();
 
+            if (!empty($params['skills'])) {
+                $where[] = 'AND id IN (
+                                    SELECT distinct(project)
+                                    FROM project_skill
+                                    WHERE skill IN ('. implode(', ', $params['skills']) . ')
+                                )';
+            }
+
+
             if (!empty($params['category'])) {
                 $where[] = 'AND id IN (
                                     SELECT distinct(project)

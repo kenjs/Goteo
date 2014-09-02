@@ -33,7 +33,6 @@ include 'view/header.html.php' ?>
             </div>
 
         </div>
-
         <div id="main">
             <?php echo new View('view/discover/searcher.html.php',
                                 array('params'     => $this['params'])); ?>

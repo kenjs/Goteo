@@ -63,14 +63,16 @@ include 'view/header.html.php' ?>
             <h2><?php echo Text::html('discover-banner-header') ?></h2>
         </div>
     </div>
-*/?>
+*/
+?>
 
     <div id="main">
         <?php echo new View('view/discover/searcher.html.php',
                             array(
                                 'categories' => $categories,
                                 'locations'  => $locations,
-                                'rewards'    => $rewards
+                                'rewards'    => $rewards,
+                                'skills' => $skills
                             )
             ); ?>
 

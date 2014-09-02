@@ -19,6 +19,7 @@
  */
 
 use Goteo\Model\Category,
+    Goteo\Model\Skill,
     Goteo\Model\Icon,
     Goteo\Library\Location,
     Goteo\Library\Text;
@@ -26,6 +27,8 @@ use Goteo\Model\Category,
 $categories = Category::getList();  // categorias que se usan en proyectos
 $locations = Location::getList();  //localizaciones de royectos
 $rewards = Icon::getList(); // iconos que se usan en proyectos
+
+$skills = Skill::getList(); // スキル取得
 
 $params = $this['params'];
 ?>
@@ -35,6 +38,16 @@ $params = $this['params'];
             <label for="text-query"><?php echo Text::get('discover-searcher-bycontent-header'); ?></label>
             <input type="text" id="text-query" name="query" size="48" value="<?php echo \htmlspecialchars($params['query']); ?>" />
             <br clear="all" />
+        </div>
+
+        <div class="filter">
+            <label for="skills"><?php echo Text::get('discover-searcher-byskill-header'); ?></label>
+            <select id="skills" name="skills[]" multiple size="10">
+                <option class="all" value="all"<?php if (empty($params['skills'])) echo ' selected="selected"'; ?>><?php echo Text::get('discover-searcher-bycategory-all'); ?></option>
+                <?php foreach ($skills as $id=>$name) : ?>
+                    <option value="<?php echo $id; ?>"<?php if (in_array("'{$id}'", $params['skills'])) echo ' selected="selected"'; ?>><?php echo $name; ?></option>
+                <?php endforeach; ?>
+            </select>
         </div>
 
         <div class="filter">

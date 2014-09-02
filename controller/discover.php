@@ -88,7 +88,7 @@ namespace Goteo\Controller {
 			} elseif (($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['searcher']) || !empty($category))) {
 
                 // vamos montando $params con los 3 parametros y las opciones marcadas en cada uno
-                $params = array('category'=>array(), 'location'=>array(), 'reward'=>array());
+                $params = array('skills'=>array(), 'category'=>array(), 'location'=>array(), 'reward'=>array());
 
                 foreach ($params as $param => $empty) {
                     foreach ($_POST[$param] as $key => $value) {
