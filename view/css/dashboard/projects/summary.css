@@ -210,6 +210,7 @@ body.dashboard div#meter-big dl .optimum {
     clear: right;
     margin-right: -40px;
 }
+
 /*body.dashboard div#meter-big dl .minimum span,
 body.dashboard div#meter-big dl .optimum span {
     position: relative;
@@ -293,6 +294,45 @@ body.dashboard div.project div.meter.hor.activable dl dd.minimum > span {
     left: 0;
     text-align: left;
 }*/
+
+
+
+
+body.dashboard div#meter-big dl {
+    width: 420px;
+    height: 100px;
+}
+body.dashboard div#meter-big dl dt.minimum {
+    top: -65px;
+    left: -10px;
+}
+body.dashboard div#meter-big dl dt.minimum span {
+    width: auto;
+}
+body.dashboard div#meter-big dl dd.minimum {
+    left: -10px;
+}
+body.dashboard div#meter-big dl dd.minimum strong {
+    top: -28px;
+}
+body.dashboard div#meter-big dl dt.optimum {
+    width: auto;
+    position: absolute;
+    top: 0;
+    right: 82px;
+}
+body.dashboard div#meter-big dl dd.optimum {
+    width: auto;
+    position: absolute;
+    top: 32px;
+    right: 82px;
+    text-align: right;
+}
+
+
+
+
+
 
 /* Estilos de Obtenido, cofinanciadores, dias */
 body.dashboard div#meter-big dl .reached {

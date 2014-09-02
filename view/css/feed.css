@@ -30,13 +30,26 @@ div.feed .green{color:#20A64B}
 div.subitem{height:auto;overflow:auto;border-bottom:#A7A8AC 1px dashed;padding:10px 5px 10px 0}
 div.subitem.odd{background:#F7F7F7}
 
-div.feed  div.block{border-right: 2px solid #EBEAEB;float: left;margin-right: 11px;overflow: hidden;
-width: 285px;}
-div.feed  div.block.last{border-right:none;padding-right:0;margin-right:0}
-div.feed  div.block > div.item{height:350px;}
-div.feed  div.block > div.item div.subitem{width:260px}
+/*div.feed div.block{border-right: 2px solid #EBEAEB;float: left;margin-right: 11px;overflow: hidden;
+width: 285px;}*/
+div.feed div.block{
+    border-right: 1px dashed #c0c0c0;
+    float: left;
+    margin-right: 11px;
+    overflow: hidden;
+    width: 285px;
+}
+div.feed div.see_more{
+    padding-top: 8px;
+    border-top: 1px dashed #c0c0c0;
+    text-align: right;
+}
+
+div.feed div.block.last{border-right:none;padding-right:0;margin-right:0}
+div.feed div.block > div.item{height:350px;}
+div.feed div.block > div.item div.subitem{width:260px}
 div.subitem > div{height:auto;overflow:auto}
-div.feed  div.block > h4{color:#59595C; padding-bottom:5px;border-bottom:#E95C5C 1px solid;max-width:265px;margin-bottom:5px;}
+div.feed div.block > h4{color:#59595C; padding-bottom:5px;border-bottom:#E95C5C 1px solid;max-width:265px;margin-bottom:5px;}
 div.subitem h5{text-transform:none;margin-bottom:3px;}
 div.subitem h5 a{font-size:1.1em;}
 span.datepub{float:left;display:block;clear:right;color:#A7A8AC;font-size:0.9em;margin-bottom:2px}

@@ -24,10 +24,6 @@ body.project-edit div#main div.project-preview > div > div.overlay {
     cursor: default;
 }
 
-body.project-edit div#main div.project-preview > div > div {
-    
-}
-
 body.project-edit div#main div.project-preview div.widget {
     margin-bottom: 20px;
 }

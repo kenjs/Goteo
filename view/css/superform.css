@@ -597,9 +597,53 @@ div.superform input.retry {
     font-size: 15px;
 }
 
-div.superform input.next {
+body.project-edit div.preview div.superform input.confirm,
+body.project-edit div.preview div.superform input.retry,
+div.preview div.superform input.next,
+div.preview div.superform input.confirm,
+div.preview div.superform input.retry {
     padding: 0;
 }
+
+div.superform div.hint blockquote {
+    padding-left: 20px;
+}
+
+body.project-edit div.superform ol li.element div.contents input {
+    width: auto;
+    height: auto;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: normal;
+    padding: 0.3em 1.2em;
+    margin-top: 0;
+}
+body.project-edit div.superform ol li.element div.project-share li.url input {
+    width: 230px;
+}
+
+body.project-edit div.superform ol li.element li.element.group div.contents input.next {
+    width: 200px;
+    height: 50px;
+}
+
+body.project-edit li#video-upload,
+body.project-edit li#media-upload {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+body.project-edit li#video_usubs,
+body.project-edit li#media_usubs {
+    position: relative;
+    left: 80px;
+    padding-top: 0;
+    margin-top: -28px;
+    border-right: 0;
+}
+body.project-edit li#media {
+    padding-bottom: 10px;
+}
+
 
 /* titulos */
 div.superform li#social_rewards h4.title,

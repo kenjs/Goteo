@@ -126,11 +126,14 @@ div.side input[type="reset"],
 div.side button,*/
 div.side div.widget.project-support a.button,
 div.side div.widget.project-collaborations a.button,
-div.side div.widget.user a.button {
+div.side div.widget.user a.button,
+div.project-preview div.widget a.button {
     width: 160px;
     height: 30px;
     line-height: 30px;
 }
+
+
 /*div.side div.widget a.more {
     top: 0;
     padding: 0;

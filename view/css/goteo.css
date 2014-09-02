@@ -119,6 +119,13 @@ div.side div.widget h4.title{
     padding-left: 0;
 }
 
+div.side div.widget.project-collaborations h3.title{
+    margin-bottom: 0;
+}
+div.side div.widget.project-collaborations ul{
+    margin-top: 0;
+}
+
 /**
  * User profile 
 */

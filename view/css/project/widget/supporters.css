@@ -325,6 +325,15 @@ div.widget.project-investors div.investors {
     border-right: 1px dashed #cccccc;
 }
 
+div.side div.widget.project-investors div.investors {
+    border-right: none;
+    border-bottom: none;
+}
+div.side div.widget.project-investors div.investors ul li {
+    border-bottom: 1px dashed #c0c0c0;
+}
+
+
 div.widget.project-investors .investors ul {
     list-style: none;
     margin: 0;
@@ -383,7 +392,7 @@ div.widget.project-investors .investors ul li h5,
 div.widget.project-investors .investors ul li h6 {
 	font-size: 12px !important;
     margin: 0 0 .5em;
-    height: 13px;
+    height: 14px;
 }
 
 div.widget.project-investors .investors ul li.active h3,
@@ -557,6 +566,7 @@ div.widget.project-supporters .supporters ul li dl dd.worthcracy{margin-top: 5px
 div.widget.project-supporters .supporters ul li dl dd.date{top: 55px}
 
 div.widget.project-investors .investors ul li{height:80px}
+
 div.widget.project-investors .investors ul li > div.supporter h4{padding-bottom:3px;border-bottom:#D5D5D6 1px solid;overflow:hidden;margin-bottom:6px}
 div.widget.project-investors .investors ul li > div.supporter h4 > a{
 max-height: 6px;max-width: 175px;overflow: hidden;}

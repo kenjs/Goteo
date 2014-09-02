@@ -165,7 +165,8 @@ div.widget.project-invest ul li,
 div.widget.project-rewards ul li,
 #rewards-summary ul li {
     padding: 10px 10px 10px 60px;
-    background: none no-repeat left 14px;
+    /*background: none no-repeat left 14px;*/
+    background: none no-repeat 10px 14px;
     min-height: 32px;
     margin-bottom: 1em;
 }

@@ -455,9 +455,31 @@ div.widget.project div.meter dl .minimum {
     position: relative;
 }
 
-
-
-
+/*discoverにのみ適用*/
+body.discover div.widget.project div.meter dl .optimum {
+    position: relative;
+    top: 0;
+    width: auto;
+    text-align: right;
+}
+body.discover div.widget.project div.meter dl dt.optimum {
+    right: 30px;
+}
+body.discover div.widget.project div.meter dl dd.optimum {
+    right: 27px;
+}
+body.discover div.widget.project div.meter dl dt.minimum {
+    position: relative;
+    right: 30px;
+}
+body.discover div.widget.project div.meter dl dd.minimum {
+    /*right: 45px;*/
+    text-align: right;
+}
+body.discover div.widget.project div.meter dl dd.minimum strong {
+    width: auto;
+    right: 46px;
+}
 
 /*div.widget.project div.meter dl dt.optimum,
 div.widget.project div.meter dl dd.optimum {
