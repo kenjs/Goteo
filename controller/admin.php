@@ -220,7 +220,8 @@ namespace Goteo\Controller {
                         'move' => array('label' => Text::_('Moviendo a otro Nodo el proyecto'), 'item' => true),
                         'assign' => array('label' => Text::_('Asignando a una Convocatoria el proyecto'), 'item' => true),
                         'report' => array('label' => Text::_('Informe Financiero del proyecto'), 'item' => true),
-                        'rebase' => array('label' => Text::_('Cambiando Id de proyecto'), 'item' => true)
+                        'rebase' => array('label' => Text::_('Cambiando Id de proyecto'), 'item' => true),
+                        'images' => array('label' => Text::_('Organizar imágenes'), 'item' => true)
                     ),
                     'filters' => array('status' => '-1', 'category' => '', 'skill' => '', 'proj_name' => '', 'name' => '', 'node' => '', 'called' => '', 'order' => '')
                 ),

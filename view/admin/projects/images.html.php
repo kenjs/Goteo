@@ -17,6 +17,7 @@
  *  along with Goteo.  If not, see <http://www.gnu.org/licenses/agpl.txt>.
  *
  */
+use Goteo\Library\Text;
 
 $project = $this['project'];
 $images = $this['images'];
