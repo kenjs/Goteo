@@ -240,3 +240,17 @@ if(strpos($_SERVER['SERVER_NAME'], 'il3c') > 0){
 }else{
     define('LOCALGOOD_WP_BASE_URL', '');
 }
+
+$ua = $_SERVER['HTTP_USER_AGENT'];
+
+//iPad, AndroidタブレットはPCビュー
+if(preg_match('/iPod|iPhone/i', $ua)) {
+    define('PC_VIEW', false);
+    define('VIEW_PATH', 'view/m');
+}else if(preg_match('/Android.+Mobile/i', $ua)) {
+    define('PC_VIEW', false);
+    define('VIEW_PATH', 'view/m');
+} else {
+    define('PC_VIEW', true);
+    define('VIEW_PATH', 'view');
+}

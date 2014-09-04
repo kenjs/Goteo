@@ -1,0 +1,304 @@
+/*
+ *  Copyright (C) 2012 Platoniq y Fundación Fuentes Abiertas (see README for details)
+ *	This file is part of Goteo.
+ *
+ *  Goteo is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU Affero General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  Goteo is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU Affero General Public License for more details.
+ *
+ *  You should have received a copy of the GNU Affero General Public License
+ *  along with Goteo.  If not, see <http://www.gnu.org/licenses/agpl.txt>.
+ *
+ */
+@import url('widget/summary.css');
+@import url('widget/media.css');
+@import url('widget/share.css');
+@import url('widget/message.css');
+@import url('widget/support.css');
+@import url('widget/needs.css');
+@import url('widget/collaborations.css');
+@import url('widget/supporters.css');
+@import url('widget/rewards.css');
+@import url('widget/messages.css');
+@import url('widget/updates.css');
+@import url('widget/invest.css');
+@import url('widget/schedule.css');
+@import url('../user/widget/user.css');
+@import url('../worth/base.css');
+@import url('../worth/legend.css');
+
+
+body.project-show div#main {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/**
+ * Menu
+*/
+
+body.project-show div#sub-header {
+	/*height:120px;*/
+	height:auto;
+	min-height:120px;
+    padding-bottom: 0;
+	background:#faf8f8;
+}
+
+body.project-show div#sub-header div.project-header{
+    min-height: 75px;
+	position:relative;
+	top:10px;
+}
+
+body.project-show div#sub-header div.project-header img{
+    float: left;
+	margin: 2px 20px 0 0;
+}
+
+body.project-show div#sub-header div.project-header h2{
+	font-size:2em;
+	max-width:700px;
+}
+
+body.project-show div#sub-header div.project-header h2 > span{
+	display: block;
+	line-height: 1em;
+}
+
+body.project-show div#sub-header div.project-subtitle {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 3px 0;
+	max-width:620px;
+	font-style: normal;
+}
+
+body.project-show div#sub-header div.project-by {
+    color: #20B3B2;
+    font-size: 12px;
+    margin: 0 0 .5em;
+}
+
+body.project-show div#sub-header div.project-by a {
+    font-weight: normal;
+    color: #cc6600;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+body.project-show div#sub-header div.project-by a:hover {
+    color: #58595B;
+}
+
+body.project-show div#sub-header div.categories {
+	position: absolute;
+    right: 10px;
+    text-align: right;
+	/*max-width:240px;*/
+	top: 0;
+}
+
+body.project-show div#sub-header div.categories h3 {
+    font-weight: normal;
+    color: #20B3B2;   
+    margin: 0;
+}
+
+body.project-show div#sub-header div.categories * {
+    font-size: 12px;
+}
+
+body.project-show div#sub-header div.categories a {
+    color: #58595B;
+    text-decoration: none;
+}
+
+body.project-show div#sub-header div.categories a:hover {
+    color: #20B3B2;
+}
+
+body.project-show div.project-menu {
+	margin:18px 0 0 0;
+}
+
+body.project-show div.project-menu div.sub-menu{
+    max-width: 940px;
+    margin: 0;
+}
+
+body.project-show div.project-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+body.project-show div.project-menu ul li {
+    display: inline-block;
+    margin-right: 1px;
+}
+
+body.project-show div.project-menu ul li span.digits{
+	display:inline-block;
+	/*width:30px;*/
+	text-align:center;
+}
+
+body.project-show div.project-menu ul li a {
+    display: inline-block;
+    /*width: 140px;*/
+    min-width: 80px !important;
+    height:50px;
+    padding: 0 16px;
+    color: #666666;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    line-height: 49px;
+    /*background-image: url('/view/css/project/view/menu/regular_menu.png');*/
+    background: #ffffcc; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffcc 0%, #e5e5b9 100%, #e8e8bb 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffcc), color-stop(100%,#e5e5b9), color-stop(100%,#e8e8bb)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffcc 0%,#e5e5b9 100%,#e8e8bb 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffcc 0%,#e5e5b9 100%,#e8e8bb 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffcc 0%,#e5e5b9 100%,#e8e8bb 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #ffffcc 0%,#e5e5b9 100%,#e8e8bb 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffcc', endColorstr='#e8e8bb',GradientType=0 ); /* IE6-9 */
+    border-top: 1px solid #cccc99;
+    border-right: 1px solid #cccc99;
+    border-left: 1px solid #cccc99;
+    color: #999966;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+body.project-show div.project-menu ul li.active a {
+    /*width: 142px;*/
+    /*background-image: url('/view/css/project/view/menu/hover_menu.png');*/
+    min-width: 80px !important;
+    height: 50px;
+    padding: 0 16px;
+    background: none;
+    background-color: #dae121;
+    border: none;
+    color: #666666;
+    text-align: center;
+}
+
+body.project-show div.project-menu ul li.show a {
+    /*background-image: url('/view/css/project/view/menu/active_menu.png') !important;*/
+    /*background-repeat: no-repeat !important;*/
+    /*width: 142px;*/
+    min-width: 80px !important;
+    height: 50px;
+    background: none;
+    background-color: #dae121;
+    border: none;
+    color: #666666;
+    text-align: center;
+}
+
+body.project-show div#main div.widget {
+    margin-bottom: 10px;
+}
+
+body.project-show div#main div.widget.project-support {
+    min-height: 450px;
+}
+
+body.project-show div#main > div.side > div.widget {
+    width: 330px;
+    float: right;
+    clear: right;
+}
+
+body.project-show div#main > div.center > div.widget {
+    max-width: 580px;
+    margin-right: 20px;
+    clear: left;
+	padding-bottom: 20px;
+}
+
+body.project-show div#main > div.side > div.widget .title {
+    background: none !important;
+}
+
+/* ayuda a difundir este proyecto */
+div.widget.project-spread > h3.title{padding-left:46px;}
+div.widget.project-spread > div.widget.projects > div.left{float:left;width:280px;border-right:#000 1px solid;}
+div.widget.project-spread > div.widget.projects > div.right{float:left;width:245px;margin-left:12px;}
+div.widget.project-spread div.subtitle{width:245px;text-transform:uppercase;margin:0 0 10px 7px;}
+	div.widget.project-spread div.subtitle#s1{}
+	div.widget.project-spread div.subtitle#s2{}	
+	div.widget.project-spread div.subtitle > span{display:block;}
+	div.widget.project-spread div.subtitle > span.primero{margin-bottom:3px;}	
+	div.widget.project-spread div.subtitle > span.segundo{color:#28ACAB;font-weight:bold;}		
+	
+/* envía mensaje al autor - widget embed code */
+div.widget.projects #widget-code{	width:350px;	float:left; margin: 0 0 0 20px;}
+div.widget.projects  #widget-code .wc-embed{background: url("/view/css/social/embed.png") no-repeat; min-height:20px;text-transform:uppercase;padding: 3px 0 0 25px;}
+/*div.widget.projects  #widget-code textarea{width:200px;	margin: 10px 0;	padding:10px;	background:#E7E7E7;border:none;font-size:12px;resize:none;}*/
+div.widget.projects  #widget-code textarea{
+    width:200px;
+    height: 130px;
+    margin: 10px 0;
+    padding:10px;
+    background:#E7E7E7;
+    border:none;
+    font-size:12px;
+    resize:none;
+}
+
+/* sideber */
+div.widget h4.supertitle {
+    height: 50px;
+    padding: 0;
+    padding-left: 20px;
+    /*border-bottom: 1px solid #96238F !important;*/
+    border-bottom: none;
+    line-height: 50px;
+    color: #ffffff;
+}
+
+div#project-support,
+div#project-investors,
+div#project-collaborations,
+div#project-rewards,
+div.widget.user,
+div.widget.project-investors,
+div.widget.user-mates,
+div.widget.user-mates,
+div.widget.user,
+div.widget.user-supporters {
+    padding: 0;
+}
+
+div#project-support .project-widget-box,
+div#project-investors .project-widget-box,
+div#project-collaborations .project-widget-box,
+div.widget.user .project-widget-box,
+div.widget.project-investors .project-widget-box,
+div.widget.user-mates .project-widget-box,
+div.widget.user-supporters .project-widget-box
+{
+    padding: 15px 20px;
+}
+
+div.widget.project-support {
+    position: relative;
+}
+
+div.widge dl {
+    margin: 0;
+    padding: 0 0 0 20px;
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 60px;
+}

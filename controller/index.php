@@ -79,7 +79,7 @@ namespace Goteo\Controller {
             }
             
             // Banners siempre
-            $banners   = Banner::getAll(true);
+/*            $banners   = Banner::getAll(true);
 
             foreach ($banners as $id => &$banner) {
                 
@@ -91,9 +91,19 @@ namespace Goteo\Controller {
                     }
                 }
                 
-            }
+            }*/
 
-            return new View('view/index.html.php',
+            // switch PC | mobile view
+//            if(PC_VIEW){
+//                $template = 'view/index.html.php';
+//            }else{
+//                $template = 'view/m/index.html.php';
+//            }
+
+            $template = VIEW_PATH . '/index.html.php';
+
+
+            return new View($template,
                 array(
                     'banners'  => $banners,
                     'posts'    => $posts,

@@ -59,7 +59,7 @@ namespace Goteo\Controller {
             }
 
             return new View(
-                'view/discover/index.html.php',
+                VIEW_PATH . '/discover/index.html.php',
                 $viewData
              );
 
@@ -110,7 +110,7 @@ namespace Goteo\Controller {
             }
 
             return new View(
-                'view/discover/results.html.php',
+                VIEW_PATH . '/discover/results.html.php',
                 array(
                     'message' => $message,
                     'results' => $results,
@@ -141,7 +141,7 @@ namespace Goteo\Controller {
                 $viewData['list']  = Model\Project::published($type, null, true);
 
                 return new View(
-                    'view/discover/list.html.php',
+                    VIEW_PATH . '/discover/list.html.php',
                     $viewData
                  );
             } else {
@@ -150,7 +150,7 @@ namespace Goteo\Controller {
                 $viewData['list'] = $projects;
 
                 return new View(
-                    'view/discover/view.html.php',
+                    VIEW_PATH . '/discover/view.html.php',
                     $viewData
                  );
 

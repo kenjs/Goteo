@@ -61,6 +61,7 @@ include 'view/header.html.php';
 
 </script>
 <div class="contents_wrapper">
+    <? /*
     <div id="sub-header" class="banners">
         <div class="clearfix">
             <div class="slides_container">
@@ -82,6 +83,7 @@ include 'view/header.html.php';
             <a class="next">next</a>
         </div>
     </div>
+    */ ?>
 
     <?php if(isset($_SESSION['messages'])) { include 'view/header/message.html.php'; } ?>
 
