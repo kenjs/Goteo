@@ -26,6 +26,7 @@ namespace Goteo\Controller {
     class JSON extends \Goteo\Core\Controller {
 
 		private $result = array();
+        private $result2 = array();
 
 		/**
 		 * Solo retorna si la sesion esta activa o no
@@ -43,6 +44,92 @@ namespace Goteo\Controller {
 			return $this->output();
 		}
 
+        /**
+         * API interfaces for LocalGood
+         * */
+
+        public function get_skill_list() {
+
+            $this->result2[] = \Goteo\Model\Skill::getList();
+
+            return $this->output2();
+
+        }
+
+//        public function get_skill_list() {
+//
+//            $this->result2[] = \Goteo\Model\Skill::getList();
+//
+//            return $this->output2();
+//
+//        }
+
+        public function get_users(){
+            // parameters
+            //  skillid -> Skill ID
+            //  userid -> user id
+            //  username -> user name
+            //  interest -> interest
+            //  type -> user type
+
+            $params = array();
+
+            if (!empty($_REQUEST['skillid']))
+                $params['skill'] = $_REQUEST['skillid'];
+
+            if (!empty($_REQUEST['userid']))
+                $params['id'] = $_REQUEST['id'];
+
+            if (!empty($_REQUEST['username']))
+                $params['name'] = $_REQUEST['username'];
+
+            if (!empty($_REQUEST['interest']))
+                $params['interest'] = $_REQUEST['interest'];
+
+            if (!empty($_REQUEST['type'])){
+                switch ($_REQUEST['type']) {
+                    case 'creators':
+                        $params['type'] = 'creators';
+                        break;
+                    case 'investors':
+                        $params['type'] = 'investos';
+                        break;
+                    case 'supporters':
+                        $params['type'] = 'supporters';
+                        break;
+                    case 'lurkers':
+                        $params['type'] = 'lurkers';
+                        break;
+                }
+            }
+
+            if (!empty($params)){
+                $this->result2[] = \Goteo\Model\User::getAll($params);
+            }
+
+            return $this->output2();
+        }
+
+
+        public function get_projects_by_skill() {
+
+            $params = array('skills'=>array(), 'category'=>array(), 'location'=>array(), 'reward'=>array());
+
+            $params['skills'][] = $_REQUEST['skillid'];
+
+            $params['query'] = '';
+
+//            ob_start();
+//            echo \Goteo\Library\Search::params($params);
+//            $this->result2[] = ob_get_contents();
+//            ob_end_flush();
+
+            $this->result2[] = \Goteo\Library\Search::params($params);
+
+            return $this->output2();
+
+        }
+
 		/**
 		 * Json encoding...
 		 * */
@@ -52,5 +139,12 @@ namespace Goteo\Controller {
 
 			return json_encode($this->result);
 		}
+
+        public function output2() {
+            header("Content-Type: application/json; charset=utf-8");
+//            return var_dump($this->result2);
+            return json_encode($this->result2);
+        }
+
     }
 }
