@@ -10,3 +10,4 @@ data/
 # IDE project folder
 /.idea
 nbproject/
+logs/

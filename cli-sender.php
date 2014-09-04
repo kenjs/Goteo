@@ -88,9 +88,9 @@ $debug = true;
 $fail = false;
 
 // check the limit
-if (!Mail::checkLimit(null, false, $LIMIT)) {
+/*if (!Mail::checkLimit(null, false, $LIMIT)) {
     die("LIMIT REACHED\n");
-}
+}*/
 
 $itime = microtime(true);
 $total_users = 0;
@@ -153,11 +153,11 @@ if (!$fail) {
         while($i<$total_users) {
             // comprueba la quota para los envios que se van a hacer
 
-            if (!Mail::checkLimit(null, false, $LIMIT)) {
+            /*if (!Mail::checkLimit(null, false, $LIMIT)) {
                 if ($debug) echo "dbg: Se ha alcanzado el límite máximo de ".GOTEO_MAIL_SENDER_QUOTA." de envíos diarios! Lo dejamos para mañana\n";
                 $total_users = $i; //para los calculos posteriores
                 break;
-            }
+            }*/
 
             $pids = array();
             $stime = microtime(true);
@@ -207,7 +207,7 @@ if (!$fail) {
             $current_rate  = round($j / $process_time,2);
 
             //No hace falta incrementar la quota de envio pues ya se hace en Mail::Send()
-            $rest = Mail::checkLimit(null, true, $LIMIT);
+            //$rest = Mail::checkLimit(null, true, $LIMIT);
             if($debug) echo "Quota de envío restante para hoy: $rest emails, Quota diaria para mailing: ".GOTEO_MAIL_SENDER_QUOTA."\n";
             if($debug) echo "Envios por segundo: $current_rate - Ratio máximo: ".MAIL_MAX_RATE."\n";
 
