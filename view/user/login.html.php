@@ -1,6 +1,6 @@
 <?php
 /*
- *  Copyright (C) 2012 Platoniq y FundaciÃ³n Fuentes Abiertas (see README for details)
+ *  Copyright (C) 2012 Platoniq y Fundaci¨®n Fuentes Abiertas (see README for details)
  *	This file is part of Goteo.
  *
  *  Goteo is free software: you can redistribute it and/or modify
@@ -22,7 +22,7 @@ use Goteo\Core\View,
     Goteo\Library\Text;
 
 $bodyClass = 'user-login';
-// para que el prologue ponga el cÃ³digo js para botÃ³n facebook en el bannerside
+// para que el prologue ponga el c¨®digo js para bot¨®n facebook en el bannerside
 $fbCode = Text::widget(Text::get('social-account-facebook'), 'fb');
 $jscrypt = true;
 include 'view/prologue.html.php';
@@ -132,22 +132,22 @@ jQuery(document).ready(function($) {
                 $logins = array(
 					'facebook' => '<a href="/user/oauth?provider=facebook">' . Text::get('login-signin-facebook') . '</a>',
 					'twitter' => '<a href="/user/oauth?provider=twitter">' . Text::get('login-signin-twitter') . '</a>',
-					'Google' => '<a href="/user/oauth?provider=Google">' . Text::get('login-signin-google') . '</a>',
+					//'Google' => '<a href="/user/oauth?provider=Google">' . Text::get('login-signin-google') . '</a>',
 					// 'Yahoo' => '<a href="/user/oauth?provider=Yahoo">' . Text::get('login-signin-yahoo') . '</a>',
 					// 'myOpenid' => '<a href="/user/oauth?provider=myOpenid">' . Text::get('login-signin-myopenid') . '</a>',
 					// 'linkedin' => '<a href="/user/oauth?provider=linkedin">' . Text::get('login-signin-linkedin') . '</a>',
 					// 'openid' => ''
                 );
-                // $is_openid = !array_key_exists($openid,$logins);
-                // $logins['openid'] = '<form><input type="text"'.($is_openid ? ' class="used"' : '').' name="openid" value="' . htmlspecialchars( $is_openid ? $openid : Text::get('login-signin-openid')) . '" /><a href="/user/oauth" class="button">' . Text::get('login-signin-openid-go') . '&rarr;</a></form>';
+                $is_openid = !array_key_exists($openid,$logins);
+                //$logins['openid'] = '<form><input type="text"'.($is_openid ? ' class="used"' : '').' name="openid" value="' . htmlspecialchars( $is_openid ? $openid : Text::get('login-signin-openid')) . '" /><a href="/user/oauth" class="button">' . Text::get('login-signin-openid-go') . '&rarr;</a></form>';
                 //si se ha guardado la preferencia, lo ponemos primero
                 $key = '';
-    //             if($openid) {
-				// 	$key = array_key_exists($openid,$logins) ? $openid : 'openid';
-				// 	echo '<li class="'.strtolower($key).'">'.$logins[$key].'</li>';
-				// 	echo '<li class="more">&rarr;<a href="#">'.Text::get('login-signin-view-more').'</a></li>';
+                if($openid) {
+				 	$key = array_key_exists($openid,$logins) ? $openid : 'openid';
+				 	echo '<li class="'.strtolower($key).'">'.$logins[$key].'</li>';
+				 	echo '<li class="more">&rarr;<a href="#">'.Text::get('login-signin-view-more').'</a></li>';
 
-				// }
+				}
                 foreach($logins as $k => $v) {
 					if($key != $k) echo '<li class="'.strtolower($k) .'"'. ( $openid ? ' style="display:none"' :'') .'>'.$v.'</li>';
 				}
