@@ -593,6 +593,8 @@ namespace Goteo\Controller {
                 'user_location'=>'location',
                 'user_avatar'=>'avatar',
                 'user_about'=>'about',
+                'user_keywords' => 'keywords',
+                'user_contribution' => 'contribution',
                 'user_facebook'=>'facebook',
                 'user_google'=>'google',
                 'user_twitter'=>'twitter',
