@@ -25,5 +25,14 @@ use Goteo\Core\View,
 $project = $this['project'];
 
 $messegers = $this['messegers'];
-print_r($messegers);
 ?>
+<ul>
+<?php foreach($messegers as $value) : ?>
+	<li>
+		<a href="/user/<?php echo htmlspecialchars($value->id) ?>">
+		<?php if (!empty($value->avatar)): ?><img alt="<?php echo htmlspecialchars($value->name) ?>" src="<?php echo $value->avatar->getLink(80, 80, true); ?>" /><?php endif ?>
+		<?php echo $value->id; ?>
+		</a>
+	</li>
+<?php endforeach;?>
+ </url>
