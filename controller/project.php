@@ -496,6 +496,13 @@ namespace Goteo\Controller {
                     $viewData['non-economic'] = true;
                 }
 
+                if($show == 'messages' && is_numeric($_GET['msgto'])){
+                    $support = Model\Project\Support::get($_GET['msgto']);
+                    if(is_numeric($support->thread)){
+                        $viewData['thread'] = $support->thread;
+                    }
+                }
+
                 // -- Mensaje azul molesto para usuarios no registrados
                 if (($show == 'messages' || $show == 'updates') && empty($_SESSION['user'])) {
                     Message::Info(Text::html('user-login-required'));

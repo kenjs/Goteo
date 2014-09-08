@@ -1,6 +1,6 @@
 <?php
 /*
- *  Copyright (C) 2012 Platoniq y FundaciÃ³n Fuentes Abiertas (see README for details)
+ *  Copyright (C) 2012 Platoniq y Fundaci¨®n Fuentes Abiertas (see README for details)
  *	This file is part of Goteo.
  *
  *  Goteo is free software: you can redistribute it and/or modify
@@ -33,6 +33,7 @@ $items = array();
 foreach ($project->supports as $item) {
     
     $items[$item->type][] = (object) array(
+        'id' => $item->id,
         'name' => $item->support,
         'description' => $item->description
     );
@@ -59,7 +60,7 @@ foreach ($project->supports as $item) {
             <tr class="noreq">
                 <th class="summary"><strong><?php echo htmlspecialchars($item->name) ?></strong>
                 <blockquote style="font-weight:normal;"><?php echo $item->description ?></blockquote>
-                <a class="button green" href="/project/<?php echo $project->id; ?>/messages"><?php echo Text::get('regular-collaborate'); ?></a>
+                <a class="button green" href="/project/<?php echo $project->id; ?>/messages?msgto=<?php echo $item->id; ?>"><?php echo Text::get('regular-collaborate'); ?></a>
                 </th>
             </tr>            
             <?php endforeach ?>

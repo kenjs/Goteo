@@ -32,6 +32,7 @@ $show    = $this['show'];
 $step    = $this['step'];
 $post    = $this['post'];
 $blog    = $this['blog'];
+$thread    = $this['thread'];
 
 $user    = $_SESSION['user'];
 $personalData = ($user instanceof User) ? User::getPersonal($user->id) : new stdClass();
@@ -193,7 +194,7 @@ $bodyClass = 'project-show'; include 'view/prologue.html.php' ?>
 						
                     case 'messages':
                         echo
-                            new View('view/project/widget/messages.html.php', array('project' => $project));
+                            new View('view/project/widget/messages.html.php', array('project' => $project,'thread' => $thread));
                         break;
                    
 				    case 'rewards':
