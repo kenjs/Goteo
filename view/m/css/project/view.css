@@ -211,6 +211,7 @@ body.project-show div.project-menu ul li.show a {
     /*background-repeat: no-repeat !important;*/
     /*width: 142px;*/
     width: 100%;
+    background-color: #dae121;
 }
 
 body.project-show div#main div.widget {

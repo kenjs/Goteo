@@ -350,19 +350,24 @@ body.project-edit div#main.rewards div.superform li.element.editsocial_reward li
 }/* Fin licencias */
 
 body.project-edit div#main.rewards div.superform li.element.editindividual_reward div.children li.element.reward-amount > div.contents > input {
-    width: 3em;
-    max-width: 3em;
-    min-width: 3em;
+    /*width: 3em;*/
+    /*max-width: 3em;*/
+    /*min-width: 3em;*/
+    width:6em;
+    min-width: 6em;
     float: left;
-    padding-right: 2em;
+    padding-right: 3em;
     background-image: url('/view/css/yen/s.png');
     background-repeat: no-repeat;
-    background-position: 3.7em center;
+    /*background-position: 3.7em center;*/
+    background-position: 7.7em center;
     font-weight: bold;
 }
 
 body.project-edit div#main.rewards div.superform li.element.editindividual_reward div.children li.element.reward-units > div.contents > input {
-    width: 4.6em;
-    max-width: 4.6em;
-    min-width: 4.6em;
+    /*width: 4.6em;*/
+    /*max-width: 4.6em;*/
+    /*min-width: 4.6em;*/
+    width:7.7em;
+    min-width: 7.7em;
 }

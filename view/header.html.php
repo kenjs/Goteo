@@ -74,7 +74,7 @@ use Goteo\Library\Text,
             <div class="catchcopy">
                 このまち、わたしから未来を創る
             </div>
-            <a class="earth_view" href="http://yokohama.mapping.jp/" target="_blank"><img src="<?= LOCALGOOD_WP_BASE_URL ?>/wp-content/themes/localgood/images/earth_view_icon.png" alt="Earth View" /></a>
+            <a class="earth_view" href="http://yokohama.mapping.jp/" target="_blank"><img src="/view/css/header/earth_view_icon.png" alt="Earth View" /></a>
         </div>
     </div>
     <div class="nav_wrapper">
@@ -86,12 +86,11 @@ use Goteo\Library\Text,
                     <ul class="sub">
                         <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/submit_subject/">課題を投稿する</a></li>
                         <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/subject/">課題を見る</a></li>
-                        <li><a href="">つぶやきを見る</a></li>
                     </ul>
                 </li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/data/">データを見る</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/posts_archive/">人 & 活動</a></li>
-                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/about/">このサイトについて</a></li>
+                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/skills/">スキルを活かす</a></li>
             </ul>
         </div>
     </div>

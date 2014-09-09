@@ -131,14 +131,15 @@ body.project-edit div#main.costs div.superform li.element.editcost li.material d
 }
 
 body.project-edit div#main.costs div.superform li.element.editcost div.children li.element.cost-amount > div.contents > input {
-    width: 3em;
-    max-width: 3em;
-    min-width: 3em;
+    /*width: 3em;*/
+    /*max-width: 3em;*/
+    min-width: 6em;
+    width:6em;
     float: left;
     padding-right: 2em;
     background-image: url('/view/css/yen/m.png');
     background-repeat: no-repeat;
-    background-position: 3.7em center;
+    background-position: 7.7em center;
     font-size: 16px;
     font-weight: bold;
 }

@@ -80,6 +80,10 @@ body.project-show div#sub-header div.project-subtitle {
 	font-style: normal;
 }
 
+body.project-show div#sub-header div.wants-skills .matched_skill {
+    background-color: #ff9999;
+}
+
 body.project-show div#sub-header div.project-by {
     color: #20B3B2;
     font-size: 12px;
