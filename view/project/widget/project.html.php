@@ -101,12 +101,24 @@ if (isset($this['investor']) && is_object($this['investor'])) {
         // スキル表示
         $skills = Skill::getNames($project->id);
         if (!empty($skills)):
-            foreach ($skills as $_skill_id => $_skill_name):
+            foreach( $skills as $_skill_id => $_skill_name):
+                // ログイン中のユーザーのスキルとマッチすればハイライト
+                $_match_skill = '';
+                if (!empty($_SESSION['user']->skills)){
+                    foreach ($_SESSION['user']->skills as $_id){
+                        if ($_id == $_skill_id){
+                            $_match_skill = ' class="matched_skill"';
+                            break;
+                        }
+                    }
+                }
                 ?>
-                <a href=""><?php echo $_skill_name ?></a>
-                <?
+                <a<?= $_match_skill; ?> id="skill_id_<?= $_skill_id; ?>" href=""><?php echo $_skill_name ?></a>
+            <?
             endforeach;
         endif;
+
+
         ?>
     </div>
 
