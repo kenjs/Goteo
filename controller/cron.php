@@ -135,12 +135,12 @@ namespace Goteo\Controller {
 
                 $log_text = null;
 
-                if ($debug) echo 'Minimo: '.$project->mincost.' &euro; <br />';
+                if ($debug) echo 'Minimo: '.$project->mincost.' &yen; <br />';
                 
                 $execute = false;
                 $cancelAll = false;
 
-                if ($debug) echo 'Obtenido: '.$project->amount.' &euro;<br />';
+                if ($debug) echo 'Obtenido: '.$project->amount.' &yen;<br />';
 
                 // porcentaje alcanzado
                 if ($project->mincost > 0) {
@@ -215,7 +215,7 @@ namespace Goteo\Controller {
                                 \vsprintf($log_text, array(
                                     Feed::item('project', $project->name, $project->id),
                                     Feed::item('relevant', 'caducado sin éxito'),
-                                    Feed::item('money', $project->amount.' &euro; ('.$per_amount.'&#37;) de aportes sobre minimo')
+                                    Feed::item('money', $project->amount.' &yen; ('.$per_amount.'&#37;) de aportes sobre minimo')
                             )));
                             $log->doAdmin('project');
 
@@ -266,7 +266,7 @@ namespace Goteo\Controller {
                                     \vsprintf($log_text, array(
                                         Feed::item('project', $project->name, $project->id),
                                         Feed::item('relevant', 'financiado'),
-                                        Feed::item('money', $project->amount.' &euro; ('.\round($per_amount).'%) de aportes sobre minimo')
+                                        Feed::item('money', $project->amount.' &yen; ('.\round($per_amount).'%) de aportes sobre minimo')
                                 )));
                                 $log->doAdmin('project');
 
@@ -351,7 +351,7 @@ namespace Goteo\Controller {
                                 $log->populate('proyecto supera primera ronda (cron)', '/admin/projects', \vsprintf('El proyecto %s %s en segunda ronda obteniendo %s', array(
                                     Feed::item('project', $project->name, $project->id),
                                     Feed::item('relevant', 'continua en campaña'),
-                                    Feed::item('money', $project->amount.' &euro; ('.\number_format($per_amount, 2).'%) de aportes sobre minimo')
+                                    Feed::item('money', $project->amount.' &yen; ('.\number_format($per_amount, 2).'%) de aportes sobre minimo')
                                 )));
                                 $log->doAdmin('project');
 
@@ -467,7 +467,7 @@ namespace Goteo\Controller {
                             $log->setTarget($project->id);
                             $log->populate('Preapproval cancelado por proyecto archivado (cron)', '/admin/invests', \vsprintf($log_text, array(
                                 Feed::item('user', $userData->name, $userData->id),
-                                Feed::item('money', $invest->amount.' &euro;'),
+                                Feed::item('money', $invest->amount.' &yen;'),
                                 Feed::item('system', $invest->id),
                                 Feed::item('project', $project->name, $project->id),
                                 Feed::item('system', date('d/m/Y', strtotime($invest->invested)))
@@ -571,7 +571,7 @@ namespace Goteo\Controller {
                                 $log->setTarget($project->id);
                                 $log->populate('Cargo ejecutado (cron)', '/admin/invests', \vsprintf($log_text, array(
                                     Feed::item('user', $userData->name, $userData->id),
-                                    Feed::item('money', $invest->amount.' &euro;'),
+                                    Feed::item('money', $invest->amount.' &yen;'),
                                     Feed::item('system', $invest->id),
                                     Feed::item('project', $project->name, $project->id),
                                     Feed::item('system', date('d/m/Y', strtotime($invest->invested)))
@@ -830,7 +830,7 @@ namespace Goteo\Controller {
                 $log->setTarget($projectData->id);
                 $log->populate('Pago al proyecto encadenado-secundario (cron)', '/admin/accounts',
                     \vsprintf($log_text, array(
-                    Feed::item('money', $invest->amount.' &euro;'),
+                    Feed::item('money', $invest->amount.' &yen;'),
                     Feed::item('project', $projectData->name, $project),
                     Feed::item('user', $userData->name, $userData->id),
                     Feed::item('system', $invest->id),

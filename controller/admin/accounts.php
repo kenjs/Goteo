@@ -100,7 +100,7 @@ namespace Goteo\Controller\Admin {
                             $log->populate('Aporte reubicado', '/admin/accounts',
                                 \vsprintf("%s ha aportado %s al proyecto %s en nombre de %s", array(
                                     Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
-                                    Feed::item('money', $_POST['amount'].' &euro;'),
+                                    Feed::item('money', $_POST['amount'].' &yen;'),
                                     Feed::item('project', $projectData->name, $projectData->id),
                                     Feed::item('user', $userData->name, $userData->id)
                             )));
@@ -240,7 +240,7 @@ namespace Goteo\Controller\Admin {
                     \vsprintf($log_text, array(
                         Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
                         Feed::item('user', $userData->name, $userData->id),
-                        Feed::item('money', $invest->amount.' &euro;'),
+                        Feed::item('money', $invest->amount.' &yen;'),
                         Feed::item('system', $invest->id),
                         Feed::item('project', $projectData->name, $projectData->id),
                         Feed::item('system', date('d/m/Y', strtotime($invest->invested)))
@@ -322,7 +322,7 @@ namespace Goteo\Controller\Admin {
                         $log->populate('Aporte manual (admin)', '/admin/accounts',
                             \vsprintf("%s ha aportado %s al proyecto %s en nombre de %s", array(
                                 Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
-                                Feed::item('money', $_POST['amount'].' &euro;'),
+                                Feed::item('money', $_POST['amount'].' &yen;'),
                                 Feed::item('project', $projectData->name, $projectData->id),
                                 Feed::item('user', $userData->name, $userData->id)
                         )));
@@ -449,7 +449,7 @@ namespace Goteo\Controller\Admin {
                     \vsprintf($log_text, array(
                         Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
                         Feed::item('user', $userData->name, $userData->id),
-                        Feed::item('money', $invest->amount.' &euro;'),
+                        Feed::item('money', $invest->amount.' &yen;'),
                         Feed::item('system', $invest->id),
                         Feed::item('project', $project->name, $project->id),
                         Feed::item('system', date('d/m/Y', strtotime($invest->invested)))
@@ -540,7 +540,7 @@ namespace Goteo\Controller\Admin {
                         \vsprintf($log_text, array(
                             Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
                             Feed::item('user', $userData->name, $userData->id),
-                            Feed::item('money', $invest->amount.' &euro;'),
+                            Feed::item('money', $invest->amount.' &yen;'),
                             Feed::item('system', $invest->id),
                             Feed::item('project', $project->name, $project->id),
                             Feed::item('system', date('d/m/Y', strtotime($invest->invested)))

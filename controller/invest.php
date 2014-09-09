@@ -221,13 +221,13 @@ namespace Goteo\Controller {
                     \vsprintf("%s ha aportado %s al proyecto %s mediante PayPal",
                         array(
                         Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
-                        Feed::item('money', $invest->amount.' &euro;'),
+                        Feed::item('money', $invest->amount.' &yen;'),
                         Feed::item('project', $projectData->name, $projectData->id))
                     ));
                 $log->doAdmin('money');
                 // evento público
                 $log_html = Text::html('feed-invest',
-                                    Feed::item('money', $invest->amount.' &euro;'),
+                                    Feed::item('money', $invest->amount.' &yen;'),
                                     Feed::item('project', $projectData->name, $projectData->id));
                 if ($invest->anonymous) {
                     $log->populate(Text::get('regular-anonymous'), '/user/profile/anonymous', $log_html, 1);
@@ -247,7 +247,7 @@ namespace Goteo\Controller {
                 $log->populate('Aporte riego '.$drop->method, '/admin/invests',
                     \vsprintf("%s ha aportado %s de %s al proyecto %s a través de la campaña %s", array(
                         Feed::item('user', $callData->user->name, $callData->user->id),
-                        Feed::item('money', $drop->amount.' &euro;'),
+                        Feed::item('money', $drop->amount.' &yen;'),
                         Feed::item('drop', 'Capital Riego', '/service/resources'),
                         Feed::item('project', $projectData->name, $projectData->id),
                         Feed::item('call', $callData->name, $callData->id)
@@ -256,7 +256,7 @@ namespace Goteo\Controller {
                 // evento público
                 $log->populate($callData->user->name, '/user/profile/'.$callData->user->id,
                             Text::html('feed-invest',
-                                    Feed::item('money', $drop->amount.' &euro;')
+                                    Feed::item('money', $drop->amount.' &yen;')
                                         . ' de '
                                         . Feed::item('drop', 'Capital Riego', '/service/resources'),
                                     Feed::item('project', $projectData->name, $projectData->id)
@@ -380,7 +380,7 @@ namespace Goteo\Controller {
                 $log_text = Text::_("%s ha aportado %s al proyecto %s mediante PayPal");
                 $items = array(
                     Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
-                    Feed::item('money', $confirm->amount.' &euro;'),
+                    Feed::item('money', $confirm->amount.' &yen;'),
                     Feed::item('project', $projectData->name, $projectData->id)
                 );
                 $log->html = \vsprintf($log_text, $items);
@@ -399,7 +399,7 @@ namespace Goteo\Controller {
                 $log->scope = 'public';
                 $log->type = 'community';
                 $log->html = Text::html('feed-invest',
-                                    Feed::item('money', $confirm->amount.' &euro;'),
+                                    Feed::item('money', $confirm->amount.' &yen;'),
                                     Feed::item('project', $projectData->name, $projectData->id));
                 $log->add($errors);
 

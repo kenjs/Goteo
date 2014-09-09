@@ -221,7 +221,7 @@ namespace Goteo\Controller {
                 $log->populate('Aporte TPV', '/admin/invests',
                     \vsprintf($log_text, $log_items = array(
                         Feed::item('user', $userData->name, $userData->id),
-                        Feed::item('money', $invest->amount.' &euro;'),
+                        Feed::item('money', $invest->amount.' &yen;'),
                         Feed::item('project', $projectData->name, $projectData->id))
                     ));
                 $log->doAdmin('money');
@@ -229,7 +229,7 @@ namespace Goteo\Controller {
                 if ($doPublic) {
                     // evento público
                     $log_html = Text::html('feed-invest',
-                                        Feed::item('money', $invest->amount.' &euro;'),
+                                        Feed::item('money', $invest->amount.' &yen;'),
                                         Feed::item('project', $projectData->name, $projectData->id));
                     if ($invest->anonymous) {
                         $log->populate(Text::get('regular-anonymous'), '/user/profile/anonymous', $log_html, 1);

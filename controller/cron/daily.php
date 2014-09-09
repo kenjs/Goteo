@@ -382,7 +382,7 @@ namespace Goteo\Controller\Cron {
                     $log->unique = true;
                     $log->populate('Campaña terminando (cron)', '/admin/calls/'.$campaign->id.'?rest='.$amount,
                         \vsprintf('Quedan menos de %s en la campaña %s', array(
-                            Feed::item('money', $amount.' &euro;')
+                            Feed::item('money', $amount.' &yen;')
                                 . ' de '
                                 . Feed::item('drop', 'Capital Riego', '/service/resources'),
                             Feed::item('call', $campaign->name, $campaign->id))
@@ -390,7 +390,7 @@ namespace Goteo\Controller\Cron {
                     $log->doAdmin('call');
                     $log->populate($campaign->name, '/call/'.$campaign->id.'?rest='.$amount,
                         \vsprintf('Quedan menos de %s en la campaña %s', array(
-                            Feed::item('money', $amount.' &euro;') 
+                            Feed::item('money', $amount.' &yen;')
                                 . ' de '
                                 . Feed::item('drop', 'Capital Riego', '/service/resources'),
                             Feed::item('call', $campaign->name, $campaign->id))
