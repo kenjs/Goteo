@@ -22,8 +22,35 @@
 <script type="text/javascript" src="<?php echo SRC_URL ?>/view/js/datepicker.min.js"></script>
 <script type="text/javascript">
     
-    (function () {
-    
+(function($){ 
+    $(function(){
+        var li= $('li.element#<?php echo $this['id'] ?>');
+        var input = li.children('div.contents').find('input');
+        if (input.length) {
+            var lastVal = input.val();
+            var updating = null;
+
+            var update = function () {
+                var val = input.val();
+                clearTimeout(updating);
+                if (val != lastVal) {
+                    lastVal = val;
+                    li.addClass('busy');
+                    updating = setTimeout(function () {   
+                        window.Superform.update(input, function () {
+                            li.removeClass('busy');
+                        });
+                    });  
+                } else {           
+                    li.removeClass('busy');
+                }
+            };
+
+            input.change(function () { 
+                update();          
+            });
+        }  
+
         var dp = $('#<?php echo $this['id'] ?> input');
 
         dp.DatePicker({           
@@ -36,10 +63,11 @@
             onBeforeShow: function(){
                 dp.DatePickerSetDate(dp.val(), true);                
             },
-            onChange: function(formatted, dates){                    
+            onChange: function(formatted, dates){        
                     dp.val(formatted);
                     dp.DatePickerHide();
                     dp.focus();
+                    update();
             },
             locale: {
                 days: ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábad', 'Domingo'],
@@ -49,8 +77,8 @@
                 monthsShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
                 week: []
             }
-        });                
-               
-    })();
+        }); 
+    });         
+})(jQuery);
 </script>
 

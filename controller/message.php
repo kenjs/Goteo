@@ -257,7 +257,7 @@ namespace Goteo\Controller {
                 unset($mailHandler);
 			}
 
-            throw new Redirection("/project/{$project->id}/messages", Redirection::TEMPORARY);
+            throw new Redirection("/project/{$project->id}/needs", Redirection::TEMPORARY);
         }
 
         /*

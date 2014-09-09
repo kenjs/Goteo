@@ -40,9 +40,9 @@ namespace Goteo\Library {
 
             // buscamos la página para este nodo en este idioma
 			$sql = "SELECT  template.id as id,
-                            template.name as name,
                             template.group as `group`,
-                            template.purpose as purpose,
+                            IFNULL(template_lang.name, template.name) as name,
+                            IFNULL(template_lang.purpose, template.purpose) as purpose,
                             IFNULL(template_lang.title, template.title) as title,
                             IFNULL(template_lang.text, template.text) as text
                      FROM template
@@ -85,8 +85,8 @@ namespace Goteo\Library {
                 
                 $sql = "SELECT
                             template.id as id,
-                            template.name as name,
-                            template.purpose as purpose,
+                            IFNULL(template_lang.name, template.name) as name,
+                            IFNULL(template_lang.purpose, template.purpose) as purpose,
                             IFNULL(template_lang.title, template.title) as title,
                             IFNULL(template_lang.text, template.text) as text
                         FROM template

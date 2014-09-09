@@ -21,6 +21,7 @@
 use Goteo\Library\Text;
 
 $project = $this['project'];
+$thread = $this['thread'];
 $level = (int) $this['level'] ?: 3;
 
 ?>
@@ -50,7 +51,7 @@ $level = (int) $this['level'] ?: 3;
 
     <div>
         <form method="post" action="/message/<?php echo $project->id; ?>">
-            <input type="hidden" id="thread" name="thread" value="" />
+            <input type="hidden" id="thread" name="thread" value="<?php echo $thread;?>" />
             <div id="bocadillo"></div>
             <textarea id="message-text" name="message" cols="50" rows="5"></textarea>
             <a target="_blank" id="a-preview" href="#preview" class="preview">&middot;<?php echo Text::get('regular-preview'); ?></a>

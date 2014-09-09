@@ -435,6 +435,12 @@ $(function () {
        event.preventDefault();
     });
 
+    socials.delegate('li.social_reward-type input', 'click', function (event) {
+       var data = {};
+       data[this.name] = '1';
+       Superform.update(socials, data);
+    });
+
     /* individual_rewards buttons */
     var individuals = $('div#<?php echo $sfid ?> li.element#individual_rewards');
 
@@ -464,6 +470,12 @@ $(function () {
        data[this.name] = '1';
        Superform.update(individuals, data);
        event.preventDefault();
+    });
+
+    individuals.delegate('li.reward-type input', 'click', function (event) {
+       var data = {};
+       data[this.name] = '1';
+       Superform.update(individuals, data);
     });
 
 });
