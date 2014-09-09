@@ -111,7 +111,7 @@ namespace Goteo\Controller {
                     break;
             }
 
-            return new View('view/community.html.php', $viewData);
+            return new View(VIEW_PATH . '/community.html.php', $viewData);
 
         }
 

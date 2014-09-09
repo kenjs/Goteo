@@ -596,7 +596,7 @@ namespace Goteo\Controller {
                 $viewData['lists']['my_projects'] = Listing::get($projects, 2);
             }
 
-            return new View ('view/user/'.$show.'.html.php', $viewData);
+            return new View (VIEW_PATH . '/user/'.$show.'.html.php', $viewData);
         }
 
         /**

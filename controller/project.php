@@ -568,7 +568,7 @@ namespace Goteo\Controller {
                     Message::Info(Text::get('project-messages-closed'));
                 }
 
-                return new View('view/project/view.html.php', $viewData);
+                return new View(VIEW_PATH . '/project/view.html.php', $viewData);
 
             } else {
                 // no lo puede ver
