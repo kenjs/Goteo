@@ -23,9 +23,9 @@ use Goteo\Core\View,
 
 $bodyClass = 'discover';
 
-include 'view/prologue.html.php';
+include 'view/m/prologue.html.php';
 
-include 'view/header.html.php' ?>
+include 'view/m/header.html.php' ?>
 
         <div id="sub-header">
             <div>
@@ -34,13 +34,13 @@ include 'view/header.html.php' ?>
 
         </div>
         <div id="main">
-            <?php echo new View('view/discover/searcher.html.php',
+            <?php echo new View('view/m/discover/searcher.html.php',
                                 array('params'     => $this['params'])); ?>
 
             <div class="widget projects">
                 <?php if (!empty($this['results'])) :
                     foreach ($this['results'] as $result) :
-                        echo new View('view/project/widget/project.html.php', array(
+                        echo new View('view/m/project/widget/project.html.php', array(
                             'project' => $result
                         )); 
                     endforeach;
@@ -51,6 +51,6 @@ include 'view/header.html.php' ?>
         
         </div>        
 
-        <?php include 'view/footer.html.php' ?>
+        <?php include 'view/m/footer.html.php' ?>
     
-<?php include 'view/epilogue.html.php' ?>
+<?php include 'view/m/epilogue.html.php' ?>

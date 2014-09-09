@@ -25,6 +25,7 @@ div.widget.project-summary h6 {
     text-transform: none;
     font-weight: bold;
     margin-top: 0;
+    line-height: 1.3em;
 }
 
 div.widget.project-summary h1,
@@ -46,32 +47,38 @@ div.widget.project-summary h8 {
 }
 
 div.widget.project-summary > div {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     font-size: 14px;
+    /*padding: 0 10px;*/
 }
 
 div.widget.project-summary div.prjct-gallery-container {
-	width:580px;
+	/*width:580px;
 	height:380px;
-	display:none;
+	display:none;*/
+}
+
+div.widget.project-summary div.about {
+    clear: both;
+    padding-top: 20px;
 }
 
 div.widget.project-summary div.prjct-gallery-container div.gallery-image {
     text-align: center;
-	width:580px;
-	height:380px;
+	/*width:580px;
+	height:380px;*/
 	display:block;
 }
 
 div.widget.project-summary div#prjct-gallery  {
-	float:left;
+	/*float:left;*/
 }
 
 div.widget.project-summary div#prjct-gallery  ul.slderpag {
     margin: 8px 0 0 0;
 	list-style:none;
 	padding:0px;
-	float:left;
+	/*float:left;*/
 	height:auto;
 }
 
@@ -123,7 +130,12 @@ div.widget.project-summary div#prjct-gallery  a.prev:hover {
 }
 
 div.widget.project-summary div#prjct-gallery  a.next{
-	background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -16px;
+	display: block;
+    margin: 0;
+}
+
+div.widget.project-summary div#prjct-gallery  a.next{
+    background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -16px;
 }
 
 div.widget.project-summary div#prjct-gallery  a.next:hover {
@@ -131,16 +143,31 @@ div.widget.project-summary div#prjct-gallery  a.next:hover {
 }
 
 /* Video motivacional */
-div.widget.project-summary div.project-motivation-video {
+/*div.widget.project-summary div.project-motivation-video {
     margin-left: -20px;
     padding: 0;
     width: 620px !important;
     height: 380px;
+}*/
+
+div.widget.project-summary div.project-motivation-video {
+    margin-left: 0px;
+    padding: 0;
+    width: 312px !important;
+    height: 200px;
 }
 
-div.widget.project-media > iframe,
+/*div.widget.project-media > iframe,
 div.widget.project-media > object,
 div.widget.project-media > embed {
     width: 580px !important;
     height: 380px !important;
+}*/
+
+div.widget.project-media > iframe,
+div.widget.project-media > object,
+div.widget.project-media > embed {
+    width: 312px !important;
+    height: 200px !important;
 }
+

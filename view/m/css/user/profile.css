@@ -27,16 +27,16 @@ body.community div#main div.widget {
     margin-bottom: 10px;
 }
 
-body.user-profile div#main > div.center,
+/*body.user-profile div#main > div.center,*/
 body.community div#main > div.center {
     width: 620px;
-    float: left;        
+    float: left;
 }
 
 body.user-profile div#main > div.side,
 body.community div#main > div.side {
-    float: right;
-    width: 330px;
+    /*float: right;
+    width: 330px;*/
 }
 
 /* Detalle de la linea azul*/
@@ -51,7 +51,7 @@ div.widget.user-mates div.users h3.supertitle{border-top: 1px solid #808285;bord
 
 
 body.user-profile div#main div.discover-group div.widget.project {
-    margin: 0px 0px 0px 15px;
+    margin: 0;
 }
 
 
@@ -137,9 +137,72 @@ div.center > div.widget.user-mates > h3.title{padding: 9px 0 7px 5px;font-size: 
 
 
 div.center div.widget.user-message{position:relative;z-index:99;}
-div.center div.widget.user-message textarea{display:block;margin-left:50px;width:510px;}
+div.center div.widget.user-message textarea{display:block;margin-left:50px;width:220px;}
 div.center div.widget.user-message #bocadillo{background:url('/view/css/bocadillo.jpg') no-repeat;position:absolute;
 width:56px;	height:51px;z-index:100;}
 div.center div.widget.user-message #a-preview{color: #2EAB58;
 font-weight: bold;left: 52px;position: relative;text-decoration: none;text-transform: uppercase;top: 10px;}
 div.center div.widget.user-message button{float:right;margin-right:8px;}
+
+
+/*widget スマホ*/
+
+body.user-profile div#main div.discover-group div.widget.project {
+    margin: 0 auto 20px !important;
+    border: none;
+}
+
+body.user-profile div.widget.project div.meter dl dd.optimum {
+    font-size: 12px;
+    font-weight: normal;
+    position: relative;
+    top: -20px;
+    padding: 44px 0 0 20px;
+    left: 110px;
+    width: 70px;
+    height: 50px;
+    border-left: 1px solid #eee;
+}
+
+body.user-profile div.widget.project div.meter dl dt.optimum {
+    position: absolute;
+    top: 0;
+    left: 130px;
+    width: 70px;
+}
+
+body.user-profile div.widget.project div.meter dl dt.minimum {
+    position: absolute;
+    top: 0px;
+    left: 26px;
+    color: #cc6600;
+}
+
+body.user-profile div.widget.project div.meter dl dd.minimum {
+    position: relative;
+    font-size: 12px;
+    top: -70px;
+    left: 26px;
+    color: #cc6600;
+
+}
+
+body.user-profile div.widget.project div.meter dl dt.days {
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+}
+
+body.user-profile div.widget.project div.meter dl dd.days {
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    font-size: 12px;
+    width: 70px;
+    height: 50px;
+    padding: 44px 0 0 25px;
+    border-left: 1px solid #eee;
+
+}

@@ -27,6 +27,7 @@ use Goteo\Core\View,
 
 $project = $this['project'];
 $level = $this['level'] ?: 3;
+//var_dump($this);
 
 if ($this['global'] === true) {
     $blank = ' target="_blank"';
@@ -42,8 +43,7 @@ if (isset($this['investor']) && is_object($this['investor'])) {
     $invest = Invest::supported($investor->id, $project->id);
 }
 ?>
-
-<div class="widget project activable heightLine-project<?php if (isset($this['balloon'])) echo ' balloon' ?>">
+<div class="widget project activable<?php if (isset($this['balloon'])) echo ' balloon' ?>">
 	<a href="<?php echo SITE_URL ?>/project/<?php echo $project->id ?>" class="expand"<?php echo $blank; ?>></a>
     <?php if (isset($this['balloon'])): ?>
     <div class="balloon"><?php echo $this['balloon'] ?></div>
@@ -83,20 +83,20 @@ if (isset($this['investor']) && is_object($this['investor'])) {
         <?php if (!empty($project->gallery) && (current($project->gallery) instanceof Image)): ?>
         <a href="<?php echo SITE_URL ?>/project/<?php echo $project->id ?>"<?php echo $blank; ?>><img alt="<?php echo $project->name ?>" src="<?php echo current($project->gallery)->getLink(260, 135, true) ?>" /></a>
         <?php endif ?>
-        <?php if (!empty($categories)): ?>
+        <? /*<?php if (!empty($categories)): ?>
         <div class="categories">
         <?php $sep = ''; foreach ($categories as $key=>$value) :
             echo $sep.htmlspecialchars($value);
         $sep = ', '; endforeach; ?>
         </div>
-        <?php endif ?>
+        <?php endif ?> */ ?>
     </div>
 
     <h<?php echo $level ?> class="title"><a href="<?php echo SITE_URL ?>/project/<?php echo $project->id ?>"<?php echo $blank; ?>><?php echo htmlspecialchars(Text::recorta($project->name,50)) ?></a></h<?php echo $level ?>>
 
-    <h<?php echo $level + 1 ?> class="author"><?php echo Text::get('regular-by')?> <a href="<?php echo SITE_URL ?>/user/profile/<?php echo htmlspecialchars($project->user->id) ?>"<?php echo $blank; ?>><?php echo htmlspecialchars(Text::recorta($project->user->name,40)) ?></a></h<?php echo $level + 1?>>
+    <? /* <h<?php echo $level + 1 ?> class="author"><?php echo Text::get('regular-by')?> <a href="<?php echo SITE_URL ?>/user/profile/<?php echo htmlspecialchars($project->user->id) ?>"<?php echo $blank; ?>><?php echo htmlspecialchars(Text::recorta($project->user->name,40)) ?></a></h<?php echo $level + 1?>> */ ?>
 
-    <div class="skills">
+    <? /*<div class="skills">
         <?php
         // スキル表示
         $skills = Skill::getNames($project->id);
@@ -108,12 +108,13 @@ if (isset($this['investor']) && is_object($this['investor'])) {
             endforeach;
         endif;
         ?>
-    </div>
+    </div>*/ ?>
 
-    <div class="description"><?php echo Text::recorta($project->description, 100); ?></div>
+    <? /*<div class="description"><?php echo Text::recorta($project->description, 100); ?></div>*/ ?>
 
-    <?php echo new View('view/project/meter_hor.html.php', array('project' => $project)) ?>
+    <?php echo new View('view/m/project/meter_hor.html.php', array('project' => $project)) ?>
 
+    <? /*
     <div class="rewards">
         <h<?php echo $level + 1 ?>><?php echo Text::get('project-rewards-header'); ?></h<?php echo $level + 1?>>
 
@@ -134,6 +135,7 @@ if (isset($this['investor']) && is_object($this['investor'])) {
 
 
     </div>
+    */ ?>
 
     <?php
     /*

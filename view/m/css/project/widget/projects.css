@@ -19,17 +19,17 @@
 @import url("project.css");
 
 div.widget.projects > .title {
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
+    margin-bottom: 16px;
 }
 
 div.widget.projects div.project {
     background-color: #fff;
-    margin: 0 0 3.33% 3.33%;
-    float: left;    
     padding: 0;
-    width: 260px;
 	position:relative;
 	z-index:98;
+	overflow: hidden;
+    margin-bottom: 20px;
 }
 
 div.widget.projects div.project a.expand{
@@ -46,14 +46,14 @@ div.widget.projects div.project a.button{
 
 div.widget.projects div.project div.balloon {
     background: #cae4e6 url('/view/css/balloonbeak.png') no-repeat bottom left;
-    border-bottom: 15px solid white;
-    height: 76px;
+    /*border-bottom: 15px solid white;*/
+    height: auto;
+
 }
 
-div.widget.projects div.project div.balloon > blockquote {  
-    height: 4em;
+div.widget.projects div.project div.balloon > blockquote {
     overflow: hidden;
-    padding: 0;
+    padding-bottom: 10px;
     margin: 0;
     font-size: 12px;
 }
@@ -123,9 +123,9 @@ div.widget.projects > #widget-code textarea  {
 	resize:none;
 }
 
-div.widget.projects h2.title {
+/*div.widget.projects h2.title {
 padding-left: 0;
-}
+}*/
 
 
 /* fancybox widget del proyecto en vista pública de proyecto

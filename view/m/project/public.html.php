@@ -18,4 +18,4 @@
  *
  */
 
-include 'view/project/view.html.php';
+include 'view/m/project/view.html.php';

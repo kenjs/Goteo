@@ -87,7 +87,7 @@ echo new SuperForm(array(
                             'value'     => $project->entity_name
                         ),
                         
-                        'entity_cif' => array(
+/*                        'entity_cif' => array(
                             'type'      => 'textbox',
                             'class'     => 'inline',
                             'required'  => true,
@@ -97,7 +97,7 @@ echo new SuperForm(array(
                             'errors'    => !empty($errors['entity_cif']) ? array($errors['entity_cif']) : array(),
                             'ok'        => !empty($okeys['entity_cif']) ? array($okeys['entity_cif']) : array(),
                             'value'     => $project->entity_cif
-                        ),
+                        ),*/
                         
                         'entity_office' => array(
                             'type'      => 'textbox',

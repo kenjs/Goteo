@@ -29,6 +29,7 @@ div.widget.project-rewards div.social,
 div.widget.project-rewards div.individual {
     padding: 15px 20px;
     border-bottom: 1px dashed #c0c0c0;
+    background-color: #fff;
 }
 
 div.widget.project-invest div.social h4.title,

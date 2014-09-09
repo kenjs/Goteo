@@ -29,6 +29,7 @@ include 'view/m/header.html.php' ?>
     jQuery(document).ready(function ($) {
         /* todo esto para cada tipo de grupo */
         <?php foreach ($this['lists'] as $type=>$list) :
+        //var_dump($this['lists']);
             if(array_empty($list)) continue; ?>
             $("#discover-group-<?php echo $type ?>-1").show();
             $("#navi-discover-group-<?php echo $type ?>-1").addClass('active');
@@ -81,7 +82,7 @@ include 'view/m/header.html.php' ?>
             continue;
         ?>
         <div class="widget projects">
-            <h2 class="title"><?php echo $this['title'][$type] ?></h2>
+            <h2 class="title"><?php echo $this['title'][$type]; ?></h2>
             <?php foreach ($list as $group=>$projects) : ?>
                 <div class="discover-group discover-group-<?php echo $type ?>" id="discover-group-<?php echo $type ?>-<?php echo $group ?>">
 
@@ -91,9 +92,11 @@ include 'view/m/header.html.php' ?>
                     </div>
                     */?>
 
-                    <?php foreach ($projects['items'] as $project) :
+                <?
+                    foreach ($projects['items'] as $project) :
                         echo new View('view/m/project/widget/project.html.php', array('project' => $project));
-                    endforeach; ?>
+                    endforeach;
+                ?>
 
                     <?/*
                     <div class="discover-arrow-right">
@@ -101,17 +104,21 @@ include 'view/m/header.html.php' ?>
                     </div>
                     */?>
 
+
+
                 </div>
             <?php endforeach; ?>
 
 
             <!-- carrusel de imagenes -->
             <div class="navi-bar">
+                <?/*
                 <ul class="navi">
                     <?php foreach (array_keys($list) as $group) : ?>
                     <li><a id="navi-discover-group-<?php echo $type.'-'.$group ?>" href="/discover/view/<?php echo $type; ?>" rev="<?php echo $type ?>" rel="<?php echo "{$type}-{$group}" ?>" class="navi-discover-group navi-discover-group-<?php echo $type ?>"><?php echo $group ?></a></li>
                     <?php endforeach ?>
                 </ul>
+                */?>
                 <a class="all" href="/discover/view/<?php echo $type; ?>"><?php echo Text::get('regular-see_all'); ?></a>
             </div>
 

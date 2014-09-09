@@ -21,12 +21,14 @@ div.widget.project-share .title {
 }
 
 div.widget.project-share div.left,div.widget.project-share div.right{
-	float:left;
+	/*float:left;*/
 }
 
 div.widget.project-share div.left{
-	/*width:70%;*/
-    width: 68%;
+	/*width:70%;
+    width: 68%;*/
+    clear: both;
+    margin: 0 10px 0;
 }
 
 div.widget.project-share div.left h4,
@@ -35,8 +37,8 @@ div.widget.project-share div.right h4{
 }
 
 div.widget.project-share div.right{
-	/*width:30%;*/
-    width: 32%;
+	/*width:30%;
+    width: 32%;*/
 }
 
 
@@ -46,7 +48,7 @@ div.widget.project-share h4{
 }
 
 div.widget.project-share ul {
-	height: 60px;
+	height: 30px;
 	list-style: none outside none;
 	margin: 0;
 	overflow: visible;
@@ -70,14 +72,10 @@ div.widget.project-share li a {
 
 div.widget.project-share li.twitter {
     background-image: url('/view/css/social/twitter.png');
-	position:absolute;
-	top:0;left:0;
 }
 
 div.widget.project-share li.facebook {
-    background-image: url('/view/css/social/facebook.png');
-	position:absolute;
-	top:30px;left:0;	
+    background-image: url('/view/css/social/facebook.png');	
 }
 
 div.widget.project-share li.url{

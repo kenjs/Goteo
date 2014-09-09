@@ -33,20 +33,27 @@ div.subitem.odd{background:#F7F7F7}
 /*div.feed div.block{border-right: 2px solid #EBEAEB;float: left;margin-right: 11px;overflow: hidden;
 width: 285px;}*/
 div.feed div.block{
-    border-right: 1px dashed #c0c0c0;
-    float: left;
-    margin-right: 11px;
-    overflow: hidden;
-    width: 285px;
+    /*border-right: 1px dashed #c0c0c0;*/
+    /*float: left;*/
+    /*margin-right: 11px;*/
+    /*overflow: hidden;*/
+    /*width: 285px;*/
+    /*border-bottom: 1px dashed #c0c0c0;*/
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    height: auto;
 }
+/*div.feed div.block.goteo{
+    padding-bottom: 36px;
+}*/
 div.feed div.see_more{
     padding-top: 8px;
-    border-top: 1px dashed #c0c0c0;
+    /*border-top: 1px dashed #c0c0c0;*/
     text-align: right;
 }
 
 div.feed div.block.last{border-right:none;padding-right:0;margin-right:0}
-div.feed div.block > div.item{height:350px;}
+/*div.feed div.block > div.item{height:350px;}*/
 div.feed div.block > div.item div.subitem{width:260px}
 div.subitem > div{height:auto;overflow:auto}
 div.feed div.block > h4{color:#59595C; padding-bottom:5px;border-bottom:#E95C5C 1px solid;max-width:265px;margin-bottom:5px;}
@@ -86,3 +93,11 @@ body.admin div#main > div.widget.feed div.subitem{padding-left:5px}
 body.admin div#main > div.widget.feed div.subitem > span.datepub{float:left;width:100px;margin-right:10px;clear:none;line-height:1.2em}
 body.admin div#main > div.widget.feed div.subitem > div.content-pub{float:left;width:600px;clear:none;margin-top:0;}
 
+
+
+body.home div.widget.feed {
+    overflow: hidden;
+    margin-bottom: 16px;
+    padding: 2px 0 12px;
+    background-color: white;
+}

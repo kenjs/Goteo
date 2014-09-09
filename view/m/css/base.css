@@ -75,7 +75,7 @@ header
 
 .header .nav_wrapper {
     background-color: #e5e5e5;
-    height: 52px;
+    /*height: 52px;*/
 }
 
 /*.header .logo_wrapper {
@@ -213,13 +213,13 @@ table#font_box td.active {
 }
 
 .header .nav_wrapper ul li:last-child {
-    width: 160px;
+    /*width: 160px;*/
     border-right: none;
 }
 
 .header .nav_wrapper ul li a {
     display: block;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 60px;
     text-align: center;
 }
@@ -421,24 +421,17 @@ header(sp)
 .header .nav_wrapper .nav_inner {
     background-color: #e5e5e5;
     height: 40px;
+    width: 300px;
 }
 
 .header .nav_wrapper ul li {
-    font-size: 16px;
+    font-size: 12px;
     width: 100px;
     padding: 0 8px;
 }
 
 .header .nav_wrapper ul li:last-child {
-    /*width: 160px;*/
     border-right: none;
-}
-.header .nav_wrapper ul li.small a {
-    height: 38px;
-    padding: 1px 0;
-    line-height: 20px;
-    letter-spacing: 0;
-    font-size: 15px;
 }
 
 .header .nav_wrapper ul li a {
@@ -560,14 +553,13 @@ footer(sp)
   sp--navigation
 --------------------------------------------------*/
 .viewport {
-    width: 300px;
     margin: 0 auto;
     overflow: hidden;
     -webkit-transform: translateZ(0); /* Optional: When heavy at iOS6+ */
 }
 
 .flipsnap {
-    width: 936px; /* 320px(item width) * 3(item count) */
+    width: 935px; /* 320px(item width) * 3(item count) */
 }
 
 .flipsnap:after {
@@ -577,16 +569,67 @@ footer(sp)
     height: 0;
 }
 
-/*.item {
-}*/
 
+.viewport {
+    width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    -webkit-transform: translateZ(0); /* Optional: When heavy at iOS6+ */
+}
+
+.flipsnap {
+    width: 935px; /* 320px(item width) * 3(item count) */
+}
+
+.flipsnap:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+}
+
+body.project-show div#sub-header div.project-menu.viewport_projectnav {
+    width: 300px!important;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #e7e7e7;
+    -webkit-transform: translateZ(0); /* Optional: When heavy at iOS6+ */
+}
+
+body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav {
+    width: 1008px!important;/* 117px(item width) * 4(item count) + 116px */
+}
+
+body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+}
+
+body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav .item {
+    float: left;
+    width: 110px!important;
+    border: none;
+    border-right: 1px dashed #cccccc;
+/*    font-size: 50px;
+    text-align: center;
+    padding: 50px 0;
+    background: #EFEFEF;
+    border: 5px solid #999;
+    color: #666;*/
+}
+body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav .item a {
+    width: 94px!important;
+    margin: 0 auto;
+}
 
 /*--------------------------------------------------
   index
 --------------------------------------------------*/
 .contents_wrapper {
-    width: 304px;
-    padding: 4px;
+    width: 100%;
+    /*padding: 4px;*/
     margin: 0 auto 0;
 }
 

@@ -92,7 +92,7 @@ include 'view/m/header.html.php';
         <div id="main">
 
             <?php foreach ($this['order'] as $item=>$itemData) {
-                if (!empty($this[$item])) echo new View("view/home/{$item}.html.php", $this);
+                if (!empty($this[$item])) echo new View("view/m/home/{$item}.html.php", $this);
             } ?>
 
         </div>

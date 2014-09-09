@@ -30,9 +30,9 @@ $pagedResults = new \Paginated($this['list'], 9, isset($_GET['page']) ? $_GET['p
 
 $bodyClass = 'discover';
 
-include 'view/prologue.html.php';
+include 'view/m/prologue.html.php';
 
-include 'view/header.html.php' ?>
+include 'view/m/header.html.php' ?>
 
 
         <div id="sub-header">
@@ -45,7 +45,7 @@ include 'view/header.html.php' ?>
         <div id="main">
             <div class="widget projects">
                 <?php while ($project = $pagedResults->fetchPagedRow()) :
-                        echo new View('view/project/widget/project.html.php', array(
+                        echo new View('view/m/project/widget/project.html.php', array(
                             'project' => $project
                             ));
                 endwhile; ?>
@@ -58,6 +58,6 @@ include 'view/header.html.php' ?>
 
         </div>        
 
-        <?php include 'view/footer.html.php' ?>
+        <?php include 'view/m/footer.html.php' ?>
     
-<?php include 'view/epilogue.html.php' ?>
+<?php include 'view/m/epilogue.html.php' ?>

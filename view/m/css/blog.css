@@ -107,15 +107,35 @@ div.post-gallery-container{
 	height:300px;
 	display:none;
 }
-div.post-gallery-container .gallery-image{
+
+/*div.post-gallery-container .gallery-image{
 	text-align:left;
 	width:580px;
 	height:300px;
 	display:block;
+}*/
+
+body.project-show div.widget.project-summary .gallery-image{
+	text-align:center;
+	width:312px;
+	max-width: 312px;
+	max-height: 240px;
+	display:block;
+	margin: 0 auto 0;
 }
-div.gallery-image img {
+
+/*div.gallery-image img {
 	margin: 8px 18px 8px 0;
+}*/
+
+div.gallery-image img {
+	margin: 0 auto 0;
+	width: auto;
+	max-width: 312px;
+	max-height: 240px;
 }
+
+
 div.post-gallery  ul.slderpag {
     margin: 8px 0 0 0;
 	list-style:none;

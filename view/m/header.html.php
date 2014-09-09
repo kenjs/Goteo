@@ -69,21 +69,20 @@ use Goteo\Library\Text,
         </div>
     </div>
     <div class="nav_wrapper">
-        <p class="prev"><a><img src="<?= LOCALGOOD_WP_BASE_URL; ?>/wp-content/themes/localgood/images/prev_btn.png" alt="次へ" /></a></p>
+        <p class="prev"><a><img src="/view/m/css/header/prev_btn.png" alt="前へ" /></a></p>
         <div class="nav_inner viewport">
             <ul class="flipsnap">
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>">ホーム</a></li>
                 <li class="active"><a href="/">プロジェクト</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/earth_view/">課題を知る</a></li>
-                <li class="small"><a href="<?= LOCALGOOD_WP_BASE_URL ?>/submit_subject/">課題を投稿する</a></li>
+                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/submit_subject/">課題を投稿する</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/subject/">課題を見る</a></li>
-                <li><a href="">つぶやきを見る</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/data/">データを見る</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/posts_archive/">人 & 活動</a></li>
-                <li class="small"><a href="<?= LOCALGOOD_WP_BASE_URL ?>/about/">このサイトについて</a></li>
+                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/skills/">スキルを活かす</a></li>
             </ul>
         </div>
-        <p class="next"><a><img src="<?= LOCALGOOD_WP_BASE_URL; ?>/wp-content/themes/localgood/images/next_btn.png" alt="次へ" /></a></p>
+        <p class="next"><a><img src="/view/m/css/header/next_btn.png" alt="次へ" /></a></p>
     </div>
 
     <?php include 'view/m/header/menu.html.php' ?>

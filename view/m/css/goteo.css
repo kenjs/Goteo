@@ -43,8 +43,8 @@
 div#sub-header > div,
 div#sub-header-secondary > div {
     display: block;
-    max-width: 960px;
-    margin: 0 auto;
+    /*max-width: 960px;*/
+    /*margin: 0 auto;*/
 }
 
 div#sub-header > div > h2 {
@@ -56,6 +56,7 @@ div#sub-header > div > h2 {
 div#main {
     /*width: 960px;
     margin: 10px auto;*/
+    padding: 4px;
     clear: both;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -69,8 +70,8 @@ div#main {
 
 div.widget {
     /*background-color: white;*/
-    padding: 15px 20px;
-    overflow: hidden;
+    /*padding: 15px 20px;*/
+    /*overflow: hidden;*/
 }
 
 div.center.home div.widget,
@@ -108,7 +109,8 @@ div.widget .supertitle {
 div.widget .title{
     font-size: 16px;
     font-weight: bold;
-    padding: 0 0 0 24px;
+    /*padding: 0 0 0 24px;*/
+    padding-left: 6px;
     /*margin: 0 0 .8em -20px;*/
     text-decoration: none;
     /*background: url("arrowH2-section.gif") no-repeat -5px -16px;*/

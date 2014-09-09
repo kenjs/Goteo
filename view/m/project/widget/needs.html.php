@@ -55,52 +55,38 @@ foreach ($project->costs as $cost) {
 		});
 	 });
 	</script>
-    <table width="100%">
-        
-        <?php foreach ($costs as $type => $list):
 
-            usort($list, function ($a, $b) {if ($a->req == $b->req) return 0; if ($a->req && !$b->req) return -1; if ($b->req && !$a->req) return 1;});
-            ?>
-        
-        <thead class="<?php echo htmlspecialchars($type)?>">
-            <tr>
-                <th class="summary"><?php echo htmlspecialchars($types[$type]) ?></th>
-                <th class="min"><?php echo Text::get('project-view-metter-minimum'); ?></th>
-                <th class="max"><?php echo Text::get('project-view-metter-optimum'); ?></th>
-            </tr>            
-        </thead>
-        
-        <tbody>            
-            <?php foreach ($list as $cost): ?>
-            <tr<?php echo ($cost->req == 1) ? ' class="req"' : ' class="noreq"' ?>>
-                <th class="summary">
-	                <div class="click">
-                    	<span class="icon">&nbsp;</span>
-                        <span><strong><?php echo htmlspecialchars($cost->name) ?></strong></span>
-                        <blockquote><?php echo $cost->description ?></blockquote>
-                    </div>    	            
-                </th>
-                <td class="min"><?php echo $cost->min ?></td>
-                <td class="max"><?php echo $cost->opt ?></td>
-            </tr>            
-            <?php endforeach ?>
-        </tbody>
-        
-        <?php endforeach ?>
-                                        
-        <tfoot>
-            <tr class="sum">
-                <th class="total"><?php echo Text::get('regular-total'); ?></th>
-                <th class="min"><?php echo $minimum ?></th>
-                <th class="max"><?php echo $optimum ?></th>
-            </tr>
-        </tfoot>
-        
-    </table>
-    
     <div id="legend">
-    	<div class="min"><span>&nbsp;</span><?php echo Text::get('costs-field-required_cost-yes') ?></div>
+        <div class="min"><span>&nbsp;</span><?php echo Text::get('costs-field-required_cost-yes') ?></div>
         <div class="max"><span>&nbsp;</span><?php echo Text::get('costs-field-required_cost-no') ?></div>
     </div>
-    
+
+    <?php foreach ($costs as $type => $list):
+
+        usort($list, function ($a, $b) {if ($a->req == $b->req) return 0; if ($a->req && !$b->req) return -1; if ($b->req && !$a->req) return 1;});
+        ?>
+
+    <?php foreach ($list as $cost): ?>
+    <div class="<?php echo htmlspecialchars($type); echo ($cost->req == 1) ? " req" : " noreq"; ?>">
+        <h<?php echo $level+2 ?> class="summary"><?php echo htmlspecialchars($types[$type]) ?></h<?php echo $level+2 ?>>
+        <p class="click"><span class="text"><?php echo $cost->description ?></span></p>
+        <dl id="legend">
+            <dt class="min">
+                <?php echo Text::get('project-view-metter-minimum'); ?>
+            </dt>
+            <dd class="min">
+                <?php echo $minimum ?>
+            </dd>
+            <dt class="max">
+                <?php echo Text::get('project-view-metter-optimum'); ?>
+            </dt>
+            <dd class="max">
+                <?php echo $optimum ?>
+            </dd>
+        </dl>
+    </div>
+    <?php endforeach ?>
+
+    <?php endforeach ?>
+
 </div>

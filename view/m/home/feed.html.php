@@ -25,18 +25,20 @@ $feed = $this['feed'];
 
 ?>
 <div class="widget feed">
+  <?/*
     <script type="text/javascript">
     jQuery(document).ready(function($) {
         $('.scroll-pane').jScrollPane({showArrows: true});
     });
     </script>
+  */?>
     <h3 class="title"><?php echo Text::get('feed-header'); ?></h3>
 
     <div style="height:auto;overflow:auto;margin-left:15px">
 
         <div class="block goteo">
            <h4><?php echo Text::get('feed-head-goteo'); ?></h4>
-           <div class="item scroll-pane" style="height:350px;">
+           <div class="item">
                <?php foreach ($feed['goteo'] as $item) :
                    echo Feed::subItem($item);
                 endforeach; ?>
@@ -45,7 +47,7 @@ $feed = $this['feed'];
 
         <div class="block projects">
             <h4><?php echo Text::get('feed-head-projects'); ?></h4>
-            <div class="item scroll-pane" style="height:350px;">
+            <div class="item scroll-pane">
                <?php foreach ($feed['projects'] as $item) :
                    echo Feed::subItem($item);
                 endforeach; ?>
