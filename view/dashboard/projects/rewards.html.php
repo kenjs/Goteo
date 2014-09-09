@@ -169,7 +169,7 @@ switch ($order) {
                     <div class="left" style="width:120px;">
 						<span class="username"><a href="/user/<?php echo $investData->user->id; ?>"><?php echo $investData->user->name; ?></a></span>
                         <label class="amount">Aporte<?php if ($investData->anonymous) echo ' <strong>'.  Text::get('regular-anonymous').'</strong>'; ?></label>
-						<span class="amount"><?php echo $investData->amount; ?> &euro;</span>
+						<span class="amount"><?php echo $investData->amount; ?> &yen;</span>
                         <span class="date"><?php echo date('d-m-Y', strtotime($investData->invested)); ?></span>
                     </div>
                    
@@ -228,7 +228,7 @@ switch ($order) {
                     Por retornos: <br />
                     <?php foreach ($rewards as $rewardId => $rewardData) : ?>
                         <input type="checkbox" id="msg_reward-<?php echo $rewardId; ?>" name="msg_reward-<?php echo $rewardId; ?>" value="1" />
-                        <label for="msg_reward-<?php echo $rewardId; ?>"><?php echo $rewardData->amount; ?> &euro; (<?php echo Text::recorta($rewardData->reward, 40); ?>)</label>
+                        <label for="msg_reward-<?php echo $rewardId; ?>"><?php echo $rewardData->amount; ?> &yen; (<?php echo Text::recorta($rewardData->reward, 40); ?>)</label>
                     <?php endforeach; ?>
 
                 </p>

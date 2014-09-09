@@ -43,7 +43,7 @@ foreach ($invest->rewards as $key => $data) {
 
         <label>
             <input type="radio" name="selected_reward" id="reward_<?php echo $individual->id; ?>" value="<?php echo $individual->id; ?>" amount="<?php echo $individual->amount; ?>" class="individual_reward" title="<?php echo htmlspecialchars($individual->reward) ?>" <?php if ($individual->none) echo 'disabled="disabled"' ?>  <?php if (isset($rewards[$individual->id])) echo ' checked="checked"'; ?>/>
-            <?php echo htmlspecialchars($individual->reward) . ' <strong>' .$individual->amount . ' &euro; </strong>' ?>
+            <?php echo htmlspecialchars($individual->reward) . ' <strong>' .$individual->amount . ' &yen; </strong>' ?>
         </label>
 
     </li>
