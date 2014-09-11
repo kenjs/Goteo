@@ -749,8 +749,8 @@ namespace Goteo\Controller {
                 'related',
                 'reward',
                 'keywords',
-                'media',
-                'media_usubs',
+                //'media',
+                //'media_usubs',
                 'project_location'
             );
 
@@ -772,9 +772,9 @@ namespace Goteo\Controller {
             }
 
             // Media
-            if (!empty($project->media)) {
+            /*if (!empty($project->media)) {
                 $project->media = new Model\Project\Media($project->media);
-            }
+            }*/
             // Video de motivación
             if (!empty($project->video)) {
                 $project->video = new Model\Project\Media($project->video);

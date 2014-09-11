@@ -466,7 +466,8 @@ namespace Goteo\Library {
 		 */
 		static public function GmapsLink($location)
 		{
-			$texto = '<a href="http://maps.google.es/maps?q='.htmlspecialchars(rawurlencode($location)).'&hl=es" target="_blank">'.htmlspecialchars($location).'</a>';
+//			$texto = '<a href="http://maps.google.es/maps?q='.htmlspecialchars(rawurlencode($location)).'&hl=es" target="_blank">'.htmlspecialchars($location).'</a>';
+            $texto = '<a href="https://maps.google.co.jp/maps?q='.htmlspecialchars(rawurlencode($location)).'&hl=ja" target="_blank">'.htmlspecialchars($location).'</a>';
 			return $texto;
 		}
 
