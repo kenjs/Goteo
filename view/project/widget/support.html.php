@@ -61,8 +61,8 @@ $project = $this['project'];
             <?php else : ?>
             <a class="button view" href="/project/<?php echo $project->id ?>/updates"><?php echo Text::get('regular-see_blog'); ?></a>
             <?php endif; ?>
-            <a class="more" href="/project/<?php echo $project->id; ?>/needs"><?php echo Text::get('regular-see_more'); ?></a>
         </div>
     </div>
+    <a class="more" href="/project/<?php echo $project->id; ?>/needs"><?php echo Text::get('regular-see_more'); ?></a>
     
 </div>

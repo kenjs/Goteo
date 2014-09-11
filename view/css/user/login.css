@@ -64,6 +64,10 @@ body.user-login div#main > div form > div input {
 
 body.user-login div#main form input[type="submit"] {
     margin-bottom: 10px;
+    width: 100%;
+}
+body.user-login div#main form button.disabled {
+    width: 100%;
 }
 
 body.user-login div#main div.register form > div input {

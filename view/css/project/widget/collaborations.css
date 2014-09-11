@@ -44,6 +44,11 @@ div.widget.project-collaborations ul li > p {
 
 div.widget.project-collaborations ul li.task {
     background-image: url('/view/css/icon/m/task.png');
+    border-bottom: 1px dashed #c0c0c0;
+}
+
+div.widget.project-collaborations ul li.task:last-child {
+    border-bottom: none;
 }
 
 div.widget.project-collaborations ul li.lend {
@@ -55,12 +60,16 @@ div.widget.project-collaborations ul li {
 }
 
 div.widget.project-collaborations a.more {
+    clear: both;
     display: block;
-    float: right;
+    /*float: right;*/
     text-decoration: none;
-    text-align: right;
+    text-align: center;
     line-height: 38px;
+    border-top: 1px dashed #c0c0c0;
 }
+
+body.project-show div#main div.widget.project-support div.project-widget-box a.more
 
 /*div.side div.widget a.more {
     top: 0;

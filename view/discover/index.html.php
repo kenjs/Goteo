@@ -112,6 +112,7 @@ include 'view/header.html.php' ?>
                 <a class="all" href="/discover/view/<?php echo $type; ?>"><?php echo Text::get('regular-see_all'); ?></a>
             </div>
 
+
         </div>
 
     <?php endforeach; ?>

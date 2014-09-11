@@ -42,8 +42,6 @@ $project = $this['project'];
             </li>
             <?php endforeach ?>
         </ul>
-        
-        <a class="more" href="/project/<?php echo $project->id; ?>/needs-non"><?php echo Text::get('regular-see_more'); ?></a>
-    
     </div>
+    <a class="more" href="/project/<?php echo $project->id; ?>/needs-non"><?php echo Text::get('regular-see_all_needs'); ?></a>
 </div>

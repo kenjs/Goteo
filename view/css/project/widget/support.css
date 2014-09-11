@@ -265,7 +265,7 @@ div.widget.project-support div.buttons {
     padding: 1em 0 0;
     clear: both;
     position: absolute;
-    bottom: 20px;
+    bottom: 60px;
     left: 20px;
     right: 20px;
 }
@@ -289,11 +289,13 @@ div.widget.project-support a.button {
 }
 
 div.widget.project-support a.more {
-    float: right;
-    text-decoration: none;
-	/*position: relative;
-	top: 16px;*/
     line-height: 38px;
+    clear: both;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 38px;
+    border-top: 1px dashed #c0c0c0;
 }
 
 /* Tagmark termometro */
@@ -339,3 +341,7 @@ div.widget.project-support div.tagmark.twolines {
     padding-top: 6px !important;
 }
 /** Fin tagmark **/
+
+
+
+

@@ -83,7 +83,7 @@ $level = (int) $this['level'] ?: 3;
                    </a>
                    </h<?php echo $level ?>>
                    <a name="message<?php echo $message->id; ?>"></a>
-                   <div class="date"><span><?php echo $message->timeago ?>分前</span></div>
+                   <div class="date"><span><?php echo $message->timeago ?>前</span></div>
                    <blockquote><?php echo $message->message; ?></blockquote>
                    <div class="actions">
                         <?php if (!empty($_SESSION['user'])) : ?>
@@ -111,7 +111,7 @@ $level = (int) $this['level'] ?: 3;
 						   <?php echo $child->user->name; ?>
                            </a>
                            </h<?php echo $level ?>>
-                           <div class="date"><span><?php echo $child->timeago; ?>分前</span></div>
+                           <div class="date"><span><?php echo $child->timeago; ?>前</span></div>
                            <blockquote><?php echo $child->message; ?></blockquote>
                            <?php // si puede borrar este mensaje
                            if (\Goteo\Core\ACL::check("/message/delete/{$child->id}/{$project->id}")) : ?>
@@ -124,6 +124,4 @@ $level = (int) $this['level'] ?: 3;
                 endif; ?>
 		<?php endforeach; ?>
     </div>
-
-
 </div>

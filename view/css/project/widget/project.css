@@ -36,7 +36,7 @@ div.widget.project {
 
 div.widget.project > *  {
     margin: 0;
-    padding: 12px;    
+    padding: 12px;
 }
 
 div.widget.project div.image {
@@ -45,7 +45,7 @@ div.widget.project div.image {
     background-color: #deddde;
     margin: 12px 0 10px;
     padding: 0 !important;
-overflow: hidden;
+    overflow: hidden;
     position: relative;
 }
 

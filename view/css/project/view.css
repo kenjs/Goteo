@@ -194,6 +194,9 @@ body.project-show div.project-menu ul li.active a {
     border: none;
     color: #666666;
     text-align: center;
+    border-top: 1px solid #e8e8bb;
+    border-right: 1px solid #e8e8bb;
+    border-left: 1px solid #e8e8bb;
 }
 
 body.project-show div.project-menu ul li.show a {
@@ -207,6 +210,9 @@ body.project-show div.project-menu ul li.show a {
     border: none;
     color: #666666;
     text-align: center;
+    border-top: 1px solid #e8e8bb;
+    border-right: 1px solid #e8e8bb;
+    border-left: 1px solid #e8e8bb;
 }
 
 body.project-show div#main div.widget {
@@ -306,3 +312,12 @@ div.widge dl {
     margin-left: 15px;
     margin-bottom: 60px;
 }
+
+/*¥¹¥­¥ë*/
+
+div.project-header div.wants-skills a {
+    padding: 0 10px 0 0;
+
+}
+
+

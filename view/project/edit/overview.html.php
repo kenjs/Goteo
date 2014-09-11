@@ -1,6 +1,6 @@
 <?php
 /*
- *  Copyright (C) 2012 Platoniq y FundaciÃ³n Fuentes Abiertas (see README for details)
+ *  Copyright (C) 2012 Platoniq y Fundaci¨®n Fuentes Abiertas (see README for details)
  *	This file is part of Goteo.
  *
  *  Goteo is free software: you can redistribute it and/or modify
@@ -79,6 +79,7 @@ foreach ($this['scope'] as $value => $label) {
 }
 
 // media del proyecto
+/*
 if (!empty($project->media->url)) {
     $media = array(
             'type'  => 'media',
@@ -92,7 +93,7 @@ if (!empty($project->media->url)) {
         'type'  => 'hidden',
         'class' => 'inline'
     );
-}
+}*/
 
 // video de motivacion
 if (!empty($project->video->url)) {
@@ -283,7 +284,7 @@ $superform = array(
             'ok'        => !empty($okeys['keywords']) ? array($okeys['keywords']) : array(),
             'value'     => $project->keywords
         ),
-
+/*
         'media' => array(
             'type'      => 'textbox',
             'required'  => true,
@@ -316,6 +317,7 @@ $superform = array(
             'checked'   => (bool) $project->media_usubs,
             'value'     => 1
         ),
+*/
         // fin media
 
         'currently' => array(    

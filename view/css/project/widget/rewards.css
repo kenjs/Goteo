@@ -49,10 +49,16 @@ div.widget.project-rewards > div.social ul li,
     background-color: #f3f9f2;
 }
 
+
 div.widget.project-invest > div.social ul li.active,
 div.widget.project-rewards > div.social ul li.active,
 #rewards-summary > div.social ul li.active {
     background-color: #d5ebd7;
+}
+
+div.side div.project-widget-box div.social ul li.other,
+div.side div.project-widget-box div.social ul li.service {
+    margin: 0;
 }
 
 div.widget.project-invest div.individual h4.title,
@@ -249,7 +255,7 @@ div.widget.project-rewards a.more {
     display: block;
     padding: 8px;
     text-decoration: none;
-    text-align: right;
+    text-align: center;
 }
 /*div.widget.project-collaborations ul li.support strong {
     padding-left: 45px;
