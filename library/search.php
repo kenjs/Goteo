@@ -144,11 +144,27 @@ namespace Goteo\Library {
                 $sql .= implode (' ', $where);
             }
 
-            $sql .= " ORDER BY status ASC, name ASC";
+            $sql .= " ORDER BY ";
+
+            if (!empty($params['orderby'])){
+                $sql .= $params['orderby'];
+                if (!empty($params['order'])){
+                    $sql .= " " . $params['order'];
+                } else {
+                    $sql .= " ASC";
+                }
+                $sql .= ',';
+            }
+            $sql .= "status ASC, name ASC";
+
             // Limite
             if (!empty($limit) && \is_numeric($limit)) {
                 $sql .= " LIMIT $limit";
             }
+
+//            var_dump($sql);
+//            var_dump($values);
+//            exit;
 
             try {
                 $query = Model::query($sql, $values);

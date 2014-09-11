@@ -337,7 +337,45 @@ namespace Goteo\Model {
 				throw new \Goteo\Core\Exception($e->getMessage());
             }
 		}
-        
+
+        public static function getChildren ($parent_id = 0) {
+            $array = array ();
+            try {
+
+//                $sql = "SELECT
+//                            id
+//                        FROM skill
+//                        WHERE
+//                        parent_skill_id IS NOT NULL
+//                        AND parent_skill_id > 0
+//                        AND parent_skill_id = :parent_id
+//                        ";
+
+                $sql = "SELECT `id` FROM `skill` WHERE parent_skill_id IS NOT NULL AND parent_skill_id = :parent_id ORDER  BY `order` ASC";
+                $query = static::query($sql, array(':parent_id'=>$parent_id));
+                $array = $query->fetchAll(\PDO::FETCH_ASSOC);
+//                foreach ($keywords as $keyw) {
+//                    $kw = $keyw['keywords'];
+////                    $kw = str_replace('|', ',', $keyw['keywords']);
+////                    $kw = str_replace(array(' ','|'), ',', $keyw['keywords']);
+////                    $kw = str_replace(array('-','.'), '', $kw);
+//                    $kwrds = explode(',', $kw);
+//
+//                    foreach ($kwrds as $word) {
+//                        $array[] = strtolower(trim($word));
+//                    }
+//                }
+
+                asort($array);
+
+                return $array;
+            } catch(\PDOException $e) {
+                throw new \Goteo\Core\Exception($e->getMessage());
+            }
+        }
+
+
+
     }
     
 }
