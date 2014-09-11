@@ -25,7 +25,6 @@ body.project-show div#main > div.center > div.widget.project-schedule {
     max-width: 620px;
 }
 
-
 div.widget.project-schedule table {
     border-collapse: separate;
     width: 100%;
@@ -49,8 +48,6 @@ div.widget.project-schedule thead.weeks {
 
 div.widget.project-schedule thead.months tr th {
     font-weight: normal;
-    /*border: solid #e0e0e0;
-    border-width: 0 1px 0 0;*/
     font-size: 14px;
 }
 
@@ -65,7 +62,6 @@ div.widget.project-schedule thead tr th:first-child {
 div.widget.project-schedule thead.months tr th span {
     color: #808285;
 }
-
 
 div.widget.project-schedule thead tr > * {
     border-top: none;
@@ -91,7 +87,6 @@ div.widget.project-schedule table tbody th {
     display: none;
 }
 
-
 div.widget.project-schedule table tbody th strong {
     font-size: 13px;
     font-weight: bold;
@@ -106,7 +101,7 @@ div.widget.project-schedule table tbody th span {
 
 
 div.widget.project-schedule table tbody td.on {
-	background-color: #d1edf1;    
+	background-color: #d1edf1;
     text-align: left;
     padding: 1em;
 }
@@ -140,25 +135,18 @@ div.widget.project-schedule table tbody td.on.noreq {
     background-color: #e2e2e2;
 }
 
-/*
-div.widget.project-schedule table tbody tr:nth-child(4n+1) td.on {
-    background-color: #f9d3d4;
-}
-
-div.widget.project-schedule table tbody tr:nth-child(4n+3) td.on {
-    background-color: #d2f0f0;
-}
-
-div.widget.project-schedule table tbody tr:nth-child(4n+4) td.on {
-    background-color: #c7c7e4;
-}
-*/
-
-
 div.widget.project-schedule table tbody td span {
     font-size: 12px;
     font-weight: normal;
     text-align: center;
     height: 5em;
     overflow: hidden;
+}
+
+div.widget.project-schedule h3.title {
+    margin: 0;
+    padding: 8px 0 8px 20px;
+    color: #f5f5f5;
+    background-color: #666666;
+    font-weight: normal;
 }

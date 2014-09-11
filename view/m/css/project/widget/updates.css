@@ -45,9 +45,13 @@ div.widget.project-updates > div {
 }
 .project-updates {
     width:620px;
-	margin: 0 0 0 0;
-	float:left;
+	margin: 20px 0 0;
+	/*float:left;*/
 }
+.project-updates > p {
+    padding-left: 20px;
+}
+
 .project-updates .post{
     background-color: white;
     line-height: 18px;

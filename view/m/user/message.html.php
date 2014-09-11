@@ -50,7 +50,7 @@ $_SESSION['msg_token'] = uniqid(rand(), true);
 	});
 </script>
 
-<?php echo new View('view/user/widget/header.html.php', array('user'=>$user)) ?>
+<?php echo new View('view/m/user/widget/header.html.php', array('user'=>$user)) ?>
 
 <div id="main">
 
@@ -85,16 +85,16 @@ $_SESSION['msg_token'] = uniqid(rand(), true);
     </div>
     <?php endif; ?>
 
-        <?php echo new View('view/user/widget/worth.html.php', array('worthcracy' => $worthcracy, 'level' => $user->worth)) ?>
+        <?php echo new View('view/m/user/widget/worth.html.php', array('worthcracy' => $worthcracy, 'level' => $user->worth)) ?>
 
-        <?php echo new View('view/user/widget/about.html.php', array('user' => $user)) ?>
+        <?php echo new View('view/m/user/widget/about.html.php', array('user' => $user)) ?>
 
-        <?php echo new View('view/user/widget/social.html.php', array('user' => $user)) ?>
+        <?php echo new View('view/m/user/widget/social.html.php', array('user' => $user)) ?>
 
     </div>
     <div class="side">
-        <?php echo new View('view/user/widget/investors.html.php', $this) ?>
-        <?php echo new View('view/user/widget/sharemates.html.php', $this) ?>
+        <?php echo new View('view/m/user/widget/investors.html.php', $this) ?>
+        <?php echo new View('view/m/user/widget/sharemates.html.php', $this) ?>
     </div>
 
 </div>

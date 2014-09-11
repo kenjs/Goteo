@@ -22,8 +22,12 @@ div.widget.project-collaborations h4.supertitle {
     background-color: #33cc99;
 }
 
+div.widget.project-collaborations h3.title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 div.widget.project-collaborations ul {
-    margin: 1em 0;
+    margin: 0 0 1em;
     padding: 0;
     list-style: none;
 }
@@ -56,10 +60,10 @@ div.widget.project-collaborations ul li {
 
 div.widget.project-collaborations a.more {
     display: block;
-    float: right;
+    background-color: #fff;
+    padding: 10px;
     text-decoration: none;
-    text-align: right;
-    line-height: 38px;
+    text-align: center;
 }
 
 /*div.side div.widget a.more {
@@ -84,7 +88,7 @@ div.widget.project-collaborations a.button {
     display: block;
     width: 200px;
     height: 50px;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     background: none;
     background: #66cc99; /* Old browsers */

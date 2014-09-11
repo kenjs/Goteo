@@ -35,9 +35,9 @@ require_once 'library/pagination/pagination.php';
 
 $pagedResults = new \Paginated($this['investors'], 20, isset($_GET['page']) ? $_GET['page'] : 1);
 ?>
-<?php echo new View('view/user/widget/header.html.php', array('user'=>$user)) ?>
+<?php echo new View('view/m/user/widget/header.html.php', array('user'=>$user)) ?>
 
-<?php if(isset($_SESSION['messages'])) { include 'view/header/message.html.php'; } ?>
+<?php if(isset($_SESSION['messages'])) { include 'view/m/header/message.html.php'; } ?>
 
 <div id="main">
 
@@ -52,7 +52,7 @@ $pagedResults = new \Paginated($this['investors'], 20, isset($_GET['page']) ? $_
             <div class="supporters">
                 <ul>
                 <?php while ($investor = $pagedResults->fetchPagedRow()) : ?>
-                    <li class="activable"><?php echo new View('view/user/widget/supporter.html.php', array('user' => $investor, 'worthcracy' => $worthcracy)) ?></li>
+                    <li class="activable"><?php echo new View('view/m/user/widget/supporter.html.php', array('user' => $investor, 'worthcracy' => $worthcracy)) ?></li>
                 <?php endwhile ?>
                 </ul>
             </div>
@@ -65,8 +65,8 @@ $pagedResults = new \Paginated($this['investors'], 20, isset($_GET['page']) ? $_
         </div>
     </div>
     <div class="side">
-        <?php echo new View('view/user/widget/sharemates.html.php', $this) ?>
-        <?php echo new View('view/user/widget/user.html.php', $this) ?>
+        <?php echo new View('view/m/user/widget/sharemates.html.php', $this) ?>
+        <?php echo new View('view/m/user/widget/user.html.php', $this) ?>
     </div>
 
 </div>

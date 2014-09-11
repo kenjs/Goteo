@@ -17,8 +17,8 @@
  *
  */
 body.user-login div#main > div {
-    display: table-cell;
-	width: 30%;
+    /*display: table-cell;*/
+	/*width: 30%;*/
 }
 
 body.user-login div#main > div > * {

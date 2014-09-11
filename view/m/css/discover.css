@@ -191,11 +191,14 @@ div.navi-bar ul.navi li > a.active {
 }
 
 div.navi-bar {
-    clear: both;
     display: block;
 	height: 30px;
-    text-align: right;
-    margin-right: 8px;
+    padding: 8px;
+    background-color: #ffffff;
+    text-align: center;
+    border-top: 1px dashed #c0c0c0;
+    border-bottom: 1px dashed #c0c0c0;
+    line-height: 30px;
 }
 
 div.navi-bar a.all{

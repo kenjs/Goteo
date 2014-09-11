@@ -19,7 +19,7 @@
  */
 
 use Goteo\Library\Text; ?>
-<p class="prev2"><a><img src="<?= LOCALGOOD_WP_BASE_URL; ?>/wp-content/themes/localgood/images/prev_btn.png" alt="前へ" /></a></p>
+<p class="prev2"><a><img src="/view/m/css/header/prev_btn.png" alt="前へ" /></a></p>
 <div class="project-menu viewport_projectnav">
     <ul class="flipsnap_projectnav">
         <?php
@@ -36,4 +36,4 @@ use Goteo\Library\Text; ?>
         <?php endforeach ?>        
     </ul>
 </div>
-<p class="next2"><a><img src="<?= LOCALGOOD_WP_BASE_URL; ?>/wp-content/themes/localgood/images/next_btn.png" alt="次へ" /></a></p>
+<p class="next2"><a><img src="/view/m/css/header/next_btn.png" alt="次へ" /></a></p>

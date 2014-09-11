@@ -47,8 +47,7 @@ foreach ($project->supports as $item) {
     <table width="100%">
         
         <?php foreach ($items as $type => $list): ?>
-        
-        <thead class="<?php echo htmlspecialchars($type)?>">
+        <thead class="<?php echo htmlspecialchars($type); ?>">
             <tr>
                 <th class="summary"><?php echo htmlspecialchars($types[$type]) ?></th>
             </tr>            

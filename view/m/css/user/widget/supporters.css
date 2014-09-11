@@ -227,7 +227,7 @@ div.widget.user-supporters .supporters ul li dl dd.worthcracy ul li > strong {
 
 div.widget.user-supporters a.more  {
     color: #58595b;
-    font-size: 12px !important;
+    /*font-size: 12px !important;*/
     text-transform: uppercase;
     float: right;
     clear: both;

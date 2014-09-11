@@ -29,7 +29,6 @@ include 'view/m/header.html.php' ?>
     jQuery(document).ready(function ($) {
         /* todo esto para cada tipo de grupo */
         <?php foreach ($this['lists'] as $type=>$list) :
-        //var_dump($this['lists']);
             if(array_empty($list)) continue; ?>
             $("#discover-group-<?php echo $type ?>-1").show();
             $("#navi-discover-group-<?php echo $type ?>-1").addClass('active');
@@ -58,15 +57,6 @@ include 'view/m/header.html.php' ?>
         });
     });
 </script>
-<?/*
-    <div id="sub-header">
-        <div>
-            <h2><?php echo Text::html('discover-banner-header') ?></h2>
-        </div>
-    </div>
-*/
-?>
-
     <div id="main">
         <?php echo new View('view/m/discover/searcher.html.php',
                             array(
@@ -84,13 +74,9 @@ include 'view/m/header.html.php' ?>
         <div class="widget projects">
             <h2 class="title"><?php echo $this['title'][$type]; ?></h2>
             <?php foreach ($list as $group=>$projects) : ?>
-                <div class="discover-group discover-group-<?php echo $type ?>" id="discover-group-<?php echo $type ?>-<?php echo $group ?>">
+            <? if($group == 1): ?>
 
-                    <?/*
-                    <div class="discover-arrow-left">
-                        <a class="discover-arrow" href="/discover/view/<?php echo $type; ?>" rev="<?php echo $type ?>" rel="<?php echo $type.'-'.$projects['prev'] ?>">&nbsp;</a>
-                    </div>
-                    */?>
+                <div class="discover-group discover-group-<?php echo $type ?>" id="discover-group-<?php echo $type ?>-<?php echo $group ?>">
 
                 <?
                     foreach ($projects['items'] as $project) :
@@ -98,27 +84,13 @@ include 'view/m/header.html.php' ?>
                     endforeach;
                 ?>
 
-                    <?/*
-                    <div class="discover-arrow-right">
-                        <a class="discover-arrow" href="/discover/view/<?php echo $type; ?>" rev="<?php echo $type ?>" rel="<?php echo $type.'-'.$projects['next'] ?>">&nbsp;</a>
-                    </div>
-                    */?>
-
-
-
                 </div>
-            <?php endforeach; ?>
+            <? endif; ?>
 
+            <?php endforeach; ?>
 
             <!-- carrusel de imagenes -->
             <div class="navi-bar">
-                <?/*
-                <ul class="navi">
-                    <?php foreach (array_keys($list) as $group) : ?>
-                    <li><a id="navi-discover-group-<?php echo $type.'-'.$group ?>" href="/discover/view/<?php echo $type; ?>" rev="<?php echo $type ?>" rel="<?php echo "{$type}-{$group}" ?>" class="navi-discover-group navi-discover-group-<?php echo $type ?>"><?php echo $group ?></a></li>
-                    <?php endforeach ?>
-                </ul>
-                */?>
                 <a class="all" href="/discover/view/<?php echo $type; ?>"><?php echo Text::get('regular-see_all'); ?></a>
             </div>
 

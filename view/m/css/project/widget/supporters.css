@@ -67,16 +67,8 @@ div.widget.project-supporters dl.summary dt.reached {
 }
 
 div.widget.project-supporters dl.summary dd.reached {
-    /*background: url("/view/css/euro/violet/l.png") no-repeat scroll right center transparent;        */
-    /*padding-right: 30px;*/
     color: #990033;
 }
-
-
-/*div.widget.project-supporters dl.summary dd.reached .euro {
-    display: none;
-}*/
-
 
 div.widget.project-supporters .supporters ul {
     background-color: #ffffff;
@@ -89,22 +81,15 @@ div.widget.project-supporters .supporters ul {
 div.widget.project-supporters .supporters > ul > li {
     background-color:  white;
     float: left;
-    /*width: 310px;*/
-    width: 205px;
+    width: 106px;
     height: 4.5em;
     position: relative;
     border-top: 1px dashed #c0c0c0;
     border-right: 1px dashed #c0c0c0;
 }
 div.widget.project-supporters .supporters > ul > li:nth-child(3n+3) {
-    /*width: 309px;*/
-    width: 206px;
+    width: 106px;
     border-right: none;
-}
-
-div.widget.project-supporters .supporters > ul > li div.supporterContainer {
-	padding: 10px 10px 10px 65px;
-	width: 230px;
 }
 
 div.widget.project-supporters .supporters ul li.active {
@@ -112,10 +97,7 @@ div.widget.project-supporters .supporters ul li.active {
 }
 
 div.widget.project-supporters .supporters ul li .avatar {
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    width: 50px;
+    width: auto;
     height: 50px;
     text-align: center;
     display: block;
@@ -142,7 +124,6 @@ div.widget.project-supporters .supporters ul li h6 {
     font-size: 12px;
     font-weight: bold;
     margin: 0 0 .5em;
-    /*height: 13px;*/
     text-transform: none;
 }
 
@@ -174,6 +155,7 @@ div.widget.project-supporters .supporters ul li h4 {
     font-size: 16px;
     margin-bottom: 2px;
     overflow: hidden;
+    text-align: center;
 }
 
 div.widget.project-supporters .supporters ul li a:hover {
@@ -207,7 +189,6 @@ div.widget.project-supporters .supporters ul li dl dd.amount {
     top: 25px;
     right: 16px;
     width: 96px;
-    /*font-size: 20px;*/
     font-size: 16px;
     font-weight: bold;
     color: #990033;
@@ -217,8 +198,6 @@ div.widget.project-supporters .supporters ul li dl dd.amount {
 }
 
 div.widget.project-supporters .supporters ul li dl dd.amount {
-    /*background: url('/view/css/euro/violet/m.png') no-repeat scroll right center;*/
-    /*padding-right: 22px;*/
 	height: 25px;
 }
 
@@ -227,18 +206,14 @@ div.widget.project-supporters .supporters ul li dl dd.amount strong {
     word-wrap: nowrap;
 }
 
-/*div.widget.project-supporters .supporters ul li dl dd.amount .euro {
-    display: none;
-}*/
-
 div.widget.project-supporters .supporters ul li dl dt.date {
     display: none;
 }
 
 div.widget.project-supporters .supporters ul li dl dd.date {
     position: absolute;
-    right: 16px;
-    bottom: 10px;
+    /*right: 16px;*/
+    bottom: 2px;
     color: #a6a8ab;
     font-size: 12px;
 	margin-top: 5px;
@@ -315,7 +290,6 @@ div.widget.project-investors a.more {
     display: inline-block;
     float: right;
     text-decoration: none;
-    /*color: #0C4E99;*/
 }
 
 div.widget.project-investors div.investors {
@@ -343,7 +317,6 @@ div.widget.project-investors .investors ul {
 /* Estilos copiados de user-supporter */
 div.widget.project-investors .investors > ul > li {
     background-color:  white;
-    /*padding: 10px 10px 10px 60px;*/
     height: 4.5em;
     position: relative;
 }
@@ -368,7 +341,6 @@ div.widget.project-investors .investors ul li .avatar img {
 
 div.widget.project-investors .investors > ul > li div.supporterContainer {
 	padding: 10px 10px 10px 60px;
-	/*min-width: 220px;*/
 }
 
 div.widget.project-investors .investors ul li.active {
@@ -385,6 +357,14 @@ div.widget.project-investors .investors ul li div.supporterContainer a.expand {
 	z-index: 999;
 }
 
+div.widget.project-investors a.more {
+    display: block;
+    background-color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    float: none;
+}
 
 div.widget.project-investors .investors ul li h3,
 div.widget.project-investors .investors ul li h4,
@@ -461,13 +441,6 @@ div.widget.project-investors .investors ul li dl dd.amount {
 	line-height: 28px;
 }
 
-/*div.widget.project-investors .investors ul li dl dd.amount {
-    background: transparent url('/view/css/euro/violet/s.png') no-repeat scroll right center;
-    padding-right: 18px;
-}*/
-/*div.widget.project-investors .investors ul li dl dd.amount .euro {
-    display: none;
-}*/
 div.widget.project-investors .investors ul li dl dd.amount strong {
     position: relative;
     right: -5px;
@@ -548,7 +521,7 @@ div.widget.project-investors .investors ul li dl dd.worthcracy ul li > strong {
 
 /* rediseño
 ************************/
-div.widget.project-supporters .supporters > ul > li {height:80px !important}
+div.widget.project-supporters .supporters > ul > li {height:92px !important}
 div.widget.project-supporters .supporters > ul > li > div.supporter h4{padding-bottom:3px;border-bottom:#D5D5D6 1px solid;overflow:hidden;margin-bottom:6px}
 div.widget.project-supporters .supporters > ul > li > div.supporter h4 > a{
 max-height: 6px;max-width: 175px;overflow: hidden;}
@@ -556,14 +529,15 @@ div.widget.project-supporters .supporters > ul > li .avatar{left:6px}
 div.widget.project-supporters .supporters > ul > li dl dt.amount{top: 8px}
 div.widget.project-supporters .supporters > ul > li dl dd.amount{
     top: 28px;
-/*    position: relative;
-    left: 3px;
-*/    font-size:8px;
+    font-size:8px;
     line-height: 16px;
 }
 div.widget.project-supporters .supporters > ul > li dl dt.projects, div.widget.project-supporters .supporters > ul > li dl dd.projects{font-size: 0.8em}
 div.widget.project-supporters .supporters ul li dl dd.worthcracy{margin-top: 5px}
-div.widget.project-supporters .supporters ul li dl dd.date{top: 55px}
+div.widget.project-supporters .supporters ul li dl dd.date{
+width: 100%;
+text-align: center;
+}
 
 div.widget.project-investors .investors ul li{height:80px}
 
@@ -571,12 +545,9 @@ div.widget.project-investors .investors ul li > div.supporter h4{padding-bottom:
 div.widget.project-investors .investors ul li > div.supporter h4 > a{
 max-height: 6px;max-width: 175px;overflow: hidden;}
 div.widget.project-investors .investors ul li .avatar{left:6px}
-/*div.widget.project-investors .investors ul li dl dt.amount{top:20px}
-div.widget.project-investors .investors ul li dl dd.amount{top:32px}*/
 div.widget.project-investors .investors ul li dl dt.projects, div.widget.project-investors .investors ul li dl dd.projects{font-size:0.8em}
 div.widget.project-investors .investors ul li dl dd.worthcracy{margin-top:5px}
 div.widget.project-investors .investors ul li dl dd.date{top:50px}
-
 
 div.widget.project-investors h4.supertitle {
     background-color: #33cc99;

@@ -157,7 +157,7 @@ div.widget.project-rewards > div.individual ul li span.left,
 div.widget.project-invest ul,
 div.widget.project-rewards ul,
 #rewards-summary ul {
-    margin: 1em 0;
+    margin: 1em 0 0;
     padding: 0;
     list-style: none;
 }
@@ -165,11 +165,11 @@ div.widget.project-rewards ul,
 div.widget.project-invest ul li,
 div.widget.project-rewards ul li,
 #rewards-summary ul li {
-    padding: 10px 10px 10px 60px;
+    padding: 10px 10px 0 60px;
     /*background: none no-repeat left 14px;*/
     background: none no-repeat 10px 14px;
     min-height: 32px;
-    margin-bottom: 1em;
+    /*margin-bottom: 1em;*/
 }
 
 div.widget.project-invest ul li > p,
@@ -248,9 +248,10 @@ div.widget.project-rewards ul li {
 
 div.widget.project-rewards a.more {
     display: block;
-    padding: 8px;
+    background-color: #fff;
+    padding: 10px;
     text-decoration: none;
-    text-align: right;
+    text-align: center;
 }
 /*div.widget.project-collaborations ul li.support strong {
     padding-left: 45px;

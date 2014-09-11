@@ -22,24 +22,25 @@ div.widget.user-about {
 }
 
 div.widget.user-about > div {
-    /*border-top: 1px solid #c9c9c9;*/
     border-top: 1px dashed #c0c0c0;
-    padding-top: 20px;
+    /*padding-top: 20px;*/
+    padding: 16px 8px 0;
     clear: both;
 }
 
 div.widget.user-about > div:nth-child(1) {
     border-top: none;
-    padding-top: 0;
+    /*padding-top: 0;*/
 }
 
 div.widget.user-about h4 {
-    font-size: 16px;
-    margin: 0 0 20px;
+    font-size: 15px;
+    margin: 0 0 12px;
+    font-weight: bolder;
 }
 
 div.widget.user-about p {
-    margin: 0 0 20px;
+    margin: 0 0 16px;
 }
 
 div.widget.user-about > div.webs ul {

@@ -22,15 +22,199 @@
 @import url('widget/supporters.css');
 @import url('widget/mates.css');
 
+body.user-profile #main div.center.profile div.widget.user-about {
+    margin: 0 0 20px 0!important;
+    background-color: #fff;
+    border-bottom: 1px dashed #c0c0c0;
+}
+
 body.user-profile div#main div.widget, 
 body.community div#main div.widget {
-    margin-bottom: 10px;
+    margin: 0;
+    /*background-color: #fff;*/
+    border: none;
 }
+
+
+body.user-profile div#sub-header {
+    margin-bottom: 0;
+}
+
+body.user-profile div#sub-header div {
+    margin-bottom: 0;
+    background-color: #dae121;
+}
+
+body.user-profile div#main {
+    padding: 0;
+}
+
+body.user-profile div#main div.widget .discover-group {
+    margin: 0 0 20px 0;
+    border-bottom: 1px dashed #c0c0c0;
+}
+
+body.user-profile div#main div.widget.user-worthcracy h3.title {
+    height: 50px;
+    padding: 0;
+    border-bottom: none;
+    line-height: 50px;
+    color: #ffffff;
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center!important;
+} 
+
+body.user-profile div#main .widget.user.collapsable h3.supertitle {
+    background-color: #669900;
+    font-weight: normal;
+    font-size: 16px;
+    height: 50px;
+    padding: 0;
+    padding-left: 20px;
+    border-bottom: none;
+    line-height: 50px;
+    color: #ffffff;
+}
+
+body.user-profile div#main div.widget.projects h2.title {
+    height: 50px;
+    padding: 0;
+    border-bottom: none;
+    line-height: 50px;
+    color: #fff;
+    background-color: #3399cc;
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center;
+}
+
+/*user/profile/名前/investors のプリジェクトリーダーの部分*/
+
+
+body.user-profile div.side .widget.user.collapsable {
+    background-color: #fff;
+    border-bottom: 1px dashed #c0c0c0!important;
+}
+
+body.user-profile div.side .widget.user.collapsable .project-widget-box {
+    position: relative;
+    margin: 0;
+    padding: 16px;
+}
+
+body.user-profile div.side .widget.user.collapsable .project-widget-box h4.title {
+    font-size: 13px;
+    margin: 10px 0 20px 50px;
+}
+
+body.user-profile div.side .widget.user.collapsable .project-widget-box .image {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+body.user-profile div.side .widget.user.collapsable .project-widget-box .image img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body.user-profile div.side .widget.user.collapsable .project-widget-box blockquote.about {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin: 10px 0 0 0;
+    padding: 0 2px;
+}
+
+body.user-profile div.side .widget.user.collapsable .project-widget-box dl {
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0;
+    font-size: 13px;
+}
+
+body.user-profile div.side .widget.user.collapsable .project-widget-box dl dt {
+    display: none;
+}
+
+body.user-profile div.side .widget.user.collapsable .project-widget-box dl dd {
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding: 0.8em 1.5em 0.8em 50px;
+    line-height: 1.4em;
+    text-align: left;
+}
+
+body.user-profile div.side .widget.user.collapsable .project-widget-box dl dd:last-child {
+    border: none;
+}
+
+body.user-profile div.side .widget.user.collapsable .project-widget-box dl dd.location {
+    background: url('/view/css/location/s.png') no-repeat 1.5em center;
+    text-indent: 0;
+}
+
+body.user-profile div.side .widget.user.collapsable .project-widget-box dl dd.location a {
+    text-decoration: none;
+}
+
+body.user-profile div.side .widget.user.collapsable .project-widget-box dl dd.message {
+    background: url('/view/css/bocadillo/s.png') no-repeat 1.5em center;
+    text-indent: 0;
+    text-decoration: none;
+}
+
+body.user-profile div.side .widget.user.collapsable .project-widget-box dl dd.message a {
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 14px;
+    color: #666;
+}
+
+body.user-profile div.side .widget.user.collapsable .project-widget-box dl dd.links {
+    background: url('/view/css/social/url.png')no-repeat 1.5em center;
+    text-indent: 0;
+    text-decoration: none;
+}
+
+body.user-profile div.side .widget.user.collapsable .project-widget-box dl dd.links ul {
+    line-height: 1.2em !important;
+}
+
+body.user-profile div.side .widget.user.collapsable .project-widget-box dl dd.links ul li a {
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+body.user-profile div.side .widget.user.collapsable .project-widget-box dl dd.profile {
+    background: url('/view/css/icon/m/s_task.png')no-repeat 1.5em center;
+    text-indent: 0;
+}
+
+body.user-profile div.side .widget.user.collapsable .project-widget-box dl dd.profile a{
+    text-decoration: none;
+}
+
+
+/*user/profile/名前/investors のプリジェクトリーダーの部分ここまで*/
+
+
 
 /*body.user-profile div#main > div.center,*/
 body.community div#main > div.center {
-    width: 620px;
-    float: left;
+    /*width: 620px;
+    float: left;*/
 }
 
 body.user-profile div#main > div.side,
@@ -41,10 +225,16 @@ body.community div#main > div.side {
 
 /* Detalle de la linea azul*/
 div.widget.user-supporters h3.supertitle {
-    border-bottom: 1px solid #313B96 !important;
-    background-color: #313B96;
-    color: #f5f5f5;
-    padding-left: 8px;
+    height: 50px;
+    padding: 0;
+    border-bottom: none;
+    line-height: 50px;
+    color: #fff;
+    background-color: #313b96;
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+    text-align: center
 }
 
 div.widget.user-mates div.users h3.supertitle{border-top: 1px solid #808285;border-bottom: 1px solid #20B3B2;padding:5px 0 5px 5px;color:#20B3B2;font-size:12px;background:none;}
@@ -54,14 +244,33 @@ body.user-profile div#main div.discover-group div.widget.project {
     margin: 0;
 }
 
+body.user-profile div.side div.widget.user-supporters {
+    margin: 0;
+    background-color: #fff;
+}
 
+body.user-profile div.side div.widget.user-supporters div.project-widget-box {
+    padding: 10px;
+    border-bottom: 1px dashed #c0c0c0;
+}
+
+body.user-profile div.side div.widget.user-supporters a.more {
+    display: block;
+    background-color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto 20px;
+    float: none;
+    font-size: 14px;
+}
 
 /* mates que sale en la parte central
 ***********************************************/
 div.center div.widget.user-mates .users ul > li{
 	border-bottom:#D5D5D6 1px solid;
     margin-right: 14px;
-    max-width: 275px;
+    /*max-width: 275px;*/
 }
 
 
@@ -136,7 +345,13 @@ div.center > div.widget.user-mates > h3.title{padding: 9px 0 7px 5px;font-size: 
 
 
 
-div.center div.widget.user-message{position:relative;z-index:99;}
+div.center div.widget.user-message{overflow:hidden;position:relative;z-index:99;}
+div.center div.widget.user-message form {padding: 8px;}
+div.center div.widget.user-message form label[for="message"] {
+    position: absolute;
+    left: 8px;
+    top: 90px;
+}
 div.center div.widget.user-message textarea{display:block;margin-left:50px;width:220px;}
 div.center div.widget.user-message #bocadillo{background:url('/view/css/bocadillo.jpg') no-repeat;position:absolute;
 width:56px;	height:51px;z-index:100;}
@@ -148,7 +363,7 @@ div.center div.widget.user-message button{float:right;margin-right:8px;}
 /*widget スマホ*/
 
 body.user-profile div#main div.discover-group div.widget.project {
-    margin: 0 auto 20px !important;
+    margin: 0 auto 0px !important;
     border: none;
 }
 

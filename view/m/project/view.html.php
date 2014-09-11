@@ -115,6 +115,7 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
 
             <div class="center <?php echo $show; ?>">
             <?php
+                $non_flug = 0;
                 // los modulos centrales son diferentes segun el show
                 switch ($show) {
                     case 'needs':
@@ -122,6 +123,7 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
                             echo
                                 new View('view/m/project/widget/non-needs.html.php',
                                     array('project' => $project, 'types' => Support::types()));
+                            $non_flug = 1;
                         } else {
                         echo
                             new View('view/m/project/widget/needs.html.php', array('project' => $project, 'types' => Cost::types())),
@@ -185,13 +187,15 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
                     case 'home':
                     
                     default:
-                        /*if (!empty($project->media->url)) {
+                        if (!empty($project->media->url)) {
                             echo new View('view/m/project/widget/media.html.php', array('project' => $project));
-                        }*/
+                        }
                         echo
-                            new View('view/m/project/widget/summary.html.php', array('project' => $project)),
-                            new View('view/m/project/widget/support.html.php', array('project' => $project)),
+                            new View('view/m/project/widget/summary.h_ttl.html.php', array('project' => $project,'level' => $level)),
+                            new View('view/m/project/meter.home.html.php', array('project' => $project,'level' => $level)),
+                            new View('view/m/project/widget/summary.h_cnt.html.php', array('project' => $project)),
                             new View('view/m/project/widget/share.html.php', array('project' => $project));
+                            //new View('view/m/project/widget/support.html.php', array('project' => $project));
                         break;
                 }
                 ?>
@@ -210,7 +214,7 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
                 echo new View('view/m/project/widget/investors.html.php', array('project' => $project));
             }
 
-            if (!empty($project->supports)) {
+            if (!empty($project->supports) && $non_flug == 0) {
                 echo new View('view/m/project/widget/collaborations.html.php', array('project' => $project));
             }
 

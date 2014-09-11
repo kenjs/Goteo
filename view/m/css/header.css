@@ -34,8 +34,6 @@ div#header strong {
 
 /* Super-header */
 div#super-header {
-    /*max-width: 940px;
-    margin: 0 auto;*/
     height: 25px;
     font-size: 12px;
     overflow: hidden; 
@@ -65,8 +63,17 @@ div#sub-header-secondary {
     margin-bottom: 32px;
 }
 
-div#sub-header{
-   background-color: #faf8f8;
+.discover div#sub-header div {
+   /*background-color: #faf8f8;*/
+   background-color: #dae121;
+   /*border-bottom: 1px dashed #c0c0c0;*/
+   padding: 0;
+   margin: 0;
+}
+
+div#sub-header h2.title {
+   padding: 10px;
+   text-align: center;
 }
 
 div#sub-header.banners{
@@ -95,11 +102,11 @@ div#sub-header-secondary > div > h2 a{
 }
 
 div#sub-header-secondary > div > h2 a:hover span.red{
-	text-decoration:underline;	
+	text-decoration:underline;
 }
 
 .discover div#sub-header > div{
-	margin:30px auto;
+	/*margin:20px auto;*/
 }
 
 div#sub-header > div > div.slides_container{
@@ -442,10 +449,9 @@ div#sub-header-secondary > div > ul.share-goteo li.rss a{
 }
 /* fin subheader secundario */
 
-div#header div#about {    
+div#header div#about {
     font-size: 12px;
     height: 2.2em;
-    /*float: right;*/
     overflow: hidden;
     position: relative;
     z-index: 9;
@@ -492,7 +498,7 @@ div#header div#about ul li > *:hover {
 }
 
 /* fin del carrusel de micronoticias */
-div#header div#highlights {    
+div#header div#highlights {
     font-size: 12px;
     height: 2.2em;
     max-width: 60%;
@@ -521,18 +527,18 @@ div#header div#highlights > h2 {
 
 div#header div#highlights > h2 a{
 	font-size:12px;
-	text-transform:uppercase;	
+	text-transform:uppercase;
 }
 
 div#header div#highlights > ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    overflow: hidden;        
-    display: inline-block;    
+    overflow: hidden;
+    display: inline-block;
 }
 
-div#header div#highlights > ul > li {    
+div#header div#highlights > ul > li {
     white-space: nowrap;
     display: block;
     padding-right: 8em;
@@ -552,12 +558,11 @@ div#header div#menu {
 }
 
 div#header div#menu > ul {
-    /*max-width: 940px;
-    margin: 0 auto;*/
     position: relative;
     list-style: none;
     text-align: right;
     overflow: visible;
+    margin-top: -8px;
 	padding-bottom: 0;
 	padding-left: 0;
 	padding-right: 0;
@@ -577,7 +582,7 @@ div#header div#menu > ul > li.home {
     top: 0;
 }
 
-div#header div#menu > ul > li.home > a {    
+div#header div#menu > ul > li.home > a {
     overflow: hidden;
     text-indent: 2000px;
     display: block;
@@ -589,44 +594,34 @@ div#header div#menu > ul > li.home > a {
     top: 50%;
     margin-left: -45px;
     margin-top: -18px;
-    background: url('header/main-logo.png') no-repeat left center;        
+    background: url('header/main-logo.png') no-repeat left center;
 }
 
 div#header div#menu > ul > li.home > a:hover {
     background: url('header/main-logo.png') no-repeat right center;
 }
 
-div#header div#menu > ul > li.explore,
-div#header div#menu > ul > li.create {
-    float: left;
-	/*margin-right: 4px;*/
+div#header div#menu > ul > li.explore {
+    width: 90px;
+    margin-left: 4px;
+    height: 40px;
 }
 
-div#header div#menu > ul > li.explore > a,
-div#header div#menu > ul > li.create > a {
+div#header div#menu > ul > li.explore > a {
     padding: .4em 1.8em .4em .8em;
     font-size: 12px;
     color: white;
     display: inline-block;
-    /*margin: .68em .2em .6em 0;*/
-    /*max-width: 7.5em;*/
-    /*text-align: left;*/
-	/*width:80px;*/
-	/*line-height: 1em;*/
-    height: 24px;
     text-align: center;
-    line-height: 24px;
 }
 
-div#header div#menu > ul > li.explore > a.button.red, a.button
-
-/*div#header div#menu > ul > li.explore > a {
-    margin-left: 8px;
-}*/
+div#header div#menu > ul > li.explore > a.button.red, a.button {
+    margin: 0;
+    padding: 4px!important;
+}
 
 div#header div#menu > ul > li.search {
     margin-top: 1em;
-    /*margin-right: .5em;    */
 }
 
 div#header div#menu > ul > li.search fieldset {
@@ -660,7 +655,7 @@ div#header div#menu > ul > li.search fieldset input[type="submit"] {
     display: block;
     position: absolute;
     right: 0;
-    top: 0;    
+    top: 0;
     padding: 0;
     overflow: hidden;
     text-indent: 2000px;
@@ -673,32 +668,25 @@ div#header div#menu > ul > li.search fieldset input[type="submit"]:hover {
     background-color: #8ed9d8;
 }
 
+div#header div#menu{
+    min-height:46px;
+}
+
 div#header div#menu > ul > li.community ,
 div#header div#menu > ul > li.login ,
 div#header div#menu > ul > li.dashboard {
-    height: 48px;    
+    height: 40px;
     position: relative;
-	
-} 
-
-div#header div#menu{
-	min-height:48px;
+    margin-left: 2px;
 }
-
-div#header div#menu > ul > li.community,
+div#header div#menu > ul > li.community {
+    margin-left: 8px;
+    /*padding-left: 2px;*/
+    background: transparent url('header/down-black.png') no-repeat right 50%;
+}
 div#header div#menu > ul > li.dashboard {
-    background: transparent url('header/down-black.png') no-repeat right 30px;
+    background: transparent url('header/down-black.png') no-repeat 75px 50%;
 }
-/*div#header div#menu > ul > li.dashboard {
-    position:relative;
-    top:3px;
-}
-*/
-/*div#header div#menu > ul > li.dashboard {
-    position: absolute;
-    top:-3px;
-}*/
-
 div#header div#menu > ul > li.login fieldset > * {
     display: none;
 }
@@ -708,35 +696,32 @@ div#header div#menu > ul > li.login fieldset,
 div#header div#menu > ul > li.login fieldset > legend {
     margin: 0;
     padding: 0;
-    border: none;        
+    border: none;
     display: inline-block;
 }
 
 div#header div#menu > ul > li.community > a,
 div#header div#menu > ul > li.login > a,
 div#header div#menu > ul > li.dashboard > a {
-    padding: .5em .8em;
+    padding: 0 16px 0 4px;
     font-size: 12px;
     height: 40px;
     line-height: 40px;
-    display: inline-block;    
+    display: inline-block;
     color: #59595c;
 }
 
-
-
-/*div#header div#menu > ul > li.community > a,
+div#header div#menu > ul > li.login > a,
 div#header div#menu > ul > li.dashboard > a {
-    padding-right:30px;
-	position:relative;
-	top:-3px;*/
+    position: relative;
+    padding-right: 30px;
 }
 
 div#header div#menu > ul > li.dashboard > a > img{
     vertical-align: middle;
-	position:relative;
-	left:10px;
-    /*top:4px;*/
+	position:absolute;
+    top: 6px;
+	right:0;
 }
 
 div#header div#menu > h2,
@@ -747,7 +732,7 @@ div#header ul.lang {
 div#header div#menu > ul > li.community:hover,
 div#header div#menu > ul > li.login:hover,
 div#header div#menu > ul > li.dashboard:hover {
-    background-color: #808285;    
+    background-color: #808285;
 }
 
 div#header div#menu > ul > li.community:hover,
@@ -766,6 +751,7 @@ div#header div#menu > ul > li.dashboard > a > span > em {
 }
 
 div#header div#menu > ul > li.community > div, 
+div#header div#menu > ul > li.login > div, 
 div#header div#menu > ul > li.dashboard > div {
     display: none;
 }
@@ -801,7 +787,7 @@ div#header div#menu > ul > li.dashboard > div > ul > li * {
 div#header div#menu > ul > li.community > div > ul > li > a,
 div#header div#menu > ul > li.dashboard > div > ul > li > a {
     display: block;
-    padding: .6em 1em;
+    padding: 4px;
     font-size: 12px;
 }
 

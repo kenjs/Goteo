@@ -27,7 +27,6 @@ use Goteo\Core\View,
 
 $project = $this['project'];
 $level = $this['level'] ?: 3;
-//var_dump($this);
 
 if ($this['global'] === true) {
     $blank = ' target="_blank"';

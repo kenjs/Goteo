@@ -377,8 +377,6 @@ footer
     margin-left:30px;
 }
 .footer .foot_bar_inner .accenture img {
-    width: auto;
-    height: 40px;
     margin: 10px 0;
     text-align: left;
 }
@@ -404,8 +402,6 @@ footer
 
 .footer .platoniq {
     position: absolute;
-    right: 0;
-    /*top: 32px;*/
     top: 50px;
 }
 .footer .platoniq a {
@@ -553,30 +549,11 @@ footer(sp)
   sp--navigation
 --------------------------------------------------*/
 .viewport {
-    margin: 0 auto;
-    overflow: hidden;
-    -webkit-transform: translateZ(0); /* Optional: When heavy at iOS6+ */
-}
-
-.flipsnap {
-    width: 935px; /* 320px(item width) * 3(item count) */
-}
-
-.flipsnap:after {
-    content: '';
-    display: block;
-    clear: both;
-    height: 0;
-}
-
-
-.viewport {
     width: 300px;
     margin: 0 auto;
     overflow: hidden;
     -webkit-transform: translateZ(0); /* Optional: When heavy at iOS6+ */
 }
-
 .flipsnap {
     width: 935px; /* 320px(item width) * 3(item count) */
 }
@@ -609,7 +586,7 @@ body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_
 
 body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav .item {
     float: left;
-    width: 110px!important;
+    /*width: 110px!important;*/
     border: none;
     border-right: 1px dashed #cccccc;
 /*    font-size: 50px;
@@ -620,7 +597,7 @@ body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_
     color: #666;*/
 }
 body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav .item a {
-    width: 94px!important;
+    /*width: 94px!important;*/
     margin: 0 auto;
 }
 
@@ -989,7 +966,7 @@ body.home #social_bookmark {
 --------------------------------------------------*/
 
 div#sub-header {
-    margin-bottom: 12px;
+    margin-bottom: 1px;
 }
 
 

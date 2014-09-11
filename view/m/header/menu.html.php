@@ -77,7 +77,7 @@
             </li>            
             <?php else: ?>            
             <li class="login">
-                <a href="/user/login"><?php echo Text::get('regular-login'); ?></a>
+                <a href="/view/m/user/login"><?php echo Text::get('regular-login'); ?></a>
             </li>
             
             <?php endif ?>

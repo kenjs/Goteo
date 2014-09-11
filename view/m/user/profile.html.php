@@ -68,7 +68,7 @@ $worthcracy = Worth::getAll();
 
 <?php echo new View('view/m/user/widget/header.html.php', array('user'=>$user)) ?>
 
-<?php if(isset($_SESSION['messages'])) { include 'view/header/message.html.php'; } ?>
+<?php if(isset($_SESSION['messages'])) { include 'view/m/header/message.html.php'; } ?>
 
 <div id="main">
 

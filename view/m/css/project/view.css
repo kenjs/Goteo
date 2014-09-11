@@ -171,14 +171,14 @@ body.project-show div.project-menu ul li span.digits{
 
 body.project-show div.project-menu ul li a {
     display: inline-block;
-    width: 100%;
+    /*width: 100%;*/
     height:40px;
     padding: 0 8px;
     color: #666666;
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
-    /*line-height: 40px;*/
+    line-height: 40px;
     /*background-image: url('/view/css/project/view/menu/regular_menu.png');*/
     background: #ffffcc; /* Old browsers */
     background: -moz-linear-gradient(top,  #ffffcc 0%, #e5e5b9 100%, #e8e8bb 100%); /* FF3.6+ */
@@ -199,7 +199,7 @@ body.project-show div.project-menu ul li a {
 body.project-show div.project-menu ul li.active a {
     /*width: 142px;*/
     /*background-image: url('/view/css/project/view/menu/hover_menu.png');*/
-    width: 100%;
+    /*width: 100%;*/
     background: none;
     background-color: #dae121;
     border: none;
@@ -210,7 +210,8 @@ body.project-show div.project-menu ul li.show a {
     /*background-image: url('/view/css/project/view/menu/active_menu.png') !important;*/
     /*background-repeat: no-repeat !important;*/
     /*width: 142px;*/
-    width: 100%;
+    /*width: 100%;*/
+    background: none;
     background-color: #dae121;
 }
 
@@ -246,62 +247,48 @@ body.project-show div#main > div.center > div.widget {
 body.project-show div#main div.center div.widget.project-summary h3 {
     font-size: 20px;
     font-weight: bold;
-    padding: 0 10px;
-    margin: 10px 0;
+    margin: 0 10px 10px;
 }
 
 body.project-show div#main div.center .widget.project-summary .description{
-    padding: 10px 10px 0;
+    padding: 0 10px;
     margin: 0 0 20px 0 !important;
 }
 
 body.project-show div#main > div.center > div.widget {
     margin: 0 auto;
+    padding: 0;
+    clear: left;
+    background-color: #fff;
+}
+
+body.project-show div#main div.center div.widget.project-summary{
+    /*margin: 0 auto 20px!important;*/
     padding: 10px 0;
     clear: left;
     background-color: #fff;
 }
 
+body.project-show div#main > div.center.needs > div.widget.project-needs,
+body.project-show div#main > div.center.needs > div.widget.project-message,
+body.project-show div#main > div.center.needs > div.widget.project-schedule {
+    /*padding: 0 0 16px 0;*/
+    margin-bottom: 20px;
+}
+
 body.project-show div#main div.center div.widget.project-share {
-    border-bottom: 1px dashed #c0c0c0;
-    border-top: 1px dashed #c0c0c0;
+    /*border-bottom: 1px dashed #c0c0c0;
+    border-top: 1px dashed #c0c0c0;*/
+    border-bottom: none;
+    margin-bottom: 20px!important;
+    padding-top: 8px;
+    padding-bottom: 8px;
 }
 
 body.project-show div#main > div.side > div.widget .title {
     background: none !important;
 }
 
-body.project-show div#sub-header div.project-menu.viewport_projectnav {
-    width: 320px;
-    overflow: hidden;
-    margin: 0 auto;
-    background-color: #e7e7e7;
-    -webkit-transform: translateZ(0); /* Optional: When heavy at iOS6+ */
-}
-
-body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav {
-    width: 580px;/* 117px(item width) * 4(item count) + 116px */
-}
-
-body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav:after {
-    content: '';
-    display: block;
-    clear: both;
-    height: 0;
-}
-
-body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav .item {
-    float: left;
-    width: 100px;
-    border: none;
-    border-right: 1px dashed #cccccc;
-/*    font-size: 50px;
-    text-align: center;
-    padding: 50px 0;
-    background: #EFEFEF;
-    border: 5px solid #999;
-    color: #666;*/
-}
 body.project-show div#sub-header {
     position: relative;
 }
@@ -356,13 +343,14 @@ div.widget.projects  #widget-code textarea{
 }
 
 /* sideber */
-div.widget h4.supertitle {
-    height: 50px;
+div.widget h4.supertitle,
+div.widget h3.supertitle {
+    height: 40px;
     padding: 0;
     padding-left: 20px;
     /*border-bottom: 1px solid #96238F !important;*/
     border-bottom: none;
-    line-height: 50px;
+    line-height: 40px;
     color: #ffffff;
 }
 
@@ -386,15 +374,19 @@ div.widget.user .project-widget-box,
 div.widget.project-investors .project-widget-box,
 div.widget.user-mates .project-widget-box,
 div.widget.user-supporters .project-widget-box
+div.widget.project-needs .project-widget-box
 {
     padding: 15px 20px;
 }
 
 
-div#project-collaborations .project-widget-box{
+div#project-collaborations .project-widget-box,
+div#project-support .project-widget-box,
+div.widget.project-investors .project-widget-box {
     background-color: #fff;
     border-bottom: 1px dashed #c0c0c0;
 }
+
 
 div#project-collaborations .project-widget-box h3.title {
     color: #666;
@@ -421,19 +413,19 @@ div.widge dl {
 
 body.project-show .widget.user.collapsable {
     background-color: #fff;
-    padding: 16px 0 0;
-    border-top: 1px dashed #c0c0c0;
-    border-bottom: 1px dashed #c0c0c0;
+    /*border-bottom: 1px dashed #c0c0c0;*/
 }
 
 body.project-show .widget.user.collapsable h3.supertitle {
     background-color: #669900;
     font-weight: normal;
-    padding: 10px 8px 8px 8px;
     font-size: 16px;
-    color: #fff;
-    padding-left: 8px;
-    border: none;
+    height: 40px;
+    padding: 0;
+    padding-left: 20px;
+    border-bottom: none;
+    line-height: 40px;
+    color: #ffffff;
 }
 
 body.project-show .widget.user.collapsable .project-widget-box {

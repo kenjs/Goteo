@@ -46,8 +46,6 @@ $worthcracy = Worth::getAll();
                 endforeach ?>
             </ul>
 
-            <a class="more" href="/project/<?php echo $project->id; ?>/supporters"><?php echo Text::get('regular-see_more'); ?></a><br />
-
             </div>
 <? /*
         <div class="side-worthcracy">
@@ -55,4 +53,5 @@ $worthcracy = Worth::getAll();
         </div>
 */ ?>
     </div>
+    <a class="more" href="/project/<?php echo $project->id; ?>/supporters"><?php echo Text::get('regular-see_more'); ?></a>
 </div>

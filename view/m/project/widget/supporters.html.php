@@ -64,7 +64,7 @@ $pagedResults = new \Paginated($investors, 20, isset($_GET['page']) ? $_GET['pag
             <li><?php echo new View('view/user/widget/supporter.html.php', array('user' => $investor, 'worthcracy' => $worthcracy)) ?></li>
         <?php endwhile ?>
         </ul>
-    </div>        
+    </div>
 
     <ul id="pagination">
         <?php   $pagedResults->setLayout(new DoubleBarLayout());

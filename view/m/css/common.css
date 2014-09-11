@@ -127,7 +127,8 @@ div.side button,*/
 div.side div.widget.project-support a.button,
 div.side div.widget.project-collaborations a.button,
 div.side div.widget.user a.button,
-div.project-preview div.widget a.button {
+div.project-preview div.widget a.button,
+div.center div.widget.project-support a.button {
     width: 160px;
     height: 30px;
     line-height: 30px;
