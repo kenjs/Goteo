@@ -167,7 +167,7 @@ namespace Goteo\Controller {
                 }
             }
             return new View(
-                            'view/user/login.html.php',
+                            VIEW_PATH . '/m/user/login.html.php',
                             array(
                                 'errors' => $errors
                             )
