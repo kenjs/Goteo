@@ -1135,12 +1135,13 @@ namespace Goteo\Model {
                  ++$score;
             }
 
-            if (empty($this->media)) {
+            /*if (empty($this->media)) {
                 $errors['overview']['media'] = Text::get('mandatory-project-field-media');
             } else {
                  $okeys['overview']['media'] = 'ok';
                  $score+=3;
-            }
+            }*/
+            $score+=3;//mediaは無くても可とする
 
             if (empty($this->project_location)) {
                 $errors['overview']['project_location'] = Text::get('mandatory-project-field-location');

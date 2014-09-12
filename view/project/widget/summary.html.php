@@ -96,13 +96,6 @@ $level = (int) $this['level'] ?: 3;
         <?php echo $project->motivation; ?>
     </div>
     <?php endif ?>
-    <?php if (!empty($project->video->url)):  // video bajo motivaci�n ?>
-    <div class="project-motivation-video">
-        <a name="motivideo"></a>
-        <?php echo $project->video->getEmbedCode($project->video_usubs); ?>
-    </div>
-    <br />
-    <?php endif ?>
 
     <?php if (!empty($project->goal)): ?>
     <div class="goal">
