@@ -210,11 +210,7 @@ $bodyClass = 'project-show'; include 'view/prologue.html.php' ?>
 					case 'home':
 					
                     default:
-                        if (!empty($project->video->url)) {
-                            echo new View('view/project/widget/video.html.php', array('project' => $project));
-                        }
                         echo
-                            new View('view/project/widget/share.html.php', array('project' => $project)),
                             new View('view/project/widget/summary.html.php', array('project' => $project));
                         break;
                 }

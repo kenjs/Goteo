@@ -220,6 +220,7 @@ body.project-show div#main div.widget {
 }
 
 body.project-show div#main div.widget.project-support {
+    border-top: none!important;
     /*min-height: 450px;*/
 }
 
@@ -247,7 +248,7 @@ body.project-show div#main > div.center > div.widget {
 body.project-show div#main div.center div.widget.project-summary h3 {
     font-size: 20px;
     font-weight: bold;
-    margin: 0 10px 10px;
+    margin: 0 16px;
 }
 
 body.project-show div#main div.center .widget.project-summary .description{
@@ -262,8 +263,12 @@ body.project-show div#main > div.center > div.widget {
     background-color: #fff;
 }
 
+body.project-show div#main div.center div.widget.project-support,
+body.project-show div#main div.center div.widget.project-support div.widget{
+    border-bottom: none!important;
+}
+
 body.project-show div#main div.center div.widget.project-summary{
-    /*margin: 0 auto 20px!important;*/
     padding: 10px 0;
     clear: left;
     background-color: #fff;
@@ -272,13 +277,10 @@ body.project-show div#main div.center div.widget.project-summary{
 body.project-show div#main > div.center.needs > div.widget.project-needs,
 body.project-show div#main > div.center.needs > div.widget.project-message,
 body.project-show div#main > div.center.needs > div.widget.project-schedule {
-    /*padding: 0 0 16px 0;*/
     margin-bottom: 20px;
 }
 
 body.project-show div#main div.center div.widget.project-share {
-    /*border-bottom: 1px dashed #c0c0c0;
-    border-top: 1px dashed #c0c0c0;*/
     border-bottom: none;
     margin-bottom: 20px!important;
     padding-top: 8px;
@@ -303,7 +305,6 @@ body.project-show div#sub-header div.sub-menu p.next2 {
     padding-left: 4px;
     padding-right: 4px;
     line-height: 27px;
-    /*background-color: #dae121;*/
     background-color: #e5e5e5;
     z-index: 1;
 }

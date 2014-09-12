@@ -23,8 +23,17 @@ div.widget.project-supporters {
     max-width: 620px !important;
 }
 
+div.center.supporters div.widget.project-summary.h_ttl {
+    border-bottom: none;
+}
+
 div.widget.project-supporters .title {
-    display: none;
+    /*display: none;*/
+    margin: 0;
+    padding: 8px 0 8px 20px;
+    color: #f5f5f5;
+    background-color: #666666;
+    font-weight: normal;
 }
 
 div.widget.project-supporters dl.summary {
@@ -98,7 +107,7 @@ div.widget.project-supporters .supporters ul li.active {
 
 div.widget.project-supporters .supporters ul li .avatar {
     width: auto;
-    height: 50px;
+    height: 44px;
     text-align: center;
     display: block;
 }
@@ -525,7 +534,7 @@ div.widget.project-supporters .supporters > ul > li {height:92px !important}
 div.widget.project-supporters .supporters > ul > li > div.supporter h4{padding-bottom:3px;border-bottom:#D5D5D6 1px solid;overflow:hidden;margin-bottom:6px}
 div.widget.project-supporters .supporters > ul > li > div.supporter h4 > a{
 max-height: 6px;max-width: 175px;overflow: hidden;}
-div.widget.project-supporters .supporters > ul > li .avatar{left:6px}
+div.widget.project-supporters .supporters > ul > li .avatar{left:6px;padding-top:3px;}
 div.widget.project-supporters .supporters > ul > li dl dt.amount{top: 8px}
 div.widget.project-supporters .supporters > ul > li dl dd.amount{
     top: 28px;

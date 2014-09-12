@@ -20,13 +20,15 @@
 La pagina de aportar, la pagina de retornos, el lateral de retornos
 */
 /* Detalle de la linea verde */
+#rewards-summary h3.supertitle,
 div.widget.project-rewards h4.supertitle {
     background-color: #ff9933;
     /*border-bottom: 1px solid #00B25A !important;*/
 }
 
 div.widget.project-rewards div.social,
-div.widget.project-rewards div.individual {
+div.widget.project-rewards div.individual,
+#rewards-summary div.individual {
     padding: 15px 20px;
     border-bottom: 1px dashed #c0c0c0;
     background-color: #fff;
@@ -38,17 +40,31 @@ div.widget.project-rewards div.social h4.title,
     margin-top: 8px;
     color: #28b258 !important;
 }
-div.widget.project-rewards h4.title {
+div.widget.project-rewards h4.title,
+#rewards-summary div.individual h4.title {
     margin: 0;
     margin-top: 8px;
     padding-left: 0;
 }
+#rewards-summary div.social {
+    padding: 15px 20px;
+    border-bottom: 1px dashed #c0c0c0;
+    background-color: #fff;
+}
+
+#rewards-summary div.social h4.title {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+#rewards-summary div.social ul {
+    margin-top: 0;
+}
 
 div.widget.project-invest > div.social ul li,
-div.widget.project-rewards > div.social ul li,
-#rewards-summary > div.social ul li {
+div.widget.project-rewards > div.social ul li {
     background-color: #f3f9f2;
 }
+
 
 div.widget.project-invest > div.social ul li.active,
 div.widget.project-rewards > div.social ul li.active,
@@ -64,9 +80,8 @@ div.widget.project-rewards div.individual h4.title,
 }
 
 div.widget.project-invest > div.individual ul li,
-div.widget.project-rewards > div.individual ul li,
-#rewards-summary > div.individual ul li{
-    background-color: #F5E9F4;	
+div.widget.project-rewards > div.individual ul li {
+    background-color: #F5E9F4;
 }
 
 div.side div.widget.project-invest > div.individual ul li,
@@ -76,8 +91,7 @@ div.side #rewards-summary > div.individual ul li{
 }
 
 div.widget.project-invest > div.individual ul li.active,
-div.widget.project-rewards > div.individual ul li.active,
-#rewards-summary > div.individual ul li.active {
+div.widget.project-rewards > div.individual ul li.active {
     background-color: #E5C8E3;
 }
 
@@ -164,12 +178,24 @@ div.widget.project-rewards ul,
 
 div.widget.project-invest ul li,
 div.widget.project-rewards ul li,
-#rewards-summary ul li {
-    padding: 10px 10px 0 60px;
-    /*background: none no-repeat left 14px;*/
+#rewards-summary ul li,
+#rewards-summary ul li.file .name {
     background: none no-repeat 10px 14px;
-    min-height: 32px;
-    /*margin-bottom: 1em;*/
+    min-height: 33px;
+}
+
+div.widget.project-invest ul li,
+div.widget.project-rewards ul li {
+    padding: 10px 10px 0 60px;
+}
+
+#rewards-summary ul li,
+#rewards-summary ul li.file .name {
+    padding: 10px 10px 0 0;
+}
+
+#rewards-summary ul li.other {
+    padding-top: 0;
 }
 
 div.widget.project-invest ul li > p,
@@ -180,16 +206,31 @@ div.widget.project-rewards ul li > p,
 
 div.widget.project-invest ul li > .name,
 div.widget.project-rewards ul li > .name,
-#rewards-summary ul li > .name {
+#rewards-summary div.social ul li.file h5.name {
     margin: 0 0 .4em;
     font-size: 13px;
     font-weight: bold;
     text-transform: none;
+    background: url('/view/css/icon/m/file.png') no-repeat left 50%;
+}
+
+div.widget.project-rewards div.individual ul li.other h4.name {
+    background: none
+}
+
+#rewards-summary div.social ul li.file > h5.name {
+    padding-left: 42px;
+    padding-top: 0;
+    margin-bottom: .4em;
+}
+
+#rewards-summary ul li .name {
+    padding-left: 40px;
+    min-height: 33px;
 }
 
 div.widget.project-invest ul li.file,
-div.widget.project-rewards ul li.file,
-#rewards-summary ul li.file{
+div.widget.project-rewards ul li.file{
     background-image: url('/view/css/icon/m/file.png');
 }
 
@@ -223,7 +264,11 @@ div.widget.project-rewards ul li.product,
     background-image: url('/view/css/icon/m/product.png');
 }
 
-div.center div.widget.project-invest ul li.product, div.center div.widget.project-rewards ul li.product, div.center  #rewards-summary ul li.product{	background-position: 10px 10px;}
+div.center div.widget.project-invest ul li.product,
+div.center div.widget.project-rewards ul li.product,
+div.center  #rewards-summary ul li.product{
+    background-position: 10px 10px;
+}
 
 div.widget.project-invest ul li.design,
 div.widget.project-rewards ul li.design,

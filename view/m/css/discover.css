@@ -227,11 +227,13 @@ div.discover-arrow-right {
 }
 
 div.discover-arrow-left {
-    float: left;
+    /*float: left;*/
+    display: none;
 }
 
 div.discover-arrow-right {
-    float: right;
+    /*float: right;*/
+    display: none;
 }
 
 div.discover-arrow-left a.discover-arrow {

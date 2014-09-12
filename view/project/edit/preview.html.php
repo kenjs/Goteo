@@ -81,8 +81,6 @@ $elements      = array(
                        . new View('view/project/widget/collaborations.html.php', array('project' => $project))
                        . new View('view/project/widget/rewards.html.php', array('project' => $project))
                        . new View('view/user/widget/user.html.php', array('user' => $project->user))
-                       . new View('view/project/widget/media.html.php', array('project' => $project))
-                       . new View('view/project/widget/share.html.php', array('project' => $project))
                        . new View('view/project/widget/summary.html.php', array('project' => $project))
                        . new View('view/project/widget/needs.html.php', array('project' => $project, 'types' => $types))
                        . new View('view/project/widget/schedule.html.php', array('project' => $project))

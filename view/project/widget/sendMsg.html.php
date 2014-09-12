@@ -45,19 +45,15 @@ $level = (int) $this['level'] ?: 3;
     
     <h<?php echo $level ?> class="title"><?php echo Text::get('project-messages-send_direct-header'); ?></h<?php echo $level ?>>
         
-    <form method="post" action="/message/direct/<?php echo $project->id; ?>">    	
+    <form method="post" action="/message/direct/<?php echo $project->id; ?>">
     	<div id="bocadillo"></div>
         <textarea id="message" name="message" cols="50" rows="5"></textarea>
         
-        <a target="_blank" id="a-preview" href="#preview" class="preview">&middot;<?php echo Text::get('regular-preview'); ?></a>
+        <a target="_blank" id="a-preview" href="#preview" class="preview"><?php echo Text::get('regular-preview'); ?></a>
         <div style="display:none">
         	<div id="preview" style="width:400px;height:300px;overflow:auto;">
-                    
                 </div>
         </div>
-        
-         
-        
         <button class="green" type="submit"><?php echo Text::get('project-messages-send_message-button'); ?></button>
     </form>
 

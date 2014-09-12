@@ -18,7 +18,8 @@
  *
  */
 
-use Goteo\Library\Text;
+use Goteo\Library\Text,
+    Goteo\Core\View;
 
 $project = $this['project'];
 
@@ -31,57 +32,15 @@ $project->related     = nl2br(Text::urlink($project->related));
 
 $level = (int) $this['level'] ?: 3;
 ?>
-    <?php  if (count($project->gallery) > 1) : ?>
-		<script type="text/javascript" >
-			$(function(){
-				$('#prjct-gallery').slides({
-					container: 'prjct-gallery-container',
-					paginationClass: 'slderpag',
-					generatePagination: false,
-					play: 0
-				});
-			});
-		</script>
-    <?php endif; ?>
+
 <div class="widget project-summary">
-    
-    <h<?php echo $level ?>><?php echo htmlspecialchars($project->name) ?></h<?php echo $level ?>>
-        
+
     <?php if (!empty($project->description)): ?>
     <div class="description">
 <!--        <h<?php echo $level + 1?>><?php # echo Text::get('overview-field-description'); ?></h<?php echo $level + 1?>>         -->
         <?php echo $project->description; ?>
-    </div>    
+    </div>
     <?php endif ?>
-
-    <?php if (count($project->gallery) > 1): ?>
-	<div id="prjct-gallery">
-		<div class="prjct-gallery-container">
-			<?php $i = 1; foreach ($project->gallery as $image) : ?>
-			<div class="gallery-image" id="gallery-image-<?php echo $i ?>">
-				<img src="<?php echo $image->getLink(580, 580); ?>" alt="<?php echo $project->name; ?>" />
-			</div>
-			<?php $i++; endforeach; ?>
-		</div>
-		<!-- carrusel de imagenes si hay mas de una -->
-        <a class="prev">prev</a>
-            <ul class="slderpag">
-                <?php $i = 1; foreach ($project->gallery as $image) : ?>
-                <li><a href="#" id="navi-gallery-image-<?php echo $i ?>" rel="gallery-image-<?php echo $i ?>" class="navi-gallery-image">
-                <?php echo htmlspecialchars($image->name) ?></a>
-                </li>
-                <?php $i++; endforeach ?>
-            </ul>
-        <a class="next">next</a>
-		<!-- carrusel de imagenes -->
-	</div>
-    <?php elseif (!empty($project->gallery)) : ?>
-        <div class="gallery-image" id="gallery-image-<?php echo $i ?>"style="display:block;">
-            <img src="<?php echo $project->gallery[0]->getLink(580, 580); ?>" alt="<?php echo $project->name; ?>" />
-        </div>
-    <?php endif; ?>
-
-
 
     <?php if (!empty($project->about)): ?>
     <div class="about">
@@ -96,13 +55,13 @@ $level = (int) $this['level'] ?: 3;
         <?php echo $project->motivation; ?>
     </div>
     <?php endif ?>
-    <?php if (!empty($project->video->url)):  // video bajo motivaci�n ?>
-    <div class="project-motivation-video">
-        <a name="motivideo"></a>
-        <?php echo $project->video->getEmbedCode($project->video_usubs); ?>
-    </div>
-    <br />
-    <?php endif ?>
+</div>
+
+<?
+    echo new View('view/m/project/widget/video.html.php', array('project' => $project));
+?>
+
+<div class="widget project-summary">
 
     <?php if (!empty($project->goal)): ?>
     <div class="goal">
@@ -118,5 +77,7 @@ $level = (int) $this['level'] ?: 3;
     </div>
     <?php endif ?>
 
-    
 </div>
+<?
+    echo new View('view/m/project/widget/share.html.php', array('project' => $project));
+?>

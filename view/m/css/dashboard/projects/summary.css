@@ -38,15 +38,6 @@ body.dashboard div#main div.status #project-status h3{
 /* Estilos específicos para 
 Termometro horizontal grande  */
 
-/*
-body.dashboard div#meter-big {
-    border-top: 1px solid #d1d3d4;
-    padding: 4px 0 78px !important;
-    position: relative;
-    margin: 0 12px !important;
-    height: 55px;
-}
-*/
 body.dashboard div#meter-big {
      height: 200px;
      position: relative;
@@ -56,26 +47,11 @@ body.dashboard div#meter-big {
 body.dashboard div#meter-big h3.title.ronda {
 	color:#20B3B2;
 	position:absolute;
-	/*top:20px;*/
     top:0;
 	right: 20px; 
     text-transform: lowercase;
     background: none !important;
 }
-/*
-body.dashboard div#meter-big h2,
-body.dashboard div#meter-big h3,
-body.dashboard div#meter-big h4,
-body.dashboard div#meter-big h5,
-body.dashboard div#meter-big h6,
-body.dashboard div#meter-big h7,
-body.dashboard div#meter-big h8 {
-    margin: 0;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 2px 0 0;
-}
-*/
 
 body.dashboard div#meter-big div.meter.hor.big {
     padding-top: 30px;
@@ -211,18 +187,9 @@ body.dashboard div#meter-big dl .optimum {
     margin-right: -40px;
 }
 
-/*body.dashboard div#meter-big dl .minimum span,
-body.dashboard div#meter-big dl .optimum span {
-    position: relative;
-    left: -3px;
-}*/
-
-
-
 body.dashboard div#meter-big dl .minimum span {
     font-weight: normal;
 }
-
 
 body.dashboard div#meter-big dl .minimum {
     color: #96238F;
@@ -239,16 +206,8 @@ body.dashboard div#meter-big dl .minimum > * {
     width: 60px;
     margin-right: -30px;
 }
-/*div.widget.project div.meter dl dd.minimum span {
-    position: absolute;
-    right: -36px;
-    top: -21px;
-}*/
-/*body.div.widget.project div.meter dl dd.minimum span {
-    right: -36px;
-}*/
 
-div.widget.project div.meter dl dd.optimum span {
+body.dashboard div.widget.project div.meter dl dd.optimum span {
     height: auto;
     position: relative;
     right: 3px;
@@ -259,44 +218,17 @@ body.dashboard div#meter-big dl dt.minimum {
     top: -60px;
 }
 
-/*body.dashboard div#meter-big dl dd.minimum {
-    margin-left: 30px;
-}
-body.dashboard div#meter-big dl dt.minimum {
-    margin-left: 80px;
-}*/
-
-
-
-/*body.dashboard div#meter-big dl dt.minimum span {
-    left: 0;
-}*/
-
 body.dashboard div#meter-big dl dd.minimum > * {
     position: absolute;
     top: -25px;
 }
 body.dashboard div#meter-big dl dd.minimum > span {
-    /*right: -54px;*/
     position: absolute;
     right: -76px;
 }
 body.dashboard div.project div.meter.hor.activable dl dd.minimum > span {
     right: -54px;
 }
-
-/*body.dashboard div#meter-big dl dd.minimum > strong {
-    width: auto;
-    right: 0;
-    text-align: right;
-}*/
-/*body.dashboard div#meter-big dl dd.minimum > span {
-    left: 0;
-    text-align: left;
-}*/
-
-
-
 
 body.dashboard div#meter-big dl {
     width: 420px;

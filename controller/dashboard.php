@@ -76,7 +76,7 @@ namespace Goteo\Controller {
                 }
             }
             
-            return new View('view/dashboard/index.html.php', $viewData);
+            return new View(VIEW_PATH . '/dashboard/index.html.php', $viewData);
         }
 
         /*
@@ -190,7 +190,7 @@ namespace Goteo\Controller {
             }
 
 
-            return new View('view/dashboard/index.html.php', $viewData);
+            return new View(VIEW_PATH . '/dashboard/index.html.php', $viewData);
         }
 
         /*
@@ -352,7 +352,7 @@ namespace Goteo\Controller {
 
             $viewData['project'] = $project;
 
-            return new View('view/dashboard/index.html.php', $viewData);
+            return new View(VIEW_PATH . '/dashboard/index.html.php', $viewData);
         }
         // Fin de la sección Mis proyectos
         

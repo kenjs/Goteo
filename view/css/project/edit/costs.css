@@ -136,10 +136,11 @@ body.project-edit div#main.costs div.superform li.element.editcost div.children 
     min-width: 6em;
     width:6em;
     float: left;
-    padding-right: 2em;
+    padding-right: 20px;
+    text-align: right;
     background-image: url('/view/css/yen/m.png');
     background-repeat: no-repeat;
-    background-position: 7.7em center;
+    background-position: 4px center;
     font-size: 16px;
     font-weight: bold;
 }

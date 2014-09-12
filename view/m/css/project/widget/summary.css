@@ -48,6 +48,7 @@ div.widget.project-summary h8 {
 
 /* for project-home h3 */
 body.project-show div#main div.center.home div.widget.project-summary.h_ttl {
+    padding-top: 20px;
     padding-bottom: 0;
     border-bottom: none;
 }
@@ -63,9 +64,11 @@ div.widget.project-summary > div {
 }
 
 div.widget.project-summary div.prjct-gallery-container {
-	/*width:580px;
-	height:380px;
-	display:none;*/
+	/*width:100%;*/
+	height:210px;
+	display:none;
+    padding-left: 4px;
+    padding-right: 4px;
 }
 
 div.widget.project-summary div.about,

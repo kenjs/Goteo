@@ -1,6 +1,6 @@
 <?php
 /*
- *  Copyright (C) 2012 Platoniq y Fundaci¨®n Fuentes Abiertas (see README for details)
+ *  Copyright (C) 2012 Platoniq y Fundaciï¿½ï¿½n Fuentes Abiertas (see README for details)
  *	This file is part of Goteo.
  *
  *  Goteo is free software: you can redistribute it and/or modify
@@ -22,7 +22,7 @@ use Goteo\Core\View,
     Goteo\Library\Text;
 
 $bodyClass = 'user-login';
-// para que el prologue ponga el c¨®digo js para bot¨®n facebook en el bannerside
+// para que el prologue ponga el cï¿½ï¿½digo js para botï¿½ï¿½n facebook en el bannerside
 $fbCode = Text::widget(Text::get('social-account-facebook'), 'fb');
 $jscrypt = true;
 include 'view/prologue.html.php';
@@ -84,6 +84,11 @@ jQuery(document).ready(function($) {
 	</div>
 </div>
 */?>
+
+<?
+
+?>
+
 
 <?php if(isset($_SESSION['messages'])) { include 'view/header/message.html.php'; } ?>
 

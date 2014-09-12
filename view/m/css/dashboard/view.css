@@ -43,8 +43,12 @@ body.dashboard div#sub-header div.dashboard-header{
     min-height: 100px;
 }
 
+body.dashboard div#sub-header div.dashboard-header h2 {
+    padding-left: 6px;
+}
 body.dashboard div#sub-header div.dashboard-header h2 span {
-    font-size: 30px;
+    font-size: 18px;
+    font-weight: bold;
     color: #666666;
 }
 
@@ -71,9 +75,9 @@ body.dashboard div#dashboard-menu ul {
     position: relative;
 }
 body.dashboard div#dashboard-menu > ul {
-    width: 960px;
-    margin-left: -480px;
-    left: 50%;
+    width: 320px;
+    /*margin-left: -480px;*/
+    /*left: 50%;*/
     top: 40px;
 }
 

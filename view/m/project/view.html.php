@@ -119,6 +119,7 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
                 // los modulos centrales son diferentes segun el show
                 switch ($show) {
                     case 'needs':
+                        echo new View('view/m/project/widget/summary.h_ttl.html.php', array('project' => $project));
                         if ($this['non-economic']) {
                             echo
                                 new View('view/m/project/widget/non-needs.html.php',
@@ -133,6 +134,7 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
                         break;
                         
                     case 'supporters':
+                        echo new View('view/m/project/widget/summary.h_ttl.html.php', array('project' => $project));
 
                         // segun el paso de aporte
                         if (!empty($step) && in_array($step, array('start', 'login', 'confirm', 'continue', 'ok', 'fail'))) {
@@ -171,31 +173,31 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
                         
                     case 'messages':
                         echo
+                            new View('view/m/project/widget/summary.h_ttl.html.php', array('project' => $project)),
                             new View('view/m/project/widget/messages.html.php', array('project' => $project));
                         break;
                    
                     case 'rewards':
                         echo
+                            new View('view/m/project/widget/summary.h_ttl.html.php', array('project' => $project)),
                             new View('view/m/project/widget/rewards-summary.html.php', array('project' => $project));
                         break;
                     
                     case 'updates':
                         echo
+                            new View('view/m/project/widget/summary.h_ttl.html.php', array('project' => $project)),
                             new View('view/m/project/widget/updates.html.php', array('project' => $project, 'blog' => $blog, 'post' => $post));
                         break;
                     
                     case 'home':
                     
                     default:
-                        if (!empty($project->media->url)) {
-                            echo new View('view/m/project/widget/media.html.php', array('project' => $project));
-                        }
                         echo
-                            new View('view/m/project/widget/summary.h_ttl.html.php', array('project' => $project,'level' => $level)),
-                            new View('view/m/project/meter.home.html.php', array('project' => $project,'level' => $level)),
-                            new View('view/m/project/widget/summary.h_cnt.html.php', array('project' => $project)),
-                            new View('view/m/project/widget/share.html.php', array('project' => $project));
-                            //new View('view/m/project/widget/support.html.php', array('project' => $project));
+                            new View('view/m/project/widget/gallery.html.php', array('project' => $project)),
+                            new View('view/m/project/widget/summary.h_ttl.html.php', array('project' => $project)),
+                            new View('view/m/project/meter.home.html.php', array('project' => $project, 'lavel' => $lavel)),
+                            new View('view/m/project/widget/summary.html.php', array('project' => $project));
+                            ;
                         break;
                 }
                 ?>

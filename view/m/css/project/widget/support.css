@@ -43,7 +43,7 @@ div.widget.project-support dl dd.supporters {
 }
 div.widget.project-support dl dd.days strong,
 div.widget.project-support dl dd.supporters strong {
-    color: #82656f;
+    color: #996666;
 }
 
 div.widget.project-support dl dd.supporters {
@@ -88,7 +88,7 @@ div.widget.project-support div.meter > h3.title {
     color:#999900;
     position:absolute;
     top:-8px;
-    right:0;
+    right:16px;
     text-transform: lowercase;
     font-size: 12px;
     font-weight: bold;
@@ -101,8 +101,6 @@ div.widget.project-support div.buttons {
 }
 
 div.widget.project-support a.button {
-    /*width: 200px;
-    height: 50px;*/
     margin: 0;
     padding: 0;
     background: none;
@@ -115,12 +113,9 @@ div.widget.project-support a.button {
     background: linear-gradient(to bottom,  #f2bb67 0%,#ff9900 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2bb67', endColorstr='#ff9900',GradientType=0 ); /* IE6-9 */
     font-size: 14px;
-    /*line-height: 50px;*/
 }
 
 div.widget.project-support a.more {
-    /*float: right;*/
-    /*line-height: 38px;*/
     display: block;
     background-color: #fff;
     padding: 10px;
