@@ -193,6 +193,8 @@ namespace Goteo\Controller {
                     $oauth->tokens[$oauth->provider]['token'] = $_POST['tokens'][$oauth->provider]['token'];
                 if ($_POST['tokens'][$oauth->provider]['secret'])
                     $oauth->tokens[$oauth->provider]['secret'] = $_POST['tokens'][$oauth->provider]['secret'];
+                if ($_POST['provider_id'])
+                    $oauth->provider_id = $_POST['provider_id'];
                 //print_r($_POST['tokens']);print_R($oauth->tokens[$oauth->provider]);die;
                 $user = new Model\User();
                 $user->userid = $_POST['userid'];
@@ -223,7 +225,8 @@ namespace Goteo\Controller {
                 //en caso de que si, se comprovará que el password sea correcto
                 $query = Model\User::query('SELECT id,password,active FROM user WHERE email = ?', array($user->email));
                 if ($u = $query->fetchObject()) {
-                    if ($u->password == sha1($_POST['password'])) {
+                    //if ($u->password == sha1($_POST['password'])) {
+                    if (Model\User::login($u->id,$_POST['password'])) {
                         //ok, login en goteo e importar datos
                         //y fuerza que pueda logear en caso de que no esté activo
                         if (!$oauth->goteoLogin(true)) {

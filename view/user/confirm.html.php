@@ -99,6 +99,9 @@ jQuery(document).ready(function($) {
 					echo '<input type="hidden" name="provider" value="' . $oauth->original_provider . '" />';
 					//email original, para saber si se ha cambiado
 					echo '<input type="hidden" name="provider_email" value="' . $provider_email . '" />';
+
+                    echo '<input type="hidden" name="provider_id" value="' . $oauth->provider_id . '" />';
+
 					?>
 
 				</form>
