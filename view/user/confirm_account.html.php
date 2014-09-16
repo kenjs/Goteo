@@ -73,6 +73,7 @@ extract($oauth->user_data);
 					//email original
 					echo '<input type="hidden" name="email" value="' . $email . '" />';
 					echo '<input type="hidden" name="provider_email" value="' . $email . '" />';
+                    echo '<input type="hidden" name="provider_id" value="' . $oauth->provider_id . '" />';
 					?>
 
 				</form>

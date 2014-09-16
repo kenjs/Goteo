@@ -45,6 +45,7 @@ class SocialAuth {
 	public $host;
 	public $callback_url;
 	public $provider;
+	public $provider_id;
 	public $original_provider;
 	public $last_error = '';
 	//datos que se recopilan
@@ -284,6 +285,7 @@ class SocialAuth {
 			if($res->about) $this->user_data['about'] = $res->about;
 			if($res->location->name) $this->user_data['location'] = $res->location->name;
 			if($res->id) $this->user_data['profile_image_url'] = "http://graph.facebook.com/".$res->id."/picture?type=large";
+			if($res->id) $this->provider_id = $res->id;
 			//facebook link
 			if($res->link) $this->user_data['facebook'] = $res->link;
 
@@ -469,9 +471,15 @@ class SocialAuth {
 
 		$username = "";
 		//comprovar si existen tokens
-		$query = Goteo\Core\Model::query('SELECT id FROM user WHERE id = (SELECT user FROM user_login WHERE provider = :provider AND oauth_token = :token AND oauth_token_secret = :secret)', array(':provider' => $this->provider, ':token' => $this->tokens[$this->provider]['token'], ':secret' => $this->tokens[$this->provider]['secret']));
+		if(empty($this->provider_id)){
+			$query = Goteo\Core\Model::query('SELECT id FROM user WHERE id = (SELECT user FROM user_login WHERE provider = :provider AND oauth_token = :token AND oauth_token_secret = :secret)', array(':provider' => $this->provider, ':token' => $this->tokens[$this->provider]['token'], ':secret' => $this->tokens[$this->provider]['secret']));
 
-		$username = $query->fetchColumn();
+			$username = $query->fetchColumn();	
+		}else{
+			$query = Goteo\Core\Model::query('SELECT id FROM user WHERE id = (SELECT user FROM user_login WHERE provider_id = :provider_id LIMIT 1)', array(':provider_id' => $this->provider_id));
+
+			$username = $query->fetchColumn();	
+		}
 
 		if(empty($username)) {
 			//no existen tokens, comprovamos si existe el email
@@ -605,7 +613,7 @@ class SocialAuth {
 		if($id = $query->fetchColumn()) {
 			foreach($this->tokens as $provider => $token) {
 				if($token['token']) {
-					$query = Goteo\Core\Model::query("REPLACE user_login (user,provider,oauth_token,oauth_token_secret) VALUES (:user,:provider,:token,:secret)",array(':user'=>$goteouser,':provider'=>$provider,':token'=>$token['token'],':secret'=>$token['secret']));
+					$query = Goteo\Core\Model::query("REPLACE user_login (user,provider,oauth_token,oauth_token_secret,provider_id) VALUES (:user,:provider,:token,:secret,:provider_id)",array(':user'=>$goteouser,':provider'=>$provider,':token'=>$token['token'],':secret'=>$token['secret'],':provider_id' => $this->provider_id));
 				}
 			}
 		}
