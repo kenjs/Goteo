@@ -21,7 +21,10 @@
 namespace Goteo\Controller {
 
     use Goteo\Model,
-        Goteo\Model\User;
+        Goteo\Model\User,
+        Goteo\Model\Promote,
+        Goteo\Model\Project
+        ;
 
     class JSON extends \Goteo\Core\Controller {
 
@@ -275,6 +278,25 @@ namespace Goteo\Controller {
                     }
                 }
             }
+            return $this->output();
+        }
+
+        /**
+         * get pickup projects
+         *
+         * @return bool|string
+         * @throws \Goteo\Core\Exception
+         */
+        function get_pickup_projects(){
+            $promotes  = Promote::getAll(true);
+            foreach ($promotes as $key => &$promo) {
+                try {
+                    $promo->projectData = Project::getMedium($promo->project, LANG);
+                } catch (\Goteo\Core\Error $e) {
+                    unset($promotes[$key]);
+                }
+            }
+            $this->result = $promotes;
             return $this->output();
         }
 
