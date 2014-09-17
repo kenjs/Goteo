@@ -75,13 +75,19 @@ include 'view/header.html.php' ?>
                                 'skills' => $skills
                             )
             ); ?>
+        <?
+//        var_dump($this);
+        ?>
 
     <?php foreach ($this['lists'] as $type=>$list) :
         if (array_empty($list))
             continue;
 
+//        var_dump($this);
+
         ?>
         <div class="widget projects">
+
             <h2 class="title"><?php echo $this['title'][$type] ?></h2>
             <?php foreach ($list as $group=>$projects) : ?>
                 <div class="discover-group discover-group-<?php echo $type ?>" id="discover-group-<?php echo $type ?>-<?php echo $group ?>">

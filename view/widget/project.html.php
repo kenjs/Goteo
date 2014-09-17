@@ -29,7 +29,13 @@ if (!PC_VIEW){
 include 'view/prologue.html.php' ?>
 
 <div class="alone-project">
-    <?php echo new View('view/project/widget/project.html.php', $this); ?>
+<?
+    if (!PC_VIEW){
+        echo new View('view/m/project/widget/project.html.php', $this);
+    } else {
+        echo new View('view/project/widget/project.html.php', $this);
+    }
+    ?>
 </div>
 
 <?php include 'view/epilogue.html.php' ?>
