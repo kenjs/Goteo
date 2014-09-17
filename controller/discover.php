@@ -56,6 +56,7 @@ namespace Goteo\Controller {
                 $projects = Model\Project::published($type);
                 if (empty($projects)) continue;
                 $viewData['lists'][$type] = Listing::get($projects);
+                $viewData['title'][$type] = Text::get('discover-group-'.$type.'-header');
             }
 
             return new View(
