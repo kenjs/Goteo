@@ -65,6 +65,7 @@ div.superform > div.elements {
 div.superform > div.hint {
     color: #7f8183;
     overflow: hidden;
+    margin-top: 10px;
 }
 
 body.js div.superform > div.hint {
@@ -73,7 +74,7 @@ body.js div.superform > div.hint {
 }
 
 div.superform > div.elements {
-    border-right: 1px dashed #b7c2c5;
+    /*border-right: 1px dashed #b7c2c5;*/
     position: relative;
 }
 
@@ -84,9 +85,10 @@ div.superform > div.hint blockquote {
     background: url('/view/css/superform/guide.png') 20px 20px;
     padding-left: 60px;
 */
-    padding: 20px;
+    /*padding: 20px;*/
+    padding: 10px;
     vertical-align: top;
-    border: dashed #b7c2c5;
+    /*border: dashed #b7c2c5;*/
     border-width: 1px 0 0;
     margin: 0;
 }
@@ -98,8 +100,8 @@ div.superform > div.hint h4 {
 
 div.superform > div.hint blockquote {
     /*font-size: 12px;*/
-    border-right-width: 1px;
-    min-height: 3em;
+    /*border-right-width: 1px;*/
+    /*min-height: 3em;*/
     font-size: 14px;
     border-top: none;
     padding-left: 0;
@@ -144,7 +146,10 @@ div.superform li.element:last-child {
 }
 
 div.superform > div.elements > ol > li.element {
-    padding: 2em 2em 2em 0;
+    /*padding: 2em 2em 2em 0;*/
+    padding: 0 1em 1em 0;
+    overflow: hidden;
+    margin: 0 0 16px 0;
 }
 div#main.profile div.superform > div.elements > ol > li.element {
     padding: 30px 2em 22px 0;
@@ -409,7 +414,8 @@ div.superform div.elements > ol > li.element.radio {
 
 /* Feedback */
 div.superform li.element > div.feedback {
-    margin-top: 1em;
+    /*margin-top: 1em;*/
+    margin-top: 0.5em;
     font-size: 14px;
     z-index: 999;    
     padding-top: 13px;    
@@ -436,7 +442,7 @@ body.js div.superform div.children > div.elements > ol > li.element > div.feedba
 }
 
 div.superform li.element > div.feedback > div {
-    padding: 20px;
+    padding: 10px;
     margin: 0;
     background-color: #def1f1;
     color: #7f8183;    
@@ -593,7 +599,7 @@ div.superform button.image-remove:hover {
 div.superform input.next,
 div.superform input.confirm,
 div.superform input.retry {
-    padding: 0.6em 1.6em;
+    /*padding: 0.6em 1.6em;*/
     font-size: 15px;
 }
 
@@ -606,7 +612,7 @@ div.preview div.superform input.retry {
 }
 
 div.superform div.hint blockquote {
-    padding-left: 20px;
+    /*padding-left: 20px;*/
 }
 
 body.project-edit div.superform ol li.element div.contents input {
@@ -615,7 +621,8 @@ body.project-edit div.superform ol li.element div.contents input {
     font-size: 12px;
     line-height: 16px;
     font-weight: normal;
-    padding: 0.3em 1.2em;
+    /*padding: 0.3em 1.2em;*/
+    padding: 0.5em;
     margin-top: 0;
 }
 body.project-edit div.superform ol li.element div.project-share li.url input {

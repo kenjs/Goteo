@@ -144,12 +144,14 @@ jQuery(document).ready(function($) {
                     <li><a href="#">メルマガ登録</a></li>
                     <li><a href="#">お問い合わせ</a></li>
                 </ul>
+                <?/*
                 <ul class="sns_link">
                     <li class="fb_btn"><a href="https://www.facebook.com/LOCALGOODYOKOHAMA" target="_blank"><img src="/view/css/fb_btn.png" alt="facebook" /></a></li>
                     <li class="tw_btn"><a href="https://twitter.com/LogooYOKOHAMA" target="_blank"><img src="/view/css/tw_btn.png" alt="twitter" /></a></li>
                     <li class="g_plus"><a href="https://plus.google.com/112981975493826894716/" target="_blank"><img src="/view/css/gplus_btn.png" alt="google plus" /></a></li>
                     <li class="rss"><a href="#/view/css/rss_btn.png" alt="rss" /><img src="/view/css/rss_btn.png" alt="google plus" /></a></li>
                 </ul>
+                */?>
             </div>
         </div>
         <div class="foot_bar_wrapper">
@@ -158,7 +160,7 @@ jQuery(document).ready(function($) {
                 <a class="accenture" href="http://www.accenture.com/jp-ja/Pages/index.aspx" target="_blank"><img src="/view/css/accenture_logo.png" alt="accenture" /></a>
                 <img class="open_yokohama" src="/view/css/open_yokohama_logo.png" alt="Open Yokohama" />
                 <p class="copyright">
-                    <span>COPYRIGHT&copy; Local Good YOKOHAMA. Some rights reserved.</span>
+                    <span>&copy; Local Good YOKOHAMA. Some rights reserved.</span>
                 </p>
 
             <div class="platoniq">

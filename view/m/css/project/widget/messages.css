@@ -105,6 +105,6 @@ div.widget.project-message form {
 
 div.project-messages div#project-messages {
     width: 310px;
-    margin-top: 8px;
+    /*margin-top: 8px;*/
     padding: 8px 0;
 }

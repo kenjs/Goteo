@@ -83,7 +83,7 @@ div.center.profile div.widget {
 
 body.user-profile div#main div.center div.widget.user-mates {
     margin-bottom: 0!important;
-    padding-bottom: 10px;
+    /*padding-bottom: 10px;*/
 }
 
 div.center div.widget:last-child,

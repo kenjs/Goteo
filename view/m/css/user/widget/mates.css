@@ -36,21 +36,27 @@ div.widget.user-mates div.categories ul li a:hover{color:#20B3B2}
 div.widget.user-mates div.users{clear:both;}
 div.widget.user-mates div.users h3.supertitle{border-top: 1px solid #808285;border-bottom:1px dashed #818284;padding:5px 0 5px 5px;color:#20B3B2;font-size:12px;margin-bottom:8px}
 div.widget.user-mates .users ul > li {
-float: left;
-/*height: 62px;*/
-margin-bottom: 8px;
-margin-right: 3px;
-overflow: hidden;
-padding-top: 5px;
-position: relative;
-width: 127px;		
+    float: left;
+    margin-bottom: 8px;
+    overflow: hidden;
+    padding: 8px 4px;
+    position: relative;
+    width: 127px;
 }
 
 div.center div.widget.user-mates div.users{
-    padding: 15px 20px;
+    padding: 15px 0 0;
 }
 div.center div.widget.user-mates a.more {
-    padding-right: 20px;
+    display: block;
+    float: none;
+    margin-bottom: 20px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-top: 1px dashed #c0c0c0;
+    background-color: #fff;
+    font-size: 14px;
 }
 
 div.widget.user-mates .users ul > li.nomarginright{margin-right:0}
@@ -104,7 +110,7 @@ div.widget.user-mates .users ul > li h3 a,
 div.widget.user-mates .users ul > li h4 a,
 div.widget.user-mates .users ul > li h5 a,
 div.widget.user-mates .users ul > li h6 a {
-    font-size: 12px !important;
+    font-size: 14px !important;
     font-weight: normal;
 }
 
@@ -114,6 +120,7 @@ div.widget.user-mates .users ul li div.user h4 a{font-weight:bold;display:inline
 div.widget.user-mates .users ul > li span {
     font-size: 12px;
 	padding-top: 4px;
+    display: block;
 }
 
 div.widget.user-mates .users ul > li span.projects {
@@ -125,7 +132,7 @@ div.widget.user-mates .users ul > li span.invests {
 }
 
 
-div.widget.user-mates a.more  {    
+/*div.widget.user-mates a.more {
     color: #58595b;
     font-size: 12px !important;
     text-transform: uppercase;
@@ -135,8 +142,7 @@ div.widget.user-mates a.more  {
 	line-height:1em;
 	height:1em;
 	margin-bottom:15px;
-	margin-top: 15px;
-}
+}*/
 
 div.widget.user-mates a:hover.more  {
     color: #20b3b2;

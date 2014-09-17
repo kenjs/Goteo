@@ -561,6 +561,9 @@ div.widget.project-support dl dd.minimum {
     padding-bottom: 8px;
     color: #cc6600;
 }
+div.side div.widget.project-support dl dd.minimum {
+    top: -46px;
+}
 
 div.widget.project-support dl dt.days {
     right: 0;

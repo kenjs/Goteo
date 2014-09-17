@@ -59,8 +59,8 @@ div.widget.project-support div.meter {
     overflow: visible;
     position: relative;
     height: 20px;
-    margin-top: 20px;
-    padding: 4px 0 78px !important;
+    /*margin-top: 20px;*/
+    padding: 24px 0 78px !important;
 }
 
 div.widget.project-support div.meter > h3.title {
@@ -87,7 +87,7 @@ div.widget.project-support div.meter.ver div.graph .minimum .done {
 div.widget.project-support div.meter > h3.title {
     color:#999900;
     position:absolute;
-    top:-8px;
+    top:8px;
     right:16px;
     text-transform: lowercase;
     font-size: 12px;
@@ -96,7 +96,7 @@ div.widget.project-support div.meter > h3.title {
 
 
 div.widget.project-support div.buttons {
-    padding: 1em 0 0;
+    padding: 1em 0;
     text-align: center;
 }
 

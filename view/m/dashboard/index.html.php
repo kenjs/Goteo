@@ -40,7 +40,9 @@ include 'view/m/header.html.php'; ?>
             </div>
         </div>
 
+        <?/*
         <?php  echo new View ('view/m/dashboard/menu.html.php', $this) ?>
+        */?>
 
 <?php if(isset($_SESSION['messages'])) { include 'view/m/header/message.html.php'; } ?>
 

@@ -43,9 +43,10 @@ $worthcracy = Worth::getAll();
 	    <h4 class="aqua"<?php if ($user->campaign) echo 'style="color: #96238F;"'; ?>><?php echo Text::recorta($user->name,40); ?></h4>
 	    <?php endif; ?>
 	    <dl>
+	        
 	        <?php  if (isset($user->projects))  : ?>
 	        <dt class="projects"><?php echo Text::get('profile-invest_on-title'); ?></dt>
-	        <dd class="projects"><strong><?php echo $user->projects ?></strong> <?php echo Text::get('regular-projects'); ?></dd>
+	        <dd class="projects"><strong><?php echo $user->projects ?></strong><?php echo Text::get('regular-projects'); ?></dd>
 	        <?php endif; ?>
 	<? /*
 	        <dt class="worthcracy"><?php echo Text::get('profile-worthcracy-title'); ?></dt>

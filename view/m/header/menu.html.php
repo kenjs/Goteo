@@ -59,8 +59,9 @@
             <li class="dashboard"><a href="/dashboard"><span><?php echo Text::get('dashboard-menu-main'); ?></span><img src="<?php echo $_SESSION['user']->avatar->getLink(28, 28, true); ?>" /></a>
                 <div>
                     <ul>
-                        <li><a href="/dashboard/activity"><span><?php echo Text::get('dashboard-menu-activity'); ?></span></a></li>
+                        <?/*<li><a href="/dashboard/activity"><span><?php echo Text::get('dashboard-menu-activity'); ?></span></a></li>*/?>
                         <li><a href="/dashboard/profile"><span><?php echo Text::get('dashboard-menu-profile'); ?></span></a></li>
+                        <?/*
                         <li><a href="/dashboard/projects"><span><?php echo Text::get('dashboard-menu-projects'); ?></span></a></li>
                         <?php if (ACL::check('/translate')) : ?>
                         <li><a href="/translate"><span><?php echo Text::get('regular-translate_board'); ?></span></a></li>
@@ -71,11 +72,12 @@
                         <?php if (ACL::check('/admin')) : ?>
                         <li><a href="/admin"><span><?php echo Text::get('regular-admin_board'); ?></span></a></li>
                         <?php endif; ?>
+                        */?>
                         <li class="logout"><a href="/user/logout"><span><?php echo Text::get('regular-logout'); ?></span></a></li>
                     </ul>
                 </div>
-            </li>            
-            <?php else: ?>            
+            </li>
+            <?php else: ?>
             <li class="login">
                 <a href="/view/m/user/login"><?php echo Text::get('regular-login'); ?></a>
             </li>

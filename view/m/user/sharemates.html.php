@@ -52,15 +52,14 @@ if (empty($shares)) {
 
 ?>
 
-<?php echo new View('view/user/widget/header.html.php', array('user'=>$user)) ?>
+<?php echo new View('view/m/user/widget/header.html.php', array('user'=>$user)) ?>
 
 <?php if(isset($_SESSION['messages'])) { include 'view/header/message.html.php'; } ?>
 
 <div id="main">
 
     <div class="center">
-       
-       
+
        <!-- lista de categorías -->
         <div class="widget categorylist">
             <h3 class="title"><?php echo Text::get('profile-sharing_interests-header');?></h3>
@@ -106,13 +105,13 @@ if (empty($shares)) {
                     foreach ($sharemates as $mate) :
                         if (empty($this['category']) && $cnt > 6) break;
                     ?>
-                        <li>
+                        <li class="heightLine">
                             <div class="user">
                                 <a href="/user/<?php echo htmlspecialchars($mate->user) ?>" class="expand">&nbsp;</a>
                                 <div class="avatar"><a href="/user/<?php echo htmlspecialchars($mate->user) ?>"><img src="<?php echo $mate->avatar->getLink(43, 43, true) ?>" /></a></div>
                                 <h4><a href="/user/<?php echo htmlspecialchars($mate->user) ?>"><?php echo htmlspecialchars($mate->name) ?></a></h4>
                                 <span class="projects"><?php echo Text::get('regular-projects'); ?> (<?php echo $mate->projects ?>)</span>
-                                <span class="invests"><?php echo Text::get('regular-investing'); ?> (<?php echo $mate->invests ?>)</span><br/>
+                                <span class="invests"><?php echo Text::get('regular-investing'); ?> (<?php echo $mate->invests ?>)</span>
                                 <span class="profile"><a href="/user/profile/<?php echo htmlspecialchars($mate->user) ?>"><?php echo Text::get('profile-widget-button'); ?></a> </span>
                                 <span class="contact"><a href="/user/profile/<?php echo htmlspecialchars($mate->user) ?>/message"><?php echo Text::get('regular-send_message'); ?></a></span>
                             </div>
@@ -133,8 +132,8 @@ if (empty($shares)) {
         
     </div>
     <div class="side">
-        <?php if (!empty($_SESSION['user'])) echo new View('view/user/widget/investors.html.php', $this) ?>
-        <?php echo new View('view/user/widget/user.html.php', $this) ?>
+        <?php if (!empty($_SESSION['user'])) echo new View('view/m/user/widget/investors.html.php', $this) ?>
+        <?php echo new View('view/m/user/widget/user.html.php', $this) ?>
     </div>
 
 </div>

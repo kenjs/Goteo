@@ -180,7 +180,8 @@ div.widget.project-supporters .supporters ul li dl dd {
 
 div.widget.project-supporters .supporters ul li dl dt {
     float: left;
-    margin-right: .5em;
+    margin-left: 4px;
+    margin-right: 4px;
     clear: left;
 }
 
@@ -224,7 +225,7 @@ div.widget.project-supporters .supporters ul li dl dd.date {
     /*right: 16px;*/
     bottom: 2px;
     color: #a6a8ab;
-    font-size: 12px;
+    font-size: 10px;
 	margin-top: 5px;
 }
 
@@ -300,9 +301,11 @@ div.widget.project-investors a.more {
     float: right;
     text-decoration: none;
 }
-
+div.side div.widget.project-investors div.project-widget-box {
+    padding: 15px 0 0;
+}
 div.widget.project-investors div.investors {
-    padding-bottom: 10px;
+    /*padding-bottom: 10px;*/
     border-bottom: 1px solid #808285;
     border-bottom: 1px dashed #cccccc;
     border-right: 1px dashed #cccccc;
@@ -313,7 +316,10 @@ div.side div.widget.project-investors div.investors {
     border-bottom: none;
 }
 div.side div.widget.project-investors div.investors ul li {
-    border-bottom: 1px dashed #c0c0c0;
+    /*border-bottom: 1px dashed #c0c0c0;*/
+    width: 106px;
+    border-top: 1px dashed #c0c0c0;
+    border-right: 1px dashed #c0c0c0;
 }
 
 
@@ -530,7 +536,7 @@ div.widget.project-investors .investors ul li dl dd.worthcracy ul li > strong {
 
 /* rediseño
 ************************/
-div.widget.project-supporters .supporters > ul > li {height:92px !important}
+div.widget.project-supporters .supporters > ul > li {height:103px !important}
 div.widget.project-supporters .supporters > ul > li > div.supporter h4{padding-bottom:3px;border-bottom:#D5D5D6 1px solid;overflow:hidden;margin-bottom:6px}
 div.widget.project-supporters .supporters > ul > li > div.supporter h4 > a{
 max-height: 6px;max-width: 175px;overflow: hidden;}
@@ -544,8 +550,9 @@ div.widget.project-supporters .supporters > ul > li dl dd.amount{
 div.widget.project-supporters .supporters > ul > li dl dt.projects, div.widget.project-supporters .supporters > ul > li dl dd.projects{font-size: 0.8em}
 div.widget.project-supporters .supporters ul li dl dd.worthcracy{margin-top: 5px}
 div.widget.project-supporters .supporters ul li dl dd.date{
-width: 100%;
-text-align: center;
+    width: 100%;
+    /*text-align: center;*/
+    padding-left: 4px;
 }
 
 div.widget.project-investors .investors ul li{height:80px}

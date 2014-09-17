@@ -19,7 +19,7 @@
  */
 
 use Goteo\Library\Text; ?>
-<p class="prev2"><a><img src="/view/m/css/header/prev_btn.png" alt="前へ" /></a></p>
+<?/*<p class="prev2"><a><img src="/view/m/css/header/prev_btn.png" alt="前へ" /></a></p>*/?>
 <div class="project-menu viewport_projectnav">
     <ul class="flipsnap_projectnav">
         <?php
@@ -33,7 +33,7 @@ use Goteo\Library\Text; ?>
         <li class="item <?php echo $id ?><?php if ($this['show'] == $id) echo ' show' ?>">
         	<a href="/project/<?php echo htmlspecialchars($this['project']->id) ?>/<?php echo $id ?>"><?php echo $show ?></a>
         </li>
-        <?php endforeach ?>        
+        <?php endforeach ?>
     </ul>
 </div>
-<p class="next2"><a><img src="/view/m/css/header/next_btn.png" alt="次へ" /></a></p>
+<?/*<p class="next2"><a><img src="/view/m/css/header/next_btn.png" alt="次へ" /></a></p>*/?>

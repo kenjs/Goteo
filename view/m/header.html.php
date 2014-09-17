@@ -28,6 +28,7 @@ use Goteo\Library\Text,
 
 <div id="header" class="header">
     <h1><?php echo Text::get('regular-main-header'); ?></h1>
+            <?/*
     <div class="head_bar_wrapper">
         <div id="super-header">
             <?//php include 'view/header/highlights.html.php' ?>
@@ -68,8 +69,9 @@ use Goteo\Library\Text,
             </div><!--.head_bar_inner-->
         </div>
     </div>
+            */?>
     <div class="nav_wrapper">
-        <p class="prev"><a><img src="/view/m/css/header/prev_btn.png" alt="前へ" /></a></p>
+        <!-- <p class="prev"><a><img src="/view/m/css/header/prev_btn.png" alt="前へ" /></a></p> -->
         <div class="nav_inner viewport">
             <ul class="flipsnap">
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>">ホーム</a></li>
@@ -80,11 +82,14 @@ use Goteo\Library\Text,
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/data/">データを見る</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/posts_archive/">人 & 活動</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/skills/">スキルを活かす</a></li>
+                <li><a href="/dashboard/profile"><span><?php echo Text::get('dashboard-menu-profile'); ?></span></a></li>
             </ul>
         </div>
-        <p class="next"><a><img src="/view/m/css/header/next_btn.png" alt="次へ" /></a></p>
+        <!-- <p class="next"><a><img src="/view/m/css/header/next_btn.png" alt="次へ" /></a></p> -->
     </div>
 
+    <?/*
     <?php include 'view/m/header/menu.html.php' ?>
+    */?>
 
 </div>

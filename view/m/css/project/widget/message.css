@@ -59,7 +59,7 @@ div.widget.project-message textarea {
 div.widget.project-message a.preview{
 	display: inline-block;
 	position: absolute;
-	top: 205px;
+	top: 178px;
 	left: 48px;
 	height: 38px;
 	line-height: 38px;
@@ -69,6 +69,10 @@ div.widget.project-message a.preview{
 	font-weight: normal;
 	font-style: normal;
 }
+div.center.needs div.widget.project-message a.preview {
+	top: 205px;
+}
+
 div.widget.project-message .button {
     float: right;
     margin: 1em 0 0;

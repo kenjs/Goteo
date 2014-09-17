@@ -61,7 +61,7 @@ $pagedResults = new \Paginated($investors, 20, isset($_GET['page']) ? $_GET['pag
     <div class="supporters">
         <ul>
         <?php while ($investor = $pagedResults->fetchPagedRow()) : ?>
-            <li><?php echo new View('view/user/widget/supporter.html.php', array('user' => $investor, 'worthcracy' => $worthcracy)) ?></li>
+            <li><?php echo new View('view/m/user/widget/supporter.html.php', array('user' => $investor, 'worthcracy' => $worthcracy)) ?></li>
         <?php endwhile ?>
         </ul>
     </div>
