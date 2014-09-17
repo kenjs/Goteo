@@ -35,52 +35,37 @@ $(function () {
     Flipsnap('.flipsnap');
 
     var flipsnap = Flipsnap('.flipsnap', {
-        distance: 116
+        distance: 100
     });
-    var $next = $('.next').click(function() {
-        flipsnap.toNext();
-    });
-    var $prev = $('.prev').click(function() {
-        flipsnap.toPrev();
-    });
+
     flipsnap.element.addEventListener('fspointmove', function() {
         $next.attr('disabled', !flipsnap.hasNext());
         $prev.attr('disabled', !flipsnap.hasPrev());
     }, false);
 
-    //sp project sub-nav
+    // sp project-nav
     Flipsnap('.flipsnap_projectnav');
 
-    var flipsnap2 = Flipsnap('.flipsnap_projectnav', {
-        distance: 111
+    var flipsnap = Flipsnap('.flipsnap_projectnav', {
+        distance: 100
     });
-    var $next2 = $('.next2').click(function() {
-        flipsnap2.toNext();
-    });
-    var $prev2 = $('.prev2').click(function() {
-        flipsnap2.toPrev();
-    });
-    flipsnap2.element.addEventListener('fspointmove', function() {
-        $next2.attr('disabled', !flipsnap2.hasNext());
-        $prev2.attr('disabled', !flipsnap2.hasPrev());
+
+    flipsnap.element.addEventListener('fspointmove', function() {
+        $next.attr('disabled', !flipsnap.hasNext());
+        $prev.attr('disabled', !flipsnap.hasPrev());
     }, false);
 
-    //sp dashboard sub-nav
-    // Flipsnap('.flipsnap_dashboard');
+    // sp dashboard-nav
+    Flipsnap('.flipsnap_dashboard');
 
-    // var flipsnap2 = Flipsnap('.flipsnap_dashboard', {
-    //     distance: 111
-    // });
-    // var $next3 = $('.next3').click(function() {
-    //     flipsnap2.toNext();
-    // });
-    // var $prev3 = $('.prev3').click(function() {
-    //     flipsnap2.toPrev();
-    // });
-    // flipsnap2.element.addEventListener('fspointmove', function() {
-    //     $next2.attr('disabled', !flipsnap2.hasNext());
-    //     $prev2.attr('disabled', !flipsnap2.hasPrev());
-    // }, false);
+    var flipsnap = Flipsnap('.viewport_dashboard', {
+        distance: 100
+    });
+
+    flipsnap.element.addEventListener('fspointmove', function() {
+        $next.attr('disabled', !flipsnap.hasNext());
+        $prev.attr('disabled', !flipsnap.hasPrev());
+    }, false);
 
     // 投稿画像etcを画面幅に収める
     var post_width = $('.post_body').width();

@@ -711,6 +711,96 @@ div.widget.project div.meter dl dt.minimum span, {
     width: 70px;
 }
 
+/*↓dashboard/activityに適用↓*/
+
+body.dashboard.project-edit div.widget.project div.meter dl dt,
+body.dashboard.project-edit div.widget.project div.meter dl dd {
+    width: 93px;
+    text-align: center;
+}
+body.dashboard.project-edit div.widget.project div.meter dl dt {
+    font-size: 11px;
+}
+body.dashboard.project-edit div.widget.project div.meter dl dd {
+    font-size: 14px;
+}
+
+body.dashboard.project-edit div.widget.project div.meter dl dt.optimum {
+    position: absolute;
+    top: 0;
+    left: 93px;
+}
+
+body.dashboard.project-edit div.widget.project div.meter dl dd.optimum {
+    position: relative;
+    top: -16px;
+    left: 93px;
+    height: 30px;
+    padding-top: 30px;
+    border-left: 1px solid #eee;
+    font-weight: normal;
+}
+
+body.dashboard.project-edit div.widget.project div.meter dl dt.minimum {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    color: #cc6600;
+}
+
+body.dashboard.project-edit div.widget.project div.meter dl dd.minimum {
+    position: relative;
+    top: -42px;
+    left: 0;
+    color: #cc6600;
+    line-height: 14px;
+}
+
+body.dashboard.project-edit div.widget.project div.meter dl dt.days {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+body.dashboard.project-edit div.widget.project div.meter dl dd.days {
+    position: absolute;
+    top: -16px;
+    right: 0;
+    height: 30px;
+    padding-top: 30px;
+    border-left: 1px solid #eee;
+}
+
+body.dashboard.project-edit div.widget.project div.meter dl dd.minimum span,
+body.dashboard.project-edit div.widget.project div.meter dl dd.optimum span,
+body.dashboard.project-edit div.widget.project div.meter dl dd.days span {
+    font-size: 12px;
+    right: 0;
+}
+
+body.dashboard.project-edit div.widget.project div.meter dl dt.minimum span, {
+    width: 70px;
+}
+
+/*dashboard/activity サポートしてるプロジェクト*/
+
+body.dashboard.project-edit div.discover-group.discover-group-invest_on div.widget.project div.meter dl dt.minimum {
+    position: absolute;
+    top: 0px;
+    left: -50px;
+    color: #cc6600;
+}
+
+body.dashboard.project-edit div.discover-group.discover-group-invest_on div.widget.project div.meter dl dd.minimum {
+    position: relative;
+    top: -42px;
+    left: -50px;
+    color: #cc6600;
+    line-height: 14px;
+}
+
+/**/
+
 div.widget.project div.rewards {
     border-top: 1px solid #d1d3d4;
     padding: 4px 0 0 !important;

@@ -159,24 +159,22 @@ jQuery(document).ready(function($) {
                 <a class="labo" href="http://yokohamalab.jp/" target="_blank"><img src="/view/css/ycdl_logo.png" alt="Yokohama Community Design Lab." /></a>
                 <a class="accenture" href="http://www.accenture.com/jp-ja/Pages/index.aspx" target="_blank"><img src="/view/css/accenture_logo.png" alt="accenture" /></a>
                 <img class="open_yokohama" src="/view/css/open_yokohama_logo.png" alt="Open Yokohama" />
-                <p class="copyright">
-                    <span>&copy; Local Good YOKOHAMA. Some rights reserved.</span>
-                </p>
-
-            <div class="platoniq">
-    <?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>    
-               <span class="text"><a href="http://goteo.org" target="_blank" class="poweredby">Powered by Goteo.org</a></span>
-    <?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>    
-               <span class="logo"><a href="http://fuentesabiertas.org" target="_blank" class="foundation">FFA</a></span>
-    <?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>    
-               <span class="logo"><a href="https://github.com/Goteo/Goteo" target="_blank" class="growby">GNU-AGPL-3</a></span>
-    <?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>    
-            </div>
-
 
             </div>
         </div>
+        <p class="copyright">
+            <span>&copy; Local Good YOKOHAMA. Some rights reserved.</span>
+        </p>
 
+        <div class="platoniq">
+            <?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>
+            <span class="text"><a href="http://goteo.org" target="_blank" class="poweredby">Powered by Goteo.org</a></span>
+            <?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>
+            <span class="logo"><a href="http://fuentesabiertas.org" target="_blank" class="foundation">FFA</a></span>
+            <?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>
+            <span class="logo"><a href="https://github.com/Goteo/Goteo" target="_blank" class="growby">GNU-AGPL-3</a></span>
+            <?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>
+        </div>
 
     </div>
 

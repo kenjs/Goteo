@@ -61,9 +61,10 @@ body.dashboard div#dashboard-menu {
     display: block;
     font-size: 13px;
     margin: -2.6em auto 0;
-    border-bottom: 35px solid #3399cc;
-    margin-top: -110px;
+    /*border-bottom: 35px solid #3399cc;*/
+    /*margin-top: -110px;*/
     /*margin-bottom: 40px;*/
+    background-color: #3399cc;
 }
 
 body.dashboard div#dashboard-menu ul {

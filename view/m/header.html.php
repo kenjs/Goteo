@@ -83,6 +83,7 @@ use Goteo\Library\Text,
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/posts_archive/">人 & 活動</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/skills/">スキルを活かす</a></li>
                 <li><a href="/dashboard/profile"><span><?php echo Text::get('dashboard-menu-profile'); ?></span></a></li>
+                <li><a href="/dashboard/activity"><span><?php echo Text::get('community-menu-activity'); ?></span></a></li>
             </ul>
         </div>
         <!-- <p class="next"><a><img src="/view/m/css/header/next_btn.png" alt="次へ" /></a></p> -->

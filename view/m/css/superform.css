@@ -152,7 +152,9 @@ div.superform > div.elements > ol > li.element {
     margin: 0 0 16px 0;
 }
 div#main.profile div.superform > div.elements > ol > li.element {
-    padding: 30px 2em 22px 0;
+    /*padding: 30px 2em 22px 0;*/
+    padding: 0 1em 1em 0;
+
 }
 
 div.superform > div.elements > ol > li.element.inline {

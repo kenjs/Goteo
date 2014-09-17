@@ -288,7 +288,7 @@ footer
 
 .footer {
     background-color: #fff;
-    height: 112px;
+    /*height: 112px;*/
     margin-top: 30px;
 }
 
@@ -334,7 +334,7 @@ footer
 .footer .footer_link_wrapper ul {
     width: auto;
     float: none;
-    margin: 4px 0;
+    margin: 0;
 }
 .footer ul.sns_link {
     position: absolute;
@@ -363,6 +363,7 @@ footer
 }
 
 .footer p {
+    position: relative;
     margin: 0;
 }
 
@@ -371,9 +372,10 @@ footer
 }
 
 .footer .foot_bar_inner {
+    overflow: hidden;
+    width: 240px;
+    margin: 0 auto;
     color: #999999;
-    position: relative;
-    padding: 0 8px 8px 8px;
 }
 
 .footer .foot_bar_inner .site_ttl {
@@ -382,18 +384,18 @@ footer
     font-weight: bold;
 }
 
-.footer .foot_bar_inner .copyright {
+.footer .copyright {
     float: right;
     width: 100%;
-    margin-top: 14px;
-    font-size: 11px;
-    line-height: 16px;
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 24px;
     text-align: center;
+    color: #666666;
 }
 .footer .foot_bar_inner .accenture {
     display: block;
     float: left;
-    width: 100px;
     margin-left: 16px;
 }
 .footer .foot_bar_inner .accenture img {
@@ -416,7 +418,7 @@ footer
 .footer .foot_bar_inner img.open_yokohama {
     width: auto;
     height: 33px;
-    margin: 5px 0;
+    margin: 10px 0;
     line-height: 40px;
     text-align: left;
     margin-left: 16px;
@@ -424,16 +426,14 @@ footer
 
 .footer .platoniq {
     position: absolute;
-    bottom: -18px;
+    bottom: 18px;
     width: 100%;
     text-align: center;
-    font-size: 11px;
-
 }
 .footer .platoniq a {
     text-decoration: none;
-    color: #999999;
-    font-size: 11px;
+    color: #666666;
+    font-size: 12px;
 }
 
 
@@ -466,18 +466,17 @@ footer
 }
 
 
-
 /*--------------------------------------------------
   sp--navigation
 --------------------------------------------------*/
 .viewport {
-    width: 300px;
+    width: 320px;
     margin: 0 auto;
     overflow: hidden;
     -webkit-transform: translateZ(0); /* Optional: When heavy at iOS6+ */
 }
 .flipsnap {
-    width: 888px; /* 320px(item width) * 3(item count) */
+    width: 1005px; /* 320px(item width) * 3(item count) */
 }
 
 .flipsnap:after {
@@ -487,6 +486,10 @@ footer
     height: 0;
 }
 
+
+/*--------------------------------------------------
+  sp--project-navigation
+--------------------------------------------------*/
 body.project-show div#sub-header div.project-menu.viewport_projectnav {
     width: 320px!important;
     margin: 0 auto;
@@ -508,18 +511,12 @@ body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_
 
 body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav .item {
     float: left;
-    /*width: 110px!important;*/
     border: none;
     border-right: 1px dashed #cccccc;
-/*    font-size: 50px;
-    text-align: center;
-    padding: 50px 0;
-    background: #EFEFEF;
-    border: 5px solid #999;
     color: #666;*/
 }
+
 body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav .item a {
-    /*width: 94px!important;*/
     margin: 0 auto;
 }
 
@@ -529,10 +526,11 @@ body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_
 --------------------------------------------------*/
 
 .viewport_dashboard {
-    width: 150px;
+    width: 320px;
     overflow: hidden;
     margin: 0 auto;
 }
+
 .flipsnap_dashboard {
     width: 518px; /* 320px(item width) * 3(item count) */
 }
@@ -915,6 +913,3 @@ body.home #social_bookmark {
 div#sub-header {
     margin-bottom: 1px;
 }
-
-
-
