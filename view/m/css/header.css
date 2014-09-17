@@ -59,7 +59,7 @@ div#super-header a:hover {
 div#sub-header,
 div#sub-header-secondary { 
     clear: both;
-    padding: 20px 0;
+    /*padding: 20px 0;*/
     margin-bottom: 32px;
 }
 

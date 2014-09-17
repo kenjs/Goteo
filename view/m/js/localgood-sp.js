@@ -38,11 +38,6 @@ $(function () {
         distance: 100
     });
 
-    flipsnap.element.addEventListener('fspointmove', function() {
-        $next.attr('disabled', !flipsnap.hasNext());
-        $prev.attr('disabled', !flipsnap.hasPrev());
-    }, false);
-
     // sp project-nav
     Flipsnap('.flipsnap_projectnav');
 
@@ -50,22 +45,12 @@ $(function () {
         distance: 100
     });
 
-    flipsnap.element.addEventListener('fspointmove', function() {
-        $next.attr('disabled', !flipsnap.hasNext());
-        $prev.attr('disabled', !flipsnap.hasPrev());
-    }, false);
-
     // sp dashboard-nav
     Flipsnap('.flipsnap_dashboard');
 
     var flipsnap = Flipsnap('.viewport_dashboard', {
         distance: 100
     });
-
-    flipsnap.element.addEventListener('fspointmove', function() {
-        $next.attr('disabled', !flipsnap.hasNext());
-        $prev.attr('disabled', !flipsnap.hasPrev());
-    }, false);
 
     // 投稿画像etcを画面幅に収める
     var post_width = $('.post_body').width();

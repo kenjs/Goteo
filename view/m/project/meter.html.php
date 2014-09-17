@@ -76,7 +76,8 @@ $optimum_left = 100 - $optimum_done;
 
 $minimum_ratio =  min(100, round(($minimum / $optimum) * 100));
 
-?>        
+?>
+
     <div class="meter <?php echo $horizontal ? 'hor' : 'ver'; echo $big ? ' big' : ''; echo $activable ? ' activable' : ''; ?>">
         
         <? if ($big): ?>

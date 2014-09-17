@@ -32,6 +32,14 @@ div.widget.projects div.project {
     margin-bottom: 20px;
 }
 
+body.home div.widget.projects > .title,
+body.discover div.widget.projects > .title {
+    margin: 0 0 8px;
+    padding: 16px 16px;
+    color: #f5f5f5;
+    background-color: #666666;
+}
+
 div.widget.projects div.project a.expand{
 	position:absolute;
 	top:0;bottom:0;left:0;right:0;

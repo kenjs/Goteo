@@ -96,6 +96,7 @@ $lsuf = (LANG != 'es') ? '?lang='.LANG : '';
 
 
         <!-- carrusel de cuadritos -->
+        <?/*
         <div class="navi-bar">
             <ul class="navi">
                 <?php foreach (array_keys($list) as $group) : ?>
@@ -103,6 +104,7 @@ $lsuf = (LANG != 'es') ? '?lang='.LANG : '';
                 <?php endforeach ?>
             </ul>
         </div>
+        */?>
 
     </div>
 <?php endif; ?>
@@ -125,22 +127,23 @@ $lsuf = (LANG != 'es') ? '?lang='.LANG : '';
                     $widget_code_investor = Text::widget($url.'/invested/'.$user->id.'/'.$lsuf);
                     ?>
                 <div style="float:left;">
-                      <?php  echo new View('view/project/widget/project.html.php', array(
+                      <?php  echo new View('view/m/project/widget/project.html.php', array(
                             'project' => $project,
                             'investor'  => $user
                         )); ?>
                 <br clear="both"/>
+                    <?/*
                 <?php if ($project->status > 2) : ?>
                       <div id="widget-code" style="float:none;width:250px;margin-left:25px;">
                           <div class="wc-embed" onclick="$('#widget_code').focus();$('#widget_code').select()"><?php echo Text::get('dashboard-embed_code'); ?></div>
                         <textarea id="widget_code" style="width:230px;margin:0 0 10px;" onclick="this.focus();this.select()" readonly="readonly"><?php echo htmlentities($widget_code); ?></textarea>
                       </div>
-
                       <div id="widget-code" style="float:none;width:250px;margin-left:25px;">
                         <div class="wc-embed" onclick="$('#investor_code').focus();$('#investor_code').select()"><?php echo Text::get('dashboard-embed_code_investor'); ?></div>
                         <textarea id="investor_code" style="width:230px;margin:0 0 10px;" onclick="this.focus();this.select()" readonly="readonly"><?php echo htmlentities($widget_code_investor); ?></textarea>
                       </div>
                 <?php endif; ?>
+                    */?>
                 </div>
                 <?php endforeach; ?>
 

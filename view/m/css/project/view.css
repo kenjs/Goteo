@@ -172,13 +172,13 @@ body.project-show div.project-menu ul li span.digits{
 body.project-show div.project-menu ul li a {
     display: inline-block;
     /*width: 100%;*/
-    height:30px;
+    height:35px;
     padding: 0 8px;
     color: #666666;
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
-    line-height: 30px;
+    line-height: 35px;
     /*background-image: url('/view/css/project/view/menu/regular_menu.png');*/
     background: #ffffcc; /* Old browsers */
     background: -moz-linear-gradient(top,  #ffffcc 0%, #e5e5b9 100%, #e8e8bb 100%); /* FF3.6+ */

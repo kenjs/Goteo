@@ -28,7 +28,11 @@ $user = $_SESSION['user'];
 $option = $this['option'];
 include 'view/m/prologue.html.php';
 include 'view/m/header.html.php'; ?>
-<?php  echo new View ('view/m/dashboard/menu.html.php', $this) ?>
+<?
+    if ($this['section'] == 'profile'):
+        echo new View ('view/m/dashboard/menu.html.php', $this);
+    endif;
+?>
 
 
     <div id="sub-header">

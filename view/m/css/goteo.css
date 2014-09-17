@@ -56,7 +56,7 @@ div#sub-header > div > h2 {
 div#main {
     /*width: 960px;
     margin: 10px auto;*/
-    padding: 4px;
+    /*padding: 4px;*/
     clear: both;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -114,6 +114,14 @@ div.widget .title{
     /*margin: 0 0 .8em -20px;*/
     text-decoration: none;
     /*background: url("arrowH2-section.gif") no-repeat -5px -16px;*/
+}
+
+div.widget h3.title {
+    margin: 0;
+    padding: 8px 0 8px 20px;
+    color: #f5f5f5;
+    background-color: #666666;
+    font-weight: normal;
 }
 
 div.side div.widget h3.title,

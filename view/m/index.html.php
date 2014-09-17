@@ -52,6 +52,12 @@ if (!empty($this['posts'])) {
 include 'view/m/prologue.html.php';
 include 'view/m/header.html.php';
 ?>
+<?
+//if():
+    //include 'view/m/header/menu.html.php';
+//endif;
+?>
+    <a class="button red" href="/discover"><?php echo Text::get('regular-discover'); ?></a>
 <? /*
     <script type="text/javascript">
         $(function(){

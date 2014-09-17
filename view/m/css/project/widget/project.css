@@ -782,6 +782,13 @@ body.dashboard.project-edit div.widget.project div.meter dl dt.minimum span, {
     width: 70px;
 }
 
+body.dashboard.project-edit div.widget.project div.meter dl dt.reached,
+body.dashboard.project-edit div.widget.project div.meter dl dd.reached,
+body.dashboard.project-edit div.widget.project div.meter dl dt.supporters,
+body.dashboard.project-edit div.widget.project div.meter dl dd.supporters {
+    display: none;
+}
+
 /*dashboard/activity サポートしてるプロジェクト*/
 
 body.dashboard.project-edit div.discover-group.discover-group-invest_on div.widget.project div.meter dl dt.minimum {

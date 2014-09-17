@@ -69,6 +69,7 @@ div.widget.project-support div.meter > h3.title {
     font-size: 12px;
     font-weight: normal;
     text-align: right;
+    background: none;
 }
 
 div.widget.project-support div.graph > div.minimum > div.done {

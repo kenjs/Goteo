@@ -39,6 +39,8 @@ body.project-edit div#sub-header div.project-header{
 body.project-edit div#sub-header img{
     float: left;
     margin-right: 20px;
+    padding-top: 2px;
+    padding-left: 2px;
 }
 
 body.project-edit div#sub-header div.project-subtitle {

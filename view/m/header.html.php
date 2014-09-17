@@ -71,7 +71,6 @@ use Goteo\Library\Text,
     </div>
             */?>
     <div class="nav_wrapper">
-        <!-- <p class="prev"><a><img src="/view/m/css/header/prev_btn.png" alt="前へ" /></a></p> -->
         <div class="nav_inner viewport">
             <ul class="flipsnap">
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>">ホーム</a></li>
@@ -86,11 +85,21 @@ use Goteo\Library\Text,
                 <li><a href="/dashboard/activity"><span><?php echo Text::get('community-menu-activity'); ?></span></a></li>
             </ul>
         </div>
-        <!-- <p class="next"><a><img src="/view/m/css/header/next_btn.png" alt="次へ" /></a></p> -->
     </div>
-
     <?/*
-    <?php include 'view/m/header/menu.html.php' ?>
+    $_current = '';
+    foreach ($this['menu'] as $section=>$item) :
+        if(($section == 'projects') || ($section == 'activity') || ($section == 'profile')):
+            $_current = 'current';
+        endif;
+        echo $_current;
+    endforeach;
     */?>
+
+    <?
+        //if():
+            //include 'view/m/header/menu.html.php';
+        //endif;
+    ?>
 
 </div>

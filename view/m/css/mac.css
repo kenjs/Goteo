@@ -22,11 +22,3 @@ div.widget.project div.buttons{}
 div.widget.projects div.project div.buttons{overflow:visible;height:30px;}
 div.widget.projects div.project div.buttons a.button {padding: 0.3em 0.8em !important;margin:0;	margin-right:10px;float:left;}
 div.widget.projects div.project div.buttons a.button + a.button{margin-right:0;}
-
-div.widget h3.title {
-    margin: 0;
-    padding: 8px 0 8px 20px;
-    color: #f5f5f5;
-    background-color: #666666;
-    font-weight: normal;
-}

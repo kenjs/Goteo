@@ -18,6 +18,12 @@
  */
 @import url("project/widget/projects.css");
 
+body.home div#wrapper > a.button.red {
+    margin: 8px;
+    height: 30px;
+    line-height: 30px;
+}
+
 body.home div#main div.learn {
     margin-bottom: 16px;
     position: relative;

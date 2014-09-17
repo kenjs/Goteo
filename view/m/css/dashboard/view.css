@@ -36,15 +36,16 @@ body.dashboard div#main div.widget {
 body.dashboard div#sub-header {
     padding-bottom: 4em;
     margin-bottom: 0;
-    height: 145px;
+    /*height: 145px;*/
 }
 
-body.dashboard div#sub-header div.dashboard-header{
+/*body.dashboard div#sub-header div.dashboard-header{
     min-height: 100px;
-}
+}*/
 
 body.dashboard div#sub-header div.dashboard-header h2 {
     padding-left: 6px;
+    line-height: 60px;
 }
 body.dashboard div#sub-header div.dashboard-header h2 span {
     font-size: 18px;
@@ -60,7 +61,7 @@ body.dashboard div#sub-header img{
 body.dashboard div#dashboard-menu {
     display: block;
     font-size: 13px;
-    margin: -2.6em auto 0;
+    /*margin: -2.6em auto 0;*/
     /*border-bottom: 35px solid #3399cc;*/
     /*margin-top: -110px;*/
     /*margin-bottom: 40px;*/

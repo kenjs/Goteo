@@ -46,7 +46,7 @@ $pagedResults = new \Paginated($investors, 20, isset($_GET['page']) ? $_GET['pag
 
 ?>
 <div class="widget project-supporters">
-    
+
     <h<?php echo $level ?> class="title"><?php echo Text::get('project-menu-supporters'); ?></h<?php echo $level ?>>
     
     <dl class="summary">
