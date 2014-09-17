@@ -73,7 +73,7 @@ namespace Goteo\Model {
 
             $promos = array();
 
-            $sqlFilter = ($activeonly) ? " AND promote.active = 1" : '';
+            $sqlFilter = ($activeonly) ? " AND promote.active = 1 AND status = 3" : '';
 
             $query = static::query("
                 SELECT
