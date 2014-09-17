@@ -674,8 +674,14 @@ namespace Goteo\Library {
         public static function cutUrlParams($url) {
             return $url = preg_replace('#/.+#', '', preg_replace('#http|s?://#', '', $url));
         }
-        
-        
+
+        public static function shorten($text, $width = null) {
+            if (mb_strlen($text) < $width) {
+                return $text;
+            } else {
+                return mb_substr($text, 0, $width) . '...';
+            }
+        }
 	}
     
 }
