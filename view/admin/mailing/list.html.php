@@ -24,7 +24,7 @@ $filters = $_SESSION['mailing']['filters'];
 
 ?>
 <div class="widget board">
-    <form id="filter-form" action="/admin/mailing/edit" method="post">
+    <form id="filter-form" action="/admin/mailing/edit" method="get">
 
         <table>
             <tr>
@@ -32,7 +32,7 @@ $filters = $_SESSION['mailing']['filters'];
                     <label for="type-filter"><?php echo Text::_("A los"); ?></label><br />
                     <select id="type-filter" name="type">
                     <?php foreach ($this['types'] as $typeId=>$typeName) : ?>
-                        <option value="<?php echo $typeId; ?>"<?php if ($filters['type'] == $typeId) echo ' selected="selected"';?>><?php echo $typeName; ?></option>
+                        <option value="<?php echo $typeId; ?>"<?php if ($filters['type'] == $typeId) echo ' selected="selected"';?>><?php echo Text::_($typeName); ?></option>
                     <?php endforeach; ?>
                     </select>
                 </td>
