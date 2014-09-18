@@ -443,6 +443,10 @@ namespace Goteo\Model {
                     }
                 }
 
+                if(isset($this->name) && empty($this->name)) {
+                    $errors['username'] = Text::get('error-register-username');
+                }
+
             }
 
             if (\str_replace(Text::get('regular-facebook-url'), '', $this->facebook) == '') $this->facebook = '';
