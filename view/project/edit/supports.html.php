@@ -28,6 +28,17 @@ $okeys  = $project->okeys[$this['step']] ?: array();
 
 $supports = array();
 
+$skills = array();
+
+foreach ($this['skills'] as $key => $value) {
+    $skills[] =  array(
+        'value'     => $value->id,
+        'label'     => $value->name,
+        'category'     => $value->parent_skill_id,
+        'checked'   => in_array($value->id, $project->skills)
+    );
+}
+
 foreach ($project->supports as $support) {
 
     $ch = array();
@@ -154,6 +165,17 @@ echo new SuperForm(array(
                 )
             )
         ),
+        'skills' => array(
+            'type'      => 'checkboxescustom',
+            'name'      => 'skills[]',
+            'title'     => Text::get('overview-field-skills'),
+            'required'  => false,
+            'class'     => 'cols_3',
+            'options'   => $skills,
+            'hint'      => Text::get('tooltip-user-skills'),
+            'errors'    => !empty($errors['skills']) ? array($errors['skills']) : array(),
+            'ok'        => !empty($okeys['skills']) ? array($okeys['skills']) : array(),
+        ),  
         'footer' => array(
             'type'      => 'group',
             'children'  => array(

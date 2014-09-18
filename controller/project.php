@@ -303,7 +303,6 @@ namespace Goteo\Controller {
                 
                 case 'overview':
                     $viewData['categories'] = Model\Project\Category::getAll();
-                    $viewData['skills'] = Model\Skill::getAll();
 //                    $viewData['currently'] = Model\Project::currentStatus();
 //                    $viewData['scope'] = Model\Project::scope();
                     break;
@@ -360,6 +359,7 @@ namespace Goteo\Controller {
 
                 case 'supports':
                     $viewData['types'] = Model\Project\Support::types();
+                    $viewData['skills'] = Model\Skill::getAll();
                     if ($_POST) {
                         foreach ($_POST as $k => $v) {
                             if (!empty($v) && preg_match('/support-(\d+)-edit/', $k, $r)) {
@@ -685,7 +685,12 @@ namespace Goteo\Controller {
                 'address',
                 'zipcode',
                 'location',
-                'country'
+                'country',
+                'secondary_address',
+                'post_address',
+                'post_zipcode',
+                'post_location',
+                'post_country',
             );
 
             $personalData = array();
@@ -714,11 +719,11 @@ namespace Goteo\Controller {
             $bankacc = (!empty($_POST['bank'])) ? $_POST['bank'] : '';
 
             // primero checkeamos si la cuenta Paypal es tipo email
-            if (!Check::mail($ppacc)) {
+            /*if (!Check::mail($ppacc)) {
                 $project->errors['userPersonal']['paypal'] = Text::get('validate-project-paypal_account');
             } else {
                 $project->okeys['userPersonal']['paypal'] = true;
-            }
+            }*/
 
             $accounts = Model\Project\Account::get($project->id);
             $accounts->paypal = $ppacc;
@@ -804,28 +809,6 @@ namespace Goteo\Controller {
             }
 
             $quedan = $project->categories; // truki para xdebug
-
-            //skills
-            // añadir las que vienen y no tiene
-            $tiene = $project->skills;
-            if (isset($_POST['skills'])) {
-                $viene = $_POST['skills'];
-                $quita = array_diff($tiene, $viene);
-            } else {
-                $quita = $tiene;
-            }
-            $guarda = array_diff($viene, $tiene);
-            foreach ($guarda as $key=>$cat) {
-                $skill = new Model\Project\Skill(array('id'=>$cat,'project'=>$project->id));
-                $project->skills[] = $skill;
-            }
-
-            // quitar las que tiene y no vienen
-            foreach ($quita as $key=>$cat) {
-                unset($project->skills[$key]);
-            }
-
-            $quedan = $project->skills; // truki para xdebug
 
             return true;
         }
@@ -1003,6 +986,28 @@ namespace Goteo\Controller {
                 }
                 
             }
+
+            //skills
+            // añadir las que vienen y no tiene
+            $tiene = $project->skills;
+            if (isset($_POST['skills'])) {
+                $viene = $_POST['skills'];
+                $quita = array_diff($tiene, $viene);
+            } else {
+                $quita = $tiene;
+            }
+            $guarda = array_diff($viene, $tiene);
+            foreach ($guarda as $key=>$cat) {
+                $skill = new Model\Project\Skill(array('id'=>$cat,'project'=>$project->id));
+                $project->skills[] = $skill;
+            }
+
+            // quitar las que tiene y no vienen
+            foreach ($quita as $key=>$cat) {
+                unset($project->skills[$key]);
+            }
+
+            $quedan = $project->skills; // truki para xdebug
             
             // añadir nueva colaboracion
             if (!empty($_POST['support-add'])) {

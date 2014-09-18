@@ -24,6 +24,7 @@ $project = $this['project'];
 $step = $this['step'];
 $step_errors = count($project->errors[$step]);
 $total_errors = 0;
+echo "<!--";print_r($project->errors);echo "-->";
 foreach ($project->errors as $st => $errors) {
     $total_errors += count($errors);
 }
