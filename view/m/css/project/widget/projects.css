@@ -34,7 +34,7 @@ div.widget.projects div.project {
 
 body.home div.widget.projects > .title,
 body.discover div.widget.projects > .title {
-    margin: 0 0 8px;
+    margin: 0;
     padding: 16px 16px;
     color: #f5f5f5;
     background-color: #666666;
@@ -42,9 +42,9 @@ body.discover div.widget.projects > .title {
 
 div.widget.projects div.project a.expand{
 	position:absolute;
+    z-index:99;
 	top:0;bottom:0;left:0;right:0;
 	width:100%;
-	z-index:99;
     padding: 0px;
 }
 

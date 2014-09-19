@@ -18,7 +18,16 @@
  */
 body.discover div#main div.widget {
     overflow: hidden;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+/*body.discover div#main div.widget.projects div.widget.project.activable {
+    margin-bottom: 0;
+    border-bottom: 1px dashed #c0c0c0;
+}*/
+
+body.discover div#main div.widget.projects div.navi-bar {
+    border-bottom: none;
 }
 
 body.discover div#main div.widget.projects {

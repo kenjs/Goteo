@@ -19,7 +19,6 @@
  */
 ?>
 <div id="dashboard-menu">
-    <?// var_dump($this['menu']); ?>
     <?php foreach ($this['menu'] as $section=>$item) : ?>
     <? if($section == 'profile'): ?>
             <div class="viewport_dashboard">
