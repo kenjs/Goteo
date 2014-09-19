@@ -415,6 +415,11 @@ namespace Goteo\Model {
 						$errors['password'] = Text::get('error-register-pasword-empty');
 					}
 				}
+                if(!empty($this->userid)) {
+                    if(!Check::userid($this->userid)) {
+                        $errors['userid'] = Text::get('error-user-userid-invalid');
+                    }
+                }
                 return empty($errors);
             }
             // Modificar usuario.
