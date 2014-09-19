@@ -298,8 +298,8 @@ namespace Goteo\Controller {
          * @return bool|string
          */
         function get_server_domain(){
-            $_pro = $_SERVER['HTTPS'] == 'on' ? 'https://' : 'http://';
-            $this->result[] = $_pro . $_SERVER['SERVER_NAME'];
+//            $_pro = $_SERVER['HTTPS'] == 'on' ? 'https://' : 'http://';
+            $this->result[] = 'http://d2.yokohama.localgood.jp';
 //            $_test = json_encode($this->result);
 //            var_dump(json_decode($_test));
 //            exit;
