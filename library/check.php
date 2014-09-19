@@ -202,6 +202,12 @@ namespace Goteo\Library {
 		    }
 		    return true;
 		}
+		public static function userid ($value) {
+		    if(!preg_match("/^[a-zA-Z0-9-]{3,20}$/",$value)) {
+		        return false;
+		    }
+		    return true;
+		}
 
 		public static function words ($value, $number) {
 
