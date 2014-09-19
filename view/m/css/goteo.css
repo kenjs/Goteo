@@ -75,12 +75,13 @@ div.widget {
 }
 
 div.center.home div.widget,
-div.center.supporters div.widget,
 div.center.profile div.widget {
     margin-bottom: 0!important;
     border-bottom: 1px dashed #c0c0c0;
 }
-
+div.center.supporters div.widget {
+    margin-bottom: 0!important;
+}
 body.user-profile div#main div.center div.widget.user-mates {
     margin-bottom: 0!important;
     /*padding-bottom: 10px;*/

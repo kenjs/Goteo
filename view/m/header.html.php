@@ -23,7 +23,7 @@ use Goteo\Library\Text,
 //@NODESYS
 ?>
 
-<?php include 'view/header/lang.html.php' ?>
+<?php // include 'view/header/lang.html.php' ?>
 <?
 //var_dump($_SESSION);
 ?>

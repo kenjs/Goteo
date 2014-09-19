@@ -118,7 +118,7 @@ div.superform > div.hint blockquote {
 }
 
 body.js div.superform > div.hint blockquote {
-    margin-right: 250px;
+    /*margin-right: 250px;*/
 }
 
 div.superform > div.hint blockquote p {
@@ -194,8 +194,8 @@ div.superform li.element > * + div.contents p {
 }
 
 body.js div.superform > div.elements > ol > li.element {
-    margin-right: 251px;
-    border-right: 1px dashed #b7c2c5;
+    /*margin-right: 251px;*/
+    /*border-right: 1px dashed #b7c2c5;*/
 }
 
 body.js div.superform > div.elements > ol > li.element div.contents {
@@ -433,7 +433,7 @@ div.superform div.elements > ol > li.element.checkboxes.cols_2 > div.contents > 
 div.superform div.elements > ol > li.element.checkboxescustom.cols_2 > div.contents > ul > li,
 div.superform div.elements > ol > li.element.radios.cols_2 > div.contents > ul > li,
 div.superform div.elements > ol > li.element.slider.cols_2 > div.contents > ul > li {
-    width: 49.8%;
+    width: 49.5%;
     float:left;
 }
 
@@ -679,10 +679,13 @@ body.dashboard.project-edit div#main.profile div.superform .footer {
 
 div.superform input.next,
 div.superform input.confirm,
-div.superform input.retry {
+div.superform input.retry,
+div.superform input.save
+{
     /*padding: 0.6em 1.6em;*/
     font-size: 15px;
-    width: 100%;
+    /*width: 100%;*/
+    width:285px;
 }
 
 body.project-edit div.preview div.superform input.confirm,
@@ -697,15 +700,15 @@ div.superform div.hint blockquote {
     /*padding-left: 20px;*/
 }
 
-body.project-edit div.superform ol li.element div.contents input {
-    width: auto;
-    height: auto;
-    font-size: 12px;
-    line-height: 16px;
-    font-weight: normal;
+/*body.project-edit div.superform ol li.element div.contents input {*/
+    /*width: auto;*/
+    /*height: auto;*/
+    /*font-size: 12px;*/
+    /*line-height: 16px;*/
+    /*font-weight: normal;*/
     /*padding: 0.3em 1.2em ;*/
-    margin-top: 10px;
-}
+    /*margin-top: 10px;*/
+/*}*/
 
 body.project-edit div.superform ol li.element div.contents input.inline.ok {
     padding: 0.3em 1.2em ;

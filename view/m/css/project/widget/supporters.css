@@ -320,6 +320,7 @@ div.side div.widget.project-investors div.investors ul li {
     width: 106px;
     border-top: 1px dashed #c0c0c0;
     border-right: 1px dashed #c0c0c0;
+    /*float: left;*/
 }
 
 

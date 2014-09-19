@@ -34,16 +34,7 @@ $facebook_url = 'http://facebook.com/sharer.php?u=' . urlencode($share_url) . '&
 $twitter_url = 'http://twitter.com/home?status=' . urlencode($share_title . ': ' . $share_url . ' #Goteo');
 
 ?>
-<script type="text/javascript">
-            jQuery(document).ready(function ($) { 
-				$("#a-proyecto").fancybox({
-					'titlePosition'		: 'inside',
-					'transitionIn'		: 'none',
-					'transitionOut'		: 'none'
-				});
-			});
-</script>			
-<div class="widget project-share">    
+<div class="widget project-share">
 	<div class="left">
         <?/*<h<?php echo $level+1 ?>><?php echo Text::get('project-share-header'); ?></h<?php echo $level+1 ?>>*/?>
         <ul>

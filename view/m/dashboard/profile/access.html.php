@@ -137,10 +137,6 @@ echo new SuperForm(array(
 
             )
         ),
-
-
-
-
     )
 
 ));
@@ -149,4 +145,6 @@ echo new SuperForm(array(
 
 </form>
 <hr />
-<a class="button red" href="<?php echo SITE_URL ?>/user/leave?email=<?php echo $user->email ?>"><?php echo Text::get('login-leave-header'); ?></a>
+<div style="margin-left:20px;">
+    <a class="button red" href="<?php echo SITE_URL ?>/user/leave?email=<?php echo $user->email ?>"><?php echo Text::get('login-leave-header'); ?></a>
+</div>

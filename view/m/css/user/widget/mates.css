@@ -20,11 +20,15 @@ div.widget.user-mates{
     padding-bottom:0;
 }
 
-div.widget.user-mates h3.supertitle{margin-bottom:8px}
+/*div.widget.user-mates h3.supertitle{margin-bottom:8px}*/
 
 div.widget.user-mates div.users,div.widget.user-mates div.categories{height:auto;overflow:visible;}
 div.widget.user-mates div.users ul,div.widget.user-mates div.categories ul {list-style: none;margin: 0;padding: 0;height:auto;overflow:auto;}
-div.widget.user-mates div.categories{height: auto;padding-bottom: 10px;line-height:1em;overflow:hidden}	
+div.widget.user-mates div.categories{
+    padding-left: 20px;
+    line-height: 27px;
+    background-color: #e5e5e5;
+}
 div.widget.user-mates div.categories ul{overflow:hidden}
 div.widget.user-mates div.categories ul li{display:inline-block;margin-right:5px;
 	margin-bottom: 5px;

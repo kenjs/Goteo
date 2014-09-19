@@ -794,14 +794,14 @@ body.dashboard.project-edit div.widget.project div.meter dl dd.supporters {
 body.dashboard.project-edit div.discover-group.discover-group-invest_on div.widget.project div.meter dl dt.minimum {
     position: absolute;
     top: 0px;
-    left: -50px;
+    /*left: -50px;*/
     color: #cc6600;
 }
 
 body.dashboard.project-edit div.discover-group.discover-group-invest_on div.widget.project div.meter dl dd.minimum {
     position: relative;
     top: -42px;
-    left: -50px;
+    /*left: -50px;*/
     color: #cc6600;
     line-height: 14px;
 }

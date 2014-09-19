@@ -48,7 +48,7 @@ div.widget.project-summary h8 {
 
 /* for project-home h3 */
 body.project-show div#main div.center div.widget.project-summary.h_ttl {
-    padding: 20px 16px 0;
+    padding: 20px 16px 20px;
     border-bottom: none;
 }
 body.project-show div#main div.center div.widget.project-summary.h_ttl h3 {

@@ -216,6 +216,9 @@ div.widget.project-rewards ul li > .name,
     font-size: 13px;
     font-weight: bold;
     text-transform: none;
+}
+
+#rewards-summary div.social ul li.file h5.name {
     background: url('/view/css/icon/m/file.png') no-repeat left 50%;
 }
 
@@ -246,7 +249,6 @@ div.widget.project-rewards ul li.money,
 }
 
 #rewards-summary ul li.money {
-    background-image: url('/view/css/icon/m/money.png');
     background-position: 0.8em 3em;
 }
 
@@ -262,9 +264,7 @@ div.widget.project-rewards ul li.service,
     background-image: url('/view/css/icon/m/service.png');
 }
 
-body.project-show #rewards-summary ul li.money h5.name,
-body.project-show #rewards-summary ul li.other h5.name,
-body.project-show #rewards-summary ul li.service h5.name {
+body.project-show #rewards-summary ul li h5.name {
     padding: 0 0 0 50px;
     margin: 0 0 .5em;
     font-size: 13px;
@@ -522,5 +522,17 @@ div.widget.project-invest ul li div.license.xoln > a strong,
 div.widget.project-rewards ul li div.license.xoln > a strong,
 #rewards-summary ul li div.license.xoln > a strong {
     background-image: url('/view/css/license/xoln.png');
+}
+
+div.widget.project-rewards div.project-widget-box div > ul > li {
+    margin-bottom: 30px;
+}
+
+div.widget.project-rewards div.project-widget-box div > ul > li:first-child {
+    padding-top:10px;
+}
+
+div.widget.project-rewards div.project-widget-box div > ul > li:last-child {
+    margin-bottom:0;
 }
 
