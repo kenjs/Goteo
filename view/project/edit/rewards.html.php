@@ -58,7 +58,7 @@ foreach ($project->social_rewards as $social_reward) {
                         'value' => $license->id,
                         'type'  => 'radio',
                         'class' => 'license license_' . $license->id,
-                        'hint'  => $license->description .  $url,
+                        //'hint'  => $license->description .  $url,
                         'id'    => "social_reward-{$social_reward->id}-license-{$license->id}",
                         'checked' => $license->id == $social_reward->license ? true : false
                     );
@@ -105,7 +105,7 @@ foreach ($project->social_rewards as $social_reward) {
                 'type'  => 'radio',
                 'class' => "social_reward-type reward-type reward_{$type->id} social_{$type->id}",
                 'label' => $type->name,
-                'hint'  => $type->description,
+                //'hint'  => $type->description,
                 'id'    => "social_reward-{$social_reward->id}-icon-{$type->id}",
                 'checked' => $type->id == $social_reward->icon ? true : false,
                 'children' => $children
@@ -223,7 +223,7 @@ foreach ($project->individual_rewards as $individual_reward) {
                 'type'  => 'radio',
                 'class' => "reward-type reward_{$type->id} individual_{$type->id}",
                 'label' => $type->name,
-                'hint'  => $type->description,
+                //'hint'  => $type->description,
                 'id'    => "individual_reward-{$individual_reward->id}-icon-{$type->id}",
                 'checked' => $type->id == $individual_reward->icon ? true : false,
                 'children' => $children

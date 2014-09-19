@@ -30,11 +30,11 @@ $preferences = $this['preferences'];
 $allow = array(
     array(
         'value'     => 1,
-        'label'     => Text::get('regular-yes')
+        'label'     => Text::get('user-preferences-yes')
         ),
     array(
         'value'     => 0,
-        'label'     => Text::get('regular-no')
+        'label'     => Text::get('user-preferences-no')
         )
 );
 

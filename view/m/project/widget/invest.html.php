@@ -155,9 +155,9 @@ if ($step == 'start') : ?>
             
 <input type="hidden" id="paymethod"  />
 
-<?php if (\GOTEO_ENV != 'real') : ?>
+<?php /* if (\GOTEO_ENV != 'real') : ?>
 <p><button type="submit" class="process pay-cash" name="method"  value="cash">CASH</button></p>
-<?php endif; ?>
+<?php endif; */ ?>
 <p><button type="submit" class="process pay-paypal" name="method"  value="paypal">PAYPAL</button></p>
 
 

@@ -58,7 +58,7 @@ namespace Goteo\Controller {
             if (isset($_POST['amount'])) {
                 $_SESSION['invest-amount'] = $_POST['amount'];
                 $msg = Text::get('user-login-required-login');
-                $msg .= (!empty($_POST['amount'])) ? '. ' . Text::get('invest-alert-investing') . ' ' . $_POST['amount'] . '&yen;' : '';
+                $msg .= (!empty($_POST['amount'])) ? $_POST['amount'] . '&yen;' . Text::get('invest-alert-investing') : '';
                 Message::Info($msg);
             }
 
@@ -168,7 +168,7 @@ namespace Goteo\Controller {
                 }
             }
             return new View(
-                            VIEW_PATH . '/m/user/login.html.php',
+                            VIEW_PATH . '/user/login.html.php',
                             array(
                                 'errors' => $errors
                             )

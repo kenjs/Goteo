@@ -39,7 +39,7 @@ if ($_SESSION['recovering'] == $_SESSION['user']->id) {
                     'type'  => 'password',
                     'class' => 'inline',
                     'title' => Text::get('user-changepass-old'),
-                    'hint'  => Text::get('tooltip-dashboard-user-user_password'),
+                    // 'hint'  => Text::get('tooltip-dashboard-user-user_password'),
                     'errors'=> !empty($errors['password']) ? array($errors['password']) : array(),
                     'value' => $user_password
                 );
@@ -66,7 +66,7 @@ echo new SuperForm(array(
         'data' => array(
             'type'  => 'html',
             'title' => Text::get('dashboard-menu-profile-access'),
-            'hint'  => Text::get('tooltip-dashboard-user-access_data'),
+            // 'hint'  => Text::get('tooltip-dashboard-user-access_data'),
             'html'  => '<strong>'.Text::get('login-access-username-field').': </strong>'.$user->id.'<br /><strong>'.Text::get('login-register-email-field').': </strong>'.$user->email
         ),
 
@@ -79,7 +79,7 @@ echo new SuperForm(array(
                     'type'  => 'textbox',
                     'class' => 'inline',
                     'title' => Text::get('login-register-email-field'),
-                    'hint'  => Text::get('tooltip-dashboard-user-new_email'),
+                    // 'hint'  => Text::get('tooltip-dashboard-user-new_email'),
                     'errors'=> !empty($errors['email']) ? array($errors['email']) : array(),
                     'value' => $user_nemail
                 ),
@@ -87,7 +87,7 @@ echo new SuperForm(array(
                     'type'  => 'textbox',
                     'class' => 'inline',
                     'title' => Text::get('login-register-confirm-field'),
-                    'hint'  => Text::get('tooltip-dashboard-user-confirm_email'),
+                    // 'hint'  => Text::get('tooltip-dashboard-user-confirm_email'),
                     'errors'=> !empty($errors['email_retry']) ? array($errors['email_retry']) : array(),
                     'value' => $user_remail
                 ),
@@ -117,7 +117,7 @@ echo new SuperForm(array(
                     'type'  => 'password',
                     'class' => 'inline',
                     'title' => Text::get('user-changepass-new'),
-                    'hint'  => Text::get('tooltip-dashboard-user-new_password'),
+                    // 'hint'  => Text::get('tooltip-dashboard-user-new_password'),
                     'errors'=> !empty($errors['password_new']) ? array($errors['password_new']) : array(),
                     'value' => $user_npassword
                 ),
@@ -125,7 +125,7 @@ echo new SuperForm(array(
                     'type'  => 'password',
                     'class' => 'inline',
                     'title' => Text::get('user-changepass-confirm'),
-                    'hint'  => Text::get('tooltip-dashboard-user-confirm_password'),
+                    // 'hint'  => Text::get('tooltip-dashboard-user-confirm_password'),
                     'errors'=> !empty($errors['password_retry']) ? array($errors['password_retry']) : array(),
                     'value' => $user_rpassword
                 ),

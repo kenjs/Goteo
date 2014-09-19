@@ -104,7 +104,7 @@ if ($step == 'start') : ?>
         <button type="submit" class="button red" name="go-login" value=""><?php echo Text::get('imperative-register'); ?></button>
     </div>
 
-    <div class="reminder"><?php echo Text::get('invest-alert-investing') ?> <span id="amount-reminder"><?php echo $amount ?></span></div>
+    <div class="reminder"><span id="amount-reminder"><?php echo $amount ?></span> <?php echo Text::get('invest-alert-investing') ?></div>
 
 </div>
 <?php else : ?>
@@ -132,6 +132,7 @@ if ($step == 'start') : ?>
                 <input type="text" id="zipcode" name="zipcode" value="<?php echo $personal->zipcode; ?>" />
             </td>
         </tr>
+        <? /*
         <tr>
             <td>
                 <label for="location"><?php echo Text::get('invest-address-location-field') ?></label><br />
@@ -142,6 +143,7 @@ if ($step == 'start') : ?>
                 <input type="text" id="country" name="country" value="<?php echo $personal->country; ?>" />
             </td>
         </tr>
+        */ ?>
     </table>
 
     <p>
@@ -155,9 +157,9 @@ if ($step == 'start') : ?>
             
 <input type="hidden" id="paymethod"  />
 
-<?php if (\GOTEO_ENV != 'real') : ?>
+<?php /* if (\GOTEO_ENV != 'real') : ?>
 <p><button type="submit" class="process pay-cash" name="method"  value="cash">CASH</button></p>
-<?php endif; ?>
+<?php endif; */ ?>
 <p><button type="submit" class="process pay-paypal" name="method"  value="paypal">PAYPAL</button></p>
 
 
@@ -348,7 +350,7 @@ if ($step == 'start') : ?>
                     }
                 } else {
                     /* Has elegido las siguientes recompensas */
-                    if (!confirm('<?php echo Text::slash('invest-alert-rewards') ?> '+reward+' ok?')) {
+                    if (!confirm( reward+' <?php echo Text::slash('invest-alert-rewards') ?>')) {
                         return false;
                     }
                 }
@@ -360,7 +362,7 @@ if ($step == 'start') : ?>
                 }
             }
 
-            return confirm('<?php echo Text::slash('invest-alert-investing') ?> '+amount+' EUR');
+            return confirm(amount+'<?php echo Text::slash('invest-alert-investing') ?>');
         });
 
 /* Seteo inicial por url */

@@ -672,7 +672,7 @@ namespace Goteo\Controller {
             );
 
             // segun lo que este traduciendo
-            if ($_SESSION['translate_type'] == 'project') {
+/*            if ($_SESSION['translate_type'] == 'project') {
                 // si esta traduciendo un proyecto
                 $menu['translates'] = array(
                     'label' => Text::get('dashboard-menu-translates'),
@@ -693,7 +693,7 @@ namespace Goteo\Controller {
                         'profile' => Text::get('step-1')
                     )
                 );
-            }
+            }*/
 
             // si tiene permiso para ir al admin
             if (ACL::check('/admin')) 

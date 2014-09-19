@@ -48,7 +48,7 @@ if (!empty($project->costs)) {
                     'type'  => 'radio',
                     'class' => "cost-type $id",
                     'label' => $type,
-                    'hint'  => Text::get('tooltip-project-cost-type-'.$id),
+                    //'hint'  => Text::get('tooltip-project-cost-type-'.$id),
                     'checked' => $id == $cost->type  ? true : false
                 );
             }

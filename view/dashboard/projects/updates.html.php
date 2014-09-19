@@ -39,7 +39,7 @@ if ($this['action'] == 'none') return;
 <?php if ($this['action'] == 'list') : ?>
 <div class="widget">
     <?php if (!empty($blog->id) && $blog->active) : ?>
-        <a class="button" href="<?php echo $url; ?>/add">Publicar nueva entrada</a>
+        <a class="button" href="<?php echo $url; ?>/add"><?echo Text::get('project-updates-create_new'); ?></a>
     <?php endif; ?>
 
     <!-- lista -->
@@ -47,7 +47,7 @@ if ($this['action'] == 'none') return;
     <?php foreach ($posts as $post) : ?>
         <div class="post">
             <a class="button" href="<?php echo $url; ?>/edit/<?php echo $post->id; ?>"><?php echo Text::get('regular-edit') ?></a>&nbsp;&nbsp;&nbsp;
-            <a class="remove button weak" href="<?php echo $url; ?>/delete/<?php echo $post->id; ?>" onclick="return confirm('¿Seguro que deseas eliminar esta actualización?');">Eliminar</a>
+            <a class="remove button weak" href="<?php echo $url; ?>/delete/<?php echo $post->id; ?>" onclick="return confirm('¿Seguro que deseas eliminar esta actualización?');"><?php echo Text::get('regular-delete') ?></a>
             <span><?php echo $post->publish ? Text::get('regular-published_yes') : Text::get('regular-published_no'); ?></span>
             <strong><?php echo $post->title; ?></strong>
             <span><?php echo $post->date; ?></span>
@@ -72,6 +72,29 @@ if ($this['action'] == 'none') return;
                 'label'     => Text::get('regular-no')
                 )
         );
+
+        $comment_allow = array(
+            array(
+                'value'     => 1,
+                'label'     => Text::get('project-updates-allow_comments-yes')
+            ),
+            array(
+                'value'     => 0,
+                'label'     => Text::get('project-updates-allow_comments-no')
+            )
+        );
+
+        $publish_allow  = array(
+            array(
+                'value'     => 1,
+                'label'     => Text::get('project-updates-publish-yes')
+            ),
+            array(
+                'value'     => 0,
+                'label'     => Text::get('project-updates-publish-no')
+            )
+        );
+
 
         $images = array();
         foreach ($post->gallery as $image) {
@@ -134,7 +157,8 @@ if ($this['action'] == 'none') return;
                 'type'      => 'textbox',
                 'required'  => true,
                 'size'      => 20,
-                'title'     => 'Título',
+//                'title'     => 'Título',
+                'title'     => Text::get('project-updates-title'),
                 'hint'      => Text::get('tooltip-updates-title'),
                 'errors'    => !empty($errors['title']) ? array($errors['title']) : array(),
                 'value'     => $post->title,
@@ -144,13 +168,15 @@ if ($this['action'] == 'none') return;
                 'required'  => true,
                 'cols'      => 40,
                 'rows'      => 4,
-                'title'     => 'Texto de la entrada',
+//                'title'     => 'Texto de la entrada',
+                'title'     => Text::get('project-updates-text'),
                 'hint'      => Text::get('tooltip-updates-text'),
                 'errors'    => !empty($errors['text']) ? array($errors['text']) : array(),
                 'value'     => $post->text
             ),
             'image' => array(
-                'title'     => 'Imagen',
+//                'title'     => 'Imagen',
+                'title'     => Text::get('project-updates-image'),
                 'type'      => 'group',
                 'hint'      => Text::get('tooltip-updates-image'),
                 'errors'    => !empty($errors['image']) ? array($errors['image']) : array(),
@@ -175,7 +201,8 @@ if ($this['action'] == 'none') return;
 
             'media' => array(
                 'type'      => 'textbox',
-                'title'     => 'Vídeo',
+//                'title'     => 'Vídeo',
+                'title'     => Text::get('project-updates-video'),
                 'class'     => 'media',
                 'hint'      => Text::get('tooltip-updates-media'),
                 'errors'    => !empty($errors['media']) ? array($errors['media']) : array(),
@@ -191,33 +218,36 @@ if ($this['action'] == 'none') return;
 
             'media-preview' => $media,
 
-            'legend' => array(
-                'type'      => 'textarea',
-                'title'     => Text::get('regular-media_legend'),
-                'value'     => $post->legend,
-            ),
+//            'legend' => array(
+//                'type'      => 'textarea',
+//                'title'     => Text::get('regular-media_legend'),
+//                'value'     => $post->legend,
+//            ),
             "date" => array(
                 'type'      => 'datebox',
                 'required'  => true,
-                'title'     => 'Fecha de publicación',
+//                'title'     => 'Fecha de publicación',
+                'title'     => Text::get('project-updates-date'),
                 'hint'      => Text::get('tooltip-updates-date'),
                 'size'      => 8,
                 'value'     => $post->date
             ),
             'allow' => array(
-                'title'     => 'Permite comentarios',
+//                'title'     => 'Permite comentarios',
+                'title'     => Text::get('project-updates-allow_comments'),
                 'type'      => 'slider',
-                'options'   => $allow,
-                'class'     => 'currently cols_' . count($allow),
+                'options'   => $comment_allow,
+                'class'     => 'currently cols_' . count($comment_allow),
                 'hint'      => Text::get('tooltip-updates-allow_comments'),
                 'errors'    => !empty($errors['allow']) ? array($errors['allow']) : array(),
                 'value'     => (int) $post->allow
             ),
             'publish' => array(
-                'title'     => 'Publicado',
+//                'title'     => 'Publicado',
+                'title'     => Text::get('project-updates-publish'),
                 'type'      => 'slider',
-                'options'   => $allow,
-                'class'     => 'currently cols_' . count($allow),
+                'options'   => $publish_allow,
+                'class'     => 'currently cols_' . count($publish_allow),
                 'hint'      => Text::get('tooltip-updates-publish'),
                 'errors'    => !empty($errors['publish']) ? array($errors['publish']) : array(),
                 'value'     => (int) $post->publish

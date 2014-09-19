@@ -113,7 +113,7 @@ $(document).ready(function(){
                         'type'  => 'file',
                         'class' => 'inline image_upload',
                         'title' => Text::_("Subir una imagen"),
-                        'hint'  => Text::get('tooltip-updates-image_upload'),
+                        //'hint'  => Text::get('tooltip-updates-image_upload'),
                     )
                 )
             ),
