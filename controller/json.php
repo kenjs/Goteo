@@ -293,6 +293,17 @@ namespace Goteo\Controller {
         }
 
         /**
+         * return server domain for LocalGood App.
+         *
+         * @return bool|string
+         */
+        function get_server_domain(){
+            $_pro = $_SERVER['HTTPS'] == 'on' ? 'https://' : 'http://';
+            $this->result = $_pro . $_SERVER['SERVER_NAME'];
+            return $this->output();
+        }
+
+        /**
 		 * Json encoding...
 		 * */
 		public function output() {
