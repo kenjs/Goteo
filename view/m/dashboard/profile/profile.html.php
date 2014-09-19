@@ -153,7 +153,6 @@ $sfid = 'sf-project-profile';
         ),
         'user_location' => array(
             'type'      => 'textbox',
-            'required'  => true,
             'size'      => 20,
             'title'     => Text::get('profile-field-location'),
             'hint'      => Text::get('tooltip-user-location'),
@@ -163,7 +162,6 @@ $sfid = 'sf-project-profile';
         ),
         'user_avatar' => array(
             'type'      => 'group',
-            'required'  => true,
             'title'     => Text::get('profile-fields-image-title'),
             'hint'      => Text::get('tooltip-user-image'),
             'errors'    => !empty($errors['avatar']) ? array($errors['avatar']) : array(),
@@ -193,7 +191,6 @@ $sfid = 'sf-project-profile';
 
         'user_about' => array(
             'type'      => 'textarea',
-            'required'  => true,
             'cols'      => 40,
             'rows'      => 4,
             'title'     => Text::get('profile-field-about'),
@@ -204,7 +201,6 @@ $sfid = 'sf-project-profile';
         ),
         'interests' => array(
             'type'      => 'checkboxes',
-            'required'  => true,
             'class'     => 'cols_3',
             'name'      => 'user_interests[]',
             'title'     => Text::get('profile-field-interests'),
@@ -215,7 +211,6 @@ $sfid = 'sf-project-profile';
         ),
         'skills' => array(
             'type'      => 'checkboxescustom',
-            'required'  => true,
             'class'     => 'cols_3',
             'name'      => 'user_skills[]',
             'title'     => Text::get('profile-field-skills'),
@@ -226,7 +221,6 @@ $sfid = 'sf-project-profile';
         ),
         'user_keywords' => array(
             'type'      => 'textbox',
-            'required'  => true,
             'size'      => 20,
             'title'     => Text::get('profile-field-keywords'),
             'hint'      => Text::get('tooltip-user-keywords'),
@@ -236,7 +230,6 @@ $sfid = 'sf-project-profile';
         ),
         'user_contribution' => array(
             'type'      => 'textarea',
-            'required'  => true,
             'cols'      => 40,
             'rows'      => 4,
             'title'     => Text::get('profile-field-contribution'),
@@ -247,7 +240,6 @@ $sfid = 'sf-project-profile';
         ),
         'user_webs' => array(
             'type'      => 'group',
-            'required'  => true,
             'title'     => Text::get('profile-field-websites'),
             'hint'      => Text::get('tooltip-user-webs'),
             'class'     => 'webs',

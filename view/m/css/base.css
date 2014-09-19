@@ -467,72 +467,38 @@ footer
 
 
 /*--------------------------------------------------
-  sp--navigation
+  sp--flipsnap.js
 --------------------------------------------------*/
-.viewport {
+.viewport,
+.viewport_projectnav,
+.viewport_dashboard{
     width: 320px;
     margin: 0 auto;
     overflow: hidden;
     -webkit-transform: translateZ(0); /* Optional: When heavy at iOS6+ */
 }
+
+.flipsnap:after,
+.flipsnap_projectnav:after,
+.flipsnap_dashboard:after{
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+}
+
+/* navigation */
 .flipsnap {
     width: 1005px; /* 320px(item width) * 3(item count) */
 }
 
-.flipsnap:after {
-    content: '';
-    display: block;
-    clear: both;
-    height: 0;
-}
-
-body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard {
-    width: 320px!important;
-    margin: 0 auto;
-    overflow: hidden;
-    /*background-color: #e7e7e7;*/
-    -webkit-transform: translateZ(0); /* Optional: When heavy at iOS6+ */
-}
-body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_dashboard {
-    width: 1008px!important;/* 117px(item width) * 4(item count) + 116px */
-}
-body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_dashboard:after {
-    content: '';
-    display: block;
-    clear: both;
-    height: 0;
-}
-body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_dashboard li.item {
-    float: left;
-    border: none;
-    /*border-right: 1px dashed #cccccc;*/
-    color: #666;*/
-}
-body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_dashboard li.item a {
-    margin: 0 auto;
-}
-
-
-/*--------------------------------------------------
-  sp--project-navigation
---------------------------------------------------*/
+/* project-navigation */
 body.project-show div#sub-header div.project-menu.viewport_projectnav {
-    width: 320px!important;
-    margin: 0 auto;
-    overflow: hidden;
     background-color: #e7e7e7;
-    -webkit-transform: translateZ(0); /* Optional: When heavy at iOS6+ */
 }
 
 body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav {
     width: 1008px!important;/* 117px(item width) * 4(item count) + 116px */
-}
-
-body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav:after {
-    content: '';
-    display: block;
-    clear: both;
-    height: 0;
 }
 
 body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav .item {
@@ -547,30 +513,21 @@ body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_
 }
 
 
-/*--------------------------------------------------
-  sp--dashboard navigation
---------------------------------------------------*/
-
-.viewport_dashboard {
-    width: 320px;
-    overflow: hidden;
-    margin: 0 auto;
+/* dashboard navigation */
+body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_dashboard {
+    width: 1008px;/* 117px(item width) * 4(item count) + 116px */
 }
-
-.flipsnap_dashboard {
-    width: 518px; /* 320px(item width) * 3(item count) */
-}
-/*.item {
+body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_dashboard li.option {
     float: left;
-    width: 310px;
-    font-size: 50px;
-    text-align: center;
-    padding: 50px 0;
-    background: #EFEFEF;
-    border: 5px solid #999;
+    height: 28px;
+    padding: 0 8px;
+    border: none;
     color: #666;
-    cursor: pointer;
-}*/
+}
+body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_dashboard li.option a {
+    height: 18px;
+    line-height: 35px;
+}
 
 /*--------------------------------------------------
   index
