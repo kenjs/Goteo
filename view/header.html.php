@@ -36,9 +36,6 @@ use Goteo\Library\Text,
                 <div id="rightside" style="float:right;">
                     <div id="about">
                         <ul>
-<!--                            <li><a href="/about">--><?php //echo Text::get('regular-header-about'); ?><!--</a></li>-->
-<!--                            <li><a href="/blog">--><?php //echo Text::get('regular-header-blog'); ?><!--</a></li>-->
-                            <li><a href="/faq"><?php echo Text::get('regular-header-faq'); ?></a></li>
                             <li id="lang"><a href="#" ><?php echo Lang::get(LANG)->short ?></a></li>
                             <script type="text/javascript">
                                 jQuery(document).ready(function ($) {
