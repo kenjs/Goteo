@@ -1118,13 +1118,6 @@ namespace Goteo\Model {
                  ++$score;
             }
 
-            if (empty($this->skills)) {
-                $errors['overview']['skills'] = Text::get('mandatory-project-field-skill');
-            } else {
-                 $okeys['overview']['skills'] = 'ok';
-                 ++$score;
-            }
-
             if (empty($this->project_location)) {
                 $errors['overview']['project_location'] = Text::get('mandatory-project-field-location');
             } else {
@@ -1132,7 +1125,7 @@ namespace Goteo\Model {
                  ++$score;
             }
 
-            $this->setScore($score, 16);
+            $this->setScore($score, 15);
             /***************** FIN Revisión del paso 3, DESCRIPCION *****************/
 
             /***************** Revisión de campos del paso 4, COSTES *****************/
@@ -1315,6 +1308,7 @@ namespace Goteo\Model {
 
             /***************** Revisión de campos del paso 6, COLABORACIONES *****************/
             $scorename = $scoreDesc = 0;
+            $support_type_task = false;
             foreach ($this->supports as $support) {
                 if (!empty($support->support)) {
                      $okeys['supports']['support-'.$support->id.'-support'] = 'ok';
@@ -1325,8 +1319,19 @@ namespace Goteo\Model {
                      $okeys['supports']['support-'.$support->id.'-description'] = 'ok';
                      $scoreDesc = 1;
                 }
+
+                if($support->type == 'task'){
+                    $support_type_task = true;
+                }
             }
             $score = $scoreName + $scoreDesc;
+
+            if($support_type_task){
+                if(!count($this->skills)){
+                    $errors['supports']['skills'] = Text::get('スキルを選択してください');
+                }
+            }
+
             $this->setScore($score, 2);
             /***************** FIN Revisión del paso 6, COLABORACIONES *****************/
 
