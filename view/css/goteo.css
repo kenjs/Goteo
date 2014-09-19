@@ -207,3 +207,18 @@ body.project-embed > div#wrapper > div.alone-project > div.widget.project{width:
 body.project-embed > div#wrapper > div.alone-project > div.widget.project a.expand{position:absolute;top:0;bottom:0;width:100%;z-index:100}
 body.project-embed > div#wrapper > div.alone-project > div.widget.project.active{background-color:#F8F8F8 !important;}
 div.alone-project > div.widget.project > div.buttons > a.button{padding: 0.6em 1em}
+
+
+/*------------------------------------------------------------
+    embed widget style for wordpress side(mobile layout)
+------------------------------------------------------------*/
+body.project-embed.sp {
+    margin: 0 auto;
+}
+body.project-embed.sp > div#wrapper {
+    width: 320px;
+}
+body.project-embed.sp > div#wrapper a.expand {
+    width: 320px;
+    padding: 0;
+}
