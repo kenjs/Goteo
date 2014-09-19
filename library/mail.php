@@ -198,12 +198,12 @@ namespace Goteo\Library {
                 if (!empty($_SESSION['NEWSLETTER_SENDID']) ) {
                     $sendId = $_SESSION['NEWSLETTER_SENDID'];
                 } else {
-                    $sql = "INSERT INTO mail (id, email, html, template, node) VALUES ('', :email, :html, :template, :node)";
+                    $sql = "INSERT INTO mail (id, email, html, template) VALUES ('', :email, :html, :template)";
                     $values = array (
                         ':email' => 'any',
                         ':html' => $this->content,
                         ':template' => $this->template,
-                        ':node' => $_SESSION['admin_node']
+                        //':node' => $_SESSION['admin_node']
                     );
                     $query = Model::query($sql, $values);
 

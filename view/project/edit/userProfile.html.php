@@ -153,7 +153,7 @@ echo new SuperForm(array(
         ),
         'user_avatar' => array(
             'type'      => 'group',
-            'required'  => true,
+            'required'  => false,
             'title'     => Text::get('profile-fields-image-title'),
             'hint'      => Text::get('tooltip-user-image'),
             'errors'    => !empty($errors['avatar']) ? array($errors['avatar']) : array(),
