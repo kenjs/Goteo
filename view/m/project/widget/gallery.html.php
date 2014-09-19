@@ -26,13 +26,13 @@ $project = $this['project'];
 ?>
     <?php  if (count($project->gallery) > 1) : ?>
 		<script type="text/javascript" >
-			$(function(){
-				$('#prjct-gallery').slides({
-					container: 'prjct-gallery-container',
-					paginationClass: 'slderpag',
-					generatePagination: false,
-					play: 0
-				});
+//			$(function(){
+//				$('#prjct-gallery').slides({
+//					container: 'prjct-gallery-container',
+//					paginationClass: 'slderpag',
+//					generatePagination: false,
+//					play: 0
+//				});
 			});
 		</script>
     <?php endif; ?>

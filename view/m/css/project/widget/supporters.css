@@ -314,15 +314,21 @@ div.widget.project-investors div.investors {
 div.side div.widget.project-investors div.investors {
     border-right: none;
     border-bottom: none;
+    overflow: hidden;
 }
+
 div.side div.widget.project-investors div.investors ul li {
     /*border-bottom: 1px dashed #c0c0c0;*/
     width: 106px;
     border-top: 1px dashed #c0c0c0;
     border-right: 1px dashed #c0c0c0;
-    /*float: left;*/
+    float: left;
 }
 
+
+div.side div.widget.project-investors div.investors ul li:nth-child(3n) {
+    border-right:0;
+}
 
 div.widget.project-investors .investors ul {
     list-style: none;
