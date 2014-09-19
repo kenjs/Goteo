@@ -238,7 +238,7 @@ else {
 if(strpos($_SERVER['SERVER_NAME'], 'il3c') > 0){
     define('LOCALGOOD_WP_BASE_URL', 'http://yokohama.localgood.jp.il3c.com');
 }else{
-    define('LOCALGOOD_WP_BASE_URL', 'http://yokohama.localgood.jp');
+    define('LOCALGOOD_WP_BASE_URL', 'http://d2.yokohama.localgood.jp');
 }
 
 $ua = $_SERVER['HTTP_USER_AGENT'];

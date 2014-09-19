@@ -46,11 +46,15 @@ $element = $this['element'];
     </div>
     <?php endif ?>
 
-    <?php if (isset($element->hint)): ?>
-    <div class="hint">
-        <blockquote><?php echo $element->hint ?></blockquote>
+    <?php
+    if (PC_VIEW):
+        if (isset($element->hint)): ?>
+        <div class="hint">
+            <blockquote><?php echo $element->hint ?></blockquote>
     </div>
-    <?php endif ?>
+    <?php
+        endif;
+    endif ?>
     
 </div>
 <?php endif ?>

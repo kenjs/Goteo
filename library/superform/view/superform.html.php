@@ -37,7 +37,7 @@ use Goteo\Core\View ?>
     <?php endif ?>
     
     <?php if (isset($this['hint'])): ?>
-    <div class="hint">                    
+    <div class="hint">
         <blockquote><?php echo $this['hint'] ?></blockquote>
     </div>
     <?php endif ?>
