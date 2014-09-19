@@ -40,7 +40,7 @@ div.widget.user-mates div.categories ul li a:hover{color:#20B3B2}
 div.widget.user-mates div.users{clear:both;}
 div.widget.user-mates div.users h3.supertitle{border-top: 1px solid #808285;border-bottom:1px dashed #818284;padding:5px 0 5px 5px;color:#20B3B2;font-size:12px;margin-bottom:8px}
 div.widget.user-mates .users ul > li,
-div.widget.user-mates .users ul > li {
+body.user-profile div.widget.user-mates div.project-widget-box .users ul > li {
     float: left;
     margin-bottom: 8px;
     overflow: hidden;
@@ -49,7 +49,8 @@ div.widget.user-mates .users ul > li {
     width: 127px;
 }
 
-div.center div.widget.user-mates a.more {
+div.center div.widget.user-mates a.more,
+body.user-profile div.widget.user-mates a.more {
     display: block;
     float: none;
     margin-bottom: 20px;
@@ -59,6 +60,11 @@ div.center div.widget.user-mates a.more {
     border-top: 1px dashed #c0c0c0;
     background-color: #fff;
     font-size: 14px;
+}
+
+body.user-profile div.widget.user-mates div.project-widget-box .users ul > li,
+body.user-profile div.widget.user-mates a.more{
+    margin-bottom: 0;
 }
 
 div.widget.user-mates .users ul > li.nomarginright{margin-right:0}

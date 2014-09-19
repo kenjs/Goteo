@@ -284,15 +284,18 @@ body.user-profile div.side div.widget.user-supporters a.more {
 /*div.center div.widget.user-mates .users ul{
     border-top: 1px dashed #c0c0c0;
 }*/
-div.center div.widget.user-mates .users ul > li{
+div.center div.widget.user-mates .users ul > li,
+body.user-profile div.widget.user-mates div.project-widget-box .users ul > li {
     width: 152px!important;
     border-bottom: 1px dashed #c0c0c0;
 }
-div.center div.widget.user-mates .users ul > li:nth-child(odd) {
+div.center div.widget.user-mates .users ul > li:nth-child(odd),
+body.user-profile div.widget.user-mates div.project-widget-box .users ul > li:nth-child(odd) {
     width: 151px!important;
     border-right: 1px dashed #c0c0c0;
 }
-div.center div.widget.user-mates .users ul > li:last-child {
+div.center div.widget.user-mates .users ul > li:last-child,
+body.user-profile div.widget.user-mates div.project-widget-box .users ul > li:last-child {
     border-bottom: none;
 }
 div.center div.widget.user-mates .users ul > li h4{
