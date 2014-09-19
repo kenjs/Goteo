@@ -65,6 +65,7 @@ jQuery(document).ready(function ($) {
 <div class="widget">
     <p><?php echo Text::_("Vamos a comunicarnos con ") . $_SESSION['mailing']['filters_txt']; ?></p>
     <form action="/admin/mailing/send" method="post">
+    <!--
     <dl>
         <dt><?php echo Text::_("Seleccionar plantilla:"); ?></dt>
         <dd>
@@ -76,7 +77,7 @@ jQuery(document).ready(function ($) {
             </select>
             <input type="button" id="template_load" value="<?php echo Text::_("Cargar"); ?>" />
         </dd>
-    </dl>
+    </dl>-->
     <dl>
         <dt><?php echo Text::_("Asunto:"); ?></dt>
         <dd>
