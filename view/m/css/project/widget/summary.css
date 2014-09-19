@@ -47,14 +47,41 @@ div.widget.project-summary h8 {
 }
 
 /* for project-home h3 */
-body.project-show div#main div.center.home div.widget.project-summary.h_ttl {
-    padding-top: 20px;
-    padding-bottom: 0;
+body.project-show div#main div.center div.widget.project-summary.h_ttl {
+    padding: 20px 16px 0;
     border-bottom: none;
 }
-body.project-show div#main div.center.home div.widget.project-summary.h_ttl h3 {
-    margin-bottom: 0;
+body.project-show div#main div.center div.widget.project-summary.h_ttl h3 {
+    margin: 0;
 }
+body.project-show div#main div.center div.widget.project-summary.h_ttl .project-subtitle,
+body.project-show div#main div.center div.widget.project-summary.h_ttl .wants-skills,
+body.project-show div#main div.center div.widget.project-summary.h_ttl .wants-skills a,
+body.project-show div#main div.center div.widget.project-summary.h_ttl .categories > h3,
+body.project-show div#main div.center div.widget.project-summary.h_ttl .categories > a {
+    font-size: 11px;
+}
+body.project-show div#main div.center div.widget.project-summary.h_ttl .project-subtitle {
+    margin-bottom: 24px;
+}
+body.project-show div#main div.center div.widget.project-summary.h_ttl .wants-skills {
+    margin-bottom: 8px;
+}
+body.project-show div#main div.center div.widget.project-summary.h_ttl .categories {
+    font-weight: normal;
+    color: #20B3B2;
+    margin: 0;
+}
+
+body.project-show div#main div.center div.widget.project-summary.h_ttl .categories a {
+    color: #58595B;
+    text-decoration: none;
+}
+
+body.project-show div#main div.center div.widget.project-summary.h_ttl .categories a:hover {
+    color: #20B3B2;
+}
+
 
 
 div.widget.project-summary > div {

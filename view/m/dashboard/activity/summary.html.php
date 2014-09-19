@@ -126,7 +126,7 @@ $lsuf = (LANG != 'es') ? '?lang='.LANG : '';
                     $widget_code = Text::widget($url . $lsuf);
                     $widget_code_investor = Text::widget($url.'/invested/'.$user->id.'/'.$lsuf);
                     ?>
-                <div style="float:left;">
+                <div>
                       <?php  echo new View('view/m/project/widget/project.html.php', array(
                             'project' => $project,
                             'investor'  => $user
@@ -156,6 +156,7 @@ $lsuf = (LANG != 'es') ? '?lang='.LANG : '';
 
 
         <!-- carrusel de cuadritos -->
+        <?/*
         <div class="navi-bar">
             <ul class="navi">
                 <?php foreach (array_keys($list) as $group) : ?>
@@ -163,6 +164,7 @@ $lsuf = (LANG != 'es') ? '?lang='.LANG : '';
                 <?php endforeach ?>
             </ul>
         </div>
+        */?>
 
     </div>
 <?php endif; ?>

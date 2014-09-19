@@ -48,7 +48,7 @@ $(function () {
     // sp dashboard-nav
     Flipsnap('.flipsnap_dashboard');
 
-    var flipsnap = Flipsnap('.flipsnap_dashboard', {
+    var flipsnap3 = Flipsnap('.flipsnap_dashboard', {
         distance: 100
     });
 

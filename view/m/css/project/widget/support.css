@@ -97,6 +97,8 @@ div.widget.project-support div.meter > h3.title {
 
 
 div.widget.project-support div.buttons {
+    position: relative;
+    z-index: 3;
     padding: 1em 0;
     text-align: center;
 }

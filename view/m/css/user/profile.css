@@ -328,8 +328,8 @@ div.center div.widget.user-mates .users ul > li span.contact a:hover{
 }
 
 
-/* lista de categor�as */
-div.center > div.widget.categorylist{padding-bottom:12px;}
+/* category list */
+/*div.center > div.widget.categorylist{padding-bottom:12px;}*/
 div.center > div.widget.categorylist ul{list-style:none;display:inline-block;margin:0;padding-left:0;}
 div.center > div.widget.categorylist ul li{display:inline-block;margin-left:0;padding-left:0;}
 div.center > div.widget.categorylist ul li a{text-decoration:none;
@@ -339,7 +339,6 @@ div.center > div.widget.categorylist ul li a:hover{color:#19B4B2}
 
 div.center > div.widget.categorylist > h3.title{
     /*font-size: 19px;font-weight: bold;margin: 0 0 1em -20px;padding-left: 20px;*/
-
     height: 40px;
     margin: 0;
     padding: 0;
@@ -348,7 +347,7 @@ div.center > div.widget.categorylist > h3.title{
     line-height: 40px;
     color: #ffffff;
     font-weight: normal;
-    background-color: #666666;
+    background-color: #19B4B2;
 }
 div.center > div.widget.categorylist > div.filters{border-bottom: 1px solid #D5D5D6;border-top: 1px solid #D5D5D6;padding: 5px;}
 	div.center > div.widget.categorylist > div.filters > span{font-size:12px;}
@@ -359,19 +358,26 @@ div.center > div.widget.categorylist > div.filters{border-bottom: 1px solid #D5D
 	div.center > div.widget.categorylist > div.filters > ul > li > a.active{background:url('/view/css/user/blue-triangle-down.png') no-repeat left;}
 
 div.center > div.widget.categorylist > div.list{
+    padding-left: 20px;
+    line-height: 27px;
+    background-color: #e5e5e5;
 }
-	div.center > div.widget.categorylist > div.list > ul{}
-	div.center > div.widget.categorylist > div.list > ul > li{margin-right:0.5em;
-	margin-bottom: 0.5em;
+div.center > div.widget.categorylist > div.list > ul{}
+div.center > div.widget.categorylist > div.list > ul > li{
+    margin-right:0.5em;
+	/*margin-bottom: 0.5em;*/
 }
 	div.center > div.widget.categorylist > div.list > ul > li > a{text-transform:uppercase;font-size:12px;}
 
-/* detalle de categor�as (encabezado de categor�a)*/
-div.center > div.widget.user-mates > h3.title{padding: 9px 0 7px 5px;font-size: 12px;font-weight: normal; background:none; border-bottom: 1px solid #908499;border-top: 1px solid #808285;color: #20B3B2;font-size: 12px;
+/* category detail (category header)*/
+div.center > div.widget.user-mates > h3.title{
+    padding: 4px 0 4px 20px;
+    font-size: 14px;
+    font-weight: normal;
+    background-color: #666666;
+    color: #f5f5f5;
 	margin: 0;
 }
-
-
 
 div.center div.widget.user-message{overflow:hidden;position:relative;z-index:99;}
 div.center div.widget.user-message form {padding: 8px;}
@@ -447,5 +453,4 @@ body.user-profile div.widget.project div.meter dl dd.days {
     height: 50px;
     padding: 44px 0 0 25px;
     border-left: 1px solid #eee;
-
 }

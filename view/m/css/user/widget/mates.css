@@ -44,9 +44,6 @@ div.widget.user-mates .users ul > li {
     width: 127px;
 }
 
-div.center div.widget.user-mates div.users{
-    padding: 15px 0 0;
-}
 div.center div.widget.user-mates a.more {
     display: block;
     float: none;
