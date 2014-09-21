@@ -314,12 +314,12 @@ namespace Goteo\Controller\Dashboard {
             // - 
 
             // - se crea un registro de tabla mail
-            $sql = "INSERT INTO mail (id, email, html, template, node) VALUES ('', :email, :html, :template, :node)";
+            $sql = "INSERT INTO mail (id, email, html, template) VALUES ('', :email, :html, :template)";
             $values = array (
                 ':email' => 'any',
                 ':html' => $content,
                 ':template' => $template->id,
-                ':node' => \GOTEO_NODE
+                //':node' => \GOTEO_NODE
             );
             $query = \Goteo\Core\Model::query($sql, $values);
             $mailId = \Goteo\Core\Model::insertId();
