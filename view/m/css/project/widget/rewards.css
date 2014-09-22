@@ -315,17 +315,6 @@ div.widget.project-rewards ul li {
     background-position: left top;
 }
 
-div.widget.project-rewards a.more {
-    display: block;
-    background-color: #fff;
-    padding: 10px;
-    text-decoration: none;
-    text-align: center;
-}
-/*div.widget.project-collaborations ul li.support strong {
-    padding-left: 45px;
-}*/
-
 div.widget.project-invest ul li div.license h4,
 div.widget.project-invest ul li div.license h5,
 div.widget.project-invest ul li div.license h6,

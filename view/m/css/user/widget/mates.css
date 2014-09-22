@@ -20,8 +20,6 @@ div.widget.user-mates{
     padding-bottom:0;
 }
 
-/*div.widget.user-mates h3.supertitle{margin-bottom:8px}*/
-
 div.widget.user-mates div.users,div.widget.user-mates div.categories{height:auto;overflow:visible;}
 div.widget.user-mates div.users ul,div.widget.user-mates div.categories ul {list-style: none;margin: 0;padding: 0;height:auto;overflow:auto;}
 div.widget.user-mates div.categories{
@@ -49,31 +47,13 @@ body.user-profile div.widget.user-mates div.project-widget-box .users ul > li {
     width: 127px;
 }
 
-div.center div.widget.user-mates a.more,
-body.user-profile div.widget.user-mates a.more {
-    display: block;
-    float: none;
-    margin-bottom: 20px;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    border-top: 1px dashed #c0c0c0;
-    background-color: #fff;
-    font-size: 14px;
-}
-
-body.user-profile div.widget.user-mates div.project-widget-box .users ul > li,
-body.user-profile div.widget.user-mates a.more{
+body.user-profile div.widget.user-mates div.project-widget-box .users ul > li {
     margin-bottom: 0;
 }
 
 div.widget.user-mates .users ul > li.nomarginright{margin-right:0}
 div.widget.user-mates .users ul > li:hover > div.user > h4 > a{color:#19B4B2;}
-
-
-
-div.widget.user-mates .users ul > li.active {
-    background-color:  #f3f3f3 !important;}
+div.widget.user-mates .users ul > li.active {background-color:  #f3f3f3 !important;}
 
 div.widget.user-mates .users ul > li .user {
     padding: 3px 6px 3px 57px;
@@ -131,31 +111,12 @@ div.widget.user-mates .users ul > li span {
     display: block;
 }
 
-div.widget.user-mates .users ul > li span.projects {
-    color: #20b3b2;
-}
-
-div.widget.user-mates .users ul > li span.invests {
-    color: #313b96;
-}
-
-
-/*div.widget.user-mates a.more {
-    color: #58595b;
-    font-size: 12px !important;
-    text-transform: uppercase;
-    float: right;
-    clear: both;
-    text-decoration: none;
-	line-height:1em;
-	height:1em;
-	margin-bottom:15px;
-}*/
+div.widget.user-mates .users ul > li span.projects {color: #20b3b2;}
+div.widget.user-mates .users ul > li span.invests {color: #313b96;}
 
 div.widget.user-mates a:hover.more  {
     color: #20b3b2;
 }
-
 
 
 /* only center widget
@@ -165,3 +126,11 @@ div.center div.widget.user-mates .users ul > li{
 	max-width:276px !important;
 	margin-bottom:0
 	}
+
+
+/* meter style */
+/*横1段*/
+
+/*横2段*/
+
+/*縦*/

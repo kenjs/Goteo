@@ -94,17 +94,20 @@ div.project-messages div.child .actions a:hover {
     color: #58595b;
 }
 
-
 div.project-messages div.message h3.user a,div.project-messages div.child h3.user a{text-decoration:none;}
 div.project-messages div.message h3.user a:hover,div.project-messages div.child h3.user a:hover{color:#20B3B2;}
-
 
 div.widget.project-message form {
     padding-bottom: 8px;
 }
 
+body.project-show div.widget.project-message form {
+    padding: 0 8px 8px;
+}
+
 div.project-messages div#project-messages {
-    width: 310px;
-    /*margin-top: 8px;*/
+    width: 304px;
+    margin-left: 8px;
     padding: 8px 0;
 }
+div.project-messages div#project-messages {

@@ -22,18 +22,6 @@ div.widget.project-support h4.supertitle {
     background-color: #3399cc;
 }
 
-div.widget.project-support dl dt.optimum{
-	color:#6699cc;
-}
-
-div.widget.project-support dl dd.optimum {
-    color: #6699cc;
-}
-
-div.widget.project-support dl dt.reached {
-    margin-top: 16px;
-}
-
 div.widget.project-support dl dt.reached span {
     color: #666633;
 }
@@ -63,14 +51,14 @@ div.widget.project-support div.meter {
     padding: 24px 0 78px !important;
 }
 
-div.widget.project-support div.meter > h3.title {
+/*div.widget.project-support div.meter > h3.title {
 	color:#999900;
     text-transform: lowercase;
     font-size: 12px;
     font-weight: normal;
     text-align: right;
     background: none;
-}
+}*/
 
 div.widget.project-support div.graph > div.minimum > div.done {
     background: url('/view/css/project/widget/support/done.png') no-repeat bottom;
@@ -84,16 +72,6 @@ div.widget.project-support div.meter.ver div.graph .minimum .done {
     max-height: 212px;
 }
 
-
-div.widget.project-support div.meter > h3.title {
-    color:#999900;
-    position:absolute;
-    top:8px;
-    right:16px;
-    text-transform: lowercase;
-    font-size: 12px;
-    font-weight: bold;
-}
 
 
 div.widget.project-support div.buttons {
@@ -116,14 +94,6 @@ div.widget.project-support a.button {
     background: linear-gradient(to bottom,  #f2bb67 0%,#ff9900 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2bb67', endColorstr='#ff9900',GradientType=0 ); /* IE6-9 */
     font-size: 14px;
-}
-
-div.widget.project-support a.more {
-    display: block;
-    background-color: #fff;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
 }
 
 /* Tagmark termometro */
