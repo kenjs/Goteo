@@ -31,11 +31,19 @@ namespace Goteo\Controller\Dashboard {
         // listados de proyectos a mostrar (proyectos que cofinancia y proyectos suyos)
         public static function projList ($user) {
             $lists = array();
+
+            // matched project
+            $matched = Model\Project::ofmatched($user->skills);
+            if (!empty($matched)) {
+                $lists['matched_projects'] = Listing::get($matched);
+            }
+
             // mis proyectos
             $projects = Model\Project::ofmine($user->id);
             if (!empty($projects)) {
                 $lists['my_projects'] = Listing::get($projects);
             }
+
             // proyectos que cofinancio
             $invested = Model\User::invested($user->id, false);
             if (!empty($invested)) {

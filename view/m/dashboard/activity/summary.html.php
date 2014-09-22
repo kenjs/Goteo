@@ -37,6 +37,8 @@ $lsuf = (LANG != 'es') ? '?lang='.LANG : '';
     jQuery(document).ready(function ($) {
 
         /* todo esto para cada lista de proyectos (flechitas navegacion) */
+            $("#discover-group-matched_projects-1").show();
+            $("#navi-group-matched_projects-1").addClass('active');
             $("#discover-group-my_projects-1").show();
             $("#navi-discover-group-my_projects-1").addClass('active');
             $("#discover-group-invest_on-1").show();
@@ -66,6 +68,49 @@ $lsuf = (LANG != 'es') ? '?lang='.LANG : '';
 
     });
 </script>
+<!-- matching projects for YOU -->
+<?php if (!empty($this['lists']['matched_projects'])) : ?>
+    <div class="widget projects">
+        <h2 class="title"><?php echo Text::get('profile-matched_projects-header'); ?></h2>
+        <?php foreach ($this['lists']['matched_projects'] as $group=>$projects) : ?>
+            <div class="discover-group discover-group-matched_projects" id="discover-group-matched_projects-<?php echo $group ?>">
+
+                <div class="discover-arrow-left">
+                    <a class="discover-arrow" href="#matched_projects" rev="matched_projects" rel="<?php echo 'matched_projects-'.$projects['prev'] ?>">&nbsp;</a>
+                </div>
+
+                <?php foreach ($projects['items'] as $project) :
+                    echo new View('view/project/widget/project.html.php', array(
+                        'project'   => $project,
+                        'balloon' => '<h4>' . htmlspecialchars($this['status'][$project->status]) . '</h4>' .
+                            '<blockquote>' . $waitfor[$project->status] . '</blockquote>',
+                        'dashboard' => true,
+                        'own'       => true
+                    ));
+                endforeach; ?>
+
+                <div class="discover-arrow-right">
+                    <a class="discover-arrow" href="#matched_projects" rev="matched_projects" rel="<?php echo 'matched_projects-'.$projects['next'] ?>">&nbsp;</a>
+                </div>
+
+            </div>
+        <?php endforeach; ?>
+
+
+        <!-- carrusel de cuadritos -->
+        <?/*
+        <div class="navi-bar">
+            <ul class="navi">
+                <?php foreach (array_keys($list) as $group) : ?>
+                    <li><a id="navi-discover-group-<?php echo 'matched_projects-'.$group ?>" href="#matched_projects" rev="matched_projects" rel="<?php echo "matched_projects-{$group}" ?>" class="navi-discover-group navi-discover-group-matched_projects"><?php echo $group ?></a></li>
+                <?php endforeach ?>
+            </ul>
+        </div>
+        */ ?>
+
+    </div>
+<?php endif; ?>
+
 <!-- mis proyectos -->
 <?php if (!empty($this['lists']['my_projects'])) : ?>
     <div class="widget projects">

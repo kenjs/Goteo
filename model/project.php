@@ -1814,6 +1814,34 @@ namespace Goteo\Model {
             return $projects;
         }
 
+        /**
+         * @param $owner
+         * @param bool $published
+         * @return array
+         * @throws \Goteo\Core\Exception
+         */
+        public static function ofmatched($_skills)
+        {
+            $projects = array();
+
+            $sql = "SELECT * FROM project WHERE status > 2";
+
+            $skills_str = implode(',', $_skills);
+
+            $sql .= ' AND id IN (
+                SELECT distinct(project)
+                FROM project_skill
+                WHERE skill IN ('. $skills_str . ')
+                )';
+
+            $sql .= " ORDER BY created DESC";
+            $query = self::query($sql);
+            foreach ($query->fetchAll(\PDO::FETCH_CLASS, __CLASS__) as $proj) {
+                $projects[] = self::getMedium($proj->id);
+            }
+            return $projects;
+        }
+
         /*
          * Lista de proyectos publicados
          */
