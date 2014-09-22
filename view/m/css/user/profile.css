@@ -418,35 +418,48 @@ body.user-profile div.widget.project div.meter dl dd.optimum {
     font-size: 12px;
     font-weight: normal;
     position: relative;
-    top: -20px;
+    /*top: -20px;
     padding: 44px 0 0 20px;
     left: 110px;
-    width: 70px;
+    width: 70px;*/
     height: 50px;
     border-left: 1px solid #eee;
+    top:-16px;
+    left: 96px;
+    width: 96px;
+    padding-top: 35px;
 }
 
 body.user-profile div.widget.project div.meter dl dt.optimum {
     position: absolute;
     top: 0;
-    left: 130px;
-    width: 70px;
+    /*left: 130px;
+    width: 70px;*/
+    left:96px;
+    width: 96px;
+    text-align: center;
 }
 
 body.user-profile div.widget.project div.meter dl dt.minimum {
     position: absolute;
     top: 0px;
-    left: 26px;
+    /*left: 26px;*/
     color: #cc6600;
+    left: 0;
+    width: 96px;
+    text-align: center;
 }
 
 body.user-profile div.widget.project div.meter dl dd.minimum {
     position: relative;
     font-size: 12px;
-    top: -70px;
-    left: 26px;
+    /*top: -70px;*/
+    /*left: 26px;*/
     color: #cc6600;
-
+    top:-66px;
+    left: 0;
+    width: 96px;
+    text-align: center;
 }
 
 body.user-profile div.widget.project div.meter dl dt.days {

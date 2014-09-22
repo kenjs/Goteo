@@ -43,11 +43,15 @@ body.dashboard div#sub-header {
     min-height: 100px;
 }*/
 
-body.dashboard div#sub-header div.dashboard-header h2 {
+body.dashboard div#sub-header div.dashboard-header h2,
+body div#sub-header div.dashboard-header h2
+{
     padding-left: 6px;
     line-height: 60px;
 }
-body.dashboard div#sub-header div.dashboard-header h2 span {
+body.dashboard div#sub-header div.dashboard-header h2 span,
+body div#sub-header div.dashboard-header h2 span.leave
+{
     font-size: 18px;
     font-weight: bold;
     color: #666666;
