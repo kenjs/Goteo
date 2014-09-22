@@ -23,8 +23,7 @@ use Goteo\Library\Text,
 //@NODESYS
 ?>
 
-<?php include 'view/header/lang.html.php' ?>
-
+<?php // include 'view/header/lang.html.php' ?>
 
 <div id="header" class="header">
     <h1><?php echo Text::get('regular-main-header'); ?></h1>
@@ -35,6 +34,7 @@ use Goteo\Library\Text,
                 <span>横浜の地域課題プラットフォーム</span>
                 <div id="rightside" style="float:right;">
                     <div id="about">
+                        <?php /*
                         <ul>
                             <li id="lang"><a href="#" ><?php echo Lang::get(LANG)->short ?></a></li>
                             <script type="text/javascript">
@@ -60,6 +60,7 @@ use Goteo\Library\Text,
                                 });
                             </script>
                         </ul>
+ */ ?>
                     </div>
                 </div>
             </div><!--.head_bar_inner-->

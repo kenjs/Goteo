@@ -73,7 +73,7 @@ echo new SuperForm(array(
         'change_email' => array(
             'type'      => 'group',
             'title'     => Text::get('user-changeemail-title'),
-            'hint'      => Text::get('tooltip-dashboard-user-change_email'),
+//            'hint'      => Text::get('tooltip-dashboard-user-change_email'),
             'children'  => array(
                 'user_nemail' => array(
                     'type'  => 'textbox',
@@ -87,7 +87,7 @@ echo new SuperForm(array(
                     'type'  => 'textbox',
                     'class' => 'inline',
                     'title' => Text::get('login-register-confirm-field'),
-                    // 'hint'  => Text::get('tooltip-dashboard-user-confirm_email'),
+                    'hint'  => Text::get('tooltip-dashboard-user-confirm_email'),
                     'errors'=> !empty($errors['email_retry']) ? array($errors['email_retry']) : array(),
                     'value' => $user_remail
                 ),
@@ -103,7 +103,7 @@ echo new SuperForm(array(
         'change_password' => array(
             'type'      => 'group',
             'title'     => Text::get('user-changepass-title'),
-            'hint'      => Text::get('tooltip-dashboard-user-change_password'),
+//            'hint'      => Text::get('tooltip-dashboard-user-change_password'),
             'children'  => array(
                 /* Ya no requerimos la pasword actual.
                 'user_password' => $old_pass ,
@@ -117,7 +117,7 @@ echo new SuperForm(array(
                     'type'  => 'password',
                     'class' => 'inline',
                     'title' => Text::get('user-changepass-new'),
-                    // 'hint'  => Text::get('tooltip-dashboard-user-new_password'),
+                    'hint'  => Text::get('tooltip-dashboard-user-new_password'),
                     'errors'=> !empty($errors['password_new']) ? array($errors['password_new']) : array(),
                     'value' => $user_npassword
                 ),
@@ -125,7 +125,7 @@ echo new SuperForm(array(
                     'type'  => 'password',
                     'class' => 'inline',
                     'title' => Text::get('user-changepass-confirm'),
-                    // 'hint'  => Text::get('tooltip-dashboard-user-confirm_password'),
+                    'hint'  => Text::get('tooltip-dashboard-user-confirm_password'),
                     'errors'=> !empty($errors['password_retry']) ? array($errors['password_retry']) : array(),
                     'value' => $user_rpassword
                 ),

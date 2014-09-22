@@ -48,8 +48,6 @@ if (!empty($this['posts'])) {
     }
 }
 
-$_SESSION['lang'] = 'ja';
-
 include 'view/prologue.html.php';
 include 'view/header.html.php';
 ?>

@@ -55,13 +55,14 @@
       <!--[if IE]>
       <link href="<?php echo SRC_URL ?>/view/css/ie.css" media="screen" rel="stylesheet" type="text/css" />
       <![endif]-->
-
+<?php /*
         <script type="text/javascript">
         if(navigator.userAgent.indexOf('Mac') != -1)
 		{
 			document.write ('<link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/mac.css" />');
 		}
 	    </script>
+*/ ?>
         <?php if (!isset($useJQuery) || !empty($useJQuery)): ?>
         <script type="text/javascript" src="<?php echo SRC_URL ?>/view/js/jquery-1.6.4.min.js"></script>
         <script type="text/javascript" src="<?php echo SRC_URL ?>/view/js/jquery.tipsy.min.js"></script>
