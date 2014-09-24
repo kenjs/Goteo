@@ -72,3 +72,36 @@ div.widget.project-collaborations a.button {
     font-size: 14px;
     line-height: 50px;
 }
+
+/*スキルの本文*/
+
+
+body.project-show div#project-collaborations div.project-widget-box ul li.support.task p {
+    padding: 10px 0 0 0;
+    background: none no-repeat left 5px;
+    line-height: 1.7em;
+    font-size: 13px;
+}
+
+/*スキルと物品の募集*/
+
+
+
+body.project-show div#main div#project-collaborations .project-widget-box {
+    background-color: #fff;
+    border-bottom: 1px dashed #c0c0c0;
+    padding: 0 20px;
+}
+
+body.project-show div#main div.widget.project-collaborations div.project-widget-box ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body.project-show div#main div.widget.project-collaborations div.project-widget-box ul li {
+    margin: 0 0 20px 0;
+    padding: 0;
+    list-style: none;
+}
+

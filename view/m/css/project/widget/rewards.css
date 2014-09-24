@@ -525,3 +525,53 @@ div.widget.project-rewards div.project-widget-box div > ul > li:last-child {
     margin-bottom:0;
 }
 
+
+
+/*¥¹¥Þ¥Û*/
+
+body.project-show div#main div#project-collaborations .project-widget-box {
+    background-color: #fff;
+    /*border-bottom: 1px dashed #c0c0c0;*/
+    padding: 0 20px;
+}
+
+body.project-show div#main div.widget.project-rewards .project-widget-box{
+    padding: 0px;
+    /*border-bottom: 1px dashed #c0c0c0;*/
+    background-color: #fff;
+}
+
+
+body.project-show div#main div.widget.project-rewards div.social {
+    padding: 10px 20px;
+    border-bottom: 1px dashed #c0c0c0;
+    background-color: #fff;
+}
+
+body.project-show div#main div.widget.project-rewards div.social ul li {
+    padding-top: 0;
+    background-position: left top;
+}
+
+div.widget.project-rewards div.individual ul li div.amount {
+    margin-left: 43px;
+    font-weight: bold;
+}
+
+body.project-show div#main div.widget.project-rewards ul li h4{
+    font-size: 14px;
+}
+
+body.project-show div#main div.widget.project-rewards div.social ul li h4{
+    margin: 0 0 .4em;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: none;
+}
+
+body.project-show div#main div.widget.project-rewards div.project-widget-box ul li:first-child {
+    padding-top: 0px;
+}
+
+
+
