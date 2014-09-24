@@ -264,7 +264,7 @@ namespace Goteo\Model {
                             IFNULL(project_lang.reward, project.reward) as reward,
                             IFNULL(project_lang.keywords, project.keywords) as keywords,
                             IFNULL(project_lang.media, project.media) as media,
-                            IFNULL(project_lang.subtitle, project.subtitle) as subtitle
+                            IFNULL(project_lang.subtitle, project.subtitle) as subtitle,
                             IFNULL(project_lang.evaluation, project.evaluation) as evaluation
                         FROM project
                         LEFT JOIN project_lang

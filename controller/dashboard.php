@@ -211,6 +211,8 @@ namespace Goteo\Controller {
 
             $user = $_SESSION['user'];
 
+            if(!isset($_SESSION['user']->roles['project_owner'])) throw new Redirection('/dashboard/profile/');
+
             $errors = array();
 
             // verificación de proyectos y proyecto de trabajo
