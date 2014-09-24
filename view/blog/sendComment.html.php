@@ -44,14 +44,14 @@
     <form method="post" action="/message/post/<?php echo $this['post']; ?>/<?php echo $this['project']; ?>">
 	    <div id="bocadillo"></div>
         <textarea id="message" name="message" cols="50" rows="5"></textarea>
-        <a target="_blank" id="a-preview" href="#preview" class="preview">&middot;<?php echo Text::get('regular-preview'); ?></a>
         <div style="display:none">
         	<div id="preview" style="width:400px;height:300px;overflow:auto;">
                     
                 </div>
         </div>
-        <button class="green" type="submit"><?php echo Text::get('blog-send_comment-button'); ?></button>
     </form>
+    <a target="_blank" id="a-preview" href="#preview" class="preview"><?php echo Text::get('regular-preview'); ?></a>
+    <button class="green" type="submit"><?php echo Text::get('blog-send_comment-button'); ?></button>
 </div>
 <?php endif; ?>
 <?php else : ?>

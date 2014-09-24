@@ -61,7 +61,7 @@ body.user-profile div#main div.discover-group div.widget.project {
 div.center div.widget.user-mates .users ul > li{
 	border-bottom:#D5D5D6 1px solid;
     margin-right: 14px;
-    max-width: 275px;
+   max-width: 275px;
 }
 
 
@@ -143,3 +143,108 @@ width:56px;	height:51px;z-index:100;}
 div.center div.widget.user-message #a-preview{color: #2EAB58;
 font-weight: bold;left: 52px;position: relative;text-decoration: none;text-transform: uppercase;top: 10px;}
 div.center div.widget.user-message button{float:right;margin-right:8px;}
+
+
+/*プロフィール*/
+
+body.user-profile div#main div.center.profile .widget.worthcracy.user-worthcracy {
+	margin: 0 0 10px 0;
+	padding: 0;
+	background-color: #669933;
+}
+
+body.user-profile div#main div.center.profile .widget.worthcracy.user-worthcracy h3.title {
+	font-weight: normal;
+	margin: 0;
+	padding: 0.5em 2px 0.5em 20px;
+	border-bottom: 1px solid #669933;
+	font-size: 18px;
+	color: #fff;
+}
+
+/*このユーザーの興味main*/
+
+body.user-profile div#main div.widget, body.community div#main div.center {
+	margin: 0 0 10px 0;
+}
+
+body.user-profile div#main div.widget.categorylist {
+	padding: 0;
+	margin: 0;
+}
+
+body.user-profile div#main div.widget.categorylist h3.title {
+	font-weight: normal;
+	margin: 0;
+	padding: 0.5em 2px 0.5em 20px;
+	border-bottom: 1px solid #21b0b0;
+	font-size: 18px;
+	background-color: #21b0b0;
+	color: #f5f5f5;
+}
+
+body.user-profile div.widget.categorylist > div.list {
+	padding: 0 0 0 20px;
+	background-color: #efefef;
+}
+
+body.user-profile div.center > div.widget.categorylist > div.list > ul > li {
+	margin: 0.5em 0.5em 0.5em 0;
+}
+
+body.user-profile div#main div.widget.user-mates h3.title {
+	padding: 4px 0 4px 20px;
+	font-size: 14px;
+	font-weight: normal;
+	background-color: #666666;
+	color: #f5f5f5;
+	margin: 0;
+}
+
+body.user-profile div#main div.center div.widget.user-mates div.users {
+	padding: 0;
+}
+
+body.user-profile div#main div.center div.widget.user-mates div.users ul li {
+	float: left;
+	/* height: 62px; */
+	margin: -1px 0 0 0;
+	overflow: hidden;
+	padding: 10px 0;
+	position: relative;
+	border: none;
+	border-right: 1px dashed #c0c0c0;
+	border-top: 1px dashed #c0c0c0;
+}
+
+body.user-profile div#main div.center div.widget.user-mates .users ul > li {
+	border-bottom: none;
+	margin:-1px 0 0 0;
+	max-width:auto;
+}
+
+body.user-profile div#main div.center div.widget.user-mates .users ul > li:nth-child(2n+2) {
+    border-right: none;
+}
+
+body.user-profile div#main div.center div.widget.user-mates .users ul > li .user {
+padding: 3px 6px 3px 70px;
+position: relative;
+}
+
+body.user-profile div.widget.user-mates a.more, div.center div.widget.user-mates a.more {
+	border-top: 1px dashed #c0c0c0;
+	float: none;
+	display: block;
+	background-color: #fff;
+	padding: 10px 10px 0;
+	margin: 0;
+	text-align: center;
+	text-decoration: none;
+	font-size: 14px!important;
+	line-height: 1.5em;
+	height: auto;
+}
+
+
+

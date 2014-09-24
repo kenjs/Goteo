@@ -86,6 +86,7 @@ jQuery(document).ready(function($) {
 */?>
 
 <?
+//    var_dump($_POST);
 ?>
 
 

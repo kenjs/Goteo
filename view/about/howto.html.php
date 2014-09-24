@@ -53,7 +53,8 @@ jQuery(document).ready(function($) {
         </div>
 
     </div>
-    
+<?// var_dump($this['content']); ?>
+
 <?php include 'view/footer.html.php' ?>
 
 <?php include 'view/epilogue.html.php' ?>

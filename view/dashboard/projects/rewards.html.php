@@ -81,8 +81,7 @@ switch ($order) {
 ?>
 <div class="widget gestrew">
     <div class="message">
-        ESTO ES UNA VISUALIZACIÓN DE LAS OPCIONES DE RETORNO QUE ELIGEN TUS COFINANCIADORES.<br />
-        NO TIENES QUE GESTIONAR ESOS RETORNOS HASTA HABER LLEGADO AL MÍNIMO DE LA CANTIDAD DESEADA
+        <?php echo Text::get('dashboard-rewards-notice'); ?>
     </div>
     <div class="rewards">
         <?php $num = 1; 

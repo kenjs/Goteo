@@ -79,7 +79,6 @@ use Goteo\Library\Text,
         <div class="nav_inner">
             <ul>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>">ホーム</a></li>
-                <li class="active"><a href="/">プロジェクト</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/earth_view/">課題を知る</a>
                     <ul class="sub">
                         <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/submit_subject/">課題を投稿する</a></li>
@@ -87,8 +86,14 @@ use Goteo\Library\Text,
                     </ul>
                 </li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/data/">データを見る</a></li>
-                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/posts_archive/">人 & 活動</a></li>
-                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/skills/">スキルを活かす</a></li>
+                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/posts_archive/">活動を知る</a></li>
+
+                <li><a href="/user/login/">支援する</a>
+                    <ul class="sub">
+                        <li><a href="/">プロジェクト</a></li>
+                        <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/skills/">スキルを活かす</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>

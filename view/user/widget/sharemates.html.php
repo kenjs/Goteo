@@ -108,8 +108,8 @@ function displayCategories(categoryId1,categoryId2){
             
             </ul>
             <a class="more" href="/user/profile/<?php echo $this['user']->id ?>/sharemates/<?php echo $catId ?>"><?php echo Text::get('regular-see_more'); ?></a>
+
         </div>
         <?php } ?>
     </div>
-
 </div>

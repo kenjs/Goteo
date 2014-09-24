@@ -615,9 +615,13 @@ body.project-edit div.superform ol li.element div.contents input {
     font-size: 12px;
     line-height: 16px;
     font-weight: normal;
-    padding: 0.3em 1.2em;
+    padding: 0.3em 1.2em
     margin-top: 0;
 }
+body.project-edit div.superform ol li.element div.contents input.inline {
+    padding: 0.3em 6px;
+}
+
 body.project-edit div.superform ol li.element div.project-share li.url input {
     width: 230px;
 }
@@ -714,4 +718,12 @@ a.button.weak {
     line-height: 16px;
     font-size: 12px;
     font-weight: normal;
+}
+
+
+/*示正件及捼淕*/
+
+div.superform input.next {
+    padding: 0;
+    font-size: 15px;
 }

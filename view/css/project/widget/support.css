@@ -266,8 +266,8 @@ div.widget.project-support div.buttons {
     clear: both;
     position: absolute;
     bottom: 60px;
-    left: 20px;
-    right: 20px;
+    left:50%;
+    margin:0 0 0 -97px;
 }
 
 div.widget.project-support a.button {

@@ -51,6 +51,7 @@
         <meta property="og:image" content="<?php echo SITE_URL ?>/goteo_logo.png" />
         <meta property="og:url" content="<?php echo SITE_URL ?>" />
 <?php endif; ?>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0 maximum-scale=1.0; user-scalable=0;">
         <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/goteo.css" />
       <!--[if IE]>
       <link href="<?php echo SRC_URL ?>/view/css/ie.css" media="screen" rel="stylesheet" type="text/css" />

@@ -698,7 +698,15 @@ div.widget.project div.buttons .button + .button {
     float: right;
 }
 
-
 h4.author:hover a{
 	color:#c5da4d;
 }
+
+div.project div.image {
+    height: 165px;
+}
+/*
+div.project div.image > a > img{
+    width : 320px;
+    height: auto;
+}*/
