@@ -27,6 +27,6 @@ $project = $this['project'];
 ?>
 <div class="project-evaluation"> 
     <div class="widget post">
-        <?php echo $project['evaluation'];?>
+        <?php echo $project->evaluation;?>
     </div>    
 </div>

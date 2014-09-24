@@ -53,6 +53,7 @@ namespace Goteo\Controller {
         }
 
         public function delete ($id) {
+            if(!isset($_SESSION['user']->roles['project_owner'])) throw new Redirection('/dashboard/profile/');
             $project = Model\Project::get($id);
             $errors = array();
             if ($project->delete($errors)) {
@@ -68,6 +69,8 @@ namespace Goteo\Controller {
 
         //Aunque no esté en estado edición un admin siempre podrá editar un proyecto
         public function edit ($id, $step = 'userProfile') {
+            if(!isset($_SESSION['user']->roles['project_owner'])) throw new Redirection('/dashboard/profile/');
+            
             $project = Model\Project::get($id, null);
 
             // para que tenga todas las imágenes
@@ -402,6 +405,7 @@ namespace Goteo\Controller {
         }
 
         public function create () {
+            if(!isset($_SESSION['user']->roles['project_owner'])) throw new Redirection('/dashboard/profile/');
 
             if (empty($_SESSION['user'])) {
                 $_SESSION['jumpto'] = '/project/create';
@@ -504,7 +508,7 @@ namespace Goteo\Controller {
                 }
 
                 // -- Mensaje azul molesto para usuarios no registrados
-                if (($show == 'messages' || $show == 'updates') && empty($_SESSION['user'])) {
+                if (($show == 'messages' || $show == 'updates' || $show == 'evaluation') && empty($_SESSION['user'])) {
                     Message::Info(Text::html('user-login-required'));
                 }
 
@@ -759,7 +763,8 @@ namespace Goteo\Controller {
                 'keywords',
                 //'media',
                 //'media_usubs',
-                'project_location'
+                'project_location',
+                'evaluation'
             );
 
             foreach ($fields as $field) {

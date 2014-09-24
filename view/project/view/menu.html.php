@@ -26,17 +26,17 @@ $menu = array(
     'messages'    => Text::get('project-menu-messages').' <span class="digits">'.$this['messages'].'</span>',
     'updates'     => Text::get('project-menu-updates').' <span class="digits">'.$this['updates'].'</span>'
 );
-if(!empty($this['evaluation'])){
+if(!empty($this['project']->evaluation)){
     $menu['evaluation'] = '事後評価';
 }
 ?>
 <div class="project-menu">
     <ul>
         <?php
-        foreach ($menu as $id => $show): ?>        
-        <li class="<?php echo $id ?><?php if ($this['show'] == $id) echo ' show' ?>">
-        	<a href="/project/<?php echo htmlspecialchars($this['project']->id) ?>/<?php echo $id ?>"><?php echo $show ?></a>
-        </li>
-        <?php endforeach ?>        
+        foreach ($menu as $id => $show): ?>
+            <li class="<?php echo $id ?><?php if ($this['show'] == $id) echo ' show' ?>">
+                <a href="/project/<?php echo htmlspecialchars($this['project']->id) ?>/<?php echo $id ?>"><?php echo $show ?></a>
+            </li>
+        <?php endforeach ?>
     </ul>
 </div>
