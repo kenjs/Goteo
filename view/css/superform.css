@@ -106,7 +106,7 @@ div.superform > div.hint blockquote {
 }
 
 body.js div.superform > div.hint blockquote {
-    margin-right: 250px;
+    margin-right: 251px;
 }
 
 div.superform > div.hint blockquote p {
@@ -615,9 +615,10 @@ body.project-edit div.superform ol li.element div.contents input {
     font-size: 12px;
     line-height: 16px;
     font-weight: normal;
-    padding: 0.3em 1.2em
+    padding: 0.3em 1.2em;
     margin-top: 0;
 }
+
 body.project-edit div.superform ol li.element div.contents input.inline {
     padding: 0.3em 6px;
 }
@@ -721,9 +722,67 @@ a.button.weak {
 }
 
 
-/*¥Ü¥¿¥ó¤ÎÕ{Õû*/
+/*ï¿½Ü¥ï¿½ï¿½ï¿½ï¿½ï¿½{ï¿½ï¿½*/
 
 div.superform input.next {
     padding: 0;
     font-size: 15px;
+}
+
+/*ÒŠï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½{ï¿½ï¿½*/
+
+div.superform div.elements > ol > li.required > h4.title {
+    background: url('superform/badge/required.png') no-repeat right center;
+}
+div.superform li.element > h4.title {
+    font-size: 16px;
+}
+
+body.js div.superform > div.elements ol li.element div.contents p{
+    font-size: 14px;
+    margin: 2em 0 0.6em 0;
+    padding: 0;
+}
+
+body.js div.superform div.hint blockquote {
+    padding-left: 0px;
+}
+
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Oï¿½ï¿½*/
+
+body.js div.superform > div.elements ol li.element.html div.contents {
+    font-size: 14px;
+    margin: 0 0 0 2em;
+}
+
+div.superform > div.elements > ol > li.element {
+padding: 0 2em 2em 0;
+}
+
+div.superform li.element {
+position: relative;
+padding: 0;
+clear: both;
+}
+
+body.project-edit div.superform div.hint blockquote {
+    padding-left: 20px;
+    margin-bottom: 10px;
+    border-right-width: 0px;
+}
+
+body.project-edit div.superform ol li.element div.contents input.inline {
+    margin: 0 0 2em 0;
+}
+
+/* new project -- preview */
+body.js div#main.preview form.project div.superform > div.hint {
+    background: none;
+}
+body.js div#main.preview form.project div.div.superform > div.elements > ol > li.element {
+    padding: 0;
+}
+
+body.js div#main.preview form.project div.superform > div.elements ol li.element.html div.contents {
+    margin-left: 0;
 }

@@ -25,8 +25,10 @@ use Goteo\Library\Text,
 $project = $this['project'];
 
 ?>
-<div class="project-evaluation"> 
+
+<div class="project-evaluation">
     <div class="widget post">
+        <h3 class="title">事後評価</h3>
         <?php echo $project->evaluation;?>
-    </div>    
+    </div>
 </div>

@@ -48,7 +48,7 @@ div.superform li.element > h8 {
 }
 div.superform li.element > h4 {
     /*font-size: 20px;*/
-    font-size: 18px;
+    font-size: 16px;
     padding: 0 64px 0 0;
     line-height: 1.2em;
 }
@@ -818,3 +818,44 @@ a.button.weak {
     font-size: 12px;
     font-weight: normal;
 }
+
+/*¥Ü©`¥À©`Ïû¤¹*/
+
+body.js div.superform > div.hint {
+    background: url('superform/wizard.png') no-repeat right top;
+    border-right: none;
+}
+
+/*¥ê¥¹¥È¤Î¿Õ¤­Õ{Õû*/
+
+div.superform li.element {
+    position: relative;
+    padding: 0;
+    /*border-top: 1px dashed #B7C2C5;*/
+    clear: both;
+}
+
+div.superform li.element.textbox > div.contents > input[type="text"],
+div.superform li.element.textbox > div.contents > input[type="password"],
+div.superform li.element.textarea > div.contents > textarea {
+    margin: 0 0 10px 0;
+}
+
+div.superform input[type='text'],
+div.superform input[type='password'],
+div.superform textarea {
+    margin: 0 0 10px 0;
+}
+
+div.superform > div.elements > ol > li.element {
+    margin: 0;
+}
+
+body.dashboard div#main.access div.superform{
+    margin: 0 0 10px 0;
+}
+
+
+
+
+

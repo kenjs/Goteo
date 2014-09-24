@@ -51,6 +51,7 @@ body.project-edit div#main.profile div.superform li.element.web div.title {
     text-transform: uppercase;
     width: 70%;
     float: left;
+    word-wrap: break-word;
 }
 
 body.project-edit div#main.profile div.superform li.element.web input.edit {

@@ -66,6 +66,7 @@ body.user-login div#main form input[type="submit"] {
     margin-bottom: 10px;
     width: 100%;
 }
+
 body.user-login div#main form button.disabled {
     width: 100%;
 }
@@ -192,3 +193,11 @@ body.user-login .sign-in-with {
 	color: #20B3B2;
 }
 
+/**/
+
+
+body.user-login div#main form input[type="submit"]{
+    padding: 0;
+    font-size: 15px;
+    width: 200px;
+}

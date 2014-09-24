@@ -329,7 +329,7 @@ body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_
 body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_dashboard li.option {
     float: left;
     height: 28px;
-    padding: 0 8px;
+    padding: 4px 8px;
     border: none;
     color: #666;
 }

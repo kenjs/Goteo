@@ -384,3 +384,19 @@ body.user-profile div#main div.discover-group div.widget.project {
     margin: 0 auto 0px !important;
     border: none;
 }
+
+/*borderの調整*/
+
+div.center div.widget.user-mates .users ul > li:nth-child(1n),
+div.center div.widget.user-mates .users ul > li:nth-child(2n),
+div.center div.widget.user-mates .users ul > li:nth-child(3n)
+ {
+    border-top: 1px dashed #c0c0c0;
+    margin-top: -1px;
+}
+
+
+div.center div.widget.user-mates .users ul > li:nth-child(odd){
+    width: 151px!important;
+    border-right: 1px dashed #c0c0c0;
+}

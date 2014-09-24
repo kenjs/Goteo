@@ -32,6 +32,7 @@
 @import url('../user/widget/user.css');
 @import url('../worth/base.css');
 @import url('../worth/legend.css');
+@import url('widget/evaluation.css');
 
 
 body.project-show div#main {
@@ -216,7 +217,11 @@ body.project-show div.project-menu ul li.show a {
 }
 
 body.project-show div#main div.widget {
+    max-width: 580px;
     margin-bottom: 10px;
+}
+body.project-show div#main div.widget pre {
+    font-size: 13px;
 }
 
 body.project-show div#main div.widget.project-support {
@@ -313,7 +318,7 @@ div.widge dl {
     margin-bottom: 60px;
 }
 
-/*¥¹¥­¥ë*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 
 div.project-header div.wants-skills a {
     padding: 0 10px 0 0;

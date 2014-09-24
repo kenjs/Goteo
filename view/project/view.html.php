@@ -99,7 +99,7 @@ $bodyClass = 'project-show'; include 'view/prologue.html.php' ?>
                                 'supporters' => $supporters,
                                 'messages' => $messages,
                                 'updates' => $updates,
-                                'evaluation' => $project['evaluation'],
+                                'evaluation' => $this['project']->evaluation,
                             )
                     );
                 ?>
