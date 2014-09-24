@@ -94,6 +94,7 @@ namespace Goteo\Model {
             $currently, // Current development status of the project
             $project_location, // project execution location
             $scope,  // ambito de alcance
+            $evaluation,
 
             $translate,  // si se puede traducir (bool)
 
@@ -264,6 +265,7 @@ namespace Goteo\Model {
                             IFNULL(project_lang.keywords, project.keywords) as keywords,
                             IFNULL(project_lang.media, project.media) as media,
                             IFNULL(project_lang.subtitle, project.subtitle) as subtitle
+                            IFNULL(project_lang.evaluation, project.evaluation) as evaluation
                         FROM project
                         LEFT JOIN project_lang
                             ON  project_lang.id = project.id
@@ -643,7 +645,8 @@ namespace Goteo\Model {
                     'project_location',
                     'scope',
                     'resource',
-                    'comment'
+                    'comment',
+                    'evaluation'
                     );
 
                 $set = '';
@@ -856,7 +859,8 @@ namespace Goteo\Model {
                     'related'=>'related_lang',
                     'reward'=>'reward_lang',
                     'keywords'=>'keywords_lang',
-                    'media'=>'media_lang'
+                    'media'=>'media_lang',
+                    'evaluation'=>'evaluation_lang',
                     );
 
                 $set = '';
@@ -1124,6 +1128,7 @@ namespace Goteo\Model {
                  $okeys['overview']['project_location'] = 'ok';
                  ++$score;
             }
+            
 
             $this->setScore($score, 15);
             /***************** FIN Revisión del paso 3, DESCRIPCION *****************/

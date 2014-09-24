@@ -307,7 +307,7 @@ $superform = array(
         ),
 */
         // fin media
-
+/*
         'currently' => array(    
             'title'     => Text::get('overview-field-currently'),
             'type'      => 'slider',
@@ -319,7 +319,7 @@ $superform = array(
             'ok'        => !empty($okeys['currently']) ? array($okeys['currently']) : array(),
             'value'     => $project->currently
         ),
-
+*/
         'location' => array(
             'type'      => 'textbox',
             'name'      => 'project_location',
@@ -330,7 +330,7 @@ $superform = array(
             'ok'        => !empty($okeys['project_location']) ? array($okeys['project_location']) : array(),
             'value'     => $project->project_location
         ),
-
+/*
         'scope' => array(
             'title'     => Text::get('overview-field-scope'),
             'type'      => 'slider',
@@ -342,8 +342,8 @@ $superform = array(
             'ok'        => !empty($okeys['scope']) ? array($okeys['scope']) : array(),
             'value'     => $project->scope
         ),
-        
-        'footer' => array(
+*/       
+/*        'footer' => array(
             'type'      => 'group',
             'children'  => array(
                 'errors' => array(
@@ -366,12 +366,44 @@ $superform = array(
                 )
             )
         
-        )
+        )*/
 
     )
 
 );
-
+if (isset($_SESSION['user']->roles['admin']) || isset($_SESSION['user']->roles['superadmin'])){
+    $superform['elements']['evaluation'] = array(
+        'type'      => 'textarea',
+        'title'     => Text::get('overview-field-evaluation'),
+        'required'  => false,
+        'value'     => $project->evaluation,            
+        'errors'    => !empty($errors['evaluation']) ? array($errors['evaluation']) : array(),
+        'ok'        => !empty($okeys['evaluation']) ? array($okeys['evaluation']) : array()
+    );
+}
+$superform['elements']['footer'] = array(
+    'type'      => 'group',
+    'children'  => array(
+        'errors' => array(
+            'title' => Text::get('form-footer-errors_title'),
+            'view'  => new View('view/project/edit/errors.html.php', array(
+                'project'   => $project,
+                'step'      => $this['step']
+            ))                    
+        ),
+        'buttons'  => array(
+            'type'  => 'group',
+            'children' => array(
+                'next' => array(
+                    'type'  => 'submit',
+                    'name'  => 'view-step-costs',
+                    'label' => Text::get('form-next-button'),
+                    'class' => 'next'
+                )
+            )
+        )
+    )
+);
 
 foreach ($superform['elements'] as $id => &$element) {
     

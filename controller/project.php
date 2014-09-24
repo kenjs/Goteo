@@ -759,7 +759,8 @@ namespace Goteo\Controller {
                 'keywords',
                 //'media',
                 //'media_usubs',
-                'project_location'
+                'project_location',
+                'evaluation'
             );
 
             foreach ($fields as $field) {
