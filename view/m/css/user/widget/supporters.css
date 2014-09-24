@@ -24,8 +24,6 @@ div.widget.user-supporters .supporters ul {
 
 div.widget.user-supporters .supporters > ul > li {
     background-color:  white;
-    /*padding: 10px 10px 10px 60px;*/
-    /*height: 4em;*/
     position: relative;
 }
 
@@ -34,8 +32,6 @@ div.widget.user-supporters .supporters ul  li.active {
 }
 
 div.widget.user-supporters .supporters > ul > li div.supporterContainer {
-	/*padding: 10px 10px 10px 60px;	
-	height: 4em;*/
 }
 
 div.widget.user-supporters .supporters > ul > li div.supporterContainer a.expand {
@@ -49,9 +45,6 @@ div.widget.user-supporters .supporters > ul > li div.supporterContainer a.expand
 }
 
 div.widget.user-supporters .supporters ul li .avatar {
-    /*position: absolute;
-    left: 0;
-    top: 10px;*/
     width: 50px;
     height: 50px;
     text-align: center;
@@ -139,10 +132,6 @@ div.widget.user-supporters .supporters ul li dl dt.amount {
     color: #313B96;
 }
 
-/*div.widget.user-supporters .supporters ul li dl dt.projects,
-div.widget.user-supporters .supporters ul li dl dd.projects
-{color:#313B96}*/
-
 div.widget.user-supporters .supporters ul li dl dd.amount {
     position: absolute;
     top: 25px;
@@ -153,15 +142,9 @@ div.widget.user-supporters .supporters ul li dl dd.amount {
 }
 
 div.widget.user-supporters .supporters ul li dl dd.amount {
-    /*background: url("/view/css/euro/violet/s.png") no-repeat scroll right center transparent;        */
     height: 20px;
     line-height: 21px;
-    /*padding-right: 18px;*/
 }
-
-/*div.widget.user-supporters .supporters ul li dl dd.amount .euro {
-    display: none;
-}*/
 
 div.widget.user-supporters .supporters ul li dl dt.date {
     display: none;
@@ -169,7 +152,6 @@ div.widget.user-supporters .supporters ul li dl dt.date {
 
 div.widget.user-supporters .supporters ul li dl dd.date {
     position: absolute;
-    /*right: 8px;*/
     bottom: 0;
     margin-top: 5px;
     padding-left: 4px;
@@ -234,17 +216,6 @@ div.widget.user-supporters .supporters ul li dl dd.worthcracy ul li > strong {
     padding-top: 6px;
 }
 
-div.widget.user-supporters a.more  {
-    color: #58595b;
-    /*font-size: 12px !important;*/
-    text-transform: uppercase;
-    float: right;
-    clear: both;
-    text-decoration: none;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
 div.widget.user-supporters a:hover.more  {
     color: #20b3b2;
 }
@@ -254,17 +225,24 @@ div.widget.user-supporters a:hover.more  {
 ************************/
 div.widget.user-supporters .supporters > ul > li{
     float: left;
-    width: 106px;
-    /*height:90px;*/
     position: relative;
+    width: 106px;
+    padding-top: 4px;
     border-top: 1px dashed #c0c0c0;
     border-right: 1px dashed #c0c0c0;
+}
+div.widget.user-supporters .supporters > ul > li:nth-child(1n),
+div.widget.user-supporters .supporters > ul > li:nth-child(2n),
+div.widget.user-supporters .supporters > ul > li:nth-child(3n) {
+    border-top: none;
+}
+div.widget.user-supporters .supporters > ul > li:nth-child(3n+3) {
+    border-right: none;
 }
 div.widget.user-supporters .supporters > ul > li > div.supporter h4{padding-bottom:3px;border-bottom:#D5D5D6 1px solid;overflow:hidden;margin-bottom:6px}
 div.widget.user-supporters .supporters > ul > li > div.supporter h4 > a{
 max-height: 6px;max-width: 175px;overflow: hidden;}
 div.widget.user-supporters .supporters > ul > li .avatar{
-    /*left:6px;*/
     padding-top: 3px;
     width: auto;
     height: 44px;
@@ -290,4 +268,3 @@ div.widget.user-supporters .supporters > ul > li dl dt.projects {
     margin-right: 0;
 }
 div.widget.user-supporters .supporters ul li dl dd.worthcracy{margin-top:5px}
-/*div.widget.user-supporters .supporters ul li dl dd.date{top:55px}*/

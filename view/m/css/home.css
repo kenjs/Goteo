@@ -29,22 +29,9 @@ body.home div#main div.learn {
     position: relative;
 }
 
-/*body.home div#main div.widget.projects h2.title {
-	margin-left:-47px;
-}*/
 body.home div#main div.widget.projects h3.title{
 	margin-left:3px;
 }
-
-/*body.home div#main div.widget.projects{
-	padding:15px 0 0 30px;
-    padding-top: 15px;
-}*/
-
-/*body.home div#main div.widget.projects div.widget.project{
-	padding:0;
-	margin: 0 40px 42px 0;
-}*/
 
 body.home div#main div.learn ul.slderpag {
     margin: 8px 0 0 0;
@@ -90,7 +77,6 @@ body.home div#main div.learn a.prev {
 	float:left;
 	margin: 9px 0 0 0;
 	cursor:pointer;
-/*	display: inline-block; */
 }
 
 body.home div#main div.learn a.prev {
@@ -152,7 +138,6 @@ body.home div#main div.learn div.slder_container div.slder_slide div.post div.im
 
 body.home div#main div.projects {
     overflow: hidden;
-    /*margin-left: -3%;*/
     margin-bottom: 24px;
 }
 

@@ -23,8 +23,10 @@ use Goteo\Library\Text,
 //@NODESYS
 ?>
 
-<?php include 'view/header/lang.html.php' ?>
-
+<?php // include 'view/header/lang.html.php' ?>
+<?
+//var_dump($_SESSION);
+?>
 
 <div id="header" class="header">
     <h1><?php echo Text::get('regular-main-header'); ?></h1>

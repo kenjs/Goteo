@@ -82,7 +82,7 @@ echo new SuperForm(array(
             'value' => $personal->zipcode
         ),
 
-        'location' => array(
+/*        'location' => array(
             'type'  => 'textbox',
             'title' => Text::get('personal-field-location'),
             'size'  => 25,
@@ -98,7 +98,7 @@ echo new SuperForm(array(
             // 'hint'  => Text::get('tooltip-project-country'),
             'errors'    => !empty($errors['country']) ? array($errors['country']) : array(),
             'value' => $personal->country
-        ),
+        ),*/
 
     )
 

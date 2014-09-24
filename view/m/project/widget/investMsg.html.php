@@ -44,7 +44,7 @@ switch ($this['message']) {
         break;
     case 'confirm':
         $title   = Text::get('regular-hello') . " $name";
-        $message = Text::get('project-invest-confirm');
+//        $message = Text::get('project-invest-confirm');
         break;
     case 'continue':
         $title   = Text::get('regular-hello') . " $name";

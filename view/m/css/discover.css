@@ -21,17 +21,8 @@ body.discover div#main div.widget {
     padding-bottom: 20px;
 }
 
-/*body.discover div#main div.widget.projects div.widget.project.activable {
-    margin-bottom: 0;
-    border-bottom: 1px dashed #c0c0c0;
-}*/
-
 body.discover div#main div.widget.projects div.navi-bar {
     border-bottom: none;
-}
-
-body.discover div#main div.widget.projects {
-    /*background-color: #ffffff;*/
 }
 
 body.discover div#main div.searcher {
@@ -39,14 +30,10 @@ body.discover div#main div.searcher {
 	padding-bottom: 0;
     padding-left:0;
     padding-right:0;
-	/*border-bottom: 1px solid #d1d3d4;*/
 }
 
 /* Buscador */
 div.searcher form {
-	/*padding-left:75px !important;*/
-    /*width: 820px;*/
-    /*width: 960px;*/
     padding: 4px 8px;
 }
 
@@ -67,7 +54,6 @@ div.searcher form {
 .searcher #text-query {
     float: left;
     width: 65%;
-    /*margin-left: 16px;*/
     padding: 4px 5px 4px 10px;
 	color: #808184;
     font-size: 16px;
@@ -81,18 +67,7 @@ div.searcher form {
     right: 8px;
 }
 
-/*
-.searcher input[type="text"]:focus {
-	background-color:#e7e7e7 !important;
-    color: #656566 !important;
-}
-*/
-
 .searcher .filter{
-	/*float:left;*/
-	/*width:238px;
-    margin-right: 2px;*/
-	/*margin-right:35px;*/
 	position:relative;
     width: 260px;
     margin: 0 auto 8px;
@@ -110,7 +85,6 @@ div.searcher form {
 	text-transform: uppercase;
 	border-bottom: 1px solid #58595B;
 	font-size: 14px;
-	/*background:url('triangulo.png') right no-repeat #656566;*/
 }
 
 .searcher .filter select{
@@ -119,8 +93,6 @@ div.searcher form {
     height: 30px;
     font-size: 0.9em;
     background-color: #e7e7e7;
-	/*border-style: none;*/
-	/*padding-top: 10px;*/
 	margin: 0;
     margin-top: 10px;
     border: 1px solid #d1d3d4;
@@ -150,16 +122,7 @@ div.searcher form {
 }
 /* // Buscador */
 div.discover-group div.widget.project {
-    /*margin: 0px 0px 0px 25px;*/
     margin: 0 auto;
-}
-/*
-div.discover-group div.widget.project + div.widget.project {
-    margin-left: 30px;
-}
-*/
-div.discover-group {
-    /*display: none;*/
 }
 
 div.navi-bar ul.navi {
@@ -213,9 +176,6 @@ div.navi-bar {
 div.navi-bar a.all{
     text-decoration: none;
     text-transform: uppercase;
-/*    position:relative;
-    top: -20px;*/
-    /*right: -825px;*/
 }
 
 div.navi-bar a.all:hover{
@@ -236,12 +196,10 @@ div.discover-arrow-right {
 }
 
 div.discover-arrow-left {
-    /*float: left;*/
     display: none;
 }
 
 div.discover-arrow-right {
-    /*float: right;*/
     display: none;
 }
 
@@ -260,8 +218,6 @@ div.discover-arrow-right a.discover-arrow {
 div.discover-arrow-right a.discover-arrow:hover {
 	background: url('arrowslider-sprt.png') scroll no-repeat 0 -72px;
 }
-
-
 
 a.discover-arrow {
     display: inline-block;

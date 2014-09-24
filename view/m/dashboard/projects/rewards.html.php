@@ -81,8 +81,7 @@ switch ($order) {
 ?>
 <div class="widget gestrew">
     <div class="message">
-        ESTO ES UNA VISUALIZACIÓN DE LAS OPCIONES DE RETORNO QUE ELIGEN TUS COFINANCIADORES.<br />
-        NO TIENES QUE GESTIONAR ESOS RETORNOS HASTA HABER LLEGADO AL MÍNIMO DE LA CANTIDAD DESEADA
+        <?php echo Text::get('dashboard-rewards-notice'); ?>
     </div>
     <div class="rewards">
         <?php $num = 1; 
@@ -92,9 +91,9 @@ switch ($order) {
             	<div class="orden"><?php echo $num; ?></div>
                 <span class="aporte">Aportaciones de <span class="num"><?php echo $rewardData->amount; ?></span> <span class="euro">&nbsp;</span></span>
                 <span class="cofinanciadores">cofinanciadores <span class="num"><?php echo count($who); ?></span></span>
-                <div class="tiporec"><ul><li class="<?php echo $rewardData->icon; ?>"><?php echo Text::recorta($rewardData->reward, 40); ?></li></ul></div>
+                <div class="tiporec"><ul><li class="<?php echo $rewardData->icon; ?>"><?php echo Text::shorten($rewardData->reward, 40); ?></li></ul></div>
                 <div class="contenedorrecompensa">	
-                	<span class="recompensa"><strong style="color:#666;">Recompensa:</strong><br/> <?php echo Text::recorta($rewardData->description, 100); ?></span>
+                	<span class="recompensa"><strong style="color:#666;">Recompensa:</strong><br/> <?php echo Text::shorten($rewardData->description, 100); ?></span>
                 </div>
                 <a class="button green" onclick="msgto('<?php echo $rewardData->id; ?>')" >mensaje a ese grupo</a>
             </div>
@@ -178,7 +177,7 @@ switch ($order) {
                         <?php foreach ($investData->rewards as $reward) : ?>
                         <div style="width: 250px; overflow: hidden; height: 18px;" class="<?php echo $estilo;?>">
                         <input type="checkbox"  id="ful_reward-<?php echo $investId; ?>-<?php echo $reward->id; ?>" name="ful_reward-<?php echo $investId; ?>-<?php echo $reward->id; ?>" value="1" <?php if ($reward->fulfilled == 1) echo ' checked="checked" disabled';?>  />
-                        <label for="ful_reward-<?php echo $investId; ?>-<?php echo $reward->id; ?>"><?php echo Text::recorta($reward->reward, 40); ?></label>
+                        <label for="ful_reward-<?php echo $investId; ?>-<?php echo $reward->id; ?>"><?php echo Text::shorten($reward->reward, 40); ?></label>
                         </div>
                         <?php endforeach; ?>
 
@@ -228,7 +227,7 @@ switch ($order) {
                     Por retornos: <br />
                     <?php foreach ($rewards as $rewardId => $rewardData) : ?>
                         <input type="checkbox" id="msg_reward-<?php echo $rewardId; ?>" name="msg_reward-<?php echo $rewardId; ?>" value="1" />
-                        <label for="msg_reward-<?php echo $rewardId; ?>"><?php echo $rewardData->amount; ?> &yen; (<?php echo Text::recorta($rewardData->reward, 40); ?>)</label>
+                        <label for="msg_reward-<?php echo $rewardId; ?>"><?php echo $rewardData->amount; ?> &yen; (<?php echo Text::shorten($rewardData->reward, 40); ?>)</label>
                     <?php endforeach; ?>
 
                 </p>

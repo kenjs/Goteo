@@ -18,7 +18,9 @@
  *
  */
 
-use Goteo\Library\Text;
+use Goteo\Model\Project\Category,
+    Goteo\Model\Project\Skill,
+    Goteo\Library\Text;
 
 $project = $this['project'];
 
@@ -28,6 +30,9 @@ $project->about       = nl2br(Text::urlink($project->about));
 $project->motivation  = nl2br(Text::urlink($project->motivation));
 $project->goal        = nl2br(Text::urlink($project->goal));
 $project->related     = nl2br(Text::urlink($project->related));
+
+$categories = Category::getNames($project->id);
+$skills = Skill::getNames($project->id);
 
 $level = (int) $this['level'] ?: 3;
 ?>
@@ -43,8 +48,28 @@ $level = (int) $this['level'] ?: 3;
 			});
 		</script>
     <?php endif; ?>
+
 <div class="widget project-summary h_ttl">
     
     <h<?php echo $level ?>><?php echo htmlspecialchars($project->name) ?></h<?php echo $level ?>>
-        
+
+    <div class="project-subtitle"><?php echo htmlspecialchars($project->subtitle) ?></div>
+    <div class="wants-skills">
+        スキル: <?php
+        // スキル表示
+        if (!empty($skills)):
+            foreach( $skills as $_skill_id => $_skill_name):
+                ?>
+                <a href=""><?php echo $_skill_name ?></a>
+            <?
+            endforeach;
+        endif;
+        ?>
+    </div>
+    <div class="categories"><h3><?php echo Text::get('project-view-categories-title'); ?></h3>
+        <?php $sep = ''; foreach ($categories as $key=>$value) :
+            echo $sep.'<a href="/discover/results/'.$key.'">'.htmlspecialchars($value).'</a>';
+            $sep = ', '; endforeach; ?>
+    </div>
+
 </div>

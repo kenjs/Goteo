@@ -56,13 +56,14 @@
       <!--[if IE]>
       <link href="<?php echo SRC_URL ?>/view/m/css/ie.css" media="screen" rel="stylesheet" type="text/css" />
       <![endif]-->
-
+<?php /*
         <script type="text/javascript">
         if(navigator.userAgent.indexOf('Mac') != -1)
 		{
 			document.write ('<link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/m/css/mac.css" />');
 		}
 	    </script>
+*/ ?>
         <?php if (!isset($useJQuery) || !empty($useJQuery)): ?>
         <script type="text/javascript" src="<?php echo SRC_URL ?>/view/m/js/jquery-1.6.4.min.js"></script>
         <script type="text/javascript" src="<?php echo SRC_URL ?>/view/m/js/jquery.tipsy.min.js"></script>
@@ -74,10 +75,6 @@
 		  <!-- sliders -->
 		  <script type="text/javascript" src="<?php echo SRC_URL ?>/view/m/js/jquery.slides.min.js"></script>
 		  <!-- end sliders -->
-          <!-- fancybox-->
-		  <script type="text/javascript" src="<?php echo SRC_URL ?>/view/m/js/jquery.fancybox.min.js"></script>
-		  <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/m/css/fancybox/jquery.fancybox.min.css" media="screen" />
-          <!-- end custom fancybox-->
 
 		  <!-- vigilante de sesi�n -->
 		  <script type="text/javascript" src="<?php echo SITE_URL ?>/view/m/js/watchdog.js"></script>

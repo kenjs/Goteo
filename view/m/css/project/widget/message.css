@@ -35,7 +35,7 @@ div.project-message div#bocadillo{
 div.project-message button{
 	float:right;
 	margin-top: 6px;
-	margin-right: 24px;
+	/*margin-right: 8px;*/
 	margin-bottom: 0;
 	font-style: normal;
 	font-weight: normal;
@@ -43,13 +43,13 @@ div.project-message button{
 
 div.widget.project-message textarea {
 	clear: right;
-	position: relative;
-	left: -8px;
+	/*position: relative;
+	left: -8px;*/
 	display: block;
 	float: right;
 	width: 250px;
 	height: 50px;
-	margin: 8px 16px 0 0;
+	margin-top: 8px;
 	padding: 0.3em 0;
 	resize:none;
     background-color: #DCEEDF;
@@ -76,13 +76,4 @@ div.center.needs div.widget.project-message a.preview {
 div.widget.project-message .button {
     float: right;
     margin: 1em 0 0;
-}
-
-div.widget.project-message h3.title {
-	padding-left: 0;
-	margin: 0;
-	padding: 8px 0 8px 20px;
-	color: #f5f5f5;
-	background-color: #666666;
-	font-weight: normal;
 }

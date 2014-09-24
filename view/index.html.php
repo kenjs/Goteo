@@ -48,7 +48,6 @@ if (!empty($this['posts'])) {
     }
 }
 
-
 include 'view/prologue.html.php';
 include 'view/header.html.php';
 ?>

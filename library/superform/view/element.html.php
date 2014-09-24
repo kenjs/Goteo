@@ -47,13 +47,13 @@ $element = $this['element'];
     <?php endif ?>
 
     <?php
-    if (PC_VIEW):
+//    if (PC_VIEW):
         if (isset($element->hint)): ?>
         <div class="hint">
             <blockquote><?php echo $element->hint ?></blockquote>
     </div>
     <?php
-        endif;
+//        endif;
     endif ?>
     
 </div>

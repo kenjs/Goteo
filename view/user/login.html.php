@@ -167,7 +167,7 @@ jQuery(document).ready(function($) {
                 <form action="/user/register" method="post">
 
                     <div class="userid">
-                        <label for="RegisterUserid"><?php echo Text::get('login-register-userid-field'); ?></label>
+                        <label for="RegisterUserid"><?php echo Text::get('login-register-userid-field'); ?><br /><span class="tips"><?echo Text::get('login-register-userid-field-tips');?></span></label>
                         <input type="text" id="RegisterUserid" name="userid" value="<?php echo htmlspecialchars($userid) ?>" maxlength="15" />
                     <?php if(isset($errors['userid'])) { ?><em><?php echo $errors['userid']?></em><?php } ?>
                     </div>
@@ -185,20 +185,20 @@ jQuery(document).ready(function($) {
                     </div>
 
                     <div class="remail">
-                        <label for="RegisterREmail"><?php echo Text::get('login-register-confirm-field'); ?></label>
+                        <label for="RegisterREmail"><?php echo Text::get('login-register-confirm-field'); ?><br /><span class="tips"><?echo Text::get('login-register-confirm-field-tips');?></span></label>
                         <input type="text" id="RegisterREmail" name="remail" value="<?php echo htmlspecialchars($remail) ?>"/>
                     <?php if(isset($errors['remail'])) { ?><em><?php echo $errors['remail']?></em><?php } ?>
                     </div>
 
 
                     <div class="password">
-                        <label for="RegisterPassword"><?php echo Text::get('login-register-password-field'); ?></label> <?php if (strlen($password) < 6) echo '<em>'.Text::get('login-register-password-minlength').'</em>'; ?>
+                        <label for="RegisterPassword"><?php echo Text::get('login-register-password-field'); ?><br /><span class="tips"><?echo Text::get('login-register-password-field-tips');?></span></label> <?php if (strlen($password) < 6) echo '<em>'.Text::get('login-register-password-minlength').'</em>'; ?>
                         <input type="password" id="RegisterPassword" name="password" value="<?php echo htmlspecialchars($password) ?>"/>
                     <?php if(isset($errors['password'])) { ?><em><?php echo $errors['password']?></em><?php } ?>
                     </div>
 
                      <div class="rpassword">
-                        <label for="RegisterRPassword"><?php echo Text::get('login-register-confirm_password-field'); ?></label>
+                        <label for="RegisterRPassword"><?php echo Text::get('login-register-confirm_password-field'); ?><br /><span class="tips"><?echo Text::get('login-register-confirm_password-field-tips');?></span></label>
                         <input type="password" id="RegisterRPassword" name="rpassword" value="<?php echo htmlspecialchars($rpassword) ?>"/>
                     <?php if(isset($errors['rpassword'])) { ?><em><?php echo $errors['rpassword']?></em><?php } ?>
                     </div>

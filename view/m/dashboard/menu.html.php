@@ -19,11 +19,10 @@
  */
 ?>
 <div id="dashboard-menu">
-    <?// var_dump($this['menu']); ?>
     <?php foreach ($this['menu'] as $section=>$item) : ?>
     <? if($section == 'profile'): ?>
             <div class="viewport_dashboard">
-                <ul class="flipsnap_dashboard">
+                <ul class="flipsnap_dashboard flipsnap">
                 <?php foreach ($item['options'] as $option=>$label) : ?>
                     <li class="option<?php if ($section == $this['section'] && $option == $this['option']) echo ' current'; ?>">
                         <? if ($option != 'public'): ?>

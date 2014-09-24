@@ -26,11 +26,24 @@
 @import url('base.css');
 @import url('home.css');
 @import url('superform.css');
-@import url('admin.css');
-@import url('dashboard.css');
-@import url('review.css');
-@import url('project.css');
-@import url('user.css');
+/*admin*/
+@import url('admin/view.css');
+
+/*dashboard*/
+@import url('dashboard/view.css');
+
+/*review*/
+@import url('review/view.css');
+
+/*project*/
+@import url('project/view.css');
+/*@import url('project/edit.css');*/
+
+/*user*/
+@import url('user/login.css');
+@import url('user/register.css');
+@import url('user/profile.css');
+
 @import url('glossary.css');
 @import url('faq.css');
 @import url('blog.css');
@@ -40,11 +53,17 @@
 @import url('about.css');
 @import url('feed.css');
 
+/*meter*/
+@import url('meter.css');
+
+
+div#sub-header {
+    margin-bottom: 1px;
+}
+
 div#sub-header > div,
 div#sub-header-secondary > div {
     display: block;
-    /*max-width: 960px;*/
-    /*margin: 0 auto;*/
 }
 
 div#sub-header > div > h2 {
@@ -54,9 +73,6 @@ div#sub-header > div > h2 {
 
 /* Main container */
 div#main {
-    /*width: 960px;
-    margin: 10px auto;*/
-    /*padding: 4px;*/
     clear: both;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -68,22 +84,16 @@ div#main {
  * Widgets
  */
 
-div.widget {
-    /*background-color: white;*/
-    /*padding: 15px 20px;*/
-    /*overflow: hidden;*/
-}
-
 div.center.home div.widget,
-div.center.supporters div.widget,
 div.center.profile div.widget {
     margin-bottom: 0!important;
     border-bottom: 1px dashed #c0c0c0;
 }
-
+div.center.supporters div.widget {
+    margin-bottom: 0!important;
+}
 body.user-profile div#main div.center div.widget.user-mates {
     margin-bottom: 0!important;
-    /*padding-bottom: 10px;*/
 }
 
 div.center div.widget:last-child,
@@ -99,23 +109,14 @@ div.widget .supertitle {
     margin: 0;
     padding: .5em 2px ;
     border-bottom: 1px solid #21b0b0;
-    /*margin-bottom: 1em;*/
     font-size: 18px;
     background-color: #21b0b0;
     color: #f5f5f5;
     padding-left: 8px;
 }
 
-div.widget .title{
-    font-size: 18px;
-    font-weight: bold;
-    /*padding: 0 0 0 24px;*/
-    padding-left: 6px;
-    /*margin: 0 0 .8em -20px;*/
-    text-decoration: none;
-    /*background: url("arrowH2-section.gif") no-repeat -5px -16px;*/
-}
-
+/* heading tag */
+div.widget.project-needs h4,
 div.widget h3.title {
     margin: 0;
     padding: 8px 0 8px 20px;
@@ -123,11 +124,36 @@ div.widget h3.title {
     background-color: #666666;
     font-weight: normal;
 }
-
+div.widget .title{
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 6px;
+    text-decoration: none;
+}
 div.side div.widget h3.title,
 div.side div.widget h4.title{
     padding-left: 0;
 }
+
+/*more link*/
+div.widget a.more {
+    float: none;
+    display: block;
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+body.user-profile div.side div.widget.user-supporters a.more,
+body.user-profile div.widget.user-mates a.more,
+div.center div.widget.user-mates a.more {
+    border-top: 1px dashed #c0c0c0;
+}
+body.user-profile div.side div.widget.user-supporters a.more {
+    clear: both;
+}
+
 
 /**
  * User profile 
@@ -145,7 +171,6 @@ body.user-profile div#sub-header h2 img {
     position: absolute;
     width: 55px;
     height: 55px;
-    /*    border: 1px solid #e2e2e2; */
     left: 0;
 }
 
@@ -192,9 +217,7 @@ div.side div.widget.project-rewards ul li {
 }
 div.side div.widget.project-collaborations ul li strong,
 div.side div.widget.project-rewards h4.name {
-    /*height: 40px;*/
     padding-left: 42px;
-    /*line-height: 40px;*/
     min-height: 33px;
 }
 div.side div.widget.project-collaborations ul li strong {
@@ -209,3 +232,4 @@ body.project-embed > div#wrapper > div.alone-project > div.widget.project{width:
 body.project-embed > div#wrapper > div.alone-project > div.widget.project a.expand{position:absolute;top:0;bottom:0;width:100%;z-index:100}
 body.project-embed > div#wrapper > div.alone-project > div.widget.project.active{background-color:#F8F8F8 !important;}
 div.alone-project > div.widget.project > div.buttons > a.button{padding: 0.6em 1em}
+

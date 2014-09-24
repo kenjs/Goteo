@@ -35,7 +35,6 @@ body.community div#main div.widget {
     border: none;
 }
 
-
 body.user-profile div#sub-header {
     margin-bottom: 0;
 }
@@ -64,7 +63,7 @@ body.user-profile div#main div.widget.user-worthcracy h3.title {
     font-size: 18px;
     font-weight: normal;
     text-align: center!important;
-    background-color: #666666;
+    background-color: #669900;
 } 
 
 body.user-profile div#main .widget.user.collapsable h3.supertitle {
@@ -212,19 +211,8 @@ body.user-profile div.side .widget.user.collapsable .project-widget-box dl dd.pr
 
 
 
-/*body.user-profile div#main > div.center,*/
-body.community div#main > div.center {
-    /*width: 620px;
-    float: left;*/
-}
 body.user-profile div#main > div.center {
     padding-bottom: 16px;
-}
-
-body.user-profile div#main > div.side,
-body.community div#main > div.side {
-    /*float: right;
-    width: 330px;*/
 }
 
 /* Detalle de la linea azul*/
@@ -239,11 +227,19 @@ div.widget.user-supporters h3.supertitle {
     margin: 0;
     font-size: 18px;
     font-weight: normal;
-    /*text-align: center*/
 }
 
-div.widget.user-mates div.users h3.supertitle{border-top: 1px solid #808285;border-bottom: 1px solid #20B3B2;padding:5px 0 5px 5px;color:#20B3B2;font-size:12px;background:none;}
-
+div.widget.user-mates div.users h3.supertitle{
+    margin: 0;
+    padding: 4px 0 4px 20px;
+    background-color: #666666;
+    color: #f5f5f5;
+    font-size: 14px;
+    font-weight: normal;
+    border: none;
+    height: auto;
+    line-height: normal;
+}
 
 body.user-profile div#main div.discover-group div.widget.project {
     margin: 0;
@@ -254,35 +250,28 @@ body.user-profile div.side div.widget.user-supporters {
     background-color: #fff;
 }
 
-body.user-profile div.side div.widget.user-supporters div.project-widget-box {
-    padding: 10px 0;
-    /*border-bottom: 1px dashed #c0c0c0;*/
-}
-
-body.user-profile div.side div.widget.user-supporters a.more {
-    float: none;
-    display: block;
-    background-color: #fff;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    border-top: 1px dashed #c0c0c0;
-}
-
 /* mates que sale en la parte central
 ***********************************************/
-div.center div.widget.user-mates .users ul{
+div.center div.widget.user-mates .users ul > li,
+body.user-profile div.widget.user-mates div.project-widget-box .users ul > li {
+    width: 152px!important;
     border-top: 1px dashed #c0c0c0;
 }
-div.center div.widget.user-mates .users ul > li{
-    width: 152px!important;
-    border-bottom: 1px dashed #c0c0c0;
+div.center div.widget.user-mates .users ul > li:nth-child(1n),
+div.center div.widget.user-mates .users ul > li:nth-child(2n),
+div.center div.widget.user-mates .users ul > li:nth-child(3n),
+body.user-profile div.widget.user-mates div.project-widget-box .users ul > li:nth-child(1n),
+body.user-profile div.widget.user-mates div.project-widget-box .users ul > li:nth-child(2n),
+body.user-profile div.widget.user-mates div.project-widget-box .users ul > li:nth-child(3n) {
+    border-top: none;
 }
-div.center div.widget.user-mates .users ul > li:nth-child(odd) {
+div.center div.widget.user-mates .users ul > li:nth-child(odd),
+body.user-profile div.widget.user-mates div.project-widget-box .users ul > li:nth-child(odd) {
     width: 151px!important;
     border-right: 1px dashed #c0c0c0;
 }
-div.center div.widget.user-mates .users ul > li:last-child {
+div.center div.widget.user-mates .users ul > li:last-child,
+body.user-profile div.widget.user-mates div.project-widget-box .users ul > li:last-child {
     border-bottom: none;
 }
 div.center div.widget.user-mates .users ul > li h4{
@@ -294,8 +283,6 @@ div.center div.widget.user-mates .users ul > li span.projects,div.center div.wid
 	margin-right:15px;
 }
 
-/*div.center div.widget.user-mates .users ul > li span.invests,
-div.center div.widget.user-mates .users ul > li span.projects,*/
 div.center div.widget.user-mates .users ul > li span.profile,
 div.center div.widget.user-mates .users ul > li span.contact {
 	display:block;
@@ -328,8 +315,7 @@ div.center div.widget.user-mates .users ul > li span.contact a:hover{
 }
 
 
-/* lista de categor�as */
-div.center > div.widget.categorylist{padding-bottom:12px;}
+/* category list */
 div.center > div.widget.categorylist ul{list-style:none;display:inline-block;margin:0;padding-left:0;}
 div.center > div.widget.categorylist ul li{display:inline-block;margin-left:0;padding-left:0;}
 div.center > div.widget.categorylist ul li a{text-decoration:none;
@@ -338,8 +324,6 @@ div.center > div.widget.categorylist ul li a.active,
 div.center > div.widget.categorylist ul li a:hover{color:#19B4B2}
 
 div.center > div.widget.categorylist > h3.title{
-    /*font-size: 19px;font-weight: bold;margin: 0 0 1em -20px;padding-left: 20px;*/
-
     height: 40px;
     margin: 0;
     padding: 0;
@@ -348,7 +332,7 @@ div.center > div.widget.categorylist > h3.title{
     line-height: 40px;
     color: #ffffff;
     font-weight: normal;
-    background-color: #666666;
+    background-color: #19B4B2;
 }
 div.center > div.widget.categorylist > div.filters{border-bottom: 1px solid #D5D5D6;border-top: 1px solid #D5D5D6;padding: 5px;}
 	div.center > div.widget.categorylist > div.filters > span{font-size:12px;}
@@ -359,19 +343,25 @@ div.center > div.widget.categorylist > div.filters{border-bottom: 1px solid #D5D
 	div.center > div.widget.categorylist > div.filters > ul > li > a.active{background:url('/view/css/user/blue-triangle-down.png') no-repeat left;}
 
 div.center > div.widget.categorylist > div.list{
+    padding-left: 20px;
+    line-height: 27px;
+    background-color: #e5e5e5;
 }
-	div.center > div.widget.categorylist > div.list > ul{}
-	div.center > div.widget.categorylist > div.list > ul > li{margin-right:0.5em;
-	margin-bottom: 0.5em;
+div.center > div.widget.categorylist > div.list > ul{}
+div.center > div.widget.categorylist > div.list > ul > li{
+    margin-right:0.5em;
 }
-	div.center > div.widget.categorylist > div.list > ul > li > a{text-transform:uppercase;font-size:12px;}
+div.center > div.widget.categorylist > div.list > ul > li > a{text-transform:uppercase;font-size:12px;}
 
-/* detalle de categor�as (encabezado de categor�a)*/
-div.center > div.widget.user-mates > h3.title{padding: 9px 0 7px 5px;font-size: 12px;font-weight: normal; background:none; border-bottom: 1px solid #908499;border-top: 1px solid #808285;color: #20B3B2;font-size: 12px;
+/* category detail (category header)*/
+div.center > div.widget.user-mates > h3.title{
+    padding: 4px 0 4px 20px;
+    font-size: 14px;
+    font-weight: normal;
+    background-color: #666666;
+    color: #f5f5f5;
 	margin: 0;
 }
-
-
 
 div.center div.widget.user-message{overflow:hidden;position:relative;z-index:99;}
 div.center div.widget.user-message form {padding: 8px;}
@@ -393,59 +383,4 @@ div.center div.widget.user-message button{float:right;margin-right:8px;}
 body.user-profile div#main div.discover-group div.widget.project {
     margin: 0 auto 0px !important;
     border: none;
-}
-
-body.user-profile div.widget.project div.meter dl dd.optimum {
-    font-size: 12px;
-    font-weight: normal;
-    position: relative;
-    top: -20px;
-    padding: 44px 0 0 20px;
-    left: 110px;
-    width: 70px;
-    height: 50px;
-    border-left: 1px solid #eee;
-}
-
-body.user-profile div.widget.project div.meter dl dt.optimum {
-    position: absolute;
-    top: 0;
-    left: 130px;
-    width: 70px;
-}
-
-body.user-profile div.widget.project div.meter dl dt.minimum {
-    position: absolute;
-    top: 0px;
-    left: 26px;
-    color: #cc6600;
-}
-
-body.user-profile div.widget.project div.meter dl dd.minimum {
-    position: relative;
-    font-size: 12px;
-    top: -70px;
-    left: 26px;
-    color: #cc6600;
-
-}
-
-body.user-profile div.widget.project div.meter dl dt.days {
-    font-size: 12px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 70px;
-}
-
-body.user-profile div.widget.project div.meter dl dd.days {
-    position: absolute;
-    top: -20px;
-    right: 0px;
-    font-size: 12px;
-    width: 70px;
-    height: 50px;
-    padding: 44px 0 0 25px;
-    border-left: 1px solid #eee;
-
 }

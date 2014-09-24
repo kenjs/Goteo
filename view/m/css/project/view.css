@@ -263,6 +263,16 @@ body.project-show div#main > div.center > div.widget {
     background-color: #fff;
 }
 
+body.project-show div#main > div.center > div.widget.project-invest.method input#paymethod {
+    width: 145px;
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+
+body.project-show div#main > div.center > div.widget.project-invest form {
+    padding: 24px 0 24px 8px;
+}
+
 body.project-show div#main div.center div.widget.project-support,
 body.project-show div#main div.center div.widget.project-support div.widget{
     border-bottom: none!important;
@@ -373,14 +383,15 @@ div#project-investors .project-widget-box,
 div#project-collaborations .project-widget-box,
 div.widget.user .project-widget-box,
 div.widget.project-investors .project-widget-box,
-div.widget.user-mates .project-widget-box,
 div.widget.user-supporters .project-widget-box
 div.widget.project-needs .project-widget-box
 {
     padding: 15px 20px;
 }
 
+div.widget.user-mates .project-widget-box {
 
+}
 div#project-collaborations .project-widget-box,
 div#project-support .project-widget-box,
 div.widget.project-investors .project-widget-box {

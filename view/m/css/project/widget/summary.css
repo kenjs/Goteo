@@ -47,14 +47,41 @@ div.widget.project-summary h8 {
 }
 
 /* for project-home h3 */
-body.project-show div#main div.center.home div.widget.project-summary.h_ttl {
-    padding-top: 20px;
-    padding-bottom: 0;
+body.project-show div#main div.center div.widget.project-summary.h_ttl {
+    padding: 20px 16px 20px;
     border-bottom: none;
 }
-body.project-show div#main div.center.home div.widget.project-summary.h_ttl h3 {
-    margin-bottom: 0;
+body.project-show div#main div.center div.widget.project-summary.h_ttl h3 {
+    margin: 0;
 }
+body.project-show div#main div.center div.widget.project-summary.h_ttl .project-subtitle,
+body.project-show div#main div.center div.widget.project-summary.h_ttl .wants-skills,
+body.project-show div#main div.center div.widget.project-summary.h_ttl .wants-skills a,
+body.project-show div#main div.center div.widget.project-summary.h_ttl .categories > h3,
+body.project-show div#main div.center div.widget.project-summary.h_ttl .categories > a {
+    font-size: 11px;
+}
+body.project-show div#main div.center div.widget.project-summary.h_ttl .project-subtitle {
+    margin-bottom: 24px;
+}
+body.project-show div#main div.center div.widget.project-summary.h_ttl .wants-skills {
+    margin-bottom: 8px;
+}
+body.project-show div#main div.center div.widget.project-summary.h_ttl .categories {
+    font-weight: normal;
+    color: #20B3B2;
+    margin: 0;
+}
+
+body.project-show div#main div.center div.widget.project-summary.h_ttl .categories a {
+    color: #58595B;
+    text-decoration: none;
+}
+
+body.project-show div#main div.center div.widget.project-summary.h_ttl .categories a:hover {
+    color: #20B3B2;
+}
+
 
 
 div.widget.project-summary > div {
@@ -63,7 +90,8 @@ div.widget.project-summary > div {
     /*padding: 0 10px;*/
 }
 
-div.widget.project-summary div.prjct-gallery-container {
+div.widget.project-summary div.prjct-gallery-container,
+div.center div#prjct-gallery-container {
 	/*width:100%;*/
 	height:210px;
 	display:none;
@@ -91,18 +119,21 @@ div.widget.project-summary div.related h4 {
 }
 
 
-div.widget.project-summary div.prjct-gallery-container div.gallery-image {
+div.widget.project-summary div.prjct-gallery-container div.gallery-image,
+div.center div.prjct-gallery-container div.gallery-image {
     text-align: center;
-	/*width:580px;
-	height:380px;*/
+	width:320px;
+	height:240px;
 	display:block;
 }
 
-div.widget.project-summary div#prjct-gallery  {
+div.widget.project-summary div#prjct-gallery,
+div.center div#prjct-gallery {
 	float:left;
 }
 
-div.widget.project-summary div#prjct-gallery  ul.slderpag {
+div.widget.project-summary div#prjct-gallery  ul.slderpag,
+div.center div#prjct-gallery  ul.slderpag {
     margin: 8px 0 0 0;
 	list-style:none;
 	padding:0px;
@@ -110,7 +141,8 @@ div.widget.project-summary div#prjct-gallery  ul.slderpag {
 	height:auto;
 }
 
-div.widget.project-summary div#prjct-gallery  ul.slderpag li {
+div.widget.project-summary div#prjct-gallery  ul.slderpag li,
+div.center div#prjct-gallery  ul.slderpag li {
     cursor:pointer;
     display: block;
     float: left;
@@ -118,7 +150,8 @@ div.widget.project-summary div#prjct-gallery  ul.slderpag li {
 	margin: 0px 4px 5px 4px;
 }
 
-div.widget.project-summary div#prjct-gallery  ul.slderpag li a {
+div.widget.project-summary div#prjct-gallery  ul.slderpag li a,
+div.center div#prjct-gallery  ul.slderpag li a {
     width: 12px;
     height: 12px;
     margin-top: 2px;
@@ -127,18 +160,22 @@ div.widget.project-summary div#prjct-gallery  ul.slderpag li a {
 	display:block;
 }
 
-div.widget.project-summary div#prjct-gallery  ul.slderpag li a:hover {
+div.widget.project-summary div#prjct-gallery  ul.slderpag li a:hover,
+div.center div#prjct-gallery  ul.slderpag li a:hover {
     background-color: #20b3b2;
     color: #20b3b2;
 }
 
-div.widget.project-summary div#prjct-gallery  ul.slderpag li.current a {
+div.widget.project-summary div#prjct-gallery  ul.slderpag li.current a,
+div.center div#prjct-gallery  ul.slderpag li.current a {
     background-color: #808184 !important;
     color: #808184 !important;
 }
 
 div.widget.project-summary div#prjct-gallery  a.next,
-div.widget.project-summary div#prjct-gallery  a.prev {
+div.widget.project-summary div#prjct-gallery  a.prev,
+div.center div#prjct-gallery a.next,
+div.center div#prjct-gallery a.prev {
     width: 16px;
     height: 16px;
 	line-height: 2000px;
@@ -149,24 +186,29 @@ div.widget.project-summary div#prjct-gallery  a.prev {
 /*	display: inline-block; */
 }
 
-div.widget.project-summary div#prjct-gallery  a.prev {
+div.widget.project-summary div#prjct-gallery  a.prev,
+div.center div#prjct-gallery a.prev {
 	background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 0;
 }
 
-div.widget.project-summary div#prjct-gallery  a.prev:hover {
+div.widget.project-summary div#prjct-gallery  a.prev:hover,
+div.center div#prjct-gallery a.hover {
 	background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -32px;
 }
 
-div.widget.project-summary div#prjct-gallery  a.next{
+div.widget.project-summary div#prjct-gallery  a.next,
+div.center div#prjct-gallery a.next {
 	display: block;
     margin: 0;
 }
 
-div.widget.project-summary div#prjct-gallery  a.next{
+div.widget.project-summary div#prjct-gallery  a.next,
+div.center div#prjct-gallery a.next{
     background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -16px;
 }
 
-div.widget.project-summary div#prjct-gallery  a.next:hover {
+div.widget.project-summary div#prjct-gallery  a.next:hover,
+div.center div#prjct-gallery a.next:hover {
 	background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -48px;
 }
 

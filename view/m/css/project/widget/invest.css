@@ -50,7 +50,7 @@ div.widget.project-invest > div {
 
 div.invest-message {
     background-color: #cce7e8 !important;
-    min-height: 70px;
+    min-height: 80px;
     background: url("/view/css/project/view/invest/message_beak.png") no-repeat left bottom;
 }
 
@@ -65,6 +65,7 @@ div.invest-message h2 span {
 div.invest-message img{
     float: left;
     margin-right: 20px;
+    padding: 6px 8px;
 }
 
 div.invest-message span.message {
@@ -78,14 +79,17 @@ div.invest-message span.message {
 div.widget.project-invest h3.beak {
     background-color: #cce7e8 !important;
     /*padding: 20px 0px 30px 20px;*/
-    padding: 20px 20px 40px 20px;
+    padding: 10px 20px 30px 20px;
     background: url("/view/css/project/view/invest/header_beak.png") no-repeat left bottom;
-    font-size: 1em !important;
+    font-size: 16px !important;
     text-transform: uppercase !important;
 }
 
 div.widget.project-invest.address table {
     width: 100%;
+}
+div.widget.project-invest.address table td {
+    width: 130px;
 }
 div.widget.project-invest.address table tr td label {
     text-align: right;
@@ -97,17 +101,17 @@ div.widget.project-invest #amount {
     /*color: #96238F;*/
     color: #990033;
     padding-left: 40px;
-    width: 150px;
+    width: 130px;
     height: 24px;
     font-size: 24px;
     font-weight: bold;
-    margin-right: 20px;
+    margin-right: 8px;
     line-height: 40px;
 }
-div.widget.project-invest #fullname,
-div.widget.project-invest #address {
-    width: 266px;
-}
+/*div.widget.project-invest #fullname,*/
+/*div.widget.project-invest #address {*/
+    /*width: 266px;*/
+/*}*/
 div.widget.project-invest #nif, 
 div.widget.project-invest #zipcode {
     width: 100px;
@@ -194,6 +198,14 @@ div.widget.project-invest div.individual ul li label.amount h8 {
 	font-weight: normal;
 	font-size: 13px;
 }
+
+body.project-show div.widget.project-invest div.individual ul li resign,
+body.project-show div.widget.project-invest div.individual ul li label h5 {
+    font-weight: bolder;
+    font-size: 16px;
+    color: #333333;
+}
+
 
 div.widget.project-invest div.individual ul li input[type="checkbox"] {
 	opacity: 0;

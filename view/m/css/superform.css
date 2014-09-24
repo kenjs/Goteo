@@ -118,7 +118,7 @@ div.superform > div.hint blockquote {
 }
 
 body.js div.superform > div.hint blockquote {
-    margin-right: 250px;
+    /*margin-right: 250px;*/
 }
 
 div.superform > div.hint blockquote p {
@@ -194,8 +194,8 @@ div.superform li.element > * + div.contents p {
 }
 
 body.js div.superform > div.elements > ol > li.element {
-    margin-right: 251px;
-    border-right: 1px dashed #b7c2c5;
+    /*margin-right: 251px;*/
+    /*border-right: 1px dashed #b7c2c5;*/
 }
 
 body.js div.superform > div.elements > ol > li.element div.contents {
@@ -433,7 +433,7 @@ div.superform div.elements > ol > li.element.checkboxes.cols_2 > div.contents > 
 div.superform div.elements > ol > li.element.checkboxescustom.cols_2 > div.contents > ul > li,
 div.superform div.elements > ol > li.element.radios.cols_2 > div.contents > ul > li,
 div.superform div.elements > ol > li.element.slider.cols_2 > div.contents > ul > li {
-    width: 49.8%;
+    width: 49.5%;
     float:left;
 }
 
@@ -489,7 +489,7 @@ div.superform div.elements > ol > li.element.radio {
 /* Feedback */
 div.superform li.element > div.feedback {
     /*margin-top: 1em;*/
-    margin-top: 0.2em;
+    /*margin-top: 0.2em;*/
     font-size: 14px;
     z-index: 999;    
     padding-top: 12px;    
@@ -499,20 +499,26 @@ div.superform li.element > div.feedback {
 
 body.js div.superform li.element > div.feedback  {
     /* Javascript-enabled */
+/*
     right: -250px;
     top: -.5em;
     width: 250px;
     padding-left: 13px;
+*/
     display: none;
     position: absolute;
+/*
     background: transparent url('superform/tooltip/beak/cyan/w.png') no-repeat 0 1em;
     padding-top: 0;
+*/
 }
 
 body.js div.superform div.children > div.elements > ol > li.element > div.feedback {
+/*
     left: 100%;
     margin-left: 1em;
     margin-top: 0;
+*/
 }
 
 div.superform li.element > div.feedback > div {
@@ -679,10 +685,13 @@ body.dashboard.project-edit div#main.profile div.superform .footer {
 
 div.superform input.next,
 div.superform input.confirm,
-div.superform input.retry {
+div.superform input.retry,
+div.superform input.save
+{
     /*padding: 0.6em 1.6em;*/
     font-size: 15px;
-    width: 100%;
+    /*width: 100%;*/
+    width:285px;
 }
 
 body.project-edit div.preview div.superform input.confirm,
@@ -697,15 +706,15 @@ div.superform div.hint blockquote {
     /*padding-left: 20px;*/
 }
 
-body.project-edit div.superform ol li.element div.contents input {
-    width: auto;
-    height: auto;
-    font-size: 12px;
-    line-height: 16px;
-    font-weight: normal;
+/*body.project-edit div.superform ol li.element div.contents input {*/
+    /*width: auto;*/
+    /*height: auto;*/
+    /*font-size: 12px;*/
+    /*line-height: 16px;*/
+    /*font-weight: normal;*/
     /*padding: 0.3em 1.2em ;*/
-    margin-top: 10px;
-}
+    /*margin-top: 10px;*/
+/*}*/
 
 body.project-edit div.superform ol li.element div.contents input.inline.ok {
     padding: 0.3em 1.2em ;

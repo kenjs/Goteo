@@ -142,11 +142,3 @@ div.widget.project-schedule table tbody td span {
     height: 5em;
     overflow: hidden;
 }
-
-div.widget.project-schedule h3.title {
-    margin: 0;
-    padding: 8px 0 8px 20px;
-    color: #f5f5f5;
-    background-color: #666666;
-    font-weight: normal;
-}

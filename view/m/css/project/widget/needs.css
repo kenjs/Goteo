@@ -19,14 +19,14 @@
 body.project-show div#main.threecols {
     padding: 0;
 }
-div.widget.project-needs h4,
+/*div.widget.project-needs h4,
 div.widget.project-needs h3.title {
     margin: 0;
     padding: 8px 0 8px 20px;
     color: #f5f5f5;
     background-color: #666666;
     font-weight: normal;
-}
+}*/
 
 div.widget.project-needs {
     padding-left: 0;
@@ -53,7 +53,8 @@ div.widget.project-needs p.click span.text {
 }
 
 div.widget.project-needs .summary {
-    width: 386px;
+    width: 250px;
+    /*width: 386px;*/
     padding-left: 16px;
     font-size: 18px;
     font-weight: bold;
@@ -156,8 +157,8 @@ div.widget.project-needs .lend h5.summary {
 }
 
 div.widget.project-needs div#legend{
-    height: 40px;
-    line-height: 40px;
+    height: 70px;
+    line-height: 70px;
     background-color: #ffffff;
 }
 div.widget.project-needs div#legend div.min,

@@ -18,7 +18,6 @@
  */
 /* Detalle de la linea verde */
 div.widget.project-collaborations h4.supertitle {
-    /*border-bottom: 1px solid #00B25A !important;*/
     background-color: #33cc99;
 }
 
@@ -37,9 +36,6 @@ div.widget.project-collaborations ul li {
     background: none no-repeat left 5px;
     min-height: 32px;
     line-height: 32px;
-    /*border-bottom: 1px solid #00b25a;*/
-    /*margin-bottom: 1em;*/
-	/*padding-bottom: 10px;*/
 }
 
 div.widget.project-collaborations ul li > p {
@@ -57,32 +53,6 @@ div.widget.project-collaborations ul li.lend {
 div.widget.project-collaborations ul li {
     background-position: left top;
 }
-
-div.widget.project-collaborations a.more {
-    display: block;
-    background-color: #fff;
-    padding: 10px;
-    text-decoration: none;
-    text-align: center;
-}
-
-/*div.side div.widget a.more {
-    top: 0;
-    padding: 0;
-    line-height: 38px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}*/
-
-
-/*div.widget.project-support div.buttons {
-    padding: 1em 0 0;
-    clear: both;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-}*/
 
 div.widget.project-collaborations a.button {
     display: block;

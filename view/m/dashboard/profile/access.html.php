@@ -66,20 +66,20 @@ echo new SuperForm(array(
         'data' => array(
             'type'  => 'html',
             'title' => Text::get('dashboard-menu-profile-access'),
-            'hint'  => Text::get('tooltip-dashboard-user-access_data'),
+//            'hint'  => Text::get('tooltip-dashboard-user-access_data'),
             'html'  => '<strong>'.Text::get('login-access-username-field').': </strong>'.$user->id.'<br /><strong>'.Text::get('login-register-email-field').': </strong>'.$user->email
         ),
 
         'change_email' => array(
             'type'      => 'group',
             'title'     => Text::get('user-changeemail-title'),
-            'hint'      => Text::get('tooltip-dashboard-user-change_email'),
+//            'hint'      => Text::get('tooltip-dashboard-user-change_email'),
             'children'  => array(
                 'user_nemail' => array(
                     'type'  => 'textbox',
                     'class' => 'inline',
                     'title' => Text::get('login-register-email-field'),
-                    'hint'  => Text::get('tooltip-dashboard-user-new_email'),
+//                    'hint'  => Text::get('tooltip-dashboard-user-new_email'),
                     'errors'=> !empty($errors['email']) ? array($errors['email']) : array(),
                     'value' => $user_nemail
                 ),
@@ -103,7 +103,7 @@ echo new SuperForm(array(
         'change_password' => array(
             'type'      => 'group',
             'title'     => Text::get('user-changepass-title'),
-            'hint'      => Text::get('tooltip-dashboard-user-change_password'),
+//            'hint'      => Text::get('tooltip-dashboard-user-change_password'),
             'children'  => array(
                 /* Ya no requerimos la pasword actual.
                 'user_password' => $old_pass ,
@@ -137,10 +137,6 @@ echo new SuperForm(array(
 
             )
         ),
-
-
-
-
     )
 
 ));
@@ -149,4 +145,6 @@ echo new SuperForm(array(
 
 </form>
 <hr />
-<a class="button red" href="<?php echo SITE_URL ?>/user/leave?email=<?php echo $user->email ?>"><?php echo Text::get('login-leave-header'); ?></a>
+<div style="margin-left:20px;">
+    <a class="button red" href="<?php echo SITE_URL ?>/user/leave?email=<?php echo $user->email ?>"><?php echo Text::get('login-leave-header'); ?></a>
+</div>

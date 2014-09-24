@@ -104,7 +104,7 @@ $config = array('locale' => array(
 ));
 
 // set Lang
-Lang::set();
+Lang::set("ja");
 // change current locale
 $locale_name = Lang::locale();
 $locale = new Locale($config['locale']);

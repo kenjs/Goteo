@@ -21,11 +21,13 @@
 use Goteo\Core\View,
     Goteo\Library\Text;
 
+$user = $_SESSION['user'];
+
 $bodyClass = 'user-login';
 // para que el prologue ponga el c�digo js para bot�n facebook en el bannerside
 $fbCode = Text::widget(Text::get('social-account-facebook'), 'fb');
-include 'view/prologue.html.php';
-include 'view/header.html.php';
+include 'view/m/prologue.html.php';
+include 'view/m/header.html.php';
 
 $error = $this['error'];
 $message = $this['message'];
@@ -34,6 +36,7 @@ if (!isset($_POST['email']) && isset($_GET['email'])) {
     $email = $_GET['email'];
 }
 ?>
+<?php /*
 <div id="sub-header">
 	<div class="clearfix">
 		<div class="subhead-banner">
@@ -42,6 +45,14 @@ if (!isset($_POST['email']) && isset($_GET['email'])) {
 		<div class="mod-pojctopen"><?php echo Text::html('open-banner-header', $fbCode); ?></div>
 	</div>
 </div>
+*/ ?>
+    <div id="sub-header">
+        <div class="dashboard-header">
+            <a href="/user/<?php echo $user->id; ?>" target="_blank"><img src="<?php echo $user->avatar->getLink(56, 56, true); ?>" /></a>
+            <h2><span class="leave"><?php echo Text::get('login-leave-header'); ?></span></h2>
+        </div>
+    </div>
+
     <div id="main">
 
         <div class="login">
@@ -77,4 +88,4 @@ if (!isset($_POST['email']) && isset($_GET['email'])) {
 
     </div>
 
-<?php include 'view/footer.html.php' ?>
+<?php include 'view/m/footer.html.php' ?>

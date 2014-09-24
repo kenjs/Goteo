@@ -38,11 +38,11 @@ $project = $this['project'];
             <li class="support <?php echo htmlspecialchars($support->type) ?>">
                 <strong><?php echo htmlspecialchars($support->support) ?></strong>
                 <p><?php echo htmlspecialchars($support->description) ?></p>
+                <a class="button green" href="/project/<?php echo $project->id; ?>/messages"><?php echo Text::get('regular-collaborate'); ?></a>
             </li>
             <?php endforeach ?>
         </ul>
         
-        <a class="button green" href="/project/<?php echo $project->id; ?>/messages"><?php echo Text::get('regular-collaborate'); ?></a>
     </div>
     <a class="more" href="/project/<?php echo $project->id; ?>/needs-non"><?php echo Text::get('regular-see_more'); ?></a>
 </div>

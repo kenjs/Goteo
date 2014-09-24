@@ -78,13 +78,13 @@ $action = ($step == 'start') ? '/user/login' : '/invest/' . $project->id;
                 <!-- <span class="chkbox"></span> -->
             	<h<?php echo $level + 2 ?> class="name"><?php echo htmlspecialchars($individual->reward) ?></h<?php echo $level + 2 ?>>
                 <p><?php echo htmlspecialchars($individual->description)?></p>
-                    <?php if ($individual->none) : // no quedan ?>
+                    <?php /* if ($individual->none) : // no quedan ?>
                     <span class="left"><?php echo Text::get('invest-reward-none') ?></span>
                     <?php elseif (!empty($individual->units)) : // unidades limitadas ?>
                     <strong><?php echo Text::get('project-rewards-individual_reward-limited'); ?></strong><br />
                     <?php $units = ($individual->units - $individual->taken); // resto
                     echo Text::html('project-rewards-individual_reward-units_left', $units); ?><br />
-                <?php endif; ?>
+                <?php endif; */ ?>
                 </label>
                 
             </li>
