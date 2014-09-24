@@ -508,7 +508,7 @@ namespace Goteo\Controller {
                 }
 
                 // -- Mensaje azul molesto para usuarios no registrados
-                if (($show == 'messages' || $show == 'updates') && empty($_SESSION['user'])) {
+                if (($show == 'messages' || $show == 'updates' || $show == 'evaluation') && empty($_SESSION['user'])) {
                     Message::Info(Text::html('user-login-required'));
                 }
 

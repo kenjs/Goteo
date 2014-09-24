@@ -202,9 +202,14 @@ $bodyClass = 'project-show'; include 'view/prologue.html.php' ?>
                             new View('view/project/widget/rewards-summary.html.php', array('project' => $project));
                         break;
                     
-					case 'updates':
+                    case 'updates':
                         echo
                             new View('view/project/widget/updates.html.php', array('project' => $project, 'blog' => $blog, 'post' => $post));
+                        break;
+                    
+                    case 'evaluation':
+                        echo
+                            new View('view/project/widget/evaluation.html.php', array('project' => $project));
                         break;
                     
 					case 'home':
