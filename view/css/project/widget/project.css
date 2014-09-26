@@ -16,9 +16,6 @@
  *  along with Goteo.  If not, see <http://www.gnu.org/licenses/agpl.txt>.
  *
  */
-div.widget.project.active {
-    /*background-color: #f8f8f8 !important;*/
-}
 
 div.widget.project.active div.image {
     opacity: 0.85;
@@ -49,10 +46,6 @@ div.widget.project div.image {
     position: relative;
 }
 
-div.widget.project div.image img {
-/*    width: 100%;
-    height: 100%; */
-}
 
 /** Tagmarks widget **/
 div.widget.project div.image div.tagmark {
@@ -134,7 +127,6 @@ div.widget.project div.image div.investor div.invest span.amount {
     font-weight: bold;
     font-size: 16px;
     line-height: 18px !important;
-    /*background: url("/view/css/euro/violet/s.png") no-repeat right center;*/
     padding-right: 19px;
 }
 
@@ -153,28 +145,7 @@ div.widget.project div.image div.categories {
     right: 0;    
     left: 0;
 }
-/*
-div.widget.project div.keepiton {
-    position: absolute;
-    z-index: 899;
-    display: inline-block;
-    text-align: center;
-    font-size: 0.8em;
-    font-weight: bold;
-    text-transform: uppercase;
-    overflow: visible;
-    background-color: #19b5b3;
-    color: #ffffff;
-    border-radius: 2px 4px;
-    width: 120px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    padding: 3px;
-    bottom: 25px;
-    left: 0;
-    cursor: default;
-}
-*/
+
 div.widget.project > .title {    
     font-size: 14px !important;
     height: 2em;
@@ -230,7 +201,6 @@ div.widget.project > .title a:hover{
     color: #c5da4d;
 }
 
-
 div.widget.project div.description {
     padding: 2px 12px;
     min-height: 42px;
@@ -263,7 +233,6 @@ div.widget.project div.meter div.graph {
     background-color: #BCCCD8;
     height: 8px;
     border-right: 40px solid #dcdcdc;
-    /*margin: 40px 5px 70px;    */
     margin: 60px 5px 70px;
     position: relative;
 }
@@ -278,8 +247,6 @@ div.widget.project div.meter.activable.active {
 div.widget.project div.meter div.obtained {
     display: none;
     position: relative;
-    /*top: -30px;
-    right: -25px;*/
     top: -35px;
     text-align: center;
 }
@@ -321,7 +288,6 @@ div.widget.project div.meter.active div.graph > div {
 div.widget.project div.meter.active div.graph {
     background: none !important;
     border: none !important;
-    /*margin:20px 5px 70px;*/
     margin: 0px 5px 116px;
 }
 div.widget.project div.meter.active h3.title.obtained, 
@@ -332,8 +298,8 @@ div.widget.project div.meter.active dl .days {
     display: block !important;
     background-color: #f8f8f8 !important;
 }
-/* Hasta aqu� la movida de lo obtenido */
 
+/* Hasta aqu� la movida de lo obtenido */
 div.widget.project div.meter div.graph  * strong,
 div.widget.project div.meter div.graph  * span {
     display: none;
@@ -350,7 +316,6 @@ div.widget.project div.meter > h3.ronda{
 div.widget.project div.meter > h3.investment{
     color:#336633;
 }
-
 
 div.widget.project div.meter div.graph .minimum {
     background-color: #dc940f;
@@ -449,7 +414,6 @@ div.widget.project div.meter dl .optimum {
     top: 45px;
     float: right;
     clear: right;
-    /*margin-right: -40px;*/
     margin-right: -28px;
 }
 
@@ -473,25 +437,17 @@ body.discover div.widget.project div.meter dl dd.optimum {
     right: 27px;
 }
 body.discover div.widget.project div.meter dl dt.minimum {
-    position: relative;
-    right: 30px;
+    /*position: relative;*/
+    /*right: 30px;*/
 }
 body.discover div.widget.project div.meter dl dd.minimum {
-    /*right: 45px;*/
     text-align: right;
 }
 body.discover div.widget.project div.meter dl dd.minimum strong {
-    width: auto;
-    right: 46px;
+    width: 96px;
+    /*right: 46px;*/
 }
 
-/*div.widget.project div.meter dl dt.optimum,
-div.widget.project div.meter dl dd.optimum {
-    text-align: right;
-}
-div.widget.project div.meter dl dd.optimum strong {
-    text-align: right;
-}*/
 div.widget.project div.meter dl dd.minimum span,
 div.widget.project div.meter dl dd.optimum span {
     font-size: 12px;
@@ -500,46 +456,28 @@ div.widget.project div.meter dl dd.optimum span {
 div.widget.project div.meter dl dd.optimum span {
     margin-left: -2px;
 }
-/*div.widget.project div.meter dl .optimum {
-    width: auto;
-}*/
-
-
-
-
-/*div.widget.project div.meter dl .minimum > * {
-    display: block;
-    width: 60px;
-    top: 21px;
-    margin-right: -30px;
-}*/
 
 div.widget.project div.meter dl .minimum>* {
     display: block;
-    width: 60px;
+    width: 96px;
     position: absolute;
     right: 0;
-    /*top: 21px;*/
-    width: 60px;
     margin-right: -30px;
 }
 
 div.widget.project div.meter dl dd.minimum span {
     position: absolute;
-    /*right: -36px;*/
-    /*top: -21px;*/
     top: 0 ;
     font-weight: normal;
-    /*font-size: 12px;*/
 }
 
 div.widget.project div.meter dl dt.minimum {
     position: absolute;
     top: -36px;
 }
-div.widget.project div.meter dl dt.minimum span {
-    width: 60px;
-}
+/*div.widget.project div.meter dl dt.minimum span {
+    width: 96px;
+}*/
 
 div.widget.project div.meter dl dd.minimum > * {
     position: absolute;
@@ -569,7 +507,7 @@ div.widget.project div.meter dl dd.optimum span {
 div.widget.project div.meter dl .days {
     position: absolute;
     border-top: 1px solid #d1d3d4;
-    top: 55px;
+    top: 90px;
     padding: .8em 0;    
     font-size: 12px;
     line-height: 1.5em;
@@ -587,6 +525,7 @@ div.widget.project div.meter dl dt.days span {
 div.widget.project div.meter dl dd.days {
     left: 70px;
     right: -40px;
+    padding-left: 8px;
     color: #ee4843;
     font-weight: bold;
 }
@@ -595,7 +534,6 @@ div.widget.project div.rewards {
     border-top: 1px solid #d1d3d4;
     padding: 4px 0 0 !important;
     position: relative;
-    /*margin: 10px 12px 8px !important;*/
     margin: 20px 12px 8px !important;
     height: 22px;
     overflow: hidden;
@@ -705,8 +643,50 @@ h4.author:hover a{
 div.project div.image {
     height: 165px;
 }
-/*
-div.project div.image > a > img{
-    width : 320px;
-    height: auto;
-}*/
+
+
+/* only embed */
+
+/*widget embed code for wordpress side(only mobile)*/
+body.project-embed.sp div.widget.project div.description {
+    max-height: 100px;
+}
+body.project-embed.sp div.alone-project div.widget.project div.meter div.graph {
+    background-color: #BCCCD8;
+    height: 12px;
+    margin: 20px 0 0;
+    position: relative;
+}
+body.project-embed.sp div.alone-project div.widget.project div.meter div.graph .minimum .left,
+body.project-embed.sp div.alone-project div.widget.project-support div.graph .minimum .left {
+    float: right;
+    height: 19px;
+    margin-right: -2px;
+    margin-top: -6px;
+    border-right: none;
+}
+body.project-embed.sp div.alone-project div.widget.project div.meter div.graph .minimum .done,
+body.project-embed.sp div.alone-project div.widget.project-support div.meter.ver div.graph .minimum .done {
+    background-color: #c5da4d;
+    height: 12px;
+    max-width: 288px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+body.project-embed.sp div.alone-project div.widget.project div.meter div.graph .minimum span {
+    width: auto;
+
+}
+
+body.project-embed.sp div.alone-project div.widget.project div.meter div.graph .optimum,
+body.project-embed.sp div.alone-project div.widget.project-support div.graph > div.optimum {
+    border-right: none;
+}
+
+body.project-embed.sp div.alone-project div.widget.project div.meter dl,
+body.project-embed.sp div.alone-project div.widget.project-support dl {
+    position: relative;
+    margin: 16px 0 0 0;
+}
+

@@ -126,6 +126,6 @@ echo new SuperForm(array(
     'level'         => $this['level'],
     'method'        => 'post',
     'title'         => Text::get('preview-main-header'),
-    'hint'          => Text::get('guide-project-preview'),
+    //'hint'          => Text::get('guide-project-preview'),
     'elements'      => $elements
 ));

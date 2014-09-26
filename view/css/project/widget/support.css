@@ -67,7 +67,7 @@ div.widget.project-support dl dt.optimum{
 
 div.widget.project-support dl dt.optimum,
 div.widget.project-support dl dt.minimum {
-    width: 80px;
+    width: 82px;
     float: left;
     margin-left: 0;
     line-height: 46px;
@@ -109,7 +109,7 @@ div.widget.project-support dl dd {
 div.widget.project-support dl dd.optimum,
 div.widget.project-support dl dd.minimum {
     float: left;
-    width: 160px;
+    width: 168px;
     height: 40px;
     margin-left: 0;
     line-height: 35px;

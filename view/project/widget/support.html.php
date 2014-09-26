@@ -56,11 +56,12 @@ $project = $this['project'];
     <?php echo new View('view/project/meter.html.php', array('project' => $project, 'level' => $level) ) ?>
     
         <div class="buttons">
-            <?php if ($project->status == 3) : // boton apoyar solo si esta en campaña ?>
+            <a class="button violet supportit" href="/project/<?php echo $project->id; ?>/invest"><?php echo Text::get('regular-invest_it'); ?></a>
+            <?/*php if ($project->status == 3) : // boton apoyar solo si esta en campaña ?>
             <a class="button violet supportit" href="/project/<?php echo $project->id; ?>/invest"><?php echo Text::get('regular-invest_it'); ?></a>
             <?php else : ?>
             <a class="button view" href="/project/<?php echo $project->id ?>/updates"><?php echo Text::get('regular-see_blog'); ?></a>
-            <?php endif; ?>
+            <?php endif; */?>
         </div>
     </div>
     <a class="more" href="/project/<?php echo $project->id; ?>/needs"><?php echo Text::get('regular-see_more'); ?></a>

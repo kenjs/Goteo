@@ -1,6 +1,6 @@
 <?php
 /*
- *  Copyright (C) 2012 Platoniq y Fundación Fuentes Abiertas (see README for details)
+ *  Copyright (C) 2012 Platoniq y Fundaciรณn Fuentes Abiertas (see README for details)
  *	This file is part of Goteo.
  *
  *  Goteo is free software: you can redistribute it and/or modify
@@ -59,7 +59,7 @@ switch ($order) {
                 }
             );
         break;
-    case 'reward': // importe de recompensa, más bajo primero
+    case 'reward': // importe de recompensa, mรกs bajo primero
         uasort($invests, function ($a, $b) {
                 if (empty($a->rewards)) return 1;
                 if ($a->rewards[0]->amount == $b->rewards[0]->amount) return 0;
@@ -67,7 +67,7 @@ switch ($order) {
                 }
             );
         break;
-    case 'amount': // importe aporte, más alto primero
+    case 'amount': // importe aporte, mรกs alto primero
     default:
         uasort($invests, function ($a, $b) {
                 if ($a->amount == $b->amount) return 0;
@@ -219,15 +219,15 @@ switch ($order) {
                <input type="hidden" name="order" value="<?php echo $order; ?>" />
 
                 <p>
-                    <input type="checkbox" id="msg_all" name="msg_all" value="1" onclick="alert('a todos es a todos, no tiene en cuenta el resto de marcados');" />
-                    <label for="msg_all">A todos los cofinanciadores de este proyecto</label>
+                    <input type="checkbox" id="msg_all" name="msg_all" value="1" onclick="alert('全ての支援者に送信します');" />
+                    <label for="msg_all">全ての支援者に送信</label>
                 </p>
 
                 <p>
-                    Por retornos: <br />
+                    対象のお礼: <br />
                     <?php foreach ($rewards as $rewardId => $rewardData) : ?>
                         <input type="checkbox" id="msg_reward-<?php echo $rewardId; ?>" name="msg_reward-<?php echo $rewardId; ?>" value="1" />
-                        <label for="msg_reward-<?php echo $rewardId; ?>"><?php echo $rewardData->amount; ?> &yen; (<?php echo Text::recorta($rewardData->reward, 40); ?>)</label>
+                        <label for="msg_reward-<?php echo $rewardId; ?>">&yen;<?php echo $rewardData->amount; ?>  (<?php echo Text::recorta($rewardData->reward, 40); ?>)</label>
                     <?php endforeach; ?>
 
                 </p>

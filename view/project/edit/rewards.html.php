@@ -75,7 +75,7 @@ foreach ($project->social_rewards as $social_reward) {
                         'title'     => Text::get('rewards-field-social_reward-other'),
                         'value'     => $social_reward->other,
                         'name'      => "social_reward-{$social_reward->id}-{$type->id}",
-                        'hint'      => Text::get('tooltip-project-social_reward-icon-other')
+                        //'hint'      => Text::get('tooltip-project-social_reward-icon-other')
                     )
                 );
             } elseif (!empty($licenses)) {
@@ -130,7 +130,7 @@ foreach ($project->social_rewards as $social_reward) {
                         'value'     => $social_reward->reward,
                         'errors'    => !empty($errors["social_reward-{$social_reward->id}-reward"]) ? array($errors["social_reward-{$social_reward->id}-reward"]) : array(),
                         'ok'        => !empty($okeys["social_reward-{$social_reward->id}-reward"]) ? array($okeys["social_reward-{$social_reward->id}-reward"]) : array(),
-                        'hint'      => Text::get('tooltip-project-social_reward-reward')
+                        //'hint'      => Text::get('tooltip-project-social_reward-reward')
                     ),
                     "social_reward-{$social_reward->id}-description" => array(
                         'type'      => 'textarea',
@@ -142,7 +142,7 @@ foreach ($project->social_rewards as $social_reward) {
                         'value'     => $social_reward->description,
                         'errors'    => !empty($errors["social_reward-{$social_reward->id}-description"]) ? array($errors["social_reward-{$social_reward->id}-description"]) : array(),
                         'ok'        => !empty($okeys["social_reward-{$social_reward->id}-description"]) ? array($okeys["social_reward-{$social_reward->id}-description"]) : array(),
-                        'hint'      => Text::get('tooltip-project-social_reward-description')
+                        //'hint'      => Text::get('tooltip-project-social_reward-description')
                     ),
                     "social_reward-{$social_reward->id}-icon" => array(
                         'title'     => Text::get('rewards-field-social_reward-type'),

@@ -1,0 +1,196 @@
+/*widget embed code for wordpress side(only mobile)*/
+body.project-embed.sp div.widget.project div.meter.activable {
+    margin: 0!important;
+    border-top: none;
+}
+
+body.project-embed.sp div.widget.project div.meter dl .minimum,
+body.project-embed.sp div.widget.project div.meter dl .optimum {
+    line-height: normal;
+}
+
+body.project-embed.sp div.widget.project div.meter dl dt.optimum {
+    position: absolute;
+    top: 0;
+    left: 93px;
+    width: 93px;
+    margin-top: 0;
+    text-align: center;
+}
+
+body.project-embed.sp div.widget.project div.meter dl dd.optimum {
+    float: none;
+    position: relative;
+    top: -16px;
+    left: 93px;
+    width: 93px;
+    padding-top: 28px;
+    height: 30px;
+    border-left: 1px solid #eee;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+}
+
+body.project-embed.sp div.widget.project div.meter dl dd.optimum span {
+    right: 0;
+    bottom: 2px;
+    margin-left: 0;
+
+}
+
+body.project-embed.sp div.widget.project div.meter dl dt.minimum {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #cc6600;
+    width: 93px;
+    text-align: center;
+}
+
+body.project-embed.sp div.widget.project div.meter dl dt.minimum span {
+    display: inline;
+    position: static;
+    bottom: 2px;
+    width: auto;
+}
+
+body.project-embed.sp div.widget.project div.meter dl .minimum span {
+    margin-right: 0;
+}
+
+body.project-embed.sp div.widget.project div.meter dl dd.minimum {
+    position: relative;
+    font-size: 14px;
+    width: 93px;
+    text-align: center;
+    top: -46px;
+    left: 0;
+    color: #cc6600;
+}
+
+body.project-embed.sp div.widget.project div.meter dl dd.minimum strong {
+    display: inline;
+    position: static;
+    margin-right: 0;
+}
+body.project-embed.sp div.widget.project div.meter dl dd.minimum span {
+    display: inline;
+    position: static;
+    width: auto;
+    bottom: 1px;
+}
+
+body.project-embed.sp div.widget.project div.meter dl dt.days {
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 93px;
+    padding: 0;
+    text-align: center;
+    font-weight: normal;
+    border-top: none;
+}
+
+body.project-embed.sp div.widget.project div.meter dl dd.days{
+    position: absolute;
+    top: -16px;
+    left: 190px;
+    width: 93px;
+    text-align: center;
+    font-size: 14px;
+    height: 30px;
+    padding-top: 28px;
+    padding-bottom: 0;
+    padding-left: 0;
+    border-left: 1px solid #eee;
+    border-top: none;
+}
+
+body.project-embed.sp div.widget.project div.meter dl dd.days strong {
+    color: #996666;
+}
+
+body.project-embed.sp div.widget.project div.meter dl dd.days span {
+    color: #58595b;
+    font-weight: normal;
+    font-size: 12px;
+    position: relative;
+    bottom: -1px;
+}
+
+
+div.widget.project div.meter > h3.ronda {
+    color:#999900;
+    position:absolute;
+    top:4px;
+    right:16px;
+    text-transform: lowercase;
+}
+
+div.widget.project div.meter.activable {
+    z-index: 999;
+    /*padding-left: 16px!important;
+    padding-right: 16px!important;*/
+    max-width: 288px;
+}
+div.widget.project div.meter {
+    padding: 4px 0 78px !important;
+    position: relative;
+    height: 20px;
+}
+body.home div.widget.project div.meter dl dt.minimum,
+body.user-profile div.widget.project div.meter dl dt.minimum {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #cc6600;
+    width: 96px;
+    text-align: center;
+}
+body.home div.widget.project div.meter dl dd.minimum,
+body.user-profile div.widget.project div.meter dl dd.minimum {
+    position: relative;
+    font-size: 14px;
+    width: 96px;
+    text-align: center;
+    top: -66px;
+    left: 0;
+    color: #cc6600;
+}
+
+body.user-profile div.widget.project div.meter dl dd.optimum {
+    left: 96px;
+    width: 96px;
+    padding-top: 35px;
+}
+body.home div.widget.project div.meter dl dt.days,
+body.user-profile div.widget.project div.meter dl dt.days{
+    font-size: 12px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 96px;
+    text-align: center;
+}
+body.home div.widget.project div.meter dl dd.days,
+body.user-profile div.widget.project div.meter dl dd.days{
+    position: absolute;
+    top: -16px;
+    right: 0px;
+    width: 96px;
+    text-align: center;
+    font-size: 14px;
+    height: 50px;
+    padding-top: 28px;
+    border-left: 1px solid #eee;
+}
+body.user-profile div.widget.project div.meter dl dd.days {
+    padding-top: 35px;
+}
+body.home div.widget.project div.meter dl dd.days strong,
+body.user-profile div.widget.project div.meter dl dd.days strong {
+    color: #996666;
+}
+

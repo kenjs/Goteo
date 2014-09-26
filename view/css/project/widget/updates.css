@@ -54,11 +54,13 @@ div.widget.project-updates > div {
     margin: 0 0 20px;
 }
 .project-updates .post h4 a {
-    font: bold 18px Helvetica, Arial, Geneva, sans-serif;
+    /*font: bold 18px Helvetica, Arial, Geneva, sans-serif;*/
 	margin: 0 0 5px 0;
 	text-transform:none;
 	color:#535353;
 	text-decoration:none;
+    font-size: 16px;
+    font-weight: bolder;
 }
 .project-updates .post  .date{
     display:block;
