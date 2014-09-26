@@ -244,10 +244,8 @@ if(strpos($_SERVER['SERVER_NAME'], 'il3c') > 0){
 $ua = $_SERVER['HTTP_USER_AGENT'];
 
 //iPad, AndroidタブレットはPCビュー
-if(preg_match('/iPod|iPhone/i', $ua)) {
-    define('PC_VIEW', false);
-    define('VIEW_PATH', 'view/m');
-}else if(preg_match('/Android.+Mobile/i', $ua)) {
+//if(preg_match('/iPod|iPhone|Android.+Mobile/i', $ua) || strpos($ua, 'LocalGood/iOS (Yokohama) ') === 0 || strpos($ua, 'LocalGood/Android (Yokohama) ') === 0 ) {
+if(isset($_SERVER['HTTP_X_LOCALGOOD_UA']) && in_array($_SERVER['HTTP_X_LOCALGOOD_UA'], array('iOS', 'Android')) || strpos($ua, 'LocalGood/iOS (Yokohama)') === 0 || strpos($ua, 'LocalGood/Android (Yokohama)') === 0 ) {
     define('PC_VIEW', false);
     define('VIEW_PATH', 'view/m');
 } else {
