@@ -40,7 +40,7 @@
                     </fieldset>
                 </form>
             </li>*/?>
-            <?php if (!empty($_SESSION['user'])): ?>
+            <?/*php if (!empty($_SESSION['user'])): ?>
             <li class="community"><a href="/community"><span><?php echo Text::get('community-menu-main'); ?></span></a>
                 <div>
                     <ul>
@@ -53,7 +53,7 @@
             <li class="login">
                 <a href="/community"><span><?php echo Text::get('community-menu-main'); ?></span></a>
             </li>
-            <?php endif ?>
+            <?php endif */?>
 
             <?php if (!empty($_SESSION['user'])): ?>
             <li class="dashboard"><a href="/dashboard"><span><?php echo Text::get('dashboard-menu-main'); ?></span><img src="<?php echo $_SESSION['user']->avatar->getLink(28, 28, true); ?>" /></a>
@@ -73,6 +73,7 @@
                         <li><a href="/admin"><span><?php echo Text::get('regular-admin_board'); ?></span></a></li>
                         <?php endif; ?>
                         */?>
+                        <li><a href="/community/sharemates"><span><?php echo Text::get('community-menu-sharemates'); ?></span></a></li>
                         <li class="logout"><a href="/user/logout"><span><?php echo Text::get('regular-logout'); ?></span></a></li>
                     </ul>
                 </div>

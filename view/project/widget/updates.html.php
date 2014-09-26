@@ -82,7 +82,7 @@ $level = (int) $this['level'] ?: 3;
                 <div class="widget post">
                     <?php echo new View('view/blog/post.html.php', array('post' => $post->id, 'show' => 'list', 'url' => '/project/'.$project->id.'/updates/')); ?>
 					<ul class="share-goteo">
-						<li class="sharetext"><?php echo Text::get('regular-share_this'); ?></li>
+						<?/*<li class="sharetext"><?php echo Text::get('regular-share_this'); ?></li>*/?>
 						<li class="twitter"><a href="<?php echo htmlspecialchars($twitter_url) ?>" target="_blank"><?php echo Text::get('regular-twitter'); ?></a></li>
 						<li class="facebook"><a href="<?php echo htmlspecialchars($facebook_url) ?>" target="_blank"><?php echo Text::get('regular-facebook'); ?></a></li>
 					</ul>

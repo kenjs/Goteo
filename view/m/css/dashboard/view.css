@@ -34,7 +34,7 @@ body.dashboard div#main div.widget {
 }
 
 body.dashboard div#sub-header {
-    padding-bottom: 4em;
+    /*padding-bottom: 4em;*/
     margin-bottom: 0;
     /*height: 145px;*/
 }

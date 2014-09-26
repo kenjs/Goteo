@@ -220,6 +220,11 @@ body.project-show div#main div.widget {
     max-width: 580px;
     margin-bottom: 10px;
 }
+
+body.project-show div#main div.project-spread div.widget.project.activable {
+    margin-bottom: 50px!important;
+}
+
 body.project-show div#main div.widget pre {
     font-size: 13px;
 }
@@ -261,6 +266,7 @@ div.widget.projects #widget-code{	width:350px;	float:left; margin: 0 0 0 20px;}
 div.widget.projects  #widget-code .wc-embed{background: url("/view/css/social/embed.png") no-repeat; min-height:20px;text-transform:uppercase;padding: 3px 0 0 25px;}
 /*div.widget.projects  #widget-code textarea{width:200px;	margin: 10px 0;	padding:10px;	background:#E7E7E7;border:none;font-size:12px;resize:none;}*/
 div.widget.projects  #widget-code textarea{
+    clear: both;
     width:200px;
     height: 130px;
     margin: 10px 0;
@@ -269,6 +275,7 @@ div.widget.projects  #widget-code textarea{
     border:none;
     font-size:12px;
     resize:none;
+    opacity: 1;
 }
 
 /* sideber */
@@ -325,4 +332,81 @@ div.project-header div.wants-skills a {
 
 }
 
+
+
+/*invest*/
+
+
+body.project-show #main.threecols div.widget.project-spread h3.title {
+    padding :0;
+    margin: 0;
+}
+
+body.project-show #main.threecols div.center.supporters div.widget.project-spread {
+    width: 620px;
+    height: auto;
+    padding: 20px;
+}
+
+body.project-show #main.threecols div.center.supporters div.widget.project-spread .widget.projects{
+    margin-bottom: 10px!important;
+}
+
+body.project-show #main.threecols div.widget.project-spread .widget.projects {
+    width: 280px;
+    margin: 20px auto 0;
+    border: 1px dashed #c0c0c0; 
+}
+
+body.project-show #main.threecols div.widget.project-spread div.widget.projects div.left {
+    float: none;
+    width: 280px;
+    height: auto;
+    border-right: none;
+}
+
+body.project-show #main.threecols div.widget.project-spread div.widget.projects #widget-code {
+    clear: both;
+    width: 260px;
+    float: none;
+    margin: 0 0 0 20px;
+}
+
+body.project-show #main.threecols div.widget.project-spread div.widget.projects div.left div.subtitle {
+    width: 100%;
+    text-transform: uppercase;
+    margin: 0 0 10px 7px;
+    text-align: left;
+}
+
+body.project-show #main.threecols .widget.project-message {
+    position: relative;
+    margin: 0;
+}
+
+body.project-show #main.threecols div.widget.project-spread div.widget.projects #widget-code textarea{
+    clear: both;
+    width:230px;
+    height: 130px;
+    margin: 10px 0;
+    padding:10px;
+    background:#E7E7E7;
+    border:none;
+    font-size:12px;
+    resize:none;
+    opacity: 1;
+}
+
+body.project-show #main.threecols div.project-message {
+    padding-bottom: 30px;
+}
+
+body.project-show #main.threecols div.project-message button {
+    float: right;
+    margin-top: 25px;
+    font-weight: normal;
+    /* padding: 5px 20px; */
+    margin-bottom: 0;
+    font-style: normal;
+}
 

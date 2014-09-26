@@ -44,6 +44,7 @@ include 'view/header.html.php' ?>
                             'project' => $result
                         )); 
                     endforeach;
+                //var_dump($this['results']);
                 else :
                     echo Text::get('discover-results-empty');
                 endif; ?>

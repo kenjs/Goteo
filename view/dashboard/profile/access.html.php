@@ -51,6 +51,7 @@ extract($_POST);
 <form action="/dashboard/profile/access" method="post" enctype="multipart/form-data">
 
 <?php
+
 echo new SuperForm(array(
 
     'level'         => $this['level'],

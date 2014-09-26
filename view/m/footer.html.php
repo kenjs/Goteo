@@ -140,6 +140,7 @@ jQuery(document).ready(function($) {
                 <ul>
                     <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/about/">LOCAL GOODについて</a></li>
                     <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/terms/">利用規約</a></li>
+                    <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/user_guide/">ユーザーガイド</a></li>
                     <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/privacypolicy/">プライバシーポリシー</a></li>
                     <li><a href="/faq"><?php echo Text::get('regular-header-faq'); ?></a></li>
                     <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/mailnews/">メルマガ登録</a></li>

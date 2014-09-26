@@ -88,11 +88,13 @@ include 'view/header.html.php';
 
     <div id="main">
 
-        <?php foreach ($this['order'] as $item=>$itemData) {
+        <?php
+        echo new View("view/home/available.html.php", $this);
+        foreach ($this['order'] as $item=>$itemData) {
             if (!empty($this[$item])) echo new View("view/home/{$item}.html.php", $this);
         } ?>
 
     </div>
-</div><!--.contents_wrapper-->
+</div><!--.contents_wrapper-->//
 <?php include 'view/footer.html.php'; ?>
 <?php include 'view/epilogue.html.php'; ?>

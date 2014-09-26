@@ -34,16 +34,25 @@ $(function () {
     if($('.flipsnap').length > 0){
         // sp nav
         Flipsnap('.flipsnap');
+        var flipsnap = Flipsnap('.flipsnap', {
+            distance: 80
+        });
     }
 
     if($('.flipsnap_projectnav').length > 0){
         // sp project-nav
         Flipsnap('.flipsnap_projectnav');
+        var flipsnap = Flipsnap('.flipsnap_projectnav', {
+            distance: 70
+        });
     }
 
     if($('.flipsnap_dashboard').length > 0){
         // sp dashboard-nav
         Flipsnap('.flipsnap_dashboard');
+        var flipsnap = Flipsnap('.flipsnap_dashboard', {
+            distance: 20
+        });
     }
 
     // 投稿画像etcを画面幅に収める

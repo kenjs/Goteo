@@ -254,6 +254,12 @@ div.post-comments div.message blockquote {
 	top: 10px;
 	font-style: normal;
 }
+
+.project-updates div.widget.blog-comment form {
+    overflow: hidden;
+}
+
+
 /* end send comment */
 
 

@@ -131,6 +131,8 @@ div.project-preview div.widget a.button {
     width: 160px;
     height: 30px;
     line-height: 30px;
+    display: block;
+    margin: 1.5em auto 10px
 }
 
 

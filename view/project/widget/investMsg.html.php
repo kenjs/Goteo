@@ -64,8 +64,8 @@ $level = (int) $this['level'] ?: 3;
 
 ?>
 <div class="widget invest-message">
-    <h2><?php echo $avatarhtml; ?><span><?php echo $title; ?></span><br />
-    <?/*<span class="message"><?php echo $message; ?></span></h2>*/?>
+    <h2><?php echo $avatarhtml; ?><span><?php echo $title; ?></span><?/*<br />
+    <span class="message"><?php echo $message; ?></span></h2>*/?>
 
 
 </div>
