@@ -186,7 +186,7 @@ echo new SuperForm(array(
         'main_address' => array(
             'type'      => 'group',
             'title'     => Text::get('personal-field-main_address'),
-            'hint'      => Text::get('tooltip-project-main_address'),
+            //'hint'      => Text::get('tooltip-project-main_address'),
             'children'  => array(
                 'address' => array(
                     'type'      => 'textbox',
@@ -244,7 +244,7 @@ echo new SuperForm(array(
             'type'      => 'group',
             'class'     => 'inline',
             'title'     => Text::get('personal-field-post_address'),
-            'hint'      => Text::get('tooltip-project-post_address'),
+            //'hint'      => Text::get('tooltip-project-post_address'),
             'children'  => array(
                 'post_address-radio-same' =>  array(
                     'name'  => 'secondary_address',
@@ -279,7 +279,7 @@ echo new SuperForm(array(
                             'title'     => Text::get('personal-field-address'),
                             'rows'      => 6,
                             'cols'      => 40,
-                            'hint'      => Text::get('tooltip-project-post_address'),
+                            //'hint'      => Text::get('tooltip-project-post_address'),
                             'errors'    => !empty($errors['post_address']) ? array($errors['post_address']) : array(),
                             'ok'        => !empty($okeys['post_address']) ? array($okeys['post_address']) : array(),
                             'value'     => $project->post_address
@@ -290,7 +290,7 @@ echo new SuperForm(array(
                             'class'     => 'inline',
                             'title'     => Text::get('personal-field-zipcode'),
                             'size'      => 7,
-                            'hint'      => Text::get('tooltip-project-post_address'),
+                            //'hint'      => Text::get('tooltip-project-post_address'),
                             'errors'    => !empty($errors['post_zipcode']) ? array($errors['post_zipcode']) : array(),
                             'ok'        => !empty($okeys['post_zipcode']) ? array($okeys['post_zipcode']) : array(),
                             'value'     => $project->post_zipcode
@@ -301,7 +301,7 @@ echo new SuperForm(array(
                             'class'     => 'inline',
                             'title'     => Text::get('personal-field-location'),
                             'size'      => 25,
-                            'hint'      => Text::get('tooltip-project-post_address'),
+                            //'hint'      => Text::get('tooltip-project-post_address'),
                             'errors'    => !empty($errors['post_location']) ? array($errors['post_location']) : array(),
                             'ok'        => !empty($okeys['post_location']) ? array($okeys['post_location']) : array(),
                             'value'     => $project->post_location
@@ -312,7 +312,7 @@ echo new SuperForm(array(
                             'class'     => 'inline',
                             'title'     => Text::get('personal-field-country'),
                             'size'      => 25,
-                            'hint'      => Text::get('tooltip-project-post_address'),
+                            //'hint'      => Text::get('tooltip-project-post_address'),
                             'errors'    => !empty($errors['post_country']) ? array($errors['post_country']) : array(),
                             'ok'        => !empty($okeys['post_country']) ? array($okeys['post_country']) : array(),
                             'value'     => $project->post_country
