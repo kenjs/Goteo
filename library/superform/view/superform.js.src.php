@@ -121,7 +121,7 @@ if (!('Superform' in window)) {
                                 contents.slideUp('slow');
                                 contents.remove();
                             } else if (!focused.length || (!$.contains(contents[0], focused[0]))) {
-                                contents.replaceWith(ncontents);
+                                //contents.replaceWith(ncontents);
                             }
                         } else if (ncontents.length) {
                             el.append(ncontents);
