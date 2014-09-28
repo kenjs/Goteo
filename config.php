@@ -232,23 +232,5 @@ else {
 	define('GOTEO_FREE', true); // used somewhere...
 }
 
-/*
- *  LocalGood Server Environment
- */
-if(strpos($_SERVER['SERVER_NAME'], 'il3c') > 0){
-    define('LOCALGOOD_WP_BASE_URL', 'http://yokohama.localgood.jp.il3c.com');
-}else{
-    define('LOCALGOOD_WP_BASE_URL', 'http://d2.yokohama.localgood.jp');
-}
-
 $ua = $_SERVER['HTTP_USER_AGENT'];
 
-//iPad, AndroidタブレットはPCビュー
-//if(preg_match('/iPod|iPhone|Android.+Mobile/i', $ua) || strpos($ua, 'LocalGood/iOS (Yokohama) ') === 0 || strpos($ua, 'LocalGood/Android (Yokohama) ') === 0 ) {
-if(isset($_SERVER['HTTP_X_LOCALGOOD_UA']) && in_array($_SERVER['HTTP_X_LOCALGOOD_UA'], array('iOS', 'Android')) || strpos($ua, 'LocalGood/iOS (Yokohama)') === 0 || strpos($ua, 'LocalGood/Android (Yokohama)') === 0 ) {
-    define('PC_VIEW', false);
-    define('VIEW_PATH', 'view/m');
-} else {
-    define('PC_VIEW', true);
-    define('VIEW_PATH', 'view');
-}
