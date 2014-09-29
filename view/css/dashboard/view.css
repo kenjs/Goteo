@@ -169,6 +169,23 @@ body.dashboard div#dashboard-menu ul li.section.active ul {
     height: 40px;
 }
 
+body.dashboard div#dashboard-menu ul li.section.forbidden a.section {
+    background: #ccf4ff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ccf4ff 0%, #c0e4ed 60%, #b1cfd3 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccf4ff), color-stop(60%,#c0e4ed), color-stop(100%,#b1cfd3)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ccf4ff 0%,#c0e4ed 60%,#b1cfd3 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ccf4ff 0%,#c0e4ed 60%,#b1cfd3 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ccf4ff 0%,#c0e4ed 60%,#b1cfd3 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #eee 0%,#ddd 60%,#ccc 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccf4ff', endColorstr='#b1cfd3',GradientType=0 ); /* IE6-9 */
+    color:#aaa;
+    border-top: 1px solid #c0c0c0;
+    border-left: 1px solid #c0c0c0;
+    border-right: 1px solid #c0c0c0;
+    cursor: default;
+}
+
+
 /*ie8*/
 body.dashboard div#dashboard-menu ul li.section a:hover.section,
 body.dashboard div#dashboard-menu ul li.section ul:hover {
@@ -257,6 +274,7 @@ body.dashboard div#main div.widget.gestrew div.reward div.tiporec{display:block;
 body.dashboard div#main div.widget.gestrew div.reward ul { list-style: none outside none; padding:0px; margin: 0px 0px 3px 0px; float:none; font-size:12px; }
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li { background:none no-repeat scroll 0px 0px transparent; padding: 0px 0px 0px 29px; min-height: 34px; }
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.file { background-image: url('/view/css/icon/s/file.png'); }
+body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.food { background-image: url('/view/css/icon/s/food.png'); }
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.money { background-image: url('/view/css/icon/s/money.png'); }
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.code { background-image: url('/view/css/icon/s/code.png'); }
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.service { background-image: url('/view/css/icon/s/service.png'); }

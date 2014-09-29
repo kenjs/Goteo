@@ -640,8 +640,14 @@ namespace Goteo\Controller {
             return new View('view/dashboard/index.html.php', $viewData);
         }
 
-
         private static function menu() {
+
+            $user = $_SESSION['user'];
+            $_permission = false;
+            if(isset($_SESSION['user']->roles['project_owner'])){
+                $_permission = true;
+            };
+
             // todos los textos del menu dashboard
             $menu = array(
                 'activity' => array(
@@ -666,10 +672,11 @@ namespace Goteo\Controller {
                         'summary' => Text::get('dashboard-menu-projects-summary'),
                         'updates' => Text::get('dashboard-menu-projects-updates'),
                         'supports' => Text::get('dashboard-menu-projects-supports'),
-                        'rewards' => Text::get('dashboard-menu-projects-rewards'),
-                        'messegers' => Text::get('dashboard-menu-projects-messegers'),
-                        'commons' => Text::get('dashboard-menu-projects-commons')
-                    )
+                        'rewards' => Text::get('dashboard-menu-projects-rewards')//,
+//                        'messegers' => Text::get('dashboard-menu-projects-messegers'),
+//                        'commons' => Text::get('dashboard-menu-projects-commons')
+                    ),
+                    'permission' => $_permission
                 )
             );
 
