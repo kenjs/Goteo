@@ -308,6 +308,7 @@ namespace Goteo\Controller {
                     $viewData['categories'] = Model\Project\Category::getAll();
 //                    $viewData['currently'] = Model\Project::currentStatus();
 //                    $viewData['scope'] = Model\Project::scope();
+                    $viewData['project_location'] = Model\Project::yokohamaLocation();
                     break;
 
                 case 'costs':
