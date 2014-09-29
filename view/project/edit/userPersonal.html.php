@@ -35,7 +35,7 @@ echo new SuperForm(array(
     'level'         => $this['level'],
     'method'        => 'post',
     'title'         => Text::get('personal-main-header'),
-    'hint'          => Text::get('guide-project-contract-information'),    
+//    'hint'          => Text::get('guide-project-contract-information'),
     'elements'      => array(
         'process_userPersonal' => array (
             'type' => 'hidden',
@@ -118,7 +118,7 @@ echo new SuperForm(array(
         'contract' => array(
             'type'      => 'group',
             'title'     => Text::get('personal-field-contract_data'),
-            'hint'      => Text::get('tooltip-project-contract_data'),
+            // 'hint'      => Text::get('tooltip-project-contract_data'),
             'children'  => array(
                 'contract_name' => array(
                     'type'      => 'textbox',
@@ -170,11 +170,11 @@ echo new SuperForm(array(
 
                 'contract_birthdate'  => array(
                     'type'      => 'datebox',
-                    'required'  => true,
+//                    'required'  => true,
                     'size'      => 8,
                     'title'     => Text::get('personal-field-contract_birthdate'),
 //                    'hint'      => Text::get('tooltip-project-contract_birthdate'),
-                    'errors'    => !empty($errors['contract_birthdate']) ? array($errors['contract_birthdate']) : array(),
+//                    'errors'    => !empty($errors['contract_birthdate']) ? array($errors['contract_birthdate']) : array(),
                     'ok'        => !empty($okeys['contract_birthdate']) ? array($okeys['contract_birthdate']) : array(),
                     'value'     => $project->contract_birthdate
                 )
@@ -224,18 +224,18 @@ echo new SuperForm(array(
                     'ok'        => !empty($okeys['location']) ? array($okeys['location']) : array(),
                     'value'     => $project->location
                 ),
-
-                'country' => array(
-                    'type'      => 'textbox',
-                    'class'     => 'inline',
-                    'required'  => true,
-                    'title'     => Text::get('personal-field-country'),
-                    'size'      => 25,
-//                    'hint'      => Text::get('tooltip-project-main_address'),
-                    'errors'    => !empty($errors['country']) ? array($errors['country']) : array(),
-                    'ok'        => !empty($okeys['country']) ? array($okeys['country']) : array(),
-                    'value'     => $project->country
-                )
+                /*
+                                'country' => array(
+                                    'type'      => 'textbox',
+                                    'class'     => 'inline',
+                                    'required'  => true,
+                                    'title'     => Text::get('personal-field-country'),
+                                    'size'      => 25,
+                //                    'hint'      => Text::get('tooltip-project-main_address'),
+                                    'errors'    => !empty($errors['country']) ? array($errors['country']) : array(),
+                                    'ok'        => !empty($okeys['country']) ? array($okeys['country']) : array(),
+                                    'value'     => $project->country
+                                )*/
             )
         ),
 
@@ -296,7 +296,7 @@ echo new SuperForm(array(
                             'value'     => $project->post_zipcode
                         ),
 
-                        'post_location' => array(
+/*                        'post_location' => array(
                             'type'      => 'textbox',
                             'class'     => 'inline',
                             'title'     => Text::get('personal-field-location'),
@@ -316,7 +316,7 @@ echo new SuperForm(array(
                             'errors'    => !empty($errors['post_country']) ? array($errors['post_country']) : array(),
                             'ok'        => !empty($okeys['post_country']) ? array($okeys['post_country']) : array(),
                             'value'     => $project->post_country
-                        )
+                        )*/
                     )
                 ),
             )

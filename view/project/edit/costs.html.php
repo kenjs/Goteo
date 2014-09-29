@@ -195,7 +195,7 @@ echo new SuperForm(array(
     'level'         => $this['level'],
     'method'        => 'post',
     'title'         => Text::get('costs-main-header'),
-    //'hint'          => Text::get('guide-project-costs'),
+    'hint'          => Text::get('guide-project-costs'),
     'class'         => 'aqua',      
     'elements'      => array(        
         'process_costs' => array (

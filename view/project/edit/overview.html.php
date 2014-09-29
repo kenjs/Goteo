@@ -78,6 +78,15 @@ foreach ($this['scope'] as $value => $label) {
         );
 }
 
+$project_location = array();
+
+foreach ($this['project_location'] as $value => $label) {
+    $project_location[] =  array(
+        'value'     => $value,
+        'label'     => $label
+        );
+}
+
 // media del proyecto
 /*
 if (!empty($project->media->url)) {
@@ -117,7 +126,7 @@ $superform = array(
     'action'        => '',
     'method'        => 'post',
     'title'         => Text::get('overview-main-header'),
-    //'hint'          => Text::get('guide-project-description'),
+    'hint'          => Text::get('guide-project-description'),
     'class'         => 'aqua',        
     'elements'      => array(
         'process_overview' => array (
@@ -220,18 +229,18 @@ $superform = array(
                 'video-preview' => $video,
                 
                 // universal subtitles video motivacion
-                'video_usubs' => array(
-                    'type'      => 'checkbox',
-                    'class'     => 'inline cols_1',
-                    'required'  => false,
-                    'name'      => 'video_usubs',
-                    'label'     => Text::get('overview-field-usubs'),
-                    //'hint'      => Text::get('tooltip-project-usubs'),
-                    'errors'    => array(),
-                    'ok'        => array(),
-                    'value'     => 1,
-                    'checked'   => (bool) $project->video_usubs
-                ),
+//                'video_usubs' => array(
+//                    'type'      => 'checkbox',
+//                    'class'     => 'inline cols_1',
+//                    'required'  => false,
+//                    'name'      => 'video_usubs',
+//                    'label'     => Text::get('overview-field-usubs'),
+//                    //'hint'      => Text::get('tooltip-project-usubs'),
+//                    'errors'    => array(),
+//                    'ok'        => array(),
+//                    'value'     => 1,
+//                    'checked'   => (bool) $project->video_usubs
+//                ),
                 // fin video motivacion
                 'goal' => array(
                     'type'      => 'textarea',
@@ -320,12 +329,25 @@ $superform = array(
             'value'     => $project->currently
         ),
 */
+/*
         'location' => array(
             'type'      => 'textbox',
             'name'      => 'project_location',
             'title'     => Text::get('overview-field-project_location'),
             'required'  => true,
             //'hint'      => Text::get('tooltip-project-project_location'),
+            'errors'    => !empty($errors['project_location']) ? array($errors['project_location']) : array(),
+            'ok'        => !empty($okeys['project_location']) ? array($okeys['project_location']) : array(),
+            'value'     => $project->project_location
+        ),
+*/
+        'project_location' => array(
+            'title'     => Text::get('overview-field-project_location'),
+            'type'      => 'select',
+            'required'  => true,
+            'options'   => $project_location,
+            'class'     => 'project_location cols_' . count($project_location),
+            //'hint'      => Text::get('tooltip-project-scope'),
             'errors'    => !empty($errors['project_location']) ? array($errors['project_location']) : array(),
             'ok'        => !empty($okeys['project_location']) ? array($okeys['project_location']) : array(),
             'value'     => $project->project_location

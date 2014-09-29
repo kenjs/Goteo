@@ -54,7 +54,7 @@ foreach ($project->supports as $support) {
                 'value' => $id,
                 'type'  => 'radio',
                 'class' => "support-type support_{$id}",
-                'hint'  => Text::get('tooltip-project-support-type-'.$id),
+                // 'hint'  => Text::get('tooltip-project-support-type-'.$id),
                 'label' => $type,
                 'checked' => $id == $support->type  ? true : false
             );
@@ -79,7 +79,7 @@ foreach ($project->supports as $support) {
                         'value'     => $support->support,
                         'errors'    => !empty($errors["support-{$support->id}-support"]) ? array($errors["support-{$support->id}-support"]) : array(),
                         'ok'        => !empty($okeys["support-{$support->id}-support"]) ? array($okeys["support-{$support->id}-support"]) : array(),
-                        'hint'      => Text::get('tooltip-project-support-support')
+                        // 'hint'      => Text::get('tooltip-project-support-support')
                     ),
                     "support-{$support->id}-type" => array(
                         'title'     => Text::get('supports-field-type'),
@@ -90,7 +90,7 @@ foreach ($project->supports as $support) {
                         'children'  => $support_types,
                         'errors'    => !empty($errors["support-{$support->id}-type"]) ? array($errors["support-{$support->id}-type"]) : array(),
                         'ok'        => !empty($okeys["support-{$support->id}-type"]) ? array($okeys["support-{$support->id}-type"]) : array(),
-                        'hint'      => Text::get('tooltip-project-support-type')
+                        // 'hint'      => Text::get('tooltip-project-support-type')
                     ),
                     "support-{$support->id}-description" => array(
                         'type'      => 'textarea',
@@ -102,7 +102,7 @@ foreach ($project->supports as $support) {
                         'value'     => $support->description,
                         'errors'    => !empty($errors["support-{$support->id}-description"]) ? array($errors["support-{$support->id}-description"]) : array(),
                         'ok'        => !empty($okeys["support-{$support->id}-description"]) ? array($okeys["support-{$support->id}-description"]) : array(),
-                        'hint'      => Text::get('tooltip-project-support-description')
+                        // 'hint'      => Text::get('tooltip-project-support-description')
                     ),
                     "support-{$support->id}-buttons" => array(
                         'type' => 'group',
@@ -146,7 +146,7 @@ echo new SuperForm(array(
     'level'         => $this['level'],
     'method'        => 'post',
     'title'         => Text::get('supports-main-header'),
-    'hint'          => Text::get('guide-project-supports'),    
+    'hint'          => Text::get('guide-project-supports'),
     'class'         => 'aqua',
     'elements'      => array(        
         'process_supports' => array (
@@ -156,7 +156,7 @@ echo new SuperForm(array(
         'supports' => array(
             'type'      => 'group',
             'title'     => Text::get('supports-fields-support-title'),
-            'hint'      => Text::get('tooltip-project-supports'),
+            // 'hint'      => Text::get('tooltip-project-supports'),
             'children'  => $supports + array(
                 'support-add' => array(
                     'type'  => 'submit',
@@ -172,7 +172,7 @@ echo new SuperForm(array(
             'required'  => false,
             'class'     => 'cols_3',
             'options'   => $skills,
-            'hint'      => Text::get('tooltip-user-skills'),
+            // 'hint'      => Text::get('tooltip-user-skills'),
             'errors'    => !empty($errors['skills']) ? array($errors['skills']) : array(),
             'ok'        => !empty($okeys['skills']) ? array($okeys['skills']) : array(),
         ),  

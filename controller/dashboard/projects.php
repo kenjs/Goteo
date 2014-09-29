@@ -465,7 +465,7 @@ namespace Goteo\Controller\Dashboard {
 
                 $new_support = new Model\Project\Support(array(
                             'project' => $project->id,
-                            'support' => 'Nueva colaboración',
+                            'support' => '',
                             'type' => 'task',
                             'description' => ''
                         ));
@@ -477,7 +477,7 @@ namespace Goteo\Controller\Dashboard {
                 } else {
                     $project->supports[] = new Model\Project\Support(array(
                                 'project' => $project->id,
-                                'support' => 'Nueva colaboración',
+                                'support' => '',
                                 'type' => 'task',
                                 'description' => ''
                             ));
