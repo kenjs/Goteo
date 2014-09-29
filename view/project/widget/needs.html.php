@@ -55,6 +55,12 @@ foreach ($project->costs as $cost) {
 		});
 	 });
 	</script>
+
+    <div id="legend">
+        <div class="min"><span>&nbsp;</span><?php echo Text::get('costs-field-required_cost-yes') ?></div>
+        <div class="max"><span>&nbsp;</span><?php echo Text::get('costs-field-required_cost-no') ?></div>
+    </div>
+
     <table width="100%">
         
         <?php foreach ($costs as $type => $list):
@@ -97,10 +103,5 @@ foreach ($project->costs as $cost) {
         </tfoot>
         
     </table>
-    
-    <div id="legend">
-    	<div class="min"><span>&nbsp;</span><?php echo Text::get('costs-field-required_cost-yes') ?></div>
-        <div class="max"><span>&nbsp;</span><?php echo Text::get('costs-field-required_cost-no') ?></div>
-    </div>
     
 </div>
