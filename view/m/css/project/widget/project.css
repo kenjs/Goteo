@@ -402,14 +402,14 @@ div.widget.project-support div.graph > div.optimum {
     right: 0;
     margin-top: -6px;
 }
-div.widget.project div.meter div.graph .minimum,
+/*div.widget.project div.meter div.graph .minimum,
 div.widget.project-support div.graph > div.minimum {
     background-color: #dc940f;
     height: 100%;
     position: absolute;
     left: 0;
     top: 0;
-}
+}*/
 div.widget.project div.meter dl,
 div.widget.project-support dl {
     position: relative;
@@ -787,6 +787,10 @@ div.widget.project div.rewards ul li a {
     text-indent: 2000px;
     position: relative;
     z-index: 910;
+}
+
+div.widget.project div.rewards ul li.food  {
+    background-image: url('/view/css/icon/s/food.png');
 }
 
 div.widget.project div.rewards ul li.file  {

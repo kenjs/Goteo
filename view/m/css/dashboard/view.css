@@ -271,6 +271,7 @@ body.dashboard div#main div.widget.gestrew div.reward span.cofinanciadores{color
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec{display:block;border-bottom:#8D878E 1px solid;margin-bottom:5px;}
 body.dashboard div#main div.widget.gestrew div.reward ul { list-style: none outside none; padding:0px; margin: 0px 0px 3px 0px; float:none; font-size:12px; }
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li { background:none no-repeat scroll 0px 0px transparent; padding: 0px 0px 0px 29px; min-height: 34px; }
+body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.file { background-image: url('/view/css/icon/s/food.png'); }
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.file { background-image: url('/view/css/icon/s/file.png'); }
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.money { background-image: url('/view/css/icon/s/money.png'); }
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.code { background-image: url('/view/css/icon/s/code.png'); }

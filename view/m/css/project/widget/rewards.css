@@ -295,6 +295,12 @@ div.widget.project-rewards ul li.design,
     background-image: url('/view/css/icon/m/design.png');
 }
 
+div.widget.project-invest ul li.food,
+div.widget.project-rewards ul li.food,
+#rewards-summary ul li.food {
+    background-image: url('/view/css/icon/m/food.png');
+}
+
 div.widget.project-invest ul li.other,
 div.widget.project-rewards ul li.other,
 #rewards-summary ul li.other {
@@ -527,7 +533,7 @@ div.widget.project-rewards div.project-widget-box div > ul > li:last-child {
 
 
 
-/*¥¹¥Þ¥Û*/
+/*ï¿½ï¿½ï¿½Þ¥ï¿½*/
 
 body.project-show div#main div#project-collaborations .project-widget-box {
     background-color: #fff;
