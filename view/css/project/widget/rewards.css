@@ -192,6 +192,12 @@ div.widget.project-rewards ul li > .name,
     text-transform: none;
 }
 
+div.widget.project-invest ul li.food,
+div.widget.project-rewards ul li.food,
+#rewards-summary ul li.food{
+    background-image: url('/view/css/icon/m/food.png');
+}
+
 div.widget.project-invest ul li.file,
 div.widget.project-rewards ul li.file,
 #rewards-summary ul li.file{

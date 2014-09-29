@@ -33,7 +33,7 @@ div.widget.project {
 
 div.widget.project > *  {
     margin: 0;
-    padding: 12px;
+    padding: 0;
 }
 
 div.widget.project div.image {
@@ -149,7 +149,7 @@ div.widget.project div.image div.categories {
 div.widget.project > .title {    
     font-size: 14px !important;
     height: 2em;
-    padding: 0px 12px !important;
+    padding: 0 !important;
     margin: 0px !important;
 }
 
@@ -179,7 +179,7 @@ div.widget.project.balloon > .title a {
 }
 
 div.widget.project > .author {
-    padding: 2px 0px 0px 12px;
+    padding: 2px 0 0 0 ;
 	overflow:hidden;
 }
 
@@ -193,6 +193,11 @@ div.widget.project > .author a {
 	z-index:100;
 }
 
+div.widget.project > .skills,
+div.widget.project > .skills a {
+    font-size: 12px;
+}
+
 div.widget.project > .skills .matched_skill {
     background-color:#ff9999;
 }
@@ -202,7 +207,7 @@ div.widget.project > .title a:hover{
 }
 
 div.widget.project div.description {
-    padding: 2px 12px;
+    padding: 5px 0;
     min-height: 42px;
     font-size: 12px;
 }
@@ -211,7 +216,7 @@ div.widget.project div.meter {
     border-top: 1px solid #d1d3d4;
     padding: 4px 0 78px !important;
     position: relative;
-    margin: 0 12px !important;
+    margin: 0 !important;
     height: 55px;
 }
 
@@ -238,21 +243,22 @@ div.widget.project div.meter div.graph {
 }
 
 /* Toda la movida para lo del obtenido */
-div.widget.project div.meter.activable {
+/*div.widget.project div.meter.activable {
     z-index: 999
-}
+}*/
 div.widget.project div.meter.activable.active {
     background-color: #EBEAEB;
 }
-div.widget.project div.meter div.obtained {
+/*div.widget.project div.meter div.obtained {
     display: none;
     position: relative;
     top: -35px;
     text-align: center;
-}
+}*/
 div.widget.project div.meter h3.title.obtained {
     padding-left: 5px;
 }
+/*
 div.widget.project div.meter div.obtained strong {
     font-size: 26px;
     font-weight: bold;
@@ -260,6 +266,7 @@ div.widget.project div.meter div.obtained strong {
     padding-right: 20px;
     border-right: 1px solid #a7a9ac;
 }
+*/
 div.widget.project div.meter div.obtained span.euro {
     width: 19px;
     height: 19px;
@@ -290,10 +297,10 @@ div.widget.project div.meter.active div.graph {
     border: none !important;
     margin: 0px 5px 116px;
 }
-div.widget.project div.meter.active h3.title.obtained, 
+/*div.widget.project div.meter.active h3.title.obtained,
 div.widget.project div.meter.active div.obtained {
     display: block !important;
-}
+}*/
 div.widget.project div.meter.active dl .days {
     display: block !important;
     background-color: #f8f8f8 !important;
@@ -317,61 +324,10 @@ div.widget.project div.meter > h3.investment{
     color:#336633;
 }
 
-div.widget.project div.meter div.graph .minimum {
-    background-color: #dc940f;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-div.widget.project div.meter div.graph .minimum .done {
-    background-color: #c5da4d;
-    height: 10px;
-    position: absolute;
-    left: 0;
-    top: -2px;
-}
-
-div.widget.project div.meter.hor div.graph .minimum .done {
-    max-width: 215px;
-}
-
-div.widget.project div.meter div.graph .minimum .done strong {
-    background: url("project/marker.png") no-repeat;
-    display: block;
-    height: 16px;
-    line-height: 2000px;
-    margin-right: -10px;
-    margin-top: -4px;
-    overflow: hidden;
-    position: absolute;
-    right: 0;
-    text-indent: 2000px;
-    width: 17px;
-}
-
-div.widget.project div.meter div.graph .minimum .left {
-    float: right;
-    height: 19px;
-    border-right: 4px solid #dc940f;
-    margin-right: -2px;
-    margin-top: -6px;
-}
-
-div.widget.project div.meter div.graph .optimum {
-    border-right: 4px solid #BCCCD8;
-    height: 19px;
-    margin-right: -2px;
-    position: absolute;
-    right: 0;
-    margin-top: -6px;
-}
-
-div.widget.project div.meter dl {
+/*div.widget.project div.meter dl {
     margin: -78px 40px 0 0;
     position: relative;
-}
+}*/
 
 div.widget.project div.meter dl * {
     margin: 0;
@@ -436,13 +392,13 @@ body.discover div.widget.project div.meter dl dt.optimum {
 body.discover div.widget.project div.meter dl dd.optimum {
     right: 27px;
 }
-body.discover div.widget.project div.meter dl dt.minimum {
-    /*position: relative;*/
-    /*right: 30px;*/
-}
-body.discover div.widget.project div.meter dl dd.minimum {
+/*body.discover div.widget.project div.meter dl dt.minimum {
+    position: relative;
+    right: 30px;
+}*/
+/*body.discover div.widget.project div.meter dl dd.minimum {
     text-align: right;
-}
+}*/
 body.discover div.widget.project div.meter dl dd.minimum strong {
     width: 96px;
     /*right: 46px;*/
@@ -457,6 +413,7 @@ div.widget.project div.meter dl dd.optimum span {
     margin-left: -2px;
 }
 
+/*
 div.widget.project div.meter dl .minimum>* {
     display: block;
     width: 96px;
@@ -465,6 +422,7 @@ div.widget.project div.meter dl .minimum>* {
     margin-right: -30px;
 }
 
+*/
 div.widget.project div.meter dl dd.minimum span {
     position: absolute;
     top: 0 ;
@@ -490,13 +448,13 @@ div.widget.project div.meter dl .supporters {
     display:  none;
 }
 
-div.widget.project div.meter dl span {
+/*div.widget.project div.meter dl span {
     width: 16px;
     height: 16px;
     overflow: hidden;
     display: inline-block;
     margin-bottom: -1px;
-}
+}*/
 
 div.widget.project div.meter dl dd.optimum span {
     height: auto;
@@ -504,7 +462,7 @@ div.widget.project div.meter dl dd.optimum span {
     right: 3px;
 }
 
-div.widget.project div.meter dl .days {
+/*div.widget.project div.meter dl .days {
     position: absolute;
     border-top: 1px solid #d1d3d4;
     top: 90px;
@@ -512,7 +470,7 @@ div.widget.project div.meter dl .days {
     font-size: 12px;
     line-height: 1.5em;
     font-weight: bold;
-}
+}*/
 
 div.widget.project div.meter dl dt.days {
     width: 70px;
@@ -528,15 +486,6 @@ div.widget.project div.meter dl dd.days {
     padding-left: 8px;
     color: #ee4843;
     font-weight: bold;
-}
-
-div.widget.project div.rewards {
-    border-top: 1px solid #d1d3d4;
-    padding: 4px 0 0 !important;
-    position: relative;
-    margin: 20px 12px 8px !important;
-    height: 22px;
-    overflow: hidden;
 }
 
 div.widget.project div.rewards h2,
@@ -587,6 +536,10 @@ div.widget.project div.rewards ul li a {
     text-indent: 2000px;
     position: relative;
     z-index: 910;
+}
+
+div.widget.project div.rewards ul li.food  {
+    background-image: url('/view/css/icon/s/food.png');
 }
 
 div.widget.project div.rewards ul li.file  {
