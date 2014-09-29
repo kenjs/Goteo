@@ -94,6 +94,15 @@ jQuery(document).ready(function($) {
 
 
     <div id="main">
+        <div class="about_cf">
+            <p>「クラウドファンディングのページにログインします。ユーザー登録がお済みでない方は、まずはご登録ください。ユーザー登録頂くと、プロジェクトの作成や、自分が共感するプロジェクトへの支援が出来るようになります。</p>
+            <dl>
+                <dt>クラウドファンディングとは?</dt>
+                <dd>個人や団体が実現したい「プロジェクト」を提案し、そのアイデアに賛同する一般の方々から、主にウェブを通じて資金を募るシステムのことです。LOCAL GOODでは資金だけでなく、地域課題解決に必要なスキルも募集しています。</dd>
+            </dl>
+            <p class="link"><a href="<?= LOCALGOOD_WP_BASE_URL ?>/user_guide/">ユーザーガイドはこちら</a></p>
+            <p class="link"><a href="<?= LOCALGOOD_WP_BASE_URL ?>/riyou_kiyaku_menu/">利用規約はこちら</a></p>
+        </div>
         <div class="login">
             <div>
                 <h2><?php echo Text::get('login-access-header'); ?></h2>
