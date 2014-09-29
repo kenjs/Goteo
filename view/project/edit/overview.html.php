@@ -78,6 +78,15 @@ foreach ($this['scope'] as $value => $label) {
         );
 }
 
+$project_location = array();
+
+foreach ($this['project_location'] as $value => $label) {
+    $project_location[] =  array(
+        'value'     => $value,
+        'label'     => $label
+        );
+}
+
 // media del proyecto
 /*
 if (!empty($project->media->url)) {
@@ -320,12 +329,25 @@ $superform = array(
             'value'     => $project->currently
         ),
 */
+/*
         'location' => array(
             'type'      => 'textbox',
             'name'      => 'project_location',
             'title'     => Text::get('overview-field-project_location'),
             'required'  => true,
             //'hint'      => Text::get('tooltip-project-project_location'),
+            'errors'    => !empty($errors['project_location']) ? array($errors['project_location']) : array(),
+            'ok'        => !empty($okeys['project_location']) ? array($okeys['project_location']) : array(),
+            'value'     => $project->project_location
+        ),
+*/
+        'project_location' => array(
+            'title'     => Text::get('overview-field-project_location'),
+            'type'      => 'select',
+            'required'  => true,
+            'options'   => $project_location,
+            'class'     => 'project_location cols_' . count($project_location),
+            //'hint'      => Text::get('tooltip-project-scope'),
             'errors'    => !empty($errors['project_location']) ? array($errors['project_location']) : array(),
             'ok'        => !empty($okeys['project_location']) ? array($okeys['project_location']) : array(),
             'value'     => $project->project_location
