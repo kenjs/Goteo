@@ -34,9 +34,7 @@ $projects = Goteo\Model\Project::published("available");
         ?>
 
         <?php echo new View('view/project/widget/project.html.php', array(
-            'project' => $project,
-            'balloon' => '<h4>' . htmlspecialchars($project->title) . '</h4>' .
-                '<blockquote>' . $project->description . '</blockquote>'
+            'project' => $project
         )) ?>
 
     <?php endforeach ?>
