@@ -95,6 +95,6 @@ include 'view/header.html.php';
         } ?>
 
     </div>
-</div><!--.contents_wrapper-->//
+</div><!--.contents_wrapper-->
 <?php include 'view/footer.html.php'; ?>
 <?php include 'view/epilogue.html.php'; ?>
