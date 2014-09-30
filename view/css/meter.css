@@ -141,8 +141,6 @@ div.widget.project div.meter > h3.ronda {
 
 div.widget.project div.meter.activable {
     z-index: 999;
-    /*padding-left: 16px!important;
-    padding-right: 16px!important;*/
     max-width: 288px;
 }
 
@@ -156,10 +154,15 @@ div.widget.project div.rewards {
 }
 
 div.widget.project div.meter {
+    border-top: 1px solid #d1d3d4;
+    margin: 0 !important;
+}
+div.widget.project div.meter {
     padding: 4px 0 78px !important;
     position: relative;
     height: 40px;
 }
+
 div.widget.project div.meter dl dt.minimum,
 div.widget.project div.meter dl dt.minimum {
     color: #cc6600;
@@ -173,15 +176,6 @@ div.widget.project div.meter dl dd.minimum {
     color: #cc6600;
 }
 
-body.user-profile div.widget.project div.meter dl dd.optimum {
-    left: 96px;
-    width: 96px;
-    padding-top: 35px;
-}
-
-body.user-profile div.widget.project div.meter dl dd.days {
-    padding-top: 35px;
-}
 body.home div.widget.project div.meter dl dd.days strong,
 body.user-profile div.widget.project div.meter dl dd.days strong {
     color: #996666;
@@ -190,7 +184,7 @@ body.user-profile div.widget.project div.meter dl dd.days strong {
 div.widget.project div.meter div.obtained {
     display: none;
     position: relative;
-    top: -100px;
+    top: -40px;
     text-align: center;
 }
 div.widget.project div.meter div.obtained strong {
@@ -205,15 +199,7 @@ div.widget.project div.meter.active div.obtained {
     display: block !important;
 }
 
-/*div.widget.project div.meter div.graph .minimum .done {
-    background-color: #c5da4d;
-    height: 10px;
-    position: absolute;
-    left: 0;
-    top: -2px;
-}*/
-div.widget.project div.meter div.graph .minimum .done,
-div.widget.project-support div.meter.ver div.graph .minimum .done {
+div.widget.project div.meter div.graph .minimum .done {
     background-color: #c5da4d;
     height: 12px;
     max-width: 288px;
@@ -222,12 +208,12 @@ div.widget.project-support div.meter.ver div.graph .minimum .done {
     top: 0;
 }
 div.widget.project div.meter div.graph .minimum {
-    /*background-color: #dc940f;*/
     height: 100%;
     position: absolute;
     left: 0;
     top: 0;
 }
+
 div.widget.project div.meter.hor div.graph .minimum .done {
     max-width: 215px;
 }
@@ -249,13 +235,11 @@ div.widget.project div.meter div.graph .minimum .done strong {
 div.widget.project div.meter div.graph .minimum .left {
     float: right;
     height: 19px;
-    /*border-right: 4px solid #dc940f;*/
     margin-right: -2px;
     margin-top: -6px;
 }
 
 div.widget.project div.meter div.graph .optimum {
-    /*border-right: 4px solid #BCCCD8;*/
     height: 19px;
     margin-right: -2px;
     position: absolute;
@@ -264,23 +248,23 @@ div.widget.project div.meter div.graph .optimum {
 }
 
 
-div.widget.project div.meter div.graph .minimum .left,
-div.widget.project-support div.graph .minimum .left {
+div.widget.project div.meter.hor div.graph .minimum .left,
+div.widget.project-support.hor div.graph .minimum .left {
     float: right;
     height: 19px;
     margin-right: -2px;
     margin-top: -6px;
 }
 
-div.widget.project div.meter div.graph,
-div.widget.project-support div.graph {
+div.widget.project div.meter.hor div.graph,
+div.widget.project-support div.meter.hor div.graph {
     background-color: #BCCCD8;
     height: 12px;
     margin: 56px 0 0;
     position: relative;
 }
-div.widget.project div.meter div.graph .minimum,
-div.widget.project-support div.graph > div.minimum {
+div.widget.project div.meter.hor div.graph .minimum,
+div.widget.project-support div.meter.hor div.graph > div.minimum {
     background-color: #dc940f;
     height: 100%;
     position: absolute;
@@ -299,7 +283,6 @@ div.widget.project div.meter.activable.active {
     background-color: #EBEAEB;
 }
 
-
 div.widget.project div.meter dl .days {
     position: absolute;
     border-top: 1px solid #d1d3d4;
@@ -309,13 +292,12 @@ div.widget.project div.meter dl .days {
     line-height: 1.5em;
     font-weight: bold;
 }
+div.widget.project div.meter.hor.active dl .days {
+    top: 76px;
+}
 
 div.widget.project div.meter dl dt.days {
     width: 90px;
-}
-
-div.widget.project div.meter.active dl .days {
-    /*top:16px;*/
 }
 
 div.widget.project div.meter dl dt.minimum {
@@ -479,4 +461,73 @@ div.widget.project div.meter dl dd.optimum span {
     font-size: 12px;
     vertical-align: bottom;
 }
+div.widget.project div.meter h3.title.obtained,
+div.widget.project div.meter.active dl dt.optimum,
+div.widget.project div.meter.active dl dt.minimum,
+div.widget.project div.meter.active dl dd.optimum,
+div.widget.project div.meter.active dl dd.minimum {
+    display:none;
+}
 
+
+/*--------------------------------------------------
+  meter ver
+--------------------------------------------------*/
+
+div.widget.project-support div.ver div.graph > div.minimum {
+    background-color: #dc940f;
+    position: relative;
+    min-height: 145px !important;
+}
+div.widget.project-support div.ver div.graph {
+    background-color: #dcdcdc;
+    width: 20px;
+    overflow: visible;
+    font-size: 0;
+    margin-left: 14px;
+    float: left;
+    padding-top: 22px;
+}
+div.widget.project-support div.graph > div.optimum {
+    background-color: #bccdd8;
+    height: 45px;
+}
+
+div.widget.project-support div.meter.ver div.graph .minimum .done {
+    background-color: #c5da4d;
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    overflow: visible;
+}
+div.widget.project-support div.meter.ver div.graph .minimum .done {
+    max-height: 212px;
+}
+
+div.widget.project-support div.meter.ver div.graph > div.minimum > div.done strong {
+    background: url('/view/css/project/widget/support/marker.png') no-repeat center center;
+    width: 30px;
+    padding: 0 8px 0 8px;
+    margin-top: -12px;
+    color: #000000;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 20px;
+    margin-left: -23px;
+    text-align: center;
+    display: block;
+}
+
+div.widget.project-support div.meter.ver div.graph > div.optimum,
+div.widget.project-support div.meter.ver div.graph > div.minimum {
+    width: 20px;
+    overflow: visible;
+}
+
+body.project-show div#main > div.side > div.widget div.meter.ver h3.title.ronda {
+    color:#999900;
+    text-transform: lowercase;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: right;
+}

@@ -212,14 +212,6 @@ div.widget.project div.description {
     font-size: 12px;
 }
 
-div.widget.project div.meter {
-    border-top: 1px solid #d1d3d4;
-    padding: 4px 0 78px !important;
-    position: relative;
-    margin: 0 !important;
-    height: 55px;
-}
-
 div.widget.project div.meter h2,
 div.widget.project div.meter h3,
 div.widget.project div.meter h4,
@@ -233,40 +225,13 @@ div.widget.project div.meter h8 {
     padding: 2px 0 0;
 }
 
-
-div.widget.project div.meter div.graph {
-    background-color: #BCCCD8;
-    height: 8px;
-    border-right: 40px solid #dcdcdc;
-    margin: 60px 5px 70px;
-    position: relative;
-}
-
 /* Toda la movida para lo del obtenido */
-/*div.widget.project div.meter.activable {
-    z-index: 999
-}*/
 div.widget.project div.meter.activable.active {
     background-color: #EBEAEB;
 }
-/*div.widget.project div.meter div.obtained {
-    display: none;
-    position: relative;
-    top: -35px;
-    text-align: center;
-}*/
 div.widget.project div.meter h3.title.obtained {
     padding-left: 5px;
 }
-/*
-div.widget.project div.meter div.obtained strong {
-    font-size: 26px;
-    font-weight: bold;
-    color: #cc6600;
-    padding-right: 20px;
-    border-right: 1px solid #a7a9ac;
-}
-*/
 div.widget.project div.meter div.obtained span.euro {
     width: 19px;
     height: 19px;
@@ -281,11 +246,6 @@ div.widget.project div.meter div.obtained span.percent {
     font-weight: bold;
     color: #a7a9ac;
     padding-left: 15px;
-}
-div.widget.project div.meter h3.title.obtained,
-div.widget.project div.meter.active dl > dd,
-div.widget.project div.meter.active dl > dt {
-    display:none;
 }
 div.widget.project div.meter.active h3.title.investment,
 div.widget.project div.meter.active h3.title.ronda,
@@ -327,28 +287,9 @@ body.discover div.widget.project div.meter dl dt.optimum {
 body.discover div.widget.project div.meter dl dd.optimum {
     right: 27px;
 }
-/*body.discover div.widget.project div.meter dl dt.minimum {
-    position: relative;
-    right: 30px;
-}*/
-/*body.discover div.widget.project div.meter dl dd.minimum {
-    text-align: right;
-}*/
 body.discover div.widget.project div.meter dl dd.minimum strong {
     width: 96px;
-    /*right: 46px;*/
 }
-
-/*div.widget.project div.meter dl .days {
-    position: absolute;
-    border-top: 1px solid #d1d3d4;
-    top: 90px;
-    padding: .8em 0;    
-    font-size: 12px;
-    line-height: 1.5em;
-    font-weight: bold;
-}*/
-
 
 h4.author:hover a{
 	color:#c5da4d;
