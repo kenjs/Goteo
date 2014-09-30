@@ -83,12 +83,13 @@ uasort($project->individual_rewards,
             <h<?php echo $level + 2 ?> class="name"><?php echo htmlspecialchars($individual->icon_name) . ': ' . htmlspecialchars($individual->reward) ?></h<?php echo $level + 2 ?>
             <p><?php echo htmlspecialchars($individual->description)?></p>
 
-                    <?php if (!empty($individual->units)) : ?>
+                    <?/*php if (!empty($individual->units)) : ?>
                     <strong><?php echo Text::get('project-rewards-individual_reward-limited'); ?></strong><br />
                     <?php $units = ($individual->units - $individual->taken);
                     echo Text::get('project-rewards-individual_reward-units_left', $units); ?><br />
                 <?php endif; ?>
                 <div class="investors"><span class="taken"><?php echo $individual->taken; ?></span><?php echo Text::get('project-view-metter-investors'); ?></div>
+*/?>
 
         </li>
         <?php endforeach ?>

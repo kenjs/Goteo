@@ -44,7 +44,7 @@ include 'view/prologue.html.php';
             <a href="/user/<?php echo $project->owner; ?>" target="_blank"><img src="<?php echo $project->user->avatar->getLink(50, 50, true); ?>" /></a>
             <h2><span><?php echo htmlspecialchars($project->name) ?></span></h2>
             <div class="project-subtitle"><?php echo htmlspecialchars($project->subtitle) ?></div>
-            <div class="project-by"><a href="/user/<?php echo $project->owner; ?>" target="_blank">Por: <?php echo $project->user->name; ?></a></div>
+            <div class="project-by"><a href="/user/<?php echo $project->owner; ?>" target="_blank">プロジェクトオーナー：<?php echo $project->user->name; ?></a></div>
         </div>
     </div>
 

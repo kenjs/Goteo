@@ -88,15 +88,22 @@ namespace Goteo\Model\Project {
         public function getEmbedCode ($universalSubtitles = false, $lang = \LANG) {
 
             $code = '';
+            $size = '';
+            if (PC_VIEW){
+                $size = '"width": "620", "height": "380"';
+            } else {
+                $size = '"width": "320", "height": "auto"';
+            }
+
 
             if (!empty($this->url)) {
 
                 if ($universalSubtitles) {
                     return '<script type="text/javascript" src="http://s3.amazonaws.com/s3.www.universalsubtitles.org/embed.js">
 ({
-    "video_url": "'. trim($this->url) . '",
-    "base_state": {"language": "'.$lang.'"},
-    "video_config": {"width": "620", "height": "380"}
+        "video_url": "'. trim($this->url) . '",
+        "base_state": {"language": "'.$lang.'"},
+        "video_config": {' . $size .'}
 })
 </script>';
                 }

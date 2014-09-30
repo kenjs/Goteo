@@ -27,7 +27,8 @@ namespace Goteo\Controller\Dashboard {
 		Goteo\Library\Feed,
 		Goteo\Library\Mail,
 		Goteo\Library\Template,
-		Goteo\Library\Message;
+		Goteo\Library\Message,
+        Aws\Ses\SesClient;
 
 /*
  * las opciones para /dashboard/projects:
@@ -217,6 +218,7 @@ namespace Goteo\Controller\Dashboard {
          * @return boolean
          */
         public static function process_mailing ($option, $project) {
+
             $who = array();
 
             // verificar que hay mensaje
@@ -309,17 +311,60 @@ namespace Goteo\Controller\Dashboard {
                 $receivers[] = $user;
             }
 
+            //mailing use aws ses
+            require 'library/aws/aws-autoloader.php';
+            try {
+                $sesClient = SesClient::factory(array(
+                    'key' => AWS_SES_ACCESS,
+                    'secret' => AWS_SES_SECERET,
+                    'region' => \Aws\Common\Enum\Region::OREGON
+                ));
+            } catch (SesException $exc) {
+                die($exc->getMessage());
+            }
+            foreach($receivers as $value){
+                try {
+                    $result = $sesClient->sendEmail(array(
+                        'Source' => AWS_SES_SOURCE,
+                        'Destination' => array(
+                            'ToAddresses' => array($value->email)
+                        ),
+                        'Message' => array(
+                            'Subject' => array(
+                                'Data' => $subject,
+                                'Charset' => AWS_SES_CHARSET,
+                            ),
+                            'Body' => array(
+                                'Text' => array(
+                                    'Data' => $msg_content,
+                                    'Charset' => AWS_SES_CHARSET,
+                                ),
+                                'Html' => array(
+                                    'Data' => $content,
+                                    'Charset' => AWS_SES_CHARSET,
+                                ),
+                            ),
+                        ),
+                    ));
+                    Message::Info(Text::get('dashboard-investors-mail-sended', $value->name));
+                } catch (SesException $exc) {
+                    Message::Error(Text::get('dashboard-investors-mail-fail', $value->name));
+                }   
+            }
+            return true;
+            /* end */
+
             // - en la plantilla hay que cambiar %NAME% por %USERNAME% para que sender reemplace
 
             // - 
 
             // - se crea un registro de tabla mail
-            $sql = "INSERT INTO mail (id, email, html, template, node) VALUES ('', :email, :html, :template, :node)";
+            $sql = "INSERT INTO mail (id, email, html, template) VALUES ('', :email, :html, :template)";
             $values = array (
                 ':email' => 'any',
                 ':html' => $content,
                 ':template' => $template->id,
-                ':node' => \GOTEO_NODE
+                //':node' => \GOTEO_NODE
             );
             $query = \Goteo\Core\Model::query($sql, $values);
             $mailId = \Goteo\Core\Model::insertId();
@@ -420,7 +465,7 @@ namespace Goteo\Controller\Dashboard {
 
                 $new_support = new Model\Project\Support(array(
                             'project' => $project->id,
-                            'support' => 'Nueva colaboración',
+                            'support' => '',
                             'type' => 'task',
                             'description' => ''
                         ));
@@ -432,7 +477,7 @@ namespace Goteo\Controller\Dashboard {
                 } else {
                     $project->supports[] = new Model\Project\Support(array(
                                 'project' => $project->id,
-                                'support' => 'Nueva colaboración',
+                                'support' => '',
                                 'type' => 'task',
                                 'description' => ''
                             ));

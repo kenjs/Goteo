@@ -23,7 +23,7 @@ div.widget.project-collaborations h4.supertitle {
 }
 
 div.widget.project-collaborations ul {
-    margin: 1em 0;
+    margin: 1em 0 0 0;
     padding: 0;
     list-style: none;
 }
@@ -107,3 +107,26 @@ div.widget.project-collaborations a.button {
     font-size: 14px;
     line-height: 50px;
 }
+
+
+
+
+/*¥Ö¥í¥°»î„Óˆó¸æ¤Î¥µ¥¤¥É¥Ð©`¤Î¥Ü¥¿¥ó*/
+
+body.project-show div#main div.side div#project-collaborations .project-widget-box {
+    padding: 0 20px;
+    margin: 0;
+}
+
+body.project-show div#main div.side div#project-collaborations .project-widget-box li.support.lend{
+    padding: 0;
+    margin: 0;
+}
+
+body.project-show div#main div.side div#project-collaborations .project-widget-box li a.button.green {
+    margin: 0 auto 10px;
+    text-align: center;
+    display: block;
+}
+
+

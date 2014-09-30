@@ -28,6 +28,7 @@ $shares     = $this['shares'];
        <!-- lista de categorías -->
         <div class="widget categorylist">
             <h3 class="title"><?php echo Text::get('profile-sharing_interests-header');?></h3>
+            <?/*
 			<!--
             <div class="filters">
                 <span>Ver por:</span>
@@ -53,6 +54,7 @@ $shares     = $this['shares'];
                     <?php endforeach; ?>
                 </ul>
             </div>
+        */?>
         </div>
         <!-- fin lista de categorías -->
         

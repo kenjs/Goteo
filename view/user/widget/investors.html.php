@@ -36,7 +36,7 @@ $cuantos = count($this['investors']);
                 endforeach ?>
             </ul>
         </div>
-        <a class="more" href="/user/profile/<?php echo $this['user']->id ?>/investors"><?php echo Text::get('regular-see_more'); ?></a>
     </div>
+    <a class="more" href="/user/profile/<?php echo $this['user']->id ?>/investors"><?php echo Text::get('regular-see_more'); ?></a>
 </div>
 <?php }?>

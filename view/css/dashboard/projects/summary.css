@@ -239,38 +239,10 @@ body.dashboard div#meter-big dl .minimum > * {
     width: 60px;
     margin-right: -30px;
 }
-/*div.widget.project div.meter dl dd.minimum span {
-    position: absolute;
-    right: -36px;
-    top: -21px;
-}*/
-/*body.div.widget.project div.meter dl dd.minimum span {
-    right: -36px;
-}*/
-
-div.widget.project div.meter dl dd.optimum span {
-    height: auto;
-    position: relative;
-    right: 3px;
-}
-
 body.dashboard div#meter-big dl dt.minimum {
     position: absolute;
     top: -60px;
 }
-
-/*body.dashboard div#meter-big dl dd.minimum {
-    margin-left: 30px;
-}
-body.dashboard div#meter-big dl dt.minimum {
-    margin-left: 80px;
-}*/
-
-
-
-/*body.dashboard div#meter-big dl dt.minimum span {
-    left: 0;
-}*/
 
 body.dashboard div#meter-big dl dd.minimum > * {
     position: absolute;

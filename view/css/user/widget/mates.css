@@ -146,8 +146,109 @@ div.widget.user-mates a:hover.more  {
 
 /* only center widget
 **********************/
-div.center div.widget.user-mates .users ul > li{
+/*div.center div.widget.user-mates .users ul > li{
 	width:276px !important; 
 	max-width:276px !important;
 	margin-bottom:0
-	}
+	}*/
+
+
+div.center div.widget.user-mates .users ul > li{
+    width:308px !important; 
+    max-width:308px !important;
+    margin-bottom:0
+    }
+
+
+/*仇及交奈扒奈及鶸庤side*/
+
+body.user-profile div#main div.side div.widget.user-mates {
+ padding: 0;
+ margin: 0 0 20px 0;
+}
+
+body.user-profile div.widget.user-mates .project-widget-box, div.widget.user-supporters .project-widget-box {
+    padding: 0;
+    margin: 0;
+    background-color: #e5e5e5;
+}
+
+body.user-profile div.widget.user-mates h3.supertitle{
+    font-weight: normal;
+    margin: 0;
+    padding: .5em 2px;
+    border-bottom: 1px solid #21b0b0;
+    font-size: 18px;
+    background-color: #21b0b0;
+    color: #f5f5f5;
+    padding-left: 8px;
+}
+
+body.user-profile div.widget.user-mates div.categories {
+    padding: 0 0 0 20px;
+    line-height: 27px;
+    background-color: #efefef;
+    margin: 0;
+}
+
+body.user-profile div.widget.user-mates div.categories ul li {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+body.user-profile div.widget.user-mates div.users h3.supertitle {
+    margin: 0;
+    padding: 4px 0 4px 20px;
+    background-color: #666666;
+    color: #f5f5f5;
+    font-size: 14px;
+    font-weight: normal;
+    border: none;
+    height: auto;
+    line-height: normal;
+}
+
+body.user-profile div.widget.user-mates div.users ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    overflow: auto;
+    background-color: #fff;
+}
+
+body.user-profile div.widget.user-mates .users ul > li {
+    float: left;
+    /* height: 62px; */
+    margin:-1px 0 0 0;
+    overflow: hidden;
+    padding: 8px 0;
+    position: relative;
+    width: 164px;
+    border-right: 1px dashed #c0c0c0;
+    border-top: 1px dashed #c0c0c0;
+}
+
+body.user-profile div.widget.user-mates .users ul > li:nth-child(2n+2) {
+    border-right: none;
+}
+
+/*適五毛��月*/
+
+body.user-profile .side div.widget.user-mates a.more, div.center div.widget.user-mates a.more {
+    border-top: 1px dashed #c0c0c0;
+    float: none;
+    display: block;
+    background-color: #fff;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px!important;
+    line-height: 1.5em;
+    height: auto;
+}
+
+
+

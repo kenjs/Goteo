@@ -68,12 +68,12 @@ div.superform > div.hint {
 }
 
 body.js div.superform > div.hint {
-    background: url('superform/wizard.png') no-repeat right top;
-    border-right: 1px dashed #b7c2c5;
+    /*background: url('superform/wizard.png') no-repeat right top;*/
+    /*border-right: 1px dashed #b7c2c5;*/
 }
 
 div.superform > div.elements {
-    border-right: 1px dashed #b7c2c5;
+    /*border-right: 1px dashed #b7c2c5;*/
     position: relative;
 }
 
@@ -106,7 +106,7 @@ div.superform > div.hint blockquote {
 }
 
 body.js div.superform > div.hint blockquote {
-    margin-right: 250px;
+    margin-right: 251px;
 }
 
 div.superform > div.hint blockquote p {
@@ -189,7 +189,7 @@ div.superform div.elements > ol > li > div.contents + div.children > div.element
 div.superform input[type='text'],
 div.superform input[type='password'],
 div.superform textarea {
-    padding: .4em;
+    /*padding: .4em;*/
     /*background-color: #d7d9da;
     border: 1px solid #58595b;*/
     min-height: 27px;
@@ -241,7 +241,7 @@ div.superform li.element.hidden {
 
 div.superform li.element.textbox > div.contents,
 div.superform li.element.textarea > div.contents {
-    padding-right: .6em;
+    /*padding-right: .6em;*/
 }
 
 div.superform li.element.textbox > div.contents > input[type="text"],
@@ -615,9 +615,14 @@ body.project-edit div.superform ol li.element div.contents input {
     font-size: 12px;
     line-height: 16px;
     font-weight: normal;
-    padding: 0.3em 1.2em;
+    /*padding: 0.3em 1.2em;*/
     margin-top: 0;
 }
+
+body.project-edit div.superform ol li.element div.contents input.inline {
+    /*padding: 0.3em 6px;*/
+}
+
 body.project-edit div.superform ol li.element div.project-share li.url input {
     width: 230px;
 }
@@ -656,19 +661,19 @@ div.superform li#costs h4.title {
 /* backgrounds */
 div.superform li#supports,
 div.superform li#social_rewards {
-    background-color: #f3f9f2 !important;
+    /*background-color: #f3f9f2 !important;*/
 }
 div.superform li#individual_rewards {
-    background-color: #f8e3e3 !important;
+    /*background-color: #f8e3e3 !important;*/
 }
 
 div.superform li.editcost {
-    background-color: #fdf3f4;
+    /*background-color: #fdf3f4;*/
 }
 
 div.superform li.cost.required_cost-yes,
 div.superform li.editcost.required_cost-yes {
-    background-color: #f2e5f1 !important;
+    /*background-color: #f2e5f1 !important;*/
 }
 
 div.superform li.editcost li.required_cost-yes {
@@ -714,4 +719,197 @@ a.button.weak {
     line-height: 16px;
     font-size: 12px;
     font-weight: normal;
+}
+
+
+/*ÔøΩ‹•ÔøΩÔøΩÔøΩÔøΩÔøΩ{ÔøΩÔøΩ*/
+
+div.superform input.next {
+    padding: 0;
+    font-size: 15px;
+}
+
+/*“äÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩ{ÔøΩÔøΩ*/
+
+div.superform div.elements > ol > li.required > h4.title {
+    background: url('superform/badge/required.png') no-repeat right center;
+}
+div.superform li.element > h4.title {
+    font-size: 16px;
+}
+
+body.js div.superform > div.elements ol li.element div.contents p{
+    font-size: 14px;
+    margin: 2em 0 0.6em 0;
+    padding: 0;
+}
+
+body.js div.superform div.hint blockquote {
+    padding-left: 0px;
+}
+
+/*ÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩÔøΩOÔøΩÔøΩ*/
+
+body.js div.superform > div.elements ol li.element.html div.contents {
+    font-size: 14px;
+    margin: 0 0 0 2em;
+}
+
+div.superform > div.elements > ol > li.element {
+padding: 0 2em 2em 0;
+}
+
+div.superform li.element {
+position: relative;
+padding: 0;
+clear: both;
+}
+
+body.project-edit div.superform div.hint blockquote {
+    padding-left: 20px;
+    margin-bottom: 10px;
+    border-right-width: 0px;
+}
+
+body.project-edit div.superform ol li.element div.contents input.inline {
+    margin: 0 0 2em 0;
+}
+
+/* new project -- preview */
+body.js div#main.preview form.project div.superform > div.hint {
+    background: none;
+}
+body.js div#main.preview form.project div.div.superform > div.elements > ol > li.element {
+    padding: 0;
+}
+
+body.js div#main.preview form.project div.superform > div.elements ol li.element.html div.contents {
+    margin-left: 0;
+}
+
+
+/*•◊•Ì•∏•ß•Ø•»§Ú¡¢§¡…œ§≤§Î*/
+
+body.project-edit div.superform div.elements ol li#individual_rewards h4.title,
+body.project-edit div.superform div.elements ol li.required h4.title {
+    padding: 20px 0 0 0 ;
+}
+
+body.project-edit div.superform div.elements ol li#costs h4.title {
+    margin: 20px 0 20px 0 ;
+    padding: 0;
+}
+
+body.project-edit div.superform div.elements ol li#social_rewards h4.title {
+    margin: 20px 20px 20px 0 ;
+    padding: 0 ;
+}
+
+body.project-edit div.superform div.elements ol li h6.title {
+    margin: 10px 0;
+    padding: 0 ;
+}
+
+
+body.project-edit div.superform ol li#skills.element.checkboxescustom div.contents {
+    padding: 0 0 30px 0;
+}
+
+body.project-edit div#main.userProfile div.superform div.children div.elements {
+    margin: 20px 0;
+}
+
+body.project-edit div#main.userProfile div.superform li.element.web div.title {
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 70%;
+    word-wrap: break-word;
+    margin: 0 0 10px 10px;
+}
+
+body.project-edit div#main.userProfile div.superform div.children div.elements h5.title {
+    margin: 20px 0 0 0;
+}
+
+body.project-edit div#main.overview div.superform div.children div.elements ol li div.contents{
+    margin: 0;
+    padding: 0;
+}
+
+body.project-edit div#main.overview div.elements ol li#name div.contents input#name,
+body.project-edit div#main.overview div.elements ol li#subtitle div.contents input#subtitle {
+    margin: 0;
+    padding: 4px;
+}
+
+body.project-edit div#main.overview div.superform div.children div.elements li#video {
+    margin: 0;
+    padding: 0;
+}
+
+body.project-edit div#main.overview div.superform ol li.element div.contents input#video {
+    padding: 4px;
+    margin: 0 0 10px 0;
+}
+
+body.project-edit div#main.overview div.superform ol li.element div.contents textarea {
+    margin: 0 0 10px 0;
+}
+
+body.project-edit div#main.overview div.superform ol li.element div.contents input#inline.media-upload {
+    padding: 0.3em 1.2em;
+}
+
+body.project-edit div#main.overview div.superform ol{
+    padding: 0;
+    margin: 0;
+}
+
+body.project-edit div#main.overview div.superform ol li.element div.contents input#keywords {
+    padding: 0.4em;
+    margin: 0;
+}
+
+body.project-edit div#main.supports div.superform .elements  ol li#supports.element.group {
+    margin: 0 251px 20px 0;
+    border: none;
+    padding: 10px 0 ;
+}
+
+body.project-edit div#main.supports div.superform .elements  ol li#supports.element.group h4{
+    padding: 0 0 0 20px;
+}
+
+body.project-edit.js div#main.costs div.superform div.elements ol li#schedule div.contents {
+    margin: 0;
+}
+
+body.project-edit.js div#main.costs div.superform div.elements ol li#schedule div.contents h3.title {
+    padding: 0;
+}
+
+body.project-edit.js div#main.costs div.superform div.elements ol li#schedule div.contents .widget.project-schedule{
+    padding: 20px;
+}
+
+body.project-edit div.superform div.elements ol li#social_rewards {
+    margin: 0 251px 0 0 ;
+    padding: 0 0 20px 0;
+}
+
+body.project-edit.js div.superform li#social_rewards div.elements ol li.element li.element {
+    margin: 0 20px 20px 0;
+    border-right: none;
+}
+
+body.project-edit.js div.superform li#social_rewards div.elements ol li.element li.individual_rewards {
+    margin: 0;
+}
+
+
+div.superform li#social_rewards {
+    border-bottom: none;
+}
+div.superform li#individual_rewards {
+    border-bottom: none;
 }

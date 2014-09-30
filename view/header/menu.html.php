@@ -28,7 +28,11 @@
         <ul>
             <?/*<li class="home"><a href="/"><?php echo Text::get('regular-home'); ?></a></li>*/?>
             <li class="explore"><a class="button red" href="/discover"><?php echo Text::get('regular-discover'); ?></a></li>
+            <? if( isset( $_SESSION['user']->roles['project_owner'] ) ) { ?>
             <li class="create"><a class="button aqua" href="/project/create"><?php echo Text::get('regular-create'); ?></a></li>
+            <? } else { ?>
+                <li class="create"><a class="button aqua" href="<?= LOCALGOOD_WP_BASE_URL ?>/user_guide"><?php echo Text::get('regular-create'); ?></a></li>
+            <? } ?>
             <?/*<li class="search">
                 <form method="get" action="/discover/results">
                     <fieldset>
@@ -38,7 +42,7 @@
                     </fieldset>
                 </form>
             </li>*/?>
-            <?php if (!empty($_SESSION['user'])): ?>
+            <?/*php if (!empty($_SESSION['user'])): ?>
             <li class="community"><a href="/community"><span><?php echo Text::get('community-menu-main'); ?></span></a>
                 <div>
                     <ul>
@@ -51,7 +55,7 @@
             <li class="login">
                 <a href="/community"><span><?php echo Text::get('community-menu-main'); ?></span></a>
             </li>
-            <?php endif ?>
+            <?php endif */?>
 
             <?php if (!empty($_SESSION['user'])): ?>            
             <li class="dashboard"><a href="/dashboard"><span><?php echo Text::get('dashboard-menu-main'); ?></span><img src="<?php echo $_SESSION['user']->avatar->getLink(28, 28, true); ?>" /></a>
@@ -60,6 +64,7 @@
                         <li><a href="/dashboard/activity"><span><?php echo Text::get('dashboard-menu-activity'); ?></span></a></li>
                         <li><a href="/dashboard/profile"><span><?php echo Text::get('dashboard-menu-profile'); ?></span></a></li>
                         <li><a href="/dashboard/projects"><span><?php echo Text::get('dashboard-menu-projects'); ?></span></a></li>
+                        <li><a href="/community/sharemates"><span><?php echo Text::get('community-menu-sharemates'); ?></span></a></li>
                         <?php if (ACL::check('/translate')) : ?>
                         <li><a href="/translate"><span><?php echo Text::get('regular-translate_board'); ?></span></a></li>
                         <?php endif; ?>

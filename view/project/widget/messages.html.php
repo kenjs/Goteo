@@ -54,7 +54,6 @@ $level = (int) $this['level'] ?: 3;
             <input type="hidden" id="thread" name="thread" value="<?php echo $thread;?>" />
             <div id="bocadillo"></div>
             <textarea id="message-text" name="message" cols="50" rows="5"></textarea>
-            <a target="_blank" id="a-preview" href="#preview" class="preview">&middot;<?php echo Text::get('regular-preview'); ?></a>
             <div style="display:none">
                 <div id="preview" style="width:400px;height:300px;overflow:auto;">
                         

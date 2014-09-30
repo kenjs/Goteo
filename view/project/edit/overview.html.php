@@ -1,6 +1,6 @@
 <?php
 /*
- *  Copyright (C) 2012 Platoniq y Fundaci¨®n Fuentes Abiertas (see README for details)
+ *  Copyright (C) 2012 Platoniq y Fundaciï¿½ï¿½n Fuentes Abiertas (see README for details)
  *	This file is part of Goteo.
  *
  *  Goteo is free software: you can redistribute it and/or modify
@@ -78,6 +78,15 @@ foreach ($this['scope'] as $value => $label) {
         );
 }
 
+$project_location = array();
+
+foreach ($this['project_location'] as $value => $label) {
+    $project_location[] =  array(
+        'value'     => $value,
+        'label'     => $label
+        );
+}
+
 // media del proyecto
 /*
 if (!empty($project->media->url)) {
@@ -129,7 +138,7 @@ $superform = array(
             'type'      => 'textbox',
             'title'     => Text::get('overview-field-name'),
             'required'  => true,
-            'hint'      => Text::get('tooltip-project-name'),
+            //'hint'      => Text::get('tooltip-project-name'),
             'value'     => $project->name,
             'errors'    => !empty($errors['name']) ? array($errors['name']) : array(),
             'ok'        => !empty($okeys['name']) ? array($okeys['name']) : array()
@@ -140,7 +149,7 @@ $superform = array(
             'title'     => Text::get('overview-field-subtitle'),
             'required'  => false,
             'value'     => $project->subtitle,
-            'hint'      => Text::get('tooltip-project-subtitle'),
+            //'hint'      => Text::get('tooltip-project-subtitle'),
             'errors'    => !empty($errors['subtitle']) ? array($errors['subtitle']) : array(),
             'ok'        => !empty($okeys['subtitle']) ? array($okeys['subtitle']) : array()
         ),
@@ -149,7 +158,7 @@ $superform = array(
             'title'     => Text::get('overview-fields-images-title'),
             'type'      => 'group',
             'required'  => true,
-            'hint'      => Text::get('tooltip-project-image'),
+            //'hint'      => Text::get('tooltip-project-image'),
             'errors'    => !empty($errors['image']) ? array($errors['image']) : array(),
             'ok'        => !empty($okeys['image']) ? array($okeys['image']) : array(),
             'class'     => 'images',
@@ -158,7 +167,7 @@ $superform = array(
                     'type'  => 'file',
                     'label' => Text::get('form-image_upload-button'),
                     'class' => 'inline image_upload',
-                    'hint'  => Text::get('tooltip-project-image')
+                    //'hint'  => Text::get('tooltip-project-image')
                 )
             )
         ),        
@@ -173,7 +182,7 @@ $superform = array(
             'type'      => 'textarea',
             'title'     => Text::get('overview-field-description'),
             'required'  => true,
-            'hint'      => Text::get('tooltip-project-description'),
+            //'hint'      => Text::get('tooltip-project-description'),
             'value'     => $project->description,            
             'errors'    => !empty($errors['description']) ? array($errors['description']) : array(),
             'ok'        => !empty($okeys['description']) ? array($okeys['description']) : array()
@@ -185,7 +194,7 @@ $superform = array(
                     'type'      => 'textarea',       
                     'title'     => Text::get('overview-field-about'),
                     'required'  => true,
-                    'hint'      => Text::get('tooltip-project-about'),
+                    //'hint'      => Text::get('tooltip-project-about'),
                     'errors'    => !empty($errors['about']) ? array($errors['about']) : array(),
                     'ok'        => !empty($okeys['about']) ? array($okeys['about']) : array(),
                     'value'     => $project->about
@@ -194,7 +203,7 @@ $superform = array(
                     'type'      => 'textarea',       
                     'title'     => Text::get('overview-field-motivation'),
                     'required'  => true,
-                    'hint'      => Text::get('tooltip-project-motivation'),
+                    //'hint'      => Text::get('tooltip-project-motivation'),
                     'errors'    => !empty($errors['motivation']) ? array($errors['motivation']) : array(),
                     'ok'        => !empty($okeys['motivation']) ? array($okeys['motivation']) : array(),
                     'value'     => $project->motivation
@@ -204,7 +213,7 @@ $superform = array(
                     'type'      => 'textbox',
                     'required'  => false,
                     'title'     => Text::get('overview-field-video'),
-                    'hint'      => Text::get('tooltip-project-video'),
+                    //'hint'      => Text::get('tooltip-project-video'),
                     'errors'    => !empty($errors['video']) ? array($errors['video']) : array(),
                     'ok'        => !empty($okeys['video']) ? array($okeys['video']) : array(),
                     'value'     => (string) $project->video
@@ -220,23 +229,23 @@ $superform = array(
                 'video-preview' => $video,
                 
                 // universal subtitles video motivacion
-                'video_usubs' => array(
-                    'type'      => 'checkbox',
-                    'class'     => 'inline cols_1',
-                    'required'  => false,
-                    'name'      => 'video_usubs',
-                    'label'     => Text::get('overview-field-usubs'),
-                    'hint'      => Text::get('tooltip-project-usubs'),
-                    'errors'    => array(),
-                    'ok'        => array(),
-                    'value'     => 1,
-                    'checked'   => (bool) $project->video_usubs
-                ),
+//                'video_usubs' => array(
+//                    'type'      => 'checkbox',
+//                    'class'     => 'inline cols_1',
+//                    'required'  => false,
+//                    'name'      => 'video_usubs',
+//                    'label'     => Text::get('overview-field-usubs'),
+//                    //'hint'      => Text::get('tooltip-project-usubs'),
+//                    'errors'    => array(),
+//                    'ok'        => array(),
+//                    'value'     => 1,
+//                    'checked'   => (bool) $project->video_usubs
+//                ),
                 // fin video motivacion
                 'goal' => array(
                     'type'      => 'textarea',
                     'title'     => Text::get('overview-field-goal'),
-                    'hint'      => Text::get('tooltip-project-goal'),
+                    //'hint'      => Text::get('tooltip-project-goal'),
                     'errors'    => !empty($errors['goal']) ? array($errors['goal']) : array(),
                     'ok'        => !empty($okeys['goal']) ? array($okeys['goal']) : array(),
                     'value'     => $project->goal
@@ -244,7 +253,7 @@ $superform = array(
                 'related' => array(
                     'type'      => 'textarea',
                     'title'     => Text::get('overview-field-related'),
-                    'hint'      => Text::get('tooltip-project-related'),
+                    //'hint'      => Text::get('tooltip-project-related'),
                     'errors'    => !empty($errors['related']) ? array($errors['related']) : array(),
                     'ok'        => !empty($okeys['related']) ? array($okeys['related']) : array(),
                     'value'     => $project->related
@@ -259,7 +268,7 @@ $superform = array(
             'required'  => true,
             'class'     => 'cols_3',
             'options'   => $categories,
-            'hint'      => Text::get('tooltip-project-category'),
+            //'hint'      => Text::get('tooltip-project-category'),
             'errors'    => !empty($errors['categories']) ? array($errors['categories']) : array(),
             'ok'        => !empty($okeys['categories']) ? array($okeys['categories']) : array()
         ),
@@ -267,7 +276,7 @@ $superform = array(
             'type'      => 'textbox',
             'title'     => Text::get('overview-field-keywords'),
             'required'  => true,
-            'hint'      => Text::get('tooltip-project-keywords'),
+            //'hint'      => Text::get('tooltip-project-keywords'),
             'errors'    => !empty($errors['keywords']) ? array($errors['keywords']) : array(),
             'ok'        => !empty($okeys['keywords']) ? array($okeys['keywords']) : array(),
             'value'     => $project->keywords
@@ -277,7 +286,7 @@ $superform = array(
             'type'      => 'textbox',
             'required'  => true,
             'title'     => Text::get('overview-field-media'),
-            'hint'      => Text::get('tooltip-project-media'),
+            //'hint'      => Text::get('tooltip-project-media'),
             'errors'    => !empty($errors['media']) ? array($errors['media']) : array(),
             'ok'        => !empty($okeys['media']) ? array($okeys['media']) : array(),
             'value'     => (string) $project->media
@@ -299,7 +308,7 @@ $superform = array(
             'required'  => false,
             'label'     => Text::get('overview-field-usubs'),
             'name'      => 'media_usubs',
-            'hint'      => Text::get('tooltip-project-usubs'),
+            //'hint'      => Text::get('tooltip-project-usubs'),
             'errors'    => array(),
             'ok'        => array(),
             'checked'   => (bool) $project->media_usubs,
@@ -307,43 +316,56 @@ $superform = array(
         ),
 */
         // fin media
-
+/*
         'currently' => array(    
             'title'     => Text::get('overview-field-currently'),
             'type'      => 'slider',
 //            'required'  => true,
             'options'   => $currently,
             'class'     => 'currently cols_' . count($currently),
-            'hint'      => Text::get('tooltip-project-currently'),
+            //'hint'      => Text::get('tooltip-project-currently'),
             'errors'    => !empty($errors['currently']) ? array($errors['currently']) : array(),
             'ok'        => !empty($okeys['currently']) ? array($okeys['currently']) : array(),
             'value'     => $project->currently
         ),
-
+*/
+/*
         'location' => array(
             'type'      => 'textbox',
             'name'      => 'project_location',
             'title'     => Text::get('overview-field-project_location'),
             'required'  => true,
-            'hint'      => Text::get('tooltip-project-project_location'),
+            //'hint'      => Text::get('tooltip-project-project_location'),
             'errors'    => !empty($errors['project_location']) ? array($errors['project_location']) : array(),
             'ok'        => !empty($okeys['project_location']) ? array($okeys['project_location']) : array(),
             'value'     => $project->project_location
         ),
-
+*/
+        'project_location' => array(
+            'title'     => Text::get('overview-field-project_location'),
+            'type'      => 'select',
+            'required'  => true,
+            'options'   => $project_location,
+            'class'     => 'project_location cols_' . count($project_location),
+            //'hint'      => Text::get('tooltip-project-scope'),
+            'errors'    => !empty($errors['project_location']) ? array($errors['project_location']) : array(),
+            'ok'        => !empty($okeys['project_location']) ? array($okeys['project_location']) : array(),
+            'value'     => $project->project_location
+        ),
+/*
         'scope' => array(
             'title'     => Text::get('overview-field-scope'),
             'type'      => 'slider',
 //            'required'  => true,
             'options'   => $scope,
             'class'     => 'scope cols_' . count($currently),
-            'hint'      => Text::get('tooltip-project-scope'),
+            //'hint'      => Text::get('tooltip-project-scope'),
             'errors'    => !empty($errors['scope']) ? array($errors['scope']) : array(),
             'ok'        => !empty($okeys['scope']) ? array($okeys['scope']) : array(),
             'value'     => $project->scope
         ),
-        
-        'footer' => array(
+*/       
+/*        'footer' => array(
             'type'      => 'group',
             'children'  => array(
                 'errors' => array(
@@ -366,12 +388,44 @@ $superform = array(
                 )
             )
         
-        )
+        )*/
 
     )
 
 );
-
+if (isset($_SESSION['user']->roles['admin']) || isset($_SESSION['user']->roles['superadmin'])){
+    $superform['elements']['evaluation'] = array(
+        'type'      => 'textarea',
+        'title'     => Text::get('overview-field-evaluation'),
+        'required'  => false,
+        'value'     => $project->evaluation,            
+        'errors'    => !empty($errors['evaluation']) ? array($errors['evaluation']) : array(),
+        'ok'        => !empty($okeys['evaluation']) ? array($okeys['evaluation']) : array()
+    );
+}
+$superform['elements']['footer'] = array(
+    'type'      => 'group',
+    'children'  => array(
+        'errors' => array(
+            'title' => Text::get('form-footer-errors_title'),
+            'view'  => new View('view/project/edit/errors.html.php', array(
+                'project'   => $project,
+                'step'      => $this['step']
+            ))                    
+        ),
+        'buttons'  => array(
+            'type'  => 'group',
+            'children' => array(
+                'next' => array(
+                    'type'  => 'submit',
+                    'name'  => 'view-step-costs',
+                    'label' => Text::get('form-next-button'),
+                    'class' => 'next'
+                )
+            )
+        )
+    )
+);
 
 foreach ($superform['elements'] as $id => &$element) {
     

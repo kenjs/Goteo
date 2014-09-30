@@ -73,6 +73,14 @@ namespace Goteo\Controller\Admin {
                 "noadmin" => array (
                     'sql' => "DELETE FROM user_role WHERE role_id = 'admin' AND user_id = :user",
                     'log' => Text::_("Quitado de admin")
+                    ),
+                "project_owner" => array (
+                    'sql' => "REPLACE INTO user_role (user_id, role_id) VALUES (:user, 'project_owner')",
+                    'log' => Text::_("Hecho project owner")
+                    ),
+                "noproject_owner" => array (
+                    'sql' => "DELETE FROM user_role WHERE role_id = 'project_owner' AND user_id = :user",
+                    'log' => Text::_("Quitado de project owner")
                     )
             );
         }
@@ -210,19 +218,23 @@ namespace Goteo\Controller\Admin {
                             // procesos adicionales
                             switch ($subaction) {
                                 case 'admin':
+                                    /*
                                     if ($onNode->assign($id)) {
                                         Message::Info(Text::_('El nuevo admin se ha añadido a los administradores del nodo') . '<strong>'.$onNode->name.'</strong>.');
                                     } else{
                                         Message::Error(Text::_('ERROR!!! El nuevo admin no se ha podido añadir a los administradores del nodo') . '<strong>'.$onNode->name.'</strong>.' .  Text::_('Contactar con el superadmin'));
                                     }
+                                    */
                                     break;
 
                                 case 'noadmin':
+                                    /*
                                     if ($onNode->unassign($id)) {
                                         Message::Info(Text::_('El ex-admin se ha quitado de los administradores del nodo') . '<strong>'.$onNode->name.'</strong>.');
                                     } else{
                                         Message::Error(Text::_('ERROR!!! El ex-admin no se ha podido quitar de los administradores del nodo') . '<strong>'.$onNode->name.'</strong>.' .  Text::_('Contactar con el superadmin'));
                                     }
+                                    */
                                     break;
 
                                 case 'translator':

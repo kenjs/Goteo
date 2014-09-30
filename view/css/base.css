@@ -197,14 +197,19 @@ table#font_box td.active {
     color: #000000;
     line-height: 1.6em;
     list-style-type: none;
-    width: 159px;
+    width: 190px;
     float: left;
     background-color:#fff;
 }
 
 .header .nav_wrapper ul li:last-child {
-    width: 160px;
+    width: 191px;
     border-right: none;
+}
+
+.header .nav_wrapper ul li ul li {
+    border-right: none;
+    width: 191px;
 }
 
 .header .nav_wrapper ul li a {

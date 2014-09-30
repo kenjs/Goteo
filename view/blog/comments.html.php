@@ -43,7 +43,7 @@ $level = (int) $this['level'] ?: 3;
            <h<?php echo $level ?> class="user">
     		   <a href="/user/profile/<?php echo htmlspecialchars($comment->user->id)?>" target="_blank"><?php echo htmlspecialchars($comment->user->name) ?></a>
            </h<?php echo $level ?>>
-           <div class="date"><span><?php echo $comment->timeago ?>分前</span></div>
+           <div class="date"><span><?php echo $comment->timeago ?>前</span></div>
            <a name="comment<?php echo $comment->id; ?>" ></a>
            <blockquote><?php echo $comment->text; ?></blockquote>
        </div>

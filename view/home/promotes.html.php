@@ -23,6 +23,7 @@ use Goteo\Core\View,
 
 $promotes = $this['promotes'];
 // random y que solo pinte seis si hubiera más
+
 if (count($promotes) > 6) {
 	shuffle($promotes);
 	$promotes = array_slice($promotes, 0, 6);

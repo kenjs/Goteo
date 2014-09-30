@@ -8,10 +8,10 @@ $(function(){
     // グロナビ, プルダウン
     $('.nav_inner ul li').hover(
         function(){
-            $(this).children('ul.sub:hidden').slideToggle();
+            $(this).children('ul.sub:hidden').stop().show();
         },
         function(){
-            $(this).children('ul.sub:visible').slideToggle();
+            $(this).children('ul.sub:visible').stop().hide();
         }
     );
 

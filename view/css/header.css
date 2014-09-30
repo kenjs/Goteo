@@ -597,7 +597,7 @@ div#header div#menu > ul > li.home > a:hover {
 
 div#header div#menu > ul > li.explore,
 div#header div#menu > ul > li.create {
-    float: left;
+    /*float: left;*/
 	margin-right: 4px;
 }
 
@@ -618,7 +618,7 @@ div#header div#menu > ul > li.create > a {
 }
 
 div#header div#menu > ul > li.explore > a {
-    margin-left: 124px;
+    /*margin-left: 124px;*/
 }
 
 div#header div#menu > ul > li.search {

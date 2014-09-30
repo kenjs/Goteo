@@ -386,3 +386,60 @@ div.widget.project-needs table tfoot tr.sum th.max {
 div.widget.project-needs table tfoot tr > * {
     border: none;
 }
+
+/*スマホ鮫中*/
+
+body.project-show div#main.threecols .widget.project-spread div.widget{
+    padding: 0;
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+body.project-show div#main.threecols div.invest-message {
+    background-color: #cce7e8 !important;
+    min-height: 90px;
+    background: url("/view/css/project/view/invest/message_beak.png") no-repeat left bottom;
+}
+
+body.project-show div#main.threecols .widget.invest-message h2 {
+    line-height: 1.2em;
+    padding: 10px 0;
+}
+
+body.project-show div#main.threecols div.widget.project-spread div.widget.projects div.left {
+    float: none;
+    width: 100%;
+}
+
+body.project-show div#main.threecols div.widget.project-spread div.subtitle {
+    text-transform: uppercase;
+    margin: 10px;
+    padding: 0;
+    width: auto;
+}
+
+body.project-show div#main.threecols div.widget.project-spread div.widget.projects #widget-code {
+    clear: both;
+    width: auto;
+    float: none;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+}
+
+body.project-show div#main.threecols div.widget.project-spread div.widget.projects #widget-code textarea {
+    clear: both;
+    width: 0;
+    height: 130px;
+    margin: 10px;
+    padding: 10px;
+    background: #E7E7E7;
+    border: none;
+    font-size: 12px;
+    resize: none;
+    width: 240px;
+    word-wrap: break-word;
+}
+

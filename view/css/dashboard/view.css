@@ -55,13 +55,13 @@ body.dashboard div#sub-header img{
 
 body.dashboard div#dashboard-menu {
     display: block;
-    /*max-width: 960px;*/
     font-size: 13px;
-    margin: -2.6em auto 0;
-/*    background-color: #78d1d1; */
+    margin: 0 auto 40px;
+    /*margin: -2.6em auto 0;*/
     border-bottom: 40px solid #3399cc;
-    margin-top: -90px;
-    margin-bottom: 40px;
+    height:0;
+    /*margin-top: -90px;*/
+    /*margin-bottom: 40px;*/
 }
 
 body.dashboard div#dashboard-menu ul {
@@ -74,7 +74,7 @@ body.dashboard div#dashboard-menu > ul {
     width: 960px;
     margin-left: -480px;
     left: 50%;
-    top: 40px;
+    top: -51px;
 }
 
 body.dashboard div#dashboard-menu ul li {
@@ -129,8 +129,6 @@ body.dashboard div#dashboard-menu ul li.section.active ul {
 }
 
 body.dashboard div#dashboard-menu ul li.section a.section {
-    /*background-color: #c7ecec;*/
-    /*color: #20b3b2;*/
     min-width: 80px !important;
     background: #ccf4ff; /* Old browsers */
     background: -moz-linear-gradient(top,  #ccf4ff 0%, #c0e4ed 60%, #b1cfd3 100%); /* FF3.6+ */
@@ -152,15 +150,12 @@ body.dashboard div#dashboard-menu ul li.section a.section {
 }
 
 body.dashboard div#dashboard-menu ul li.section.active a.section {
-    /*color: #ffffff;
-    background-color: #79d1d1;*/
     color: #f5f5f5;
     background: none;
     background-color: #3399cc;
 }
 
 body.dashboard div#dashboard-menu ul li.section.current a.section {
-    /*color: #ffffff;*/
     color: #f5f5f5;
     background: none;
     background-color: #3399cc;
@@ -170,12 +165,28 @@ body.dashboard div#dashboard-menu ul li.section.current a.section,
 body.dashboard div#dashboard-menu ul li.section.current ul,
 body.dashboard div#dashboard-menu ul li.section.active a.section,
 body.dashboard div#dashboard-menu ul li.section.active ul {
-    /*background-color: #808285;*/
     background-color: #3399cc;
     color: #f5f5f5;
     font-weight: bolder;
     height: 40px;
 }
+
+body.dashboard div#dashboard-menu ul li.section.forbidden a.section {
+    background: #ccf4ff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ccf4ff 0%, #c0e4ed 60%, #b1cfd3 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccf4ff), color-stop(60%,#c0e4ed), color-stop(100%,#b1cfd3)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ccf4ff 0%,#c0e4ed 60%,#b1cfd3 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ccf4ff 0%,#c0e4ed 60%,#b1cfd3 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ccf4ff 0%,#c0e4ed 60%,#b1cfd3 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #eee 0%,#ddd 60%,#ccc 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccf4ff', endColorstr='#b1cfd3',GradientType=0 ); /* IE6-9 */
+    color:#aaa;
+    border-top: 1px solid #c0c0c0;
+    border-left: 1px solid #c0c0c0;
+    border-right: 1px solid #c0c0c0;
+    cursor: default;
+}
+
 
 /*ie8*/
 body.dashboard div#dashboard-menu ul li.section a:hover.section,
@@ -184,7 +195,6 @@ body.dashboard div#dashboard-menu ul li.section ul:hover {
 }
 
 body.dashboard div#dashboard-menu li.option a {
-    /*color: #c7ecec !important;*/
     color: #ccffff;
     height: 25px;
     line-height: 25px;
@@ -192,18 +202,10 @@ body.dashboard div#dashboard-menu li.option a {
 
 body.dashboard div#dashboard-menu li.option.current a, 
 body.dashboard div#dashboard-menu li.option.active a {
-    /*color: #ffffff !important;
-    background-color: #79d1d1 !important;*/
     height: 18px;
     color: #f5f5f5;
     border-bottom: 5px solid #ff9933;
 }
-
-/*body.dashboard div#dashboard-menu li.section.current a {
-    color: #ffffff;
-    background-color: #808285;
-}*/
-
 
 /* El superform con el fondo blanco */
 body.dashboard div.superform {
@@ -274,6 +276,7 @@ body.dashboard div#main div.widget.gestrew div.reward div.tiporec{display:block;
 body.dashboard div#main div.widget.gestrew div.reward ul { list-style: none outside none; padding:0px; margin: 0px 0px 3px 0px; float:none; font-size:12px; }
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li { background:none no-repeat scroll 0px 0px transparent; padding: 0px 0px 0px 29px; min-height: 34px; }
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.file { background-image: url('/view/css/icon/s/file.png'); }
+body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.food { background-image: url('/view/css/icon/s/food.png'); }
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.money { background-image: url('/view/css/icon/s/money.png'); }
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.code { background-image: url('/view/css/icon/s/code.png'); }
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.service { background-image: url('/view/css/icon/s/service.png'); }
@@ -284,6 +287,10 @@ body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.other { 
 body.dashboard div#main div.widget.gestrew div.reward span.recompensa{color:#8D878E;font-size:12px;}
 body.dashboard div#main div.widget.gestrew div.reward a.green{bottom:5px;left:13px;width:160px;padding: 0.3em 1.3em;}
 body.dashboard div#main div.widget.gestrew div.reward div.contenedorrecompensa{height:67px; overflow:hidden;}
+
+body.dashboard div#main > ul li  {
+    list-style-type: none;
+}
 
 /* = gestionar retornos 
 ***************************/

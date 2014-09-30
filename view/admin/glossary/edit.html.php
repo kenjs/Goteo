@@ -74,7 +74,7 @@ $(document).ready(function(){
         'level'         => 3,
         'method'        => 'post',
         'title'         => '',
-        'hint'          => Text::_("Termino de glosario, descripción, imágenes y media (vimeo, youtube, presi, slideshare)"),
+        //'hint'          => Text::_("Termino de glosario, descripción, imágenes y media (vimeo, youtube, presi, slideshare)"),
         'class'         => 'aqua',
         'footer'        => array(
             'view-step-preview' => array(
@@ -105,7 +105,7 @@ $(document).ready(function(){
             'image' => array(
                 'title'     => Text::_("Imagen"),
                 'type'      => 'group',
-                'hint'      => Text::get('tooltip-updates-image'),
+                //'hint'      => Text::get('tooltip-updates-image'),
                 'errors'    => !empty($errors['image']) ? array($errors['image']) : array(),
                 'class'     => 'image',
                 'children'  => array(
@@ -129,7 +129,7 @@ $(document).ready(function(){
                 'type'      => 'textbox',
                 'title'     => Text::_("Vídeo"),
                 'class'     => 'media',
-                'hint'      => Text::get('tooltip-updates-media'),
+                //'hint'      => Text::get('tooltip-updates-media'),
                 'errors'    => !empty($errors['media']) ? array($errors['media']) : array(),
                 'value'     => (string) $post->media,
                 'children'  => array(

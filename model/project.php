@@ -94,6 +94,7 @@ namespace Goteo\Model {
             $currently, // Current development status of the project
             $project_location, // project execution location
             $scope,  // ambito de alcance
+            $evaluation,
 
             $translate,  // si se puede traducir (bool)
 
@@ -263,7 +264,8 @@ namespace Goteo\Model {
                             IFNULL(project_lang.reward, project.reward) as reward,
                             IFNULL(project_lang.keywords, project.keywords) as keywords,
                             IFNULL(project_lang.media, project.media) as media,
-                            IFNULL(project_lang.subtitle, project.subtitle) as subtitle
+                            IFNULL(project_lang.subtitle, project.subtitle) as subtitle,
+                            IFNULL(project_lang.evaluation, project.evaluation) as evaluation
                         FROM project
                         LEFT JOIN project_lang
                             ON  project_lang.id = project.id
@@ -643,7 +645,8 @@ namespace Goteo\Model {
                     'project_location',
                     'scope',
                     'resource',
-                    'comment'
+                    'comment',
+                    'evaluation'
                     );
 
                 $set = '';
@@ -856,7 +859,8 @@ namespace Goteo\Model {
                     'related'=>'related_lang',
                     'reward'=>'reward_lang',
                     'keywords'=>'keywords_lang',
-                    'media'=>'media_lang'
+                    'media'=>'media_lang',
+                    'evaluation'=>'evaluation_lang',
                     );
 
                 $set = '';
@@ -1124,6 +1128,7 @@ namespace Goteo\Model {
                  $okeys['overview']['project_location'] = 'ok';
                  ++$score;
             }
+            
 
             $this->setScore($score, 15);
             /***************** FIN Revisión del paso 3, DESCRIPCION *****************/
@@ -1814,6 +1819,36 @@ namespace Goteo\Model {
             return $projects;
         }
 
+        /**
+         * @param $owner
+         * @param bool $published
+         * @return array
+         * @throws \Goteo\Core\Exception
+         */
+        public static function ofmatched($_skills)
+        {
+
+            $projects = array();
+            if (!empty($_skills)) {
+                $sql = "SELECT * FROM project WHERE status > 2";
+
+                $skills_str = implode(',', $_skills);
+
+                $sql .= ' AND id IN (
+                    SELECT distinct(project)
+                    FROM project_skill
+                    WHERE skill IN (' . $skills_str . ')
+                    )';
+
+                $sql .= " ORDER BY created DESC";
+                $query = self::query($sql);
+                foreach ($query->fetchAll(\PDO::FETCH_CLASS, __CLASS__) as $proj) {
+                    $projects[] = self::getMedium($proj->id);
+                }
+            }
+            return $projects;
+        }
+
         /*
          * Lista de proyectos publicados
          */
@@ -2380,6 +2415,29 @@ namespace Goteo\Model {
             );
 
             return $errors;
+        }
+        public static function yokohamaLocation () {
+            return array(
+                1=>Text::get('横浜市'),
+                11=>Text::get('中区'),
+                12=>Text::get('保土ケ谷区'),
+                13=>Text::get('南区'),
+                14=>Text::get('戸塚区'),
+                15=>Text::get('旭区'),
+                16=>Text::get('栄区'),
+                17=>Text::get('泉区'),
+                18=>Text::get('港北区'),
+                19=>Text::get('港南区'),
+                20=>Text::get('瀬谷区'),
+                21=>Text::get('磯子区'),
+                22=>Text::get('神奈川区'),
+                23=>Text::get('緑区'),
+                24=>Text::get('西区'),
+                25=>Text::get('都筑区'),
+                26=>Text::get('金沢区'),
+                27=>Text::get('青葉区'),
+                28=>Text::get('鶴見区')
+            );
         }
     }
 

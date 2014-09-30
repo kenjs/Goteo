@@ -20,7 +20,6 @@ body.user-login div#main > div {
     display: table-cell;
 	width: 30%;
 }
-
 body.user-login div#main > div > * {
     padding: 20px 20px 15px;
     background-color: white;
@@ -66,6 +65,7 @@ body.user-login div#main form input[type="submit"] {
     margin-bottom: 10px;
     width: 100%;
 }
+
 body.user-login div#main form button.disabled {
     width: 100%;
 }
@@ -192,3 +192,31 @@ body.user-login .sign-in-with {
 	color: #20B3B2;
 }
 
+body.user-login div#main form input[type="submit"]{
+    padding: 0;
+    font-size: 15px;
+    width: 200px;
+}
+
+/* .about_cf */
+body.user-login div#main > div.about_cf {
+    width: 920px;display: block;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+body.user-login div#main > div.about_cf p {
+    padding: 0;
+}
+body.user-login div#main > div.about_cf dl {
+    padding: 10px 0;
+}
+body.user-login div#main > div.about_cf dl dd {
+    margin-left: 0;
+}
+body.user-login div#main > div.about_cf dl dt {
+    font-weight: bolder;
+}
+body.user-login div#main > div.about_cf p.link {
+    margin-bottom: 0;
+}

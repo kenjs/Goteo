@@ -131,14 +131,14 @@ namespace Goteo\Controller {
                     Model\Invest::setDetail($invest->id, 'init', 'Se ha creado el registro de aporte, el usuario ha clickado el boton de tpv o paypal. Proceso controller/invest');
 
                     switch($method) {
-                        case 'tpv':
-                            // redireccion al tpv
-                            if (Tpv::preapproval($invest, $errors)) {
-                                die;
-                            } else {
-                                Message::Error(Text::get('invest-tpv-error_fatal'));
-                            }
-                            break;
+//                        case 'tpv':
+//                            // redireccion al tpv
+//                            if (Tpv::preapproval($invest, $errors)) {
+//                                die;
+//                            } else {
+//                                Message::Error(Text::get('invest-tpv-error_fatal'));
+//                            }
+//                            break;
                         case 'paypal':
                             // Petición de preapproval y redirección a paypal
                             if (Paypal::preapproval($invest, $errors)) {
@@ -147,15 +147,15 @@ namespace Goteo\Controller {
                                 Message::Error(Text::get('invest-paypal-error_fatal'));
                             }
                             break;
-                        case 'cash':
-                            // En betatest aceptamos cash para pruebas
-                            if (GOTEO_ENV != 'real') {
-                                $invest->setStatus('1');
-                                throw new Redirection($invest->urlOK);
-                            } else {
-                                throw new Redirection('/');
-                            }
-                            break;
+//                        case 'cash':
+//                            // En betatest aceptamos cash para pruebas
+//                            if (GOTEO_ENV != 'real') {
+//                                $invest->setStatus('1');
+//                                throw new Redirection($invest->urlOK);
+//                            } else {
+//                                throw new Redirection('/');
+//                            }
+//                            break;
                     }
                 } else {
                     Message::Error(Text::get('invest-create-error'));

@@ -285,10 +285,10 @@ div.center div.widget.user-mates .users ul > li span.projects,div.center div.wid
 
 div.center div.widget.user-mates .users ul > li span.profile,
 div.center div.widget.user-mates .users ul > li span.contact {
-	display:block;
+	/*display:block;
     position: relative;
     left: -50px;
-    width: 140px;
+    width: 140px;*/
 }
 
 div.center div.widget.user-mates .users ul > li span.profile a{
@@ -383,4 +383,86 @@ div.center div.widget.user-message button{float:right;margin-right:8px;}
 body.user-profile div#main div.discover-group div.widget.project {
     margin: 0 auto 0px !important;
     border: none;
+}
+
+/*borderの調整
+
+div.center div.widget.user-mates .users ul > li:nth-child(1n),
+div.center div.widget.user-mates .users ul > li:nth-child(2n),
+div.center div.widget.user-mates .users ul > li:nth-child(3n)
+ {
+    border-top: 1px dashed #c0c0c0;
+    margin-top: -1px;
+}*/
+
+
+div.center div.widget.user-mates .users ul > li:nth-child(odd){
+    /*width: 151px!important;
+    border-right: 1px dashed #c0c0c0;*/
+}
+
+/*フロートを取る*/
+
+body.community.about div#main div.center div.widget.user-mates h3 {
+    /*position: absolute;*/
+}
+
+
+body.community.about div#main div.center div.widget.user-mates .users ul li,
+body.community.about div#main div.center div.widget.user-mates .users ul li:nth-child(odd) {
+    width: 100% !important;
+    max-width: 100% !important;
+    clear: both;
+    float: none;
+    border: none;
+    border-bottom: 1px dashed #c0c0c0;
+    height: auto;
+    margin: 0;
+    padding: 10px 0 0 0;
+}
+
+body.community.about div#main div.center div.widget.user-mates a.more {
+    border-top: none;
+}
+
+body.community.about div#main div.center div.widget.user-mates .users {
+    margin: 0;
+    padding: 0;
+}
+
+body.community.about div#main div.center div.widget.user-mates .users ul li .user {
+    padding: 0 0 0 80px;
+    position: relative;
+}
+
+body.community.about div#main div.center div.widget.user-mates .users ul li .user .avatar {
+    position: absolute;
+    left: 14px;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+body.community.about div#main div.center div.widget.user-mates .users ul li span.profile,
+body.community.about div#main div.center div.widget.user-mates .users ul li span.contact {
+    display:block;
+    clear: both;
+    text-align: left;
+    position: relative;
+    top: -20px;
+    left: 0px;
+    width: auto;
+    margin-right: 10px;
+}
+
+body.community.about div#main div.center div.widget.user-mates .users ul li span.profile a{
+    float:none;
+    background:url('/view/css/user/plus.png') left no-repeat;
+    padding-left:15px;
+    color:#808285;
+}
+
+body.community.about div#main div.center div.widget.user-mates .users ul li span.contact{
+    clear: both;
 }

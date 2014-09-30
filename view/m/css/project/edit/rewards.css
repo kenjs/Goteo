@@ -40,6 +40,10 @@ body.project-edit div#main.rewards div.superform li.element.reward div.reward {
     min-height: 32px;
 }
 
+body.project-edit div#main.rewards div.superform li.element.reward div.food {
+    background-image: url('/view/css/icon/m/food.png');
+}
+
 body.project-edit div#main.rewards div.superform li.element.reward div.file {
     background-image: url('/view/css/icon/m/file.png');
 }
@@ -165,6 +169,11 @@ body.project-edit div#main.rewards div.superform li.element.editindividual_rewar
     background-repeat: no-repeat;
     min-height: 32px;
     line-height: 32px;
+}
+
+body.project-edit div#main.rewards div.superform li.element.editsocial_reward li.reward_food div.contents,
+body.project-edit div#main.rewards div.superform li.element.editindividual_reward li.reward_food div.contents {
+    background-image: url('/view/css/icon/m/food.png');
 }
 
 body.project-edit div#main.rewards div.superform li.element.editsocial_reward li.reward_file div.contents,

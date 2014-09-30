@@ -299,7 +299,7 @@ footer
 
 /* navigation */
 .flipsnap {
-    width: 1006px; /* 320px(item width) * 3(item count) */
+    width: 1130px; /* 320px(item width) * 3(item count) */
 }
 
 /* project-navigation */
@@ -317,6 +317,9 @@ body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_
     border-right: 1px dashed #cccccc;
     color: #666;*/
 }
+body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav .item:last-child {
+    border-right: none;
+}
 
 body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav .item a {
     margin: 0 auto;
@@ -329,7 +332,7 @@ body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_
 body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_dashboard li.option {
     float: left;
     height: 28px;
-    padding: 0 8px;
+    padding: 4px 8px;
     border: none;
     color: #666;
 }
