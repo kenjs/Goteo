@@ -38,7 +38,7 @@ $project = $this['project'];
             <li class="support <?php echo htmlspecialchars($support->type) ?>">
                 <strong><?php echo htmlspecialchars($support->support) ?></strong>
                 <p><?php echo htmlspecialchars($support->description) ?></p>
-                <a class="button green" href="/project/<?php echo $project->id; ?>/messages"><?php echo Text::get('regular-collaborate'); ?></a>
+                <a class="button green" href="/project/<?php echo $project->id; ?>/messages?msgto=<?php echo $support->id;?>"><?php echo Text::get('regular-collaborate'); ?></a>
             </li>
             <?php endforeach ?>
         </ul>

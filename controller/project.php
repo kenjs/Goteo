@@ -852,7 +852,7 @@ namespace Goteo\Controller {
                 
                 $project->costs[] = new Model\Project\Cost(array(
                     'project' => $project->id,
-                    'cost'  => 'Nueva tarea',
+                    'cost'  => '',
                     'type'  => 'task',
                     'required' => 1,
                     'from' => date('Y-m-d'),
@@ -923,7 +923,7 @@ namespace Goteo\Controller {
                 $project->social_rewards[] = new Model\Project\Reward(array(
                     'type'      => 'social',
                     'project'   => $project->id,
-                    'reward'    => 'Nuevo retorno colectivo',
+                    'reward'    => '',
                     'icon'      => '',
                     'license'   => ''
 
@@ -934,7 +934,7 @@ namespace Goteo\Controller {
                 $project->individual_rewards[] = new Model\Project\Reward(array(
                     'type'      => 'individual',
                     'project'   => $project->id,
-                    'reward'    => 'Nueva recompensa individual',
+                    'reward'    => '',
                     'icon'      => '',
                     'amount'    => '',
                     'units'     => ''
@@ -1019,7 +1019,7 @@ namespace Goteo\Controller {
             if (!empty($_POST['support-add'])) {
                 $project->supports[] = new Model\Project\Support(array(
                     'project'       => $project->id,
-                    'support'       => 'Nueva colaboración',
+                    'support'       => '',
                     'type'          => 'task',
                     'description'   => ''
                 ));
