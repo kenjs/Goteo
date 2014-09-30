@@ -34,6 +34,8 @@ if (!isset($_POST['email']) && isset($_GET['email'])) {
     $email = $_GET['email'];
 }
 ?>
+
+<? /*
 <div id="sub-header">
 	<div class="clearfix">
 		<div class="subhead-banner">
@@ -42,6 +44,7 @@ if (!isset($_POST['email']) && isset($_GET['email'])) {
 		<div class="mod-pojctopen"><?php echo Text::html('open-banner-header', $fbCode); ?></div>
 	</div>
 </div>
+*/ ?>
     <div id="main">
 
         <div class="login">

@@ -774,7 +774,7 @@ namespace Goteo\Controller {
             }
 
             return new View(
-                            'view/user/leave.html.php',
+                            VIEW_PATH . '/user/leave.html.php',
                             array(
                                 'error' => $error,
                                 'message' => $message
