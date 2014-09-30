@@ -148,15 +148,12 @@ div.widget.project div.image div.categories {
 
 div.widget.project > .title {    
     font-size: 14px !important;
-    height: 2em;
     padding: 0 !important;
     margin: 0px !important;
 }
 
 div.widget.project .title {
     background: none !important;
-	line-height:1em;
-	overflow:hidden;
 }
 
 div.widget.project > .title a {
