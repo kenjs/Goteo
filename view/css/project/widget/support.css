@@ -97,15 +97,6 @@ div.widget.project-support dl dd {
     white-space: nowrap;
 }
 
-/*div.widget.project-support dl dt.optimum {
-    background-image: url('/view/css/project/widget/support/here-optimum.png');
-}*/
-
-/*div.widget.project-support dl dt.minimum {
-    background-image: url('/view/css/project/widget/support/here-minimum.png');
-    clear: left;
-}*/
-
 div.widget.project-support dl dd.optimum,
 div.widget.project-support dl dd.minimum {
     float: left;
@@ -114,14 +105,8 @@ div.widget.project-support dl dd.minimum {
     margin-left: 0;
     line-height: 35px;
     margin-top: 0;
-    /*padding-right: 28px;*/
-    /*background: url('/view/css/euro/light-violet/l.png') no-repeat right center;*/
     display: inline-block;
     text-align: right;
-}
-
-div.widget.project-support dl dd.minimum {
-    /*background-image: url('/view/css/euro/violet/l.png');*/
 }
 
 div.widget.project-support dl dd.optimum strong{
@@ -133,11 +118,6 @@ div.widget.project-support dl dd.minimum strong {
     font-size: 30px;
     font-weight: normal;
 }
-
-/*div.widget.project-support dl dd.optimum span.euro,
-div.widget.project-support dl dd.minimum span.euro {
-    display: none;
-}*/
 
 div.widget.project-support dl dt.optimum,
 div.widget.project-support dl dd.optimum {
@@ -162,16 +142,10 @@ div.widget.project-support dl dt.reached span {
 }
 
 div.widget.project-support dl dd.reached {
-    /*padding-right: 20px;*/
-    /*background: url('/view/css/euro/violet/s.png') no-repeat right top;*/
     display: inline-block;
 	color:#990033;
     width: 118px;
 }
-/*div.widget.project-support dl dd.reached span.euro {
-    display: none;
-}*/
-
 div.widget.project-support dl dd.days,
 div.widget.project-support dl dd.supporters {
     width: 118px;
@@ -194,71 +168,6 @@ div.widget.project-support dl dt.supporters span {
 div.widget.project-support > div.meter {
     overflow: visible;
 	margin-top: 20px;
-}
-
-body.project-show div#main > div.side > div.widget h3.title.ronda {
-	color:#999900;
-    text-transform: lowercase;
-    font-size: 12px;
-    font-weight: normal;
-    text-align: right;
-}
-
-div.widget.project-support div.graph {
-    background: url('/view/css/project/widget/support/over.png') no-repeat center top;
-    width: 20px;
-    overflow: visible;
-    border-bottom: 5px solid #CAD95A;
-    font-size: 0;
-    margin-left: 14px;
-    float: left;
-    padding-top: 22px;
-}
-
-div.widget.project-support div.graph > div.optimum,
-div.widget.project-support div.graph > div.minimum {
-    width: 20px;
-    overflow: visible;
-}
-
-div.widget.project-support div.graph > div.optimum {
-    border-top: 5px solid #BCCCD8;
-    background: url('/view/css/project/widget/support/optimum.png') no-repeat center top;
-    height: 45px;
-}
-
-div.widget.project-support div.graph > div.minimum {
-    background: url('/view/css/project/widget/support/minimum.png') no-repeat center top;
-    position: relative;
-    min-height: 145px !important;
-    border-top: 5px solid #dc940f;
-}
-
-div.widget.project-support div.graph > div.minimum > div.done {
-    background: url('/view/css/project/widget/support/done.png') no-repeat bottom;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    overflow: visible;
-}
-
-div.widget.project-support div.meter.ver div.graph .minimum .done {
-    max-height: 212px;
-}
-
-div.widget.project-support div.graph > div.minimum > div.done strong {
-    background: url('/view/css/project/widget/support/marker.png') no-repeat center center;
-    width: 30px;
-    padding: 0 8px 0 8px;
-    height: 20px;
-    margin-top: -9px;
-    color: #000000;
-    font-size: 12px;
-    font-weight: normal;
-    line-height: 20px;
-    margin-left: -23px;
-    text-align: center;
-	display: block;
 }
 
 div.widget.project-support div.buttons {
@@ -352,7 +261,3 @@ div.widget.project-support div.tagmark.twolines {
     padding-top: 6px !important;
 }
 /** Fin tagmark **/
-
-
-
-

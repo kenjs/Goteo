@@ -77,9 +77,6 @@ $optimum_left = 100 - $optimum_done;
 $minimum_ratio =  min(100, round(($minimum / $optimum) * 100));
 
 ?>
-<?
-//if(){$classname = 'meter_2_record';}
-?>
     <div class="meter <?php echo $horizontal ? 'hor' : 'ver'; echo $big ? ' big' : ''; echo $activable ? ' activable' : ''; ?> meter_2_record">
         
         <? if ($big): ?>
