@@ -1,141 +1,4 @@
 /*--------------------------------------------------
-    goteo_top(activity) , user/profile
---------------------------------------------------*/
-div.widget.project div.meter > h3.ronda {
-    color:#999900;
-    position:absolute;
-    top:4px;
-    right:16px;
-    text-transform: lowercase;
-}
-
-div.widget.project div.meter.activable {
-    z-index: 999;
-    padding-left: 16px!important;
-    padding-right: 16px!important;
-    max-width: 288px;
-}
-div.widget.project div.meter {
-    padding: 4px 0 78px !important;
-    position: relative;
-    height: 20px;
-}
-body.home div.widget.project div.meter dl dt.minimum,
-body.user-profile div.widget.project div.meter dl dt.minimum {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #cc6600;
-    width: 96px!important;
-    text-align: center;
-}
-body.home div.widget.project div.meter dl dd.minimum,
-body.user-profile div.widget.project div.meter dl dd.minimum {
-    position: relative;
-    font-size: 14px;
-    width: 96px!important;
-    text-align: center;
-    top: -46px;
-    left: 0;
-    color: #cc6600;
-}
-body.home div.widget.project div.meter dl dt.optimum,
-body.user-profile div.widget.project div.meter dl dt.optimum {
-    position: absolute;
-    top: 0;
-    left: 96px;
-    width: 96px;
-    text-align: center;
-}
-
-
-body.home div.widget.project div.meter dl dd.optimum,
-body.user-profile div.widget.project div.meter dl dd.optimum{
-    font-size: 14px;
-    font-weight: normal;
-    position: relative;
-    top: -16px;
-    padding-top: 28px;
-    left: 93px;
-    width: 93px;
-    text-align: center;
-    height: 30px;
-    border-left: 1px solid #eee;
-}
-body.home div.widget.project div.meter dl dt.days,
-body.user-profile div.widget.project div.meter dl dt.days{
-    font-size: 12px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 96px;
-    text-align: center;
-}
-body.home div.widget.project div.meter dl dd.days,
-body.user-profile div.widget.project div.meter dl dd.days{
-    position: absolute;
-    top: -16px;
-    right: 0px;
-    width: 96px;
-    text-align: center;
-    font-size: 14px;
-    height: 30px;
-    padding-top: 28px;
-    border-left: 1px solid #eee;
-}
-body.home div.widget.project div.meter dl dd.days strong,
-body.user-profile div.widget.project div.meter dl dd.days strong {
-    color: #996666;
-}
-
-
-/*  */
-div.widget.project div.meter div.graph .minimum,
-div.widget.project-support div.graph > div.minimum {
-    background-color: #dc940f;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-div.widget.project div.meter div.graph {
-    background-color: #BCCCD8;
-    height: 12px;
-    border-right: 40px solid #dcdcdc;
-    /*margin: 60px 5px 70px;*/
-    margin: 30px 5px 70px;
-    position: relative;
-}
-
-div.widget.project div.rewards {
-    /*border-top: 1px solid #d1d3d4;
-    padding: 4px 0 0 !important;
-    position: relative;
-    margin: 20px 12px 8px !important;
-    height: 22px;
-    overflow: hidden;
-
-    top: 32px;*/
-    display: none;
-}
-
-
-/* for meter(vertical), active_page:project/home */
-/*div.widget.project div.meter.ver dl,
-div.widget.project-support div.meter.ver dl {
-    top: 0;
-}*/
-
-div.widget.project div.meter dl dd.minimum span,
-div.widget.project div.meter dl dd.optimum span,
-div.widget.project div.meter dl dd.days span {
-    font-size: 12px;
-}
-
-
-
-
-/*--------------------------------------------------
     project/home , project/supporters
 --------------------------------------------------*/
 body.project-show div.widget.project-support div.meter {
@@ -171,7 +34,7 @@ div.widget.project div.meter div.graph,
 div.widget.project-support div.graph {
     background-color: #BCCCD8;
     height: 12px;
-    margin: 24px 0 0;
+    margin: 20px 0 0;
     position: relative;
 }
 
@@ -183,7 +46,14 @@ div.widget.project-support div.graph > div.optimum {
     right: 0;
     margin-top: -6px;
 }
-
+/*div.widget.project div.meter div.graph .minimum,
+div.widget.project-support div.graph > div.minimum {
+    background-color: #dc940f;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}*/
 div.widget.project div.meter dl,
 div.widget.project-support dl {
     position: relative;
@@ -275,7 +145,7 @@ div.widget.project-support dl dd.minimum {
     position: relative;
     top: -47px;
     left: 0;
-    padding-bottom: 9px;
+    padding-bottom: 8px;
     color: #cc6600;
 }
 div.side div.widget.project-support dl dd.minimum {
@@ -441,7 +311,7 @@ body.dashboard.project-edit div.widget.project div.meter dl dd.optimum {
 
 body.dashboard.project-edit div.widget.project div.meter dl dt.minimum {
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 0;
     color: #cc6600;
 }
