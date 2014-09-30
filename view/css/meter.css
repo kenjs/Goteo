@@ -293,7 +293,7 @@ div.widget.project div.meter dl .days {
     font-weight: bold;
 }
 div.widget.project div.meter.hor.active dl .days {
-    top: 76px;
+    top: 70px;
 }
 
 div.widget.project div.meter dl dt.days {
