@@ -57,7 +57,7 @@ namespace Goteo\Controller {
             $project = Model\Project::get($id);
             $errors = array();
             if ($project->delete($errors)) {
-                Message::Info("Has borrado los datos del proyecto '<strong>{$project->name}</strong>' correctamente");
+                Message::Info(Text::get('dashboard-project-delete-correctly', $project->name));
                 if ($_SESSION['project']->id == $id) {
                     unset($_SESSION['project']);
                 }
