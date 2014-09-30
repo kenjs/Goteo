@@ -3,7 +3,7 @@
  *	This file is part of Goteo.
  *
  *  Goteo is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU Affero General Public License as published by
+ *  it under the terms of the GNU Affero Gseneral Public License as published by
  *  the Free Software Foundation, either version 3 of the License, or
  *  (at your option) any later version.
  *
@@ -17,12 +17,8 @@
  *
  */
 body.discover div#main div.widget {
-    overflow: hidden;
 	margin-bottom: 24px;
 }
-/*body.discover div#main div.widget div.widget.project.activable:nth-child(4n) {
-    clear: left;
-}*/
 
 body.discover div#main div.searcher {
 	background-color: transparent;
@@ -146,11 +142,7 @@ div.searcher form {
 div.discover-group div.widget.project {
     margin: 0px 0px 0px 25px;
 }
-/*
-div.discover-group div.widget.project + div.widget.project {
-    margin-left: 30px;
-}
-*/
+
 div.discover-group {
     display: none;
 }

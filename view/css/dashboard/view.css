@@ -56,10 +56,12 @@ body.dashboard div#sub-header img{
 body.dashboard div#dashboard-menu {
     display: block;
     font-size: 13px;
-    margin: -2.6em auto 0;
+    margin: 0 auto 40px;
+    /*margin: -2.6em auto 0;*/
     border-bottom: 40px solid #3399cc;
-    margin-top: -90px;
-    margin-bottom: 40px;
+    height:0;
+    /*margin-top: -90px;*/
+    /*margin-bottom: 40px;*/
 }
 
 body.dashboard div#dashboard-menu ul {
@@ -72,7 +74,7 @@ body.dashboard div#dashboard-menu > ul {
     width: 960px;
     margin-left: -480px;
     left: 50%;
-    top: 40px;
+    top: -51px;
 }
 
 body.dashboard div#dashboard-menu ul li {

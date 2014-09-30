@@ -101,12 +101,12 @@ if (isset($this['investor']) && is_object($this['investor'])) {
 
     <h<?php echo $level + 1 ?> class="author"><?php echo Text::get('regular-by')?> <a href="<?php echo SITE_URL ?>/user/profile/<?php echo htmlspecialchars($project->user->id) ?>"<?php echo $blank; ?>><?php echo htmlspecialchars(Text::shorten($project->user->name,40)) ?></a></h<?php echo $level + 1?>>
 
-    <div class="skills">
         <?php
         // スキル表示
         $skills = Skill::getNames($project->id);
-        if (!empty($skills)):
-
+        if (!empty($skills)): ?>
+        <div class="skills">
+            <?
             foreach( $skills as $_skill_id => $_skill_name):
                 // ログイン中のユーザーのスキルとマッチすればハイライト
                 $_match_skill = '';
@@ -118,19 +118,14 @@ if (isset($this['investor']) && is_object($this['investor'])) {
                         }
                     }
                 }
-                ?>
+            ?>
                 <a<?= $_match_skill; ?> id="skill_id_<?= $_skill_id; ?>" href=""><?php echo $_skill_name ?></a>
-            <?
-            endforeach;
-        endif;
-
-
-        ?>
-    </div>
+            <? endforeach; ?>
+        </div>
+        <? endif; ?>
 
     <div class="description"><?php echo Text::shorten($project->description, 50); ?></div>
-
-    <?php echo new View('view/project/meter_hor.html.php', array('project' => $project)) ?>
+    <?php echo new View('view/m/project/meter_hor.html.php', array('project' => $project)) ?>
 
     <div class="rewards">
         <h<?php echo $level + 1 ?>><?php echo Text::get('project-rewards-header'); ?></h<?php echo $level + 1?>>
