@@ -23,6 +23,7 @@ div.widget.project-needs h4 {
 div.widget.project-needs {
     padding-left: 0;
     padding-right: 0;
+    position: relative;
 }
 body.project-show div#main > div.center > div.widget.project-needs {
     max-width: 620px;
