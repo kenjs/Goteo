@@ -322,9 +322,11 @@ body.dashboard div#meter-big dl dt.reached {
 }
 
 body.dashboard div#meter-big dl dd.reached {
-	left: 100px;
+	/*left: 100px;*/
 	color: #96238F;
 	font-size: 16px;
+    left: 60px;
+    text-align: right;
 }
 
 body.dashboard div#meter-big dl .reached span.euro {
@@ -382,8 +384,9 @@ body.dashboard div#meter-big dl dt.days {
 }
 
 body.dashboard div#meter-big dl dd.days {
-    left: 240px;
+    /*left: 240px;*/
     font-size: 16px;
+    left: 285px;
 }
 
 body.dashboard div#meter-big div.keepiton {
