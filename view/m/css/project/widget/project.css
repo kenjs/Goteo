@@ -90,7 +90,8 @@ div.widget.project div.image div.tagmark.grey {
 /* tipografia peque�a para que quepa todo */
 div.widget.project div.image div.tagmark span.small {
     font-size: 0.8em !important;
-	line-height: normal;
+	/*line-height: normal;*/
+    line-height: 14px;
 }
 
 /* Dos lineas para el en marcha y aun puedes */
