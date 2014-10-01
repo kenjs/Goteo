@@ -619,6 +619,11 @@ body.project-edit div.superform ol li.element div.contents input {
     margin-top: 0;
 }
 
+body.dashboard.project-edit div.access div.superform ol li.submit.save input {
+    width: 150px;
+    height: 30px;
+}
+
 body.project-edit div.superform ol li.element div.contents input.inline {
     /*padding: 0.3em 6px;*/
 }
@@ -788,7 +793,7 @@ body.js div#main.preview form.project div.superform > div.elements ol li.element
 }
 
 
-/*╔в╔М╔╦╔╖╔╞╔х╓Ра╒╓аио╓╡╓К*/
+/*О©╫в╔?О©╫О©╫О©╫О©╫О©╫х╓О©╫О©╫О©╫О©╫О©╫О©╫о╓О©╫О©╫О©╫*/
 
 body.project-edit div.superform div.elements ol li#individual_rewards h4.title,
 body.project-edit div.superform div.elements ol li.required h4.title {
