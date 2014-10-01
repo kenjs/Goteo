@@ -186,10 +186,9 @@ namespace Goteo\Model\Project {
 
 		public static function types() {
 			return array(
-				'task'=>Text::get('cost-type-task'),
+				'task'=>Text::get('cost-type-task-support'),
 				'lend'=>Text::get('cost-type-lend')
 			);
-
 		}
 
 	}
