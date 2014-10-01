@@ -571,6 +571,7 @@ a.button.weak {
     font-weight: bold;
     font-size: 16px;
 }
+
 div.superform li#user_avatar li.avatar_upload input[type="submit"] {
     padding: 0.3em 1.2em !important;
 }
@@ -619,14 +620,20 @@ body.project-edit div.superform ol li.element div.contents input {
     margin-top: 0;
 }
 
-body.dashboard.project-edit div.access div.superform ol li.submit.save input {
-    width: 150px;
-    height: 30px;
-}
-
 body.project-edit div.superform ol li.element div.contents input.inline {
     /*padding: 0.3em 6px;*/
 }
+
+body.project-edit div.access div.superform ol li.submit.save div.contents input,
+body.project-edit div.updates div.superform ol li.image_upload div.contents input,
+body.project-edit div.updates div.superform ol li.submit.media-upload div.contents input,
+body.project-edit div.supports div.superform ol li.submit.ok div.contents input {
+    padding: 0.3em 1.2em!important;
+}
+
+
+
+
 
 body.project-edit div.superform ol li.element div.project-share li.url input {
     width: 230px;
