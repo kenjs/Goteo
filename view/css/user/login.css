@@ -66,7 +66,8 @@ body.user-login div#main form input[type="submit"] {
     width: 100%;
 }
 
-body.user-login div#main form button.disabled {
+body.user-login div#main form button.disabled,
+body.user-login div#main form button.aqua {
     width: 100%;
 }
 
