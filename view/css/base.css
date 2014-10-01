@@ -189,28 +189,25 @@ table#font_box td.active {
 
 .header .nav_wrapper ul {
     float: left;
+    width: 960px;
     margin: 0;
     padding: 0;
 }
 
 .header .nav_wrapper ul li {
-    border-right: 1px dashed #cccccc;
     color: #000000;
     line-height: 1.6em;
     list-style-type: none;
-    width: 190px;
+    width: 20%;
     float: left;
     background-color:#fff;
 }
 
-.header .nav_wrapper ul li:last-child {
-    width: 191px;
-    border-right: none;
-}
-
 .header .nav_wrapper ul li ul li {
+    width: 20%;
+}
+.header .nav_wrapper ul li ul li a {
     border-right: none;
-    width: 191px;
 }
 
 .header .nav_wrapper ul li a {
@@ -218,16 +215,12 @@ table#font_box td.active {
     font-size: 16px;
     line-height: 60px;
     text-align: center;
+    border-right: 1px dashed #cccccc;
 }
 
-/*.header .nav_wrapper .earth_view a {*/
-    /*padding-left: 30px;*/
-    /*background: url('images/earth_view_bk.png') no-repeat 25px 24px;*/
-/*}*/
-
-/*.header .nav_wrapper .earth_view a:link {*/
-    /*color: #336699;*/
-/*}*/
+.header .nav_wrapper ul li:last-child a {
+    border-right: none;
+}
 
 .header .nav_wrapper ul li:hover,
 .header .nav_wrapper ul li.active {

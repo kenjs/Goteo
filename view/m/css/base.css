@@ -10,7 +10,6 @@ font-weight: normal;
 
 /*layout*/
 div  .inner {
-    widows: 100%;
     margin: 0 auto;
     overflow: hidden;
     zoom: 1;
