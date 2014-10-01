@@ -139,16 +139,17 @@ div.widget.project div.image div.investor div.invest span.amount {
 div.widget.project div.image div.categories {
     text-align: left;
     color: #ffffff;
-    background-color: #19b5b3;
+    /*background-color: #19b5b3;*/
+    background-color: rgba(25,181,179,0.8);
     font-size: 0.8em;
     text-transform: uppercase;
     padding: 2px 8px;
-    opacity: 0.8;
+    /*opacity: 0.8;*/
     filter: alpha(opacity=80);
     cursor: default;
     position: absolute;
     bottom: 0;
-    right: 0;    
+    right: 0;
     left: 0;
 }
 

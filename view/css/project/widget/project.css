@@ -84,7 +84,8 @@ div.widget.project div.image div.tagmark.grey {
 /* tipografia peque�a para que quepa todo */
 div.widget.project div.image div.tagmark span.small {
     font-size: 0.8em !important;
-	line-height: normal;
+	/*line-height: normal;*/
+    line-height: 14px;
 }
 
 /* Dos lineas para el en marcha y aun puedes */
@@ -133,11 +134,12 @@ div.widget.project div.image div.investor div.invest span.amount {
 div.widget.project div.image div.categories {
     text-align: left;
     color: #ffffff;
-    background-color: #19b5b3;
+    /*background-color: #19b5b3;*/
+    background-color: rgba(25,181,179,0.8);
     font-size: 0.8em;
     text-transform: uppercase;    
     padding: 2px 8px;
-    opacity: 0.8;
+    /*opacity: 0.8;*/
     filter: alpha(opacity=80);
     cursor: default;
     position: absolute;
