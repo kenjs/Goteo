@@ -279,6 +279,7 @@ footer
     height: 116px;
     margin-top: 80px;
     background-color: #fff;
+    clear:both;
 }
 
 .footer .footer_link_wrapper {
