@@ -315,7 +315,7 @@ body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_
     float: left;
     border: none;
     border-right: 1px dashed #cccccc;
-    color: #666;*/
+    color: #666;
 }
 body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav .item:last-child {
     border-right: none;
