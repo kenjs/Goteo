@@ -306,6 +306,7 @@ namespace Goteo\Controller {
                 
                 case 'overview':
                     $viewData['categories'] = Model\Project\Category::getAll();
+
 //                    $viewData['currently'] = Model\Project::currentStatus();
 //                    $viewData['scope'] = Model\Project::scope();
                     $viewData['project_location'] = Model\Project::yokohamaLocation();
@@ -988,9 +989,7 @@ namespace Goteo\Controller {
                             $support->thread = $msg->id;
                         }
                     }
-
                 }
-                
             }
 
             //skills
