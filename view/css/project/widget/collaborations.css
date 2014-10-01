@@ -40,6 +40,7 @@ div.widget.project-collaborations ul li {
 
 div.widget.project-collaborations ul li > p {
     margin:  0 0 1em;
+    line-height: 20px;
 }
 
 div.widget.project-collaborations ul li.task {
@@ -111,7 +112,7 @@ div.widget.project-collaborations a.button {
 
 
 
-/*¥Ö¥í¥°»î„Óˆó¸æ¤Î¥µ¥¤¥É¥Ð©`¤Î¥Ü¥¿¥ó*/
+/*ï¿½Ö¥?ï¿½ï¿½Óˆï¿½ï¿½Î¥ï¿½ï¿½ï¿½ï¿½É¥Ð©`ï¿½Î¥Ü¥ï¿½ï¿½ï¿½*/
 
 body.project-show div#main div.side div#project-collaborations .project-widget-box {
     padding: 0 20px;
