@@ -18,7 +18,6 @@
  */
 /* Detalle de la linea verde */
 div.widget.project-collaborations h4.supertitle {
-    /*border-bottom: 1px solid #00B25A !important;*/
     background-color: #33cc99;
 }
 
@@ -33,9 +32,6 @@ div.widget.project-collaborations ul li {
     background: none no-repeat left 5px;
     min-height: 32px;
     line-height: 32px;
-    /*border-bottom: 1px solid #00b25a;*/
-    /*margin-bottom: 1em;*/
-	/*padding-bottom: 10px;*/
 }
 
 div.widget.project-collaborations ul li > p {
@@ -63,32 +59,11 @@ div.widget.project-collaborations ul li {
 div.widget.project-collaborations a.more {
     clear: both;
     display: block;
-    /*float: right;*/
     text-decoration: none;
     text-align: center;
     line-height: 38px;
     border-top: 1px dashed #c0c0c0;
 }
-
-body.project-show div#main div.widget.project-support div.project-widget-box a.more
-
-/*div.side div.widget a.more {
-    top: 0;
-    padding: 0;
-    line-height: 38px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}*/
-
-
-/*div.widget.project-support div.buttons {
-    padding: 1em 0 0;
-    clear: both;
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-}*/
 
 div.widget.project-collaborations a.button {
     display: block;
@@ -131,3 +106,11 @@ body.project-show div#main div.side div#project-collaborations .project-widget-b
 }
 
 
+/* collaborations widget in project-menu'messages' */
+body.project-show div.center.messages div.project-collaborations {
+    max-width: 580px;
+}
+body.project-show div.center.messages div.project-collaborations ul li {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
