@@ -594,7 +594,8 @@ namespace Goteo\Controller {
 
 
             // checkeamos campañas activas
-            $campaigns = Model\Call::getActive(4);
+            //$campaigns = Model\Call::getActive(4);
+            $campaigns = array();
             foreach ($campaigns as $campaign) {
                 $errors = array();
 
