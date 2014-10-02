@@ -95,7 +95,9 @@ jQuery(document).ready(function($) {
 
     <div id="main">
         <div class="about_cf">
-            <p>「クラウドファンディングのページにログインします。ユーザー登録がお済みでない方は、まずはご登録ください。ユーザー登録頂くと、プロジェクトの作成や、自分が共感するプロジェクトへの支援が出来るようになります。</p>
+            <p class="caution">※クラウドファンディング機能のサービス提供開始は10月中旬を予定しています。ユーザー登録は現在ご利用いただけません。<br />
+                ご不便をおかけし申し訳ありませんが、しばらくお待ちください。</p>
+            <p>クラウドファンディングのページにログインします。ユーザー登録がお済みでない方は、まずはご登録ください。ユーザー登録頂くと、プロジェクトの作成や、自分が共感するプロジェクトへの支援が出来るようになります。</p>
             <dl>
                 <dt>クラウドファンディングとは?</dt>
                 <dd>個人や団体が実現したい「プロジェクト」を提案し、そのアイデアに賛同する一般の方々から、主にウェブを通じて資金を募るシステムのことです。LOCAL GOODでは資金だけでなく、地域課題解決に必要なスキルも募集しています。</dd>
@@ -124,12 +126,12 @@ jQuery(document).ready(function($) {
                 </form>
 
                 <p><a href="/user/recover"><?php echo Text::get('login-recover-link'); ?></a></p>
-                <br />
                 <p><a class="baja" href="/user/leave"><?php echo Text::get('login-leave-button'); ?></a></p>
 
             </div>
         </div>
 
+<?/*
         <div class="external-login">
             <div>
                 <h2><?php echo Text::get('login-oneclick-header'); ?></h2>
@@ -222,6 +224,7 @@ jQuery(document).ready(function($) {
             </form>
             </div>
         </div>
+                */?>
 
     </div>
 
