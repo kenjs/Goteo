@@ -60,13 +60,6 @@ body.project-edit div#main.costs div.superform li.element.cost div.description p
     margin: .5em 0;
 }
 
-/*
-body.project-edit div#main.costs div.superform li.element.cost input.edit,
-body.project-edit div#main.costs div.superform li.element.cost input.remove {
-    width: 7em;
-}
-*/
-
 body.project-edit div#main.costs div.superform li.element.cost input.edit {
     margin-top: -1em;
 }
@@ -77,8 +70,6 @@ body.project-edit div#main.costs div.superform li.element.cost input.remove {
 }
 
 /* Editando */
-
-
 body.project-edit div#main.costs div.superform li.element.editcost > .children  ol {
     padding: 0 !important;
     margin: 0 !important;
@@ -131,12 +122,11 @@ body.project-edit div#main.costs div.superform li.element.editcost li.material d
 }
 
 body.project-edit div#main.costs div.superform li.element.editcost div.children li.element.cost-amount > div.contents > input {
-    /*width: 3em;*/
-    /*max-width: 3em;*/
     min-width: 6em;
     width:6em;
     float: left;
-    padding-right: 20px;
+    /*padding-right: 20px;*/
+    padding-left: 20px;
     text-align: right;
     background-image: url('/view/css/yen/m.png');
     background-repeat: no-repeat;

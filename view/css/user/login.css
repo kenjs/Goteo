@@ -16,10 +16,16 @@
  *  along with Goteo.  If not, see <http://www.gnu.org/licenses/agpl.txt>.
  *
  */
+
+/* 141002 usui change for Day2 */
 body.user-login div#main > div {
     display: table-cell;
 	width: 30%;
 }
+body.user-login div#main > div {
+    width: auto;
+}
+
 body.user-login div#main > div > * {
     padding: 20px 20px 15px;
     background-color: white;
@@ -201,13 +207,19 @@ body.user-login div#main form input[type="submit"]{
 
 /* .about_cf */
 body.user-login div#main > div.about_cf {
-    width: 920px;display: block;
+    width: 920px;
+    display: block;
     background-color: #fff;
     margin-bottom: 20px;
     padding: 20px;
 }
 body.user-login div#main > div.about_cf p {
     padding: 0;
+}
+body.user-login div#main > div.about_cf p.caution {
+    color: #ff3300;
+    background-color: #f5f5f5;
+    padding: 16px;
 }
 body.user-login div#main > div.about_cf dl {
     padding: 10px 0;
@@ -220,4 +232,12 @@ body.user-login div#main > div.about_cf dl dt {
 }
 body.user-login div#main > div.about_cf p.link {
     margin-bottom: 0;
+}
+
+body.user-login div#main form {
+    margin-bottom: 16px;
+}
+body.user-login div#main div.login p {
+    height: 20px;
+    margin: 0;
 }

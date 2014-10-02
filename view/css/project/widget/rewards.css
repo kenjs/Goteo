@@ -22,7 +22,6 @@ La pagina de aportar, la pagina de retornos, el lateral de retornos
 /* Detalle de la linea verde */
 div.widget.project-rewards h4.supertitle {
     background-color: #ff9933;
-    /*border-bottom: 1px solid #00B25A !important;*/
 }
 
 div.widget.project-rewards div.social,
@@ -65,7 +64,6 @@ div.widget.project-invest div.individual h4.title,
 div.widget.project-rewards div.individual h4.title,
 #rewards-summary div.individual h4.title {
     color: #96238F !important;
-	/*margin-top: 20px;*/
 }
 
 div.widget.project-invest > div.individual ul li,
@@ -96,7 +94,6 @@ div.widget.project-rewards > div.individual ul li span.name,
 }
 
 
-
 div.widget.project-rewards > div.individual ul li div.amount,
 #rewards-summary > div.individual ul li div.amount {
     text-align: right;
@@ -123,7 +120,6 @@ div.widget.project-rewards div.individual ul li.money h4.name {
 div.widget.project-rewards > div.individual ul li div.amount span.euro,
 #rewards-summary > div.individual ul li div.amount span.euro {
     margin: 0px 0px 0px 2px;
-    /*background: url('/view/css/euro/violet/s.png') no-repeat right center;*/
     display: inline-block;
     background-color: #e7e7e7;
     border-right: #e7e7e7 solid 5px;
@@ -137,7 +133,6 @@ div.widget.project-rewards > div.individual ul li div.amount span.euro,
 div.widget.project-rewards > div.individual ul li div.investors,
 #rewards-summary > div.individual ul li div.investors {
     color: #313B96;
-/*    border: #313B96 1px solid; */
     padding: 2px 6px 2px 3px;
     text-transform: uppercase;
     margin-left: -60px;
@@ -171,7 +166,6 @@ div.widget.project-invest ul li,
 div.widget.project-rewards ul li,
 #rewards-summary ul li {
     padding: 10px 10px 10px 60px;
-    /*background: none no-repeat left 14px;*/
     background: none no-repeat 10px 14px;
     min-height: 32px;
     margin-bottom: 1em;
@@ -248,10 +242,6 @@ div.widget.project-rewards ul li.other,
     background-image: url('/view/css/icon/m/other.png');
 }
 
-div.widget.project-rewards ul li.other {
-    /*background-position: left 34px;*/
-}
-
 div.widget.project-rewards ul li {
     padding-top: 0;
     background-position: left top;
@@ -263,9 +253,6 @@ div.widget.project-rewards a.more {
     text-decoration: none;
     text-align: center;
 }
-/*div.widget.project-collaborations ul li.support strong {
-    padding-left: 45px;
-}*/
 
 div.widget.project-invest ul li div.license h4,
 div.widget.project-invest ul li div.license h5,
@@ -303,7 +290,6 @@ div.widget.project-rewards ul li div.license > a strong,
     padding-top: 40px;
     display: block;
 }
-
 
 div.widget.project-invest ul li div.license,
 div.widget.project-rewards ul li div.license,
@@ -465,3 +451,9 @@ div.widget.project-rewards ul li div.license.xoln > a strong,
     background-image: url('/view/css/license/xoln.png');
 }
 
+/* in center */
+body.project-show div#main > div.center > div.widget.project-rewards-summary,
+div.widget.project-rewards-summary {
+    max-width: 620px;
+    padding: 0;
+}

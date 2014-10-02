@@ -67,23 +67,13 @@ div.superform > div.hint {
     overflow: hidden;
 }
 
-body.js div.superform > div.hint {
-    /*background: url('superform/wizard.png') no-repeat right top;*/
-    /*border-right: 1px dashed #b7c2c5;*/
-}
-
 div.superform > div.elements {
-    /*border-right: 1px dashed #b7c2c5;*/
     position: relative;
 }
 
 div.superform > div.hint h4,
 div.superform > div.hint blockquote {
     background-color: #ffffff;
-/*
-    background: url('/view/css/superform/guide.png') 20px 20px;
-    padding-left: 60px;
-*/
     padding: 20px;
     vertical-align: top;
     border: dashed #b7c2c5;
@@ -97,7 +87,6 @@ div.superform > div.hint h4 {
 }
 
 div.superform > div.hint blockquote {
-    /*font-size: 12px;*/
     border-right-width: 1px;
     min-height: 3em;
     font-size: 14px;
@@ -135,7 +124,6 @@ div.superform li.element > div.contents + div.feedback + div.children > div.elem
 div.superform li.element {
     position: relative;
     padding: 1em 0;
-    /*border-top: 1px dashed #B7C2C5;*/
     clear: both;
 }
 
@@ -156,7 +144,6 @@ div.superform > div.elements > ol > li.element.inline {
 }
 
 div.superform li.element > * + div.contents {
-    /*margin-top: 1em;*/
     margin-top: 6px;
 }
 
@@ -189,9 +176,6 @@ div.superform div.elements > ol > li > div.contents + div.children > div.element
 div.superform input[type='text'],
 div.superform input[type='password'],
 div.superform textarea {
-    /*padding: .4em;*/
-    /*background-color: #d7d9da;
-    border: 1px solid #58595b;*/
     min-height: 27px;
     background-color: #eeeeee;
     border: 1px solid #cccccc;
@@ -238,11 +222,6 @@ div.superform li.element.hidden {
 }
 
 /* Textboxes & Textarea */
-
-div.superform li.element.textbox > div.contents,
-div.superform li.element.textarea > div.contents {
-    /*padding-right: .6em;*/
-}
 
 div.superform li.element.textbox > div.contents > input[type="text"],
 div.superform li.element.textbox > div.contents > input[type="password"],
@@ -293,8 +272,7 @@ div.superform div.elements li.element.textbox.linkedin > div.contents {
 
 div.superform div.elements > ol > li.element.checkboxes,
 div.superform div.elements > ol > li.element.checkboxescustom,
-div.superform div.elements > ol > li.element.radios/*,
-div.superform div.elements > ol > li.element.slider*/ {
+div.superform div.elements > ol > li.element.radios {
     padding-bottom: 0;
 }
 
@@ -313,10 +291,8 @@ div.superform div.elements > ol > li.element.checkboxes > div.contents > ul > li
 div.superform div.elements > ol > li.element.checkboxescustom > div.contents > ul > li,
 div.superform div.elements > ol > li.element.radios > div.contents > ul > li,
 div.superform div.elements > ol > li.element.slider > div.contents > ul > li {
-/*    float: left;   width: 50%;    */
     border-bottom: 1px dashed #bcbdbf;
     border-right: 1px dashed #bcbdbf;
-/*    margin-left: -1px; */
     padding: 0;
 }
 
@@ -564,6 +540,7 @@ div.superform.green div.elements > ol > li.busy > .title {
 div.superform input.edit[type="submit"],
 div.superform input.remove[type="submit"],
 div.superform input.add[type="submit"],
+div.superform input.add[type="submit"],
 a.button.red,
 a.button,
 a.button.weak {
@@ -616,12 +593,7 @@ body.project-edit div.superform ol li.element div.contents input {
     font-size: 12px;
     line-height: 16px;
     font-weight: normal;
-    /*padding: 0.3em 1.2em;*/
     margin-top: 0;
-}
-
-body.project-edit div.superform ol li.element div.contents input.inline {
-    /*padding: 0.3em 6px;*/
 }
 
 body.project-edit div.access div.superform ol li.submit.save div.contents input,
@@ -630,9 +602,6 @@ body.project-edit div.updates div.superform ol li.submit.media-upload div.conten
 body.project-edit div.supports div.superform ol li.submit.ok div.contents input {
     padding: 0.3em 1.2em!important;
 }
-
-
-
 
 
 body.project-edit div.superform ol li.element div.project-share li.url input {
@@ -671,23 +640,6 @@ div.superform li#costs h4.title {
 }
 
 /* backgrounds */
-div.superform li#supports,
-div.superform li#social_rewards {
-    /*background-color: #f3f9f2 !important;*/
-}
-div.superform li#individual_rewards {
-    /*background-color: #f8e3e3 !important;*/
-}
-
-div.superform li.editcost {
-    /*background-color: #fdf3f4;*/
-}
-
-div.superform li.cost.required_cost-yes,
-div.superform li.editcost.required_cost-yes {
-    /*background-color: #f2e5f1 !important;*/
-}
-
 div.superform li.editcost li.required_cost-yes {
     background-color: #e4c9e2 !important;
 }
@@ -924,4 +876,12 @@ div.superform li#social_rewards {
 }
 div.superform li#individual_rewards {
     border-bottom: none;
+}
+
+
+/* for input in page-edit page */
+div#main.overview div.superform.aqua #image_upload input[type="submit"],
+div#main.overview div.superform.aqua #video-upload input.media-upload[type="submit"],
+div.superform.aqua input.ok[type="submit"] {
+    padding: 0.3em 1.2em;
 }
