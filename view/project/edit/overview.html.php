@@ -82,7 +82,8 @@ $project_location = array();
 
 foreach ($this['project_location'] as $value => $label) {
     $project_location[] =  array(
-        'value'     => $value,
+//        'value'     => $value,
+        'value'     => $label,
         'label'     => $label
         );
 }

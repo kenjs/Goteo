@@ -21,7 +21,8 @@
 
 namespace Goteo\Library {
 
-    use Goteo\Core\Model;
+    use Goteo\Core\Model,
+        Goteo\Model\Project;
 
 	/*
 	 * Clase para cosas de localizaciones
@@ -37,20 +38,26 @@ namespace Goteo\Library {
 
             $results = array();
 
-            $sql = "SELECT distinct(project_location) as location
-                    FROM project
-                    WHERE status > 2
-                    ORDER BY location ASC";
+//            $sql = "SELECT distinct(project_location) as location
+//                    FROM project
+//                    WHERE status > 2
+//                    ORDER BY location ASC";
+//
+//            try {
+//                $query = Model::query($sql);
+//                foreach ($query->fetchAll(\PDO::FETCH_CLASS) as $item) {
+//                    $results[md5($item->location)] = $item->location;
+//                }
+//                return $results;
+//            } catch (\PDOException $e) {
+//                throw new Exception('Fallo la lista de localizaciones');
+//            }
 
-            try {
-                $query = Model::query($sql);
-                foreach ($query->fetchAll(\PDO::FETCH_CLASS) as $item) {
-                    $results[md5($item->location)] = $item->location;
-                }
-                return $results;
-            } catch (\PDOException $e) {
-                throw new Exception('Fallo la lista de localizaciones');
+            $_locations = Project::yokohamaLocation();
+            foreach ( $_locations as $_area ){
+                $results[md5($_area)] = $_area;
             }
+            return $results;
 		}
 
 	}

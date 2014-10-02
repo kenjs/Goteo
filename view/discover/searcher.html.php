@@ -31,6 +31,10 @@ $rewards = Icon::getList(); // iconos que se usan en proyectos
 $skills = Skill::getList(); // スキル取得
 
 $params = $this['params'];
+
+//var_dump($locations);
+//exit;
+
 ?>
 <div class="widget searcher">
     <form method="post" action="/discover/results">
@@ -54,7 +58,8 @@ $params = $this['params'];
             <label for="category"><?php echo Text::get('discover-searcher-bycategory-header'); ?></label>
                 <select id="category" name="category[]" multiple size="10">
                     <option class="all" value="all"<?php if (empty($params['category'])) echo ' selected="selected"'; ?>><?php echo Text::get('discover-searcher-bycategory-all'); ?></option>
-                <?php foreach ($categories as $id=>$name) : ?>
+                <?php
+                foreach ($categories as $id=>$name) : ?>
                     <option value="<?php echo $id; ?>"<?php if (in_array("'{$id}'", $params['category'])) echo ' selected="selected"'; ?>><?php echo $name; ?></option>
                 <?php endforeach; ?>
                 </select>
