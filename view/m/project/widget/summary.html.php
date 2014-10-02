@@ -22,13 +22,14 @@ use Goteo\Library\Text,
     Goteo\Core\View;
 
 $project = $this['project'];
-
+//var_dump($project);
 //tratamos los saltos de linea y los links en las descripciones del proyecto
-$project->description = nl2br(Text::urlink($project->description));
-$project->about       = nl2br(Text::urlink($project->about));
+//$project->description = nl2br(Text::urlink($project->description));
+//$project->description = $project->description;
+/*$project->about       = nl2br(Text::urlink($project->about));
 $project->motivation  = nl2br(Text::urlink($project->motivation));
 $project->goal        = nl2br(Text::urlink($project->goal));
-$project->related     = nl2br(Text::urlink($project->related));
+$project->related     = nl2br(Text::urlink($project->related));*/
 
 $level = (int) $this['level'] ?: 3;
 ?>

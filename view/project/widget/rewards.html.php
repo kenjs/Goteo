@@ -44,7 +44,7 @@ uasort($project->individual_rewards,
 <div class="widget project-rewards collapsable" id="project-rewards">
     
     <h<?php echo $level + 1 ?> class="supertitle"><?php echo Text::get('project-rewards-supertitle'); ?></h<?php echo $level + 1?>>
-       
+
     <div class="project-widget-box">
         <?php if (!empty($project->social_rewards)) : ?>
         <div class="social">
@@ -77,7 +77,8 @@ uasort($project->individual_rewards,
             <h<?php echo $level+1 ?> class="title"><?php echo Text::get('project-rewards-individual_reward-title'); ?></h<?php echo $level+1 ?>>
             <ul>
             <?php foreach ($project->individual_rewards as $individual) : ?>
-            <li class="<?php echo $individual->icon ?>">
+
+                <li class="<?php echo $individual->icon ?>">
                 
                 <div class="amount"><?php echo Text::get('regular-investing'); ?> <span><?php echo \amount_format($individual->amount); ?>円</span></div>
                 <h<?php echo $level + 1 ?> class="name"><?php echo htmlspecialchars($individual->icon_name) . ': ' . htmlspecialchars($individual->reward) ?></h<?php echo $level + 1 ?>
