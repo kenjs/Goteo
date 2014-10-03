@@ -34,7 +34,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <?php if (isset($ogmeta)) : ?>
         <meta property="og:title" content="<?php echo $ogmeta['title'] ?>" />
-        <meta property="og:type" content="activity" />
+        <meta property="og:type" content="website" />
         <meta property="og:site_name" content="<?php echo $ogmeta['title'] ?>" />
         <meta property="og:description" content="<?php echo $ogmeta['description'] ?>" />
         <?php if (is_array($ogmeta['image'])) :
@@ -45,11 +45,13 @@
             <meta property="og:image" content="<?php echo $ogmeta['image'] ?>" />
         <?php endif; ?>
         <meta property="og:url" content="<?php echo $ogmeta['url'] ?>" />
+        <meta property="og:locale" content="ja_JP" />
     <?php else : ?>
         <meta property="og:title" content="<?php echo $ogmeta['title'] ?>" />
         <meta property="og:description" content="<?php echo GOTEO_META_DESCRIPTION ?>" />
         <meta property="og:image" content="<?php echo SITE_URL ?>/view/css/header/logo.png" />
         <meta property="og:url" content="<?php echo SITE_URL ?>" />
+        <meta property="og:locale" content="ja_JP" />
     <?php endif; ?>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/goteo.css" />

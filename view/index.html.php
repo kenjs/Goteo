@@ -47,6 +47,7 @@ if (!empty($this['posts'])) {
         }
     }
 }
+$ogmeta['image'][] = SITE_URL . '/view/css/ogimg.png';
 
 include 'view/prologue.html.php';
 include 'view/header.html.php';
