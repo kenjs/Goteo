@@ -42,6 +42,7 @@ $level = (int) $this['level'] ?: 3;
         
     <?php if (!empty($project->description)): ?>
     <div class="description">
+        <h<?php echo $level + 1?>><?php echo Text::get('overview-field-about'); ?></h<?php echo $level + 1?>>
         <?php echo $project->description; ?>
     </div>    
     <?php endif ?>
