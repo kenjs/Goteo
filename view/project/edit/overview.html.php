@@ -194,10 +194,10 @@ $superform = array(
                 'about' => array(
                     'type'      => 'textarea',       
                     'title'     => Text::get('overview-field-about'),
-                    'required'  => true,
+//                    'required'  => true,
                     //'hint'      => Text::get('tooltip-project-about'),
-                    'errors'    => !empty($errors['about']) ? array($errors['about']) : array(),
-                    'ok'        => !empty($okeys['about']) ? array($okeys['about']) : array(),
+//                    'errors'    => !empty($errors['about']) ? array($errors['about']) : array(),
+//                    'ok'        => !empty($okeys['about']) ? array($okeys['about']) : array(),
                     'value'     => $project->about
                 ),
                 'motivation' => array(

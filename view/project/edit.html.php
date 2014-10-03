@@ -38,6 +38,17 @@ if (!empty($this['success'])) {
 include 'view/prologue.html.php';
 
     include 'view/header.html.php'; ?>
+<?
+    if ($this['step'] == 'overview'):
+?>
+    <script type="text/javascript">
+        $(function(){
+            $('textarea#about_editor').attr('readonly','readonly');
+        });
+    </script>
+<?
+    endif;
+?>
 
     <div id="sub-header">
         <div class="project-header">
