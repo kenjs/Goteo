@@ -34,7 +34,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <?php if (isset($ogmeta)) : ?>
         <meta property="og:title" content="<?php echo $ogmeta['title'] ?>" />
+        <? if($_SERVER['REQUEST_URI']=="/"): ?>
         <meta property="og:type" content="website" />
+        <? else: ?>
+        <meta property="og:type" content="article" />
+        <? endif; ?>
         <meta property="og:site_name" content="<?php echo $ogmeta['title'] ?>" />
         <meta property="og:description" content="<?php echo $ogmeta['description'] ?>" />
         <?php if (is_array($ogmeta['image'])) :

@@ -32,7 +32,7 @@ use Goteo\Library\Text,
             <div class="head_bar_inner">
                 <span>横浜の地域課題プラットフォーム</span>
 <?
-                if($_SERVER['REQUEST_URI']=="/"):
+//                if($_SERVER['REQUEST_URI']=="/"):
 ?>
                 <div id="social_bookmark">
                     <div id="twitter">
@@ -65,7 +65,7 @@ use Goteo\Library\Text,
                     <div style="clear:both"></div>
                 </div><!-- #social_bookmark -->
                 <?
-                endif;
+//                endif;
                 ?>
             </div><!--.head_bar_inner-->
         </div>
