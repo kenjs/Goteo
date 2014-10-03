@@ -190,6 +190,8 @@ body.project-show div.project-menu ul li.active a {
     min-width: 80px !important;
     height: 50px;
     padding: 0 16px;
+    filter: none;
+    -ms-filter: none;
     background: none;
     background-color: #dae121;
     border: none;
@@ -206,6 +208,8 @@ body.project-show div.project-menu ul li.show a {
     /*width: 142px;*/
     min-width: 80px !important;
     height: 50px;
+    filter: none;
+    -ms-filter: none;
     background: none;
     background-color: #dae121;
     border: none;
@@ -244,6 +248,10 @@ body.project-show div#main > div.center > div.widget {
     margin-right: 20px;
     clear: left;
 	padding-bottom: 20px;
+}
+
+body.project-show div#main > div.center > div.widget .gallery-image{
+    text-align: center;
 }
 
 body.project-show div#main > div.side > div.widget .title {

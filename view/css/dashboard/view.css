@@ -165,6 +165,8 @@ body.dashboard div#dashboard-menu ul li.section.current a.section,
 body.dashboard div#dashboard-menu ul li.section.current ul,
 body.dashboard div#dashboard-menu ul li.section.active a.section,
 body.dashboard div#dashboard-menu ul li.section.active ul {
+    filter: none;
+    -ms-filter: none;
     background-color: #3399cc;
     color: #f5f5f5;
     font-weight: bolder;
@@ -172,12 +174,6 @@ body.dashboard div#dashboard-menu ul li.section.active ul {
 }
 
 body.dashboard div#dashboard-menu ul li.section.forbidden a.section {
-    background: #ccf4ff; /* Old browsers */
-    background: -moz-linear-gradient(top,  #ccf4ff 0%, #c0e4ed 60%, #b1cfd3 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccf4ff), color-stop(60%,#c0e4ed), color-stop(100%,#b1cfd3)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #ccf4ff 0%,#c0e4ed 60%,#b1cfd3 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #ccf4ff 0%,#c0e4ed 60%,#b1cfd3 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #ccf4ff 0%,#c0e4ed 60%,#b1cfd3 100%); /* IE10+ */
     background: linear-gradient(to bottom,  #eee 0%,#ddd 60%,#ccc 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccf4ff', endColorstr='#b1cfd3',GradientType=0 ); /* IE6-9 */
     color:#aaa;
@@ -191,6 +187,8 @@ body.dashboard div#dashboard-menu ul li.section.forbidden a.section {
 /*ie8*/
 body.dashboard div#dashboard-menu ul li.section a:hover.section,
 body.dashboard div#dashboard-menu ul li.section ul:hover {
+    filter: none;
+    -ms-filter: none;
     background-color: #3399cc;
 }
 
