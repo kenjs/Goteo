@@ -81,6 +81,9 @@
         <script type="text/javascript" src="<?php echo SRC_URL ?>/view/js/jquery-ui-1.10.3.autocomplete.min.js"></script>
     <?php endif; ?>
 
+    <?php if(defined('GOTEO_ANALYTICS_TRACKER')){
+        echo GOTEO_ANALYTICS_TRACKER;
+    }  ?>
 </head>
 
 <body id="page_top" <?php if (isset($bodyClass)) echo ' class="' . htmlspecialchars($bodyClass) . '"' ?>>
