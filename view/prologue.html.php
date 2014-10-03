@@ -50,12 +50,14 @@
         <?php endif; ?>
         <meta property="og:url" content="<?php echo $ogmeta['url'] ?>" />
         <meta property="og:locale" content="ja_JP" />
+        <meta property="fb:app_id" content="<?= OAUTH_FACEBOOK_ID ?>" />
     <?php else : ?>
         <meta property="og:title" content="<?php echo $ogmeta['title'] ?>" />
         <meta property="og:description" content="<?php echo GOTEO_META_DESCRIPTION ?>" />
         <meta property="og:image" content="<?php echo SITE_URL ?>/view/css/header/logo.png" />
         <meta property="og:url" content="<?php echo SITE_URL ?>" />
         <meta property="og:locale" content="ja_JP" />
+        <meta property="fb:app_id" content="<?= OAUTH_FACEBOOK_ID ?>" />
     <?php endif; ?>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/goteo.css" />
