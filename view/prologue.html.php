@@ -89,8 +89,16 @@
 </head>
 
 <body id="page_top" <?php if (isset($bodyClass)) echo ' class="' . htmlspecialchars($bodyClass) . '"' ?>>
-<?php /* 
-*
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=<?= OAUTH_FACEBOOK_ID ?>&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+<?php
+/*
 *** Uncomment this lines and change __YOUR_APP_ID__
 *
 if (isset($fbCode)) : ?>

@@ -429,7 +429,7 @@ footer
 
 #social_bookmark #facebook {
     float: left;
-    width: 100px;
+    width: 160px;
     overflow: hidden;
     margin-right: 10px;
 }
@@ -445,7 +445,7 @@ footer
 
 body.home #social_bookmark {
     float:left;
-    width:330px;
+    width:350px;
     margin:4px 10px 0 30px;
 }
 
