@@ -54,10 +54,10 @@ namespace Goteo\Controller\Admin {
 				if ($criteria->save($errors)) {
                     switch ($_POST['action']) {
                         case 'add':
-                            Message::Info(Text::_('Criterio añadido correctamente'));
+                            Message::Info(Text::get('criteria-info-add-correctly'));
                             break;
                         case 'edit':
-                            Message::Info(Text::_('Criterio editado correctamente'));
+                            Message::Info(Text::get('criteria-info-edit-correctly'));
                             break;
                     }
 				} else {

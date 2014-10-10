@@ -170,13 +170,13 @@ namespace Goteo\Controller\Admin {
                             unset($log);
 
                             // mensaje de ok y volvemos a la lista de usuarios
-                            Message::Info(Text::_('Datos actualizados'));
+                            Message::Info(Text::get('admin-users-info-update'));
                             throw new Redirection('/admin/users');
 
                         } else {
                             // si hay algun error volvemos a poner los datos en el formulario
                             $data = $_POST;
-                            Message::Error(Text::_('No se ha guardado correctamente. ').implode('<br />', $errors));
+                            Message::Error(Text::get('admin-users-error-save-fail').implode('<br />', $errors));
                         }
                     }
 
@@ -301,7 +301,7 @@ namespace Goteo\Controller\Admin {
                 case 'translang':
 
                     if (!isset($_POST['user'])) {
-                        Message::Error(Text::_('Hemos perdido de vista al usuario'));
+                        Message::Error(Text::get('admin-user-error-nouser'));
                         throw new Redirection('/admin/users');
                     } else {
                         $user = $_POST['user'];
@@ -323,7 +323,7 @@ namespace Goteo\Controller\Admin {
                     if (!$anylang) {
                         Message::Error(Text::_('No se ha seleccionado ningún idioma, este usuario tendrá problemas en su panel de traducción!'));
                     } else {
-                        Message::Info(Text::_('Se han aplicado al traductor los idiomas seleccionados'));
+                        Message::Info(Text::get('admin-user-info-fortranslator'));
                     }
 
                     throw new Redirection('/admin/users/manage/'.$user);

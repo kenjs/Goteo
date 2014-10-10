@@ -22,7 +22,8 @@
 namespace Goteo\Model {
 
     use Goteo\Library\Check;
-    
+    use Goteo\Library\Text;
+
     class License extends \Goteo\Core\Model {
 
         public
@@ -212,8 +213,8 @@ namespace Goteo\Model {
 
         public static function groups () {
             return array(
-                'regular' => 'Normal',
-                'open' => 'Abierto'
+                'regular' => Text::_('Normal'),
+                'open' => Text::_('Abierto')
             );
         }
 

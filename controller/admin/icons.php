@@ -49,10 +49,10 @@ namespace Goteo\Controller\Admin {
 				if ($icon->save($errors)) {
                     switch ($_POST['action']) {
                         case 'add':
-                            Message::Info(Text::_('Nuevo tipo añadido correctamente'));
+                            Message::Info(Text::get('admin-icons-info-add'));
                             break;
                         case 'edit':
-                            Message::Info(Text::_('Tipo editado correctamente'));
+                            Message::Info(Text::get('admin-icons-info-edit'));
 
                             // Evento Feed
                             $log = new Feed();

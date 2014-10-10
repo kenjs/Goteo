@@ -49,7 +49,7 @@ namespace Goteo\Controller\Admin {
                         $page->name = $_POST['name'];
                         if ($page->add($errors)) {
 
-                            Message::Info(Text::_('La página') . ' <strong>'.$page->name. '</strong> ' . Text::_('se ha creado correctamente, se puede editar ahora.'));
+                            Message::Info(' <strong>'.$page->name. '</strong> ' . Text::get('admin-pages-info-page') . Text::get('admin-pages-info-add-page'));
 
                             throw new Redirection("/admin/pages/edit/{$page->id}");
                         } else {
@@ -69,7 +69,7 @@ namespace Goteo\Controller\Admin {
 
                 case 'edit':
                     if ($node != \GOTEO_NODE && !in_array($id, static::_node_pages())) {
-                        Message::Info(Text::_('No puedes gestionar la página') . ' <strong>'.$id.'</strong>');
+                        Message::Info(Text::get('admin-pages-info-nopermission') . ' <strong>'.$id.'</strong>');
                         throw new Redirection("/admin/pages");
                     }
                     // si estamos editando una página
@@ -96,7 +96,7 @@ namespace Goteo\Controller\Admin {
                             $log->doAdmin('admin');
                             unset($log);
 
-                            Message::Info(Text::_('La página ') . $page->name . Text::_(' se ha actualizado correctamente'));
+                            Message::Info(Text::get('admin-pages-info-page') . $page->name . Text::get('admin-pages-info-add-page'));
 
                             throw new Redirection("/admin/pages");
                         } else {

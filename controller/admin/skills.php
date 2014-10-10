@@ -4,6 +4,7 @@ namespace Goteo\Controller\Admin {
     use Goteo\Core\View,
         Goteo\Core\Redirection,
         Goteo\Core\Error;
+    use Goteo\Library\Text;
 
     class Skills {
 
@@ -33,7 +34,7 @@ namespace Goteo\Controller\Admin {
                                 'action' => "$url/edit/",
                                 'submit' => array(
                                     'name' => 'update',
-                                    'label' => 'Añadir'
+                                    'label' => Text::_('Añadir')
                                 ),
                                 'fields' => array (
                                     'id' => array(
@@ -43,12 +44,12 @@ namespace Goteo\Controller\Admin {
 
                                     ),
                                     'name' => array(
-                                        'label' => 'Skill',
+                                        'label' => Text::_('Skill'),
                                         'name' => 'name',
                                         'type' => 'text'
                                     ),
                                     'description' => array(
-                                        'label' => 'Descripción',
+                                        'label' => Text::_('Descripción'),
                                         'name' => 'description',
                                         'type' => 'textarea',
                                         'properties' => 'cols="100" rows="2"',
@@ -155,7 +156,7 @@ namespace Goteo\Controller\Admin {
                     'folder' => 'skills',
                     'file' => 'list',
                     'model' => 'skill',
-                    'addbutton' => 'Nueva skill',
+                    'addbutton' => Text::_('New skill'),
                     'otherbutton' => '<a href="/admin/skills/keywords" class="button">Ver Palabras clave</a>',
                     'data' => $model::getAll(),
                     'columns' => array(

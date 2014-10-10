@@ -75,16 +75,10 @@ include 'view/header.html.php' ?>
                                 'skills' => $skills
                             )
             ); ?>
-        <?
-//        var_dump($this);
-        ?>
 
     <?php foreach ($this['lists'] as $type=>$list) :
         if (array_empty($list))
             continue;
-
-//        var_dump($this);
-
         ?>
         <div class="widget projects">
 

@@ -33,7 +33,7 @@ $translator = ACL::check('/translate') ? true : false;
         <thead>
             <tr>
                 <th><!-- Editar --></th>
-                <th><?php echo Text::_('Página'); ?></th>
+                <th><?php echo Text::_('Páginas'); ?></th>
                 <th><?php echo Text::_('Descripción'); ?></th>
                 <th><!-- Abrir --></th>
                 <th><!-- Traducir --></th>

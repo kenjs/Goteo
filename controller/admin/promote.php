@@ -52,7 +52,7 @@ namespace Goteo\Controller\Admin {
 				if ($promo->save($errors)) {
                     switch ($_POST['action']) {
                         case 'add':
-                            Message::Info(Text::_('Proyecto destacado correctamente'));
+                            Message::Info(Text::get('admin-promote-info-add-project'));
 
                             $projectData = Model\Project::getMini($_POST['project']);
 
@@ -72,7 +72,7 @@ namespace Goteo\Controller\Admin {
 
                             break;
                         case 'edit':
-                            Message::Info(Text::_('Destacado actualizado correctamente'));
+                            Message::Info(Text::get('admin-promote-info-update-project'));
                             break;
                     }
 
@@ -125,9 +125,9 @@ namespace Goteo\Controller\Admin {
                     break;
                 case 'remove':
                     if (Model\Promote::delete($id)) {
-                        Message::Info(Text::_('Destacado quitado correctamente'));
+                        Message::Info(Text::get('admin-promote-info-delete-project'));
                     } else {
-                        Message::Error(Text::_('No se ha podido quitar el destacado'));
+                        Message::Error(Text::get('admin-promote-error-delete-project'));
                     }
                     throw new Redirection('/admin/promote');
                     break;

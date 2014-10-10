@@ -23,6 +23,7 @@ namespace Goteo\Controller\Admin {
     use Goteo\Core\View,
         Goteo\Core\Redirection,
         Goteo\Core\Error;
+    use Goteo\Library\Text;
 
     class Categories {
 
@@ -50,7 +51,7 @@ namespace Goteo\Controller\Admin {
                                 'action' => "$url/edit/",
                                 'submit' => array(
                                     'name' => 'update',
-                                    'label' => 'Añadir'
+                                    'label' => Text::_('Añadir')
                                 ),
                                 'fields' => array (
                                     'id' => array(
@@ -60,12 +61,12 @@ namespace Goteo\Controller\Admin {
 
                                     ),
                                     'name' => array(
-                                        'label' => 'Categoría',
+                                        'label' => Text::_('Categoría'),
                                         'name' => 'name',
                                         'type' => 'text'
                                     ),
                                     'description' => array(
-                                        'label' => 'Descripción',
+                                        'label' => Text::_('Descripción'),
                                         'name' => 'description',
                                         'type' => 'textarea',
                                         'properties' => 'cols="100" rows="2"',
@@ -169,15 +170,16 @@ namespace Goteo\Controller\Admin {
                     'folder' => 'base',
                     'file' => 'list',
                     'model' => 'category',
-                    'addbutton' => 'Nueva categoría',
+                    'addbutton' => Text::_('Nueva categoría'),
                     'otherbutton' => '<a href="/admin/categories/keywords" class="button">Ver Palabras clave</a>',
                     'data' => $model::getAll(),
                     'columns' => array(
                         'edit' => '',
-                        'name' => 'Categoría',
+                        //'name' => 'Categoría',
+                        'name' => Text::_('Subject category name'),
                         'numProj' => 'Proyectos',
                         'numUser' => 'Usuarios',
-                        'order' => 'Prioridad',
+                        'order' => Text::_('Prioridad'),
                         'translate' => '',
                         'up' => '',
                         'down' => '',

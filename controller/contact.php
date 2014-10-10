@@ -112,10 +112,10 @@ namespace Goteo\Controller {
                     $mailHandler->html = true;
                     $mailHandler->template = $template->id;
                     if ($mailHandler->send($errors)) {
-                        Message::Info(Text::_('Mensaje de contacto enviado correctamente.'));
+                        Message::Info(Text::get('contact-info-sendmessage-success'));
                         $data = array();
                     } else {
-                        Message::Error(Text::_('Ha fallado al enviar el mensaje.'));
+                        Message::Error(Text::get('contact-error-sendmessage-fail'));
                     }
 
                     unset($mailHandler);

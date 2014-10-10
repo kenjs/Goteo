@@ -49,7 +49,7 @@ namespace Goteo\Controller\Admin {
                             //Message::Info(Text::_('La plantilla se ha actualizado correctamente'));
                             throw new Redirection("/admin/templates");
                         } else {
-                            Message::Error(Text::_('No se ha grabado correctamente. ') . implode('<br />', $errors));
+                            Message::Error(Text::get('admin-templates-error-record-fail') . implode('<br />', $errors));
                         }
                     }
 

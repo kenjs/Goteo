@@ -30,7 +30,7 @@ define('ADMIN_NOAUTOSAVE', true);
 $project = $this['project'];
 
 if (!$project instanceof Model\Project) {
-    Message::Error(Text::_('Instancia de proyecto corrupta'));
+    Message::Error(Text::get('admin-projects-error-corruptproject'));
     throw new Redirection('/admin/projects');
 }
 

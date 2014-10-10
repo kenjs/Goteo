@@ -51,7 +51,7 @@ $filters = $this['filters'];
         <thead>
             <tr>
                 <th><!-- Edit --></th>
-                <th><?php echo Text::_("Nombre"); ?></th> <!-- name -->
+                <th><?php echo Text::_("license name"); ?></th> <!-- name -->
                 <th><!-- Icon --></th>
                 <th><?php echo Text::_("Tooltip"); ?></th> <!-- description -->
                 <th><?php echo Text::_("Agrupación"); ?></th> <!-- group -->

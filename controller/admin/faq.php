@@ -55,10 +55,10 @@ namespace Goteo\Controller\Admin {
 				if ($faq->save($errors)) {
                     switch ($_POST['action']) {
                         case 'add':
-                            Message::Info(Text::_('Pregunta añadida correctamente'));
+                            Message::Info(Text::get('faq-info-add-question'));
                             break;
                         case 'edit':
-                            Message::Info(Text::_('Pregunta editado correctamente'));
+                            Message::Info(Text::get('faq-info-edit-question'));
                             break;
                     }
 				} else {

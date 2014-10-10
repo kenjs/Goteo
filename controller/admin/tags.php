@@ -84,10 +84,10 @@ namespace Goteo\Controller\Admin {
                         ));
 
                         if ($item->save($errors)) {
-                            Message::Info(Text::_('El tag ha sido actualizado'));
+                            Message::Info(Text::get('admin-tags-info-udate'));
                             throw new Redirection($url);
                         } else {
-                            Message::Error(Text::_('No se ha guardado correctamente').implode('<br />', $errors));
+                            Message::Error(Text::get('admin-tags-error-save-fail').implode('<br />', $errors));
                         }
                     } else {
                         $item = $model::get($id);

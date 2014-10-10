@@ -70,7 +70,7 @@ namespace Goteo\Controller {
                 
             }
             else {
-                Message::Error(Text::_('Ha ocurrido un error'));
+                Message::Error(Text::get('impersonate-error'));
                 throw new Redirection('/dashboard');
             }
 		}

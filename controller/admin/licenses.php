@@ -56,10 +56,10 @@ namespace Goteo\Controller\Admin {
 				if ($license->save($errors)) {
                     switch ($_POST['action']) {
                         case 'add':
-                            Message::Info(Text::_('Licencia añadida correctamente'));
+                            Message::Info(Text::get('admin-licenses-info-add'));
                             break;
                         case 'edit':
-                            Message::Info(Text::_('Licencia editada correctamente'));
+                            Message::Info(Text::get('admin-licenses-info-edit'));
 
                             // Evento Feed
                             $log = new Feed();

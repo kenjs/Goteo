@@ -229,7 +229,7 @@ namespace Goteo\Controller {
             
             // ojo si no tiene retornos  
             if ($option == 'commons' && empty($project->social_rewards)) {
-                Message::Error(Text::_('Este proyecto no tiene retornos colectivos'));
+                Message::Error(Text::get('dashboard-projects_error-no_public_return'));
                 throw new Redirection('/dashboard/projects/');
             }
             
@@ -428,7 +428,7 @@ namespace Goteo\Controller {
                     }
 
                     if (!$project instanceof Model\Project) {
-                        Message::Error(Text::_('Ha fallado al cargar los datos del proyecto'));
+                        Message::Error(Text::get('dashboard-projects-error-readdata-fail'));
                         $_SESSION['translate_type'] = 'profile';
                         throw new Redirection('/dashboard/translates');
                     }
@@ -634,7 +634,7 @@ namespace Goteo\Controller {
             }
 
             if (!empty($errors)) {
-                Message::Error(Text::_('HA HABIDO ERRORES:') . '<br />' . implode('<br />', $errors));
+                Message::Error(Text::get('admin-projects-error-readdata-fail') . '<br />' . implode('<br />', $errors));
             }
 
             return new View('view/dashboard/index.html.php', $viewData);

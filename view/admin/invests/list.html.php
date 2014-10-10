@@ -85,7 +85,7 @@ $filters = $this['filters'];
     <p><?php echo Text::_("Es necesario poner algun filtro, hay demasiados registros!"); ?></p>
 <?php elseif (!empty($this['list'])) : ?>
 <?php $Total = 0; foreach ($this['list'] as $invest) { $Total += $invest->amount; } ?>
-    <p><strong><?php echo Text::_('TOTAL'); ?>:</strong>  <?php echo number_format($Total, 0, '', '.') ?> &euro;</p>
+    <p><strong><?php echo Text::_('TOTAL'); ?>:</strong>  <?php echo number_format($Total, 0, '', '.') ?> 円</p>
     <p><?php echo Text::_("OJO! Resultado limitado a 999 registros como máximo."); ?></p>
     
     <table width="100%">

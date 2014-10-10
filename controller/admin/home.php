@@ -73,7 +73,7 @@ namespace Goteo\Controller\Admin {
                     $availables = Model\Home::available($node);
 
                     if (empty($availables)) {
-                        Message::Info(Text::_('Todos los elementos disponibles ya estan en portada'));
+                        Message::Info(Text::get('admin-home-info-frontpage_feature'));
                         throw new Redirection('/admin/home');
                         break;
                     }
@@ -93,7 +93,7 @@ namespace Goteo\Controller\Admin {
                     $availables = Model\Home::availableSide($node);
 
                     if (empty($availables)) {
-                        Message::Info(Text::_('Todos los elementos laterales disponibles ya estan en portada'));
+                        Message::Info(Text::get('admin-home-info-frontpage_feature_get'));
                         throw new Redirection('/admin/home');
                         break;
                     }

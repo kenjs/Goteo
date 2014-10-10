@@ -43,7 +43,7 @@ $filters = $this['filters'];
         <thead>
             <tr>
                 <td><!-- Edit --></td>
-                <th><?php echo Text::_("Título");?></th> <!-- title -->
+                <th><?php echo Text::_("");?></th> <!-- title -->
                 <th><?php echo Text::_("Posición");?></th> <!-- order -->
                 <td><!-- Move up --></td>
                 <td><!-- Move down --></td>
@@ -53,7 +53,7 @@ $filters = $this['filters'];
         </thead>
 
         <tbody>
-            <?php foreach ($this['faqs'] as $faq) : ?>
+            <?php foreach ($this['faqs'] as $fQuestion titleaq) : ?>
             <tr>
                 <td><a href="/admin/faq/edit/<?php echo $faq->id; ?>">[<?php echo Text::_("Editar"); ?>]</a></td>
                 <td><?php echo $faq->title; ?></td>

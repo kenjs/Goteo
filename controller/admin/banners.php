@@ -57,7 +57,7 @@ namespace Goteo\Controller\Admin {
                 }
 
 				if ($banner->save($errors)) {
-                    Message::Info(Text::_('Datos guardados'));
+                    Message::Info(Text::get('banners-info-save_data'));
 
                     if ($_POST['action'] == 'add') {
                         $projectData = Model\Project::getMini($_POST['project']);
@@ -123,9 +123,9 @@ namespace Goteo\Controller\Admin {
                     break;
                 case 'remove':
                     if (Model\Banner::delete($id)) {
-                        Message::Info(Text::_('Banner quitado correctamente'));
+                        Message::Info(Text::get('banners-info-delete-complite'));
                     } else {
-                        Message::Error(Text::_('No se ha podido quitar el banner'));
+                        Message::Error(Text::get('banners-info-delete-failure'));
                     }
                     throw new Redirection('/admin/banners');
                     break;

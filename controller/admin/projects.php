@@ -44,7 +44,7 @@ namespace Goteo\Controller\Admin {
 
                 $projData = Model\Project::get($_POST['id']);
                 if (empty($projData->id)) {
-                    Message::Error(Text::_('El proyecto ').$_POST['id'].Text::_(' no existe'));
+                    Message::Error(Text::get('admin-projects-error-project').$_POST['id'].Text::get('admin-projects-error-there'));
                     throw new Redirection('/admin/projects/images/'.$id);
                 }
 
@@ -78,7 +78,7 @@ namespace Goteo\Controller\Admin {
                             $log_text = Text::_('Al admin %s le ha <span class="red">fallado al tocar las fechas</span> del proyecto ').$projData->name.' %s';
                         }
                     } catch(\PDOException $e) {
-                        Message::Error(Text::_("No se ha guardado correctamente. "). $e->getMessage());
+                        Message::Error(Text::get('admin-projects-error-save-fail'). $e->getMessage());
                     }
                 } elseif (isset($_POST['save-accounts'])) {
 
@@ -88,7 +88,7 @@ namespace Goteo\Controller\Admin {
                     $accounts->paypal = $_POST['paypal'];
                     $accounts->paypal_owner = $_POST['paypal_owner'];
                     if ($accounts->save($errors)) {
-                        Message::Info(Text::_('Se han actualizado las cuentas del proyecto ').$projData->name);
+                        Message::Info(Text::get('admin-projects-info-update-account').$projData->name);
                     } else {
                         Message::Error(implode('<br />', $errors));
                     }
@@ -110,7 +110,7 @@ namespace Goteo\Controller\Admin {
                                 // OK
                             } else {
                                 $todook = false;
-                                Message::Error(Text::_('No se ha podido actualizar campo')." {$parts[0]} -> {$value}");
+                                Message::Error(Text::get('admin-projects-info-data-save')." {$parts[0]} -> {$value}");
                             }
                         }
                     }
@@ -132,7 +132,7 @@ namespace Goteo\Controller\Admin {
                         // pimero miramos que no hay otro proyecto con esa id
                         $test = Model\Project::getMini($newid);
                         if ($test->id == $newid) {
-                            Message::Error(Text::_('Ya hay un proyecto con ese Id.'));
+                            Message::Error(Text::get('admin-projects-error-id-notempty'));
                             throw new Redirection('/admin/projects/rebase/'.$id);
                         }
 
@@ -142,7 +142,7 @@ namespace Goteo\Controller\Admin {
                         }
 
                         if ($projData->rebase($newid)) {
-                            Message::Info(Text::_('Verificar el proyecto').' -> <a href="'.SITE_URL.'/project/'.$newid.'" target="_blank">'.$projData->name.'</a>');
+                            Message::Info(Text::get('admin-projects-info-selectproject').' -> <a href="'.SITE_URL.'/project/'.$newid.'" target="_blank">'.$projData->name.'</a>');
                             throw new Redirection('/admin/projects');
                         } else {
                             Message::Info(Text::_('Ha fallado algo en el rebase, verificar el proyecto').' -> <a href="'.SITE_URL.'/project/'.$projData->id.'" target="_blank">'.$projData->name.' ('.$id.')</a>');
@@ -348,7 +348,7 @@ namespace Goteo\Controller\Admin {
             // Rechazo express
             if ($action == 'reject') {
                 if (empty($project)) {
-                    Message::Error(Text::_('No hay proyecto sobre el que operar'));
+                    Message::Error(Text::get('admin-projects-error-nooperate-project'));
                 } else {
                     // Obtenemos la plantilla para asunto y contenido
                     $template = Template::get(40);
@@ -366,7 +366,7 @@ namespace Goteo\Controller\Admin {
                     $mailHandler->html = true;
                     $mailHandler->template = $template->id;
                     if ($mailHandler->send()) {
-                        Message::Info(Text::_('Se ha enviado un email a') . '<strong>'.$project->user->name.'</strong>' . Text::_('a la dirección') . '<strong>'.$project->user->email.'</strong>');
+                        Message::Info(Text::get('admin-projects-info-sendmail') . '<strong>'.$project->user->name.'</strong>' . Text::get('admin-projects-info-sendmail-to') . '<strong>'.$project->user->email.'</strong>');
                     } else {
                         Message::Error(Text::_('Ha fallado al enviar el mail a') . '<strong>'.$project->user->name.'</strong>' . Text::_('a la dirección') . '<strong>'.$project->user->email.'</strong>');
                     }

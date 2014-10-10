@@ -91,7 +91,7 @@ namespace Goteo\Controller\Dashboard {
             if ($project instanceof \Goteo\Model\Project) {
                 $_SESSION['project'] = $project; // lo guardamos en sesión para la próxima verificación
             } else {
-                Message::Error(Text::_('No se puede trabajar con el proyecto seleccionado, contacta con nosotros'));
+                Message::Error(Text::get('dashboard-projects-error-noupdate-project'));
                 $project = null;
             }
             

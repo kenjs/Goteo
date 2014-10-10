@@ -53,9 +53,10 @@ $pagedResults = new \Paginated($this['projects'], 10, isset($_GET['page']) ? $_G
                     </select>
                 </td>
                 <td>
-                    <label for="skill-filter"><?php echo Text::_("De la skill"); ?>:</label><br />
+                    <?/*<label for="skill-filter"><?php echo Text::_("De la skill"); ?>:</label><br />*/?>
+                    <label for="skill-filter"><?php echo Text::get("admin-projects-skill"); ?>:</label><br />
                     <select id="skill-filter" name="skill" onchange="document.getElementById('filter-form').submit();">
-                    <option value=""><?php echo Text::_('Cualquier skill'); ?></option>
+                    <option value=""><?php echo Text::get('admin-projects-type-skill'); ?></option>
                      
                     <?php foreach ($this['skills'] as $key=>$value) : ?>
                         <?php if(empty($value->parent_skill_id)) : ?>

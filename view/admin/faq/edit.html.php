@@ -42,7 +42,7 @@ jQuery(document).ready(function ($) {
 
         <p>
         <?php if ($this['action'] == 'add') : ?>
-            <label for="faq-section"><?php echo Text::_("Sección");?>:</label><br />
+            <label for="faq-section"><?php echo Text::_("Question category");?>:</label><br />
             <select id="faq-section" name="section">
                 <option value="" disabled><?php echo Text::_("Elige la sección");?></option>
                 <?php foreach ($this['sections'] as $id=>$name) : ?>
@@ -61,7 +61,7 @@ jQuery(document).ready(function ($) {
         </p>
 
         <p>
-            <label for="faq-description"><?php echo Text::_("Descripción");?>:</label><br />
+            <label for="faq-description"><?php echo Text::_("FAQ Answer");?>:</label><br />
             <textarea name="description" id="faq-description" cols="60" rows="10"><?php echo $this['faq']->description; ?></textarea>
         </p>
 
@@ -73,10 +73,10 @@ jQuery(document).ready(function ($) {
                 <option value="down"><?php echo Text::_("Después de ");?></option>
             </select>&nbsp;
             <input type="text" name="order" id="faq-order" value="<?php echo $this['faq']->order; ?>" size="4" />
-            &nbsp;de&nbsp;<span id="faq-num"><?php echo $this['faq']->cuantos; ?></span>
+            &nbsp;<?php echo Text::_("number");?>&nbsp;<span id="faq-num"><?php echo $this['faq']->cuantos; ?></span>
         </p>
 
 
-        <input type="submit" name="save" value="Guardar" />
+        <input type="submit" name="save" value="<?php echo Text::_("Guardar");?>" />
     </form>
 </div>

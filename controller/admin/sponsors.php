@@ -124,10 +124,10 @@ namespace Goteo\Controller\Admin {
                         }
 
                         if ($item->save($errors)) {
-                            Message::Info(Text::_('Datos grabados correctamente'));
+                            Message::Info(Text::get('admin-sponsers-info-save'));
                             throw new Redirection($url);
                         } else {
-                            Message::Error(Text::_('No se ha grabado correctamente. ') . implode(', ', $errors));
+                            Message::Error(Text::get('admin-sponsers-error-record-fail') . implode(', ', $errors));
                         }
                     } else {
                         $item = $model::get($id);
@@ -196,10 +196,10 @@ namespace Goteo\Controller\Admin {
                     break;
                 case 'remove':
                     if ($model::delete($id)) {
-                        Message::Info(Text::_('Se ha eliminado el registro'));
+                        Message::Info(Text::get('admin-sponsers-info-delete'));
                         throw new Redirection($url);
                     } else {
-                        Message::Info(Text::_('No se ha podido eliminar el registro'));
+                        Message::Info(Text::get('admin-sponsers-info-delete-fail'));
                     }
                     break;
             }
