@@ -166,7 +166,7 @@ namespace Goteo\Model\Project {
 
         public static function sections () {
             return array(
-                '' => 'Galery',
+                '' => Text::get('overview-field-gallery'),
                 'about' => Text::get('overview-field-about'),
                 'motivation' => Text::get('overview-field-motivation'),
                 'goal' => Text::get('overview-field-goal'),

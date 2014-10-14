@@ -44,7 +44,8 @@ if (!$project instanceof Model\Project) {
     }
 </script>
 <div class="widget">
-    <p><?php echo Text::_('OJO! Cambiar la Id del proyecto afecta a'); ?> <strong><?php echo Text::_('TODO'); ?></strong> <?php echo Text::_('lo referente al proyecto!.'); ?></p>
+    <p><?php echo Text::_('Caution id change'); ?></p>
+    <?/*<p><?php echo Text::_('OJO! Cambiar la Id del proyecto afecta a'); ?> <strong><?php echo Text::_('TODO'); ?></strong> <?php echo Text::_('lo referente al proyecto!.'); ?></p>*/?>
 
     <form method="post" action="/admin/projects/rebase/<?php echo $project->id; ?>" onsubmit="return idverify();">
         <input type="hidden" name="id" value="<?php echo $project->id ?>" />
@@ -60,14 +61,15 @@ if (!$project instanceof Model\Project) {
         <?php if ($project->status >= 3) : ?>
         <h3><?php echo Text::_('OJO!! El proyecto est&aacute; publicado'); ?></h3>
         <p>
-            <?php echo Text::_('Debes marcar expresamente la siguiente casilla, sino dar&aacute; error por estado de proyecto.'); ?><br />
-            <label><?php echo Text::_('Marcar que se quiere aplicar aunque el proyecto que no est&aacute; ni en Edici&oacute;n ni en Revisi&oacute;n'); ?>:<br />
+            <?/*php echo Text::_('Debes marcar expresamente la siguiente casilla, sino dar&aacute; error por estado de proyecto.'); ?><br />*/?>
+            <?php echo Text::_('Caution pj error'); ?><br />
+            <label><?php echo Text::_('Lavel rebase'); ?>:<br />
                 <input type="checkbox" name="force" value="1" />
             </label>
 
         </p>
         <?php endif; ?>
-        <input type="submit" name="proceed" value="rebase" />
+        <input type="submit" name="proceed" value="<?php echo Text::_('Rebase'); ?>" />
 
     </form>
 </div>

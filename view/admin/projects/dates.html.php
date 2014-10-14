@@ -74,12 +74,12 @@ $elements = array(
 <div class="widget">
 <p>
     <?php if (!empty($project->passed)) {
-        echo Text::_('El proyecto terminará la primera ronda el día') . '<strong>'.date('d/m/Y', strtotime($project->passed)).'</strong>.';
+        echo Text::_('El proyecto terminará la primera ronda el día') . '<strong>'.date('Y/m/d', strtotime($project->passed)).'</strong>.';
         if ($project->passed != $project->willpass) {
-            echo '<br />' . Text::_('Aunque debería haberla terminado el día ') . '<strong>'.date('d/m/Y', strtotime($project->willpass)).'</strong>.';
+            echo '<br />' . Text::_('Aunque debería haberla terminado el día ') . '<strong>'.date('Y/m/d', strtotime($project->willpass)).'</strong>.';
         }
     } else {
-        echo Text::_('El proyecto terminará la primera ronda el día') . '<strong>'.date('d/m/Y', strtotime($project->willpass)).'</strong>.';
+        echo Text::_('El proyecto terminará la primera ronda el día') . '<strong>'.date('Y/m/d', strtotime($project->willpass)).'</strong>.';
     } ?>
 
 </p>
@@ -98,7 +98,7 @@ $elements = array(
         <br />
 <?php endforeach; ?>
 
-        <input type="submit" name="save-dates" value="Guardar" />
+        <input type="submit" name="save-dates" value="<?php echo Text::_('Guardar'); ?>" />
 
     </form>
 </div>

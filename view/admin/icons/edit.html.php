@@ -45,6 +45,6 @@ use Goteo\Library\Text;
 
 
 
-        <input type="submit" name="save" value="Guardar" />
+        <input type="submit" name="save" value="<?php echo Text::_("Guardar"); ?>" />
     </form>
 </div>

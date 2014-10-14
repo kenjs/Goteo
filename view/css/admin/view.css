@@ -177,7 +177,12 @@ body.admin div#main div.admin-center div.superform div.elements > ol > li.busy >
 }
 
 /* Reestilando botones */
-body.admin div#main div.admin-center input[type="submit"],
+/*body.admin div#main div.admin-center input[type="submit"],
 body.admin div#main div.admin-center a.button {
     padding: 0.2em 0.4em !important;
+}*/
+
+/* textarea, under admin */
+body.admin div#main div.admin-center textarea {
+    width: 720px;
 }

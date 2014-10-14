@@ -7,7 +7,7 @@ $filters = $this['filters'];
 $emails = Invest::emails(true);
 ?>
 <div class="widget board">
-    <h3 class="title"><?php echo Text::_('Filtros'); ?></h3>
+    <h3 class="title"><?php echo Text::_('Accounts Filtros'); ?></h3>
     <form id="filter-form" action="/admin/rewards" method="get">
         <div style="float:left;margin:5px;">
             <label for="projects-filter"><?php echo Text::_("Proyecto"); ?></label><br />

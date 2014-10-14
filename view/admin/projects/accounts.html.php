@@ -63,7 +63,7 @@ $accounts = $this['accounts'];
         <input type="checkbox" id="account-allowpp" name="allowpp" value="1"<?php if ($accounts->allowpp) echo ' checked="checked"'; ?>/>
     </p>
 
-        <input type="submit" name="save-accounts" value="Guardar" />
+        <input type="submit" name="save-accounts" value="<?php echo Text::_('Guardar'); ?>" />
         
     </form>
 </div>

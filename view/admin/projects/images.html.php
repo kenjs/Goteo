@@ -72,10 +72,10 @@ function move (img, direction, section) {
 
         <tbody>
         <?php foreach ($sections as $sec=>$secName) : 
-            if (empty($images[$sec])) continue; 
+            if (empty($images[$sec])) continue;
             ?>
             <tr>
-                <td colspan="5" style="text-align: left;"><h3><?php echo $secName; ?></h3></td>
+                <td colspan="5" style="text-align: left;"><h3><?php echo Text::_('gallery'); ?></h3></td>
             </tr>
             <?php foreach ($images[$sec] as $image) : ?>
             <tr>
@@ -99,7 +99,7 @@ function move (img, direction, section) {
         </tbody>
 
     </table>
-        <input type="submit" name="apply_changes" value="Aplicar" />
+        <input type="submit" name="apply_changes" value="<?php echo Text::_('Aplicar'); ?>" />
     </form>
     <?php else : ?>
     <p><?php echo Text::_("No se han encontrado registros"); ?></p>

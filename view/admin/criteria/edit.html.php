@@ -74,7 +74,7 @@ jQuery(document).ready(function ($) {
                 <option value="down"><?php echo Text::_('Después de '); ?></option>
             </select>&nbsp;
             <input type="text" name="order" id="criteria-order" value="<?php echo $this['criteria']->order; ?>" size="4" />
-            &nbsp;de&nbsp;<span id="criteria-num"><?php echo $this['criteria']->cuantos; ?></span>
+            &nbsp;<?php echo Text::_('number'); ?>&nbsp;<span id="criteria-num"><?php echo $this['criteria']->cuantos; ?></span>
         </p>
 
 

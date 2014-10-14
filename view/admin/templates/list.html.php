@@ -45,7 +45,7 @@ $filters = $this['filters'];
             </tr>
             <tr>
                 <td>
-                    <input type="submit" name="filter" value="Filtrar">
+                    <input type="submit" name="filter" value="<?php echo Text::_('Buscar'); ?>">
                 </td>
             </tr>
         </table>

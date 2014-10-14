@@ -1,4 +1,4 @@
-<?php
+    <?php
 /*
  *  Copyright (C) 2012 Platoniq y Fundación Fuentes Abiertas (see README for details)
  *	This file is part of Goteo.
@@ -139,26 +139,34 @@ $pagedResults = new \Paginated($this['projects'], 10, isset($_GET['page']) ? $_G
                 <td><?php echo date('d-m-Y', strtotime($project->updated)); ?></td>
                 <td><?php echo ($project->status == 1 && !$project->draft) ? '<span style="color: green;">' . Text::_('En negociación') . '</span>' : $this['status'][$project->status]; ?></td>
                 <td style="text-align: center;"><?php echo $project->node; ?></td>
-                <td style="text-align: right;"><?php echo \amount_format($project->mincost).'€'; ?></td>
-                <td style="text-align: right;"><?php echo \amount_format($project->maxcost).'€'; ?></td>
+                <td style="text-align: right;"><?php echo \amount_format($project->mincost) . Text::_('yen'); ?></td>
+                <td style="text-align: right;"><?php echo \amount_format($project->maxcost) . Text::_('yen'); ?></td>
             </tr>
             <tr>
                 <td colspan="7"><?php 
-                    if ($project->status < 3)  echo "Información al <strong>{$project->progress}%</strong>";
-                    if ($project->status == 3 && $project->round > 0) echo "Le quedan {$project->days} días de la {$project->round}ª ronda.&nbsp;&nbsp;&nbsp;<strong>" . Text::_('Conseguido') . ":</strong> ".\amount_format($project->invested)."€&nbsp;&nbsp;&nbsp;<strong>" . Text::_('Cofin') . ":</strong> {$project->num_investors}&nbsp;&nbsp;&nbsp;<strong>" . Text::_('Colab') . ":</strong> {$project->num_messegers}";
+                    if ($project->status < 3)  echo Text::_('information rate') . "<strong>{$project->progress}%</strong>";
+                    $round ='';
+                    if ($project->status == 3 && $project->round > 0):
+                        if($project->round == 1):
+                            $round = 'st';
+                        elseif($project->round == 2):
+                            $round = 'nd';
+                        endif;
+                        echo "{$project->round}".$round.Text::_('ronda')."/".Text::_('Le quedan')."{$project->days}".Text::_('días') . "&nbsp;&nbsp;&nbsp;<strong>" . Text::_('Conseguido') . ":</strong> ".\amount_format($project->invested). Text::_('yen') . "&nbsp;&nbsp;&nbsp;<strong>" . Text::_('Cofin') . ":</strong> {$project->num_investors}&nbsp;&nbsp;&nbsp;<strong>" . Text::_('Colab') . ":</strong> {$project->num_messegers}";
+                    endif;
                 ?></td>
             </tr>
             <tr>
                 <td colspan="7">
                     <?php echo Text::_("IR A"); ?>:&nbsp;
-                    <a href="/project/edit/<?php echo $project->id; ?>" target="_blank">[<?php echo Text::_("Editar"); ?>]</a>
+                    <a href="/project/edit/<?php echo $project->id; ?>" target="_blank">[<?php echo Text::_("Edit project"); ?>]</a>
                     <a href="/admin/users/?id=<?php echo $project->owner; ?>" target="_blank">[<?php echo Text::_("Impulsor"); ?>]</a>
                     <?php if (!isset($_SESSION['admin_node']) 
                             || (isset($_SESSION['admin_node']) && $_SESSION['admin_node'] == \GOTEO_NODE)
                             || (isset($_SESSION['admin_node']) && $user->node == $_SESSION['admin_node'])) : ?>
-                    <a href="/admin/accounts/?projects=<?php echo $project->id; ?>" title="Ver sus aportes">[<?php echo Text::_("Aportes"); ?>]</a>
+                    <a href="/admin/accounts/?projects=<?php echo $project->id; ?>" title="Ver sus aportes">[<?php echo Text::_("Support situation"); ?>]</a>
                     <?php else:  ?>
-                    <a href="/admin/invests/?projects=<?php echo $project->id; ?>" title="Ver sus aportes">[<?php echo Text::_("Aportes"); ?>]</a>
+                    <a href="/admin/invests/?projects=<?php echo $project->id; ?>" title="Ver sus aportes">[<?php echo Text::_("Supporters List"); ?>]</a>
                     <?php endif; ?>
                     <a href="/admin/users/?project=<?php echo $project->id; ?>" title="Ver sus cofinanciadores">[<?php echo Text::_("Cofinanciadores"); ?>]</a>
                 </td>
