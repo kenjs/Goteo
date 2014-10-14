@@ -1,7 +1,7 @@
 <?php
 /*
  *  Copyright (C) 2012 Platoniq y Fundación Fuentes Abiertas (see README for details)
- *	This file is part of Goteo.
+ *  This file is part of Goteo.
  *
  *  Goteo is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
@@ -25,8 +25,8 @@ namespace Goteo\Controller {
         Goteo\Core\Error,
         Goteo\Core\Redirection,
         Goteo\Model,
-		Goteo\Library\Feed,
-		Goteo\Library\Text,
+        Goteo\Library\Feed,
+        Goteo\Library\Text,
         Goteo\Library\Mail,
         Goteo\Library\Template,
         Goteo\Library\Message,
@@ -160,7 +160,7 @@ namespace Goteo\Controller {
                 } else {
                     Message::Error(Text::get('invest-create-error'));
                 }
-			} else {
+            } else {
                 Message::Error(Text::get('invest-data-error'));
             }
 
@@ -172,6 +172,10 @@ namespace Goteo\Controller {
          * @params id id del aporte
          * @params reward recompensa que selecciona
          */
+        public function paid () {
+            file_put_contents("/var/www/html/goteo.il3c.com/htdocs/logs/".date("YmdHis")."_paid.log",print_r($_REQUEST,true));
+
+        }
         public function confirmed ($project = null, $id = null, $reward = null) {
             if (empty($id)) {
                 Message::Error(Text::get('invest-data-error'));
