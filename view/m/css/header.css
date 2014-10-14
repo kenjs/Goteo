@@ -151,7 +151,6 @@ div#sub-header > div > div.slides_container > div.slides_control > div.subhead-b
 	position:absolute;
 	margin: 10px 0 10px 314px;
 	opacity: 0.9;
-	filter: alpha(opacity=90);
 	z-index:5;
 	padding:10px;
 }

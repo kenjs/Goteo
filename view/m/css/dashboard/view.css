@@ -141,9 +141,7 @@ body.dashboard div#dashboard-menu ul li.section a.section {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ccf4ff), color-stop(60%,#c0e4ed), color-stop(100%,#b1cfd3)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top,  #ccf4ff 0%,#c0e4ed 60%,#b1cfd3 100%); /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(top,  #ccf4ff 0%,#c0e4ed 60%,#b1cfd3 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #ccf4ff 0%,#c0e4ed 60%,#b1cfd3 100%); /* IE10+ */
     background: linear-gradient(to bottom,  #ccf4ff 0%,#c0e4ed 60%,#b1cfd3 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccf4ff', endColorstr='#b1cfd3',GradientType=0 ); /* IE6-9 */
     height: 40px;
     line-height: 40px;
     border-top: 1px solid #99b8cc;

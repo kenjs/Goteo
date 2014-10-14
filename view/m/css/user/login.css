@@ -112,7 +112,6 @@ body.user-login .sign-in-with {
 
 .sign-in-with > li a:hover {
 	opacity:0.7;
-	filter:alpha(opacity=70);
 }
 .sign-in-with li.more {
 	margin:0;

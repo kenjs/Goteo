@@ -185,9 +185,7 @@ body.project-show div.project-menu ul li a {
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffcc), color-stop(100%,#e5e5b9), color-stop(100%,#e8e8bb)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top,  #ffffcc 0%,#e5e5b9 100%,#e8e8bb 100%); /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(top,  #ffffcc 0%,#e5e5b9 100%,#e8e8bb 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #ffffcc 0%,#e5e5b9 100%,#e8e8bb 100%); /* IE10+ */
     background: linear-gradient(to bottom,  #ffffcc 0%,#e5e5b9 100%,#e8e8bb 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffcc', endColorstr='#e8e8bb',GradientType=0 ); /* IE6-9 */
     /*border-top: 1px solid #cccc99;
     border-right: 1px solid #cccc99;
     border-left: 1px solid #cccc99;*/
