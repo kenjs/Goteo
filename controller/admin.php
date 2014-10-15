@@ -95,7 +95,7 @@ namespace Goteo\Controller {
                     'filters' => array('show' => 'owned', 'blog' => '')
                 ),
                 'categories' => array(
-                    'label' => Text::_('Categorías'),
+                    'label' => Text::_('Category'),
                     'actions' => array(
                         'list' => array('label' => Text::_('Listando'), 'item' => false),
                         'add' => array('label' => Text::_('Nueva Categoría'), 'item' => false),
@@ -125,7 +125,7 @@ namespace Goteo\Controller {
                     'filters' => array('section' => 'project')
                 ),
                 'faq' => array(
-                    'label' => Text::_('FAQs'),
+                    'label' => Text::_('Admin faq'),
                     'actions' => array(
                         'list' => array('label' => Text::_('Listando'), 'item' => false),
                         'add' => array('label' => Text::_('Nueva Pregunta'), 'item' => false),
@@ -202,7 +202,7 @@ namespace Goteo\Controller {
                 )
                 ),
                 'pages' => array(
-                    'label' => Text::_('Páginas'),
+                    'label' => Text::_('Page'),
                     'actions' => array(
                         'list' => array('label' => Text::_('Listando'), 'item' => false),
                         'edit' => array('label' => Text::_('Editando Página'), 'item' => true),
@@ -251,7 +251,7 @@ namespace Goteo\Controller {
                     'filters' => array('project' => '', 'status' => 'open', 'checker' => '')
                 ),
                 'rewards' => array(
-                    'label' => Text::_('Recompensas'),
+                    'label' => Text::_('Remuneration'),
                     'actions' => array(
                         'list' => array('label' => Text::_('Listando'), 'item' => false),
                         'edit' => array('label' => Text::_('Gestionando recompensa'), 'item' => true)

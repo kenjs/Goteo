@@ -55,15 +55,15 @@ $pagedResults = new \Paginated($this['sended'], 20, isset($_GET['page']) ? $_GET
 
 
         <div style="float:left;margin:5px;" id="date-filter-from">
-            <label for="date-filter-from"><?php echo Text::_('Fecha desde'); ?></label><br />
+            <label for="date-filter-from"><?php echo Text::_('send date(from)'); ?></label><br />
 <?php echo new View('library/superform/view/element/datebox.html.php', array('value' => $filters['date_from'], 'id' => 'date-filter-from', 'name' => 'date_from')); ?>
         </div>
         <div style="float:left;margin:5px;" id="date-filter-until">
-            <label for="date-filter-until"><?php echo Text::_('Fecha hasta'); ?></label><br />
+            <label for="date-filter-until"><?php echo Text::_('send date(to)'); ?></label><br />
 <?php echo new View('library/superform/view/element/datebox.html.php', array('value' => $filters['date_until'], 'id' => 'date-filter-until', 'name' => 'date_until')); ?>
         </div>
         <div style="float:left;margin:5px;">
-            <input type="submit" name="filter" value="Filtrar">
+            <input type="submit" name="filter" value="<?php echo Text::_("Buscar"); ?>">
         </div>
 
     </form>
@@ -89,7 +89,7 @@ $pagedResults = new \Paginated($this['sended'], 20, isset($_GET['page']) ? $_GET
                     $link = SITE_URL . '/mail/' . base64_encode(md5(uniqid()) . '¬' . $send->email . '¬' . $send->id) . '/?email=' . urlencode($send->email);
                     ?>
                     <tr>
-                        <td><a href="<?php echo $link; ?>" target="_blank">[<?php echo Text::_("Enlace"); ?>]</a></td>
+                        <td><a href="<?php echo $link; ?>" target="_blank">[<?php echo Text::_("Send history"); ?>]</a></td>
                         <td><a href="/admin/users/?name=<?php echo urlencode($send->email) ?>"><?php echo $send->email; ?></a></td>
                         <td><?php echo $templates[$send->template]; ?></td>
                         <td><?php echo $send->date; ?></td>

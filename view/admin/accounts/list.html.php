@@ -70,7 +70,7 @@ $filters = $this['filters'];
             <input type="text" id ="date-filter-until" name="date_until" value ="<?php echo date('Y-m-d') ?>" />
         </div>
         <div style="float:left;margin:5px;">
-            <input type="submit" value="filtrar" />
+            <input type="submit" value="<?php echo Text::_("Buscar"); ?>" />
         </div>
     </form>
     <br clear="both" />

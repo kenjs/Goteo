@@ -68,7 +68,7 @@ array_walk($rewards, function (&$reward) { $reward = $reward->reward; });
     <h3><?php echo Text::_("Detalles de la transaccion"); ?></h3>
     <dl>
         <dt><?php echo Text::_("Cantidad aportada"); ?>:</dt>
-        <dd><?php echo $invest->amount ?> &euro;
+        <dd><?php echo $invest->amount . Text::_("yen"); ?>
             <?php
                 if (!empty($invest->campaign))
                     echo Text::_("Campaña: ") . $campaign->name;

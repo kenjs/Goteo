@@ -33,7 +33,7 @@ array_walk($roles, function (&$role) { $role = $role->name; });
         <dd><?php echo $user->name ?></dd>
     </dl>
     <dl>
-        <dt><?php echo Text::_('Login de acceso'); ?>:</dt>
+        <dt><?php echo Text::_('User ID'); ?>:</dt>
         <dd><strong><?php echo $user->id ?></strong></dd>
     </dl>
     <dl>
@@ -41,25 +41,25 @@ array_walk($roles, function (&$role) { $role = $role->name; });
         <dd><?php echo $user->email ?></dd>
     </dl>
     <dl>
-        <dt><?php echo Text::_('Roles actuales'); ?>:</dt>
+        <dt><?php echo Text::_('Authority of user'); ?>:</dt>
         <dd><?php echo implode(', ', $roles); ?></dd>
     </dl>
     <dl>
         <dt><?php echo Text::_('Estado de la cuenta'); ?>:</dt>
-        <dd><strong><?php echo $user->active ? 'Activa' : 'Inactiva'; ?></strong></dd>
+        <dd><strong><?php echo $user->active ? Text::_('Activa') : Text::_('Inactiva'); ?></strong></dd>
     </dl>
 
     <form action="/admin/users/edit/<?php echo $user->id ?>" method="post">
         <p>
-            <label for="user-email"><?php echo Text::_('Email'); ?>:</label><span style="font-style:italic;"><?php echo Text::_('Que sea válido. Se verifica que no esté repetido'); ?></span><br />
+            <label for="user-email"><?php echo Text::_('After the change') . Text::_('Email address'); ?></label><?/*<span style="font-style:italic;"><?php echo Text::_('Que sea válido. Se verifica que no esté repetido'); ?></span>*/?><br />
             <input type="text" id="user-email" name="email" value="<?php echo $data['email'] ?>" style="width:500px" maxlength="255"/>
         </p>
         <p>
-            <label for="user-password"><?php echo Text::_('Contraseña'); ?>:</label><span style="font-style:italic;"><?php echo Text::_('Mínimo 6 caracteres. Se va a encriptar y no se puede consultar'); ?></span><br />
+            <label for="user-password"><?php echo Text::_('After the change') . Text::_('Contraseña'); ?></label><span style="font-style:italic;"><?php echo Text::_('Mínimo 6 caracteres. Se va a encriptar y no se puede consultar'); ?></span><br />
             <input type="text" id="user-password" name="password" value="<?php echo $data['password'] ?>" style="width:500px" maxlength="255"/>
         </p>
 
-        <input type="submit" name="edit" value="Actualizar"  onclick="return confirm('<?php echo Text::_("Entiendes que vas a cambiar datos críticos de la cuenta de este usuario?"); ?>');"/><br />
+        <input type="submit" name="edit" value="<?php echo Text::_("Actualizar"); ?>"  onclick="return confirm('<?php echo Text::_("Entiendes que vas a cambiar datos críticos de la cuenta de este usuario?"); ?>');"/><br />
         <span style="font-style:italic;font-weight:bold;color:red;"><?php echo Text::_('Atención! Se están substituyendo directamente los datos introducidos, no habrá email de autorización.'); ?></span>
 
     </form>

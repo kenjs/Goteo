@@ -7,7 +7,7 @@ $filters = $this['filters'];
 $emails = Invest::emails(true);
 ?>
 <div class="widget board">
-    <h3 class="title"><?php echo Text::_('Accounts Filtros'); ?></h3>
+    <h3 class="title"><?php echo Text::_('Rewards Filtros'); ?></h3>
     <form id="filter-form" action="/admin/rewards" method="get">
         <div style="float:left;margin:5px;">
             <label for="projects-filter"><?php echo Text::_("Proyecto"); ?></label><br />
@@ -20,7 +20,7 @@ $emails = Invest::emails(true);
         </div>
         
         <div style="float:left;margin:5px;">
-            <label for="name-filter"><?php echo Text::_('Alias/Email del usuario'); ?></label><br />
+            <label for="name-filter"><?php echo Text::_('User'); ?></label><br />
             <input type="text" id ="name-filter" name="name" value ="<?php echo $filters['name']?>" />
         </div>
 
@@ -37,7 +37,7 @@ $emails = Invest::emails(true);
         <br clear="both" />
 
         <div style="float:left;margin:5px;">
-            <input type="submit" value="filtrar" />
+            <input type="submit" value="<?php echo Text::_("Buscar"); ?>" />
         </div>
     </form>
     <br clear="both" />

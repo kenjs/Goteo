@@ -78,6 +78,6 @@ jQuery(document).ready(function ($) {
         </p>
 
 
-        <input type="submit" name="save" value="Guardar" />
+        <input type="submit" name="save" value="<?php echo Text::_("Guardar"); ?>" />
     </form>
 </div>

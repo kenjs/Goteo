@@ -31,7 +31,7 @@ $langs = $this['langs'];
             <td><a href="/user/profile/<?php echo $user->id ?>" target="_blank"><?php echo $user->name ?></a></td>
         </tr>
         <tr>
-            <td><?php echo Text::_('Login de acceso'); ?></td>
+            <td><?php echo Text::_('User ID'); ?></td>
             <td><strong><?php echo $user->id ?></strong></td>
         </tr>
         <tr>
@@ -43,7 +43,7 @@ $langs = $this['langs'];
             <td><?php echo $this['nodes'][$user->node] ?></td>
         </tr>
         <tr>
-            <td><?php echo Text::_('Roles actuales'); ?></td>
+            <td><?php echo Text::_('Authority of user'); ?></td>
             <td>
                 <?php
                 foreach ($user->roles as $role=>$roleData) {
@@ -60,7 +60,7 @@ $langs = $this['langs'];
             </td>
         </tr>
         <tr>
-            <td><?php echo Text::_('Roles disponibles'); ?></td>
+            <td><?php echo Text::_('Authorization'); ?></td>
             <td>
                 <?php
                 foreach ($roles as $roleId=>$roleName) {

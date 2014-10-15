@@ -37,5 +37,5 @@ $worth = $this['worth'];
     <input id="worth-amount" name="amount" value="<?php echo $worth->amount ?>" />
 </p>
 
-    <input type="submit" name="save" value="Guardar" />
+    <input type="submit" name="save" value="<?php echo Text::_("Guardar"); ?>" />
 </form>

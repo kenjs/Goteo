@@ -90,7 +90,7 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
             </tr>
             <tr>
                 <td collspan="5">
-                    <label for="skill-filter"><?php echo Text::_('Mostrar usuarios interesados en'); ?>:</label><br />
+                    <label for="skill-filter"><?php echo Text::_('Mostrar usuarios interesados categoría'); ?>:</label><br />
                     <select id="skill-filter" name="skill" onchange="document.getElementById('filter-form').submit();">
                     <option value=""><?php echo Text::_('Cualquier skill'); ?></option>
                      
@@ -133,12 +133,12 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
     <table>
         <thead>
             <tr>
-                <th><?php echo Text::_('Alias'); ?></th> <!-- view profile -->
-                <th><?php echo Text::_('User'); ?></th>
+                <th><?php echo Text::_('Nombre de usuario'); ?></th> <!-- view profile -->
+                <th><?php echo Text::_('User ID'); ?></th>
                 <th><?php echo Text::_('Email'); ?></th>
-                <th><?php echo Text::_('Proyectos'); ?></th>
-                <th><?php echo Text::_('Cantidad'); ?></th>
-                <th><?php echo Text::_('Alta'); ?></th>
+                <th><?php echo Text::_('Amount of project'); ?></th>
+                <th><?php echo Text::_('Cantidad aportada'); ?></th>
+                <th><?php echo Text::_('Registration Date'); ?></th>
             </tr>
         </thead>
 
@@ -151,27 +151,27 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
                 <td><strong><?php echo substr($user->id, 0, 20); ?></strong></td>
                 <td><a href="mailto:<?php echo $user->email; ?>"><?php echo $user->email; ?></a></td>
                 <td><?php echo $user->nprojs; ?></td>
-                <td><?php echo \amount_format($user->namount); ?> &euro;</td>
-                <td><?php echo $user->register_date; ?></td>
+                <td><?php echo \amount_format($user->namount) . Text::_('yen'); ?> </td>
+                <td><?php echo date('Y/m/d H:i:s', strtotime($user->register_date)); ?></td>
             </tr>
             <tr>
                 <td><a href="/admin/users/manage/<?php echo $user->id; ?>" title="Gestionar">[<?php echo Text::_("Gestionar"); ?>]</a></td>
                 <td><?php if ($user->nprojs > 0) {
                     if (!isset($_SESSION['admin_node']) || (isset($_SESSION['admin_node']) && $user->node == $_SESSION['admin_node'])) : ?>
-                <a href="/admin/accounts/?name=<?php echo $user->email; ?>" title="Ver sus aportes">[<?php echo Text::_("Aportes"); ?>]</a>
+                <a href="/admin/accounts/?name=<?php echo $user->email; ?>" title="Ver sus aportes">[<?php echo Text::_("To management of support"); ?>]</a>
                 <?php else:  ?>
                 <a href="/admin/invests/?name=<?php echo $user->email; ?>" title="Ver sus aportes">[<?php echo Text::_("Aportes"); ?>]</a>
                 <?php endif; } ?></td>
                 <td colspan="5" style="color:blue;">
-                    <?php echo (!$user->active && $user->hide) ? ' Baja ' : ''; ?>
-                    <?php echo $user->active ? '' : ' Inactivo '; ?>
-                    <?php echo $user->hide ? ' Oculto ' : ''; ?>
-                    <?php echo $user->checker ? ' Revisor ' : ''; ?>
-                    <?php echo $user->translator ? ' Traductor ' : ''; ?>
-                    <?php echo $user->caller ? ' Convocador ' : ''; ?>
-                    <?php echo $user->admin ? ' Admin ' : ''; ?>
-                    <?php echo $user->manager ? ' Gestor ' : ''; ?>
-                    <?php echo $user->vip ? ' VIP ' : ''; ?>
+                    <?php echo (!$user->active && $user->hide) ? Text::_('Baja') : ''; ?>
+                    <?php echo $user->active ? '' : Text::_('Inactivo'); ?>
+                    <?php echo $user->hide ? Text::_('Oculto') : ''; ?>
+                    <?php echo $user->checker ? Text::_('Revisor') : ''; ?>
+                    <?php echo $user->translator ? Text::_('Traductor') : ''; ?>
+                    <?php echo $user->caller ? Text::_('Convocador') : ''; ?>
+                    <?php echo $user->admin ? Text::_('Admin') : ''; ?>
+                    <?php echo $user->manager ? Text::_('Gestor') : ''; ?>
+                    <?php echo $user->vip ? Text::_('VIP') : ''; ?>
                 </td>
             </tr>
             <tr>
