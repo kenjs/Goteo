@@ -51,10 +51,10 @@ $filters = $this['filters'];
         <thead>
             <tr>
                 <th><!-- Edit --></th>
-                <th><?php echo Text::_("license name"); ?></th> <!-- name -->
+                <th class="license_name"><?php echo Text::_("license name"); ?></th> <!-- name -->
                 <th><!-- Icon --></th>
-                <th><?php echo Text::_("Tooltip"); ?></th> <!-- description -->
-                <th><?php echo Text::_("Agrupación"); ?></th> <!-- group -->
+                <th class="tooltip"><?php echo Text::_("Tooltip"); ?></th> <!-- description -->
+                <th class="type"><?php echo Text::_("Agrupación"); ?></th> <!-- group -->
                 <th><?php echo Text::_("Posición"); ?></th> <!-- order -->
                 <th><!-- Move up --></th>
                 <th><!-- Move down --></th>

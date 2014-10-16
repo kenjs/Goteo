@@ -48,18 +48,31 @@ body.admin div#main div.admin-home,
 body.admin div#main div.admin-side {
     float: left;
 }
+body.admin div#main div.admin-right {
+    float: right;
+    width: 790px;
+}
 
 body.admin div#main div.admin-menu {
-    width: 140px;
+    width: 160px;
     margin: 0px 10px 0px 0px;
 }
 
 body.admin div#main div.admin-menu fieldset {
-    margin-bottom: 3px;
+    width: 144px;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    border: none;
 }
 
 body.admin div#main div.admin-menu fieldset legend {
+    display: block;
+    width: 144px;
+    padding: 8px;
     font-weight: bold;
+    background-color: #20B2B3;
+    color: #ffffff;
 }
 
 body.admin div#main div.admin-menu ul {
@@ -71,11 +84,14 @@ body.admin div#main div.admin-menu ul {
 
 body.admin div#main div.admin-menu ul li {
     background-color: white;
-    padding: 0px 3px;
+    width: 160px;
     margin-bottom: 1px;
+    padding: 0;
 }
 
 body.admin div#main div.admin-menu ul li a {
+    display: block;
+    padding: 4px 8px;
     text-decoration: none;
 }
 
@@ -84,7 +100,7 @@ body.admin div#main div.admin-menu ul li a:hover {
 }
 
 body.admin div#main div.widget {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 body.admin div#main div.admin-side {
@@ -185,4 +201,85 @@ body.admin div#main div.admin-center a.button {
 /* textarea, under admin */
 body.admin div#main div.admin-center textarea {
     width: 720px;
+}
+
+/* table style */
+body.admin div.widget.board > table {
+    border-spacing: 0;
+}
+body.admin div.widget.board > table th {
+    background-color: #666666;
+    color: #f5f5f5;
+}
+
+/*--------------------------------------------------
+Each page
+--------------------------------------------------*/
+/* common */
+body.admin div.admin-right div.widget.board textarea {
+    width: 500px;
+}
+
+/* licenses */
+body.admin div.admin-right.licenses div.widget.board > table th.license_name {
+    width: 150px;
+}
+body.admin div.admin-right.licenses div.widget.board > table th.tooltip {
+    width: 230px;
+}
+body.admin div.admin-right.licenses div.widget.board > table th.type {
+    width: 70px;
+}
+/* icons */
+body.admin div.admin-right.icons div.widget.board > table th.tooltip {
+    width: 400px;
+}
+/* templates */
+body.admin div.admin-right.templates div.widget.board > table th.template {
+    width: 240px;
+}
+body.admin div.admin-right.templates div.widget.board > table th.description {
+    width: 400px;
+}
+/* translates */
+body.admin div.admin-right.translates div.widget.board > table th.change_btn {
+    
+}
+/* rewards */
+body.admin div.admin-right.rewards div.widget.board > table th.change_btn {
+    width: 50px;
+}
+body.admin div.admin-right.rewards div.widget.board > table th.support_status {
+    width: 60px;
+}
+body.admin div.admin-right.rewards div.widget.board > table th.implementation_status {
+    width: 120px;
+}
+/* users */
+body.admin div.admin-right.users div.widget.board > table tr.record2 td {
+    border-bottom: 1px solid #0a0a0a;
+}
+/* worth */
+body.admin div.admin-right.worth div.widget.board > table th.edit_btn {
+    width: 60px;
+}
+body.admin div.admin-right.worth div.widget.board > table th.level {
+    width: 300px;
+}
+body.admin div.admin-right.worth div.widget.board > table th.total_support {
+    width: 100px;
+}
+/* promote */
+body.admin div.admin-right.promote div.widget.board > table th.view_btn {
+    width: 60px;
+}
+body.admin div.admin-right.promote div.widget.board > table th.support_status {
+    width: 80px;
+}
+/* newsletter */
+body.admin div.admin-right.newsletter div.widget.board > table th.detail_btn {
+    width: 50px;
+}
+body.admin div.admin-right.newsletter div.widget.board > table th.title {
+    width: 290px;
 }

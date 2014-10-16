@@ -97,6 +97,8 @@ $filters = $this['filters'];
                 <th><?php echo Text::_("Estado aporte"); ?></th>
                 <th><?php echo Text::_("Importe"); ?></th>
                 <th><?php echo Text::_("Extra"); ?></th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
 
@@ -105,6 +107,7 @@ $filters = $this['filters'];
             <tr>
                 <td><a href="/admin/accounts/details/<?php echo $invest->id ?>">[<?php echo Text::_("Detalles"); ?>]</a></td>
                 <td><?php echo $invest->id ?></td>
+
                 <td><?php echo $invest->invested ?></td>
                 <td><?php echo $this['users'][$invest->user] ?></td>
                 <td><?php echo $this['projects'][$invest->project]; if (!empty($invest->campaign)) echo '<br />('.$this['campaigns'][$invest->campaign].')'; ?></td>

@@ -51,12 +51,12 @@ $emails = Invest::emails(true);
     <table width="100%">
         <thead>
             <tr>
-                <th></th>
+                <th class="change_btn"></th>
                 <th><?php echo Text::_('Cofinanciador'); ?></th>
                 <th><?php echo Text::_("Proyecto"); ?></th>
                 <th><?php echo Text::_('Recompensa'); ?></th>
-                <th><?php echo Text::_("Estado"); ?></th>
-                <th></th>
+                <th class="support_status"><?php echo Text::_("Estado"); ?></th>
+                <th class="implementation_status"></th>
             </tr>
         </thead>
 

@@ -70,6 +70,7 @@ $filters = $this['filters'];
                         </th>
                         <th><!-- Ver informe si tiene registro --></th>
                         <th><!-- Cerar si abierta --></th>
+                        <th></th>
                     </tr>
                 </thead>
 

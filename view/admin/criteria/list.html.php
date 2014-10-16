@@ -42,13 +42,13 @@ $filters = $this['filters'];
     <table>
         <thead>
             <tr>
-                <td><!-- Edit --></td>
+                <th><!-- Edit --></th>
                 <th><?php echo Text::_('Título'); ?></th> <!-- title -->
                 <th><?php echo Text::_('Posición'); ?></th> <!-- order -->
-                <td><!-- Move up --></td>
-                <td><!-- Move down --></td>
+                <th><!-- Move up --></th>
+                <th><!-- Move down --></th>
                 <th><!-- Traducir--></th>
-                <td><!-- Remove --></td>
+                <th><!-- Remove --></th>
             </tr>
         </thead>
 

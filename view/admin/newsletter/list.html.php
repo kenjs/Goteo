@@ -70,9 +70,9 @@ $template = Template::get($tpl);
     <table>
         <thead>
             <tr>
-                <th></th>
+                <th class="detail_btn"></th>
                 <th><?php echo Text::_('Fecha'); ?></th>
-                <th><?php echo Text::_('Asunto'); ?></th>
+                <th class="title"><?php echo Text::_('Asunto'); ?></th>
                 <th></th>
                 <th></th>
                 <th></th>

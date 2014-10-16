@@ -66,7 +66,7 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
                     </select>
                 </td>
                 <td>
-                    <label for="interest-filter"><?php echo Text::_('Mostrar usuarios interesados en'); ?>:</label><br />
+                    <label for="interest-filter"><?php echo Text::_('Mostrar usuarios interesados categoría'); ?>:</label><br />
                     <select id="interest-filter" name="interest" onchange="document.getElementById('filter-form').submit();">
                         <option value=""><?php echo Text::_('Cualquier interés'); ?></option>
                     <?php foreach ($this['interests'] as $interestId=>$interestName) : ?>
@@ -90,7 +90,7 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
             </tr>
             <tr>
                 <td collspan="5">
-                    <label for="skill-filter"><?php echo Text::_('Mostrar usuarios interesados categoría'); ?>:</label><br />
+                    <label for="skill-filter"><?php echo Text::_('Mostrar usuarios interesados en'); ?>:</label><br />
                     <select id="skill-filter" name="skill" onchange="document.getElementById('filter-form').submit();">
                     <option value=""><?php echo Text::_('Cualquier skill'); ?></option>
                      
@@ -154,7 +154,7 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
                 <td><?php echo \amount_format($user->namount) . Text::_('yen'); ?> </td>
                 <td><?php echo date('Y/m/d H:i:s', strtotime($user->register_date)); ?></td>
             </tr>
-            <tr>
+            <tr class="record2">
                 <td><a href="/admin/users/manage/<?php echo $user->id; ?>" title="Gestionar">[<?php echo Text::_("Gestionar"); ?>]</a></td>
                 <td><?php if ($user->nprojs > 0) {
                     if (!isset($_SESSION['admin_node']) || (isset($_SESSION['admin_node']) && $user->node == $_SESSION['admin_node'])) : ?>
@@ -173,9 +173,6 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
                     <?php echo $user->manager ? Text::_('Gestor') : ''; ?>
                     <?php echo $user->vip ? Text::_('VIP') : ''; ?>
                 </td>
-            </tr>
-            <tr>
-                <td colspan="6"><hr /></td>
             </tr>
             <?php endwhile; ?>
         </tbody>

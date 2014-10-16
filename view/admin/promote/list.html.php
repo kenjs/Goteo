@@ -29,9 +29,9 @@ $translator = ACL::check('/translate') ? true : false;
     <table>
         <thead>
             <tr>
-                <th></th> <!-- preview -->
+                <th class="view_btn"></th> <!-- preview -->
                 <th><?php echo Text::_("Proyecto"); ?></th> <!-- title -->
-                <th><?php echo Text::_("Estado"); ?></th> <!-- status -->
+                <th class="support_status"><?php echo Text::_("Estado"); ?></th> <!-- status -->
                 <th><?php echo Text::_('Posición'); ?></th> <!-- order -->
                 <th><!-- Subir --></th>
                 <th><!-- Bajar --></th>

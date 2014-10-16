@@ -58,8 +58,8 @@ $filters = $this['filters'];
         <thead>
             <tr>
                 <th><!-- Editar --></th>
-                <th><?php echo Text::_('Plantilla'); ?></th>
-                <th><?php echo Text::_('Descripción'); ?></th>
+                <th class="template"><?php echo Text::_('Plantilla'); ?></th>
+                <th class="description"><?php echo Text::_('Descripción'); ?></th>
                 <th><!-- traducir --></th>
             </tr>
         </thead>

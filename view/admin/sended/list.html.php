@@ -76,10 +76,10 @@ $pagedResults = new \Paginated($this['sended'], 20, isset($_GET['page']) ? $_GET
         <table>
             <thead>
                 <tr>
-                    <th width="5%"><!-- Si no ves --></th>
-                    <th width="45%"><?php echo Text::_('Destinatario'); ?></th>
-                    <th width="35%"><?php echo Text::_('Plantilla'); ?></th>
-                    <th width="15%"><?php echo Text::_('Fecha'); ?></th>
+                    <th><!-- Si no ves --></th>
+                    <th><?php echo Text::_('Destinatario'); ?></th>
+                    <th><?php echo Text::_('Plantilla'); ?></th>
+                    <th><?php echo Text::_('Fecha'); ?></th>
                     <th><!-- reenviar --></th>
                 </tr>
             </thead>

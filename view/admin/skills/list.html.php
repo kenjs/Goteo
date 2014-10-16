@@ -76,7 +76,7 @@ $per = 100 / $cols;
         <thead>
             <tr>
                 <?php foreach ($this['columns'] as $key=>$label) : ?>
-                    <th><?php echo !empty($label) ? Text::_($label) : $label; ?></th>
+                    <th class="<?= $key; ?>"><?php echo !empty($label) ? Text::_($label) : $label; ?></th>
                 <?php endforeach; ?>
             </tr>
         </thead>

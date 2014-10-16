@@ -250,6 +250,9 @@ body.project-show div#main > div.center > div.widget {
 	padding-bottom: 20px;
 }
 
+body.project-show div#main > div.center > div.widget.project-summary:first-child {
+    border-bottom: none;
+}
 body.project-show div#main > div.center > div.widget .gallery-image{
     text-align: center;
 }

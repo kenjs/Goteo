@@ -26,20 +26,18 @@ use Goteo\Library\Text;
     <table>
         <thead>
             <tr>
-                <th><!-- Editar--></th>
-                <th><?php echo Text::_('Nivel'); ?></th>
-                <th><?php echo Text::_('Caudal'); ?></th>
-                <th></th>
+                <th class="edit_btn"><!-- Editar--></th>
+                <th class="level"><?php echo Text::_('Nivel'); ?></th>
+                <th class="total_support"><?php echo Text::_('Caudal'); ?></th>
             </tr>
         </thead>
 
         <tbody>
             <?php foreach ($this['worthcracy'] as $worth) : ?>
             <tr>
-                <td width="5%"><a href="/admin/worth/edit/<?php echo $worth->id; ?>">[<?php echo Text::_("Editar"); ?>]</a></td>
-                <td width="15%"><?php echo $worth->name; ?></td>
-                <td width="15%"><?php echo $worth->amount . Text::_('yen'); ?></td>
-                <td></td>
+                <td><a href="/admin/worth/edit/<?php echo $worth->id; ?>">[<?php echo Text::_("Editar"); ?>]</a></td>
+                <td><?php echo $worth->name; ?></td>
+                <td><?php echo $worth->amount . Text::_('yen'); ?></td>
             </tr>
             <?php endforeach; ?>
         </tbody>
