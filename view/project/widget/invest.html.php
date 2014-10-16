@@ -160,7 +160,8 @@ if ($step == 'start') : ?>
 <?php /* if (\GOTEO_ENV != 'real') : ?>
 <p><button type="submit" class="process pay-cash" name="method"  value="cash">CASH</button></p>
 <?php endif; */ ?>
-<p><button type="submit" class="process pay-paypal" name="method"  value="paypal">PAYPAL</button></p>
+<!--<p><button type="submit" class="process pay-paypal" name="method"  value="paypal">PAYPAL</button></p>-->
+<p><button type="submit" class="process pay-axes" name="method"  value="axes">クレジットカード</button></p>
 
 
 </div>
