@@ -51,6 +51,12 @@ use Goteo\Library\Text;
 
             <?php endforeach; ?>
         </dl>
-        <input type="submit" name="<?php echo $this['form']['submit']['name']; ?>" value="<?php echo $this['form']['submit']['label']; ?>" />
+        <?php
+        if($this['form']['submit']['label'] == 'Guardar'):
+            $submit_label = Text::_('Guardar');
+        else:
+            $submit_label = $this['form']['submit']['label'];
+        endif; ?>
+        <input type="submit" name="<?php echo $this['form']['submit']['name']; ?>" value="<?php echo $submit_label; ?>" />
     </form>
 </div>
