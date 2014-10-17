@@ -1091,12 +1091,12 @@ namespace Goteo\Model {
                  $score+=2;
             }
 
-            if (empty($this->about)) {
-                $errors['overview']['about'] = Text::get('mandatory-project-field-about');
-             } else {
+//            if (empty($this->about)) {
+//                $errors['overview']['about'] = Text::get('mandatory-project-field-about');
+//             } else {
                  $okeys['overview']['about'] = 'ok';
                  ++$score;
-            }
+//            }
 
             if (empty($this->motivation)) {
                 $errors['overview']['motivation'] = Text::get('mandatory-project-field-motivation');

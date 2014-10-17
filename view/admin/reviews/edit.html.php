@@ -44,6 +44,6 @@ $review  = $this['review'];
             <textarea name="to_owner" id="review-to_owner" cols="60" rows="10"><?php echo $review->to_owner; ?></textarea>
         </p>
 
-       <input type="submit" name="save" value="Guardar" />
+       <input type="submit" name="save" value="<?php echo Text::_('Guardar'); ?>" />
     </form>
 </div>

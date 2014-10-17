@@ -235,6 +235,7 @@ body.user-login div#main > div.about_cf p.link {
 }
 
 body.user-login div#main form {
+    margin-top: 40px;
     margin-bottom: 16px;
 }
 body.user-login div#main div.login p {

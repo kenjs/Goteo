@@ -40,6 +40,7 @@
 @import url('about.css');
 @import url('feed.css');
 @import url('meter.css');
+@import url('axes.css');
 
 div#sub-header > div,
 div#sub-header-secondary > div {
@@ -193,8 +194,8 @@ div.side div.widget.project-collaborations ul li strong,
 div.side div.widget.project-rewards h4.name {
     /*height: 40px;*/
     padding-left: 42px;
-    line-height: 40px;
-    min-height: 33px;
+    /*line-height: 40px;*/
+    min-height: 40px;
 }
 div.side div.widget.project-collaborations ul li strong {
     display: inline-block;

@@ -203,9 +203,9 @@ $superform = array(
                 'motivation' => array(
                     'type'      => 'textarea',       
                     'title'     => Text::get('overview-field-motivation'),
-                    'required'  => true,
+                    //'required'  => true,
                     //'hint'      => Text::get('tooltip-project-motivation'),
-                    'errors'    => !empty($errors['motivation']) ? array($errors['motivation']) : array(),
+                    //'errors'    => !empty($errors['motivation']) ? array($errors['motivation']) : array(),
                     'ok'        => !empty($okeys['motivation']) ? array($okeys['motivation']) : array(),
                     'value'     => $project->motivation
                 ),

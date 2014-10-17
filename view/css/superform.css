@@ -541,6 +541,7 @@ div.superform input.edit[type="submit"],
 div.superform input.remove[type="submit"],
 div.superform input.add[type="submit"],
 div.superform input.add[type="submit"],
+div.superform input.ok[type="submit"],
 a.button.red,
 a.button,
 a.button.weak {
