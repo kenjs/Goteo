@@ -30,8 +30,10 @@ namespace Goteo\Controller {
         Goteo\Library\Mail,
         Goteo\Library\Template,
         Goteo\Library\Message,
-        Goteo\Library\Paypal,
-        Goteo\Library\Tpv;
+        //Goteo\Library\Paypal,
+        //Goteo\Library\Tpv;
+        Goteo\Core\View
+        ;
 
     class Invest extends \Goteo\Core\Controller {
 
@@ -40,7 +42,8 @@ namespace Goteo\Controller {
              return array(
                     /*'cash' => 'cash',
                     'tpv' => 'tpv',*/
-                    'paypal' => 'paypal'
+                    //'paypal' => 'paypal'
+                    'axes' => 'axes'
                 );
         }
 
@@ -139,14 +142,14 @@ namespace Goteo\Controller {
 //                                Message::Error(Text::get('invest-tpv-error_fatal'));
 //                            }
 //                            break;
-                        case 'paypal':
-                            // Petición de preapproval y redirección a paypal
-                            if (Paypal::preapproval($invest, $errors)) {
-                                die;
-                            } else {
-                                Message::Error(Text::get('invest-paypal-error_fatal'));
-                            }
-                            break;
+//                        case 'paypal':
+//                            // Petición de preapproval y redirección a paypal
+//                            if (Paypal::preapproval($invest, $errors)) {
+//                                die;
+//                            } else {
+//                                Message::Error(Text::get('invest-paypal-error_fatal'));
+//                            }
+//                            break;
 //                        case 'cash':
 //                            // En betatest aceptamos cash para pruebas
 //                            if (GOTEO_ENV != 'real') {
@@ -156,6 +159,14 @@ namespace Goteo\Controller {
 //                                throw new Redirection('/');
 //                            }
 //                            break;
+                        case 'axes':
+                            $viewData = array('invest'=>$invest);
+                            $view = new View (
+                                "view/invest/axes.html.php",
+                                $viewData
+                            );
+                            return $view;
+                            break;
                     }
                 } else {
                     Message::Error(Text::get('invest-create-error'));
@@ -173,8 +184,11 @@ namespace Goteo\Controller {
          * @params reward recompensa que selecciona
          */
         public function paid () {
-            file_put_contents("/var/www/html/goteo.il3c.com/htdocs/logs/".date("YmdHis")."_paid.log",print_r($_REQUEST,true));
-
+            file_put_contents("/var/www/html/goteo.il3c.com/htdocs/logs/".date("YmdHis")."_paid.log",print_r($_SERVER,true).print_r($_REQUEST,true));
+        }
+        public function done () {
+            print_r($_REQUEST);
+            exit;
         }
         public function confirmed ($project = null, $id = null, $reward = null) {
             if (empty($id)) {

@@ -1,7 +1,7 @@
 <?php
 /*
  *  Copyright (C) 2012 Platoniq y Fundación Fuentes Abiertas (see README for details)
- *	This file is part of Goteo.
+ *  This file is part of Goteo.
  *
  *  Goteo is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
@@ -20,20 +20,20 @@
 
 use Goteo\Core\Resource,
     Goteo\Core\Error,
-	Goteo\Core\Registry,
+    Goteo\Core\Registry,
     Goteo\Core\Redirection,
     Goteo\Core\ACL,
     Goteo\Library\Text,
     Goteo\Library\Message,
-	Goteo\Library\i18n\Locale,
+    Goteo\Library\i18n\Locale,
     Goteo\Library\i18n\Lang;
 
 
 if( !file_exists("config.php") ) {
-	$msg = "This instance of Goteo doesn't seem to be configured, please read the deployment guide, configure and try again.";
-	error_log($msg);
-	echo "<div id='failure'><h1>{$msg}</h1></div>";
-	die;
+    $msg = "This instance of Goteo doesn't seem to be configured, please read the deployment guide, configure and try again.";
+    error_log($msg);
+    echo "<div id='failure'><h1>{$msg}</h1></div>";
+    die;
 }
 
 require_once 'config.php';
@@ -57,7 +57,7 @@ if (GOTEO_MAINTENANCE === true && $_SERVER['REQUEST_URI'] != '/about/maintenance
 spl_autoload_register(
 
     function ($cls) {
-		//echo "Trying to autoload {$cls}...";
+        //echo "Trying to autoload {$cls}...";
         $file = __DIR__ . '/' . implode('/', explode('\\', strtolower(substr($cls, 6)))) . '.php';
         $file = realpath($file);
 
@@ -70,7 +70,7 @@ spl_autoload_register(
         }
 
         if ($file !== false) {
-			//echo "Autoloading {$file}...";
+            //echo "Autoloading {$file}...";
             include $file;
         }
 
@@ -110,9 +110,9 @@ $locale_name = Lang::locale();
 $locale = new Locale($config['locale']);
 // avoid Fatal Error if $local_name is empty.
 if ($locale_name)
-	$locale->set($locale_name);
+    $locale->set($locale_name);
 else
-	$locale->set('en_GB');
+    $locale->set('en_GB');
 Registry::set('locale', $locale);
 
 
@@ -136,6 +136,8 @@ try {
         //si es un cron (ejecutandose) con los parámetros adecuados, no redireccionamos
         if (strpos($uri, 'cron') !== false && strcmp($_GET[md5(CRON_PARAM)], md5(CRON_VALUE)) === 0) {
             define('CRON_EXEC', true);
+        } else if (strpos($uri, 'paid') !== false) {
+            define('PAID_EXEC', true);
         } else {
             throw new Redirection("/user/login/?return=".rawurlencode($uri));
         }
