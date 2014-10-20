@@ -94,7 +94,7 @@ namespace Goteo\Controller {
 
                 // a ver si tiene cuenta paypal
                 $projectAccount = Model\Project\Account::get($project->id);
-
+/*
                 if (empty($projectAccount->paypal)) {
 
                     if ($debug) echo 'No tiene cuenta PayPal<br />';
@@ -132,6 +132,7 @@ namespace Goteo\Controller {
                     }
 
                 }
+*/
 
                 $log_text = null;
 
@@ -187,8 +188,11 @@ namespace Goteo\Controller {
 
                 //  (financiado a los 80 o cancelado si a los 40 no llega al minimo)
                 // si ha llegado a los 40 dias: mínimo-> ejecutar ; no minimo proyecto y todos los preapprovals cancelados
+                // (Funded at 80 or canceled if the 40 does not reach the minimum) 
+                 // If it has reached 40 days: minimum-> execute; no minimum project and canceled all preapprovals
                 if ($days >= 40) {
                     // si no ha alcanzado el mínimo, pasa a estado caducado
+                    // If you have not reached the minimum, goes into Expired
                     if ($project->amount < $project->mincost) {
                         if ($debug) echo 'Ha llegado a los 40 dias de campaña sin conseguir el minimo, no pasa a segunda ronda<br />';
 
@@ -239,6 +243,7 @@ namespace Goteo\Controller {
                         echo '<br />';
                     } else {
                         // tiene hasta 80 días para conseguir el óptimo (o más)
+                        // Has up to 80 days for optimum (or more)
                         if ($days >= 80) {
                             if ($debug) echo 'Ha llegado a los 80 dias de campaña (final de segunda ronda)<br />';
 
@@ -327,6 +332,7 @@ namespace Goteo\Controller {
                             $errors = array();
                             if ($project->passed($errors)) {
                                 // se crea el registro de contrato
+                                // Recording contract is created
                                 if (Model\Contract::create($project->id, $errors)) {
                                     echo ' -> Ok:: se ha creado el registro de contrato';
                                 } else {
