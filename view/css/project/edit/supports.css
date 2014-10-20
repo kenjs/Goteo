@@ -119,3 +119,11 @@ body.project-edit div#main.supports div.superform li.element.editsupport li.supp
 body.project-edit div#main.supports div.superform li.element.editsupport li.support_lend div.contents {
     background-image: url('/view/css/icon/m/lend.png');
 }
+
+body.project-edit div#main.supports div.superform li.element.editsupport li.element.group.buttons {
+    margin-top: 8px;
+}
+
+body.project-edit div#main.supports div.superform li.element.group div.elements > ol li.submit {
+    margin-top: 16px;
+}

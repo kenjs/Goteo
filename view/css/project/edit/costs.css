@@ -286,3 +286,12 @@ body.project-edit div#main.costs div.superform li.element.cost-meter dl dd.optim
     font-size: 20px;
     color: #BB70B6;
 }
+
+
+body.project-edit div#main.costs div.superform li.element.group div.elements > ol li.cost {
+    padding: 16px 8px;
+}
+
+body.project-edit div#main.costs div.superform li.element.group div.elements > ol li.submit {
+    margin-top: 16px;
+}

@@ -256,9 +256,37 @@ body.admin div.admin-right.rewards div.widget.board > table th.implementation_st
     width: 120px;
 }
 /* users */
-body.admin div.admin-right.users div.widget.board > table tr.record2 td {
-    border-bottom: 1px solid #0a0a0a;
+body.admin div.admin-right.users div.widget.board form dl dt {
+    float: left;
+    width: 180px;
+    margin-right: 20px;
+    text-align: right;
 }
+body.admin div.admin-right.users div.widget.board form dl dt,
+body.admin div.admin-right.users div.widget.board form dl dd {
+    margin-bottom: 16px;
+}
+body.admin div.admin-right.users div.widget.board form dl dd.name {
+
+}
+body.admin div.admin-right.users div.widget.board form dl dd.name input[type="submit"] {
+    width: 80px;
+    height: 24px;
+    margin: 0;
+    line-height: 24px;
+    font-size: 14px;
+}
+body.admin div.admin-right.users div.widget.board form dl dd select#role-filter,
+body.admin div.admin-right.users div.widget.board form dl dd select#interest-filter,
+body.admin div.admin-right.users div.widget.board form dl dd select#skill-filter {
+    width: 289px;
+}
+body.admin div.admin-right.users div.widget.board form dl dd input#name-filter {
+    width: 285px;
+    margin: 0;
+    padding: 0;
+}
+
 /* worth */
 body.admin div.admin-right.worth div.widget.board > table th.edit_btn {
     width: 60px;

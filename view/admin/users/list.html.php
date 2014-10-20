@@ -54,6 +54,61 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
 
 <div class="widget board">
     <form id="filter-form" action="/admin/users" method="get">
+<!-- Change from the table tag -->
+        <dl>
+            <dt><label for="role-filter"><?php echo Text::_('Con rol'); ?>:</label></dt>
+            <dd>
+                <select id="role-filter" name="role" onchange="document.getElementById('filter-form').submit();">
+                <option value=""><?php echo Text::_('Cualquier rol'); ?></option>
+                <?php foreach ($this['roles'] as $roleId=>$roleName) : ?>
+                    <option value="<?php echo $roleId; ?>"<?php if ($filters['role'] == $roleId) echo ' selected="selected"';?>><?php echo $roleName; ?></option>
+                <?php endforeach; ?>
+                </select>
+            </dd>
+
+            <dt><label for="interest-filter"><?php echo Text::_('Mostrar usuarios interesados categoría'); ?>:</label></dt>
+            <dd>
+                <select id="interest-filter" name="interest" onchange="document.getElementById('filter-form').submit();">
+                <option value=""><?php echo Text::_('Cualquier interés'); ?></option>
+                <?php foreach ($this['interests'] as $interestId=>$interestName) : ?>
+                    <option value="<?php echo $interestId; ?>"<?php if ($filters['interest'] == $interestId) echo ' selected="selected"';?>><?php echo $interestName; ?></option>
+                <?php endforeach; ?>
+                </select>
+            </dd>
+            <dt><label for="name-filter"><?php echo Text::_('Por nombre o email'); ?>:</label></dt>
+            <dd class="name">
+                <input id="name-filter" name="name" value="<?php echo $filters['name']; ?>" />
+                <input type="submit" name="filter" value="<?php echo Text::_('Buscar') ?>">
+            </dd>
+            <dt><label for="skill-filter"><?php echo Text::_('Mostrar usuarios interesados en'); ?>:</label></dt>
+            <dd>
+                <select id="skill-filter" name="skill" onchange="document.getElementById('filter-form').submit();">
+                    <option value=""><?php echo Text::_('Cualquier skill'); ?></option>
+
+                    <?php foreach ($this['skills'] as $key=>$value) : ?>
+                    <?php if(empty($value->parent_skill_id)) : ?>
+                    <?php if(!empty($this['skills'][$key-1])) : ?></optgroup><?php endif;?>
+                    <optgroup label="<?php echo $value->name?>">
+                        <?php else : ?>
+                            <option value="<?php echo $key; ?>"<?php if ($filters['skill'] == $key) echo ' selected="selected"';?>><?php echo $key.$value->name; ?></option>
+                        <?php endif; ?>
+                        <?php endforeach; ?>
+                    </optgroup>
+                </select>
+            </dd>
+
+
+            <dt><label for="order-filter"><?php echo Text::_('Ver por'); ?>:</label></dt>
+            <dd>
+                <select id="order-filter" name="order" onchange="document.getElementById('filter-form').submit();">
+                    <?php foreach ($this['orders'] as $orderId=>$orderName) : ?>
+                        <option value="<?php echo $orderId; ?>"<?php if ($filters['order'] == $orderId) echo ' selected="selected"';?>><?php echo $orderName; ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </dd>
+        </dl>
+
+        <?/*
         <table>
             <tr>
                 <td>
@@ -120,6 +175,7 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
                 </td>
             </tr>
         </table>
+                */?>
 
     </form>
     <br clear="both" />
@@ -158,6 +214,7 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
                 <td><a href="/admin/users/manage/<?php echo $user->id; ?>" title="Gestionar">[<?php echo Text::_("Gestionar"); ?>]</a></td>
                 <td><?php if ($user->nprojs > 0) {
                     if (!isset($_SESSION['admin_node']) || (isset($_SESSION['admin_node']) && $user->node == $_SESSION['admin_node'])) : ?>
+
                 <a href="/admin/accounts/?name=<?php echo $user->email; ?>" title="Ver sus aportes">[<?php echo Text::_("To management of support"); ?>]</a>
                 <?php else:  ?>
                 <a href="/admin/invests/?name=<?php echo $user->email; ?>" title="Ver sus aportes">[<?php echo Text::_("Aportes"); ?>]</a>

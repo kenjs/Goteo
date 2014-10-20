@@ -136,6 +136,7 @@ div.center > div.widget.user-mates > h3.title{padding: 9px 0 7px 5px;font-size: 
 
 
 
+/*rewards--send message*/
 div.center div.widget.user-message{position:relative;z-index:99;}
 div.center div.widget.user-message textarea{display:block;margin-left:50px;width:510px;}
 div.center div.widget.user-message #bocadillo{background:url('/view/css/bocadillo.jpg') no-repeat;position:absolute;
@@ -144,8 +145,16 @@ div.center div.widget.user-message #a-preview{color: #2EAB58;
 font-weight: bold;left: 52px;position: relative;text-decoration: none;text-transform: uppercase;top: 10px;}
 div.center div.widget.user-message button{float:right;margin-right:8px;}
 
+body.user-profile div.widget.user-message form label[for="message"] {
+}
+body.user-profile div.widget.user-message form label[for="message"] {
+    display: block;
+}
+body.user-profile div.widget.user-message form textarea#message {
+    margin-bottom: 16px;
+}
 
-/*プロフィール*/
+/*profile*/
 
 body.user-profile div#main div.center.profile .widget.worthcracy.user-worthcracy {
 	margin: 0 0 10px 0;

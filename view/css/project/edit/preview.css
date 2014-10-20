@@ -71,3 +71,8 @@ body.project-edit div#main.preview div.superform > div.hint {
     padding-right: 0;
     border-right: none;
 }
+
+body.project-edit div#main div.project-preview div.widget.project-rewards div.amount {
+    margin-left: 0;
+}
+
