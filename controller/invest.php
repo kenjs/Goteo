@@ -156,28 +156,25 @@ namespace Goteo\Controller {
         public function paid ($id = null) {
             file_put_contents("/var/www/html/goteo.il3c.com/htdocs/logs/".date("YmdHis")."_paid.log",print_r($_SERVER,true).print_r($_REQUEST,true));
             
+            if($_GET['result'] != 'ok') die();
+
             $id = $_GET['sendid'];
 
-            if (empty($id)) {
-                Message::Error(Text::get('invest-data-error'));
-                throw new Redirection('/', Redirection::TEMPORARY);
-            }
+            if (empty($id)) die();
 
             // el aporte
             $invest = Model\Invest::get($id);
-            if ($invest->status != "-1") {
-                Message::Error(Text::get('invest-data-error'));
-                throw new Redirection('/', Redirection::TEMPORARY);
-            }
-
+            if ($invest->status != "-1") die();
 
             $projectData = Model\Project::getMedium($invest->project);
 
 
             // para evitar las duplicaciones de feed y email
             if (isset($_SESSION['invest_'.$invest->id.'_completed'])) {
-                exit;
+                die();
             }
+
+            $user = Model\User::get($invest->user);
 
             // Paypal solo disponible si activado
             if ($invest->method == 'axes') {
@@ -191,7 +188,7 @@ namespace Goteo\Controller {
                 $log->populate('Aporte Axes', '/admin/invests',
                     \vsprintf("%s ha aportado %s al proyecto %s mediante PayPal",
                         array(
-                        Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
+                        Feed::item('user', $user->name, $user->id),
                         Feed::item('money', $invest->amount.' &yen;'),
                         Feed::item('project', $projectData->name, $projectData->id))
                     ));
@@ -203,7 +200,7 @@ namespace Goteo\Controller {
                 if ($invest->anonymous) {
                     $log->populate(Text::get('regular-anonymous'), '/user/profile/anonymous', $log_html, 1);
                 } else {
-                    $log->populate($_SESSION['user']->name, '/user/profile/'.$_SESSION['user']->id, $log_html, $_SESSION['user']->avatar->id);
+                    $log->populate($user->name, '/user/profile/'.$user->id, $log_html, $user->avatar->id);
                 }
                 $log->doPublic('community');
                 unset($log);
@@ -256,14 +253,14 @@ namespace Goteo\Controller {
 
             // En el contenido:
             $search  = array('%USERNAME%', '%PROJECTNAME%', '%PROJECTURL%', '%AMOUNT%', '%REWARDS%');
-            $replace = array($_SESSION['user']->name, $projectData->name, SITE_URL.'/project/'.$projectData->id, $confirm->amount, $txt_rewards);
+            $replace = array($user->name, $projectData->name, SITE_URL.'/project/'.$projectData->id, $confirm->amount, $txt_rewards);
             $content = \str_replace($search, $replace, $template->text);
 
             $mailHandler = new Mail();
             $mailHandler->reply = GOTEO_CONTACT_MAIL;
             $mailHandler->replyName = GOTEO_MAIL_NAME;
-            $mailHandler->to = $_SESSION['user']->email;
-            $mailHandler->toName = $_SESSION['user']->name;
+            $mailHandler->to = $user->email;
+            $mailHandler->toName = $user->name;
             $mailHandler->subject = $subject;
             $mailHandler->content = $content;
             $mailHandler->html = true;
@@ -285,7 +282,7 @@ namespace Goteo\Controller {
 
             // En el contenido:
             $search  = array('%OWNERNAME%', '%USERNAME%', '%PROJECTNAME%', '%SITEURL%', '%AMOUNT%', '%MESSAGEURL%');
-            $replace = array($projectData->user->name, $_SESSION['user']->name, $projectData->name, SITE_URL, $invest->amount, SITE_URL.'/user/profile/'.$_SESSION['user']->id.'/message');
+            $replace = array($projectData->user->name, $user->name, $projectData->name, SITE_URL, $invest->amount, SITE_URL.'/user/profile/'.$user->id.'/message');
             $content = \str_replace($search, $replace, $template->text);
 
             $mailHandler = new Mail();
@@ -306,48 +303,6 @@ namespace Goteo\Controller {
             $_SESSION['invest_'.$invest->id.'_completed'] = true;
             // log
             Model\Invest::setDetail($invest->id, 'confirmed', 'El usuario regresó a /invest/confirmed');
-
-
-            if ($confirm->method == 'axes') {
-
-                // hay que cambiarle el status a 0
-                $confirm->setStatus('0');
-
-                /*
-                 * Evento Feed
-                 */
-                $log = new Feed();
-                $log->title = 'Aporte PayPal';
-                $log->url = '/admin/invests';
-                $log->type = 'money';
-                $log_text = Text::_("%s ha aportado %s al proyecto %s mediante PayPal");
-                $items = array(
-                    Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
-                    Feed::item('money', $confirm->amount.' &yen;'),
-                    Feed::item('project', $projectData->name, $projectData->id)
-                );
-                $log->html = \vsprintf($log_text, $items);
-                $log->add($errors);
-
-                    // evento público
-                if ($confirm->anonymous) {
-                    $log->title = Text::get('regular-anonymous');
-                    $log->url = '/user/profile/anonymous';
-                    $log->image = 1;
-                } else {
-                    $log->title = $_SESSION['user']->name;
-                    $log->url = '/user/profile/'.$_SESSION['user']->id;
-                    $log->image = $_SESSION['user']->avatar->id;
-                }
-                $log->scope = 'public';
-                $log->type = 'community';
-                $log->html = Text::html('feed-invest',
-                                    Feed::item('money', $confirm->amount.' &yen;'),
-                                    Feed::item('project', $projectData->name, $projectData->id));
-                $log->add($errors);
-
-                unset($log);
-            }
         }
         public function done ($id=null) {
             if (empty($id)) {
