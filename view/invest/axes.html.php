@@ -18,12 +18,12 @@ $invest = $this['invest'];
             <form method="post" action="https://gw.axes-payment.com/cgi-bin/credit/order.cgi">
             <input type="hidden" name="clientip" value="1019000507">
             <input type="hidden" name="money" value="0">
-            <input type="hidden" name="sendid" value="123">
+            <input type="hidden" name="sendid" value="<?=$invest->id?>">
             <input type="hidden" name="sendpoint" value="">
             <input type="hidden" name="success_url" value="<?=$invest->urlOK?>">
-            <input type="hidden" name="success_str" value="トップページへ1">
+            <input type="hidden" name="success_str" value="back">
             <input type="hidden" name="failure_url" value="<?=$invest->urlNOK?>">
-            <input type="hidden" name="failure_str" value="トップページへ2">
+            <input type="hidden" name="failure_str" value="back">
             <input type="button" value="戻る" class="back" onClick='history.back();'>
             <input type="submit" value="決済ページへ">
             </form>
