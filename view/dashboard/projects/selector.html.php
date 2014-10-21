@@ -33,6 +33,7 @@ use Goteo\Library\Text;
         <!-- un boton para seleccionar si no tiene javascript -->
         </form>
     <?php else : ?>
-    <p>No tienes ning&uacute;n proyecto, puedes crear uno <a href="/project/create">aqu&iacute;</a></p>
+    <p><?php echo Text::_('not yet creat project'); ?></p>
+        <p><a href="/project/create">プロジェクトを立ち上げる</a></p>
     <?php endif; ?>
 </div>

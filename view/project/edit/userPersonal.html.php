@@ -305,7 +305,7 @@ echo new SuperForm(array(
                             'errors'    => !empty($errors['post_location']) ? array($errors['post_location']) : array(),
                             'ok'        => !empty($okeys['post_location']) ? array($okeys['post_location']) : array(),
                             'value'     => $project->post_location
-                        ),
+                        ),*/
 
                         'post_country' => array(
                             'type'      => 'textbox',
@@ -316,7 +316,7 @@ echo new SuperForm(array(
                             'errors'    => !empty($errors['post_country']) ? array($errors['post_country']) : array(),
                             'ok'        => !empty($okeys['post_country']) ? array($okeys['post_country']) : array(),
                             'value'     => $project->post_country
-                        )*/
+                        )
                     )
                 ),
             )

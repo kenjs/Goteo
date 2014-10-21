@@ -72,11 +72,11 @@ $elements = array(
 );
 ?>
 <div class="widget">
-<p>
+
     <?php if (!empty($project->passed)) {
-        echo Text::_('El proyecto terminará la primera ronda el día') . '<strong>'.date('Y/m/d', strtotime($project->passed)).'</strong>.';
+        echo '<p><span>' . Text::_('El proyecto terminará la primera ronda el día') . '：</span><strong>'.date('Y/m/d', strtotime($project->passed)).'</strong></p>';
         if ($project->passed != $project->willpass) {
-            echo '<br />' . Text::_('Aunque debería haberla terminado el día ') . '<strong>'.date('Y/m/d', strtotime($project->willpass)).'</strong>.';
+                echo '<p><span>' . Text::_('Day minimum required amount is to be achieved') . '：</span><strong>'.date('Y/m/d', strtotime($project->willpass)).'</strong></p>';
         }
     } else {
         echo Text::_('El proyecto terminará la primera ronda el día') . '<strong>'.date('Y/m/d', strtotime($project->willpass)).'</strong>.';

@@ -152,7 +152,7 @@ $pagedResults = new \Paginated($this['projects'], 10, isset($_GET['page']) ? $_G
                         elseif($project->round == 2):
                             $round = 'nd';
                         endif;
-                        echo "{$project->round}".$round.Text::_('ronda')."/".Text::_('Le quedan')."{$project->days}".Text::_('días') . "&nbsp;&nbsp;&nbsp;<strong>" . Text::_('Conseguido') . ":</strong> ".\amount_format($project->invested). Text::_('yen') . "&nbsp;&nbsp;&nbsp;<strong>" . Text::_('Cofin') . ":</strong> {$project->num_investors}&nbsp;&nbsp;&nbsp;<strong>" . Text::_('Colab') . ":</strong> {$project->num_messegers}";
+                        echo "{$project->round}".$round.Text::_('ronda')."/".Text::_('Le quedan')."{$project->days}".Text::_('días') . "&nbsp;&nbsp;&nbsp;<strong>" . Text::_('Achieved') . ":</strong> ".\amount_format($project->invested). Text::_('yen') . "&nbsp;&nbsp;&nbsp;<strong>" . Text::_('Cofin') . ":</strong> {$project->num_investors}&nbsp;&nbsp;&nbsp;<strong>" . Text::_('Colab') . ":</strong> {$project->num_messegers}";
                     endif;
                 ?></td>
             </tr>

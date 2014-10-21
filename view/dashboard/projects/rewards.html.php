@@ -223,7 +223,7 @@ switch ($order) {
                 </p>
 
                 <p>
-                    対象のお礼: <br />
+                    <?php echo Text::_('Send it to reward seekers');_?>: <br />
                     <?php foreach ($rewards as $rewardId => $rewardData) : ?>
                         <input type="checkbox" id="msg_reward-<?php echo $rewardId; ?>" name="msg_reward-<?php echo $rewardId; ?>" value="1" />
                         <label for="msg_reward-<?php echo $rewardId; ?>">&yen;<?php echo $rewardData->amount; ?>  (<?php echo Text::shorten($rewardData->reward, 40); ?>)</label>

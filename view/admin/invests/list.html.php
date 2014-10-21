@@ -49,7 +49,7 @@ $filters = $this['filters'];
         'first' =>  Text::_("Todos"))
 ); ?>
 <div class="widget board">
-    <h3 class="title"><?php echo Text::_('Filtros'); ?></h3>
+    <h3 class="title"><?php echo Text::_('State support'); ?></h3>
     <form id="filter-form" action="/admin/invests" method="get">
         <input type="hidden" name="filtered" value="yes" />
         <?php foreach ($the_filters as $filter=>$data) : ?>
@@ -73,7 +73,7 @@ $filters = $this['filters'];
         <br clear="both" />
 
         <div style="float:left;margin:5px;">
-            <input type="submit" value="filtrar" />
+            <input type="submit" value="<?php echo Text::_('Buscar'); ?>" />
         </div>
     </form>
     <br clear="both" />

@@ -366,7 +366,7 @@ namespace Goteo\Controller\Admin {
                     $mailHandler->html = true;
                     $mailHandler->template = $template->id;
                     if ($mailHandler->send()) {
-                        Message::Info(Text::get('admin-projects-info-sendmail') . '<strong>'.$project->user->name.'</strong>' . Text::get('admin-projects-info-sendmail-to') . '<strong>'.$project->user->email.'</strong>');
+                        Message::Info('<strong>'.$project->user->name.'</strong>' . Text::get('admin-projects-info-sendmail-to') . '<strong>（' . $project->user->email.'）</strong>' . Text::get('admin-projects-info-sendmail'));
                     } else {
                         Message::Error(Text::_('Ha fallado al enviar el mail a') . '<strong>'.$project->user->name.'</strong>' . Text::_('a la dirección') . '<strong>'.$project->user->email.'</strong>');
                     }
