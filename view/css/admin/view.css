@@ -219,6 +219,10 @@ Each page
 body.admin div.admin-right div.widget.board textarea {
     width: 500px;
 }
+body.admin div.admin-right div.widget h3.title,
+body.admin div.admin-right div.widget.board h4.title {
+    padding-left: 0;
+}
 
 /* licenses */
 body.admin div.admin-right.licenses div.widget.board > table th.license_name {
@@ -310,4 +314,9 @@ body.admin div.admin-right.newsletter div.widget.board > table th.detail_btn {
 }
 body.admin div.admin-right.newsletter div.widget.board > table th.title {
     width: 290px;
+}
+
+/* dates */
+body.admin div.admin-right.projects div.widget p {
+    margin: 0 0 8px 0;
 }
