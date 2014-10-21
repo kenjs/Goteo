@@ -16,7 +16,7 @@ $invest = $this['invest'];
         <div id="main" class="axes">
             <p><span class="project_name"><?php echo $invest->project ?></span>に<span class="amount"><?php echo $invest->amount;?></span>円寄付します。</p>
             <form method="post" action="https://gw.axes-payment.com/cgi-bin/credit/order.cgi">
-            <input type="hidden" name="clientip" value="1019000507">
+            <input type="hidden" name="clientip" value="<?= AXES_CLIENTIP; ?>">
             <input type="hidden" name="money" value="0">
             <input type="hidden" name="sendid" value="<?=$invest->id?>">
             <input type="hidden" name="sendpoint" value="">
