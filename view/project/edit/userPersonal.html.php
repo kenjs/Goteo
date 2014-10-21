@@ -35,7 +35,7 @@ echo new SuperForm(array(
     'level'         => $this['level'],
     'method'        => 'post',
     'title'         => Text::get('personal-main-header'),
-//    'hint'          => Text::get('guide-project-contract-information'),
+    'hint'          => Text::get('guide-project-contract-information'),
     'elements'      => array(
         'process_userPersonal' => array (
             'type' => 'hidden',
@@ -216,11 +216,11 @@ echo new SuperForm(array(
                 'location' => array(
                     'type'      => 'textbox',
                     'class'     => 'inline',
-                    'required'  => true,
+                    'required'  => false,
                     'title'     => Text::get('personal-field-location'),
                     'size'      => 25,
 //                    'hint'      => Text::get('tooltip-project-main_address'),
-                    'errors'    => !empty($errors['location']) ? array($errors['location']) : array(),
+                    //'errors'    => !empty($errors['location']) ? array($errors['location']) : array(),
                     'ok'        => !empty($okeys['location']) ? array($okeys['location']) : array(),
                     'value'     => $project->location
                 ),

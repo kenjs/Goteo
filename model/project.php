@@ -1043,12 +1043,12 @@ namespace Goteo\Model {
                  ++$score;
             }
 
-            if (empty($this->location)) {
+            /*if (empty($this->location)) {
                 $errors['userPersonal']['location'] = Text::get('mandatory-project-field-residence');
             } else {
                  $okeys['userPersonal']['location'] = 'ok';
                 ++$score;
-            }
+            }*/
 
             if (empty($this->country)) {
                 $errors['userPersonal']['country'] = Text::get('mandatory-project-field-country');
@@ -1057,7 +1057,7 @@ namespace Goteo\Model {
                  ++$score;
             }
 
-            $this->setScore($score, 8);
+            $this->setScore($score, 7);
             /***************** FIN Revisión del paso 2, DATOS PERSONALES *****************/
 
             /***************** Revisión de campos del paso 3, DESCRIPCION *****************/

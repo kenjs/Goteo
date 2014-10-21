@@ -33,7 +33,7 @@
         </div><!--#to_page_top-->
         <div class="inner cf">
             <ul>
-                <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/about/">LOCAL GOODについて</a></li>
+                <li class="about"><a href="<?= LOCALGOOD_WP_BASE_URL ?>/about/">LOCAL GOOD YOKOHAMAについて</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/syoutorihikihou/">特定商取引法に基づく表記</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/user_guide/">ユーザーガイド</a></li>
