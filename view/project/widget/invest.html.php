@@ -68,14 +68,12 @@ $action = ($step == 'start') ? '/user/login' : '/invest/' . $project->id;
             <h<?php echo $level+1 ?> class="title"><?php echo Text::get('project-rewards-individual_reward-title'); ?></h<?php echo $level+1 ?>>
             <ul>
                 <li><label class="resign"><input class="individual_reward" type="radio" id="resign_reward" name="selected_reward" value="0" amount="0"/><?php echo Text::get('invest-resign') ?></label></li>
-                <!-- <span class="chkbox"></span> -->
             <?php foreach ($project->individual_rewards as $individual) : ?>
             <li class="<?php echo $individual->icon ?><?php if ($individual->none) echo ' disabled' ?>">
                 
                 <label class="amount" for="reward_<?php echo $individual->id; ?>">
                     <input type="radio" name="selected_reward" id="reward_<?php echo $individual->id; ?>" value="<?php echo $individual->id; ?>" amount="<?php echo $individual->amount; ?>" class="individual_reward" title="<?php echo htmlspecialchars($individual->reward) ?>" <?php if ($individual->none) echo 'disabled="disabled"' ?>/>
                     <span class="amount"><?php echo $individual->amount; ?> 円</span>
-                <!-- <span class="chkbox"></span> -->
             	<h<?php echo $level + 2 ?> class="name"><?php echo htmlspecialchars($individual->reward) ?></h<?php echo $level + 2 ?>>
                 <p><?php echo htmlspecialchars($individual->description)?></p>
                     <?php if ($individual->none) : // no quedan ?>
