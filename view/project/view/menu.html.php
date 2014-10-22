@@ -22,7 +22,8 @@ use Goteo\Library\Text;
 $menu = array(
     'home'        => Text::get('project-menu-home'),
     'needs'       => Text::get('project-menu-needs'),
-    'supporters'  => Text::get('project-menu-supporters').' <span class="digits">'.$this['supporters'].'</span>',
+//    'supporters'  => Text::get('project-menu-supporters').' <span class="digits">'.$this['supporters'].'</span>',
+    'supporters'  => Text::get('project-menu-supporters').' <span class="digits">'.'('.count($this['project']->investors).')'.'</span>',
     'messages'    => Text::get('project-menu-messages').' <span class="digits">'.$this['messages'].'</span>',
     'updates'     => Text::get('project-menu-updates').' <span class="digits">'.$this['updates'].'</span>'
 );
@@ -34,6 +35,7 @@ if(!empty($this['project']->evaluation)){
     <ul>
         <?php
         foreach ($menu as $id => $show): ?>
+            <? var_dump($menu); ?>
             <li class="<?php echo $id ?><?php if ($this['show'] == $id) echo ' show' ?>">
                 <a href="/project/<?php echo htmlspecialchars($this['project']->id) ?>/<?php echo $id ?>"><?php echo $show ?></a>
             </li>

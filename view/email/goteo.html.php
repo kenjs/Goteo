@@ -91,7 +91,18 @@ body {
 	border-bottom: 1px solid #20B3B2;
 	border-top: 1px solid #20B3B2;
 	}
-	
+.disclaimer p {
+    padding: 0;
+    margin: 0;
+}
+.disclaimer .title {
+    padding: 8px 0;
+    background-color: #20B3B2;
+    color: #f5f5f5;
+    font-size: 18px;
+    /*border-top: 1px solid #00ad4e;
+    border-bottom: 1px solid #00ad4e;*/
+}
 .goteo-url {
 	font-size:12px;
 	color:#20B3B2;
@@ -189,7 +200,7 @@ color:#20B3B2;
 <body>
 
 <?php if (isset($this['sinoves'])) : ?><div class="header-bar"><span class="header-element"><?php echo Text::html('mailer-sinoves', $this['sinoves']); ?></span></div><?php endif; ?>
-<div class="header"><span class="header-element"><img src="cid:logo" alt="Goteo"/></span></div>
+<?/*<div class="header"><span class="header-element"><img src="cid:logo" alt="LOCAL GOOD YOKOHAMA"/></span></div>*/?>
 
 <div class="content">
 
@@ -197,14 +208,15 @@ color:#20B3B2;
   <?php echo $this['content'] ?>
 </div>  
   
-<div class="disclaimer"><?php echo Text::get('mailer-disclaimer') ?></div>
-
-<div class="goteo-url"><a href="<?php echo SITE_URL ?>">www.goteo.org</a></div>
-<div class="descubre"><a href="<?php echo SITE_URL . '/discover' ?>"><?php echo Text::get('regular-discover'); ?></a></div>
-<div class="crea"><a href="<?php echo SITE_URL . '/project/create' ?>"><?php echo Text::get('regular-create'); ?></a></div>
-
-<div class="follow">Síguenos en:<br />
+<div class="disclaimer">
+    <p class="title"><?php echo Text::get('mailer-disclaimer') ?></p>
+    <p class="goteo-url"><a href="<?php echo SITE_URL ?>" target="_blank">LOCAL GOOD YOKOHAMA</a>（横浜コミュニティデザイン・ラボ）</p>
+    <p class="descubre"><a href="<?php echo SITE_URL . '/discover' ?>"><?php echo Text::get('regular-discover'); ?></a></p>
+    <p class="crea"><a href="<?php echo SITE_URL . '/project/create' ?>"><?php echo Text::get('regular-create'); ?></a></p>
+</div>
+<div class="follow"><?php echo Text::get('mail-template-follow'); ?>:<br />
   <span class="facebook"><a href="<?php echo Text::get('social-account-facebook') ?>">facebook</a></span> |  <span class="twitter"><a href="<?php echo Text::get('social-account-twitter') ?>">twitter</a></span> |   <span class="rss"><a rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo SITE_URL. '/rss' ?>">RSS</a></span></div>
+<p>※このメールには直接返送頂けません。</p>
 
 <div class="unsuscribe"><?php echo Text::html('mailer-baja', $this['baja']); ?></div>
 

@@ -24,8 +24,8 @@ use Goteo\Library\Text,
 $list = $this['list'];
 
 $templates = array(
-    '33' => 'Boletin',
-    '35' => 'Testeo'
+    '33' => Text::_('Boletin'),
+    '35' => Text::_('Testeo')
 );
 
 // por defecto cogemos la newsletter
@@ -59,7 +59,7 @@ $template = Template::get($tpl);
     </p>
         
     <p>
-        <input type="submit" name="init" value="Iniciar" />
+        <input type="submit" name="init" value="<?php echo Text::_('Iniciar') ?>" />
     </p>
 
     </form>

@@ -673,8 +673,8 @@ namespace Goteo\Controller {
                         'updates' => Text::get('dashboard-menu-projects-updates'),
                         'supports' => Text::get('dashboard-menu-projects-supports'),
                         'rewards' => Text::get('dashboard-menu-projects-rewards')//,
-//                        'messegers' => Text::get('dashboard-menu-projects-messegers'),
-//                        'commons' => Text::get('dashboard-menu-projects-commons')
+                        //'messegers' => Text::get('dashboard-menu-projects-messegers'),
+                        //'commons' => Text::get('dashboard-menu-projects-commons')
                     ),
                     'permission' => $_permission
                 )

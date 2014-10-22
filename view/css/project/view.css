@@ -243,6 +243,12 @@ body.project-show div#main > div.side > div.widget {
     clear: right;
 }
 
+body.project-show div#main > div.side > div.widget .invest-notice{
+    clear: both;
+    padding:0 20px 20px;
+    font-size:13px;
+}
+
 body.project-show div#main > div.center > div.widget {
     max-width: 580px;
     margin-right: 20px;

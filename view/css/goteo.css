@@ -82,6 +82,10 @@ div.center.profile div.widget {
     border-bottom: 1px dashed #c0c0c0;
 }
 
+div.center > div.widget:last-of-type {
+    border-bottom: none;
+}
+
 body.user-profile div#main div.center div.widget.user-mates {
     margin-bottom: 0!important;
     padding-bottom: 10px;

@@ -52,7 +52,7 @@ img a {
 <body style="margin: 0px; padding: 0px; font-family: Helvetica, Arial, Geneva, sans-serif; color:#58595B; padding-left: 20px; background-color: #f1f1f1;">
 
 <?php if (isset($this['sinoves'])) : ?><div style="width: 100%; height: 22px; line-height:22px; font-size:10px; color:#cccccc; background-color:#58595B;"><span style="margin-left:50px;"><?php echo Text::html('mailer-sinoves', $this['sinoves']); ?></span></div><?php endif; ?>
-<div style="width: 100%; background-color:#CDE4E5; padding-top:7px; padding-bottom:7px;"><span style="margin-left:50px;"><img src="cid:logo" alt="Goteo"/></span></div>
+<?/*<div style="width: 100%; background-color:#CDE4E5; padding-top:7px; padding-bottom:7px;"><span style="margin-left:50px;"><img src="../css/header/logo.png" alt="LOCAL GOOD YOKOHAMA"/></span></div>*/?>
 
 <div style="width:630px; margin-left:50px; margin-top:20px;">
 
@@ -62,7 +62,7 @@ img a {
   
 <div style="font-size:11px; color:#20B3B2; padding-bottom:10px; padding-top:10px; border-bottom: 1px solid #20B3B2; border-top: 1px solid #20B3B2;"><?php echo Text::get('mailer-disclaimer') ?></div>
 
-<div style="font-size:12px; color:#20B3B2; padding-top:10px; padding-bottom:10px;"><a href="<?php echo SITE_URL ?>" style="color:#20B3B2; text-decoration:none;"><?php echo SITE_NAME ?></a></div>
+<div style="font-size:12px; color:#20B3B2; padding-top:10px; padding-bottom:10px;"><a href="<?php echo SITE_URL ?>" style="color:#20B3B2; text-decoration:none;"><?php echo GOTEO_MAIL_NAME ?></a></div>
 <div style="color:#E32526; font-size:14px; padding-top:5px; text-transform: uppercase;"><a href="<?php echo SITE_URL . '/discover' ?>" style="color:#E32526; text-decoration:none;"><?php echo Text::get('regular-discover'); ?></a></div>
 <div style="color:#20B3B2; font-size:14px; padding-top:5px; padding-bottom:10px; text-transform: uppercase;"><a href="<?php echo SITE_URL . '/project/create' ?>" style="color:#20B3B2; text-decoration:none;"><?php echo Text::get('regular-create'); ?></a></div>
 

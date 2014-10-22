@@ -152,3 +152,7 @@ body.home div#main div.projects {
 body.home div#main div.block.projects {
     margin-left: 0;
 }
+
+body.home .contents_wrapper{
+    padding-top:20px;
+}

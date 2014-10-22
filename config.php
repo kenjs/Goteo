@@ -100,8 +100,8 @@ define('GOTEO_DB_USERNAME', 'db-username');
 define('GOTEO_DB_PASSWORD', 'db-password');
 
 // Mail
-define('GOTEO_MAIL_FROM', 'noreply@example.com');
-define('GOTEO_MAIL_NAME', 'example.com');
+define('GOTEO_MAIL_FROM', 'localgood@yokohamalab.jp');
+define('GOTEO_MAIL_NAME', 'LOCAL GOOD YOKOHAMA');
 define('GOTEO_MAIL_TYPE', 'smtp'); // mail, sendmail or smtp
 define('GOTEO_MAIL_SMTP_AUTH', true);
 define('GOTEO_MAIL_SMTP_SECURE', 'ssl');
@@ -110,10 +110,10 @@ define('GOTEO_MAIL_SMTP_PORT', --portnumber--);
 define('GOTEO_MAIL_SMTP_USERNAME', 'smtp-usermail');
 define('GOTEO_MAIL_SMTP_PASSWORD', 'smtp-password');
 
-define('GOTEO_MAIL', 'info@example.com');
-define('GOTEO_CONTACT_MAIL', 'info@example.com');
-define('GOTEO_FAIL_MAIL', 'fail@example.com');
-define('GOTEO_LOG_MAIL', 'sitelog@example.com');
+define('GOTEO_MAIL', 'localgood@yokohamalab.jp');
+define('GOTEO_CONTACT_MAIL', 'localgood@yokohamalab.jp');
+define('GOTEO_FAIL_MAIL', 'localgood@yokohamalab.jp');
+define('GOTEO_LOG_MAIL', 'localgood@yokohamalab.jp');
 
 //Quota de envio m�ximo para goteo en 24 horas
 define('GOTEO_MAIL_QUOTA', 50000);
@@ -136,9 +136,9 @@ define('GOTEO_GETTEXT_DOMAIN', 'messages');
 define('GOTEO_GETTEXT_BYPASS_CACHING', true);
 
 // url
-define('SITE_URL', 'http://example.com'); // endpoint url
-define('SRC_URL', 'http://example.com');  // host for statics
-define('SEC_URL', 'http://example.com');  // with SSL certified
+define('SITE_URL', 'http://yokohama.localgood.jp/'); // endpoint url
+define('SRC_URL', 'http://yokohama.localgood.jp/');  // host for statics
+define('SEC_URL', 'http://yokohama.localgood.jp/');  // with SSL certified
 
 //Sessions
 //session handler: php, dynamodb

@@ -25,7 +25,7 @@ div.widget.project-support h4.supertitle {
 div.widget.project-support dl {
     margin: 0;
     float: left;
-    margin-bottom: 120px;
+    margin-bottom: 100px;
 }
 
 body.js div.widget.project-support dl {
@@ -174,7 +174,7 @@ div.widget.project-support div.buttons {
     padding: 1em 0 0;
     clear: both;
     position: absolute;
-    bottom: 60px;
+    top: 310px;
     left:50%;
     margin:0 0 0 -97px;
 }
