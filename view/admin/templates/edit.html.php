@@ -36,6 +36,6 @@ use Goteo\Library\Text;
             <textarea id="tpltext" name="text" cols="100" rows="20"><?php echo $this['template']->text; ?></textarea>
         </p>
 
-        <input type="submit" name="save" value="Guardar" />
+        <input type="submit" name="save" value="<?php echo Text::_('Guardar'); ?>" />
     </form>
 </div>

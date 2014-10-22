@@ -245,6 +245,10 @@ body.admin div.admin-right.templates div.widget.board > table th.template {
 body.admin div.admin-right.templates div.widget.board > table th.description {
     width: 400px;
 }
+body.admin div.admin-right.templates div.widget.board input#tpltitle,
+body.admin div.admin-right.templates div.widget.board textarea#tpltext {
+    width: 740px;
+}
 /* translates */
 body.admin div.admin-right.translates div.widget.board > table th.change_btn {
 
