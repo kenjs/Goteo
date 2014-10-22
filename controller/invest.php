@@ -127,6 +127,7 @@ namespace Goteo\Controller {
                     $invest->rewards = array($chosen);
                 }
                 $invest->address = (object) $address;
+                $invest->project_name = $projectData->name;
 
                 if ($invest->save($errors)) {
                     $invest->urlOK  = SEC_URL."/invest/done/{$invest->id}";

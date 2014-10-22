@@ -11,9 +11,8 @@ $invest = $this['invest'];
 <?php if(isset($_SESSION['messages'])) { include 'view/header/message.html.php'; } ?>
 
     <div class="contents_wrapper">
-    <? /*print_r($invest);*/?>
         <div id="main" class="axes">
-            <p><span class="project_name"><?php echo $invest->project ?></span>に<span class="amount"><?php echo $invest->amount;?></span>円寄付します。</p>
+            <p><span class="project_name"><?php echo $invest->project_name ?></span>に<span class="amount"><?php echo $invest->amount;?></span>円寄付します。</p>
             <form method="post" action="https://gw.axes-payment.com/cgi-bin/credit/order.cgi">
             <input type="hidden" name="clientip" value="<?= AXES_CLIENTIP; ?>">
             <input type="hidden" name="money" value="0">
