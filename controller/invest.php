@@ -155,7 +155,8 @@ namespace Goteo\Controller {
         }
 
         public function paid ($id = null) {
-            file_put_contents("/var/www/html/goteo.il3c.com/htdocs/logs/".date("YmdHis")."_paid.log",print_r($_SERVER,true).print_r($_REQUEST,true));
+
+            file_put_contents(LOG_PATH.date("YmdHis")."_paid.log",print_r($_SERVER,true).print_r($_REQUEST,true));
             
             if($_GET['result'] != 'ok') die();
 
