@@ -1,7 +1,6 @@
 <?php
 use Goteo\Core\View,
-    Goteo\Model\User,
-    Goteo\Library\Text;
+    Goteo\Model\User;
 
 $invest = $this['invest'];
 ?>
@@ -27,6 +26,19 @@ $invest = $this['invest'];
             <input type="button" value="戻る" class="back" onClick='history.back();'>
             <input type="submit" value="決済ページへ">
             </form>
+            <div>
+                <br />
+                実際の決済はプロジェクト成立後に行われます。手続き上、今回の決済は0円でお支払いが表示されます。
+                <br />
+                <br />
+                【クレジットカード決済に関するご説明】<br />
+                    　決済システムは（株）AXES Paymentを利用しています<br />
+                    　<a href="https://gw.axes-payment.com/cgi-bin/pc_exp.cgi?clientip=1011003702"> 必ずお読みください</a><br /><br />
+                【カード決済に関するお問い合わせ】<br />
+                    　カスタマーサポート（24時間365日)<br />
+                    　TEL：0570-03-6000（03-3498-6200）<br />
+                    　<a href="mailto:creditinfo@axes-payment.co.jp">creditinfo@axes-payment.co.jp</a><br />
+            </div>
         </div>
     </div>
 
