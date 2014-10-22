@@ -156,8 +156,6 @@ namespace Goteo\Controller {
 
         public function paid ($id = null) {
 
-            file_put_contents(LOG_PATH.date("YmdHis")."_paid.log",print_r($_SERVER,true).print_r($_REQUEST,true));
-            
             if($_GET['result'] != 'ok') die();
 
             $id = $_GET['sendid'];
