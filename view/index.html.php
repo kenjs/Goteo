@@ -26,29 +26,6 @@ use Goteo\Core\View,
 //@CALLSYS
 $bodyClass = 'home';
 // para que el prologue ponga el código js para botón facebook en el bannerside
-$fbCode = Text::widget(Text::get('social-account-facebook'), 'fb');
-
-// metas og: para que al compartir en facebook coja las imagenes de novedades
-$ogmeta = array(
-    'title' => GOTEO_META_TITLE,
-    'description' => GOTEO_META_DESCRIPTION,
-    'url' => SITE_URL
-);
-if (!empty($this['posts'])) {
-    foreach ($this['posts'] as $post) {
-        if (count($post->gallery) > 1) {
-            foreach ($post->gallery as $pbimg) {
-                if ($pbimg instanceof Image) {
-                    $ogmeta['image'][] = $pbimg->getLink(500, 285);
-                }
-            }
-        } elseif (!empty($post->image)) {
-            $ogmeta['image'][] = $post->image->getLink(500, 285);
-        }
-    }
-}
-$ogmeta['image'][] = SITE_URL . '/view/css/ogimg.png';
-
 include 'view/prologue.html.php';
 include 'view/header.html.php';
 ?>

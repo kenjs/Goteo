@@ -17,7 +17,52 @@
  *  along with Goteo.  If not, see <http://www.gnu.org/licenses/agpl.txt>.
  *
  */
+
+use Goteo\Core\View,
+    Goteo\Model\Image,
+    Goteo\Library\Text;
+
 //@NODESYS
+
+$fbCode = Text::widget(Text::get('social-account-facebook'), 'fb');
+
+// metas og: para que al compartir en facebook coja las imagenes de novedades
+if($_SERVER['REQUEST_URI']=="/"):
+    $ogmeta = array(
+        'title' => GOTEO_META_TITLE,
+        'description' => GOTEO_META_DESCRIPTION,
+        'url' => SITE_URL,
+        'image' => array(SITE_URL . '/view/css/ogimg.png')
+    );
+elseif(strstr($_SERVER['REQUEST_URI'],'project')):
+    if(!empty($this['project']->subtitle)) {
+        $description = $this['project']->subtitle;
+    } else {
+        $description = $this['project']->description;
+    }
+    $i = 1; foreach ($project->gallery as $image) :
+        $gallery = $image->getLink(580, 580);
+    $i++; endforeach;
+    $ogmeta = array(
+        'title' => $this['project']->id,
+        'description' => $description,
+        'url' => SITE_URL.$_SERVER['REQUEST_URI'],
+        'image' => array($gallery)
+    );
+endif;
+if (!empty($this['posts'])) {
+    foreach ($this['posts'] as $post) {
+        if (count($post->gallery) > 1) {
+            foreach ($post->gallery as $pbimg) {
+                if ($pbimg instanceof Image) {
+                    $ogmeta['image'][] = $pbimg->getLink(500, 285);
+                }
+            }
+        } elseif (!empty($post->image)) {
+            $ogmeta['image'][] = $post->image->getLink(500, 285);
+        }
+    }
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

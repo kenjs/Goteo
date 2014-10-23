@@ -447,7 +447,7 @@ footer
     width: 70px !important;
 }
 
-body.home #social_bookmark {
+#social_bookmark {
     float:left;
     width:350px;
     margin:4px 10px 0 30px;
