@@ -32,47 +32,47 @@ $errors = $this['errors'];
 extract($_POST);
 if (empty($username) && isset($this['username'])) $username = $this['username'];
 ?>
-<script type="text/javascript">
-jQuery(document).ready(function($) {
-    $("#register_accept").click(function (event) {
-        if (this.checked) {
-            $("#register_continue").removeClass('disabled').addClass('aqua');
-            $("#register_continue").removeAttr('disabled');
-        } else {
-            $("#register_continue").removeClass('aqua').addClass('disabled');
-            $("#register_continue").attr('disabled', 'disabled');
-        }
-    });
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $("#register_accept").click(function (event) {
+                if (this.checked) {
+                    $("#register_continue").removeClass('disabled').addClass('aqua');
+                    $("#register_continue").removeAttr('disabled');
+                } else {
+                    $("#register_continue").removeClass('aqua').addClass('disabled');
+                    $("#register_continue").attr('disabled', 'disabled');
+                }
+            });
 
-    //openid
-    $('.sign-in-with li.openid input').focus(function(){
-		$(this).addClass('focus');
-		if($(this).val() == '<?php echo Text::get('login-signin-openid'); ?>') $(this).val('');
-	});
-    $('.sign-in-with li.openid input').blur(function(){
-		$(this).removeClass('focus');
-		if($(this).val().trim() == '') $(this).val('<?php echo Text::get('login-signin-openid'); ?>');
-	});
-	$('.sign-in-with li.openid a').click(function(){
-		$(this).attr('href',$(this).attr('href') + '?provider=' + $('.sign-in-with li.openid input').val());
-		return true;
-	});
-	$('.sign-in-with li.openid input').keypress(function(event) {
-		if ( event.which == 13 ) {
-			event.preventDefault();
-			location = $('.sign-in-with li.openid a').attr('href') + '?provider=' + $(this).val();
-		}
-	});
+            //openid
+            $('.sign-in-with li.openid input').focus(function(){
+                $(this).addClass('focus');
+                if($(this).val() == '<?php echo Text::get('login-signin-openid'); ?>') $(this).val('');
+            });
+            $('.sign-in-with li.openid input').blur(function(){
+                $(this).removeClass('focus');
+                if($(this).val().trim() == '') $(this).val('<?php echo Text::get('login-signin-openid'); ?>');
+            });
+            $('.sign-in-with li.openid a').click(function(){
+                $(this).attr('href',$(this).attr('href') + '?provider=' + $('.sign-in-with li.openid input').val());
+                return true;
+            });
+            $('.sign-in-with li.openid input').keypress(function(event) {
+                if ( event.which == 13 ) {
+                    event.preventDefault();
+                    location = $('.sign-in-with li.openid a').attr('href') + '?provider=' + $(this).val();
+                }
+            });
 
-	//view more
-	$('.sign-in-with li.more a').click(function(){
-		$(this).parent().remove();
-		$('.sign-in-with li:hidden').slideDown();
-		return false;
-	});
-    
-});
-</script>
+            //view more
+            $('.sign-in-with li.more a').click(function(){
+                $(this).parent().remove();
+                $('.sign-in-with li:hidden').slideDown();
+                return false;
+            });
+
+        });
+    </script>
 
 <?/*
 <div id="sub-header">
@@ -85,26 +85,9 @@ jQuery(document).ready(function($) {
 </div>
 */?>
 
-<?
-//    var_dump($_POST);
-?>
-
-
 <?php if(isset($_SESSION['messages'])) { include 'view/header/message.html.php'; } ?>
 
-
     <div id="main">
-        <div class="about_cf">
-            <p class="caution">※クラウドファンディング機能のサービス提供開始は10月中旬を予定しています。ユーザー登録は現在ご利用いただけません。<br />
-                ご不便をおかけし申し訳ありませんが、しばらくお待ちください。</p>
-            <p>クラウドファンディングのページにログインします。ユーザー登録がお済みでない方は、まずはご登録ください。ユーザー登録頂くと、プロジェクトの作成や、自分が共感するプロジェクトへの支援が出来るようになります。</p>
-            <dl>
-                <dt>クラウドファンディングとは?</dt>
-                <dd>個人や団体が実現したい「プロジェクト」を提案し、そのアイデアに賛同する一般の方々から、主にウェブを通じて資金を募るシステムのことです。LOCAL GOODでは資金だけでなく、地域課題解決に必要なスキルも募集しています。</dd>
-            </dl>
-            <p class="link"><a href="<?= LOCALGOOD_WP_BASE_URL ?>/user_guide/">ユーザーガイドはこちら</a></p>
-            <p class="link"><a href="<?= LOCALGOOD_WP_BASE_URL ?>/riyou_kiyaku_menu/">利用規約はこちら</a></p>
-        </div>
         <div class="login">
             <div>
                 <h2><?php echo Text::get('login-access-header'); ?></h2>
@@ -113,12 +96,12 @@ jQuery(document).ready(function($) {
                     <input type="hidden" name="return" value="<?php echo $_GET['return']; ?>" />
                     <div class="username">
                         <label><?php echo Text::get('login-access-username-field'); ?>
-                        <input type="text" name="username" value="<?php echo $username?>" /></label>
+                            <input type="text" name="username" value="<?php echo $username?>" /></label>
                     </div>
 
                     <div class="password">
                         <label><?php echo Text::get('login-access-password-field'); ?>
-                        <input type="password" id="thepw" name="password" value="" /></label>
+                            <input type="password" id="thepw" name="password" value="" /></label>
                     </div>
 
                     <input type="submit" name="login" value="<?php echo Text::get('login-access-button'); ?>" />
@@ -131,43 +114,42 @@ jQuery(document).ready(function($) {
             </div>
         </div>
 
-<?/*
         <div class="external-login">
             <div>
                 <h2><?php echo Text::get('login-oneclick-header'); ?></h2>
                 <ul class="sign-in-with">
-                <?php
+                    <?php
 
-				//posarem primer l'ultim servei utilitzat
-				//de manera que si l'ultima vegada t'has autentificat correctament amb google, el tindras el primer de la llista
+                    //posarem primer l'ultim servei utilitzat
+                    //de manera que si l'ultima vegada t'has autentificat correctament amb google, el tindras el primer de la llista
 
-				//la cookie serveix per saber si ja ens hem autentificat algun cop amb "un sol click"
-				$openid = $_COOKIE['goteo_oauth_provider'];
+                    //la cookie serveix per saber si ja ens hem autentificat algun cop amb "un sol click"
+                    $openid = $_COOKIE['goteo_oauth_provider'];
 
-				//l'ordre que es vulgui...
-                $logins = array(
-					'facebook' => '<a href="/user/oauth?provider=facebook">' . Text::get('login-signin-facebook') . '</a>',
-					'twitter' => '<a href="/user/oauth?provider=twitter">' . Text::get('login-signin-twitter') . '</a>',
-					//'Google' => '<a href="/user/oauth?provider=Google">' . Text::get('login-signin-google') . '</a>',
-					// 'Yahoo' => '<a href="/user/oauth?provider=Yahoo">' . Text::get('login-signin-yahoo') . '</a>',
-					// 'myOpenid' => '<a href="/user/oauth?provider=myOpenid">' . Text::get('login-signin-myopenid') . '</a>',
-					// 'linkedin' => '<a href="/user/oauth?provider=linkedin">' . Text::get('login-signin-linkedin') . '</a>',
-					// 'openid' => ''
-                );
-                $is_openid = !array_key_exists($openid,$logins);
-                //$logins['openid'] = '<form><input type="text"'.($is_openid ? ' class="used"' : '').' name="openid" value="' . htmlspecialchars( $is_openid ? $openid : Text::get('login-signin-openid')) . '" /><a href="/user/oauth" class="button">' . Text::get('login-signin-openid-go') . '&rarr;</a></form>';
-                //si se ha guardado la preferencia, lo ponemos primero
-                $key = '';
-                if($openid) {
-				 	$key = array_key_exists($openid,$logins) ? $openid : 'openid';
-				 	echo '<li class="'.strtolower($key).'">'.$logins[$key].'</li>';
-				 	echo '<li class="more">&rarr;<a href="#">'.Text::get('login-signin-view-more').'</a></li>';
+                    //l'ordre que es vulgui...
+                    $logins = array(
+                        'facebook' => '<a href="/user/oauth?provider=facebook">' . Text::get('login-signin-facebook') . '</a>',
+                        'twitter' => '<a href="/user/oauth?provider=twitter">' . Text::get('login-signin-twitter') . '</a>',
+                        //'Google' => '<a href="/user/oauth?provider=Google">' . Text::get('login-signin-google') . '</a>',
+                        // 'Yahoo' => '<a href="/user/oauth?provider=Yahoo">' . Text::get('login-signin-yahoo') . '</a>',
+                        // 'myOpenid' => '<a href="/user/oauth?provider=myOpenid">' . Text::get('login-signin-myopenid') . '</a>',
+                        // 'linkedin' => '<a href="/user/oauth?provider=linkedin">' . Text::get('login-signin-linkedin') . '</a>',
+                        // 'openid' => ''
+                    );
+                    $is_openid = !array_key_exists($openid,$logins);
+                    //$logins['openid'] = '<form><input type="text"'.($is_openid ? ' class="used"' : '').' name="openid" value="' . htmlspecialchars( $is_openid ? $openid : Text::get('login-signin-openid')) . '" /><a href="/user/oauth" class="button">' . Text::get('login-signin-openid-go') . '&rarr;</a></form>';
+                    //si se ha guardado la preferencia, lo ponemos primero
+                    $key = '';
+                    if($openid) {
+                        $key = array_key_exists($openid,$logins) ? $openid : 'openid';
+                        echo '<li class="'.strtolower($key).'">'.$logins[$key].'</li>';
+                        echo '<li class="more">&rarr;<a href="#">'.Text::get('login-signin-view-more').'</a></li>';
 
-				}
-                foreach($logins as $k => $v) {
-					if($key != $k) echo '<li class="'.strtolower($k) .'"'. ( $openid ? ' style="display:none"' :'') .'>'.$v.'</li>';
-				}
-                ?>
+                    }
+                    foreach($logins as $k => $v) {
+                        if($key != $k) echo '<li class="'.strtolower($k) .'"'. ( $openid ? ' style="display:none"' :'') .'>'.$v.'</li>';
+                    }
+                    ?>
 
                 </ul>
             </div>
@@ -181,38 +163,38 @@ jQuery(document).ready(function($) {
                     <div class="userid">
                         <label for="RegisterUserid"><?php echo Text::get('login-register-userid-field'); ?><br /><span class="tips"><?echo Text::get('login-register-userid-field-tips');?></span></label>
                         <input type="text" id="RegisterUserid" name="userid" value="<?php echo htmlspecialchars($userid) ?>" maxlength="15" />
-                    <?php if(isset($errors['userid'])) { ?><em><?php echo $errors['userid']?></em><?php } ?>
+                        <?php if(isset($errors['userid'])) { ?><em><?php echo $errors['userid']?></em><?php } ?>
                     </div>
 
                     <div class="username">
                         <label for="RegisterUsername"><?php echo Text::get('login-register-username-field'); ?></label>
                         <input type="text" id="RegisterUsername" name="username" value="<?php echo htmlspecialchars($username) ?>" maxlength="20" />
-                    <?php if(isset($errors['username'])) { ?><em><?php echo $errors['username']?></em><?php } ?>
+                        <?php if(isset($errors['username'])) { ?><em><?php echo $errors['username']?></em><?php } ?>
                     </div>
 
                     <div class="email">
                         <label for="RegisterEmail"><?php echo Text::get('login-register-email-field'); ?></label>
                         <input type="text" id="RegisterEmail" name="email" value="<?php echo htmlspecialchars($email) ?>"/>
-                    <?php if(isset($errors['email'])) { ?><em><?php echo $errors['email']?></em><?php } ?>
+                        <?php if(isset($errors['email'])) { ?><em><?php echo $errors['email']?></em><?php } ?>
                     </div>
 
                     <div class="remail">
                         <label for="RegisterREmail"><?php echo Text::get('login-register-confirm-field'); ?><br /><span class="tips"><?echo Text::get('login-register-confirm-field-tips');?></span></label>
                         <input type="text" id="RegisterREmail" name="remail" value="<?php echo htmlspecialchars($remail) ?>"/>
-                    <?php if(isset($errors['remail'])) { ?><em><?php echo $errors['remail']?></em><?php } ?>
+                        <?php if(isset($errors['remail'])) { ?><em><?php echo $errors['remail']?></em><?php } ?>
                     </div>
 
 
                     <div class="password">
                         <label for="RegisterPassword"><?php echo Text::get('login-register-password-field'); ?><br /><span class="tips"><?echo Text::get('login-register-password-field-tips');?></span></label> <?php if (strlen($password) < 6) echo '<em>'.Text::get('login-register-password-minlength').'</em>'; ?>
                         <input type="password" id="RegisterPassword" name="password" value="<?php echo htmlspecialchars($password) ?>"/>
-                    <?php if(isset($errors['password'])) { ?><em><?php echo $errors['password']?></em><?php } ?>
+                        <?php if(isset($errors['password'])) { ?><em><?php echo $errors['password']?></em><?php } ?>
                     </div>
 
-                     <div class="rpassword">
+                    <div class="rpassword">
                         <label for="RegisterRPassword"><?php echo Text::get('login-register-confirm_password-field'); ?><br /><span class="tips"><?echo Text::get('login-register-confirm_password-field-tips');?></span></label>
                         <input type="password" id="RegisterRPassword" name="rpassword" value="<?php echo htmlspecialchars($rpassword) ?>"/>
-                    <?php if(isset($errors['rpassword'])) { ?><em><?php echo $errors['rpassword']?></em><?php } ?>
+                        <?php if(isset($errors['rpassword'])) { ?><em><?php echo $errors['rpassword']?></em><?php } ?>
                     </div>
 
 
@@ -221,10 +203,9 @@ jQuery(document).ready(function($) {
 
                     <button class="disabled" disabled="disabled" id="register_continue" name="register" type="submit" value="register"><?php echo Text::get('login-register-button'); ?></button>
 
-            </form>
+                </form>
             </div>
         </div>
-                */?>
 
     </div>
 
