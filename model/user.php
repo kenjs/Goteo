@@ -147,7 +147,7 @@ namespace Goteo\Model {
 						$mail->toName = $this->name;
 						$mail->subject = $subject;
 						$mail->content = $content;
-						$mail->html = false;
+						$mail->html = true;
 						$mail->template = $template->id;
 						if ($mail->send($errors)) {
 							Message::Info(Text::get('register-confirm_mail-success'));

@@ -35,7 +35,10 @@ namespace Goteo\Controller {
             if (!empty($token) && !empty($_GET['email'])) {
                 $token = base64_decode($token);
                 $parts = explode('¬', $token);
-                if(count($parts) > 2 && ($_GET['email'] == $parts[1] || $parts[1] == 'any' ) && !empty($parts[2])) {
+                $_email = urlencode($_GET['email']);
+                $_email = preg_replace('/\%40/', '@', $_email);
+
+                if(count($parts) > 2 && ($_email == $parts[1] || $parts[1] == 'any' ) && !empty($parts[2])) {
                     // cogemos el contenido de la bbdd y lo pintamos aqui tal cual
                     if ($query = Model::query('SELECT html FROM mail WHERE email = ? AND id = ?', array($parts[1], $parts[2]))) {
                         $content = $query->fetchColumn();
