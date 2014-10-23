@@ -84,6 +84,42 @@ $bodyClass = 'project-show'; include 'view/prologue.html.php' ?>
                 */?>
 
                 <div class="project-by"><a href="/user/<?php echo $project->owner; ?>"><?php echo Text::get('regular-by') ?> <?php echo $project->user->name; ?></a></div>
+                <?
+                if(strstr($_SERVER['REQUEST_URI'],'project')):
+                    ?>
+                    <div id="social_bookmark">
+                        <div id="twitter">
+                            <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+                            <script>
+                                !function(d,s,id){
+                                    var js,fjs=d.getElementsByTagName(s)[0];
+                                    if(!d.getElementById(id)){
+                                        js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";
+                                        fjs.parentNode.insertBefore(js,fjs);
+                                    }
+                                }(document,"script","twitter-wjs");
+                            </script>
+                        </div>
+                        <div id="facebook">
+                            <div class="fb-like" data-href="<?= $ogmeta['url']; ?>" data-layout="button_count" data-action="recommend" data-show-faces="false" data-share="true"></div>
+                        </div>
+
+                        <div class="g-plusone" data-size="medium" data-width="60"></div>
+                        <script type="text/javascript">
+                            window.___gcfg = {lang: 'ja'};
+
+                            (function() {
+                                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                                po.src = 'https://apis.google.com/js/platform.js';
+                                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                            })();
+                        </script>
+
+                        <div style="clear:both"></div>
+                    </div><!-- #social_bookmark -->
+                <?
+                endif;
+                ?>
                 <br clear="both" />
 
                 <div class="categories"><h3><?php echo Text::get('project-view-categories-title'); ?></h3>
