@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Goteo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-21 14:44+0900\n"
-"PO-Revision-Date: 2014-10-21 14:44+0900\n"
+"POT-Creation-Date: 2014-10-22 16:49+0900\n"
+"PO-Revision-Date: 2014-10-22 16:50+0900\n"
 "Last-Translator: Masaki Ike <ike@info-lounge.jp>\n"
 "Language-Team: Goteo translations\n"
 "Language: ja_JP\n"
@@ -2776,6 +2776,7 @@ msgstr "ウェブを削除できませんでした"
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/projects/dates.html.php:101
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/reviews/edit.html.php:47
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/skills/edit.html.php:75
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/templates/edit.html.php:39
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/translates/edit.html.php:104
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/worth/edit.html.php:40
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/translate/contents/edit.html.php:55
@@ -4127,6 +4128,14 @@ msgstr "有効にする"
 msgid "Lista de destinatarios"
 msgstr "受領者リスト"
 
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/newsletter/list.html.php:27
+msgid "Boletin"
+msgstr "ニュースレター"
+
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/newsletter/list.html.php:28
+msgid "Testeo"
+msgstr "テストメール"
+
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/newsletter/list.html.php:38
 msgid ""
 "Seleccionar la plantilla. Se utilizará el contenido traducido, quizás "
@@ -4164,6 +4173,10 @@ msgstr "Email templates"
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/newsletter/list.html.php:54
 msgid "Es una prueba (se envia a los destinatarios de pruebas)"
 msgstr "テスト送信"
+
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/newsletter/list.html.php:62
+msgid "Iniciar"
+msgstr "開始"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/newsletter/list.html.php:75
 msgid "Asunto"
