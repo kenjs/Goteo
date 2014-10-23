@@ -228,9 +228,9 @@ div.post-comments div.message blockquote {
 	border: 1px solid #2EAB58;
 	clear: right;
 	display: block;
-	float: right;
+	float: left;
 	height: 50px;
-	margin: 10px -1px -1px;
+	margin: 10px -1px -1px 52px;
 	padding: 0.3em 0;
 	resize: none;
 	width: 525px;
@@ -251,7 +251,7 @@ div.post-comments div.message blockquote {
 	position: relative;
 	text-decoration: none;
 	text-transform: uppercase;
-	top: 10px;
+	top: -42px;
 	font-style: normal;
 }
 

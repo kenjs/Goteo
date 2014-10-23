@@ -284,6 +284,10 @@ body.project-show div#main > div.center > div.widget .gallery-image{
 body.project-show div#main > div.side > div.widget .title {
     background: none !important;
 }
+body.project-show div#main > div.side div.widget.project-collaborations h3.title {
+    margin-bottom: 16px;
+}
+
 
 /* ayuda a difundir este proyecto */
 div.widget.project-spread > h3.title{padding-left:46px;}
@@ -347,6 +351,11 @@ div.widget.user-supporters .project-widget-box
 {
     padding: 15px 20px;
 }
+
+body.project-show div.side div#project-support .project-widget-box {
+    position: relative;
+}
+
 
 div.widget.project-support {
     position: relative;
