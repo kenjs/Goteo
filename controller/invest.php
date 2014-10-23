@@ -241,8 +241,8 @@ namespace Goteo\Controller {
             // Dirección en el mail (y version para regalo)
             $txt_address = Text::get('invest-address-address-field') . ' ' . $invest->address->address;
             $txt_address .= '<br> ' . Text::get('invest-address-zipcode-field') . ' ' . $invest->address->zipcode;
-            $txt_address .= '<br> ' . Text::get('invest-address-location-field') . ' ' . $invest->address->location;
-            $txt_address .= '<br> ' . Text::get('invest-address-country-field') . ' ' . $invest->address->country;
+//            $txt_address .= '<br> ' . Text::get('invest-address-location-field') . ' ' . $invest->address->location;
+//            $txt_address .= '<br> ' . Text::get('invest-address-country-field') . ' ' . $invest->address->country;
 
             $txt_destaddr = $txt_address;
             $txt_address = Text::get('invest-mail_info-address') .'<br>'. $txt_address;
@@ -252,8 +252,8 @@ namespace Goteo\Controller {
             $subject = str_replace('%PROJECTNAME%', $projectData->name, $template->title);
 
             // En el contenido:
-            $search  = array('%USERNAME%', '%PROJECTNAME%', '%PROJECTURL%', '%AMOUNT%', '%REWARDS%');
-            $replace = array($user->name, $projectData->name, SITE_URL.'/project/'.$projectData->id, $confirm->amount, $txt_rewards);
+            $search  = array('%USERNAME%', '%PROJECTNAME%', '%PROJECTURL%', '%AMOUNT%', '%REWARDS%', '%ADDRESS%');
+            $replace = array($user->name, $projectData->name, SITE_URL.'/project/'.$projectData->id, $confirm->amount, $txt_rewards, $txt_address);
             $content = \str_replace($search, $replace, $template->text);
 
             $mailHandler = new Mail();

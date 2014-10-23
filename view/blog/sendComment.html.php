@@ -49,9 +49,9 @@
                     
                 </div>
         </div>
+        <button class="green" type="submit"><?php echo Text::get('blog-send_comment-button'); ?></button>
     </form>
     <a target="_blank" id="a-preview" href="#preview" class="preview"><?php echo Text::get('regular-preview'); ?></a>
-    <button class="green" type="submit"><?php echo Text::get('blog-send_comment-button'); ?></button>
 </div>
 <?php endif; ?>
 <?php else : ?>

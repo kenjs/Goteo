@@ -209,12 +209,12 @@ color:#20B3B2;
 </div>  
   
 <div class="disclaimer">
-    <p class="title"><?php echo Text::get('mailer-disclaimer') ?></p>
+    <?/*<p class="title"><?php echo Text::get('mailer-disclaimer') ?></p>*/?>
     <p class="goteo-url"><a href="<?php echo SITE_URL ?>" target="_blank">LOCAL GOOD YOKOHAMA</a>（横浜コミュニティデザイン・ラボ）</p>
     <p class="descubre"><a href="<?php echo SITE_URL . '/discover' ?>"><?php echo Text::get('regular-discover'); ?></a></p>
     <p class="crea"><a href="<?php echo SITE_URL . '/project/create' ?>"><?php echo Text::get('regular-create'); ?></a></p>
 </div>
-<div class="follow"><?php echo Text::get('mail-template-follow'); ?>:<br />
+<div class="follow">ソーシャルリンク<?//php echo Text::get('mail-template-follow'); ?>:<br />
   <span class="facebook"><a href="<?php echo Text::get('social-account-facebook') ?>">facebook</a></span> |  <span class="twitter"><a href="<?php echo Text::get('social-account-twitter') ?>">twitter</a></span> |   <span class="rss"><a rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo SITE_URL. '/rss' ?>">RSS</a></span></div>
 <p>※このメールには直接返送頂けません。</p>
 
@@ -222,7 +222,7 @@ color:#20B3B2;
 
 </div>
 
-<div class="footer-bar"><span class="footer-element"><?php echo Text::get('footer-platoniq-iniciative') ?> <strong><a href="http://platoniq.net">Platoniq</a></strong></span></div>
+<?/*<div class="footer-bar"><span class="footer-element"><?php echo Text::get('footer-platoniq-iniciative') ?> <strong><a href="http://platoniq.net">Platoniq</a></strong></span></div>*/?>
 
 </body>
 </html>

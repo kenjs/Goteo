@@ -149,7 +149,7 @@ namespace Goteo\Library {
                         $mail->AltBody = $this->bodyText();
 
                         // incrustar el logo de goteo
-                        $mail->AddEmbeddedImage(GOTEO_PATH . '/goteo_logo.png', 'logo', 'Goteo', 'base64', 'image/png');
+//                        $mail->AddEmbeddedImage(GOTEO_PATH . '/goteo_logo.png', 'logo', 'Goteo', 'base64', 'image/png');
                     }
                     else {
                         $mail->IsHTML(false);
