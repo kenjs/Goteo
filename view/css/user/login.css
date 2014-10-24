@@ -242,3 +242,22 @@ body.user-login div#main div.login p {
     height: 20px;
     margin: 0;
 }
+
+/* oauth account information import */
+body.user-login div#main > div.register {
+    width: 310px;
+    float: left;
+}
+
+body.user-login div#main > div.imported_profiles {
+    padding-left: 20px;
+}
+
+body.user-login div#main > div.imported_profiles > .imported_profiles_inner{
+    overflow: hidden;
+}
+
+body.user-login div#main > div.imported_profiles > .imported_profiles_inner > div {
+    float: left;
+    width: 370px;
+}

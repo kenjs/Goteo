@@ -108,11 +108,12 @@ jQuery(document).ready(function($) {
             </div>
         </div>
 
-		<div style="width:500px;">
+        <div class="imported_profiles">
 			<p><?php echo Text::get('oauth-login-imported-data'); ?></p>
+            <div class="imported_profiles_inner">
 			<?php
 			//print_r($_POST);
-			if($profile_image_url) echo '<img style="float:left;width:200px;max-height:200px;" src="'.$profile_image_url.'" alt="Imported profile image" />';
+			if($profile_image_url) echo '<img style="float:left;width:200px;max-height:200px;display:block;" src="'.$profile_image_url.'" alt="Imported profile image" />';
 			echo "<div>";
 			foreach(array_merge($oauth->import_user_data,array('website')) as $k) {
 				if($$k) echo '<strong>'.Text::get('oauth-import-'.$k).':</strong><br />'.nl2br($$k)."<br /><br />\n";
@@ -120,6 +121,7 @@ jQuery(document).ready(function($) {
 
 			echo "</div>\n";
 			?>
+            </div>
 		</div>
     </div>
 
