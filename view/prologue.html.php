@@ -44,7 +44,7 @@ elseif(strstr($_SERVER['REQUEST_URI'],'project')):
         $gallery = $image->getLink(580, 580);
     $i++; endforeach;
     $ogmeta = array(
-        'title' => $this['project']->id,
+        'title' => $this['project']->name,
         'description' => $description,
         'url' => SITE_URL.$_SERVER['REQUEST_URI'],
         'image' => array($gallery)
