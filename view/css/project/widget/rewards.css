@@ -180,10 +180,19 @@ div.widget.project-rewards ul li > p,
 div.widget.project-invest ul li > .name,
 div.widget.project-rewards ul li > .name,
 #rewards-summary ul li > .name {
-    margin: 0 0 .4em;
+    padding-left: 42px;
+    /*margin: 0 0 .4em;*/
+    margin: 0 0 8px;
     font-size: 13px;
     font-weight: bold;
     text-transform: none;
+}
+div.widget.project-rewards div.social ul li > .name {
+    min-height: 32px;
+    margin-bottom: 0;
+}
+div.widget.project-rewards div.social ul li > p {
+    margin-top: 16px;
 }
 
 div.widget.project-invest ul li.food,

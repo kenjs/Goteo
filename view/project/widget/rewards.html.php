@@ -52,7 +52,7 @@ uasort($project->individual_rewards,
             <ul>
             <?php foreach ($project->social_rewards as $social) : ?>
                 <li class="<?php echo $social->icon ?>">
-                    <h<?php echo $level + 1 ?> class="name"><?php echo htmlspecialchars($social->reward) ?></h<?php echo $level + 1 ?>
+                    <h<?php echo $level + 1 ?> class="name"><?php echo htmlspecialchars($social->reward) ?></h<?php echo $level + 1 ?>>
                     <p><?php echo htmlspecialchars($social->description)?></p>
                     <?php if (!empty($social->license) && array_key_exists($social->license, $licenses)): ?>
                     <div class="license <?php echo htmlspecialchars($social->license) ?>">
@@ -79,9 +79,10 @@ uasort($project->individual_rewards,
             <?php foreach ($project->individual_rewards as $individual) : ?>
 
                 <li class="<?php echo $individual->icon ?>">
-                
+                    <?/*<div class="title">*/?>
                 <div class="amount"><?php echo Text::get('regular-investing'); ?> <span><?php echo \amount_format($individual->amount); ?>円</span></div>
-                <h<?php echo $level + 1 ?> class="name"><?php echo htmlspecialchars($individual->reward) ?></h<?php echo $level + 1 ?>
+                <h<?php echo $level + 1 ?> class="name"><?php echo htmlspecialchars($individual->reward) ?></h<?php echo $level + 1 ?>>
+                    <?/*</div>*/?>
                 <p><?php echo htmlspecialchars($individual->description)?></p>
 
                     <?/*php if (!empty($individual->units)) : ?>

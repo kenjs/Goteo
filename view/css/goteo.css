@@ -195,11 +195,18 @@ div.side div.widget.project-rewards ul li {
     margin-bottom: 20px;
 }
 div.side div.widget.project-collaborations ul li strong,
-div.side div.widget.project-rewards h4.name {
+div.side div.widget.project-rewards div.title h4.name {
     padding-left: 42px;
     display: inline-block;
-    height: 32px;
+    min-height: 32px;
     line-height: 16px;
+}
+div.side div.widget.project-rewards div.individual div.title h4.name {
+    /*padding-left: 42px;
+    padding-left: 42px;*/
+    display: inline-block;
+    line-height: 16px;
+    margin-bottom: 24px;
 }
 div.side div.widget.project-collaborations ul li p {
     margin-top: 16px;
