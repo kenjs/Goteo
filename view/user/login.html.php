@@ -113,8 +113,8 @@ if (empty($username) && isset($this['username'])) $username = $this['username'];
 
             </div>
         </div>
-
         <div class="external-login">
+            <? /*
             <div>
                 <h2><?php echo Text::get('login-oneclick-header'); ?></h2>
                 <ul class="sign-in-with">
@@ -153,8 +153,9 @@ if (empty($username) && isset($this['username'])) $username = $this['username'];
 
                 </ul>
             </div>
-        </div>
+*/ ?>
 
+        </div>
         <div class="register">
             <div>
                 <h2><?php echo Text::get('login-register-header'); ?></h2>
