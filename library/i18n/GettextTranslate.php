@@ -10,7 +10,7 @@ namespace Goteo\Library\i18n {
 		public function __construct($_root, $_locale, $_domain) {
 			$this->locale = $_locale;
 			/* directory domain locale */
-			_log("GettextTranslate::ctor root={$_root}, locale={$_locale}, domain={$_domain}");
+			//_log("GettextTranslate::ctor root={$_root}, locale={$_locale}, domain={$_domain}");
 			$this->gt = new \Gettext_PHP($_root, $_domain, $_locale);
 		}
 

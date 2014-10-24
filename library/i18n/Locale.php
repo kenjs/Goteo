@@ -32,7 +32,8 @@ namespace Goteo\Library\i18n {
 			$available_locales = Locale::listAvailableLocales($this->options['gettext_root']);
 			//var_dump($available_locales);
 			$this->locale_best_fit = LocaleUtils::lookup($available_locales, $currentlocale);
-			_log("Setting locale to best available fit '{$this->locale_best_fit}'");
+            if ( $this->locale_best_fit !== $currentlocale)
+    			_log("Setting locale to best available fit '{$this->locale_best_fit}'");
 
 			// configure gettext environment
 			$this->configGettext($this->options['gettext_root'],
@@ -132,7 +133,7 @@ namespace Goteo\Library\i18n {
 				// generate a new uncached domain file if caching bypass featured is enabled
 				if (true == $this->options['gettext_bypass_caching']) {
 					$domain = Locale::spawnUncachedDomain($root, $locale, $domain);
-					_log("bypassing gettext caching");
+					//_log("bypassing gettext caching");
 				}
 
 				// configure settext domain
