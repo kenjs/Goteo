@@ -182,9 +182,8 @@ if (empty($username) && isset($this['username'])) $username = $this['username'];
                         <?php if(isset($errors['remail'])) { ?><em><?php echo $errors['remail']?></em><?php } ?>
                     </div>
 
-
                     <div class="password">
-                        <label for="RegisterPassword"><?php echo Text::get('login-register-password-field'); ?><br /><span class="tips"><?echo Text::get('login-register-password-field-tips');?></span></label> <?php if (strlen($password) < 6) echo '<em>'.Text::get('login-register-password-minlength').'</em>'; ?>
+                        <label for="RegisterPassword"><?php echo Text::get('login-register-password-field'); ?><br /><span class="tips"><?echo Text::get('login-register-password-field-tips');?></span></label> <?php if (isset($errors['password']) && (strlen($password) < 6)) echo '<em>'.Text::get('login-register-password-minlength').'</em>'; ?>
                         <input type="password" id="RegisterPassword" name="password" value="<?php echo htmlspecialchars($password) ?>"/>
                         <?php if(isset($errors['password'])) { ?><em><?php echo $errors['password']?></em><?php } ?>
                     </div>
