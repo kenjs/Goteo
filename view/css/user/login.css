@@ -244,7 +244,7 @@ body.user-login div#main div.login p {
 }
 
 /* oauth account information import */
-body.user-login div#main > div.register {
+body.user-login div#main > div.register.confirm {
     width: 310px;
     float: left;
 }

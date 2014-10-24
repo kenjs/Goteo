@@ -271,7 +271,7 @@ footer
 --------------------------------------------------*/
 
 .footer {
-    height: 116px;
+    /*height: 116px;*/
     margin-top: 80px;
     background-color: #fff;
     clear:both;

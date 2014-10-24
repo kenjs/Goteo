@@ -61,7 +61,7 @@ jQuery(document).ready(function($) {
 
     <div id="main">
 
-        <div class="register">
+        <div class="register confirm">
             <div>
                 <h2><?php echo Text::get('login-register-header'); ?></h2>
                 <p><?php echo Text::get('oauth-login-welcome-from'); ?></p>
