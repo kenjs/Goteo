@@ -24,7 +24,7 @@ use Goteo\Library\Text,
 $project = $this['project'];
 
 //tratamos los saltos de linea y los links en las descripciones del proyecto
-$project->description = nl2br(Text::urlink($project->description));
+//$project->description = nl2br(Text::urlink($project->description));
 $project->about       = nl2br(Text::urlink($project->about));
 $project->motivation  = nl2br(Text::urlink($project->motivation));
 $project->goal        = nl2br(Text::urlink($project->goal));
@@ -43,7 +43,7 @@ $level = (int) $this['level'] ?: 3;
     <?php if (!empty($project->description)): ?>
     <div class="description">
         <?php echo $project->description; ?>
-    </div>    
+    </div>
     <?php endif ?>
 
     <?/*php if (!empty($project->about)): ?>

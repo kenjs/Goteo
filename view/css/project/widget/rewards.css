@@ -72,6 +72,14 @@ div.widget.project-rewards > div.individual ul li,
     background-color: #F5E9F4;	
 }
 
+div.center #rewards-summary > div.individual ul li {
+    padding-top: 24px;
+    background-position: 10px 32px;
+}
+div.center.rewards div.widget.project-rewards-summary div.individual ul li div.amount {
+    top: -24px;
+}
+
 div.side div.widget.project-invest > div.individual ul li,
 div.widget.project-rewards > div.individual ul li,
 div.side #rewards-summary > div.individual ul li{
@@ -99,13 +107,14 @@ div.widget.project-rewards > div.individual ul li div.amount,
     text-align: right;
     color: #96238F;
     position: relative;
-    top: -10px;
+    top: -24px;
     right: -10px;
 	text-transform:uppercase;
 	height: 28px;
 }
 
 #rewards-summary > div.individual ul li div.amount {
+    padding-left: 380px;
     margin-bottom: -20px;
 	text-transform:uppercase;
 }
@@ -187,6 +196,12 @@ div.widget.project-rewards ul li > .name,
     font-weight: bold;
     text-transform: none;
 }
+div.center.rewards #rewards-summary ul li > .name {
+    padding-left: 0;
+    width: 400px;
+}
+
+
 div.widget.project-rewards div.social ul li > .name {
     min-height: 32px;
     margin-bottom: 0;
