@@ -168,19 +168,20 @@ div.widget.project-needs table thead.lend th.summary {
 
 div.widget.project-needs table tfoot tr.sum th.total {
     padding-top: 16px;
-    padding-bottom: 0;
+    /*padding-bottom: 0;*/
+    padding-bottom: 10px;
     text-align: right;
     font-size: 14px;
 }
 div.widget.project-needs table tfoot tr.sum th.min {
     padding-top: 16px;
-    padding-bottom: 0;
+    /*padding-bottom: 16px;*/
     color: #cc9900;
     font-weight: normal;
 }
 div.widget.project-needs table tfoot tr.sum th.max {
     padding-top: 16px;
-    padding-bottom: 0;
+    /*padding-bottom: 0;*/
     color: inherit;
     font-weight: normal;
 }

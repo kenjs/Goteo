@@ -35,7 +35,8 @@ div.widget.project-collaborations ul li {
 }
 
 div.widget.project-collaborations ul li > p {
-    margin:  0 0 1em;
+    /*margin:  0 0 1em;*/
+    margin: 0;
     line-height: 20px;
 }
 
@@ -46,6 +47,15 @@ div.widget.project-collaborations ul li.task {
 
 div.widget.project-collaborations ul li.task:last-child {
     border-bottom: none;
+}
+
+div.center.messages div.widget.project-collaborations ul li.task {
+    /*height: 36px;*/
+    line-height: 1em;
+}
+div.center.messages div.widget.project-collaborations ul li.task strong {
+    display: block;
+    padding-bottom: 8px;
 }
 
 div.widget.project-collaborations ul li.lend {
@@ -100,7 +110,6 @@ body.project-show div#main div.side div#project-collaborations .project-widget-b
 }
 
 body.project-show div#main div.side div#project-collaborations .project-widget-box li a.button.green {
-    margin: 0 auto 10px;
     text-align: center;
     display: block;
 }

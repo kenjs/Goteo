@@ -28,7 +28,7 @@ $worthcracy = Worth::getAll();
 ?>
 <div class="supporterContainer">
 	<?php if ($user->campaign) : ?>
-	<a class="expand" href="/call/<?php echo $user->call ?>" target="_blank">&nbsp;</a>
+	<a <?/*class="expand" */?>href="/call/<?php echo $user->call ?>" target="_blank">&nbsp;</a>
 	<?php elseif ($user->user != 'anonymous') : ?>
 	<a class="expand" href="/user/<?php echo htmlspecialchars($user->user) ?>">&nbsp;</a>
 	<?php endif; ?>

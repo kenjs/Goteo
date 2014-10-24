@@ -74,7 +74,7 @@ div.widget.project-rewards > div.individual ul li,
 
 div.center #rewards-summary > div.individual ul li {
     padding-top: 24px;
-    background-position: 10px 32px;
+    background-position: 10px 36px;
 }
 div.center.rewards div.widget.project-rewards-summary div.individual ul li div.amount {
     top: -24px;
@@ -301,6 +301,14 @@ div.widget.project-rewards ul li div.license h8,
     padding: 0 0 .2em;
 }
 
+div.side div.widget.project-rewards ul li div.license h5 {
+    border-bottom: none;
+}
+div.side div.widget.project-rewards ul,
+div.side div.widget.project-rewards div.social ul li > p{
+    margin-bottom: 0;
+}
+
 div.widget.project-invest ul li div.license a,
 div.widget.project-rewards ul li div.license a,
 #rewards-summary ul li div.license a {
@@ -480,4 +488,15 @@ body.project-show div#main > div.center > div.widget.project-rewards-summary,
 div.widget.project-rewards-summary {
     max-width: 620px;
     padding: 0;
+}
+
+/* individual */
+div.side div.project-rewards div.individual ul li div.amount {
+    height: 32px;
+    line-height: 32px;
+    font-size: 16px;
+}
+div.side div.project-rewards div.individual ul li h4.name {
+    margin-top: 8px;
+    padding-left: 0;
 }

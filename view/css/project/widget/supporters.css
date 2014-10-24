@@ -317,7 +317,17 @@ div.widget.project-investors a.more {
     text-decoration: none;
     /*color: #0C4E99;*/
 }
+div.side div.widget.project-investors a.more {
+    float: none;
+    display: block;
+    padding: 8px 0;
+    text-align: center;
+    border-top: 1px dashed #cccccc;
+}
 
+div.side div.widget.project-investors .project-widget-box {
+    padding: 0;
+}
 div.widget.project-investors div.investors {
     padding-bottom: 10px;
     border-bottom: 1px solid #808285;
@@ -326,13 +336,16 @@ div.widget.project-investors div.investors {
 }
 
 div.side div.widget.project-investors div.investors {
+    padding: 8px 20px 0;
     border-right: none;
     border-bottom: none;
 }
 div.side div.widget.project-investors div.investors ul li {
     border-bottom: 1px dashed #c0c0c0;
 }
-
+div.side div.widget.project-investors div.investors ul li:last-child {
+    border-bottom: none;
+}
 
 div.widget.project-investors .investors ul {
     list-style: none;
@@ -346,10 +359,6 @@ div.widget.project-investors .investors > ul > li {
     /*padding: 10px 10px 10px 60px;*/
     height: 4.5em;
     position: relative;
-}
-
-div.widget.project-investors .investors ul li.active {
-    background-color:  #f3f3f3;
 }
 
 div.widget.project-investors .investors ul li .avatar {
@@ -371,7 +380,7 @@ div.widget.project-investors .investors > ul > li div.supporterContainer {
 	/*min-width: 220px;*/
 }
 
-div.widget.project-investors .investors ul li.active {
+div.center div.widget.project-investors .investors ul li.active {
     background-color:  #f3f3f3;
 }
 
@@ -396,7 +405,7 @@ div.widget.project-investors .investors ul li h6 {
 }
 
 div.widget.project-investors .investors ul li.active h3,
-div.widget.project-investors .investors ul li.active h4,
+div.center div.widget.project-investors .investors ul li.active h4,
 div.widget.project-investors .investors ul li.active h5,
 div.widget.project-investors .investors ul li.active h6 {
 	color: #20B3B2;
@@ -424,9 +433,9 @@ div.widget.project-investors .investors ul li h4 {
     overflow: hidden;
 }
 
-div.widget.project-investors .investors ul li a:hover {
+/*div.widget.project-investors .investors ul li a:hover {
     color: #20B3B2;
-}
+}*/
 
 
 div.widget.project-investors .investors ul li dl,
@@ -581,5 +590,3 @@ div.widget.project-investors .investors ul li dl dd.date{top:50px}
 div.widget.project-investors h4.supertitle {
     background-color: #33cc99;
 }
-
-div.widget.project-investors 

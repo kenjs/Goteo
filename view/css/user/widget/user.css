@@ -48,6 +48,9 @@ div.widget.user dl dd {
     border-top: 1px dashed #c0c0c0;
     padding: 1em 0;
 }
+div.side div.widget.user dl dd {
+    padding-bottom: 0;
+}
 
 div.widget.user dl dd.location {
     padding-left: 15px;
@@ -62,7 +65,9 @@ div.widget.user dl dd.links ul {
     list-style: none;
     line-height: 2em;
 }
-
+div.side div.widget.user dl dd.links ul {
+    line-height: 18px;
+}
 div.widget.user dl dd.links ul a {
     font-weight: bold;
     text-decoration: none;
