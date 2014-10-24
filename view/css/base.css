@@ -279,8 +279,10 @@ footer
 
 .footer .footer_link_wrapper {
     width: 940px;
+    padding:0 10px;
     margin: 0 auto;
     position: relative;
+    background-color: #fff;
 }
 
 .footer ul {
@@ -422,6 +424,7 @@ footer
     height: auto;
     background-color: #f5f3f0;
     padding-bottom: 20px;
+    min-width:960px;
 }
 
 /*--------------------------------------------------
