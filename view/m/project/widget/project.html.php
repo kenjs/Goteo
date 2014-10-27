@@ -71,9 +71,9 @@ if (isset($this['investor']) && is_object($this['investor'])) {
                 break;
         } ?>
 
-        <?php if (isset($this['investor'])) : ?>
+        <?/*php if (isset($this['investor'])) : ?>
             <div class="investor"><img src="<?php echo $investor->avatar->getLink(43, 43, 1) ?>" alt="<?php echo $investor->name ?>" /><div class="invest">あなたの支援額<br /><span class="amount"><?php echo $invest->total ?>円</span></div></div>
-        <?php endif; ?>
+        <?php endif; */?>
         <?
         $project->gallery = Goteo\Model\Project\Image::getGallery($project->id);
 //        var_dump($project->image);
