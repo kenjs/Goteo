@@ -83,7 +83,7 @@ uasort($project->individual_rewards,
                 <div class="amount"><?php echo Text::get('regular-investing'); ?> <span><?php echo \amount_format($individual->amount); ?>円</span></div>
                 <h<?php echo $level + 1 ?> class="name"><?php echo htmlspecialchars($individual->reward) ?></h<?php echo $level + 1 ?>>
                     <?/*</div>*/?>
-                <p><?php echo htmlspecialchars($individual->description)?></p>
+                <p><?php echo nl2br(htmlspecialchars($individual->description))?></p>
 
                     <?/*php if (!empty($individual->units)) : ?>
                     <strong><?php echo Text::get('project-rewards-individual_reward-limited'); ?></strong><br />
