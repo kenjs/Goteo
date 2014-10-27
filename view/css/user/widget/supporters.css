@@ -275,9 +275,9 @@ div.widget.user-supporters .supporters ul li dl dd.date{top:55px}
 
 
 
-/*Ö§Ô®Õß*/
+/*Ö§Ô®ï¿½ï¿½*/
 
-/*¤â¤Ã¤ÈÕi¤à*/
+/*ï¿½ï¿½Ã¤ï¿½ï¿½iï¿½ï¿½*/
 
 body.user-profile div#main div.side div.widget.user-supporters {
  padding: 0;
@@ -323,7 +323,7 @@ body.user-profile div.widget.user-supporters .supporters ul {
 body.user-profile div.widget.user-supporters .supporters > ul > li {
     float: left;
     width: 109px;
-    height: 115px;
+    height: 130px;
     position: relative;
     border-top: none;
     border-right: 1px dashed #c0c0c0;
@@ -367,7 +367,8 @@ body.community.about div.widget.user-supporters .supporters > ul > li .avatar,
 body.user-profile div.widget.user-supporters .supporters > ul > li .avatar {
     position: relative;
     top: 0;
-    padding-top: 3px;
+    left: 0;
+    padding: 3px 0;
     width: auto;
     height: auto;
     text-align: center;
@@ -379,6 +380,7 @@ body.user-profile div.side div.widget.user-supporters .supporters ul li h4 {
     font-size: 16px;
     margin-bottom: 4px;
     text-align: center;
+    line-height: 18px;
 }
 
 body.community.about div.widget.user-supporters .supporters > ul > li dl,

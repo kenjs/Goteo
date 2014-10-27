@@ -59,7 +59,7 @@ $twitter_url = 'http://twitter.com/home?status=' . urlencode($share_title . ': '
         	<li class="proyecto">
             <a target="_blank" id="a-proyecto" href="#proyecto" title=""><?php echo Text::get('project-spread-widget'); ?></a>
             <div style="display: none;">               
-            <div id="proyecto" class="widget projects" style="width:600px;height:560px;overflow:auto;">
+            <div id="proyecto" class="widget projects" style="width:600px;height:600px;overflow:auto;">
                     <h2 class="widget-title"><?php echo Text::get('project-spread-widget_title'); ?></h2>
                     <div class="widget-porject-legend"><?php echo Text::get('project-spread-widget_legend'); ?></div>
                     <?php echo new View('view/project/widget/embed.html.php', array('project'=>$project)) ?>

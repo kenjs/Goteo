@@ -171,6 +171,8 @@ div.widget.project-supporters .supporters ul li h6 a {
 }
 
 div.widget.project-supporters .supporters ul li h4 {
+    width: 136px;
+    line-height: 18px;
     font-size: 16px;
     margin-bottom: 2px;
     overflow: hidden;
@@ -238,7 +240,7 @@ div.widget.project-supporters .supporters ul li dl dt.date {
 div.widget.project-supporters .supporters ul li dl dd.date {
     position: absolute;
     right: 16px;
-    bottom: 10px;
+    bottom: 4px;
     color: #a6a8ab;
     font-size: 12px;
 	margin-top: 5px;
@@ -557,7 +559,7 @@ div.widget.project-investors .investors ul li dl dd.worthcracy ul li > strong {
 
 /* rediseño
 ************************/
-div.widget.project-supporters .supporters > ul > li {height:80px !important}
+div.widget.project-supporters .supporters > ul > li {height:90px !important}
 div.widget.project-supporters .supporters > ul > li > div.supporter h4{padding-bottom:3px;border-bottom:#D5D5D6 1px solid;overflow:hidden;margin-bottom:6px}
 div.widget.project-supporters .supporters > ul > li > div.supporter h4 > a{
 max-height: 6px;max-width: 175px;overflow: hidden;}
@@ -566,13 +568,13 @@ div.widget.project-supporters .supporters > ul > li dl dt.amount{top: 8px}
 div.widget.project-supporters .supporters > ul > li dl dd.amount{
     top: 28px;
 /*    position: relative;
-    left: 3px;
-*/    font-size:8px;
+    left: 3px;*/
+    font-size:8px;
     line-height: 16px;
 }
 div.widget.project-supporters .supporters > ul > li dl dt.projects, div.widget.project-supporters .supporters > ul > li dl dd.projects{font-size: 0.8em}
 div.widget.project-supporters .supporters ul li dl dd.worthcracy{margin-top: 5px}
-div.widget.project-supporters .supporters ul li dl dd.date{top: 55px}
+/*div.widget.project-supporters .supporters ul li dl dd.date{top: 55px}*/
 
 div.widget.project-investors .investors ul li{height:80px}
 

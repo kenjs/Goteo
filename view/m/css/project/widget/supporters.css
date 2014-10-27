@@ -56,6 +56,11 @@ div.widget.project-supporters dl.summary dd {
 div.widget.project-supporters dl.summary .supporters {
     width: 50%;
 }
+body.project-show div.widget.project-supporters dl.summary .supporters,
+body.project-show div.widget.project-supporters dl.summary .reached {
+    width: 300px;
+    clear: none;
+}
 
 div.widget.project-supporters dl.summary dd.supporters {
     clear: left;
@@ -64,6 +69,9 @@ div.widget.project-supporters dl.summary dd.supporters {
 div.widget.project-supporters dl.summary dt.reached {
     margin-top: -1.5em;
     color: #666633;
+}
+body.project-show div.widget.project-supporters dl.summary dt.reached {
+    margin-top: 0;
 }
 
 div.widget.project-supporters dl.summary dd.reached {
@@ -145,7 +153,7 @@ div.widget.project-supporters .supporters ul li h6 a {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 0;　
     padding: 10px 10px 10px 70px;
     z-index: 9999;
     display: block;
@@ -156,6 +164,7 @@ div.widget.project-supporters .supporters ul li h4 {
     margin-bottom: 2px;
     overflow: hidden;
     text-align: center;
+    word-wrap: break-word;
 }
 
 div.widget.project-supporters .supporters ul li a:hover {

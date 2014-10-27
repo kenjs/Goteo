@@ -29,6 +29,7 @@ include 'view/header.html.php';
 
 $user = $this['user'];
 $worthcracy = Worth::getAll();
+
 ?>
 <script type="text/javascript">
 

@@ -1,6 +1,6 @@
 <?php
 /*
- *  Copyright (C) 2012 Platoniq y Fundaci¨®n Fuentes Abiertas (see README for details)
+ *  Copyright (C) 2012 Platoniq y Fundaciï¿½ï¿½n Fuentes Abiertas (see README for details)
  *	This file is part of Goteo.
  *
  *  Goteo is free software: you can redistribute it and/or modify

@@ -59,7 +59,7 @@ $action = ($step == 'start') ? '/user/login' : '/invest/' . $project->id;
     <label><input type="text" id="amount" name="amount" class="amount" value="<?php echo $amount ?>" /><?php echo Text::get('invest-amount-tooltip') ?></label>
 </div>
 
-    
+
 <div class="widget project-invest project-invest-individual_rewards">
     <h<?php echo $level ?> class="beak"><?php echo Text::get('invest-individual-header') ?></h<?php echo $level ?>>
 

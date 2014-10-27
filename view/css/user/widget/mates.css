@@ -109,7 +109,7 @@ div.widget.user-mates .users ul > li h6 a {
 }
 
 div.widget.user-mates .users ul li div.user h4{margin-top:4px;}
-div.widget.user-mates .users ul li div.user h4 a{font-weight:bold;display:inline-block;}
+div.widget.user-mates .users ul li div.user h4 a{font-weight:bold;display:inline-block;height:26px;}
 
 div.widget.user-mates .users ul > li span {
     font-size: 12px;
@@ -160,7 +160,7 @@ div.center div.widget.user-mates .users ul > li{
     }
 
 
-/*¤³¤Î¥æ©`¥¶©`¤ÎÅdÎ¶side*/
+/*ï¿½ï¿½ï¿½Î¥ï¿½`ï¿½ï¿½ï¿½`ï¿½ï¿½ï¿½dÎ¶side*/
 
 body.user-profile div#main div.side div.widget.user-mates {
  padding: 0;
@@ -234,7 +234,7 @@ body.user-profile div.widget.user-mates .users ul > li:nth-child(2n+2) {
     border-right: none;
 }
 
-/*¾A¤­¤òÒŠ¤ë*/
+/*ï¿½Aï¿½ï¿½ï¿½ï¿½ÒŠï¿½ï¿½*/
 
 body.user-profile .side div.widget.user-mates a.more, div.center div.widget.user-mates a.more {
     border-top: 1px dashed #c0c0c0;

@@ -232,7 +232,10 @@ div.widget.project-support div.tagmark {
 	letter-spacing: 1px;
 	line-height: 40px;
 }
-
+div.widget.project-support div.tagmark {
+    padding-left: 20px;
+    width: 250px;
+}
 div.widget.project-support div.tagmark.green {
     background:url('/view/css/project/long_tagmark_green.png') left top no-repeat;
 }
