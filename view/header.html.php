@@ -77,8 +77,8 @@ use Goteo\Library\Text,
             <div class="catchcopy">
                 このまち、わたしから未来を創る
             </div>
-            <a class="earth_view" href="http://yokohama.mapping.jp/" target="_blank"><img src="/view/css/header/earth_view_icon.png" alt="Earth View" /></a>
         </div>
+        <a class="earth_view" href="http://yokohama.mapping.jp/" target="_blank"><img src="/view/css/header/earth_view_icon.png" alt="Earth View" /></a>
     </div>
     <div class="nav_wrapper">
         <div class="nav_inner">

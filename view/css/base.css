@@ -69,6 +69,7 @@ header
     float:left;
 }
 .header .logo_wrapper {
+    position: relative;
     padding-bottom: 5px;
     background: url('/view/css/header/head_bk.png') repeat-x left bottom;
 }
@@ -81,16 +82,18 @@ header
 .header .logo_wrapper .inner {
     position: relative;
 }
-.header .logo_wrapper .inner a.earth_view {
+
+.header .logo_wrapper a.earth_view {
     position: absolute;
-    right: 0;
-    top: 22px;
+    right: 8px;
+    top: 16px;
 }
 
 .header .logo_wrapper .catchcopy{
     position:absolute;
-    top:25px;
-    left:245px;
+    top:24px;
+    left: 50%;
+    margin-left: -180px;
     font-size:24px;
 }
 

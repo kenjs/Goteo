@@ -549,10 +549,16 @@ div#header div#highlights > ul > li > a {
 /* menu y despelgable dashboard */
 div#header div#menu {
     overflow: visible;
+    position: absolute;
+    top: 48px;
+    left: 50%;
+    margin-left: 190px;
+    width: 290px;
 }
 
+
 div#header div#menu > ul {
-    max-width: 940px;
+    /*max-width: 940px;*/
     margin: 0 auto;
     position: relative;
     list-style: none;
@@ -566,6 +572,10 @@ div#header div#menu > ul {
 div#header div#menu > ul > li {
     display: inline-block;
     text-align: left;
+}
+
+div#header div#menu > ul > li.create {
+    margin-right: 4px;
 }
 
 div#header div#menu > ul > li.home {
@@ -595,26 +605,23 @@ div#header div#menu > ul > li.home > a:hover {
     background: url('header/main-logo.png') no-repeat right center;
 }
 
-div#header div#menu > ul > li.explore,
-div#header div#menu > ul > li.create {
-    /*float: left;*/
-	margin-right: 4px;
+/*div#header div#menu > ul > li.create {
+    float: left;
+}*/
+div#header div#menu > ul > li.login {
+    float: right;
 }
 
-div#header div#menu > ul > li.explore > a,
-div#header div#menu > ul > li.create > a {
-    padding: .4em 1.8em .4em .8em;
-    font-size: 12px;
-    color: white;
+div#header div#menu > ul > li.explore > a.button.red,
+div#header div#menu > ul > li.create > a.button.aqua {
     display: inline-block;
-    margin: .68em .2em .6em 0;
-    /*max-width: 7.5em;*/
-    /*text-align: left;*/
-	/*width:80px;*/
-	/*line-height: 1em;*/
-    height: 24px;
+    width:78px;
+    margin: 0;
+    padding: 4px 8px!important;
+    font-size: 11px;
+    color: white;
     text-align: center;
-    line-height: 24px;
+    line-height: 16px;
 }
 
 div#header div#menu > ul > li.explore > a {
@@ -673,28 +680,18 @@ div#header div#menu > ul > li.search fieldset input[type="submit"]:hover {
 div#header div#menu > ul > li.community ,
 div#header div#menu > ul > li.login ,
 div#header div#menu > ul > li.dashboard {
-    height: 48px;    
+    height: 40px;
     position: relative;
-	
-} 
-
-div#header div#menu{
-	min-height:48px;
+    background-color: #666666;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
 }
 
 div#header div#menu > ul > li.community,
 div#header div#menu > ul > li.dashboard {
     background: transparent url('header/down-black.png') no-repeat right 30px;
 }
-/*div#header div#menu > ul > li.dashboard {
-    position:relative;
-    top:3px;
-}
-*/
-/*div#header div#menu > ul > li.dashboard {
-    position: absolute;
-    top:-3px;
-}*/
 
 div#header div#menu > ul > li.login fieldset > * {
     display: none;
@@ -713,11 +710,11 @@ div#header div#menu > ul > li.community > a,
 div#header div#menu > ul > li.login > a,
 div#header div#menu > ul > li.dashboard > a {
     padding: .5em .8em;
-    font-size: 12px;
-    height: 40px;
-    line-height: 40px;
+    font-size: 11px;
+    height: 29px;
+    line-height: 29px;
     display: inline-block;    
-    color: #59595c;
+    color: #f5f5f5;
 }
 
 
