@@ -76,6 +76,7 @@ $level = (int) $this['level'] ?: 3;
                     <img src="<?php echo $message->user->avatar->getLink(50,50, true); ?>" alt="" />
                    </a>
                   </span>
+
                    <h<?php echo $level ?> class="user">
 				   <a href="/user/profile/<?php echo htmlspecialchars($message->user->id)?>" target="_blank">
 				   <?php echo htmlspecialchars($message->user->name); if ($message->blocked == 1) echo ' ' . Text::get('regular-looks_for'); ?>
@@ -84,17 +85,17 @@ $level = (int) $this['level'] ?: 3;
                    <a name="message<?php echo $message->id; ?>"></a>
                    <div class="date"><span><?php echo $message->timeago ?>前</span></div>
                    <blockquote><?php echo $message->message; ?></blockquote>
-                   <div class="actions">
-                        <?php if (!empty($_SESSION['user'])) : ?>
+                <?php if (!empty($_SESSION['user'])) : ?>
+                    <div class="actions">
                         <a class="" href="#" onclick="answer('<?php echo $message->id; ?>')"><?php echo Text::get('project-messages-answer_it'); ?></a>
-                        <?php endif; ?>
                         <?php // si puede borrar este mensaje
                         if (\Goteo\Core\ACL::check("/message/delete/{$message->id}/{$project->id}")) : ?>
                                 <a href="/message/delete/<?php echo $message->id; ?>/<?php echo $project->id; ?>"><?php echo Text::get('regular-delete'); ?></a>
                         <?php endif ?>
-                   </div>
+                    </div>
+                <?php endif; ?>
+                </div>
 
-               </div>
 
                <?php if (!empty($message->responses)) :
                     foreach ($message->responses as $child) : ?>

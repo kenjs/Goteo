@@ -34,12 +34,15 @@ div.project-messages div.child{
 
 div.project-messages div.owner {
     background: #e9f4ea url('/view/css/message/beak/2.png') no-repeat left top !important;
+    word-wrap: break-word;
 }
 
 div.project-messages div.message + div.message,
 div.project-messages div.child + div.message,
 div.project-messages div.child {
     margin-top: 20px;
+    word-wrap: break-word;
+    word-break: normal;
 }
 
 div.project-messages div.message .avatar,

@@ -210,6 +210,7 @@ div.side div.widget.project-rewards div.individual div.title h4.name {
 }
 div.side div.widget.project-collaborations ul li p {
     margin-top: 16px;
+    word-wrap: break-word;
 }
 
 /*widget embed code for project*/

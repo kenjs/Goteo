@@ -38,6 +38,7 @@ div.widget.project-collaborations ul li > p {
     /*margin:  0 0 1em;*/
     margin: 0;
     line-height: 20px;
+    word-wrap: break-word;
 }
 
 div.widget.project-collaborations ul li.task {
