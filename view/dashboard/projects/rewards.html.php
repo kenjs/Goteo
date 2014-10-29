@@ -117,7 +117,7 @@ switch ($order) {
             <input type="hidden" id="invests-order" name="order" value="<?php echo $order; ?>" />
         </form>
         <div class="filters">
-            <label><?= Text::get('dashboard-rewards-management-contributions'); ?>: </label><br />
+            <label><?= Text::get('dashboard-rewards-management-contributions'); ?>: </label>
             <ul>
                 <li<?php if ($order == 'amount' || $order == '') echo ' class="current"'; ?>><a href="#" onclick="return set('order', 'amount');"><?= Text::get('dashboard-rewards-management-ammount'); ?></a></li>
                 <li>|</li>
@@ -165,17 +165,17 @@ switch ($order) {
                             <a href="/user/<?php echo $investData->user->id; ?>"><img src="<?php echo $investData->user->avatar->getLink(45, 45, true); ?>" /></a>
                         </div>
 
-                        <div class="left" style="width:120px;">
-                            <span class="username"><a href="/user/<?php echo $investData->user->id; ?>"><?php echo $investData->user->name; ?></a></span>
+                        <div class="left username">
+                            <span><a href="/user/<?php echo $investData->user->id; ?>"><?php echo Text::shorten($investData->user->name,15); ?></a></span>
                             <label class="amount"><?= Text::get('invests-list-contribution'); ?><?php if ($investData->anonymous) echo ' <strong>'.  Text::get('regular-anonymous').'</strong>'; ?></label>
-                            <span class="amount"><?php echo $investData->amount; ?> &yen;</span>
+                            <span class="amount">&yen; <?php echo $investData->amount; ?></span>
                             <span class="date"><?php echo date('d-m-Y', strtotime($investData->invested)); ?></span>
                         </div>
 
-                        <div class="left recompensas"  style="width:280px;">
-                            <span style="margin-bottom:2px;" class="<?php echo $estilo;?>"><strong><?= Text::get('invests-list-expected-rewards'); ?>:</strong></span>
+                        <div class="left recompensas">
+                            <span class="<?php echo $estilo;?>"><strong><?= Text::get('invests-list-expected-rewards'); ?>:</strong></span>
                             <?php foreach ($investData->rewards as $reward) : ?>
-                                <div style="width: 250px; overflow: hidden; height: 18px;" class="<?php echo $estilo;?>">
+                                <div class="<?php echo $estilo;?>">
                                     <input type="checkbox"  id="ful_reward-<?php echo $investId; ?>-<?php echo $reward->id; ?>" name="ful_reward-<?php echo $investId; ?>-<?php echo $reward->id; ?>" value="1" <?php if ($reward->fulfilled == 1) echo ' checked="checked" disabled';?>  />
                                     <label for="ful_reward-<?php echo $investId; ?>-<?php echo $reward->id; ?>"><?php echo Text::shorten($reward->reward, 40); ?></label>
                                 </div>
@@ -183,8 +183,13 @@ switch ($order) {
 
                         </div>
 
-                        <div class="left" style="width:200px;padding-right:30px;">
-                            <span style="margin-bottom:2px;" class="<?php echo $estilo;?>"><strong><?= Text::get('invests-list-delivery-address'); ?>: </strong></span>
+                        <div class="left name">
+                            <span><strong>氏名(本名)</strong></span>
+                            <span><?= $project->contract_name; ?></span>
+                        </div>
+
+                        <div class="left address">
+                            <span class="<?php echo $estilo;?>"><strong><?= Text::get('invests-list-delivery-address'); ?>: </strong></span>
 						<span class="<?php echo $estilo;?>">
                     	<?php echo $address->address; ?>, <?php echo $address->location; ?>, <?php echo $address->zipcode; ?> <?php echo $address->country; ?>
                     	</span>

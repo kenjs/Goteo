@@ -33,6 +33,7 @@ $invest = $this['invest'];
                     <br />
                     <h3>【クレジットカード決済に関するご説明】</h3>
                     <p>決済システムは（株）AXES Paymentを利用しています<br />
+                        クレジットカード（Visa、JCB、MasterCard）の一括払いでのお支払となります。クレジットカード番号は弊社に知らされることはございませんのでご安心ください。<br />
                         <a href="https://gw.axes-payment.com/cgi-bin/pc_exp.cgi?clientip=1011003702" target="_blank">必ずお読みください</a><br /><br />
                     </p>
                     <h3>【カード決済に関するお問い合わせ】</h3>

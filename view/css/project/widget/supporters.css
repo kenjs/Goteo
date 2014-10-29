@@ -106,6 +106,9 @@ div.widget.project-supporters .supporters > ul > li div.supporterContainer {
 	padding: 10px 10px 10px 65px;
 	width: 230px;
 }
+div.center.supporters div.widget.project-supporters .supporters > ul > li div.supporterContainer {
+    width: 130px;
+}
 
 div.widget.project-supporters .supporters ul li.active {
     background-color:  #f3f3f3;

@@ -292,7 +292,7 @@ body.dashboard div#main > ul li  {
 
 /* = gestionar retornos 
 ***************************/
-body.dashboard div.widget.gestrew h2.title{margin-bottom:5px;}
+body.dashboard div.widget.gestrew h2.title{margin-bottom:5px;padding-left:0;}
 body.dashboard div.widget.gestrew label#invests-filter,body.dashboard div.widget.projects ul{float:left;}
 body.dashboard div.widget.gestrew label#invests-filter{font-size:9pt;}
 body.dashboard div.widget.gestrew div.invests-list{clear:both}
@@ -310,10 +310,10 @@ body.dashboard div.widget.gestrew div.filters ul li a:hover{color:#20B3B2;}
 .disabled{color:#cccccc;}
 body.dashboard div#invests-list div.investor{border-bottom:#C1C1C1 1px solid;margin:20px 0;height:auto;overflow:auto;padding-bottom:10px;margin-bottom:10px;}
 body.dashboard div#invests-list div.investor div.left{float:left;margin-right:10px;}
-
 body.dashboard div#invests-list div.investor div.left span{display:block;}
-body.dashboard div#invests-list div.investor div.left span.username{margin-bottom:2px}
-body.dashboard div#invests-list div.investor div.left span.username a{color: #58595B;font-weight: bold;text-decoration: none;}
+body.dashboard div#invests-list div.investor div.left.username span a{color: #58595B;font-weight: bold;text-decoration: none;}
+
+
 body.dashboard div#invests-list div.investor div.left span.amount{display:inline-block;/*background: url("/view/css/euro/violet/m.png") no-repeat scroll right center transparent;*/clear: left;color: #96238F;font-size: 11pt;font-weight: bold;line-height: 25px;padding-right: 30px;width: auto;}
 body.dashboard div#invests-list div.investor div.left label.amount,
 body.dashboard div#invests-list div.investor div.left span.date{display:block;color:#223E98;font-size:8pt;padding-left:0;width:100%}
@@ -323,9 +323,35 @@ body.dashboard div#invests-list div.investor div.left span.pendiente{color:#f00;
 
 
 /* Custom checkbox in investors list*/
+body.dashboard div#invests-list div.investor div.left.username{
+    width:120px;
+}
+body.dashboard div#invests-list div.investor div.left.username span.amount {
+    padding-right: 8px;
+}
+body.dashboard div#invests-list div.investor div.left.recompensas {
+    width:200px;
+}
+body.dashboard div#invests-list div.investor div.left.recompensas span {
+    margin-bottom:2px;
+}
+body.dashboard div#invests-list div.investor div.left.recompensas > div {
+    width: 200px;
+    overflow: hidden;
+}
+body.dashboard div#invests-list div.investor div.left.name {
+    width: 10px;
+}
+body.dashboard div#invests-list div.investor div.left.address {
+    width:180px;
+}
+body.dashboard div#invests-list div.investor div.left span {
+    margin-bottom:2px;
+}
+
 body.dashboard div#invests-list div.investor div.recompensas input[type="checkbox"]{height:16px;width:16px;float:left;position:absolute;left:0;opacity:0;margin:0;padding:0}
 body.dashboard div#invests-list div.investor div.recompensas label{line-height:16px;padding:0 0 0 20px}
-body.dashboard div#invests-list div.investor div.recompensas input + label{background:url('/view/css/dashboard/gr_custom-inputs.png') 0 -1px no-repeat;height:18px;}
+body.dashboard div#invests-list div.investor div.recompensas input + label{background:url('/view/css/dashboard/gr_custom-inputs.png') 0 0 no-repeat;height:18px;}
 body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:checked + label{background-position:0 -81px}
 body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:hover:checked + label,body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:focus:checked + label,body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:checked + label:hover,body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:focus:checked + label{background-position:0 -101px}
 
