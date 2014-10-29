@@ -550,16 +550,15 @@ div#header div#highlights > ul > li > a {
 div#header div#menu {
     overflow: visible;
     position: absolute;
-    top: 52px;
+    top: 53px;
     left: 50%;
-    margin-left: 188px;
-    width: 302px;
+    margin-left: 202px;
+    width: 288px;
     z-index: 2;
 }
 
 
 div#header div#menu > ul {
-    /*max-width: 940px;*/
     margin: 0 auto;
     position: relative;
     list-style: none;
@@ -571,7 +570,6 @@ div#header div#menu > ul {
 }
 
 div#header div#menu > ul > li {
-    /*display: inline-block;*/
     float: left;
     text-align: left;
 }
@@ -611,9 +609,6 @@ div#header div#menu > ul > li.home > a:hover {
     background: url('header/main-logo.png') no-repeat right center;
 }
 
-/*div#header div#menu > ul > li.create {
-    float: left;
-}*/
 div#header div#menu > ul > li.login {
     float: right;
 }
@@ -623,15 +618,11 @@ div#header div#menu > ul > li.create > a.button.aqua {
     display: inline-block;
     width:78px;
     margin: 0;
-    padding: 4px 8px!important;
+    padding: 4px 6px!important;
     font-size: 11px;
     color: white;
     text-align: center;
     line-height: 13px;
-}
-
-div#header div#menu > ul > li.explore > a {
-    /*margin-left: 124px;*/
 }
 
 div#header div#menu > ul > li.search {
@@ -687,7 +678,6 @@ div#header div#menu > ul > li.community ,
 div#header div#menu > ul > li.login ,
 div#header div#menu > ul > li.dashboard {
     height: 34px;
-    height: 34px;
     position: relative;
     background-color: #666666;
     border-radius: 3px;
@@ -716,25 +706,31 @@ div#header div#menu > ul > li.login fieldset > legend {
 div#header div#menu > ul > li.community > a,
 div#header div#menu > ul > li.login > a,
 div#header div#menu > ul > li.dashboard > a {
-    /*padding: .5em .8em;*/
     padding: 2px 6px;
     font-size: 11px;
     height: 30px;
     line-height: 30px;
     display: inline-block;    
     color: #f5f5f5;
-    background-color: #58595b;
+    background-color: #3399cc;
 }
 div#header div#menu > ul > li.dashboard > a:hover {
-    background-color: #78d1d1;
+    background-color: #3399cc;
 }
 
+div#header div#menu > ul > li.login > a {
+    width: 88px;
+    text-align: center;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
 
 div#header div#menu > ul > li.community > a,
 div#header div#menu > ul > li.dashboard > a {
-    padding-right:16px;
+    width: 84px;
+    padding-right:10px;
 	position:relative;
-	/*top:-3px;*/
     top:0;
     border-radius: 3px;
     -moz-border-radius: 3px;
@@ -743,9 +739,9 @@ div#header div#menu > ul > li.dashboard > a {
 
 div#header div#menu > ul > li.dashboard > a > img{
     vertical-align: middle;
-	position:relative;
-	left:10px;
-    /*top:4px;*/
+	position:absolute;
+    top:3px;
+	right:3px;
 }
 
 div#header div#menu > h2,
@@ -793,13 +789,20 @@ div#header div#menu > ul > li.dashboard > div > ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: #58595b;
+    /*background-color: #58595b;*/
 }
 
 div#header div#menu > ul > li.community > div > ul > li,
 div#header div#menu > ul > li.dashboard > div > ul > li {
-    border-top: 1px solid #a5e1e0;    
+    /*border-top: 1px solid #ffffff;*/
+    background-color: #58595b;
 }
+
+div#header div#menu > ul > li.community > div > ul > li.active,
+div#header div#menu > ul > li.dashboard > div > ul > li.active {
+    background-color: #781d1d;
+}
+
 
 div#header div#menu > ul > li.community > div > ul > li *,
 div#header div#menu > ul > li.dashboard > div > ul > li * {
@@ -810,10 +813,8 @@ div#header div#menu > ul > li.dashboard > div > ul > li * {
 div#header div#menu > ul > li.community > div > ul > li > a,
 div#header div#menu > ul > li.dashboard > div > ul > li > a {
     display: block;
-    /*padding: .6em 1em;*/
-    padding: 6px;
+    padding: 6px 3px;
     font-size: 11px;
-    background-color: #58595b;
 }
 
 div#header div#menu > ul > li.dashboard > div > ul > li.logout > a > span{
@@ -822,7 +823,7 @@ div#header div#menu > ul > li.dashboard > div > ul > li.logout > a > span{
 
 div#header div#menu > ul > li.community > div > ul > li > a:hover,
 div#header div#menu > ul > li.dashboard > div > ul > li > a:hover {
-    background-color: #78d1d1;
+    background-color: #3399cc;
 }
 /* fin del menu y despelgable dashboard */
 
@@ -840,12 +841,12 @@ ul.lang{
 }
 	
 ul.lang li{
-background-color: #59595C;
-height: 15px;
-padding: 4px 0;
-position: relative;
-width: 70px;
-text-align:center;
+    background-color: #59595C;
+    height: 15px;
+    padding: 4px 0;
+    position: relative;
+    width: 70px;
+    text-align:center;
 }
 ul.lang li:hover {
 	background: #808285; 

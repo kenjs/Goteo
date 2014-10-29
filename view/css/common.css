@@ -69,6 +69,15 @@ fieldset {
     padding: .3em;
 }
 
+body.admin input[type="text"],
+body.admin input[type="password"],
+body.admin textarea,
+body.admin fieldset {
+    min-height:auto;
+    min-height: inherit;
+    padding: 0;
+}
+
 fieldset {
     display: inline-block;
     background: transparent;
@@ -119,6 +128,22 @@ a.button {
     text-align: center;
     font-size: 16px;
     font-weight: bolder;
+}
+
+input.red[type="submit"],
+input.red[type="reset"],
+button.red,
+a.button.red,
+input.edit[type="submit"] {
+    background: none;
+    background: #b5161e;
+    background: -moz-linear-gradient(top, #ea2f2c 0%, #b5161e 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ea2f2c), color-stop(100%,#b5161e));
+    background: -webkit-linear-gradient(top, #ea2f2c 0%,#b5161e 100%);
+    background: -o-linear-gradient(top, #ea2f2c 0%,#b5161e 100%);
+    background: -ms-linear-gradient(top, #ea2f2c 0%,#b5161e 100%);
+    background: linear-gradient(to bottom, #ea2f2c 0%,#b5161e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea2f2c', endColorstr='#b5161e',GradientType=0 );
 }
 
 /*div.side input[type="submit"],
@@ -184,13 +209,13 @@ input.edit[type="submit"] {
     color: white;
 }
 
-input.red[type="submit"]:active,
+/*input.red[type="submit"]:active,
 input.red[type="reset"]:active,
 button.red:active,
 a.button.red:active,
 input.edit[type="submit"]:active {
     background: #e44133 url('button/red-active.png') repeat-x top;
-}
+}*/
 
 input.red[type="submit"]:hover,
 input.red[type="reset"]:hover,
