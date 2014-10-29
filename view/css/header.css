@@ -550,10 +550,11 @@ div#header div#highlights > ul > li > a {
 div#header div#menu {
     overflow: visible;
     position: absolute;
-    top: 48px;
+    top: 52px;
     left: 50%;
-    margin-left: 190px;
-    width: 290px;
+    margin-left: 188px;
+    width: 302px;
+    z-index: 2;
 }
 
 
@@ -570,8 +571,13 @@ div#header div#menu > ul {
 }
 
 div#header div#menu > ul > li {
-    display: inline-block;
+    /*display: inline-block;*/
+    float: left;
     text-align: left;
+}
+div#header div#menu > ul > li.explore,
+div#header div#menu > ul > li.create {
+    margin-right: 4px;
 }
 
 div#header div#menu > ul > li.create {
@@ -621,7 +627,7 @@ div#header div#menu > ul > li.create > a.button.aqua {
     font-size: 11px;
     color: white;
     text-align: center;
-    line-height: 16px;
+    line-height: 13px;
 }
 
 div#header div#menu > ul > li.explore > a {
@@ -680,7 +686,8 @@ div#header div#menu > ul > li.search fieldset input[type="submit"]:hover {
 div#header div#menu > ul > li.community ,
 div#header div#menu > ul > li.login ,
 div#header div#menu > ul > li.dashboard {
-    height: 40px;
+    height: 34px;
+    height: 34px;
     position: relative;
     background-color: #666666;
     border-radius: 3px;
@@ -709,21 +716,29 @@ div#header div#menu > ul > li.login fieldset > legend {
 div#header div#menu > ul > li.community > a,
 div#header div#menu > ul > li.login > a,
 div#header div#menu > ul > li.dashboard > a {
-    padding: .5em .8em;
+    /*padding: .5em .8em;*/
+    padding: 2px 6px;
     font-size: 11px;
-    height: 29px;
-    line-height: 29px;
+    height: 30px;
+    line-height: 30px;
     display: inline-block;    
     color: #f5f5f5;
+    background-color: #58595b;
 }
-
+div#header div#menu > ul > li.dashboard > a:hover {
+    background-color: #78d1d1;
+}
 
 
 div#header div#menu > ul > li.community > a,
 div#header div#menu > ul > li.dashboard > a {
-    padding-right:30px;
+    padding-right:16px;
 	position:relative;
-	top:-3px;
+	/*top:-3px;*/
+    top:0;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
 }
 
 div#header div#menu > ul > li.dashboard > a > img{
@@ -778,7 +793,7 @@ div#header div#menu > ul > li.dashboard > div > ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    background-color: #808285;
+    background-color: #58595b;
 }
 
 div#header div#menu > ul > li.community > div > ul > li,
@@ -795,8 +810,10 @@ div#header div#menu > ul > li.dashboard > div > ul > li * {
 div#header div#menu > ul > li.community > div > ul > li > a,
 div#header div#menu > ul > li.dashboard > div > ul > li > a {
     display: block;
-    padding: .6em 1em;
-    font-size: 12px;
+    /*padding: .6em 1em;*/
+    padding: 6px;
+    font-size: 11px;
+    background-color: #58595b;
 }
 
 div#header div#menu > ul > li.dashboard > div > ul > li.logout > a > span{
