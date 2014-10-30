@@ -337,10 +337,11 @@ body.dashboard div#invests-list div.investor div.left.recompensas span {
 }
 body.dashboard div#invests-list div.investor div.left.recompensas > div {
     width: 200px;
+    margin-top: 5px;
     overflow: hidden;
 }
 body.dashboard div#invests-list div.investor div.left.name {
-    width: 10px;
+    width: 180px;
 }
 body.dashboard div#invests-list div.investor div.left.address {
     width:180px;
@@ -355,7 +356,7 @@ body.dashboard div#invests-list div.investor div.recompensas input + label{backg
 body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:checked + label{background-position:0 -81px}
 body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:hover:checked + label,body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:focus:checked + label,body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:checked + label:hover,body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:focus:checked + label{background-position:0 -101px}
 
-body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:hover + label,body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:focus + label,body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox] + label:hover{background-position:0 -21px}
+body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:hover + label,body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:focus + label,body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox] + label:hover{background-position:0 -20px}
 
 body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:active + label,body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox] + label:hover:active{background-position:0 -41px}
 

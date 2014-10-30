@@ -37,7 +37,7 @@ namespace Goteo\Controller\Cron {
          * @param $project Object
          * @return bool
          */
-        public static function toOwner ($type, $project) {
+            public static function toOwner ($type, $project) {
             $tpl = null;
             
             /// tipo de envio
@@ -250,7 +250,8 @@ namespace Goteo\Controller\Cron {
                 foreach ($query->fetchAll(\PDO::FETCH_OBJ) as $investor) {
                     /// tipo de envio
                     switch ($type) {
-                        case 'r1_pass': // template 15, proyecto supera la primera ronda
+                        case 'r1_pass': // template 15,
+
                                 $tpl = 15;
                                 $search  = array('%USERNAME%', '%PROJECTNAME%', '%PROJECTURL%');
                                 $replace = array($investor->name, $project->name, SITE_URL . '/project/' . $project->id);

@@ -124,3 +124,7 @@ body.project-show div.center.messages div.project-collaborations ul li {
     margin-top: 20px;
     padding-bottom: 20px;
 }
+body.project-show div.center.messages div.project-collaborations h3.title {
+    margin-bottom: 0;
+    padding-left: 0;
+}

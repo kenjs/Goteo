@@ -210,7 +210,6 @@ switch ($order) {
                 <?php endif; ?>
             </form>
         </div>
-
     </div>
 
     <div class="widget projects" id="colective-messages">
@@ -254,6 +253,7 @@ switch ($order) {
                     });
                 </script>
                 <div id="bocadillo"></div>
+                <input type="hidden" name="username" value="<?php echo $investData->user->name; ?>" />
                 <textarea rows="5" cols="50" name="message" id="message"></textarea>
                 <a class="preview" href="#preview" id="a-preview" target="_blank"><?php echo Text::get('regular-preview'); ?></a>
                 <div style="display:none">
@@ -262,7 +262,6 @@ switch ($order) {
                 <button type="submit" class="green"><?php echo Text::get('project-messages-send_message-button'); ?></button>
             </div>
         </form>
-
     </div>
 
 <?php endif; ?>
