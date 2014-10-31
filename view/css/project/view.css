@@ -253,7 +253,7 @@ body.project-show div#main div.widget pre {
 }
 
 body.project-show div#main div.widget.project-support {
-    min-height: 450px;
+    min-height: 390px;
 }
 
 body.project-show div#main > div.side > div.widget {

@@ -26,7 +26,18 @@ use Goteo\Library\Text;
     <form action="<?php echo $this['form']['action']; ?>" method="post" enctype="multipart/form-data">
         <dl>
             <?php foreach ($this['form']['fields'] as $Id=>$field) : ?>
-                <dt><label for="<?php echo $Id; ?>"><?php echo $field['label']; ?></label></dt>
+                <?
+                if($field['label'] == 'Skill'):
+                    $skill_label = 'スキル名';
+                elseif($field['label'] == 'Descripción'):
+                    $skill_label = '説明';
+                elseif($field['label'] == 'Categoría'):
+                    $skill_label = 'カテゴリー名';
+                else:
+                    $skill_label = $field['label'];
+                endif;
+                ?>
+                <dt><label for="<?php echo $Id; ?>"><?php echo $skill_label; ?></label></dt>
                 <dd><?php switch ($field['type']) {
                     case 'text': ?>
                         <input type="text" id="<?php echo $Id; ?>" name="<?php echo $field['name']; ?>" <?php echo $field['properties']; ?> value="<?php $name = $field['name']; echo $this['data']->$name; ?>" />

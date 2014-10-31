@@ -53,7 +53,7 @@ $willpass = strtotime($project->willpass)
             break;
     } ?>
 
-    <div class="project-widget-box">
+    <div class="project-widget-box<?php echo $status = $project->round ? '' : ' end'; ?>">
     <?php echo new View('view/project/meter.html.php', array('project' => $project, 'level' => $level) ) ?>
     
         <div class="buttons">
@@ -65,8 +65,7 @@ $willpass = strtotime($project->willpass)
             <?php endif; */?>
         </div>
     </div>
-
-    <div class="invest-notice">
+    <div class="invest-notice<?php echo $status = $project->round ? '' : ' end'; ?>">
         このプロジェクトは <?= date('Y年n月j日', $willpass) . '（' . $week[date('w', $willpass)] . '）'; ?> 午前00:00 の時点で、<?= \amount_format($project->mincost); ?>円以上集まった場合のみ、決済が実施されます。
     </div>
 

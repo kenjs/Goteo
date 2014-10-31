@@ -81,7 +81,9 @@ $minimum_ratio =  min(100, round(($minimum / $optimum) * 100));
         <? if ($big): ?>
             <h<?php echo $level ?> class="title investment"><?php echo Text::get('project-view-metter-investment'); ?></h<?php echo $level ?>>
         <? endif; ?>
-        <?php if (!empty($project->round)) : ?><h<?php echo $level ?> class="title ronda"><?php echo $project->round; if ($project->round == 1 ){ echo 'st '; } else { echo 'nd '; }; echo Text::get('regular-round'); ?></h<?php echo $level ?>><?php endif; ?>
+        <?php if (!empty($project->round)) : ?>
+            <h<?php echo $level ?> class="title ronda"><?php echo $project->round; if ($project->round == 1 ){ echo 'st '; } else { echo 'nd '; }; echo Text::get('regular-round'); ?></h<?php echo $level ?>>
+        <?php endif; ?>
         <?php if ($activable) : ?><h<?php echo $level ?> class="title obtained"><?php echo Text::get('project-view-metter-got'); ?></h<?php echo $level ?>><?php endif; ?>
         <div class="graph">
             <div class="optimum">
