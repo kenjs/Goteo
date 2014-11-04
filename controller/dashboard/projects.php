@@ -243,7 +243,8 @@ namespace Goteo\Controller\Dashboard {
                 foreach (Model\Invest::investors($project->id, false, true) as $user => $investor) {
                     // no duplicar
                     $who[$investor->user] = $investor->user;
-                }
+
+}
             } elseif (!empty($_POST['msg_user'])) {
                 // a usuario individual
                 $who[$_POST['msg_user']] = $_POST['msg_user'];
@@ -294,9 +295,9 @@ namespace Goteo\Controller\Dashboard {
             $remite = $project->name . ' ' . Text::get('regular-from') . ' ';
             $remite .= (NODE_ID != GOTEO_NODE) ? NODE_NAME : GOTEO_MAIL_NAME;
 
-            $search = array('%MESSAGE%', '%PROJECTNAME%', '%PROJECTURL%', '%OWNERURL%', '%OWNERNAME%');
+            $search = array('%MESSAGE%', '%PROJECTNAME%', '%PROJECTURL%', '%OWNERURL%', '%OWNERNAME%', '%USERNAME%');
             $replace = array($msg_content, $project->name, SITE_URL . "/project/" . $project->id,
-                SITE_URL . "/user/profile/" . $project->owner, $project->user->name);
+                SITE_URL . "/user/profile/" . $project->owner, $project->owner, $_POST['username']);
             $content = \str_replace($search, $replace, $template->text);
 
             // para usar el proceso Sender:

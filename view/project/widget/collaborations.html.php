@@ -30,11 +30,11 @@ $project = $this['project'];
     <h<?php echo $level + 1?> class="supertitle"><?php echo Text::get('project-collaborations-supertitle'); ?></h<?php echo $level ?>>
 
     <div class="project-widget-box">
-        <h<?php echo $level ?> class="title"><?php echo Text::get('project-collaborations-title'); ?></h<?php echo $level ?>>
-        
+        <h<?php echo $level ?> class="title"><?php echo Text::get('project-collaborations-title') . '・' . Text::get('cost-type-lend'); ?></h<?php echo $level ?>>
+
         <ul>
             <?php foreach ($project->supports as $support) : ?>
-            
+
             <li class="support <?php echo htmlspecialchars($support->type) ?>">
                 <strong><?php echo htmlspecialchars($support->support) ?></strong>
                 <p><?php echo htmlspecialchars($support->description) ?></p>

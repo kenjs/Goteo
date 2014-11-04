@@ -263,7 +263,7 @@ body.dashboard div#main div.widget.gestrew div.message{background:url("/view/css
 /* = recompensas
 ***************************/
 body.dashboard div#main div.widget.gestrew div.rewards{height:auto;overflow:auto;margin-top:10px;}
-body.dashboard div#main div.widget.gestrew div.reward{background:#E4C9E2;width:197px;min-height:175px;padding:10px;margin-right:10px;float:left;position:relative;margin-bottom:10px;height:190px;}
+body.dashboard div#main div.widget.gestrew div.reward{background:#E4C9E2;width:197px;min-height:175px;padding:10px;margin-right:10px;float:left;position:relative;height:300px;}
 body.dashboard div#main div.widget.gestrew div.reward.last{margin-right:0;}
 body.dashboard div#main div.widget.gestrew div.reward div.orden{color:#fff;display:inline-block;font-weight:bold;font-size:13pt;background-color:#e7e7e7;border:2px solid #a7a9ac;color:#a7a9ac;width:20px;text-align:center;}
 body.dashboard div#main div.widget.gestrew div.reward span.aporte{color: #96238F;display: inline-block;font-size: 8pt;text-transform: uppercase;line-height:22px;}
@@ -283,8 +283,8 @@ body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.product 
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.design { background-image: url('/view/css/icon/s/design.png'); }
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.other { background-image: url('/view/css/icon/s/other.png'); }
 body.dashboard div#main div.widget.gestrew div.reward span.recompensa{color:#8D878E;font-size:12px;}
-body.dashboard div#main div.widget.gestrew div.reward a.green{bottom:5px;left:13px;width:160px;padding: 0.3em 1.3em;}
-body.dashboard div#main div.widget.gestrew div.reward div.contenedorrecompensa{height:67px; overflow:hidden;}
+body.dashboard div#main div.widget.gestrew div.reward a.green{position:absolute;bottom:0;left:13px;width:160px;padding: 0.3em 1.3em;}
+body.dashboard div#main div.widget.gestrew div.reward div.contenedorrecompensa{height:67px; /*overflow:hidden;*/}
 
 body.dashboard div#main > ul li  {
     list-style-type: none;
@@ -292,25 +292,29 @@ body.dashboard div#main > ul li  {
 
 /* = gestionar retornos 
 ***************************/
-body.dashboard div.widget.gestrew h2.title{margin-bottom:5px;}
+body.dashboard div.widget.gestrew h2.title{margin-bottom:5px;padding-left:0;}
 body.dashboard div.widget.gestrew label#invests-filter,body.dashboard div.widget.projects ul{float:left;}
 body.dashboard div.widget.gestrew label#invests-filter{font-size:9pt;}
 body.dashboard div.widget.gestrew div.invests-list{clear:both}
-body.dashboard div.widget.gestrew div.filters{height:auto;overflow:auto}
-body.dashboard div.widget.gestrew div.filters ul{list-style:none;clear:right;margin-top:0;margin-left:10px;padding-left:0;}
+body.dashboard div.widget.gestrew div.filters{height:auto;overflow:auto;padding: 0 20px}
+body.dashboard div.widget.gestrew div.filters > label{
+    float: left;
+    margin-right: 8px;
+}
+body.dashboard div.widget.gestrew div.filters ul{list-style:none;clear:right;margin:0;padding-left:0;}
 body.dashboard div.widget.gestrew div.filters ul li{display:inline-block;}
 body.dashboard div.widget.gestrew div.filters ul li a{text-decoration:none;}
 body.dashboard div.widget.gestrew div.filters ul li.current a{background:url('/view/css/arrow-down.png') no-repeat left;padding-left:15px;}
 body.dashboard div.widget.gestrew div.filters ul li a:hover{color:#20B3B2;}
 
 .disabled{color:#cccccc;}
-body.dashboard div#invests-list div.investor{border-bottom:#C1C1C1 1px solid;margin:20px 20px 20px 20px;height:auto;overflow:auto;padding-bottom:10px;margin-bottom:10px;}
+body.dashboard div#invests-list div.investor{border-bottom:#C1C1C1 1px solid;margin:20px 0;height:auto;overflow:auto;padding-bottom:10px;margin-bottom:10px;}
 body.dashboard div#invests-list div.investor div.left{float:left;margin-right:10px;}
-
 body.dashboard div#invests-list div.investor div.left span{display:block;}
-body.dashboard div#invests-list div.investor div.left span.username{margin-bottom:2px}
-body.dashboard div#invests-list div.investor div.left span.username a{color: #58595B;font-weight: bold;text-decoration: none;}
-body.dashboard div#invests-list div.investor div.left span.amount{display:inline-block;background: url("/view/css/euro/violet/m.png") no-repeat scroll right center transparent;clear: left;color: #96238F;font-size: 11pt;font-weight: bold;line-height: 25px;padding-right: 30px;width: auto;}
+body.dashboard div#invests-list div.investor div.left.username span a{color: #58595B;font-weight: bold;text-decoration: none;}
+
+
+body.dashboard div#invests-list div.investor div.left span.amount{display:inline-block;/*background: url("/view/css/euro/violet/m.png") no-repeat scroll right center transparent;*/clear: left;color: #96238F;font-size: 11pt;font-weight: bold;line-height: 25px;padding-right: 30px;width: auto;}
 body.dashboard div#invests-list div.investor div.left label.amount,
 body.dashboard div#invests-list div.investor div.left span.date{display:block;color:#223E98;font-size:8pt;padding-left:0;width:100%}
 body.dashboard div#invests-list div.investor div.left span.status{text-transform:uppercase}
@@ -319,13 +323,40 @@ body.dashboard div#invests-list div.investor div.left span.pendiente{color:#f00;
 
 
 /* Custom checkbox in investors list*/
+body.dashboard div#invests-list div.investor div.left.username{
+    width:120px;
+}
+body.dashboard div#invests-list div.investor div.left.username span.amount {
+    padding-right: 8px;
+}
+body.dashboard div#invests-list div.investor div.left.recompensas {
+    width:200px;
+}
+body.dashboard div#invests-list div.investor div.left.recompensas span {
+    margin-bottom:2px;
+}
+body.dashboard div#invests-list div.investor div.left.recompensas > div {
+    width: 200px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+body.dashboard div#invests-list div.investor div.left.name {
+    width: 180px;
+}
+body.dashboard div#invests-list div.investor div.left.address {
+    width:180px;
+}
+body.dashboard div#invests-list div.investor div.left span {
+    margin-bottom:2px;
+}
+
 body.dashboard div#invests-list div.investor div.recompensas input[type="checkbox"]{height:16px;width:16px;float:left;position:absolute;left:0;opacity:0;margin:0;padding:0}
 body.dashboard div#invests-list div.investor div.recompensas label{line-height:16px;padding:0 0 0 20px}
-body.dashboard div#invests-list div.investor div.recompensas input + label{background:url('/view/css/dashboard/gr_custom-inputs.png') 0 -1px no-repeat;height:18px;}
+body.dashboard div#invests-list div.investor div.recompensas input + label{background:url('/view/css/dashboard/gr_custom-inputs.png') 0 0 no-repeat;height:18px;}
 body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:checked + label{background-position:0 -81px}
 body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:hover:checked + label,body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:focus:checked + label,body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:checked + label:hover,body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:focus:checked + label{background-position:0 -101px}
 
-body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:hover + label,body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:focus + label,body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox] + label:hover{background-position:0 -21px}
+body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:hover + label,body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:focus + label,body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox] + label:hover{background-position:0 -20px}
 
 body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox]:active + label,body.dashboard div#invests-list div.investor div.recompensas input[type=checkbox] + label:hover:active{background-position:0 -41px}
 

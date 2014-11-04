@@ -47,18 +47,21 @@ include 'view/header.html.php';
     <div id="main">
         <div class="admin-center">
             <div class="admin-menu">
-                <?php foreach ($_SESSION['admin_menu'] as $sCode=>$section) : ?>
+                <?php foreach ($_SESSION['admin_menu'] as $sCode=>$section) :
+                    if($sCode !== 'sponsors'):?>
                     <fieldset>
                         <legend><?php echo $section['label'] ?></legend>
                         <ul>
                             <?php foreach ($section['options'] as $oCode=>$option) :
-                                if ($oCode != 'blog' && $oCode != 'texts' && $oCode != 'tags' && !empty($option['label'])):
+                                if ($oCode != 'blog' && $oCode != 'texts' && $oCode != 'tags' && $oCode != 'translates' && $oCode != 'worth' && $oCode != 'news' && $oCode != 'banners' && !empty($option['label'])):
                                 echo '<li><a href="/admin/'.$oCode.'">'.$option['label'].'</a></li>';
                                 endif;
                             endforeach; ?>
                         </ul>
                     </fieldset>
-                <?php endforeach; ?>
+                <?php
+                    endif;
+                endforeach; ?>
             </div>
             </div>
 
@@ -69,9 +72,9 @@ include 'view/header.html.php';
                             <li><a href="/admin/projects"><?php echo Text::_("Proyectos"); ?></a></li>
                             <li><a href="/admin/users"><?php echo Text::_("Usuarios"); ?></a></li>
                             <li><a href="/admin/accounts"><?php echo Text::_("Aportes"); ?></a></li>
-                            <li><a href="/admin/texts"><?php echo Text::_("Textos"); ?></a></li>
+                            <?/*<li><a href="/admin/texts"><?php echo Text::_("Textos"); ?></a></li>
                             <li><a href="/admin/tasks"><?php echo Text::_("Tareas"); ?></a></li>
-                            <li><a href="/admin/newsletter"><?php echo Text::_("Mailings"); ?></a></li>
+                            <li><a href="/admin/newsletter"><?php echo Text::_("Mailings"); ?></a></li>*/?>
                         </ul>
                     </div>
                 <?php endif; ?>

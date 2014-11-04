@@ -355,7 +355,7 @@ namespace Goteo\Controller {
                         $user->email = $_POST['user_nemail'];
                     }
                 }
-                // Contraseña
+                // Contraseña --password
                 if ($_POST['change_password']) {
                     /*
                      * Quitamos esta verificacion porque los usuarios que acceden mediante servicio no tienen contraseña

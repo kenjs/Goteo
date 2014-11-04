@@ -348,6 +348,17 @@ if ($step == 'start') : ?>
                         return false;
                     }
                 } else {
+                    //When the supporter has selected a reward　--add 141030
+                    var reward = $('#resign_reward').val();
+                    var name = $('#fullname').val();
+                    var add = $('#address').val();
+
+                    if (reward == 0 && (name == '' || add == '')) {
+                        alert('<?php echo Text::slash('invest-recipient-error') ?>');
+                        return false;
+                    }
+
+
                     /* Has elegido las siguientes recompensas */
                     if (!confirm( reward+' <?php echo Text::slash('invest-alert-rewards') ?>')) {
                         return false;
