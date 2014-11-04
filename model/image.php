@@ -121,14 +121,72 @@ namespace Goteo\Model {
                     $result = self::query($query, $data);
                     if(empty($this->id)) $this->id = self::insertId();
                     return true;
-            	} catch(\PDOException $e) {
+                } catch(\PDOException $e) {
                     $errors[] = Text::_("No se ha guardado correctamente. ") . $e->getMessage();
                     return false;
-    			}
+                }
             }
             return false;
-		}
+        }
+        public function saveExternalFile(&$errors = array()) {
 
+/*            
+die("test");
+
+                        $url = $this->avatar['profile_image_url'];
+                        $ch = curl_init();
+                        curl_setopt($ch,CURLOPT_URL,$url);
+                        curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+                        $profile_image_file = curl_exec( $ch );
+                        curl_close();
+*/
+            $data[':name'] = $this->name;
+
+            if(!empty($this->type)) {
+                $data[':type'] = $this->type;
+            }
+
+            if(!empty($this->size)) {
+                $data[':size'] = $this->size;
+            }
+
+            //si es un archivo que se sube
+            if(!empty($this->tmp)) {
+                $url = $this->tmp;
+                $ch = curl_init();
+                curl_setopt($ch,CURLOPT_URL,$url);
+                curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+                $profile_image_file = curl_exec( $ch );
+                curl_close();
+                file_put_contents($this->dir_originals . $this->name, $profile_image_file);
+                chmod($this->dir_originals . $this->name, 0777);
+            }
+            else {
+                $errors[] = Text::get('image-upload-fail');
+                return false;
+            }
+
+            try {
+
+                // Construye SQL.
+                $query = "REPLACE INTO image (";
+                foreach($data AS $key => $row) {
+                    $query .= substr($key, 1) . ", ";
+                }
+                $query = substr($query, 0, -2) . ") VALUES (";
+                foreach($data AS $key => $row) {
+                    $query .= $key . ", ";
+                }
+                $query = substr($query, 0, -2) . ")";
+                // Ejecuta SQL.
+                $result = self::query($query, $data);
+                if(empty($this->id)) $this->id = self::insertId();
+                return true;
+            } catch(\PDOException $e) {
+                $errors[] = Text::_("No se ha guardado correctamente. ") . $e->getMessage();
+                return false;
+            }
+        }
 		/**
 		* Returns a secure name to store in file system, if the generated filename exists returns a non-existing one
 		* @param $name original name to be changed-sanitized
