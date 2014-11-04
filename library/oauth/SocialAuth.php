@@ -520,7 +520,7 @@ class SocialAuth {
 			if(!($query->fetchColumn())) {
 
 				$img = new Goteo\Model\Image($this->user_data['profile_image_url']);
-				$img->save();
+				$img->saveExternalFile();
 
 				if($img->id) {
 					Goteo\Core\Model::query("UPDATE user SET avatar = :avatar WHERE id = :user", array(':user'=>$username,':avatar'=>$img->id));
