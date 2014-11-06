@@ -524,10 +524,26 @@ div.widget.project-support div.meter.ver div.graph > div.minimum {
     overflow: visible;
 }
 
+
+/* only sidebar */
 body.project-show div#main > div.side > div.widget div.meter.ver h3.title.ronda {
     color:#999900;
     text-transform: lowercase;
     font-size: 12px;
     font-weight: normal;
     text-align: right;
+}
+
+
+body.project-show div#main > div.side > div.widget div.project-widget-box.end div.buttons a {
+    display: none;
+}
+body.project-show div#main > div.side > div.widget div.project-widget-box.end div.meter.ver {
+    padding-top: 16px;
+}
+body.project-show div#main > div.side > div.widget div.project-widget-box.end div.meter.ver dl {
+    margin-bottom: 40px;
+}
+body.project-show div#main > div.side > div.widget div.invest-notice.end {
+    display: none;
 }

@@ -55,6 +55,8 @@ include 'view/header.html.php';
                             <?php foreach ($section['options'] as $oCode=>$option) :
                                 if ($oCode != 'blog' && $oCode != 'texts' && $oCode != 'tags' && $oCode != 'translates' && $oCode != 'worth' && $oCode != 'news' && $oCode != 'banners' && !empty($option['label'])):
                                 echo '<li><a href="/admin/'.$oCode.'">'.$option['label'].'</a></li>';
+//                                var_dump($this['folder']);
+//                                var_dump($this['file']);
                                 endif;
                             endforeach; ?>
                         </ul>
@@ -67,7 +69,7 @@ include 'view/header.html.php';
 
             <div class="admin-right <?= $this['folder']; ?>">
                 <?php if (isset($_SESSION['user']->roles['superadmin'])) : ?>
-                    <div class="widget board">
+                    <div class="widget board shortcut">
                         <ul>
                             <li><a href="/admin/projects"><?php echo Text::_("Proyectos"); ?></a></li>
                             <li><a href="/admin/users"><?php echo Text::_("Usuarios"); ?></a></li>
@@ -78,7 +80,6 @@ include 'view/header.html.php';
                         </ul>
                     </div>
                 <?php endif; ?>
-
 
                 <?php if (!empty($this['folder']) && !empty($this['file'])) :
                     if ($this['folder'] == 'base') {
