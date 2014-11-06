@@ -155,7 +155,7 @@ if ($step == 'start') : ?>
             
 <input type="hidden" id="paymethod"  />
 
-<?php if (\GOTEO_ENV != 'real' && ACL::check('/admin')) : ?>
+<?php if (ACL::check('/admin')) : ?>
 <p><button type="submit" class="process pay-cash" name="method" value="cash">現金</button></p>
 <?php endif; ?>
 <!--<p><button type="submit" class="process pay-paypal" name="method"  value="paypal">PAYPAL</button></p>-->
