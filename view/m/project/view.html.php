@@ -98,7 +98,7 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
                             array(
                                 'project' => $project,
                                 'show' => $show,
-                                'supporters' => $supporters,
+//                                'supporters' => $supporters,
                                 'messages' => $messages,
                                 'updates' => $updates
                             )

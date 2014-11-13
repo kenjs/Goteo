@@ -29,7 +29,7 @@ $level = (int) $this['level'] ?: 3;
 $supporters = count($project->investors);
 
 $worthcracy = Worth::getAll();
-
+/* for_apps_review
 ?>
 <div class="widget project-investors collapsable">
     
@@ -51,7 +51,7 @@ $worthcracy = Worth::getAll();
         <div class="side-worthcracy">
         <?php include 'view/worth/base.html.php' ?>
         </div>
-*/ ?>
+*/ /* for_apps_review ?>
     </div>
     <a class="more" href="/project/<?php echo $project->id; ?>/supporters"><?php echo Text::get('regular-see_more'); ?></a>
-</div>
+</div><? */

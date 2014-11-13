@@ -63,5 +63,7 @@ $project = $this['project'];
             <?php */ endif; ?>
         </div>
     </div>
+<? /* for_apps_review
     <a class="more" href="/project/<?php echo $project->id; ?>/needs"><?php echo Text::get('regular-see_more'); ?></a>
-</div>
+*/?>
+ </div>

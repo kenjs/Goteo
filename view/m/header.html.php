@@ -77,15 +77,23 @@ use Goteo\Library\Text,
             <ul class="flipsnap">
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>">ホーム</a></li>
                 <li class="active"><a href="/">プロジェクト</a></li>
+                <? /* for_apps_review
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/earth_view/">課題を知る</a></li>
+ */ ?>
+<? /* for_apps_review
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/submit_subject/">課題を投稿する</a></li>
+*/ ?>
+                <? /* for_apps_review
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/subject/">課題を見る</a></li>
+*/ ?>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/data/">データを見る</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/posts_archive/">人 & 活動</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/skills/">スキルを活かす</a></li>
                 <li><a href="/dashboard/profile"><span><?php echo Text::get('dashboard-menu-profile'); ?></span></a></li>
                 <li><a href="/dashboard/activity"><span><?php echo Text::get('community-menu-activity'); ?></span></a></li>
+<? /* for_apps_review
                 <li><a href="/community/sharemates"><span><?php echo Text::get('community-menu-sharemates'); ?></span></a></li>
+*/ ?>
             </ul>
         </div>
     </div>
