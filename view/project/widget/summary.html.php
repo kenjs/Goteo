@@ -32,11 +32,10 @@ $project->related     = nl2br(Text::urlink($project->related));
 
 $level = (int) $this['level'] ?: 3;
 ?>
+<?
+echo new View('view/project/widget/video.html.php', array('project' => $project));
+?>
 <div class="widget project-summary">
-
-    <?
-        echo new View('view/project/widget/gallery.html.php', array('project' => $project));
-    ?>
 
     <h<?php echo $level ?>><?php echo htmlspecialchars($project->name) ?></h<?php echo $level ?>>
         
@@ -52,20 +51,17 @@ $level = (int) $this['level'] ?: 3;
         <?php echo $project->about; ?>
     </div>    
     <?php endif */?>
-    
+
+    <?
+    echo new View('view/project/widget/gallery.html.php', array('project' => $project));
+    ?>
+
     <?php if (!empty($project->motivation)): ?>
     <div class="motivation">
         <h<?php echo $level + 1?>><?php echo Text::get('overview-field-motivation'); ?></h<?php echo $level + 1?>>
         <?php echo $project->motivation; ?>
     </div>
     <?php endif ?>
-</div>
-
-<?
-    echo new View('view/project/widget/video.html.php', array('project' => $project));
-?>
-
-<div class="widget project-summary">
     <?php if (!empty($project->goal)): ?>
     <div class="goal">
         <h<?php echo $level + 1?>><?php echo Text::get('overview-field-goal'); ?></h<?php echo $level + 1?>>

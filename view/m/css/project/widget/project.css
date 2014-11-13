@@ -225,9 +225,9 @@ div.widget.project div.meter.activable.active {
     background-color: #EBEAEB;
 }
 div.widget.project div.meter div.obtained {
-    display: none;
+    /*display: none;*/
     position: relative;
-    top: -35px;
+    top: -40px;
     text-align: center;
 }
 div.widget.project div.meter h3.title.obtained {

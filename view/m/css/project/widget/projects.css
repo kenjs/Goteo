@@ -26,6 +26,7 @@ div.widget.projects > .title {
 div.widget.projects div.project {
     background-color: #fff;
     padding: 0;
+    padding-bottom: 50px;
 	position:relative;
 	z-index:98;
 	overflow: hidden;

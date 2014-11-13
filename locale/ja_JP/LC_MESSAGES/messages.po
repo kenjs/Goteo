@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Goteo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-31 10:42+0900\n"
-"PO-Revision-Date: 2014-10-31 10:43+0900\n"
+"POT-Creation-Date: 2014-11-13 18:17+0900\n"
+"PO-Revision-Date: 2014-11-13 18:33+0900\n"
 "Last-Translator: Masaki Ike <ike@info-lounge.jp>\n"
 "Language-Team: Goteo translations\n"
 "Language: ja_JP\n"
@@ -264,7 +264,7 @@ msgid "Traduciendo Tipo"
 msgstr "タイプの翻訳"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/controller/admin.php:161
-#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/index.html.php:74
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/index.html.php:76
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/accounts/viewer.html.php:48
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/users/list.html.php:220
 msgid "Aportes"
@@ -562,12 +562,12 @@ msgstr "コンテンツ"
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/controller/admin.php:552
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/controller/admin/users.php:420
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/model/home.php:54
-#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/index.html.php:72
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/index.html.php:74
 msgid "Proyectos"
 msgstr "プロジェクト"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/controller/admin.php:553
-#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/index.html.php:73
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/index.html.php:75
 msgid "Usuarios"
 msgstr "ユーザー"
 
@@ -1234,7 +1234,7 @@ msgstr "セクションがありません"
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/icons/list.html.php:45
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/licenses/edit.html.php:39
 msgid "Nombre"
-msgstr "お礼カテゴリ名"
+msgstr "ライセンス名"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/controller/admin/projects.php:393
 msgid "Enviado a revision"
@@ -1540,25 +1540,28 @@ msgstr "支援者"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/controller/admin/users.php:416
 msgid "Fecha de alta"
-msgstr "日付管理"
+msgstr "登録日"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/controller/admin/users.php:417
-#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/newsletter/detail.html.php:77
-#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/newsletter/init.html.php:37
-msgid "Alias"
-msgstr "別名"
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/users/add.html.php:32
+msgid "Nombre público"
+msgstr "公開名"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/controller/admin/users.php:418
-#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/rewards/list.html.php:23
-msgid "User"
-msgstr "ユーザー"
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/users/add.html.php:28
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/users/edit.html.php:36
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/users/impersonate.html.php:34
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/users/list.html.php:193
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/users/manage.html.php:34
+msgid "User ID"
+msgstr "ユーザーID"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/controller/admin/users.php:419
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/invests/report.html.php:89
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/invests/report.html.php:123
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/invests/report.html.php:143
 msgid "Cantidad"
-msgstr "数量"
+msgstr "支援金額"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/controller/cron/daily.php:319
 #, fuzzy, php-format
@@ -2399,19 +2402,19 @@ msgstr "これを送信"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/model/invest.php:1009
 msgid "Incompleto"
-msgstr "完了していません"
+msgstr "処理未完了"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/model/invest.php:1010
 msgid "Preaprobado"
-msgstr "事前承認の"
+msgstr "決済待ち（予約中）"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/model/invest.php:1011
 msgid "Cobrado"
-msgstr "受け取る"
+msgstr "決済完了"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/model/invest.php:1012
 msgid "Cancelado"
-msgstr "キャンセル済み"
+msgstr "キャンセル"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/model/invest.php:1013
 msgid "Pagado al proyecto"
@@ -2419,7 +2422,7 @@ msgstr "支払われたプロジェクト"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/model/invest.php:1014
 msgid "Archivado (devuelto)"
-msgstr "アーカイブされた（戻ってきた）"
+msgstr "プロジェクト不成立（未決済）"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/model/invest.php:1015
 msgid "Reubicado"
@@ -2437,7 +2440,7 @@ msgstr "カード"
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/accounts/list.html.php:123
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/invests/list.html.php:124
 msgid "Manual"
-msgstr "マニュアル"
+msgstr "現金"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/model/invest.php:1086
 msgid "El aporte PayPal"
@@ -2765,7 +2768,7 @@ msgstr "セーブできませんでした"
 msgid "No se ha podido quitar la web "
 msgstr "ウェブを削除できませんでした"
 
-#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/edit.html.php:56
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/edit.html.php:67
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/banners/edit.html.php:58
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/criteria/edit.html.php:81
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/faq/edit.html.php:80
@@ -2783,28 +2786,28 @@ msgstr "ウェブを削除できませんでした"
 msgid "Guardar"
 msgstr "登録"
 
-#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/index.html.php:102
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/index.html.php:103
 msgid "Tareas pendientes"
 msgstr "保留中のタスク"
 
-#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/index.html.php:107
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/index.html.php:108
 msgid "IR"
 msgstr "IR"
 
-#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/index.html.php:113
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/index.html.php:114
 msgid "No tienes tareas pendientes"
 msgstr "保留はありません"
 
-#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/index.html.php:137
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/index.html.php:138
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/recent/list.html.php:24
 msgid "actividad reciente"
 msgstr "最新のアクティビティ"
 
-#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/index.html.php:138
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/index.html.php:139
 msgid "Ver Feeds por:"
 msgstr "フィードを絞り込む:"
 
-#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/index.html.php:157
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/index.html.php:158
 msgid "Ver más"
 msgstr "もっと見る"
 
@@ -3184,8 +3187,8 @@ msgid "Visor de logs"
 msgstr "閲覧ログ"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/accounts/list.html.php:49
-msgid "Filtros"
-msgstr "フィルター"
+msgid "Support information"
+msgstr "支援情報検索"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/accounts/list.html.php:65
 msgid "Fecha desde"
@@ -4092,6 +4095,11 @@ msgstr "全ての一覧を表示する"
 msgid "Email"
 msgstr "Email"
 
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/newsletter/detail.html.php:77
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/newsletter/init.html.php:37
+msgid "Alias"
+msgstr "別名"
+
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/newsletter/init.html.php:30
 msgid "La newsletter está lista para enviar con "
 msgstr "ニュースレターを送信する準備ができました"
@@ -4679,6 +4687,10 @@ msgstr "報酬なし"
 msgid "Rewards Filtros"
 msgstr "お礼情報検索"
 
+#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/rewards/list.html.php:23
+msgid "User"
+msgstr "ユーザー"
+
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/rewards/list.html.php:28
 msgid "Mostrar por estado de recompensa"
 msgstr "お礼のステータス"
@@ -4851,22 +4863,10 @@ msgid "Idioma"
 msgstr "言語"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/users/add.html.php:28
-#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/users/edit.html.php:36
-#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/users/impersonate.html.php:34
-#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/users/list.html.php:193
-#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/users/manage.html.php:34
-msgid "User ID"
-msgstr "ユーザーID"
-
-#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/users/add.html.php:28
 msgid ""
 "Solo letras, números y guion '-'. Sin espacios ni tildes ni 'ñ' ni 'ç' ni "
 "otros caracteres que no sean letra, número o guión."
 msgstr "英数字とハイフンのみ使用できます"
-
-#: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/users/add.html.php:32
-msgid "Nombre público"
-msgstr "公開名"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/users/add.html.php:36
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/users/edit.html.php:54
@@ -4988,7 +4988,7 @@ msgstr "支援者の登録スキル"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/users/list.html.php:86
 msgid "Cualquier skill"
-msgstr "任意のスキル"
+msgstr "指定しない"
 
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/admin/users/list.html.php:101
 msgid "Ver por"
@@ -5209,6 +5209,9 @@ msgstr "レビュワーへのコメント: "
 #: C:\Users\USER\PhpstormProjects\localgood_goteo/view/review/reviews/summary.html.php:45
 msgid "Dar por terminada mi revisión"
 msgstr "このレビューを終了する"
+
+#~ msgid "Filtros"
+#~ msgstr "フィルター"
 
 #~ msgid "Textos"
 #~ msgstr "テキスト"

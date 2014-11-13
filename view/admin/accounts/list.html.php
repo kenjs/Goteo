@@ -46,7 +46,7 @@ $filters = $this['filters'];
 ); ?>
 <a href="/admin/accounts/viewer" class="button"><?php echo Text::_("Visor de logs"); ?></a>&nbsp;&nbsp;&nbsp;
 <div class="widget board">
-    <h3 class="title"><?php echo Text::_("Filtros"); ?></h3>
+    <h3 class="title"><?php echo Text::_("Support information"); ?></h3>
     <form id="filter-form" action="/admin/accounts" method="get">
         <input type="hidden" name="filtered" value="yes" />
         <input type="hidden" name="status" value="all" />

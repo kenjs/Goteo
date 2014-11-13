@@ -414,8 +414,8 @@ namespace Goteo\Controller\Admin {
                     );
                     $orders = array(
                         'created' => Text::_('Fecha de alta'),
-                        'name' => Text::_('Alias'),
-                        'id' => Text::_('User'),
+                        'name' => Text::_('Nombre público'),
+                        'id' => Text::_('User ID'),
                         'amount' => Text::_('Cantidad'),
                         'projects' => Text::_('Proyectos')
                     );
