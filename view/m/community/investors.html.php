@@ -30,7 +30,7 @@ uasort($investors,
         }
     );
 
-
+/* for_apps_review
 ?>
 <div class="widget user-supporters">
     <h3 class="supertitle"><?php echo Text::get('feed-side-top_ten') ?></h3>
@@ -46,5 +46,5 @@ uasort($investors,
     <div class="side-worthcracy">
     <?php include 'view/worth/base.html.php' ?>
     </div>
-    */ ?>
+    */ /* ?>
 </div>
