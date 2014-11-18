@@ -189,7 +189,7 @@ namespace Goteo\Controller {
                 //  (financiado a los 80 o cancelado si a los 40 no llega al minimo)
                 // si ha llegado a los 40 dias: mínimo-> ejecutar ; no minimo proyecto y todos los preapprovals cancelados
                 // (Funded at 80 or canceled if the 40 does not reach the minimum) 
-                 // If it has reached 40 days: minimum-> execute; no minimum project and canceled all preapprovals
+                // If it has reached 40 days: minimum-> execute; no minimum project and canceled all preapprovals
                 if ($days >= 40) {
                     // si no ha alcanzado el mínimo, pasa a estado caducado
                     // If you have not reached the minimum, goes into Expired
