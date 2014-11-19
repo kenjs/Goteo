@@ -199,8 +199,8 @@ $pagedResults = new \Paginated($this['projects'], 10, isset($_GET['page']) ? $_G
             </tr>
             <tr>
                 <td colspan="7">
-                    <?php if ($project->status == 3) : ?><a href="<?php echo "/admin/invests/csv/{$project->id}"; ?>">[AXES用の決済CSVをダウンロード]</a><?php endif; ?>
-                    <?php if ($project->status == 3) : ?><a href="<?php echo "/admin/invests/dopay/{$project->id}"; ?>" onclick="return confirm('AXES用の決済CSVの処理後に実行してください。実行してよろしいですか？');">[AXES用の決済CSVの処理後に実行]</a><?php endif; ?>
+                    <?php if (in_array($project->status,array(3,4))) : ?><a href="<?php echo "/admin/invests/csv/{$project->id}"; ?>">[AXES用の決済CSVをダウンロード]</a><?php endif; ?>
+                    <?php if (in_array($project->status,array(3,4))) : ?><a href="<?php echo "/admin/invests/dopay/{$project->id}"; ?>" onclick="return confirm('AXES用の決済CSVの処理後に実行してください。実行してよろしいですか？');">[AXES用の決済CSVの処理後に実行]</a><?php endif; ?>
                 </td>
             </tr>
         </tbody>
