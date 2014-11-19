@@ -28,7 +28,8 @@ $project = $this['project'];
 
 <div class="project-evaluation">
     <div class="widget post">
-        <h3 class="title">事後評価</h3>
+        <h3 class="title">プロジェクト評価</h3>
+
         <?php echo $project->evaluation;?>
     </div>
 </div>
