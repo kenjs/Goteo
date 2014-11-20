@@ -324,7 +324,7 @@ body.dashboard div#invests-list div.investor div.left span.pendiente{color:#f00;
 
 /* Custom checkbox in investors list*/
 body.dashboard div#invests-list div.investor div.left.username{
-    width:120px;
+    width:100px;
 }
 body.dashboard div#invests-list div.investor div.left.username span.amount {
     padding-right: 8px;

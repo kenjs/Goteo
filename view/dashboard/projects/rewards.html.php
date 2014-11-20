@@ -157,6 +157,13 @@ switch ($order) {
                     if ($filter == 'pending' && $cumplida != false) continue;
                     if ($filter == 'fulfilled' && $cumplida != true) continue;
                     if ($filter == 'resign' && $investData->resign != true) continue;
+
+                    //匿名判定
+                    if ($investData->anonymous):
+                        $invest_name = Text::get('regular-anonymous');
+                    else:
+                        $invest_name = Text::shorten($investData->user->name,15);
+                    endif;
                     ?>
 
                     <div class="investor">
@@ -166,10 +173,10 @@ switch ($order) {
                         </div>
 
                         <div class="left username">
-                            <span><a href="/user/<?php echo $investData->user->id; ?>"><?php echo Text::shorten($investData->user->name,15); ?></a></span>
+                            <span><a href="/user/<?php echo $investData->user->id; ?>"><?php echo $invest_name; ?></a></span>
                             <label class="amount"><?= Text::get('invests-list-contribution'); ?><?php if ($investData->anonymous) echo ' <strong>'.  Text::get('regular-anonymous').'</strong>'; ?></label>
                             <span class="amount">&yen; <?php echo $investData->amount; ?></span>
-                            <span class="date"><?php echo date('d-m-Y', strtotime($investData->invested)); ?></span>
+                            <span class="date"><?php echo date('Y-m-d', strtotime($investData->invested)); ?></span>
                         </div>
 
                         <div class="left recompensas">
@@ -185,7 +192,7 @@ switch ($order) {
 
                         <div class="left name">
                             <span><strong>氏名(本名)</strong></span>
-                            <span><?= $project->contract_name; ?></span>
+                            <span><?= $investData->user->name; ?></span>
                         </div>
 
                         <div class="left address">
