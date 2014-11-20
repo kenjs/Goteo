@@ -127,4 +127,4 @@ $minimum_ratio =  min(100, round(($minimum / $optimum) * 100));
         <div class="keepiton"><?php echo Text::get('regular-keepiton') ?></div>
     <?php endif; */ ?>
 
-    </div> 
+    </div>

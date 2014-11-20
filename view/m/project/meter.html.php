@@ -113,17 +113,18 @@ $minimum_ratio =  min(100, round(($minimum / $optimum) * 100));
 
         </dl>
 
-        <?php if ($activable) : ?>
-        <div class="obtained">
-            <strong><?php echo \amount_format($reached) ?> <span>円</span></strong>
-            <span class="percent"><?php echo number_format($minimum_done_per) ?>%</span>
-        </div>
-        <?php endif; ?>
-
     <?php /*
     // si en estado 3 ha alcanzado el optimo o segunda ronda, "aun puedes seguir aportando" junto al quedan tantos días
     if ($project->status == 3 && ($project->round == 2  || $project->amount >= $project->maxcost || ($project->round == 1  && $project->amount >= $project->mincost) )) : ?>
         <div class="keepiton"><?php echo Text::get('regular-keepiton') ?></div>
     <?php endif; */ ?>
 
-    </div> 
+    </div>
+
+<?php if ($activable) : ?>
+    <div class="obtained">
+        <strong><?php echo \amount_format($reached) ?> <span>円</span></strong>
+        <span class="percent"><?php echo number_format($minimum_done_per) ?>%</span>
+    </div>
+<?php endif; ?>
+
