@@ -197,6 +197,12 @@ $pagedResults = new \Paginated($this['projects'], 10, isset($_GET['page']) ? $_G
                     <?php if ($project->status < 3) : ?><a href="<?php echo "/admin/projects/reject/{$project->id}"; ?>" onclick="return confirm('<?php echo Text::_("Se va a enviar un mail automáticamente pero no cambiará el estado, ok?"); ?>');">[<?php echo Text::_("Rechazo express"); ?>]</a><?php endif; ?>
                 </td>
             </tr>
+            <tr>
+                <td colspan="7">
+                    <?php if (in_array($project->status,array(3,4))) : ?><a href="<?php echo "/admin/invests/csv/{$project->id}"; ?>">[AXES用の決済CSVをダウンロード]</a><?php endif; ?>
+                    <?php if (in_array($project->status,array(3,4))) : ?><a href="<?php echo "/admin/invests/dopay/{$project->id}"; ?>" onclick="return confirm('AXES用の決済CSVの処理後に実行してください。実行してよろしいですか？');">[AXES用の決済CSVの処理後に実行]</a><?php endif; ?>
+                </td>
+            </tr>
         </tbody>
 
     </table>

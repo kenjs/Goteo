@@ -53,6 +53,53 @@ namespace Goteo\Controller\Admin {
                 'campaign' => 'Solo con riego',
             );
 
+            if($action == 'csv'){
+                $invest = Model\Invest::getPreapproval($id);
+                foreach ($invest as $value){
+                    $csv[] = array($value->id,$value->amount);
+                }
+                $fileName = "axes_" . date("YmdHis") . ".csv";
+
+                header("Content-Disposition: attachment; filename=\"$filename\"");
+                header("Content-type: application/octet-stream");
+                header("Pragma: no-cache");
+                header("Expires: 0");
+                $fp= fopen('php://output', 'w');
+                foreach ($csv as $fields) fputcsv($fp, $fields);
+                fclose($fp);
+                exit;
+            }
+            if ($action == 'dopay') {
+                $query = \Goteo\Core\Model::query("
+                    SELECT  *
+                    FROM  invest
+                    WHERE   invest.project = ?
+                    AND     (invest.status = 0
+                        OR (invest.method = 'tpv'
+                            AND invest.status = 1
+                        )
+                        OR (invest.method = 'cash'
+                            AND invest.status = 1
+                        )
+                    )
+                    AND (invest.campaign IS NULL OR invest.campaign = 0)
+                    ", array($id));
+                $invests = $query->fetchAll(\PDO::FETCH_CLASS, '\Goteo\Model\Invest');
+
+                foreach ($invests as $key=>$invest) {
+                    if ($invest->setPayment(date("YmdHis"))) {
+                        $invest->setStatus(1);
+                        Model\Invest::setDetail($invest->id, 'executed', 'Preapproval has been executed, has initiated the chained payment. Process cron / execute');
+                        if ($invest->issue) {
+                            Model\Invest::unsetIssue($invest->id);
+                            Model\Invest::setDetail($invest->id, 'issue-solved', 'The incidence has been resolved upon success by the automatic process');
+                        }
+                    }
+                }
+                Message::Info("処理しました");
+                throw new Redirection('/admin/projects/list');
+                exit;
+            }
 
             // detalles del aporte
             if ($action == 'details') {

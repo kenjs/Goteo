@@ -161,7 +161,9 @@ namespace Goteo\Controller {
                     'label' => Text::_('Aportes'),
                     'actions' => array(
                         'list' => array('label' => Text::_('Listando'), 'item' => false),
-                        'details' => array('label' => Text::_('Detalles del aporte'), 'item' => true)
+                        'details' => array('label' => Text::_('Detalles del aporte'), 'item' => true),
+                        'csv' => array('label' => 'csv', 'item' => false),
+                        'dopay' => array('label' => 'dopay', 'item' => false),
                     ),
                     'filters' => array('methods' => '', 'status' => 'all', 'investStatus' => 'all', 'projects' => '', 'name' => '', 'calls' => '', 'types' => '')
                 ),
@@ -396,6 +398,7 @@ namespace Goteo\Controller {
                 // a ver si puede estar aqui!
                 if ($BC['option'] != 'index') {
                     $puede = false;
+
                     foreach ($menu as $sCode => $section) {
                         if (isset($section['options'][$BC['option']])) {
                             $puede = true;
@@ -554,6 +557,7 @@ namespace Goteo\Controller {
             $labels['home'] = Text::_('Portada');
             $labels['texts'] = Text::_('Textos y Traducciones');
             $labels['services'] = Text::_('Servicios');
+            $labels['invests'] = Text::_('Invest');
 
             switch ($role) {
                 case 'supervisor':
@@ -637,6 +641,12 @@ namespace Goteo\Controller {
                                 'reviews' => $options['reviews'],
                                 'translates' => $options['translates'],
                                 'rewards' => $options['rewards'],
+                            )
+                        ),
+                        'invests' => array(
+                            'label' => $labels['invests'],
+                            'options' => array(
+                                'invests' => $options['invests']
                             )
                         ),
                         'users' => array(

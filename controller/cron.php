@@ -189,7 +189,7 @@ namespace Goteo\Controller {
                 //  (financiado a los 80 o cancelado si a los 40 no llega al minimo)
                 // si ha llegado a los 40 dias: mínimo-> ejecutar ; no minimo proyecto y todos los preapprovals cancelados
                 // (Funded at 80 or canceled if the 40 does not reach the minimum) 
-                 // If it has reached 40 days: minimum-> execute; no minimum project and canceled all preapprovals
+                // If it has reached 40 days: minimum-> execute; no minimum project and canceled all preapprovals
                 if ($days >= 40) {
                     // si no ha alcanzado el mínimo, pasa a estado caducado
                     // If you have not reached the minimum, goes into Expired
@@ -430,10 +430,10 @@ namespace Goteo\Controller {
                             if ($debug) echo 'Aporte ' . $invest->id . ' es de hoy.<br />';
                         } elseif ($invest->method != 'cash' && empty($invest->preapproval)) {
                             //si no tiene preaproval, cancelar
-                            echo 'Aporte ' . $invest->id . ' cancelado por no tener preapproval.<br />';
-                            $invest->cancel();
-                            Model\Invest::setDetail($invest->id, 'no-preapproval', 'Aporte cancelado porque no tiene preapproval. Proceso cron/execute');
-                            continue;
+                            //echo 'Aporte ' . $invest->id . ' cancelado por no tener preapproval.<br />';
+                            //$invest->cancel();
+                            //Model\Invest::setDetail($invest->id, 'no-preapproval', 'Aporte cancelado porque no tiene preapproval. Proceso cron/execute');
+                            //continue;
                         }
 
                         if ($cancelAll) {
@@ -447,6 +447,13 @@ namespace Goteo\Controller {
                                     } else {
                                         $txt_errors = implode('; ', $err);
                                         $log_text = Text::_("Ha fallado al cancelar el aporte de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores:") . $txt_errors;
+                                    }
+                                    break;
+                                case 'axes':
+                                    if ($invest->cancel(true)) {
+                                        $log_text = Text::_("Contribution is canceled");
+                                    } else{
+                                        $log_text = Text::_("Failed to cancel");
                                     }
                                     break;
                                 case 'tpv':
@@ -466,7 +473,7 @@ namespace Goteo\Controller {
                                         $log_text = Text::_("Ha fallado al cancelar el aporte manual de %s de %s (id: %s) al proyecto %s del dia %s. ");
                                     }
                                     break;
-                        }
+                            }
 
                             // Evento Feed admin
                             $log = new Feed();
@@ -493,6 +500,21 @@ namespace Goteo\Controller {
                             if ($debug) echo 'Ejecutando aporte '.$invest->id.' ['.$invest->method.']';
 
                             switch ($invest->method) {
+                                /* cronではなく管理画面から手動で(admin/invests/dopay)
+                                case 'axes':
+                                    $err = array();
+                                    if ($invest->setPayment(date("YmdHis"))) {
+                                        $invest->setStatus(1);
+                                        $log_text = Text::_("Has been executed under its %s %s contribution via Axes (id:%s) to the project %s %s of the day");
+                                        if ($debug) echo ' -> Ok';
+                                        Model\Invest::setDetail($invest->id, 'executed', 'Preapproval has been executed, has initiated the chained payment. Process cron / execute');
+                                        // si era incidencia la desmarcamos
+                                        if ($invest->issue) {
+                                            Model\Invest::unsetIssue($invest->id);
+                                            Model\Invest::setDetail($invest->id, 'issue-solved', 'The incidence has been resolved upon success by the automatic process');
+                                        }
+                                    }
+                                    break;*/
                                 case 'paypal':
                                     if (empty($projectAccount->paypal)) {
                                         if ($debug) echo '<br />El proyecto '.$project->name.' no tiene cuenta paypal.<br />';

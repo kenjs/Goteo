@@ -153,6 +153,22 @@ namespace Goteo\Model {
 
             return $invests;
         }
+        public static function getPreapproval ($project) {
+
+            $invests = array();
+            $query = static::query("
+                SELECT  *
+                FROM  invest
+                WHERE   invest.project = ?
+                AND invest.status IN ('0')
+                AND invest.payment IS NULL
+                ", array($project));
+            foreach ($query->fetchAll(\PDO::FETCH_CLASS, __CLASS__) as $invest) {
+                $invests[$invest->id] = $invest;
+            }
+
+            return $invests;
+        }
 
 
         /*
