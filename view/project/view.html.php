@@ -163,11 +163,11 @@ $bodyClass = 'project-show'; include 'view/prologue.html.php' ?>
                 echo new View('view/project/widget/investors.html.php', array('project' => $project));
             }
 
-            if (!empty($project->supports)) {
+            if (!empty($project->supports) && $show !='messages') {
                 echo new View('view/project/widget/collaborations.html.php', array('project' => $project));
             }
 
-            if ($show != 'rewards' && $show != 'messages') {
+            if ($show != 'rewards') {
                 echo new View('view/project/widget/rewards.html.php', array('project' => $project));
             }
 

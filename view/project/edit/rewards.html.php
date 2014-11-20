@@ -27,163 +27,10 @@ $project = $this['project'];
 $errors = $project->errors[$this['step']] ?: array();
 $okeys  = $project->okeys[$this['step']] ?: array();
 
-$social_rewards = array();
 $individual_rewards = array();
+$social_rewards = array();
 
 $txt_details = Text::get('regular-see_details');
-
-foreach ($project->social_rewards as $social_reward) {
-       
-    // a ver si es el que estamos editando o no
-    if (!empty($this["social_reward-{$social_reward->id}-edit"])) {
-                
-        $types = array();
-                        
-        foreach ($this['stypes'] as $type) {
-            
-            $licenses = array();
-
-            if (!empty($type->licenses)) {
-                foreach ($type->licenses as $lid => $license) {
-
-                    if (!empty($license->url)) {
-                        $url = ' <a href="'.$license->url.'" target="_blank" class="license-hint-details">'.$txt_details.'</a>';
-                    } else {
-                        $url = '';
-                    }
-
-                    $licenses["social_reward-{$social_reward->id}-license-{$license->id}"] = array(
-                        'name'  => "social_reward-{$social_reward->id}-{$type->id}-license",
-                        'label' => $license->name,
-                        'value' => $license->id,
-                        'type'  => 'radio',
-                        'class' => 'license license_' . $license->id,
-                        'hint'  => $license->description .  $url,
-                        'id'    => "social_reward-{$social_reward->id}-license-{$license->id}",
-                        'checked' => $license->id == $social_reward->license ? true : false
-                    );
-
-                }
-            }
-
-            if ($type->id == 'other') {
-                // un campo para especificar el tipo
-                $children = array(
-                    "social_reward-{$social_reward->id}-other" => array(
-                        'type'      => 'textbox',
-                        'class'     => 'inline other',
-                        'title'     => Text::get('rewards-field-social_reward-other'),
-                        'value'     => $social_reward->other,
-                        'name'      => "social_reward-{$social_reward->id}-{$type->id}",
-                        //'hint'      => Text::get('tooltip-project-social_reward-icon-other')
-                    )
-                );
-            } elseif (!empty($licenses)) {
-                $children = array(
-                    "social_reward-{$social_reward->id}-license" => array(
-                        'type'      => 'group',
-                        'class'     => 'license',
-                        'title'     => Text::get('rewards-field-social_reward-license'),
-                        'children'  => $licenses,
-                        'value'     => $social_reward->license,
-                        'name'      => "social_reward-{$social_reward->id}-{$type->id}-license"
-                    )
-                );
-            } else {
-                $children = array(
-                    "social_reward-{$social_reward->id}-license" => array(
-                        'type' => 'hidden',
-                        'name' => "social_reward-{$social_reward->id}-{$type->id}-license"
-                    )
-                );
-            }
-
-
-            $types["social_reward-{$social_reward->id}-icon-{$type->id}"] =  array(
-                'name'  => "social_reward-{$social_reward->id}-icon",
-                'value' => $type->id,
-                'type'  => 'radio',
-                'class' => "social_reward-type reward-type reward_{$type->id} social_{$type->id}",
-                'label' => $type->name,
-                //'hint'  => $type->description,
-                'id'    => "social_reward-{$social_reward->id}-icon-{$type->id}",
-                'checked' => $type->id == $social_reward->icon ? true : false,
-                'children' => $children
-            );
-                
-        }                       
-        
-        // a este grupo le ponemos estilo de edicion
-        $social_rewards["social_reward-{$social_reward->id}"] = array(
-                'type'      => 'group',
-                'class'     => 'reward social_reward editsocial_reward',
-                'children'  => array(
-                    "social_reward-{$social_reward->id}-edit" => array(
-                        'type'      => 'hidden',
-                        'value'     => '1'
-                    ),
-                    "social_reward-{$social_reward->id}-reward" => array(
-                        'title'     => Text::get('rewards-field-social_reward-reward'),
-                        'type'      => 'textbox',
-                        'required'  => true,
-                        'class'     => 'inline',
-                        'value'     => $social_reward->reward,
-                        'errors'    => !empty($errors["social_reward-{$social_reward->id}-reward"]) ? array($errors["social_reward-{$social_reward->id}-reward"]) : array(),
-                        'ok'        => !empty($okeys["social_reward-{$social_reward->id}-reward"]) ? array($okeys["social_reward-{$social_reward->id}-reward"]) : array(),
-                        //'hint'      => Text::get('tooltip-project-social_reward-reward')
-                    ),
-                    "social_reward-{$social_reward->id}-description" => array(
-                        'type'      => 'textarea',
-                        'required'  => true,
-                        'title'     => Text::get('rewards-field-social_reward-description'),
-                        'cols'      => 100,
-                        'rows'      => 4,
-                        'class'     => 'inline reward-description',
-                        'value'     => $social_reward->description,
-                        'errors'    => !empty($errors["social_reward-{$social_reward->id}-description"]) ? array($errors["social_reward-{$social_reward->id}-description"]) : array(),
-                        'ok'        => !empty($okeys["social_reward-{$social_reward->id}-description"]) ? array($okeys["social_reward-{$social_reward->id}-description"]) : array(),
-                        //'hint'      => Text::get('tooltip-project-social_reward-description')
-                    ),
-                    "social_reward-{$social_reward->id}-icon" => array(
-                        'title'     => Text::get('rewards-field-social_reward-type'),
-                        'class'     => 'inline',
-                        'type'      => 'group',
-                        'required'  => true,
-                        'children'  => $types,
-                        'value'     => $social_reward->icon,
-                        'errors'    => !empty($errors["social_reward-{$social_reward->id}-icon"]) ? array($errors["social_reward-{$social_reward->id}-icon"]) : array(),
-                        'ok'        => !empty($okeys["social_reward-{$social_reward->id}-icon"]) ? array($okeys["social_reward-{$social_reward->id}-icon"]) : array(),
-                        // 'hint'      => Text::get('tooltip-project-social_reward-type')
-                    ),                    
-                    "social_reward-{$social_reward->id}-buttons" => array(
-                        'type' => 'group',
-                        'class' => 'buttons',
-                        'children' => array(
-                            "social_reward-{$social_reward->id}-ok" => array(
-                                'type'  => 'submit',
-                                'label' => Text::get('form-accept-button'),
-                                'class' => 'inline ok'
-                            ),
-                            "social_reward-{$social_reward->id}-remove" => array(
-                                'type'  => 'submit',
-                                'label' => Text::get('form-remove-button'),
-                                'class' => 'inline remove weak'
-                            )
-                        )
-                    )
-                )
-            );
-    } else {
-
-        $social_rewards["social_reward-{$social_reward->id}"] = array(
-            'class'     => 'reward social_reward',
-            'view'      => 'view/project/edit/rewards/reward.html.php',
-            'data'      => array('reward' => $social_reward, 'licenses' => $this['licenses'], 'types' => $this['stypes']),
-        );
-        
-    }
-
-}
 
 foreach ($project->individual_rewards as $individual_reward) {
 
@@ -322,6 +169,159 @@ foreach ($project->individual_rewards as $individual_reward) {
     }
 }
 
+foreach ($project->social_rewards as $social_reward) {
+
+    // a ver si es el que estamos editando o no
+    if (!empty($this["social_reward-{$social_reward->id}-edit"])) {
+
+        $types = array();
+
+        foreach ($this['stypes'] as $type) {
+
+            $licenses = array();
+
+            if (!empty($type->licenses)) {
+                foreach ($type->licenses as $lid => $license) {
+
+                    if (!empty($license->url)) {
+                        $url = ' <a href="'.$license->url.'" target="_blank" class="license-hint-details">'.$txt_details.'</a>';
+                    } else {
+                        $url = '';
+                    }
+
+                    $licenses["social_reward-{$social_reward->id}-license-{$license->id}"] = array(
+                        'name'  => "social_reward-{$social_reward->id}-{$type->id}-license",
+                        'label' => $license->name,
+                        'value' => $license->id,
+                        'type'  => 'radio',
+                        'class' => 'license license_' . $license->id,
+                        'hint'  => $license->description .  $url,
+                        'id'    => "social_reward-{$social_reward->id}-license-{$license->id}",
+                        'checked' => $license->id == $social_reward->license ? true : false
+                    );
+
+                }
+            }
+
+            if ($type->id == 'other') {
+                // un campo para especificar el tipo
+                $children = array(
+                    "social_reward-{$social_reward->id}-other" => array(
+                        'type'      => 'textbox',
+                        'class'     => 'inline other',
+                        'title'     => Text::get('rewards-field-social_reward-other'),
+                        'value'     => $social_reward->other,
+                        'name'      => "social_reward-{$social_reward->id}-{$type->id}",
+                        //'hint'      => Text::get('tooltip-project-social_reward-icon-other')
+                    )
+                );
+            } elseif (!empty($licenses)) {
+                $children = array(
+                    "social_reward-{$social_reward->id}-license" => array(
+                        'type'      => 'group',
+                        'class'     => 'license',
+                        'title'     => Text::get('rewards-field-social_reward-license'),
+                        'children'  => $licenses,
+                        'value'     => $social_reward->license,
+                        'name'      => "social_reward-{$social_reward->id}-{$type->id}-license"
+                    )
+                );
+            } else {
+                $children = array(
+                    "social_reward-{$social_reward->id}-license" => array(
+                        'type' => 'hidden',
+                        'name' => "social_reward-{$social_reward->id}-{$type->id}-license"
+                    )
+                );
+            }
+
+
+            $types["social_reward-{$social_reward->id}-icon-{$type->id}"] =  array(
+                'name'  => "social_reward-{$social_reward->id}-icon",
+                'value' => $type->id,
+                'type'  => 'radio',
+                'class' => "social_reward-type reward-type reward_{$type->id} social_{$type->id}",
+                'label' => $type->name,
+                //'hint'  => $type->description,
+                'id'    => "social_reward-{$social_reward->id}-icon-{$type->id}",
+                'checked' => $type->id == $social_reward->icon ? true : false,
+                'children' => $children
+            );
+
+        }
+
+        // a este grupo le ponemos estilo de edicion
+        $social_rewards["social_reward-{$social_reward->id}"] = array(
+            'type'      => 'group',
+            'class'     => 'reward social_reward editsocial_reward',
+            'children'  => array(
+                "social_reward-{$social_reward->id}-edit" => array(
+                    'type'      => 'hidden',
+                    'value'     => '1'
+                ),
+                "social_reward-{$social_reward->id}-reward" => array(
+                    'title'     => Text::get('rewards-field-social_reward-reward'),
+                    'type'      => 'textbox',
+                    'required'  => true,
+                    'class'     => 'inline',
+                    'value'     => $social_reward->reward,
+                    'errors'    => !empty($errors["social_reward-{$social_reward->id}-reward"]) ? array($errors["social_reward-{$social_reward->id}-reward"]) : array(),
+                    'ok'        => !empty($okeys["social_reward-{$social_reward->id}-reward"]) ? array($okeys["social_reward-{$social_reward->id}-reward"]) : array(),
+                    //'hint'      => Text::get('tooltip-project-social_reward-reward')
+                ),
+                "social_reward-{$social_reward->id}-description" => array(
+                    'type'      => 'textarea',
+                    'required'  => true,
+                    'title'     => Text::get('rewards-field-social_reward-description'),
+                    'cols'      => 100,
+                    'rows'      => 4,
+                    'class'     => 'inline reward-description',
+                    'value'     => $social_reward->description,
+                    'errors'    => !empty($errors["social_reward-{$social_reward->id}-description"]) ? array($errors["social_reward-{$social_reward->id}-description"]) : array(),
+                    'ok'        => !empty($okeys["social_reward-{$social_reward->id}-description"]) ? array($okeys["social_reward-{$social_reward->id}-description"]) : array(),
+                    //'hint'      => Text::get('tooltip-project-social_reward-description')
+                ),
+                "social_reward-{$social_reward->id}-icon" => array(
+                    'title'     => Text::get('rewards-field-social_reward-type'),
+                    'class'     => 'inline',
+                    'type'      => 'group',
+                    'required'  => true,
+                    'children'  => $types,
+                    'value'     => $social_reward->icon,
+                    'errors'    => !empty($errors["social_reward-{$social_reward->id}-icon"]) ? array($errors["social_reward-{$social_reward->id}-icon"]) : array(),
+                    'ok'        => !empty($okeys["social_reward-{$social_reward->id}-icon"]) ? array($okeys["social_reward-{$social_reward->id}-icon"]) : array(),
+                    // 'hint'      => Text::get('tooltip-project-social_reward-type')
+                ),
+                "social_reward-{$social_reward->id}-buttons" => array(
+                    'type' => 'group',
+                    'class' => 'buttons',
+                    'children' => array(
+                        "social_reward-{$social_reward->id}-ok" => array(
+                            'type'  => 'submit',
+                            'label' => Text::get('form-accept-button'),
+                            'class' => 'inline ok'
+                        ),
+                        "social_reward-{$social_reward->id}-remove" => array(
+                            'type'  => 'submit',
+                            'label' => Text::get('form-remove-button'),
+                            'class' => 'inline remove weak'
+                        )
+                    )
+                )
+            )
+        );
+    } else {
+
+        $social_rewards["social_reward-{$social_reward->id}"] = array(
+            'class'     => 'reward social_reward',
+            'view'      => 'view/project/edit/rewards/reward.html.php',
+            'data'      => array('reward' => $social_reward, 'licenses' => $this['licenses'], 'types' => $this['stypes']),
+        );
+
+    }
+
+}
+
 $sfid = 'sf-project-rewards';
 
 echo new SuperForm(array(
@@ -337,23 +337,6 @@ echo new SuperForm(array(
         'process_rewards' => array (
             'type' => 'hidden',
             'value' => 'rewards'
-        ),
-        
-        'social_rewards' => array(
-            'type'      => 'group',
-            'required'  => true,
-            'title'     => Text::get('rewards-fields-social_reward-title'),
-           // 'hint'      => Text::get('tooltip-project-social_rewards'),
-            'class'     => 'rewards',
-            'errors'    => !empty($errors["social_rewards"]) ? array($errors["social_rewards"]) : array(),
-            'ok'        => !empty($okeys["social_rewards"]) ? array($okeys["social_rewards"]) : array(),
-            'children'  => $social_rewards + array(
-                'social_reward-add' => array(
-                    'type'  => 'submit',
-                    'label' => Text::get('form-add-button'),
-                    'class' => 'add reward-add red',
-                )
-            )
         ),
         
         'individual_rewards' => array(
@@ -372,7 +355,24 @@ echo new SuperForm(array(
                 )
             )
         ),
-        
+
+        'social_rewards' => array(
+            'type'      => 'group',
+            'required'  => true,
+            'title'     => Text::get('rewards-fields-social_reward-title'),
+            // 'hint'      => Text::get('tooltip-project-social_rewards'),
+            'class'     => 'rewards',
+            'errors'    => !empty($errors["social_rewards"]) ? array($errors["social_rewards"]) : array(),
+            'ok'        => !empty($okeys["social_rewards"]) ? array($okeys["social_rewards"]) : array(),
+            'children'  => $social_rewards + array(
+                    'social_reward-add' => array(
+                        'type'  => 'submit',
+                        'label' => Text::get('form-add-button'),
+                        'class' => 'add reward-add red',
+                    )
+                )
+        ),
+
         'footer' => array(
             'type'      => 'group',
             'children'  => array(

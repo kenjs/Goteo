@@ -46,6 +46,39 @@ uasort($project->individual_rewards,
     <h<?php echo $level + 1 ?> class="supertitle"><?php echo Text::get('project-rewards-supertitle'); ?></h<?php echo $level + 1?>>
 
     <div class="project-widget-box">
+
+        <?php if (!empty($project->individual_rewards)) : ?>
+            <div class="individual">
+                <h<?php echo $level+1 ?> class="title"><?php echo Text::get('project-rewards-individual_reward-title'); ?></h<?php echo $level+1 ?>>
+                <ul>
+                    <?php foreach ($project->individual_rewards as $individual) : ?>
+
+                        <li class="<?php echo $individual->icon ?>">
+                            <?/*<div class="title">*/?>
+                            <div class="amount"><?php echo Text::get('regular-investing'); ?> <span><?php echo \amount_format($individual->amount); ?>円</span></div>
+                            <h<?php echo $level + 1 ?> class="name"><?php echo htmlspecialchars($individual->reward) ?></h<?php echo $level + 1 ?>>
+                            <?/*</div>*/?>
+                            <p><?php echo nl2br(htmlspecialchars($individual->description))?></p>
+
+                            <div class="buttons">
+                                <a class="button violet supportit" href="/project/<?php echo $project->id; ?>/invest"><?php echo Text::get('regular-invest_it'); ?></a>
+                            </div>
+
+
+                            <?/*php if (!empty($individual->units)) : ?>
+                    <strong><?php echo Text::get('project-rewards-individual_reward-limited'); ?></strong><br />
+                    <?php $units = ($individual->units - $individual->taken);
+                    echo Text::html('project-rewards-individual_reward-units_left', $units); ?><br />
+                <?php endif; ?>
+                <div class="investors"><span class="taken"><?php echo $individual->taken; ?></span><?php echo Text::get('project-view-metter-investors'); ?></div>
+*/?>
+
+                        </li>
+                    <?php endforeach ?>
+                </ul>
+            </div>
+        <?php endif; ?>
+
         <?php if (!empty($project->social_rewards)) : ?>
         <div class="social">
             <h<?php echo $level + 1 ?> class="title"><?php echo Text::get('project-rewards-social_reward-title'); ?></h<?php echo $level + 1 ?>>
@@ -71,34 +104,7 @@ uasort($project->individual_rewards,
             </ul>
         </div>
         <?php endif; ?>
-            
-        <?php if (!empty($project->individual_rewards)) : ?>
-        <div class="individual">
-            <h<?php echo $level+1 ?> class="title"><?php echo Text::get('project-rewards-individual_reward-title'); ?></h<?php echo $level+1 ?>>
-            <ul>
-            <?php foreach ($project->individual_rewards as $individual) : ?>
 
-                <li class="<?php echo $individual->icon ?>">
-                    <?/*<div class="title">*/?>
-                <div class="amount"><?php echo Text::get('regular-investing'); ?> <span><?php echo \amount_format($individual->amount); ?>円</span></div>
-                <h<?php echo $level + 1 ?> class="name"><?php echo htmlspecialchars($individual->reward) ?></h<?php echo $level + 1 ?>>
-                    <?/*</div>*/?>
-                <p><?php echo nl2br(htmlspecialchars($individual->description))?></p>
-
-                    <?/*php if (!empty($individual->units)) : ?>
-                    <strong><?php echo Text::get('project-rewards-individual_reward-limited'); ?></strong><br />
-                    <?php $units = ($individual->units - $individual->taken); 
-                    echo Text::html('project-rewards-individual_reward-units_left', $units); ?><br />
-                <?php endif; ?>
-                <div class="investors"><span class="taken"><?php echo $individual->taken; ?></span><?php echo Text::get('project-view-metter-investors'); ?></div>
-*/?>
-
-            </li>
-            <?php endforeach ?>
-            </ul>
-        </div>
-        <?php endif; ?>
-        
         <a class="more" href="/project/<?php echo $project->id; ?>/rewards"><?php echo Text::get('regular-see_more'); ?></a>
     </div>
     

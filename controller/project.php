@@ -331,9 +331,9 @@ namespace Goteo\Controller {
                     break;
 
                 case 'rewards':
-                    $viewData['stypes'] = Model\Project\Reward::icons('social');
                     $viewData['itypes'] = Model\Project\Reward::icons('individual');
-                    $viewData['licenses'] = Model\Project\Reward::licenses();                                                                                
+                    $viewData['stypes'] = Model\Project\Reward::icons('social');
+                    $viewData['licenses'] = Model\Project\Reward::licenses();
 //                    $viewData['types'] = Model\Project\Support::types();
                     
                     if ($_POST) {
@@ -876,27 +876,6 @@ namespace Goteo\Controller {
 
             $types = Model\Project\Reward::icons('');
 
-            //tratar retornos sociales
-            foreach ($project->social_rewards as $k => $reward) {
-                
-                if (!empty($_POST["social_reward-{$reward->id}-remove"])) {
-                    unset($project->social_rewards[$k]);
-                    continue;
-                }
-
-                if (isset($_POST['social_reward-' . $reward->id . '-reward'])) {
-                    $reward->reward = $_POST['social_reward-' . $reward->id . '-reward'];
-                    $reward->description = $_POST['social_reward-' . $reward->id . '-description'];
-                    $reward->icon = $_POST['social_reward-' . $reward->id . '-icon'];
-                    if ($reward->icon == 'other') {
-                        $reward->other = $_POST['social_reward-' . $reward->id . '-other'];
-                    }
-                    $reward->license = $_POST['social_reward-' . $reward->id . '-' . $reward->icon . '-license'];
-                    $reward->icon_name = $types[$reward->icon]->name;
-                }
-                
-            }
-
             // retornos individuales
             foreach ($project->individual_rewards as $k => $reward) {
                 
@@ -919,18 +898,28 @@ namespace Goteo\Controller {
                 
             }
 
-            // tratar nuevos retornos
-            if (!empty($_POST['social_reward-add'])) {
-                $project->social_rewards[] = new Model\Project\Reward(array(
-                    'type'      => 'social',
-                    'project'   => $project->id,
-                    'reward'    => '',
-                    'icon'      => '',
-                    'license'   => ''
+            //tratar retornos sociales
+            foreach ($project->social_rewards as $k => $reward) {
 
-                ));
+                if (!empty($_POST["social_reward-{$reward->id}-remove"])) {
+                    unset($project->social_rewards[$k]);
+                    continue;
+                }
+
+                if (isset($_POST['social_reward-' . $reward->id . '-reward'])) {
+                    $reward->reward = $_POST['social_reward-' . $reward->id . '-reward'];
+                    $reward->description = $_POST['social_reward-' . $reward->id . '-description'];
+                    $reward->icon = $_POST['social_reward-' . $reward->id . '-icon'];
+                    if ($reward->icon == 'other') {
+                        $reward->other = $_POST['social_reward-' . $reward->id . '-other'];
+                    }
+                    $reward->license = $_POST['social_reward-' . $reward->id . '-' . $reward->icon . '-license'];
+                    $reward->icon_name = $types[$reward->icon]->name;
+                }
+
             }
-            
+
+            // tratar nuevos retornos
             if (!empty($_POST['individual_reward-add'])) {
                 $project->individual_rewards[] = new Model\Project\Reward(array(
                     'type'      => 'individual',
@@ -939,6 +928,17 @@ namespace Goteo\Controller {
                     'icon'      => '',
                     'amount'    => '',
                     'units'     => ''
+                ));
+            }
+
+            if (!empty($_POST['social_reward-add'])) {
+                $project->social_rewards[] = new Model\Project\Reward(array(
+                    'type'      => 'social',
+                    'project'   => $project->id,
+                    'reward'    => '',
+                    'icon'      => '',
+                    'license'   => ''
+
                 ));
             }
 

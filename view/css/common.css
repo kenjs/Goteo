@@ -146,28 +146,33 @@ input.edit[type="submit"] {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea2f2c', endColorstr='#b5161e',GradientType=0 );
 }
 
-/*div.side input[type="submit"],
-div.side input[type="reset"],
-div.side button,*/
 div.side div.widget.project-support a.button,
 div.side div.widget.project-collaborations a.button,
 div.side div.widget.user a.button,
-div.project-preview div.widget a.button {
-    width: 160px;
+div.project-preview div.widget a.button,
+div.side div.widget.project-rewards a.button,
+div.center div.widget.project-rewards-summary a.button {
     height: 30px;
     line-height: 30px;
-    display: block;
-    margin: 10px auto;
 }
 
+div.side div.widget.project-support a.button,
+div.side div.widget.project-collaborations a.button,
+div.side div.widget.user a.button,
+div.side div.widget.project-rewards a.button,
+div.project-preview div.widget a.button {
+    width: 160px;
+    margin: 10px auto;
+    display: block;
+}
 
-/*div.side div.widget a.more {
-    top: 0;
-    padding: 0;
-    line-height: 38px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}*/
+div.side div.widget.project-support a.button,
+div.side div.widget.project-rewards a.button,
+div.center div.widget.project-rewards-summary a.button {
+    width: 182px;
+    padding-left: 8px!important;
+    padding-right: 8px!important;
+}
 
 button.green {
     width: 140px;

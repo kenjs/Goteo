@@ -21,7 +21,7 @@
 use Goteo\Core\View,
     Goteo\Library\Text,
     Goteo\Library\Worth;
-// var_dump($this);
+
 $user = $this['user'];
 
 $worthcracy = Worth::getAll();
@@ -36,6 +36,7 @@ $worthcracy = Worth::getAll();
     <div class="droped">&nbsp;</div>
     <?php endif; ?>
 	<div class="supporter">
+        <? var_dump($user->name); ?>
 		<span class="avatar"><img src="<?php echo $user->avatar->getLink(43, 43, true); ?>" /></span>
 	    <?php if ($user->user == 'anonymous') : ?>
 	    <h4><?php echo $user->name; ?></h4>

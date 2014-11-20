@@ -73,11 +73,14 @@ div.widget.project-rewards > div.individual ul li,
 }
 
 div.center #rewards-summary > div.individual ul li {
-    padding-top: 24px;
+    padding-top: 30px;
     background-position: 10px 36px;
 }
 div.center.rewards div.widget.project-rewards-summary div.individual ul li div.amount {
     top: -24px;
+}
+div.center #rewards-summary > div.individual ul li .buttons {
+    text-align: right;
 }
 
 div.side div.widget.project-invest > div.individual ul li,
@@ -107,7 +110,7 @@ div.widget.project-rewards > div.individual ul li div.amount,
     text-align: right;
     color: #96238F;
     position: relative;
-    top: -24px;
+    top: -30px;
     right: -10px;
 	text-transform:uppercase;
 	height: 28px;
@@ -198,7 +201,7 @@ div.widget.project-rewards ul li > .name,
 }
 div.center.rewards #rewards-summary ul li > .name {
     padding-left: 0;
-    width: 400px;
+    width: 540px;
 }
 
 
