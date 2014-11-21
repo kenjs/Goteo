@@ -125,7 +125,7 @@ if (isset($this['investor']) && is_object($this['investor'])) {
         <? endif; ?>
 
     <div class="description"><?php echo Text::shorten($project->description, 50); ?></div>
-    <?php echo new View('view/m/project/meter_hor.html.php', array('project' => $project)) ?>
+    <?php echo new View('view/project/meter_hor.html.php', array('project' => $project)) ?>
 
     <div class="rewards">
         <h<?php echo $level + 1 ?>><?php echo Text::get('project-rewards-header'); ?></h<?php echo $level + 1?>>
