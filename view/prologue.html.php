@@ -20,7 +20,8 @@
 
 use Goteo\Core\View,
     Goteo\Model\Image,
-    Goteo\Library\Text;
+    Goteo\Library\Text,
+    Goteo\Model\Blog\Post;
 
 //@NODESYS
 
@@ -63,6 +64,9 @@ if (!empty($this['posts'])) {
         }
     }
 }
+
+$blog_post = strpos($ogmeta['url'], '/updates');
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -77,7 +81,7 @@ if (!empty($this['posts'])) {
     <meta name="copyright" content="<?php echo GOTEO_META_COPYRIGHT ?>" />
     <meta name="robots" content="all" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <?php if (isset($ogmeta)) : ?>
+    <?php if (isset($ogmeta) && $blog_post === false): ?>
         <meta property="og:title" content="<?php echo $ogmeta['title'] ?>" />
         <? if($_SERVER['REQUEST_URI']=="/"): ?>
         <meta property="og:type" content="website" />
@@ -94,6 +98,19 @@ if (!empty($this['posts'])) {
             <meta property="og:image" content="<?php echo $ogmeta['image'] ?>" />
         <?php endif; ?>
         <meta property="og:url" content="<?php echo $ogmeta['url'] ?>" />
+        <meta property="og:locale" content="ja_JP" />
+        <meta property="fb:app_id" content="<?= OAUTH_FACEBOOK_ID ?>" />
+    <?php elseif (isset($ogmeta) && $blog_post): ?>
+        <? $_blog = Post::get($this['post'], LANG);
+        $blog_post = $this['blog'];
+        $blog_key = key($this['blog']->posts);
+        ?>
+        <meta property="og:title" content="<?php echo $blog_post->posts[$blog_key]->title . ' / ' . $ogmeta['title']; ?>" />
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="<?php echo $ogmeta['title'] ?>" />
+        <meta property="og:description" content="<?php echo mb_substr($blog_post->posts[$blog_key]->text, 0, 100).'...'; ?>" />
+        <meta property="og:image" content="<?php echo '/data/cache/' . $_blog->image->name ?>" />
+        <meta property="og:url" content="<?php echo htmlspecialchars($ogmeta['url']) ?>" />
         <meta property="og:locale" content="ja_JP" />
         <meta property="fb:app_id" content="<?= OAUTH_FACEBOOK_ID ?>" />
     <?php else : ?>
@@ -139,6 +156,7 @@ if (!empty($this['posts'])) {
 </head>
 
 <body id="page_top" <?php if (isset($bodyClass)) echo ' class="' . htmlspecialchars($bodyClass) . '"' ?>>
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
