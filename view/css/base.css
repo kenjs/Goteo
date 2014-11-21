@@ -83,11 +83,11 @@ header
     position: relative;
 }
 
-.header .logo_wrapper a.earth_view {
+/*.header .logo_wrapper a.earth_view {
     position: absolute;
     right: 8px;
     top: 16px;
-}
+}*/
 
 .header .logo_wrapper .catchcopy{
     position:absolute;

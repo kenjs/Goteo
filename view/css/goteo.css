@@ -120,8 +120,7 @@ div.widget .title{
     /*background: url("arrowH2-section.gif") no-repeat -5px -16px;*/
 }
 
-div.side div.widget h3.title,
-div.side div.widget h4.title{
+div.side div.widget .title {
     padding-left: 0;
 }
 
@@ -194,13 +193,19 @@ div.side div.widget.project-rewards ul li {
     padding-left: 0;
     margin-bottom: 20px;
 }
-div.side div.widget.project-collaborations ul li strong,
+div.side div.widget.project-collaborations ul li h6,
 div.side div.widget.project-rewards div.title h4.name {
     padding-left: 42px;
     display: inline-block;
     min-height: 32px;
     line-height: 16px;
 }
+div.side div.widget.project-collaborations ul li h6 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
 div.side div.widget.project-rewards div.individual div.title h4.name {
     /*padding-left: 42px;
     padding-left: 42px;*/

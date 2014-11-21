@@ -21,10 +21,6 @@ div.widget.project-schedule {
     padding-left: 0;
     padding-right: 0;
 }
-body.project-show div#main > div.center > div.widget.project-schedule {
-    max-width: 620px;
-}
-
 
 div.widget.project-schedule table {
     border-collapse: separate;

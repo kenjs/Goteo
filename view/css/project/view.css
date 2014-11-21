@@ -269,10 +269,12 @@ body.project-show div#main > div.side > div.widget .invest-notice{
 }
 
 body.project-show div#main > div.center > div.widget {
-    max-width: 580px;
+    max-width: 540px;
     margin-right: 20px;
     clear: left;
 	padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 body.project-show div#main > div.center > div.widget.project-summary:first-child {
@@ -281,12 +283,15 @@ body.project-show div#main > div.center > div.widget.project-summary:first-child
 body.project-show div#main > div.center > div.widget .gallery-image{
     text-align: center;
 }
-
+body.project-show div#main > div.center > div.widget .gallery-image img {
+    width: 540px;
+}
 body.project-show div#main > div.side > div.widget .title {
     background: none !important;
 }
-body.project-show div#main > div.side div.widget.project-collaborations h3.title {
+body.project-show div#main > div.side div.widget.project-collaborations h5.title {
     margin-bottom: 16px;
+    padding-left: 0;
 }
 
 

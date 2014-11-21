@@ -42,7 +42,7 @@ $project = $this['project'];
 		<div class="prjct-gallery-container">
 			<?php $i = 1; foreach ($project->gallery as $image) : ?>
 			<div class="gallery-image" id="gallery-image-<?php echo $i ?>">
-				<img src="<?php echo $image->getLink(580, 580); ?>" alt="<?php echo $project->name; ?>" />
+				<img src="<?php echo $image->getLink(540, 540); ?>" alt="<?php echo $project->name; ?>" />
 			</div>
 			<?php $i++; endforeach; ?>
 		</div>

@@ -26,7 +26,7 @@ div.widget.project-needs {
     position: relative;
 }
 body.project-show div#main > div.center > div.widget.project-needs {
-    max-width: 620px;
+    /*max-width: 540px;*/
     padding-bottom: 0;
 }
 
