@@ -23,6 +23,23 @@ use Goteo\Library\Text,
 //@NODESYS
 ?>
 
+<script>
+    var timer = false;
+    $(window).resize(function(){
+        if (timer !== false) {
+            clearTimeout(timer);
+        }
+        timer = setTimeout(function() {
+            var width = $(window).width();
+            if (width <= 1200) {
+                $('#header').children('.logo_wrapper').children('a').css('display','none');
+            } else {
+                $('#header').children('.logo_wrapper').children('a').css('display','block');
+            }
+        }, 200);
+    });
+</script>
+
 <?php // include 'view/header/lang.html.php' ?>
 
 <div id="header" class="header">
