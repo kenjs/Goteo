@@ -52,7 +52,7 @@ $filters = $this['filters'];
         <input type="hidden" name="status" value="all" />
         <?php foreach ($the_filters as $filter=>$data) : ?>
         <div style="float:left;margin:5px;">
-            <label for="<?php echo $filter ?>-filter"><?php echo $data['label'] ?></label><br />
+            <label for="<?php echo $filter ?>-filter"><?php echo $data['label'] ?></label>
             <select id="<?php echo $filter ?>-filter" name="<?php echo $filter ?>" onchange="document.getElementById('filter-form').submit();">
                 <option value="<?php if ($filter == 'investStatus' || $filter == 'status') echo 'all' ?>"<?php if (($filter == 'investStatus' || $filter == 'status') && $filters[$filter] == 'all') echo ' selected="selected"'?>><?php echo $data['first'] ?></option>
             <?php foreach ($this[$filter] as $itemId=>$itemName) : ?>
@@ -62,11 +62,11 @@ $filters = $this['filters'];
         </div>
         <?php endforeach; ?>
         <div style="float:left;margin:5px;">
-            <label for="date-filter-from"><?php echo Text::_("Fecha desde"); ?></label><br />
+            <label for="date-filter-from"><?php echo Text::_("Fecha desde"); ?></label>
             <input type="text" id ="date-filter-from" name="date_from" value ="" />
         </div>
         <div style="float:left;margin:5px;">
-            <label for="date-filter-until"><?php echo Text::_('Fecha hasta'); ?></label><br />
+            <label for="date-filter-until"><?php echo Text::_('Fecha hasta'); ?></label>
             <input type="text" id ="date-filter-until" name="date_until" value ="<?php echo date('Y-m-d') ?>" />
         </div>
         <div style="float:left;margin:5px;">

@@ -31,8 +31,10 @@ $user = $this['user'];
 $rewards = $invest->rewards;
 array_walk($rewards, function (&$reward) { $reward = $reward->reward; });
 ?>
+<?/*
 <a href="/admin/accounts/update/<?php echo $invest->id ?>" onclick="return confirm('<?php echo Text::_("Seguro que deseas cambiarle el estado a este aporte?, esto es delicado"); ?>')" class="button"><?php echo Text::_("Cambiarle el estado"); ?></a>
 &nbsp;&nbsp;&nbsp;
+*/?>
 <a href="/admin/rewards/edit/<?php echo $invest->id ?>" class="button"><?php echo Text::_("Gestionar recompensa / dirección"); ?></a>
 <?php if ($invest->issue) : ?>
 &nbsp;&nbsp;&nbsp;

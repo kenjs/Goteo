@@ -1028,7 +1028,7 @@ namespace Goteo\Model {
                 2  => Text::_('Cancelado'),
                 3  => Text::_('Pagado al proyecto'),
                 4  => Text::_('Archivado (devuelto)'),
-                5  => Text::_('Reubicado')
+                /*5  => Text::_('Reubicado')*/
             );
 
             if (isset($id)) {

@@ -369,3 +369,8 @@ body.admin div.admin-right.newsletter div.widget.board > table th.title {
 body.admin div.admin-right.projects div.widget p {
     margin: 0 0 8px 0;
 }
+
+/* accounts */
+body.admin div.admin-right.accounts div.widget form label {
+    display: block;
+}

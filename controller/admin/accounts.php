@@ -93,7 +93,7 @@ namespace Goteo\Controller\Admin {
 
                         // cambio estado del aporte original a 'Reubicado' (no aparece en cofinanciadores)
                         // si tuviera que aparecer lo marcaríamos como caducado
-                        if ($original->setStatus('5')) {
+                        /*if ($original->setStatus('5')) {
                             // Evento Feed
                             $log = new Feed();
                             $log->setTarget($projectData->id);
@@ -111,7 +111,7 @@ namespace Goteo\Controller\Admin {
                             throw new Redirection('/admin/accounts');
                         } else {
                             $errors[] = Text::_('A fallado al cambiar el estado del aporte original') . ' ('.$original->id.')';
-                        }
+                        }*/
                     } else{
                         $errors[] = Text::_('Ha fallado algo al reubicar el aporte');
                     }
