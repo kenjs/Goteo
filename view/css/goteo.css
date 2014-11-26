@@ -120,10 +120,6 @@ div.widget .title{
     /*background: url("arrowH2-section.gif") no-repeat -5px -16px;*/
 }
 
-div.side div.widget .title {
-    padding-left: 0;
-}
-
 div.side div.widget.project-collaborations h3.title{
     margin-bottom: 0;
 }
@@ -182,7 +178,11 @@ div#message div#message-content ul{list-style:none;margin:0;padding:0;}
 
 
 /*no mostrar muesca en los widgets laterales*/
-div.side div.widget .title{background:none;}
+div.side div.widget .title {
+    padding-left: 0;
+    background:none;
+}
+
 
 div.side div.widget.project-collaborations,
 div.side div.widget.project-rewards {

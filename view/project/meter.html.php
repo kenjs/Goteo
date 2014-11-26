@@ -34,10 +34,10 @@ $reached    = $project->invested;
 $supporters = count($project->investors);
 $days       = $project->days;
 
-
 // PHP la pifia (y mucho) con los cálculos en coma flotante
 if ($reached >= $minimum) {
-    $minimum_done = round(($reached / $minimum) * 100);
+    $minimum_done = round(($reached / $minimum) * 100)+10;
+    //$minimum_done = min(100, round(($reached / $minimum) * 100));
     $minimum_done_per = round(($reached / $minimum) * 100);
     $minimum_left = 0;
     
@@ -75,6 +75,19 @@ if ($over > 0) {
 $optimum_left = 100 - $optimum_done;
 
 $minimum_ratio =  min(100, round(($minimum / $optimum) * 100));
+
+/*
+var_dump($minimum);
+var_dump($optimum);
+var_dump($reached);
+
+var_dump($minimum_done);
+var_dump($minimum_done_per);
+var_dump($minimum_left);
+
+var_dump($more);
+var_dump($over);
+*/
 
 ?>    <div class="meter <?php echo $horizontal ? 'hor' : 'ver'; echo $big ? ' big' : ''; echo $activable ? ' activable' : ''; ?>">
 
@@ -128,3 +141,4 @@ $minimum_ratio =  min(100, round(($minimum / $optimum) * 100));
     <?php endif; */ ?>
 
     </div>
+

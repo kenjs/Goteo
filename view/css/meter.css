@@ -259,9 +259,10 @@ div.widget.project-support.hor div.graph .minimum .left {
 div.widget.project div.meter.hor div.graph,
 div.widget.project-support div.meter.hor div.graph {
     background-color: #BCCCD8;
+    position: relative;
     height: 12px;
     margin: 56px 0 0;
-    position: relative;
+    border-right: 40px solid #dddddd;
 }
 div.widget.project div.meter.hor div.graph .minimum,
 div.widget.project-support div.meter.hor div.graph > div.minimum {
@@ -477,20 +478,20 @@ div.widget.project div.meter.active dl dd.minimum {
 div.widget.project-support div.ver div.graph > div.minimum {
     background-color: #dc940f;
     position: relative;
-    min-height: 145px !important;
+    min-height: 120px !important;
 }
 div.widget.project-support div.ver div.graph {
-    background-color: #dcdcdc;
-    width: 20px;
-    overflow: visible;
-    font-size: 0;
-    margin-left: 14px;
     float: left;
+    overflow: visible;
+    width: 20px;
+    margin-left: 14px;
     padding-top: 22px;
+    font-size: 0;
+    border-top: 16px solid #ddd;
+    background-color: #BCCCD8;
 }
 div.widget.project-support div.graph > div.optimum {
-    background-color: #bccdd8;
-    height: 45px;
+    height: 30px;
 }
 
 div.widget.project-support div.meter.ver div.graph .minimum .done {

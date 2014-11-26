@@ -461,7 +461,7 @@ body.project-show #main.threecols div.project-message button {
 }
 
 div.widget.project-support div.buttons {
-    padding: 24px 0 0;
+    padding: 16px 0 0;
     clear: both;
     position: absolute;
     top: 250px;
