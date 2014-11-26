@@ -24,20 +24,18 @@ use Goteo\Library\Text,
 ?>
 
 <script>
-    var timer = false;
-    $(window).resize(function(){
-        if (timer !== false) {
-            clearTimeout(timer);
-        }
-        timer = setTimeout(function() {
+    $(function(){
+        $(window).resize(function(){
             var width = $(window).width();
             if (width <= 1200) {
                 $('#header').children('.logo_wrapper').children('a').css('display','none');
             } else {
                 $('#header').children('.logo_wrapper').children('a').css('display','block');
             }
-        }, 200);
-    });
+        });
+        $(window).resize();
+
+    })
 </script>
 
 <?php // include 'view/header/lang.html.php' ?>
