@@ -75,6 +75,7 @@ header
 }
 
 .header h1 {
+    display: block;
     width: 960px;
     margin: 0 auto;
     padding: 15px 0;
@@ -274,7 +275,6 @@ footer
 --------------------------------------------------*/
 
 .footer {
-    /*height: 116px;*/
     margin-top: 80px;
     background-color: #fff;
     clear:both;
@@ -289,41 +289,50 @@ footer
 }
 
 .footer ul {
-    float: left;
-    width: 810px;
     margin: 16px 0;
     padding: 0;
 }
 
 .footer ul li {
-    float: left;
+    display: inline-block;
     line-height: 34px;
     list-style-type: none;
-    border-right: 1px solid #666666;
-}
-
-.footer ul li.about {
-    width: 125px;
-    line-height: 16px;
-}
-
-.footer ul li:last-child {
-    border-right: none;
 }
 
 .footer ul li a {
-    padding: 0 8px;
     font-size: 12px;
     color: #666666;
 }
 
-.footer ul li:first-child a {
-    padding-left: 0;
-}
-
-
 .footer ul a:link {
     text-decoration: none;
+}
+
+.footer ul.footer_link {
+    float: left;
+    width: 810px;
+}
+
+.footer ul.footer_link li {
+    border-right: 1px solid #666666;
+}
+
+.footer ul.footer_link li.about {
+    width: 125px;
+    line-height: 16px;
+    vertical-align: middle;
+}
+
+.footer ul.footer_link li:last-child {
+    border-right: none;
+}
+
+.footer ul.footer_link li a {
+    padding: 0 8px;
+}
+
+.footer ul.footer_link li:first-child a {
+    padding-left: 0;
 }
 
 .footer ul.sns_link {
@@ -332,12 +341,12 @@ footer
 }
 
 .footer ul.sns_link li {
-    width: 28px;
-    text-align: center;
-    border: none;
-    margin-top:1px;
-    position:relative;
     float: right;
+    position:relative;
+    width: 28px;
+    margin-top:1px;
+    text-align: center;
+    border-right: none;
 }
 
 .footer ul.sns_link li a{
@@ -349,7 +358,7 @@ footer
     top:-1px;
 }
 
-.footer p {
+.footer p.copyright {
     margin: 0;
 }
 
@@ -434,7 +443,9 @@ footer
     #social_bookmark
 --------------------------------------------------*/
 #social_bookmark {
-    margin: 0 25px 15px 0;
+    float:left;
+    width:350px;
+    margin:4px 10px 0 30px;
 }
 
 #social_bookmark #facebook {
@@ -453,16 +464,3 @@ footer
     width: 70px !important;
 }
 
-#social_bookmark {
-    float:left;
-    width:350px;
-    margin:4px 10px 0 30px;
-}
-
-/*--------------------------------------------------
-   for only GOTEO
---------------------------------------------------*/
-
-div#sub-header {
-    margin-bottom: 12px;
-}

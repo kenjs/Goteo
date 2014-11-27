@@ -16,15 +16,10 @@
  *  along with Goteo.  If not, see <http://www.gnu.org/licenses/agpl.txt>.
  *
  */
+
 /**
  * Header
  */
-div#header,
-div#super-header {
-    position: relative;
-    z-index: 999;
-}
- 
 div#header a,
 div#header span,
 div#header strong {
@@ -32,45 +27,24 @@ div#header strong {
     text-decoration: none;
 }
 
-/* Super-header */
-div#super-header {
-    max-width: 940px;
-    margin: 0 auto;
-    height: 25px;
-    font-size: 12px;
-    overflow: hidden; 
-    padding: 0 1em;
-}
-
-div#super-header + * {
-    font-size: 12px;
-    border-top: 2.2em solid #59595c;
-    margin-top: -2.2em;
-}
-
-div#super-header a {
-    color: #e9e3dc;
-    font-size: 12px;
-}
-
-div#super-header a:hover {
-    color: #8ed9d8 !important;
-}
-
 /* Sub-header */
 div#sub-header,
 div#sub-header-secondary { 
     clear: both;
     padding: 20px 0;
-    margin-bottom: 32px;
 }
 
 div#sub-header{
-   background-color: #faf8f8;
-}
+    margin-bottom: 12px;
+    background-color: #faf8f8;
+ }
 
 div#sub-header.banners{
     padding:0;
+}
+
+div#sub-header-secondary {
+    margin-bottom: 32px;
 }
 
 div#sub-header-secondary{
@@ -310,7 +284,7 @@ div#sub-header > div > h2 .greenblue{
 /* fin de lo del header verdeazulado */
 
 /* controles del carrusel de banners */
-.sliderbanners-ctrl {
+/*.sliderbanners-ctrl {
 	max-width: 940px;
 	margin: 0 auto;
 	padding:0px;
@@ -401,7 +375,7 @@ div#sub-header > div > h2 .greenblue{
 
 .sliderbanners-ctrl li.next:hover {
 	background: url('small_arrowslider-sprt.png') scroll no-repeat 0 -48px;
-}
+}*/
 /* fin de los controlers del carrusel de banners*/
 
 /* subheader secundario  */
@@ -445,7 +419,6 @@ div#sub-header-secondary > div > ul.share-goteo li.rss a{
 div#header div#about {    
     font-size: 12px;
     height: 2.2em;
-    /*float: right;*/
     overflow: hidden;
     position: relative;
     z-index: 9;
@@ -491,59 +464,7 @@ div#header div#about ul li > *:hover {
     color: #8ed9d8;
 }
 
-/* fin del carrusel de micronoticias */
-div#header div#highlights {    
-    font-size: 12px;
-    height: 2.2em;
-    max-width: 60%;
-    float: left;
-    position: relative;
-    white-space: nowrap;
-    z-index: 1;
-    overflow: hidden;
-}
 
-div#header div#highlights > h2,
-div#header div#highlights > ul > li,
-div#header div#highlights > ul > li > a {
-    font-weight: normal;
-    text-transform: none;
-    font-size: 12px;
-    line-height: 2.2em;
-    height: 2.2em;
-}
-
-div#header div#highlights > h2 {
-    color: #e7e1d9;
-    margin: 0 3px 0 0;
-    float: left;
-}
-
-div#header div#highlights > h2 a{
-	font-size:12px;
-	text-transform:uppercase;	
-}
-
-div#header div#highlights > ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;        
-    display: inline-block;    
-}
-
-div#header div#highlights > ul > li {    
-    white-space: nowrap;
-    display: block;
-    padding-right: 8em;
-    overflow: hidden;
-    color: white;
-}
-
-div#header div#highlights > ul > li > a {
-    white-space: nowrap;
-	margin-left: .2em;
-}
 /* fin del carrusel de micronoticias */
 
 /* menu y despelgable dashboard */
@@ -556,7 +477,6 @@ div#header div#menu {
     width: 288px;
     z-index: 2;
 }
-
 
 div#header div#menu > ul {
     margin: 0 auto;
@@ -574,10 +494,6 @@ div#header div#menu > ul > li {
     text-align: left;
 }
 div#header div#menu > ul > li.explore,
-div#header div#menu > ul > li.create {
-    margin-right: 4px;
-}
-
 div#header div#menu > ul > li.create {
     margin-right: 4px;
 }
@@ -744,23 +660,19 @@ div#header div#menu > ul > li.dashboard > a > img{
 	right:3px;
 }
 
-div#header div#menu > h2,
-div#header ul.lang {
+div#header div#menu > h2 {
     display: none;
 }
 
-div#header div#menu > ul > li.community:hover,
 div#header div#menu > ul > li.login:hover,
 div#header div#menu > ul > li.dashboard:hover {
     background-color: #808285;    
 }
 
-div#header div#menu > ul > li.community:hover,
 div#header div#menu > ul > li.dashboard:hover {
     background-image: url('header/down-white.png');
 }
 
-div#header div#menu > ul > li.community:hover *,
 div#header div#menu > ul > li.login:hover *,
 div#header div#menu > ul > li.dashboard:hover * {
     color: white;
@@ -770,12 +682,10 @@ div#header div#menu > ul > li.dashboard > a > span > em {
     display: none;
 }
 
-div#header div#menu > ul > li.community > div, 
 div#header div#menu > ul > li.dashboard > div {
     display: none;
 }
 
-div#header div#menu > ul > li.community:hover > div,
 div#header div#menu > ul > li.dashboard:hover > div {
     display: block;
     position: absolute;
@@ -784,33 +694,26 @@ div#header div#menu > ul > li.dashboard:hover > div {
     min-width: 100%;
 }
 
-div#header div#menu > ul > li.community > div > ul,
 div#header div#menu > ul > li.dashboard > div > ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    /*background-color: #58595b;*/
 }
 
-div#header div#menu > ul > li.community > div > ul > li,
 div#header div#menu > ul > li.dashboard > div > ul > li {
-    /*border-top: 1px solid #ffffff;*/
     background-color: #58595b;
 }
 
-div#header div#menu > ul > li.community > div > ul > li.active,
 div#header div#menu > ul > li.dashboard > div > ul > li.active {
     background-color: #781d1d;
 }
 
 
-div#header div#menu > ul > li.community > div > ul > li *,
 div#header div#menu > ul > li.dashboard > div > ul > li * {
     color: white;
     text-transform: none;
 }
 
-div#header div#menu > ul > li.community > div > ul > li > a,
 div#header div#menu > ul > li.dashboard > div > ul > li > a {
     display: block;
     padding: 6px 3px;
@@ -821,48 +724,6 @@ div#header div#menu > ul > li.dashboard > div > ul > li.logout > a > span{
 	color:#F00 !important;
 }
 
-div#header div#menu > ul > li.community > div > ul > li > a:hover,
 div#header div#menu > ul > li.dashboard > div > ul > li > a:hover {
     background-color: #3399cc;
 }
-/* fin del menu y despelgable dashboard */
-
-/* desplegable de idiomas */
-ul.lang{
-	position:absolute;
-	left: 0;
-	top: 25px;
-	z-index: 1000;
-	list-style:none;
-	display:none;
-	background-color: #fff;
-	margin:0;
-	padding:0;
-}
-	
-ul.lang li{
-    background-color: #59595C;
-    height: 15px;
-    padding: 4px 0;
-    position: relative;
-    width: 70px;
-    text-align:center;
-}
-ul.lang li:hover {
-	background: #808285; 
-}
-ul.lang li>a{
-	bottom: 0;
-	color: #FFFFFF;
-	font-size: 12px;
-	position: relative;
-	text-decoration: none;
-	text-transform: uppercase;
-	top: 0;
-	width: 100%;
-	display:block;
-}
-ul.lang li:hover>a {
-	color: #908499;
-}
-/* fin del desplegable de idiomas */

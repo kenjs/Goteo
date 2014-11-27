@@ -45,11 +45,9 @@ body.project-show div#main {
 */
 
 body.project-show div#sub-header {
-	/*height:120px;*/
 	height:auto;
 	min-height:120px;
     padding-bottom: 0;
-	background:#faf8f8;
 }
 
 body.project-show div#sub-header div.project-header{
@@ -60,7 +58,6 @@ body.project-show div#sub-header div.project-header{
 
 body.project-show div#sub-header div.project-header img{
     float: left;
-	/*margin: 2px 20px 0 0;*/
     margin: 0 20px 0 0;
 }
 
