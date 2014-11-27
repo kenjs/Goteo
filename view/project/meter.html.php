@@ -36,11 +36,10 @@ $days       = $project->days;
 
 // PHP la pifia (y mucho) con los cálculos en coma flotante
 if ($reached >= $minimum) {
-    $minimum_done = round(($reached / $minimum) * 100)+10;
-    //$minimum_done = min(100, round(($reached / $minimum) * 100));
+    $minimum_done = round(($reached / $minimum) * 100);
     $minimum_done_per = round(($reached / $minimum) * 100);
     $minimum_left = 0;
-    
+
 } else {
     
     $minimum_done = min(100, round(($reached / $minimum) * 100));

@@ -215,7 +215,7 @@ div.widget.project div.meter div.graph .minimum {
 }
 
 div.widget.project div.meter.hor div.graph .minimum .done {
-    max-width: 215px;
+    max-width: 220px;
 }
 
 div.widget.project div.meter div.graph .minimum .done strong {
@@ -485,13 +485,13 @@ div.widget.project-support div.ver div.graph {
     overflow: visible;
     width: 20px;
     margin-left: 14px;
-    padding-top: 22px;
+    /*padding-top: 22px;*/
     font-size: 0;
     border-top: 16px solid #ddd;
     background-color: #BCCCD8;
 }
 div.widget.project-support div.graph > div.optimum {
-    height: 30px;
+    height: 60px;
 }
 
 div.widget.project-support div.meter.ver div.graph .minimum .done {
@@ -502,7 +502,7 @@ div.widget.project-support div.meter.ver div.graph .minimum .done {
     overflow: visible;
 }
 div.widget.project-support div.meter.ver div.graph .minimum .done {
-    max-height: 212px;
+    max-height: 172px;
 }
 
 div.widget.project-support div.meter.ver div.graph > div.minimum > div.done strong {
