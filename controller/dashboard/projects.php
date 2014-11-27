@@ -231,12 +231,12 @@ namespace Goteo\Controller\Dashboard {
 
             // si a todos los participantes
             if ($option == 'messegers' && !empty($_POST['msg_all'])) {
-                // a todos los participantes
+                // a todos los participantes(if all investors)
                 foreach (Model\Message::getMessegers($project->id) as $messeger => $msgData) {
                     if ($messeger == $project->owner)
                         continue;
                     $who[$messeger] = $messeger;
-//                    unset($msgData); // los datos del mensaje del participante no se usan
+                    //unset($msgData); // los datos del mensaje del participante no se usan
                 }
             } elseif ($option == 'rewards' && !empty($_POST['msg_all'])) {
                 // a todos los cofinanciadores
@@ -244,7 +244,7 @@ namespace Goteo\Controller\Dashboard {
                     // no duplicar
                     $who[$investor->user] = $investor->user;
 
-}
+                }
             } elseif (!empty($_POST['msg_user'])) {
                 // a usuario individual
                 $who[$_POST['msg_user']] = $_POST['msg_user'];
@@ -295,11 +295,6 @@ namespace Goteo\Controller\Dashboard {
             $remite = $project->name . ' ' . Text::get('regular-from') . ' ';
             $remite .= (NODE_ID != GOTEO_NODE) ? NODE_NAME : GOTEO_MAIL_NAME;
 
-            $search = array('%MESSAGE%', '%PROJECTNAME%', '%PROJECTURL%', '%OWNERURL%', '%OWNERNAME%', '%USERNAME%');
-            $replace = array($msg_content, $project->name, SITE_URL . "/project/" . $project->id,
-                SITE_URL . "/user/profile/" . $project->owner, $project->owner, $_POST['username']);
-            $content = \str_replace($search, $replace, $template->text);
-
             // para usar el proceso Sender:
 
 
@@ -324,6 +319,12 @@ namespace Goteo\Controller\Dashboard {
                 die($exc->getMessage());
             }
             foreach($receivers as $value){
+
+                $search = array('%MESSAGE%', '%PROJECTNAME%', '%PROJECTURL%', '%OWNERURL%', '%OWNERNAME%', '%USERNAME%');
+                $replace = array($msg_content, $project->name, SITE_URL . "/project/" . $project->id,
+                    SITE_URL . "/user/profile/" . $project->owner, $project->owner, $value->name);
+                $content = \str_replace($search, $replace, $template->text);
+
                 try {
                     $result = $sesClient->sendEmail(array(
                         'Source' => AWS_SES_SOURCE,
