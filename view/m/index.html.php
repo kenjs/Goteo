@@ -51,11 +51,6 @@ if (!empty($this['posts'])) {
 include 'view/m/prologue.html.php';
 include 'view/m/header.html.php';
 ?>
-<?
-//if():
-    //include 'view/m/header/menu.html.php';
-//endif;
-?>
     <a class="button red" href="/discover"><?php echo Text::get('regular-discover'); ?></a>
 <? /*
     <script type="text/javascript">
@@ -68,29 +63,6 @@ include 'view/m/header.html.php';
     </script>
 */ ?>
     <div class="contents_wrapper">
-        <? /*
-        <div id="sub-header" class="banners">
-            <div class="clearfix">
-                <div class="slides_container">
-                    <!-- Módulo de texto más sign in -->
-                    <div class="subhead-banner"><?php echo Text::html('main-banner-header'); ?></div>
-                    <!-- Módulo banner imagen más resumen proyecto -->
-                    <?php if (!empty($this['banners'])) : foreach ($this['banners'] as $id=>$banner) : ?>
-                        <div class="subhead-banner"><?php echo new View('view/header/banner.html.php', array('banner'=>$banner)); ?></div>
-                    <?php endforeach;
-                    else : ?>
-                        <div class="subhead-banner"><?php echo Text::html('main-banner-header'); ?></div>
-                    <?php endif; ?>
-                </div>
-                <!--<div class="mod-pojctopen"><?php //echo Text::html('open-banner-header', $fbCode); ?></div>-->
-            </div>
-            <div class="sliderbanners-ctrl">
-                <a class="prev">prev</a>
-                <ul class="paginacion"></ul>
-                <a class="next">next</a>
-            </div>
-        </div>
-        */ ?>
 
         <?php if(isset($_SESSION['messages'])) { include 'view/header/message.html.php'; } ?>
 
