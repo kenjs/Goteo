@@ -252,7 +252,6 @@ if ($this['action'] == 'none') return;
                 'errors'    => !empty($errors['publish']) ? array($errors['publish']) : array(),
                 'value'     => (int) $post->publish
             )
-
         )
 
     ));

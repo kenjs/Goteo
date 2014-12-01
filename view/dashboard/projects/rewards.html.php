@@ -192,14 +192,15 @@ switch ($order) {
 
                         <div class="left name">
                             <span><strong>氏名(本名)</strong></span>
-                            <span><?= $investData->user->name; ?></span>
+                            <span><?= $address->name; ?></span>
                         </div>
 
                         <div class="left address">
                             <span class="<?php echo $estilo;?>"><strong><?= Text::get('invests-list-delivery-address'); ?>: </strong></span>
-						<span class="<?php echo $estilo;?>">
-                    	<?php echo $address->address; ?>, <?php echo $address->location; ?>, <?php echo $address->zipcode; ?> <?php echo $address->country; ?>
-                    	</span>
+                            <span class="<?php echo ' '.$estilo;?>">
+                            〒<?php echo $address->zipcode; ?></span>
+                            <span><?php echo $address->address; ?></span>
+                            <?/*php echo $address->location; ?>, <?php echo $address->country; */?>
                         </div>
 
                         <div class="left">

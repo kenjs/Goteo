@@ -45,7 +45,7 @@ namespace Goteo\Model {
             $returned, //fecha en la que se ha devuelto el importe al usurio por cancelación bancaria
             $rewards = array(), //datos de las recompensas que le corresponden
             $address = array(
-                'name'     => '',
+                'confname'     => '',
                 'nif'      => '',
                 'address'  => '',
                 'zipcode'  => '',
@@ -135,7 +135,7 @@ namespace Goteo\Model {
 				$invest->rewards = $query->fetchAll(\PDO::FETCH_OBJ);
 
 				$query = static::query("
-                    SELECT  address, zipcode, location, country
+                    SELECT name, address, zipcode, location, country
                     FROM  invest_address
                     WHERE   invest_address.invest = ?
                     ", array($invest->id));

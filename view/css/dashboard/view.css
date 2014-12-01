@@ -309,7 +309,7 @@ body.dashboard div.widget.gestrew div.filters ul li a:hover{color:#20B3B2;}
 
 .disabled{color:#cccccc;}
 body.dashboard div#invests-list div.investor{border-bottom:#C1C1C1 1px solid;margin:20px 0;height:auto;overflow:auto;padding-bottom:10px;margin-bottom:10px;}
-body.dashboard div#invests-list div.investor div.left{float:left;margin-right:10px;}
+body.dashboard div#invests-list div.investor div.left{float:left;min-width:45px;margin-right:10px;}
 body.dashboard div#invests-list div.investor div.left span{display:block;}
 body.dashboard div#invests-list div.investor div.left.username span a{color: #58595B;font-weight: bold;text-decoration: none;}
 
