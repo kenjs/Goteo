@@ -138,6 +138,7 @@ header
     left: 330px;
 }
 
+/*
 .header .head_bar_wrapper .search_box > div,
 table#font_box {
     float: left;
@@ -164,7 +165,6 @@ table#font_box td {
 }
 
 table#font_box td a {
-
     color: #fff;
     text-decoration: none;
 }
@@ -186,10 +186,13 @@ table#font_box td.active {
     color: #fff;
     text-decoration: none;
 }
+*/
 
+/*
 .header .head_bar_wrapper .search_box > div {
     padding-top: 5px;
 }
+*/
 
 .header .nav_wrapper ul {
     float: left;
@@ -281,11 +284,9 @@ footer
 }
 
 .footer .footer_link_wrapper {
-    width: 940px;
-    padding:0 10px;
-    margin: 0 auto;
     position: relative;
-    background-color: #fff;
+    width: 940px;
+    margin: 0 auto;
 }
 
 .footer ul {
@@ -346,7 +347,6 @@ footer
     width: 28px;
     margin-top:1px;
     text-align: center;
-    border-right: none;
 }
 
 .footer ul.sns_link li a{
