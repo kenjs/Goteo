@@ -479,19 +479,19 @@ div.widget.project-support div.ver div.graph > div.minimum {
     background-color: #dc940f;
     position: relative;
     min-height: 150px !important;
+    max-height: 190px;
 }
 div.widget.project-support div.ver div.graph {
     float: left;
     overflow: visible;
     width: 20px;
     margin-left: 14px;
-    /*padding-top: 22px;*/
     font-size: 0;
     border-top: 16px solid #ddd;
     background-color: #BCCCD8;
 }
 div.widget.project-support div.graph > div.optimum {
-    height: 20px;
+    height: 50px;
 }
 
 div.widget.project-support div.meter.ver div.graph .minimum .done {
@@ -502,7 +502,7 @@ div.widget.project-support div.meter.ver div.graph .minimum .done {
     overflow: visible;
 }
 div.widget.project-support div.meter.ver div.graph .minimum .done {
-    max-height: 196px;
+    max-height: 240px;
 }
 
 div.widget.project-support div.meter.ver div.graph > div.minimum > div.done strong {
@@ -525,7 +525,6 @@ div.widget.project-support div.meter.ver div.graph > div.minimum {
     overflow: visible;
 }
 
-
 /* only sidebar */
 body.project-show div#main > div.side > div.widget div.meter.ver h3.title.ronda {
     color:#999900;
@@ -534,7 +533,6 @@ body.project-show div#main > div.side > div.widget div.meter.ver h3.title.ronda 
     font-weight: normal;
     text-align: right;
 }
-
 
 body.project-show div#main > div.side > div.widget div.project-widget-box.end div.buttons a {
     display: none;
