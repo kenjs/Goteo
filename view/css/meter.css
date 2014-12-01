@@ -478,7 +478,7 @@ div.widget.project div.meter.active dl dd.minimum {
 div.widget.project-support div.ver div.graph > div.minimum {
     background-color: #dc940f;
     position: relative;
-    min-height: 120px !important;
+    min-height: 150px !important;
 }
 div.widget.project-support div.ver div.graph {
     float: left;
@@ -491,7 +491,7 @@ div.widget.project-support div.ver div.graph {
     background-color: #BCCCD8;
 }
 div.widget.project-support div.graph > div.optimum {
-    height: 60px;
+    height: 20px;
 }
 
 div.widget.project-support div.meter.ver div.graph .minimum .done {
@@ -502,7 +502,7 @@ div.widget.project-support div.meter.ver div.graph .minimum .done {
     overflow: visible;
 }
 div.widget.project-support div.meter.ver div.graph .minimum .done {
-    max-height: 172px;
+    max-height: 196px;
 }
 
 div.widget.project-support div.meter.ver div.graph > div.minimum > div.done strong {
