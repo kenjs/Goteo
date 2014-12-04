@@ -17,10 +17,10 @@
  *
  */
 /* Widget central de cofinanciadiores: div.widget.project-supporters */
-div.widget.project-supporters {
+body.project-show div#main > div.center.supporters div.widget.project-supporters {
     background: transparent !important;
     padding: 0 !important;
-    max-width: 620px !important;
+    max-width: 620px;
 }
 
 div.widget.project-supporters .title {
@@ -28,11 +28,12 @@ div.widget.project-supporters .title {
 }
 
 div.widget.project-supporters dl.summary {
+    overflow: hidden;
     margin: 0 0 20px;
-    background-color: white;
     padding: 20px;
     line-height: 30px;
-    overflow: hidden;
+    border-bottom: 1px dashed #c0c0c0;
+    background-color: white;
 }
 
 div.widget.project-supporters dl.summary dt,
@@ -93,7 +94,7 @@ div.widget.project-supporters .supporters > ul > li {
     width: 205px;
     height: 4.5em;
     position: relative;
-    border-top: 1px dashed #c0c0c0;
+    border-bottom: 1px dashed #c0c0c0;
     border-right: 1px dashed #c0c0c0;
 }
 div.widget.project-supporters .supporters > ul > li:nth-child(3n+3) {
@@ -333,12 +334,12 @@ div.side div.widget.project-investors a.more {
 div.side div.widget.project-investors .project-widget-box {
     padding: 0;
 }
-div.widget.project-investors div.investors {
+/*div.widget.project-investors div.investors {
     padding-bottom: 10px;
     border-bottom: 1px solid #808285;
     border-bottom: 1px dashed #cccccc;
     border-right: 1px dashed #cccccc;
-}
+}*/
 
 div.side div.widget.project-investors div.investors {
     padding: 8px 20px 0;

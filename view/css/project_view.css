@@ -7,15 +7,15 @@ body.project-show div#main {
  sub-header
 --------------------------------------------------*/
 body.project-show div#sub-header {
-	height:auto;
-	min-height:120px;
+    height:auto;
+    min-height:120px;
     padding-bottom: 0;
 }
 
 body.project-show div#sub-header div.project-header{
     min-height: 75px;
-	position:relative;
-	top:10px;
+    position:relative;
+    top:10px;
 }
 
 body.project-show div#sub-header div.project-header img{
@@ -24,13 +24,13 @@ body.project-show div#sub-header div.project-header img{
 }
 
 body.project-show div#sub-header div.project-header h2{
-	font-size:26px;
-	max-width:620px;
+    font-size:26px;
+    max-width:620px;
 }
 
 body.project-show div#sub-header div.project-header h2 > span{
-	display: block;
-	line-height: 26px;
+    display: block;
+    line-height: 26px;
 }
 
 body.project-show div#sub-header div.project-subtitle {
@@ -63,15 +63,15 @@ body.project-show div#sub-header div.project-by a:hover {
 }
 
 body.project-show div#sub-header div.categories {
-	position: absolute;
+    position: absolute;
     right: 10px;
     text-align: right;
-	top: 0;
+    top: 0;
 }
 
 body.project-show div#sub-header div.categories h3 {
     font-weight: normal;
-    color: #20B3B2;   
+    color: #20B3B2;
     margin: 0;
 }
 
@@ -102,7 +102,7 @@ body.project-show div#sub-header div#social_bookmark {
  project-menu
 --------------------------------------------------*/
 body.project-show div.project-menu {
-	margin-top:18px;
+    margin-top:18px;
 }
 
 body.project-show div.project-menu div.sub-menu{
@@ -123,8 +123,8 @@ body.project-show div.project-menu ul li {
 }
 
 body.project-show div.project-menu ul li span.digits{
-	display:inline-block;
-	text-align:center;
+    display:inline-block;
+    text-align:center;
 }
 
 body.project-show div.project-menu ul li a {
@@ -184,12 +184,13 @@ body.project-show div.project-menu ul li.show a {
 
 
 /*--------------------------------------------------
- project-menu
+ project-common
 --------------------------------------------------*/
-body.project-show div.center.home div.widget,
-body.project-show div.center.supporters div.widget,
-body.project-show div.center.profile div.widget {
-    margin-bottom: 0;
+body.project-show div.center.needs > div.widget,
+body.project-show div.center.supporters > div.widget,
+body.project-show div.center.messages > div.widget,
+body.project-show div.center.updates > div.widget {
+    margin-bottom: 10px;
     border-bottom: 1px dashed #c0c0c0;
 }
 
@@ -221,10 +222,17 @@ body.project-show div#main div.side > div.widget .invest-notice{
 body.project-show div#main div.center > div.widget {
     max-width: 540px;
     margin-right: 20px;
-    margin-bottom: 10px;
     clear: left;
     padding: 20px 40px;
 }
+
+/*body.project-show div#main div.center.home > div.widget {
+    margin-bottom: 10px;
+}*/
+
+
+
+
 body.project-show div#main div.center > div.widget .gallery-image{
     text-align: center;
 }
@@ -250,7 +258,7 @@ div.widget.project-spread div.subtitle{width:245px;text-transform:uppercase;marg
 div.widget.project-spread div.subtitle > span{display:block;}
 div.widget.project-spread div.subtitle > span.primero{margin-bottom:3px;}
 div.widget.project-spread div.subtitle > span.segundo{color:#28ACAB;font-weight:bold;}
-	
+
 /* envía mensaje al autor - widget embed code */
 div.widget.projects #widget-code{	width:350px;	float:left; margin: 0 0 0 20px;}
 div.widget.projects  #widget-code .wc-embed{background: url("/view/css/social/embed.png") no-repeat; min-height:20px;text-transform:uppercase;padding: 3px 0 0 25px;margin-top:10px;}
@@ -345,7 +353,7 @@ body.project-show #main.threecols div.center.supporters div.widget.project-sprea
 body.project-show #main.threecols div.widget.project-spread .widget.projects {
     width: 280px;
     margin: 20px auto 0;
-    border: 1px dashed #c0c0c0; 
+    border: 1px dashed #c0c0c0;
 }
 
 body.project-show #main.threecols div.widget.project-spread div.widget.projects div.left {
@@ -413,8 +421,8 @@ div.widget.project-support div.buttons {
 /*--------------------------------------------------
  project-show common
 --------------------------------------------------*/
-body.project-show div#main div.center > div.widget.project-summary {
-    margin-bottom: 0;
+body.project-show div#main div.center.home > div.widget {
+    /*margin-bottom: 0;*/
     padding-top: 15px;
 }
 
