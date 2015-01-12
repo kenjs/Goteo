@@ -288,7 +288,7 @@ namespace Goteo\Controller {
          * @throws \Goteo\Core\Exception
          */
         function get_pickup_projects(){
-            $_result = Promote::getAll(true);
+            $_result = Promote::getAll();
             if (count($_result) > 3) {
                 for ($i = 0; $i < 3; $i++) {
                     $this->result[] = $_result[$i];
