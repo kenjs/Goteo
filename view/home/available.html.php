@@ -27,7 +27,7 @@ $projects = Goteo\Model\Project::published("available");
 ?>
 <div class="widget projects">
 
-    <h2 class="title">支援募集中のプロジェクト<?php //echo Text::get('home-projects-header'); ?></h2>
+    <h2 class="title">プロジェクト<?php //echo Text::get('home-projects-header'); ?></h2>
 
     <?php foreach ($projects as $project) :
 
