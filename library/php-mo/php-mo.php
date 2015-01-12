@@ -70,6 +70,7 @@ function phpmo_parse_po_file($in) {
 	$state = null;
 	$fuzzy = false;
 
+
 	// iterate over lines
 	while(($line = fgets($fh, 65536)) !== false) {
 		$line = trim($line);
@@ -82,6 +83,7 @@ function phpmo_parse_po_file($in) {
 			case '#,' : // flag...
 				$fuzzy = in_array('fuzzy', preg_split('/,\s*/', $data));
 			case '#' : // translator-comments
+			case '#~' : // poedit generated comments
 			case '#.' : // extracted-comments
 			case '#:' : // reference...
 			case '#|' : // msgid previous-untranslated-string
@@ -134,7 +136,7 @@ function phpmo_parse_po_file($in) {
 		}
 	}
 	fclose($fh);
-	
+
 	// add final entry
 	if ($state == 'msgstr')
 		$hash[] = $temp;
