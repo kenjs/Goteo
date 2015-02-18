@@ -126,6 +126,10 @@ $blog_post = strpos($ogmeta['url'], '/updates');
     $uri = $_SERVER['REQUEST_URI'];
     //var_dump($uri);
 ?>
+
+    <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/csstidyonline.results.css" />
+
+<?/*
     <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/base.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/common.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/header.css" />
@@ -146,6 +150,7 @@ $blog_post = strpos($ogmeta['url'], '/updates');
     <?php if (strstr($uri,'/project/edit')): ?>
         <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/project_edit.css" />
     <?php endif; ?>
+*/?>
 
     <?php if (!isset($useJQuery) || !empty($useJQuery)): ?>
         <script type="text/javascript" src="<?php echo SRC_URL ?>/view/js/jquery-1.6.4.min.js"></script>

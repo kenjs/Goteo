@@ -72,7 +72,6 @@ div.widget .supertitle {
 div.widget .title{
     font-size: 16px;
     font-weight: bold;
-    padding: 0 0 0 24px;
     text-decoration: none;
 }
 
@@ -148,7 +147,7 @@ div.side div.widget.project-rewards ul li {
     padding-left: 0;
     margin-bottom: 20px;
 }
-div.widget .title,
+div.side div.widget.project-collaborations ul li h6,
 div.side div.widget.project-rewards div.title h4.name {
     padding-left: 42px;
     display: inline-block;
