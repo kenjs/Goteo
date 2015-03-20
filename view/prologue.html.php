@@ -208,7 +208,7 @@ if (isset($fbCode)) : ?>
   js.src = "//connect.facebook.net/<?php echo \Goteo\Library\i18n\Lang::locale(); ?>/all.js#xfbml=1&appId=__YOUR_APP_ID__";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<?php endif;  
+<?php endif;
 *
 */ ?>
 <script type="text/javascript">

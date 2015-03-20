@@ -31,7 +31,7 @@ if (LANG != 'es')
     $share_url .= '?lang=' . LANG;
 
 $facebook_url = 'http://facebook.com/sharer.php?u=' . urlencode($share_url) . '&t=' . urlencode($share_title);
-$twitter_url = 'http://twitter.com/home?status=' . urlencode($share_title . ': ' . $share_url . ' #Goteo');
+$twitter_url = 'http://twitter.com/home?status=' . urlencode($share_title . ': ' . $share_url . ' #横浜 @LogooYOKOHAMA');
 
 ?>
 <script type="text/javascript">

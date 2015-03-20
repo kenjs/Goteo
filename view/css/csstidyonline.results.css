@@ -1,393 +1,416 @@
 /*----------------------------------------------------------------------
  common.css
 ----------------------------------------------------------------------*/
-html
-{
-	height:100%;
-	margin:0;
-	overflow:auto;
+html {
+	height: 100%;
+	margin: 0;
+	overflow: auto;
 }
 
-html,body
-{
-	background-color:#e7e7e7;
-	padding:0;
+html, body {
+	padding: 0;
+	background-color: #e7e7e7;
 }
 
-body
-{
-	margin:0 auto;
-	min-height:100%;
-	min-width:780px;
-	position:relative;
-	top:0;
+body {
+	min-width: 780px;
+	min-height: 100%;
+	margin: 0 auto;
+	top: 0;
+	position: relative;
 }
 
-body,td,th,a,a:link,a:visited,a:active,a:hover,input,textarea,button
-{
-	color:#58595b;
-	font-size:14px;
+body, td, th, a, a:link, a:visited, a:active, a:hover, input, textarea, button {
+	font-size: 14px;
+	color: #58595b;
 }
 
-img
-{
-	border:none;
+img {
+	border: none;
 }
 
-input,textarea,button
-{
-	font-size:14px;
+input, textarea, button {
+	font-size: 14px;
 }
 
-h1
-{
-	display:none;
+input[type="text"],
+input[type="password"],
+textarea,
+fieldset {
+	background-color: #eeeeee;
+	border: 1px solid #cccccc;
+	min-height: 27px;
+	padding: .3em;
 }
 
-,input[type="password"],textarea,fieldset
-{
-	background-color:#eee;
-	border:1px solid #ccc;
-	min-height:27px;
-	padding:.3em;
+body.admin input[type="text"],
+body.admin input[type="password"],
+body.admin textarea,
+body.admin fieldset {
+	min-height:auto;
+	min-height: inherit;
+	padding: 0;
 }
 
-body.admin input[type="text"],body.admin input[type="password"],body.admin textarea,body.admin fieldset
-{
-	min-height:inherit;
-	padding:0;
+fieldset {
+	display: inline-block;
+	background: transparent;
 }
 
-fieldset
-{
-	background:transparent;
-	display:inline-block;
+textarea {
+	min-height: 8em;
 }
 
-textarea
-{
-	min-height:8em;
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+	background-color: white !important;
 }
 
-input[type="text"]:focus,input[type="password"]:focus,textarea:focus
-{
-	background-color:#FFF!important;
+input[type="submit"],
+input[type="reset"],
+button,
+a.button {
+	text-transform: uppercase;
+	border: none;
+	cursor: pointer;
+	color: white;
+	display: inline-block;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	padding: .6em 1.3em;
+	margin: .8em 0 .5em;
+	background: none;
+	background: #66cc99;
+	background: -moz-linear-gradient(top, #66cc99 0%, #339966 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#66cc99), color-stop(100%,#339966));
+	background: -webkit-linear-gradient(top, #66cc99 0%,#339966 100%);
+	background: -o-linear-gradient(top, #66cc99 0%,#339966 100%);
+	background: -ms-linear-gradient(top, #66cc99 0%,#339966 100%);
+	background: linear-gradient(to bottom, #66cc99 0%,#339966 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66cc99', endColorstr='#339966',GradientType=0 );
+	width: 200px;
+	height: 50px;
+	padding: 0;
+	line-height: 54px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bolder;
 }
 
-input[type="submit"],input[type="reset"],button,a.button
-{
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	background:linear-gradient(to bottom,#66cc99 0%,#339966 100%);
-	border:none;
-	border-radius:3px;
-	color:#FFF;
-	cursor:pointer;
-	display:inline-block;
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#66cc99',endColorstr='#339966',GradientType=0);
-	font-size:16px;
-	font-weight:bolder;
-	height:50px;
-	line-height:54px;
-	margin:.8em 0 .5em;
-	padding:0;
-	text-align:center;
-	text-decoration:none;
-	text-transform:uppercase;
-	width:200px;
+input.red[type="submit"],
+input.red[type="reset"],
+button.red,
+a.button.red,
+input.edit[type="submit"] {
+	background: none;
+	background: #b5161e;
+	background: -moz-linear-gradient(top, #ea2f2c 0%, #b5161e 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ea2f2c), color-stop(100%,#b5161e));
+	background: -webkit-linear-gradient(top, #ea2f2c 0%,#b5161e 100%);
+	background: -o-linear-gradient(top, #ea2f2c 0%,#b5161e 100%);
+	background: -ms-linear-gradient(top, #ea2f2c 0%,#b5161e 100%);
+	background: linear-gradient(to bottom, #ea2f2c 0%,#b5161e 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea2f2c', endColorstr='#b5161e',GradientType=0 );
 }
 
-input.redinput[type="submit"],input.redinput[type="reset"],button.red,a.button.red,input.editinput[type="submit"]
-{
-	background:#b5161e url(button/red.png) repeat-x top;
-	color:#FFF;
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ea2f2c',endColorstr='#b5161e',GradientType=0);
+div.side div.widget.project-support a.button,
+div.side div.widget.project-collaborations a.button,
+div.side div.widget.user a.button,
+div.project-preview div.widget a.button,
+div.side div.widget.project-rewards a.button,
+div.center div.widget.project-rewards-summary a.button {
+	height: 30px;
+	line-height: 30px;
 }
 
-div.side div.widget.project-support a.button,div.side div.widget.project-collaborations a.button,div.side div.widget.user a.button,div.project-preview div.widget a.button
-{
-	display:block;
-	height:30px;
-	line-height:30px;
-	margin:10px auto;
-	width:160px;
+div.side div.widget.project-support a.button,
+div.side div.widget.project-collaborations a.button,
+div.side div.widget.user a.button,
+div.side div.widget.project-rewards a.button,
+div.project-preview div.widget a.button {
+	width: 160px;
+	margin: 10px auto;
+	display: block;
 }
 
-button.green
-{
-	height:38px;
-	line-height:38px;
-	padding:0;
-	width:140px;
+div.side div.widget.project-support a.button,
+div.side div.widget.project-rewards a.button,
+div.center div.widget.project-rewards-summary a.button {
+	width: 182px;
+	padding-left: 8px!important;
+	padding-right: 8px!important;
 }
 
-body.project-edit div#main #project-steps button
-{
-	width:auto;
+button.green {
+	width: 140px;
+	height: 38px;
+	line-height: 38px;
+	padding: 0;
 }
 
-a.button.red
-{
-	font-size:16px;
-	font-weight:bolder;
-	line-height:50px;
+body.project-edit div#main #project-steps button {
+	width: auto;
 }
 
-input[type="submit"]:active,input[type="reset"]:active,button:active,a.button:active
-{
-	background:#60c1bf url(button/aqua-active.png) repeat-x top;
+a.button.red {
+	line-height: 50px;
+	font-size: 16px;
+	font-weight: bolder;
 }
 
-input[type="submit"]:hover,input[type="reset"]:hover,button:hover,a.button:hover
-{
-	background:#60c1bf url(button/aqua-active.png) repeat-x top;
+input[type="submit"]:active,
+input[type="reset"]:active,
+button:active,
+a.button:active,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover,
+a.button:hover {
+	background: #60c1bf url('button/aqua-active.png') repeat-x top;
 }
 
-input.redinput[type="submit"]:hover,input.redinput[type="reset"]:hover,button.red:hover,a.button.red:hover,input.editinput[type="submit"]:hover
-{
-	background:#e44133 url(button/red-active.png) repeat-x top;
+input.red[type="submit"],
+input.red[type="reset"],
+button.red,
+a.button.red,
+input.edit[type="submit"] {
+	background: #b5161e url('button/red.png') repeat-x top;
+	color: white;
 }
 
-input.violetinput[type="submit"],input.violetinput[type="reset"],button.violet,a.button.violet
-{
-	background:#96238F url(button/violet.png) repeat-x top;
+input.red[type="submit"]:hover,
+input.red[type="reset"]:hover,
+button.red:hover,
+a.button.red:hover,
+input.edit[type="submit"]:hover {
+	background: #e44133 url('button/red-active.png') repeat-x top;
 }
 
-input.violetinput[type="submit"]:hover,input.violetinput[type="reset"]:hover,button.violet:hover,a.button.violet:hover
-{
-	background:#96238F url(button/violet-active.png) repeat-x top;
+input.violet[type="submit"],
+input.violet[type="reset"],
+button.violet,
+a.button.violet {
+	background: #96238F url('button/violet.png') repeat-x top;
 }
 
-input.weakinput[type="submit"],input.weakinput[type="reset"],button.weak,a.button.weak
-{
-	background:#60c1bf url(button/aqua-active.png) repeat-x top;
-	color:#FFF;
+input.violet[type="submit"]:hover,
+input.violet[type="reset"]:hover,
+button.violet:hover,
+a.button.violet:hover {
+	background: #96238F url('button/violet-active.png') repeat-x top;
 }
 
-input.weakinput[type="submit"]:active,input.weakinput[type="reset"]:active,button.weak:active,a.button.weak:active
-{
-	background:#b5161e url(button/red.png) repeat-x top;
+input.weak[type="submit"],
+input.weak[type="reset"],
+button.weak,
+a.button.weak {
+	background: #60c1bf url('button/aqua-active.png') repeat-x top;
+	color: white;
 }
 
-input.weakinput[type="submit"]:hover,input.weakinput[type="reset"]:hover,button.weak:hover,a.button.weak:hover
-{
-	background:#b5161e url(button/red.png) repeat-x top;
+input.weak[type="submit"]:active,
+input.weak[type="reset"]:active,
+button.weak:active,
+a.button.weak:active,
+input.weak[type="submit"]:hover,
+input.weak[type="reset"]:hover,
+button.weak:hover,
+a.button.weak:hover {
+	background: #b5161e url('button/red.png') repeat-x top;
 }
 
-input.disabledinput[type="submit"],input.disabledinput[type="reset"],button.disabled,a.button.disabled
-{
-	background:#CCC;
-	color:#FFF;
-	cursor:default;
+input.disabled[type="submit"],
+input.disabled[type="reset"],
+button.disabled,
+a.button.disabled {
+	background: #CCCCCC;
+	color: white;
+	cursor: default;
 }
 
-input.disabledinput[type="submit"]:hover,input.disabledinput[type="reset"]:hover,button.disabled:hover,a.button.disabled:hover
-{
-	background:#CCC;
-	cursor:default;
+input.disabled[type="submit"]:hover,
+input.disabled[type="reset"]:hover,
+button.disabled:hover,
+a.button.disabled:hover {
+	background: #CCCCCC;
+	cursor: default;
 }
 
-input.greeninput[type="submit"],input.greeninput[type="reset"],button.green,a.button.green
-{
-	background:#00b05b url(button/green.png) repeat-x top;
-	color:#FFF;
-	display:inline-block;
-	margin:0 auto 10px;
-	text-align:center;
+input.green[type="submit"],
+input.green[type="reset"],
+button.green,
+a.button.green {
+	background: #00b05b url('button/green.png') repeat-x top;
+	color: white;
+	margin: 0 auto 10px;
+	text-align: center;
+	display: inline-block;
 }
 
-input.greeninput[type="submit"]:active,input.greeninput[type="reset"]:active,button.green:active,a.button.green:active
-{
-	background:#00b05b url(button/green-active.png) repeat-x top;
+input.green[type="submit"]:active,
+input.green[type="reset"]:active,
+button.green:active,
+a.button.green:active {
+	background: #00b05b url('button/green-active.png') repeat-x top;
 }
 
-input.greeninput[type="submit"]:hover,input.greeninput[type="reset"]:hover,button.green:hover,a.button.green:hover
-{
-	background:#00b05b url(button/green-active.png) repeat-x top;
+input.green[type="submit"]:hover,
+input.green[type="reset"]:hover,
+button.green:hover,
+a.button.green:hover {
+	background: #00b05b url('button/green-active.png') repeat-x top;
 }
 
-h1,h2,h3,h4,h5,h6,h7,h8
-{
-	font-weight:700;
-	margin:1em 0;
-	text-transform:uppercase;
+h1, h2, h3, h4, h5, h6, h7, h8 {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 1em 0;
 }
-
-.clearfix:after
-{
-	clear:both;
-	content:" ";
-	display:block;
-	font-size:0;
-	height:0;
-	visibility:hidden;
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
 }
+.clearfix { display: inline-table; }
 
-.clearfix
-{
-	display:block;
-}
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
 
-* html .clearfix
-{
-	height:1%;
-}
-
-ul#pagination
-{
-	float:left;
+ul#pagination {
 	list-style:none;
-	margin:0;
+	float:left;
+	margin: 0;
 	padding:0;
 }
 
-ul#pagination li
-{
-	-moz-box-shadow:3px 3px 0 #E2E2E2;
-	-webkit-box-shadow:3px 3px 0 #E2E2E2;
-	background:#FFF;
-	box-shadow:3px 3px 0 #E2E2E2;
+ul#pagination li {
 	display:inline;
-	float:left;
-	margin:0 6px 0 0;
-	text-align:center;
-	width:auto;
+	margin: 0 6px 0 0;
+	background: white;
+	width: auto;
+	float: left;
+	text-align: center;
+	-moz-box-shadow: 3px 3px 0 #E2E2E2;
+	-webkit-box-shadow: 3px 3px 0 #E2E2E2;
+	box-shadow: 3px 3px 0 #E2E2E2;
 }
 
-ul#pagination li.selected
-{
+ul#pagination li.selected {
 	background:#cde4e5;
-	font-weight:700;
-	padding:6px 20px;
+	font-weight:bold;
+	padding: 6px 20px;
 }
 
-ul#pagination li.hellip
-{
-	padding:6px 20px;
+ul#pagination li.hellip {
+	padding: 6px 20px;
 }
 
-ul#pagination li a
-{
-	display:block;
-	font-weight:700;
-	padding:6px 20px;
+ul#pagination li a {
+	display: block;
+	padding: 6px 20px;
 	text-decoration:none;
+	font-weight:bold;
 }
 
-ul#pagination li a:hover
-{
+ul#pagination li a:hover {
 	background:#F3F3F3;
 }
 
-ul.navi
-{
-	height:10px;
-	list-style:none;
-	margin:0;
-	padding:10px;
-	z-index:900;
+ul.navi {
+	list-style: none;
+	height: 10px;
+	z-index: 900;
+	margin: 0;
+	padding: 10px;
 }
 
-ul.navi li
-{
-	display:block;
-	float:left;
-	height:1em;
-	margin-right:.5em;
-	overflow:hidden;
-	width:1em;
+ul.navi li {
+	display: block;
+	float: left;
+	width: 1em;
+	height: 1em;
+	overflow: hidden;
+	margin-right: .5em;
 }
 
-ul.navi li > *
-{
-	display:block;
-	height:100%;
-	line-height:2000px;
-	text-indent:2000px;
-	width:100%;
+ul.navi li > * {
+	display: block;
+	height: 100%;
+	width: 100%;
+	text-indent: 2000px;
+	line-height: 2000px;
 }
 
-ul.navi li > a
-{
-	background-color:#cdcdce;
+ul.navi li > a {
+	background-color: #cdcdce;
 }
 
-ul.navi li.active > a,ul.navi li > a:hover
-{
-	background-color:#20b3b2;
+ul.navi li.active > a,
+ul.navi li > a:hover {
+	background-color: #20b3b2;
 }
 
-ul.navi li > a.active
-{
-	background-color:#808184;
+ul.navi li > a.active {
+	background-color: #808184;
 }
 
-ul.navi li.prev,ul.navi li.next
-{
-	height:1em;
-	line-height:2000px;
-	overflow:hidden;
-	width:1em;
+ul.navi li.prev,
+ul.navi li.next {
+	width: 1em;
+	height: 1em;
+	line-height: 2000px;
+	overflow: hidden;
 }
 
-ul.navi li.prev a
-{
-	background:url(/view/css/small_arrowslider-sprt.png) scroll no-repeat 0 0;
+ul.navi li.prev a {
+	background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 0;
 }
 
-ul.navi li.prev.active a
-{
-	background:url(/view/css/small_arrowslider-sprt.png) scroll no-repeat 0 -32px;
+ul.navi li.prev.active a {
+	background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -32px;
 }
 
-ul.navi li.next a
-{
-	background:url(/view/css/small_arrowslider-sprt.png) scroll no-repeat 0 -16px;
+ul.navi li.next a {
+	background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -16px;
 }
 
-ul.navi li.next.active a
-{
-	background:url(/view/css/small_arrowslider-sprt.png) scroll no-repeat 0 -48px;
+ul.navi li.next.active a {
+	background: url('/view/css/small_arrowslider-sprt.png') scroll no-repeat 0 -48px;
 }
 
-div.widget.blog-comment
-{
-	position:relative;
+div.widget.blog-comment{position:relative;}
+div.widget.blog-comment button.green{float:right;
+	margin-top: 25px;
+	margin-bottom: 5px;
+}
+div.widget.blog-comment div#bocadillo{
+    background:url('/view/css/bocadillo.jpg') no-repeat;
+    position:absolute;
+    width: 50px;
+    height: 50px;
+	margin-top: 8px;
 }
 
-div.widget.blog-comment button.green
-{
-	float:right;
-	margin-bottom:5px;
-	margin-top:25px;
+a.up{
+    display:inline-block;
+    padding-left:15px;
+    margin-left:18px;
+    background:url('/view/css/arrow-up3.png') no-repeat left;
+    line-height: 20px;
+	font-size: 12px;
+	text-decoration: none;
+	color: #9f9f9f;
+	margin-bottom: 40px;
 }
-
-div.widget.blog-comment div#bocadillo
-{
-	background:url(/view/css/bocadillo.jpg) no-repeat;
-	height:50px;
-	margin-top:8px;
-	position:absolute;
-	width:50px;
-}
-
-a.up
-{
-	background:url(/view/css/arrow-up3.png) no-repeat left;
-	color:#9f9f9f;
-	display:inline-block;
-	font-size:12px;
-	line-height:20px;
-	margin-bottom:40px;
-	margin-left:18px;
-	padding-left:15px;
-	text-decoration:none;
-}
-
-a.up:hover
-{
-	background:url(/view/css/arrow-up.png) no-repeat left;
-	color:#20b3b2;
+a.up:hover{background:url('/view/css/arrow-up.png') no-repeat left;
+	color: #20b3b2;
 }
 
 
@@ -1659,7 +1682,7 @@ div#sub-footer div.platoniq a.poweredby:hover
 /*----------------------------------------------------------------------
  base.css
 ----------------------------------------------------------------------*/
-body
+*
 {
 	font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', 'メイリオ', Helvetica, Arial, sans-serif;
 }
@@ -3091,11 +3114,6 @@ div.superform > div.hint blockquote
 	padding-left:0;
 }
 
-body.js div.superform > div.hint blockquote
-{
-	margin-right:251px;
-}
-
 div.superform > div.hint blockquote p
 {
 	margin:0;
@@ -3542,7 +3560,7 @@ div.superform.green div.elements > ol > li.busy > .title
 	background:url(superform/badge/busy/green.gif) no-repeat right top;
 }
 
-div.superform input.editinput[type="submit"],div.superform input.removeinput[type="submit"],div.superform input.addinput[type="submit"],div.superform input.addinput[type="submit"],div.superform input.okinput[type="submit"],a.button.red,a.button,a.button.weak
+div.superform input.edit[type="submit"],div.superform input.remove[type="submit"],div.superform input.add[type="submit"],div.superform input.add[type="submit"],div.superform input.ok[type="submit"],a.button.red,a.button,a.button.weak
 {
 	font-size:16px;
 	font-weight:700;
@@ -3873,7 +3891,7 @@ div.superform li#individual_rewards
 	border-bottom:none;
 }
 
-div#main.overview div.superform.aqua #image_upload input[type="submit"],div#main.overview div.superform.aqua #video-upload input.media-uploadinput[type="submit"],div.superform.aqua input.okinput[type="submit"]
+div#main.overview div.superform.aqua #image_upload input[type="submit"],div#main.overview div.superform.aqua #video-upload input.media-upload[type="submit"],div.superform.aqua input.ok[type="submit"]
 {
 	padding:.3em 1.2em;
 }
@@ -4554,7 +4572,7 @@ body.dashboard div#meter-big div.graph .minimum .done
 
 body.dashboard div#meter-big div.graph .minimum .done strong
 {
-	background:url(marker.png) no-repeat;
+	background:url(/view/css/dashboard/projects/marker.png) no-repeat;
 	color:#fff;
 	display:block;
 	font-size:12px;
@@ -6322,14 +6340,12 @@ div.widget.project-needs h4
 
 div.widget.project-needs
 {
-	padding-left:0;
-	padding-right:0;
 	position:relative;
 }
 
 body.project-show div#main > div.center > div.widget.project-needs
 {
-	max-width:620px;
+	max-width:580px;
 	padding-bottom:0;
 }
 
@@ -6437,12 +6453,6 @@ div.widget.project-needs table .max
 	word-wrap:break-word;
 }
 
-div.widget.project-needs table thead th.summary
-{
-	font-size:16px;
-	font-weight:700;
-	text-transform:uppercase;
-}
 
 div.widget.project-needs table tbody
 {
@@ -6463,24 +6473,28 @@ div.widget.project-needs table tbody tr.noreq
 	border-bottom:#C1C1C1 1px dashed;
 }
 
-div.widget.project-needs table thead + tbody + thead th.min,div.widget.project-needs table thead + tbody + thead th.max
+div.widget.project-needs table thead + tbody + thead th.min,
+div.widget.project-needs table thead + tbody + thead th.max
 {
 	font-size:0;
 }
 
-div.widget.project-needs table thead th.summary,div.widget.project-needs table thead th.summary
+div.widget.project-needs table thead th.summary
 {
-	background:none no-repeat 1.5em .5em;
-	line-height:32px;
+    font-size:16px;
+    font-weight:700;
+    text-transform:uppercase;
+	background:none no-repeat left 50%;
 	min-height:32px;
 	padding-bottom:16px;
-	padding-left:64px;
+	padding-left:40px;
 }
 
 div.widget.project-needs table thead + tbody + thead th.summary
 {
-	background-position:1.5em 1em;
+	/*background-position:1.5em 1em;*/
 	padding-top:1em;
+    background-position: left 50%;
 }
 
 div.widget.project-needs table thead.task th.summary
@@ -6577,82 +6591,107 @@ div.widget.project-needs div#legend div.max span
 /*----------------------------------------------------------------------
  project/widget/collaborations.css
 ----------------------------------------------------------------------*/
-div.widget.project-collaborations h4.supertitle
-{
-	background-color:#3c9;
+div.widget.project-collaborations h4.supertitle {
+	background-color: #33cc99;
 }
 
-div.widget.project-collaborations ul
-{
-	list-style:none;
-	margin:1em 0 0;
-	padding:0;
+div.widget.project-collaborations ul {
+	margin: 1em 0 0 0;
+	padding: 0;
+	list-style: none;
 }
 
-div.widget.project-collaborations ul li
-{
-	background:none no-repeat left 5px;
-	background-position:left top;
-	line-height:32px;
-	min-height:32px;
-	padding-left:55px;
+div.widget.project-collaborations ul li {
+	padding-left: 55px;
+	background: none no-repeat left 5px;
+	min-height: 32px;
+	line-height: 32px;
 }
 
-div.widget.project-collaborations ul li > p
-{
-	line-height:20px;
-	margin:0;
-	word-wrap:break-word;
+div.widget.project-collaborations ul li > p {
+	margin: 0;
+	line-height: 20px;
+	word-wrap: break-word;
 }
 
-div.widget.project-collaborations ul li.task
-{
-	background-image:url(/view/css/icon/m/task.png);
-	border-bottom:1px dashed silver;
+div.widget.project-collaborations ul li.task {
+	background-image: url('/view/css/icon/m/task.png');
+	border-bottom: 1px dashed #c0c0c0;
 }
 
-div.widget.project-collaborations ul li.task:last-child
-{
-	border-bottom:none;
+div.widget.project-collaborations ul li.task:last-child {
+	border-bottom: none;
 }
 
-div.center.messages div.widget.project-collaborations ul li.task
-{
-	line-height:1em;
+div.center.messages div.widget.project-collaborations ul li.task {
+	line-height: 1em;
+}
+div.center.messages div.widget.project-collaborations ul li.task strong {
+	display: block;
+	padding-bottom: 8px;
 }
 
-div.center.messages div.widget.project-collaborations ul li.task strong
-{
-	display:block;
-	padding-bottom:8px;
+div.widget.project-collaborations ul li.lend {
+	background-image: url('/view/css/icon/m/lend.png');
 }
 
-div.widget.project-collaborations ul li.lend
-{
-	background-image:url(/view/css/icon/m/lend.png);
+div.widget.project-collaborations ul li {
+	background-position: left top;
 }
 
-div.widget.project-collaborations a.more
-{
-	border-top:1px dashed silver;
-	clear:both;
-	display:block;
-	line-height:38px;
-	text-align:center;
-	text-decoration:none;
+div.widget.project-collaborations a.more {
+	clear: both;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	line-height: 38px;
+	border-top: 1px dashed #c0c0c0;
 }
 
-div.widget.project-collaborations a.button
-{
-	background:linear-gradient(to bottom,#66cc99 0%,#339966 100%);
-	display:block;
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#66cc99',endColorstr='#339966',GradientType=0);
-	font-size:14px;
-	height:50px;
-	line-height:50px;
-	margin:0;
-	padding:0;
-	width:200px;
+div.widget.project-collaborations a.button {
+	display: block;
+	width: 200px;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+	background: none;
+	background: #66cc99; /* Old browsers */
+	background: -moz-linear-gradient(top,  #66cc99 0%, #339966 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#66cc99), color-stop(100%,#339966)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #66cc99 0%,#339966 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #66cc99 0%,#339966 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #66cc99 0%,#339966 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #66cc99 0%,#339966 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66cc99', endColorstr='#339966',GradientType=0 ); /* IE6-9 */
+	font-size: 14px;
+	line-height: 50px;
+}
+
+body.project-show div#main div.side div#project-collaborations .project-widget-box {
+	padding: 0 20px;
+	margin: 0;
+}
+
+body.project-show div#main div.side div#project-collaborations .project-widget-box li.support.lend{
+	padding: 0;
+	margin: 0;
+}
+
+body.project-show div#main div.side div#project-collaborations .project-widget-box li a.button.green {
+	text-align: center;
+	display: block;
+}
+
+body.project-show div.center.messages div.project-collaborations {
+	max-width: 580px;
+}
+body.project-show div.center.messages div.project-collaborations ul li {
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+body.project-show div.center.messages div.project-collaborations h3.title {
+	margin-bottom: 0;
+	padding-left: 0;
 }
 
 
@@ -7302,447 +7341,512 @@ div.widget.project-investors h4.supertitle
 /*----------------------------------------------------------------------
  project/widget/rewards.css
 ----------------------------------------------------------------------*/
-div.widget.project-rewards h4.supertitle
-{
-	background-color:#f93;
+div.widget.project-rewards h4.supertitle {
+	background-color: #ff9933;
 }
 
-div.widget.project-rewards div.social,div.widget.project-rewards div.individual
-{
-	border-bottom:1px dashed silver;
-	padding:15px 20px;
+div.widget.project-rewards div.social,
+div.widget.project-rewards div.individual {
+	padding: 15px 20px;
+	border-bottom: 1px dashed #c0c0c0;
 }
 
-div.widget.project-invest div.social h4.title,div.widget.project-rewards div.social h4.title,#rewards-summary div.social h4.title
-{
-	color:#28b258!important;
-	margin-top:8px;
+div.widget.project-invest div.social h4.title,
+div.widget.project-rewards div.social h5.title,
+#rewards-summary div.social h4.title {
+	margin-top: 8px;
+	color: #28b258 !important;
+}
+div.widget.project-rewards h4.title {
+	margin: 0;
+	margin-top: 8px;
+	padding-left: 0;
+}
+div.widget.project-invest div.individual h4.title,
+div.widget.project-rewards div.individual h5.title,
+#rewards-summary div.individual h4.title {
+	color: #96238F !important;
 }
 
-div.widget.project-rewards h4.title
-{
-	margin:8px 0 0;
-	padding-left:0;
+
+div.widget.project-invest > div.social ul li,
+div.widget.project-rewards > div.social ul li,
+#rewards-summary > div.social ul li {
+	background-color: #f3f9f2;
 }
 
-div.widget.project-invest > div.social ul li,div.widget.project-rewards > div.social ul li,#rewards-summary > div.social ul li
-{
-	background-color:#f3f9f2;
+
+div.widget.project-invest > div.social ul li.active,
+div.widget.project-rewards > div.social ul li.active,
+#rewards-summary > div.social ul li.active {
+	background-color: #d5ebd7;
 }
 
-div.widget.project-invest > div.social ul li.active,div.widget.project-rewards > div.social ul li.active,#rewards-summary > div.social ul li.active
-{
-	background-color:#d5ebd7;
+div.side div.project-widget-box div.social ul li.other,
+div.side div.project-widget-box div.social ul li.service {
+	margin: 0;
 }
 
-div.side div.project-widget-box div.social ul li.other,div.side div.project-widget-box div.social ul li.service
-{
-	margin:0;
+div.widget.project-invest > div.individual ul li,
+div.widget.project-rewards > div.individual ul li,
+#rewards-summary > div.individual ul li{
+	background-color: #F5E9F4;
 }
 
-div.widget.project-invest div.individual h4.title,div.widget.project-rewards div.individual h4.title,#rewards-summary div.individual h4.title
-{
-	color:#96238F!important;
+div.center #rewards-summary > div.individual ul li {
+	padding-top: 30px;
+	background-position: 10px 36px;
+}
+div.center.rewards div.widget.project-rewards-summary div.individual ul li div.amount {
+	top: -24px;
+}
+div.center #rewards-summary > div.individual ul li .buttons {
+	text-align: right;
 }
 
-div.widget.project-invest > div.individual ul li,div.widget.project-rewards > div.individual ul li,#rewards-summary > div.individual ul li
-{
-	background-color:#F5E9F4;
+div.side div.widget.project-invest > div.individual ul li,
+div.widget.project-rewards > div.individual ul li,
+div.side #rewards-summary > div.individual ul li{
+	background-position: 10px 35px;
 }
 
-div.center #rewards-summary > div.individual ul li
-{
-	background-position:10px 36px;
-	padding-top:24px;
+div.widget.project-invest > div.individual ul li.active,
+div.widget.project-rewards > div.individual ul li.active,
+#rewards-summary > div.individual ul li.active {
+	background-color: #E5C8E3;
 }
 
-div.center.rewards div.widget.project-rewards-summary div.individual ul li div.amount
-{
-	top:-24px;
+div.widget.project-invest > div.individual ul li span.name,
+div.widget.project-rewards > div.individual ul li span.name,
+#rewards-summary > div.individual ul li span.name{
+	margin: 0 0 .4em;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: none;
 }
 
-div.side div.widget.project-invest > div.individual ul li,div.widget.project-rewards > div.individual ul li,div.side #rewards-summary > div.individual ul li
-{
-	background-position:10px 35px;
-}
 
-div.widget.project-invest > div.individual ul li.active,div.widget.project-rewards > div.individual ul li.active,#rewards-summary > div.individual ul li.active
-{
-	background-color:#E5C8E3;
-}
-
-div.widget.project-invest > div.individual ul li span.name,div.widget.project-rewards > div.individual ul li span.name,#rewards-summary > div.individual ul li span.name
-{
-	font-size:13px;
-	font-weight:700;
-	margin:0 0 .4em;
-	text-transform:none;
-}
-
-div.widget.project-rewards > div.individual ul li div.amount,#rewards-summary > div.individual ul li div.amount
-{
-	color:#96238F;
-	height:28px;
-	position:relative;
-	right:-10px;
-	text-align:right;
+div.widget.project-rewards > div.individual ul li div.amount,
+#rewards-summary > div.individual ul li div.amount {
+	text-align: right;
+	color: #96238F;
+	position: relative;
+	top: -30px;
+	right: -10px;
 	text-transform:uppercase;
-	top:-24px;
+	height: 28px;
 }
 
-#rewards-summary > div.individual ul li div.amount
-{
-	margin-bottom:-20px;
-	padding-left:380px;
-	text-transform:uppercase;
-}
-
-div.widget.project-rewards div.individual ul li div.amount
-{
-	margin-left:40px;
-}
-
-div.widget.project-rewards div.individual ul li.money h4.name
-{
-	line-height:1em;
-}
-
-div.widget.project-rewards > div.individual ul li div.amount span.euro,#rewards-summary > div.individual ul li div.amount span.euro
-{
-	background-color:#e7e7e7;
-	border-right:#e7e7e7 solid 5px;
-	display:inline-block;
-	font-size:14px;
-	font-weight:700;
-	line-height:28px;
-	margin:0 0 0 2px;
-	padding-left:8px;
-	padding-right:20px;
-}
-
-div.widget.project-rewards > div.individual ul li div.investors,#rewards-summary > div.individual ul li div.investors
-{
-	color:#313B96;
-	margin-left:-60px;
-	margin-top:10px;
-	padding:2px 6px 2px 3px;
+#rewards-summary > div.individual ul li div.amount {
+	padding-left: 380px;
+	margin-bottom: -20px;
 	text-transform:uppercase;
 }
 
-div.widget.project-rewards > div.individual ul li span.taken,#rewards-summary > div.individual ul li span.taken
-{
-	border:#313B96 1px solid;
-	color:#313B96;
-	margin-left:6px;
-	margin-right:5px;
-	padding:2px 6px;
+div.widget.project-rewards div.individual ul li div.amount {
+	margin-left: 40px;
+}
+div.widget.project-rewards div.individual ul li.money h4.name {
+	line-height: 1em;
 }
 
-div.widget.project-rewards > div.individual ul li span.left,#rewards-summary > div.individual ul li span.left
-{
-	color:#EE4843;
-	font-weight:700;
+div.widget.project-rewards > div.individual ul li div.amount span.euro,
+#rewards-summary > div.individual ul li div.amount span.euro {
+	margin: 0 0 0 2px;
+	display: inline-block;
+	background-color: #e7e7e7;
+	border-right: #e7e7e7 solid 5px;
+	font-size: 14px;
+	padding-left: 8px;
+	padding-right: 20px;
+	line-height: 28px;
+	font-weight: bold;
 }
 
-div.widget.project-invest ul,div.widget.project-rewards ul,#rewards-summary ul
-{
-	list-style:none;
-	margin:1em 0;
-	padding:0;
+div.widget.project-rewards > div.individual ul li div.investors,
+#rewards-summary > div.individual ul li div.investors {
+	color: #313B96;
+	padding: 2px 6px 2px 3px;
+	text-transform: uppercase;
+	margin-left: -60px;
+	margin-top: 10px;
 }
 
-div.widget.project-invest ul li,div.widget.project-rewards ul li,#rewards-summary ul li
-{
-	background:none no-repeat 10px 14px;
-	margin-bottom:1em;
-	min-height:32px;
-	padding:10px 10px 10px 60px;
+div.widget.project-rewards > div.individual ul li span.taken,
+#rewards-summary > div.individual ul li span.taken {
+	color: #313B96;
+	border: #313B96 1px solid;
+	margin-right: 5px;
+	padding: 2px 6px;
+	margin-left: 6px;
 }
 
-div.widget.project-invest ul li > p,div.widget.project-rewards ul li > p,#rewards-summary ul li > p
-{
-	margin:0 0 1em;
+div.widget.project-rewards > div.individual ul li span.left,
+#rewards-summary > div.individual ul li span.left {
+	color: #EE4843;
+	font-weight: bold;
 }
 
-div.widget.project-invest ul li > .name,div.widget.project-rewards ul li > .name,#rewards-summary ul li > .name
-{
-	font-size:13px;
-	font-weight:700;
-	margin:0 0 8px;
-	padding-left:42px;
-	text-transform:none;
+div.widget.project-invest ul,
+div.widget.project-rewards ul,
+#rewards-summary ul {
+	margin: 1em 0;
+	padding: 0;
+	list-style: none;
 }
 
-div.center.rewards #rewards-summary ul li > .name
-{
-	padding-left:0;
-	width:400px;
+div.widget.project-invest ul li,
+div.widget.project-rewards ul li,
+#rewards-summary ul li {
+	padding: 10px 10px 10px 60px;
+	background: none no-repeat 10px 14px;
+	min-height: 32px;
+	margin-bottom: 1em;
 }
 
-div.widget.project-rewards div.social ul li > .name
-{
-	margin-bottom:0;
-	min-height:32px;
+div.widget.project-invest ul li > p,
+div.widget.project-rewards ul li > p,
+#rewards-summary ul li > p {
+	margin:  0 0 1em;
 }
 
-div.widget.project-rewards div.social ul li > p
-{
-	margin-top:16px;
+div.widget.project-invest ul li > .name,
+div.widget.project-rewards ul li > .name,
+#rewards-summary ul li > .name {
+	padding-left: 42px;
+	margin: 0 0 8px;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: none;
 }
 
-div.widget.project-invest ul li.food,div.widget.project-rewards ul li.food,#rewards-summary ul li.food
-{
-	background-image:url(/view/css/icon/m/food.png);
+div.center.rewards #rewards-summary ul li > .name {
+	padding-left: 0;
+	width: 540px;
 }
 
-div.widget.project-invest ul li.file,div.widget.project-rewards ul li.file,#rewards-summary ul li.file
-{
-	background-image:url(/view/css/icon/m/file.png);
+div.widget.project-rewards div.social ul li > .name {
+	min-height: 32px;
+	margin-bottom: 0;
+}
+div.widget.project-rewards div.social ul li > p {
+	margin-top: 16px;
 }
 
-div.widget.project-invest ul li.money,div.widget.project-rewards ul li.money,#rewards-summary ul li.money
-{
-	background-image:url(/view/css/icon/m/money.png);
+div.widget.project-invest ul li.food,
+div.widget.project-rewards ul li.food,
+#rewards-summary ul li.food{
+	background-image: url('/view/css/icon/m/food.png');
 }
 
-div.widget.project-invest ul li.code,div.widget.project-rewards ul li.code,#rewards-summary ul li.code
-{
-	background-image:url(/view/css/icon/m/code.png);
+div.widget.project-invest ul li.file,
+div.widget.project-rewards ul li.file,
+#rewards-summary ul li.file{
+	background-image: url('/view/css/icon/m/file.png');
 }
 
-div.widget.project-invest ul li.service,div.widget.project-rewards ul li.service,#rewards-summary ul li.service
-{
-	background-image:url(/view/css/icon/m/service.png);
+div.widget.project-invest ul li.money,
+div.widget.project-rewards ul li.money,
+#rewards-summary ul li.money {
+	background-image: url('/view/css/icon/m/money.png');
 }
 
-div.widget.project-invest ul li.manual,div.widget.project-rewards ul li.manual,#rewards-summary ul li.manual
-{
-	background-image:url(/view/css/icon/m/manual.png);
+div.widget.project-invest ul li.code,
+div.widget.project-rewards ul li.code,
+#rewards-summary ul li.code {
+	background-image: url('/view/css/icon/m/code.png');
 }
 
-div.widget.project-invest ul li.product,div.widget.project-rewards ul li.product,#rewards-summary ul li.product
-{
-	background-image:url(/view/css/icon/m/product.png);
+div.widget.project-invest ul li.service,
+div.widget.project-rewards ul li.service,
+#rewards-summary ul li.service {
+	background-image: url('/view/css/icon/m/service.png');
 }
 
-div.center div.widget.project-invest ul li.product,div.center div.widget.project-rewards ul li.product,div.center #rewards-summary ul li.product
-{
-	background-position:10px 10px;
+div.widget.project-invest ul li.manual,
+div.widget.project-rewards ul li.manual,
+#rewards-summary ul li.manual {
+	background-image: url('/view/css/icon/m/manual.png');
 }
 
-div.widget.project-invest ul li.design,div.widget.project-rewards ul li.design,#rewards-summary ul li.design
-{
-	background-image:url(/view/css/icon/m/design.png);
+div.widget.project-invest ul li.product,
+div.widget.project-rewards ul li.product,
+#rewards-summary ul li.product {
+	background-image: url('/view/css/icon/m/product.png');
 }
 
-div.widget.project-invest ul li.other,div.widget.project-rewards ul li.other,#rewards-summary ul li.other
-{
-	background-image:url(/view/css/icon/m/other.png);
+div.center div.widget.project-invest ul li.product, div.center div.widget.project-rewards ul li.product, div.center  #rewards-summary ul li.product{	background-position: 10px 10px;}
+
+div.widget.project-invest ul li.design,
+div.widget.project-rewards ul li.design,
+#rewards-summary ul li.design {
+	background-image: url('/view/css/icon/m/design.png');
 }
 
-div.widget.project-rewards ul li
-{
-	background-position:left top;
-	padding-top:0;
+div.widget.project-invest ul li.other,
+div.widget.project-rewards ul li.other,
+#rewards-summary ul li.other {
+	background-image: url('/view/css/icon/m/other.png');
 }
 
-div.widget.project-rewards a.more
-{
-	display:block;
-	padding:8px;
-	text-align:center;
-	text-decoration:none;
+div.widget.project-rewards ul li {
+	padding-top: 0;
+	background-position: left top;
 }
 
-div.widget.project-invest ul li div.license h4,div.widget.project-invest ul li div.license h5,div.widget.project-invest ul li div.license h6,div.widget.project-invest ul li div.license h7,div.widget.project-invest ul li div.license h8,div.widget.project-rewards ul li div.license h4,div.widget.project-rewards ul li div.license h5,div.widget.project-rewards ul li div.license h6,div.widget.project-rewards ul li div.license h7,div.widget.project-rewards ul li div.license h8,#rewards-summary ul li div.license h4,#rewards-summary ul li div.license h5,#rewards-summary ul li div.license h6,#rewards-summary ul li div.license h7,#rewards-summary ul li div.license h8
-{
-	border-bottom:1px dashed #c8c8c8;
-	font-size:12px;
-	font-weight:700;
-	margin:.5em 0 .6em;
-	padding:0 0 .2em;
-	text-transform:none;
+div.widget.project-rewards a.more {
+	display: block;
+	padding: 8px;
+	text-decoration: none;
+	text-align: center;
 }
 
-div.side div.widget.project-rewards ul li div.license h5
-{
-	border-bottom:none;
+div.widget.project-invest ul li div.license h4,
+div.widget.project-invest ul li div.license h5,
+div.widget.project-invest ul li div.license h6,
+div.widget.project-invest ul li div.license h7,
+div.widget.project-invest ul li div.license h8,
+div.widget.project-rewards ul li div.license h4,
+div.widget.project-rewards ul li div.license h5,
+div.widget.project-rewards ul li div.license h6,
+div.widget.project-rewards ul li div.license h7,
+div.widget.project-rewards ul li div.license h8,
+#rewards-summary ul li div.license h4,
+#rewards-summary ul li div.license h5,
+#rewards-summary ul li div.license h6,
+#rewards-summary ul li div.license h7,
+#rewards-summary ul li div.license h8 {
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: none;
+	border-bottom: 1px dashed #c8c8c8;
+	margin: .5em 0 .6em;
+	padding: 0 0 .2em;
 }
 
-div.side div.widget.project-rewards ul,div.side div.widget.project-rewards div.social ul li > p
-{
-	margin-bottom:0;
+div.side div.widget.project-rewards ul li div.license h5 {
+	border-bottom: none;
+}
+div.side div.widget.project-rewards ul,
+div.side div.widget.project-rewards div.social ul li > p{
+	margin-bottom: 0;
 }
 
-div.widget.project-invest ul li div.license a,div.widget.project-rewards ul li div.license a,#rewards-summary ul li div.license a
-{
-	text-decoration:none;
+div.widget.project-invest ul li div.license a,
+div.widget.project-rewards ul li div.license a,
+#rewards-summary ul li div.license a {
+	text-decoration: none;
 }
 
-div.widget.project-invest ul li div.license > a strong,div.widget.project-rewards ul li div.license > a strong,#rewards-summary ul li div.license > a strong
-{
-	background:url(/view/css/license/license.png) no-repeat left 4px;
-	display:block;
-	padding-top:40px;
+div.widget.project-invest ul li div.license > a strong,
+div.widget.project-rewards ul li div.license > a strong,
+#rewards-summary ul li div.license > a strong {
+	background: url("/view/css/license/license.png") no-repeat left 4px;
+	padding-top: 40px;
+	display: block;
 }
 
-div.widget.project-invest ul li div.license,div.widget.project-rewards ul li div.license,#rewards-summary ul li div.license
-{
-	font-size:12px;
+div.widget.project-invest ul li div.license,
+div.widget.project-rewards ul li div.license,
+#rewards-summary ul li div.license {
+	font-size: 12px;
 }
 
-div.widget.project-invest ul li div.license p,div.widget.project-rewards ul li div.license p,#rewards-summary ul li div.license p
-{
-	margin:.2em 0;
+div.widget.project-invest ul li div.license  p,
+div.widget.project-rewards ul li div.license  p,
+#rewards-summary ul li div.license  p {
+	margin: .2em 0;
 }
 
-div.widget.project-invest ul li div.license.agpl > a strong,div.widget.project-rewards ul li div.license.agpl > a strong,#rewards-summary ul li div.license.agpl > a strong
-{
-	background-image:url(/view/css/license/agpl.png);
+div.widget.project-invest ul li div.license.agpl > a strong,
+div.widget.project-rewards ul li div.license.agpl > a strong,
+#rewards-summary ul li div.license.agpl > a strong {
+	background-image: url('/view/css/license/agpl.png');
 }
 
-div.widget.project-invest ul li div.license.apache > a strong,div.widget.project-rewards ul li div.license.apache > a strong,#rewards-summary ul li div.license.apache > a strong
-{
-	background-image:url(/view/css/license/apache.png);
+div.widget.project-invest ul li div.license.apache > a strong,
+div.widget.project-rewards ul li div.license.apache > a strong,
+#rewards-summary ul li div.license.apache > a strong {
+	background-image: url('/view/css/license/apache.png');
 }
 
-div.widget.project-invest ul li div.license.balloon > a strong,div.widget.project-rewards ul li div.license.balloon > a strong,#rewards-summary ul li div.license.balloon > a strong
-{
-	background-image:url(/view/css/license/balloon.png);
+div.widget.project-invest ul li div.license.balloon > a strong,
+div.widget.project-rewards ul li div.license.balloon > a strong,
+#rewards-summary ul li div.license.balloon > a strong {
+	background-image: url('/view/css/license/balloon.png');
 }
 
-div.widget.project-invest ul li div.license.bsd > a strong,div.widget.project-rewards ul li div.license.bsd > a strong,#rewards-summary ul li div.license.bsd > a strong
-{
-	background-image:url(/view/css/license/bsd.png);
+div.widget.project-invest ul li div.license.bsd > a strong,
+div.widget.project-rewards ul li div.license.bsd > a strong,
+#rewards-summary ul li div.license.bsd > a strong {
+	background-image: url('/view/css/license/bsd.png');
 }
 
-div.widget.project-invest ul li div.license.cc0 > a strong,div.widget.project-rewards ul li div.license.cc0 > a strong,#rewards-summary ul li div.license.cc0 > a strong
-{
-	background-image:url(/view/css/license/cc0.png);
+div.widget.project-invest ul li div.license.cc0 > a strong,
+div.widget.project-rewards ul li div.license.cc0 > a strong,
+#rewards-summary ul li div.license.cc0 > a strong {
+	background-image: url('/view/css/license/cc0.png');
 }
 
-div.widget.project-invest ul li div.license.ccby > a strong,div.widget.project-rewards ul li div.license.ccby > a strong,#rewards-summary ul li div.license.ccby > a strong
-{
-	background-image:url(/view/css/license/ccby.png);
+div.widget.project-invest ul li div.license.ccby > a strong,
+div.widget.project-rewards ul li div.license.ccby > a strong,
+#rewards-summary ul li div.license.ccby > a strong {
+	background-image: url('/view/css/license/ccby.png');
 }
 
-div.widget.project-invest ul li div.license.ccbync > a strong,div.widget.project-rewards ul li div.license.ccbync > a strong,#rewards-summary ul li div.license.ccbync > a strong
-{
-	background-image:url(/view/css/license/ccbync.png);
+div.widget.project-invest ul li div.license.ccbync > a strong,
+div.widget.project-rewards ul li div.license.ccbync > a strong,
+#rewards-summary ul li div.license.ccbync > a strong {
+	background-image: url('/view/css/license/ccbync.png');
 }
 
-div.widget.project-invest ul li div.license.ccbyncnd > a strong,div.widget.project-rewards ul li div.license.ccbyncnd > a strong,#rewards-summary ul li div.license.ccbyncnd > a strong
-{
-	background-image:url(/view/css/license/ccbyncnd.png);
+div.widget.project-invest ul li div.license.ccbyncnd > a strong,
+div.widget.project-rewards ul li div.license.ccbyncnd > a strong,
+#rewards-summary ul li div.license.ccbyncnd > a strong {
+	background-image: url('/view/css/license/ccbyncnd.png');
 }
 
-div.widget.project-invest ul li div.license.ccbyncsa > a strong,div.widget.project-rewards ul li div.license.ccbyncsa > a strong,#rewards-summary ul li div.license.ccbyncsa > a strong
-{
-	background-image:url(/view/css/license/ccbyncsa.png);
+div.widget.project-invest ul li div.license.ccbyncsa > a strong,
+div.widget.project-rewards ul li div.license.ccbyncsa > a strong,
+#rewards-summary ul li div.license.ccbyncsa > a strong {
+	background-image: url('/view/css/license/ccbyncsa.png');
 }
 
-div.widget.project-invest ul li div.license.ccbynd > a strong,div.widget.project-rewards ul li div.license.ccbynd > a strong,#rewards-summary ul li div.license.ccbynd > a strong
-{
-	background-image:url(/view/css/license/ccbynd.png);
+div.widget.project-invest ul li div.license.ccbynd > a strong,
+div.widget.project-rewards ul li div.license.ccbynd > a strong,
+#rewards-summary ul li div.license.ccbynd > a strong {
+	background-image: url('/view/css/license/ccbynd.png');
 }
 
-div.widget.project-invest ul li div.license.ccbysa > a strong,div.widget.project-rewards ul li div.license.ccbysa > a strong,#rewards-summary ul li div.license.ccbysa > a strong
-{
-	background-image:url(/view/css/license/ccbysa.png);
+div.widget.project-invest ul li div.license.ccbysa > a strong,
+div.widget.project-rewards ul li div.license.ccbysa > a strong,
+#rewards-summary ul li div.license.ccbysa > a strong {
+	background-image: url('/view/css/license/ccbysa.png');
 }
 
-div.widget.project-invest ul li div.license.fal > a strong,div.widget.project-rewards ul li div.license.fal > a strong,#rewards-summary ul li div.license.fal > a strong
-{
-	background-image:url(/view/css/license/fal.png);
+div.widget.project-invest ul li div.license.fal > a strong,
+div.widget.project-rewards ul li div.license.fal > a strong,
+#rewards-summary ul li div.license.fal > a strong {
+	background-image: url('/view/css/license/fal.png');
 }
 
-div.widget.project-invest ul li div.license.fdl > a strong,div.widget.project-rewards ul li div.license.fdl > a strong,#rewards-summary ul li div.license.fdl > a strong
-{
-	background-image:url(/view/css/license/fdl.png);
+div.widget.project-invest ul li div.license.fdl > a strong,
+div.widget.project-rewards ul li div.license.fdl > a strong,
+#rewards-summary ul li div.license.fdl > a strong {
+	background-image: url('/view/css/license/fdl.png');
 }
 
-div.widget.project-invest ul li div.license.freebsd > a strong,div.widget.project-rewards ul li div.license.freebsd > a strong,#rewards-summary ul li div.license.freebsd > a strong
-{
-	background-image:url(/view/css/license/freebsd.png);
+div.widget.project-invest ul li div.license.freebsd > a strong,
+div.widget.project-rewards ul li div.license.freebsd > a strong,
+#rewards-summary ul li div.license.freebsd > a strong {
+	background-image: url('/view/css/license/freebsd.png');
 }
 
-div.widget.project-invest ul li div.license.gpl > a strong,div.widget.project-rewards ul li div.license.gpl > a strong,#rewards-summary ul li div.license.gpl > a strong
-{
-	background-image:url(/view/css/license/gpl.png);
+div.widget.project-invest ul li div.license.gpl > a strong,
+div.widget.project-rewards ul li div.license.gpl > a strong,
+#rewards-summary ul li div.license.gpl > a strong {
+	background-image: url('/view/css/license/gpl.png');
 }
 
-div.widget.project-invest ul li div.license.gpl2 > a strong,div.widget.project-rewards ul li div.license.gpl2 > a strong,#rewards-summary ul li div.license.gpl2 > a strong
-{
-	background-image:url(/view/css/license/gpl2.png);
+div.widget.project-invest ul li div.license.gpl2 > a strong,
+div.widget.project-rewards ul li div.license.gpl2 > a strong,
+#rewards-summary ul li div.license.gpl2 > a strong {
+	background-image: url('/view/css/license/gpl2.png');
 }
 
-div.widget.project-invest ul li div.license.lgpl > a strong,div.widget.project-rewards ul li div.license.lgpl > a strong,#rewards-summary ul li div.license.lgpl > a strong
-{
-	background-image:url(/view/css/license/lgpl.png);
+div.widget.project-invest ul li div.license.lgpl > a strong,
+div.widget.project-rewards ul li div.license.lgpl > a strong,
+#rewards-summary ul li div.license.lgpl > a strong {
+	background-image: url('/view/css/license/lgpl.png');
 }
 
-div.widget.project-invest ul li div.license.mit > a strong,div.widget.project-rewards ul li div.license.mit > a strong,#rewards-summary ul li div.license.mit > a strong
-{
-	background-image:url(/view/css/license/mit.png);
+div.widget.project-invest ul li div.license.mit > a strong,
+div.widget.project-rewards ul li div.license.mit > a strong,
+#rewards-summary ul li div.license.mit > a strong {
+	background-image: url('/view/css/license/mit.png');
+}
+div.widget.project-invest ul li div.license.mpl > a strong,
+div.widget.project-rewards ul li div.license.mpl > a strong,
+#rewards-summary ul li div.license.mpl > a strong {
+	background-image: url('/view/css/license/mpl.png');
+}
+div.widget.project-invest ul li div.license.odbl > a strong,
+div.widget.project-rewards ul li div.license.odbl > a strong,
+#rewards-summary ul li div.license.odbl > a strong {
+	background-image: url('/view/css/license/odbl.png');
+}
+div.widget.project-invest ul li div.license.odcby > a strong,
+div.widget.project-rewards ul li div.license.odcby > a strong,
+#rewards-summary ul li div.license.odcby > a strong {
+	background-image: url('/view/css/license/odcby.png');
+}
+div.widget.project-invest ul li div.license.oshw > a strong,
+div.widget.project-rewards ul li div.license.oshw > a strong,
+#rewards-summary ul li div.license.oshw > a strong {
+	background-image: url('/view/css/license/oshw.png');
+}
+div.widget.project-invest ul li div.license.pd > a strong,
+div.widget.project-rewards ul li div.license.pd > a strong,
+#rewards-summary ul li div.license.pd > a strong {
+	background-image: url('/view/css/license/pd.png');
+}
+div.widget.project-invest ul li div.license.php > a strong,
+div.widget.project-rewards ul li div.license.php > a strong,
+#rewards-summary ul li div.license.php > a strong {
+	background-image: url('/view/css/license/php.png');
+}
+div.widget.project-invest ul li div.license.tapr > a strong,
+div.widget.project-rewards ul li div.license.tapr > a strong,
+#rewards-summary ul li div.license.tapr > a strong {
+	background-image: url('/view/css/license/tapr.png');
+}
+div.widget.project-invest ul li div.license.xoln > a strong,
+div.widget.project-rewards ul li div.license.xoln > a strong,
+#rewards-summary ul li div.license.xoln > a strong {
+	background-image: url('/view/css/license/xoln.png');
 }
 
-div.widget.project-invest ul li div.license.mpl > a strong,div.widget.project-rewards ul li div.license.mpl > a strong,#rewards-summary ul li div.license.mpl > a strong
-{
-	background-image:url(/view/css/license/mpl.png);
+/* in center */
+body.project-show div#main > div.center > div.widget.project-rewards-summary,
+div.widget.project-rewards-summary {
+	max-width: 620px;
+	padding: 0;
 }
 
-div.widget.project-invest ul li div.license.odbl > a strong,div.widget.project-rewards ul li div.license.odbl > a strong,#rewards-summary ul li div.license.odbl > a strong
-{
-	background-image:url(/view/css/license/odbl.png);
+/* individual */
+div.side div.project-rewards div.individual ul li div.amount {
+	height: 32px;
+	line-height: 32px;
+	font-size: 16px;
+}
+div.side div.project-rewards div.individual ul li h4.name {
+	margin-top: 8px;
+	padding-left: 0;
+}
+div.side div.project-rewards ul li {
+	border-bottom: 1px dashed #c0c0c0;
+}
+div.side div.project-rewards div.individual ul li:last-child,
+div.side div.project-rewards div.social ul li:last-child {
+	margin-bottom: 0;
+	padding-bottom: 0;
+	border-bottom: none;
 }
 
-div.widget.project-invest ul li div.license.odcby > a strong,div.widget.project-rewards ul li div.license.odcby > a strong,#rewards-summary ul li div.license.odcby > a strong
-{
-	background-image:url(/view/css/license/odcby.png);
+div.side div.project-collaborations li.support h6.name,
+div.side div.project-rewards li.manual h6.name,
+div.side div.project-rewards li.service h6.name {
+    display: table;
+}
+div.side div.project-collaborations li.support h6.name span,
+div.side div.project-rewards li.manual h6.name span,
+div.side div.project-rewards li.service h6.name span{
+    display: table-cell;
+    vertical-align: middle;
 }
 
-div.widget.project-invest ul li div.license.oshw > a strong,div.widget.project-rewards ul li div.license.oshw > a strong,#rewards-summary ul li div.license.oshw > a strong
-{
-	background-image:url(/view/css/license/oshw.png);
-}
-
-div.widget.project-invest ul li div.license.pd > a strong,div.widget.project-rewards ul li div.license.pd > a strong,#rewards-summary ul li div.license.pd > a strong
-{
-	background-image:url(/view/css/license/pd.png);
-}
-
-div.widget.project-invest ul li div.license.php > a strong,div.widget.project-rewards ul li div.license.php > a strong,#rewards-summary ul li div.license.php > a strong
-{
-	background-image:url(/view/css/license/php.png);
-}
-
-div.widget.project-invest ul li div.license.tapr > a strong,div.widget.project-rewards ul li div.license.tapr > a strong,#rewards-summary ul li div.license.tapr > a strong
-{
-	background-image:url(/view/css/license/tapr.png);
-}
-
-div.widget.project-invest ul li div.license.xoln > a strong,div.widget.project-rewards ul li div.license.xoln > a strong,#rewards-summary ul li div.license.xoln > a strong
-{
-	background-image:url(/view/css/license/xoln.png);
-}
-
-body.project-show div#main > div.center > div.widget.project-rewards-summary,div.widget.project-rewards-summary
-{
-	max-width:620px;
-	padding:0;
-}
-
-div.side div.project-rewards div.individual ul li div.amount
-{
-	font-size:16px;
-	height:32px;
-	line-height:32px;
-}
-
-div.side div.project-rewards div.individual ul li h4.name
-{
-	margin-top:8px;
-	padding-left:0;
+div.widget.project-rewards ul li div.license h7 {
+    border-bottom: none;
 }
 
 
@@ -8280,7 +8384,7 @@ div.widget.project-invest div.individual ul li input[type="checkbox"]
 
 div.widget.project-invest div.individual ul li label input[type="checkbox"] + span.chkbox
 {
-	background:url(checkbox.png) no-repeat scroll 0 0 transparent;
+	background:url(/view/css/project/widget/checkbox.png) no-repeat scroll 0 0 transparent;
 	display:block;
 	height:12px;
 	margin-top:-15px;
@@ -8328,12 +8432,6 @@ div.widget.project-invest p label input[type="checkbox"]:checked + span.chkbox
 /*----------------------------------------------------------------------
  project/widget/schedule.css
 ----------------------------------------------------------------------*/
-div.widget.project-schedule
-{
-	padding-left:0;
-	padding-right:0;
-}
-
 div.widget.project-schedule table
 {
 	border-collapse:separate;
@@ -8510,6 +8608,13 @@ div.widget.user dl dd
 div.side div.widget.user dl dd
 {
 	padding-bottom:0;
+    padding-top: 0;
+    height: 36px;
+    line-height: 36px;
+}
+
+div.side div.widget.user dl dd li {
+    line-height: 36px;
 }
 
 div.widget.user dl dd.location
@@ -8586,7 +8691,7 @@ div.widget.worthcracy .title
 
 div.widget.worthcracy ul
 {
-	background:url(../yen/xl.png) no-repeat right center;
+	background:url(/view/css/yen/xl.png) no-repeat right center;
 	display:inline-block;
 	list-style:none;
 	margin:0;
@@ -8635,7 +8740,7 @@ div.widget.worthcracy ul li > em
 
 div.widget.user-worthcracy ul li > strong
 {
-	background:url(beak.png) no-repeat top center;
+	background:url(/view/css/yen/beak.png) no-repeat top center;
 	font-size:18px;
 	font-weight:700;
 	padding-top:9px;
@@ -8806,512 +8911,444 @@ body.project-show div.project-evaluation div.widget.post h3.title
 /*----------------------------------------------------------------------
  project/view.css
 ----------------------------------------------------------------------*/
-body.project-show div#main
-{
-	margin-bottom:0;
-	margin-top:0;
+body.project-show div#main {
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
-body.project-show div#sub-header
-{
-	background:#faf8f8;
+body.project-show div#sub-header {
 	height:auto;
 	min-height:120px;
-	padding-bottom:0;
+	padding-bottom: 0;
 }
 
-body.project-show div#sub-header div.project-header
-{
-	min-height:75px;
+body.project-show div#sub-header div.project-header{
+	min-height: 75px;
 	position:relative;
 	top:10px;
 }
 
-body.project-show div#sub-header div.project-header img
-{
-	float:left;
-	margin:0 20px 0 0;
+body.project-show div#sub-header div.project-header img{
+	float: left;
+	margin: 0 20px 0 0;
 }
 
-body.project-show div#sub-header div.project-header h2
-{
+body.project-show div#sub-header div.project-header h2{
 	font-size:2em;
 	max-width:700px;
 }
 
-body.project-show div#sub-header div.project-header h2 > span
-{
-	display:block;
-	line-height:1em;
+body.project-show div#sub-header div.project-header h2 > span{
+	display: block;
+	line-height: 1em;
 }
 
-body.project-show div#sub-header div.project-subtitle
-{
-	font-size:16px;
-	font-style:normal;
-	font-weight:400;
-	margin:3px 0;
+body.project-show div#sub-header div.project-subtitle {
+	font-size: 16px;
+	font-weight: normal;
+	margin: 3px 0;
 	max-width:620px;
+	font-style: normal;
 }
 
-body.project-show div#sub-header div.wants-skills .matched_skill
-{
-	background-color:#f99;
+body.project-show div#sub-header div.wants-skills .matched_skill {
+	background-color: #ff9999;
 }
 
-body.project-show div#sub-header div.project-by
-{
-	color:#20B3B2;
-	font-size:12px;
-	margin:0 0 .5em;
+body.project-show div#sub-header div.project-by {
+	color: #20B3B2;
+	font-size: 12px;
+	margin: 0 0 .5em;
 }
 
-body.project-show div#sub-header div.project-by a
-{
-	color:#c60;
-	font-size:12px;
-	font-weight:400;
-	text-decoration:none;
+body.project-show div#sub-header div.project-by a {
+	font-weight: normal;
+	color: #cc6600;
+	font-size: 12px;
+	text-decoration: none;
 }
 
-body.project-show div#sub-header div.project-by a:hover
-{
-	color:#58595B;
+body.project-show div#sub-header div.project-by a:hover {
+	color: #58595B;
 }
 
-body.project-show div#sub-header div.categories
-{
-	position:absolute;
-	right:10px;
-	text-align:right;
-	top:0;
+body.project-show div#sub-header div.categories {
+	position: absolute;
+	right: 10px;
+	text-align: right;
+	top: 0;
 }
 
-body.project-show div#sub-header div.categories h3
-{
-	color:#20B3B2;
-	font-weight:400;
-	margin:0;
+body.project-show div#sub-header div.categories h3 {
+	font-weight: normal;
+	color: #20B3B2;
+	margin: 0;
 }
 
-body.project-show div#sub-header div.categories *
-{
-	font-size:12px;
+body.project-show div#sub-header div.categories * {
+	font-size: 12px;
 }
 
-body.project-show div#sub-header div.categories a
-{
-	color:#58595B;
-	text-decoration:none;
+body.project-show div#sub-header div.categories a {
+	color: #58595B;
+	text-decoration: none;
 }
 
-body.project-show div#sub-header div.categories a:hover
-{
-	color:#20B3B2;
+body.project-show div#sub-header div.categories a:hover {
+	color: #20B3B2;
 }
 
-body.project-show div#sub-header div#social_bookmark
-{
-	bottom:24px;
-	float:none;
-	margin-right:0;
-	position:absolute;
-	right:0;
-	width:330px;
+body.project-show div#sub-header div#social_bookmark {
+	float: none;
+	position: absolute;
+	right: 0;
+	bottom: 24px;
+	width: 330px;
+	margin-right: 0;
+}
+body.project-show div#sub-header div#social_bookmark #twitter {
+	width: 95px;
 }
 
-body.project-show div#sub-header div#social_bookmark #twitter
-{
-	width:95px;
+body.project-show div#sub-header div#social_bookmark #facebook {
+	width: 155px;
 }
 
-body.project-show div#sub-header div#social_bookmark #facebook
-{
-	width:155px;
+body.project-show div#sub-header div#social_bookmark #___plusone_0 {
+	width: 65px!important;
 }
 
-body.project-show div#sub-header div#social_bookmark #___plusone_0
-{
-	width:65px!important;
+body.project-show div.project-menu {
+	margin:18px 0 0 0;
 }
 
-body.project-show div.project-menu
-{
-	margin:18px 0 0;
+body.project-show div.project-menu div.sub-menu{
+	max-width: 940px;
+	margin: 0;
 }
 
-body.project-show div.project-menu div.sub-menu
-{
-	margin:0;
-	max-width:940px;
+body.project-show div.project-menu ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size: 0;
 }
 
-body.project-show div.project-menu ul
-{
-	font-size:0;
-	list-style:none;
-	margin:0;
-	padding:0;
+body.project-show div.project-menu ul li {
+	display: inline-block;
+	margin-right: 1px;
 }
 
-body.project-show div.project-menu ul li
-{
-	display:inline-block;
-	margin-right:1px;
-}
-
-body.project-show div.project-menu ul li span.digits
-{
+body.project-show div.project-menu ul li span.digits{
 	display:inline-block;
 	text-align:center;
 }
 
-body.project-show div.project-menu ul li a
-{
-	background:linear-gradient(to bottom,#ffffcc 0%,#e5e5b9 100%,#e8e8bb 100%);
-	border-left:1px solid #cc9;
-	border-right:1px solid #cc9;
-	border-top:1px solid #cc9;
-	color:#996;
-	display:inline-block;
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffcc',endColorstr='#e8e8bb',GradientType=0);
-	font-size:14px;
-	font-weight:bolder;
+body.project-show div.project-menu ul li a {
+	display: inline-block;
+	min-width: 80px !important;
 	height:50px;
-	line-height:49px;
-	min-width:80px!important;
-	padding:0 16px;
-	text-align:center;
-	text-decoration:none;
-	text-transform:uppercase;
+	padding: 0 16px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	line-height: 49px;
+	background: #ffffcc; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffcc 0%, #e5e5b9 100%, #e8e8bb 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffcc), color-stop(100%,#e5e5b9), color-stop(100%,#e8e8bb)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffcc 0%,#e5e5b9 100%,#e8e8bb 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffcc 0%,#e5e5b9 100%,#e8e8bb 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffcc 0%,#e5e5b9 100%,#e8e8bb 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffcc 0%,#e5e5b9 100%,#e8e8bb 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffcc', endColorstr='#e8e8bb',GradientType=0 ); /* IE6-9 */
+	border-top: 1px solid #cccc99;
+	border-right: 1px solid #cccc99;
+	border-left: 1px solid #cccc99;
+	color: #999966;
+	font-size: 14px;
+	font-weight: bolder;
 }
 
-body.project-show div.project-menu ul li.active a
-{
-	-ms-filter:none;
-	background:none;
-	background-color:#dae121;
-	border:none;
-	border-left:1px solid #e8e8bb;
-	border-right:1px solid #e8e8bb;
-	border-top:1px solid #e8e8bb;
-	color:#666;
-	filter:none;
-	height:50px;
-	min-width:80px!important;
-	padding:0 16px;
-	text-align:center;
+body.project-show div.project-menu ul li.active a {
+	filter: none;
+	-ms-filter: none;
+	background: none;
+	background-color: #dae121;
+	border: none;
+	color: #666666;
+	border-top: 1px solid #e8e8bb;
+	border-right: 1px solid #e8e8bb;
+	border-left: 1px solid #e8e8bb;
 }
 
-body.project-show div.project-menu ul li.show a
-{
-	-ms-filter:none;
-	background:none;
-	background-color:#dae121;
-	border:none;
-	border-left:1px solid #e8e8bb;
-	border-right:1px solid #e8e8bb;
-	border-top:1px solid #e8e8bb;
-	color:#666;
-	filter:none;
-	height:50px;
-	min-width:80px!important;
-	text-align:center;
+body.project-show div.project-menu ul li.show a {
+	filter: none;
+	-ms-filter: none;
+	background: none;
+	background-color: #dae121;
+	border: none;
+	color: #666666;
+	border-top: 1px solid #e8e8bb;
+	border-right: 1px solid #e8e8bb;
+	border-left: 1px solid #e8e8bb;
 }
 
-body.project-show div#main div.widget
-{
-	margin-bottom:10px;
-	max-width:580px;
+body.project-show div#main div.widget {
+	max-width: 580px;
+	margin-bottom: 10px;
 }
 
-body.project-show div#main div.project-spread div.widget.project.activable
-{
-	margin-bottom:50px!important;
+body.project-show div#main div.project-spread div.widget.project.activable {
+	margin-bottom: 50px!important;
 }
 
-body.project-show div#main div.widget pre
-{
-	font-size:13px;
+body.project-show div#main div.widget pre {
+	font-size: 13px;
 }
 
-body.project-show div#main div.widget.project-support
-{
-	min-height:390px;
+body.project-show div#main > div.side > div.widget {
+	width: 330px;
+	float: right;
+	clear: right;
 }
 
-body.project-show div#main > div.side > div.widget
-{
-	clear:right;
-	float:right;
-	width:330px;
-}
-
-body.project-show div#main > div.side > div.widget .invest-notice
-{
-	clear:both;
-	font-size:13px;
+body.project-show div#main > div.side > div.widget .invest-notice{
+	clear: both;
 	padding:0 20px 20px;
+	font-size:13px;
 }
 
-body.project-show div#main > div.center > div.widget
-{
-	clear:left;
-	margin-right:20px;
-	max-width:580px;
-	padding-bottom:20px;
+body.project-show div#main > div.center > div.widget {
+	max-width: 580px;
+	margin-right: 20px;
+	clear: left;
+	padding-bottom: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
-body.project-show div#main > div.center > div.widget.project-summary:first-child
-{
-	border-bottom:none;
+body.project-show div#main > div.center > div.widget.project-share {
+    max-width: 580px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-body.project-show div#main > div.center > div.widget .gallery-image
-{
-	text-align:center;
+body.project-show div#main > div.center > div.widget.project-summary:first-child {
+	border-bottom: none;
 }
 
-body.project-show div#main > div.side > div.widget .title
-{
-	background:none!important;
+body.project-show div#main > div.center > div.widget .gallery-image{
+	text-align: center;
 }
 
-body.project-show div#main > div.side div.widget.project-collaborations h3.title
-{
-	margin-bottom:16px;
+body.project-show div#main > div.center > div.widget .gallery-image img {
+	width: 540px;
 }
 
-div.widget.project-spread > h3.title
-{
-	padding-left:46px;
+body.project-show div#main > div.side > div.widget .title {
+	background: none !important;
 }
 
-div.widget.project-spread > div.widget.projects > div.left
-{
-	border-right:#000 1px solid;
-	float:left;
-	width:280px;
+body.project-show div#main > div.side div.widget.project-collaborations h5.title {
+	margin-bottom: 16px;
+	padding-left: 0;
 }
 
-div.widget.project-spread > div.widget.projects > div.right
-{
-	float:left;
-	margin-left:12px;
-	width:245px;
-}
+div.widget.project-spread > h3.title{padding-left:46px;}
+div.widget.project-spread > div.widget.projects > div.left{float:left;width:280px;border-right:#000 1px solid;}
+div.widget.project-spread > div.widget.projects > div.right{float:left;width:245px;margin-left:12px;}
+div.widget.project-spread div.subtitle{width:245px;text-transform:uppercase;margin:0 0 10px 7px;}
+div.widget.project-spread div.subtitle#s1{}
+div.widget.project-spread div.subtitle#s2{}
+div.widget.project-spread div.subtitle > span{display:block;}
+div.widget.project-spread div.subtitle > span.primero{margin-bottom:3px;}
+div.widget.project-spread div.subtitle > span.segundo{color:#28ACAB;font-weight:bold;}
 
-div.widget.project-spread div.subtitle
-{
-	margin:0 0 10px 7px;
-	text-transform:uppercase;
-	width:245px;
-}
+div.widget.projects #widget-code{	width:350px;	float:left; margin: 0 0 0 20px;}
+div.widget.projects  #widget-code .wc-embed{background: url("/view/css/social/embed.png") no-repeat; min-height:20px;text-transform:uppercase;padding: 3px 0 0 25px;margin-top:10px;}
 
-div.widget.project-spread div.subtitle > span
-{
-	display:block;
-}
-
-div.widget.project-spread div.subtitle > span.primero
-{
-	margin-bottom:3px;
-}
-
-div.widget.project-spread div.subtitle > span.segundo
-{
-	color:#28ACAB;
-	font-weight:700;
-}
-
-div.widget.projects #widget-code
-{
-	float:left;
-	margin:0 0 0 20px;
-	width:350px;
-}
-
-div.widget.projects #widget-code .wc-embed
-{
-	background:url(/view/css/social/embed.png) no-repeat;
-	margin-top:10px;
-	min-height:20px;
-	padding:3px 0 0 25px;
-	text-transform:uppercase;
-}
-
-div.widget.projects #widget-code textarea
-{
-	background:#E7E7E7;
-	border:none;
-	clear:both;
-	font-size:12px;
-	height:400px;
-	margin:10px 0;
-	opacity:1;
-	padding:10px;
-	resize:none;
+div.widget.projects  #widget-code textarea{
+	clear: both;
 	width:200px;
-}
-
-div.widget h4.supertitle
-{
-	border-bottom:none;
-	color:#fff;
-	height:50px;
-	line-height:50px;
-	padding:0 0 0 20px;
-}
-
-div#project-support,div#project-investors,div#project-collaborations,div#project-rewards,div.widget.user,div.widget.project-investors,div.widget.user-mates,div.widget.user-mates,div.widget.user,div.widget.user-supporters
-{
-	padding:0;
-}
-
-div#project-support .project-widget-box,div#project-investors .project-widget-box,div#project-collaborations .project-widget-box,div.widget.user .project-widget-box,div.widget.project-investors .project-widget-box,div.widget.user-mates .project-widget-box,div.widget.user-supporters .project-widget-box
-{
-	padding:15px 20px;
-}
-
-body.project-show div.side div#project-support .project-widget-box
-{
-	position:relative;
-}
-
-div.widget.project-support
-{
-	position:relative;
-}
-
-div.widge dl
-{
-	float:left;
-	margin:0 0 60px 15px;
-	padding:0 0 0 20px;
-}
-
-div.project-header div.wants-skills a
-{
-	padding:0 10px 0 0;
-}
-
-body.project-show #main.threecols div.widget.project-spread h3.title
-{
-	margin:0;
-	padding:0;
-}
-
-body.project-show #main.threecols div.center.supporters div.widget.project-spread
-{
-	height:auto;
-	padding:20px;
-	width:620px;
-}
-
-body.project-show #main.threecols div.center.supporters div.widget.project-spread .widget.projects
-{
-	margin-bottom:10px!important;
-}
-
-body.project-show #main.threecols div.widget.project-spread .widget.projects
-{
-	border:1px dashed silver;
-	margin:20px auto 0;
-	width:280px;
-}
-
-body.project-show #main.threecols div.widget.project-spread div.widget.projects div.left
-{
-	border-right:none;
-	float:none;
-	height:auto;
-	width:280px;
-}
-
-body.project-show #main.threecols div.widget.project-spread div.widget.projects #widget-code
-{
-	clear:both;
-	float:none;
-	margin:0 0 0 20px;
-	width:260px;
-}
-
-body.project-show #main.threecols div.widget.project-spread div.widget.projects div.left div.subtitle
-{
-	margin:0 0 10px 7px;
-	text-align:left;
-	text-transform:uppercase;
-	width:100%;
-}
-
-body.project-show #main.threecols .widget.project-message
-{
-	margin:0;
-	position:relative;
-}
-
-body.project-show #main.threecols div.widget.project-spread div.widget.projects #widget-code textarea
-{
+	height: 400px;
+	margin: 10px 0;
+	padding:10px;
 	background:#E7E7E7;
 	border:none;
-	clear:both;
 	font-size:12px;
-	height:130px;
-	margin:10px 0;
-	opacity:1;
-	padding:10px;
 	resize:none;
+	opacity: 1;
+}
+
+div.widget h4.supertitle {
+	height: 50px;
+	padding: 0;
+	padding-left: 20px;
+	border-bottom: none;
+	line-height: 50px;
+	color: #ffffff;
+}
+
+div#project-support,
+div#project-investors,
+div#project-collaborations,
+div#project-rewards,
+div.widget.user,
+div.widget.project-investors,
+div.widget.user-mates,
+div.widget.user-mates,
+div.widget.user,
+div.widget.user-supporters {
+	padding: 0;
+}
+
+div#project-support .project-widget-box,
+div#project-investors .project-widget-box,
+div#project-collaborations .project-widget-box,
+div.widget.user .project-widget-box,
+div.widget.project-investors .project-widget-box,
+div.widget.user-mates .project-widget-box,
+div.widget.user-supporters .project-widget-box
+{
+	padding: 15px 20px;
+}
+
+body.project-show div.side div#project-support .project-widget-box {
+	position: relative;
+}
+
+
+div.widget.project-support {
+	position: relative;
+}
+
+div.widge dl {
+	margin: 0;
+	padding: 0 0 0 20px;
+	float: left;
+	margin-left: 15px;
+	margin-bottom: 60px;
+}
+
+div.project-header div.wants-skills a {
+	padding: 0 10px 0 0;
+
+}
+
+body.project-show #main.threecols div.widget.project-spread h3.title {
+	padding :0;
+	margin: 0;
+}
+
+body.project-show #main.threecols div.center.supporters div.widget.project-spread {
+	width: 620px;
+	height: auto;
+	padding: 20px;
+}
+
+body.project-show #main.threecols div.center.supporters div.widget.project-spread .widget.projects{
+	margin-bottom: 10px!important;
+}
+
+body.project-show #main.threecols div.widget.project-spread .widget.projects {
+	width: 280px;
+	margin: 20px auto 0;
+	border: 1px dashed #c0c0c0;
+}
+
+body.project-show #main.threecols div.widget.project-spread div.widget.projects div.left {
+	float: none;
+	width: 280px;
+	height: auto;
+	border-right: none;
+}
+
+body.project-show #main.threecols div.widget.project-spread div.widget.projects #widget-code {
+	clear: both;
+	width: 260px;
+	float: none;
+	margin: 0 0 0 20px;
+}
+
+body.project-show #main.threecols div.widget.project-spread div.widget.projects div.left div.subtitle {
+	width: 100%;
+	text-transform: uppercase;
+	margin: 0 0 10px 7px;
+	text-align: left;
+}
+
+body.project-show #main.threecols .widget.project-message {
+	position: relative;
+	margin: 0;
+}
+
+body.project-show #main.threecols div.widget.project-spread div.widget.projects #widget-code textarea{
+	clear: both;
 	width:230px;
+	height: 130px;
+	margin: 10px 0;
+	padding:10px;
+	background:#E7E7E7;
+	border:none;
+	font-size:12px;
+	resize:none;
+	opacity: 1;
 }
 
-body.project-show #main.threecols div.project-message
-{
-	padding-bottom:30px;
+body.project-show #main.threecols div.project-message {
+	padding-bottom: 30px;
 }
 
-body.project-show #main.threecols div.project-message button
-{
-	float:right;
-	font-style:normal;
-	font-weight:400;
-	margin-bottom:0;
-	margin-top:25px;
+body.project-show #main.threecols div.project-message button {
+	float: right;
+	margin-top: 25px;
+	font-weight: normal;
+	margin-bottom: 0;
+	font-style: normal;
 }
 
-
-body.project-show div#main div.side div#project-collaborations .project-widget-box
-{
-	margin:0;
-	padding:0 20px;
+div.widget.project-support div.buttons {
+	padding: 16px 0 0;
+	clear: both;
+	position: absolute;
+	top: 250px;
+	left:50%;
+	margin:0 0 0 -97px;
 }
 
-body.project-show div#main div.side div#project-collaborations .project-widget-box li.support.lend
-{
-	margin:0;
-	padding:0;
+div.widget.project-support a.button,
+div.widget.project-rewards a.button,
+div.widget.project-rewards-summary a.button,
+div.widget.project-summary a.button {
+	width: 200px;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+	background: none;
+	background: #f2bb67; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f2bb67 0%, #ff9900 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2bb67), color-stop(100%,#ff9900)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f2bb67 0%,#ff9900 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f2bb67 0%,#ff9900 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f2bb67 0%,#ff9900 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f2bb67 0%,#ff9900 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2bb67', endColorstr='#ff9900',GradientType=0 ); /* IE6-9 */
+	font-size: 14px;
+	line-height: 50px;
 }
 
-body.project-show div#main div.side div#project-collaborations .project-widget-box li a.button.green
-{
-	display:block;
-	text-align:center;
-}
-
-body.project-show div.center.messages div.project-collaborations
-{
-	max-width:580px;
-}
-
-body.project-show div.center.messages div.project-collaborations ul li
-{
-	margin-top:20px;
-	padding-bottom:20px;
-}
-
-body.project-show div.center.messages div.project-collaborations h3.title
-{
-	margin-bottom:0;
-	padding-left:0;
+div.widget.project-support a.button:hover,
+div.widget.project-rewards a.button:hover
+div.widget.project-rewards-summary a.button:hover,
+div.widget.project-summary a.button:hover  {
+	background: #f2bb67; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ff9900 0%, #f2bb67 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff9900), color-stop(100%,#f2bb67)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ff9900 0%,#f2bb67 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ff9900 0%,#f2bb67 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ff9900 0%,#f2bb67 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ff9900 0%,#f2bb67 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9900', endColorstr='#f2bb67',GradientType=0 ); /* IE6-9 */
 }
 
 
@@ -9354,47 +9391,47 @@ body.project-edit div#main #project-steps span.step
 
 body.project-edit div#main #project-steps span.step.first-off
 {
-	background-image:url(steps/line-first-off.png);
+	background-image:url(/view/css/project/edit/steps/line-first-off.png);
 }
 
 body.project-edit div#main #project-steps span.step.first-on
 {
-	background-image:url(steps/line-first-on.png);
+	background-image:url(/view/css/project/edit/steps/line-first-on.png);
 }
 
 body.project-edit div#main #project-steps span.step.on-on
 {
-	background-image:url(steps/line-on-on.png);
+	background-image:url(/view/css/project/edit/steps/line-on-on.png);
 }
 
 body.project-edit div#main #project-steps span.step.on-off
 {
-	background-image:url(steps/line-on-off.png);
+	background-image:url(/view/css/project/edit/steps/line-on-off.png);
 }
 
 body.project-edit div#main #project-steps span.step.on-last
 {
-	background-image:url(steps/line-on-off.png);
+	background-image:url(/view/css/project/edit/steps/line-on-off.png);
 }
 
 body.project-edit div#main #project-steps span.step.off-off
 {
-	background-image:url(steps/line-off-off.png);
+	background-image:url(/view/css/project/edit/steps/line-off-off.png);
 }
 
 body.project-edit div#main #project-steps span.step.off-on
 {
-	background-image:url(steps/line-off-on.png);
+	background-image:url(/view/css/project/edit/steps/line-off-on.png);
 }
 
 body.project-edit div#main #project-steps span.step.off-last
 {
-	background-image:url(steps/line-off-last.png);
+	background-image:url(/view/css/project/edit/steps/line-off-last.png);
 }
 
 body.project-edit div#main #project-steps span.step > button
 {
-	background:url(steps/balloon-on.png) no-repeat bottom center;
+	background:url(/view/css/project/edit/steps/balloon-on.png) no-repeat bottom center;
 	border:none;
 	color:#20b2b1;
 	font-size:12px;
@@ -9408,28 +9445,28 @@ body.project-edit div#main #project-steps span.step > button
 
 body.project-edit div#main #project-steps span.step.off > button
 {
-	background-image:url(steps/balloon-off.png);
+	background-image:url(/view/css/project/edit/steps/balloon-off.png);
 	color:#b2b2b2;
 }
 
 body.project-edit div#main #project-steps span.step.active > button
 {
-	background-image:url(steps/balloon-on-active.png);
+	background-image:url(/view/css/project/edit/steps/balloon-on-active.png);
 }
 
 body.project-edit div#main #project-steps span.step.off.active > button
 {
-	background-image:url(steps/balloon-off-active.png);
+	background-image:url(/view/css/project/edit/steps/balloon-off-active.png);
 }
 
 body.project-edit div#main #project-steps span.step.error > button
 {
-	background-image:url(steps/balloon-error.png);
+	background-image:url(/view/css/project/edit/steps/balloon-error.png);
 }
 
 body.project-edit div#main #project-steps span.step.error.active > button
 {
-	background-image:url(steps/balloon-error-active.png);
+	background-image:url(/view/css/project/edit/steps/balloon-error-active.png);
 }
 
 body.project-edit div#main #project-steps span.step > button > strong.number
@@ -9483,6 +9520,10 @@ body.project-edit div#main #project-steps fieldset fieldset > legend
 	width:100%;
 }
 
+body.project-edit #preview .invest-notice {
+    clear: both;
+    padding: 0 20px 20px;
+}
 
 /*----------------------------------------------------------------------
  project/edit/profile.css
@@ -10453,8 +10494,8 @@ body.project-edit div#main div.project-preview div.widget.project-summary,body.p
 
 body.project-edit div#main div.project-preview div.widget.project-needs,body.project-edit div#main div.project-preview div.widget.project-schedule
 {
-	margin-right:20px;
-	max-width:620px;
+	/*margin-right:20px;*/
+	max-width:580px;
 }
 
 body.project-edit div#main div.project-preview div.widget.project-media
@@ -10578,7 +10619,7 @@ body.project-edit div#main .status #project-status ul
 
 body.project-edit div#main .status #project-status ul li strong
 {
-	background:url(statusmarker.png) no-repeat left center;
+	background:url(/view/css/project/statusmarker.png) no-repeat left center;
 	color:#58595b;
 	display:block;
 	font-size:22px;
@@ -10607,7 +10648,7 @@ body.project-edit div#main .status #project-score .meter
 
 body.project-edit div#main .status #project-score .meter .done
 {
-	background:url(scoremeter.png) no-repeat left top;
+	background:url(/view/css/project/scoremeter.png) no-repeat left top;
 	bottom:0;
 	left:0;
 	position:absolute;
@@ -10616,17 +10657,23 @@ body.project-edit div#main .status #project-score .meter .done
 
 body.project-edit div#main .status #project-score .meter .left
 {
-	background:url(scoremeter.png) no-repeat right bottom;
+	background:url(/view/css/project/scoremeter.png) no-repeat right bottom;
 	bottom:0;
 	position:absolute;
 	right:0;
 	top:0;
 }
 
+
 body.project-edit div.superform
 {
 	border:solid #0a0a0a;
 	border-width:3px 0;
+}
+
+body.project-edit div.superform > div.hint blockquote
+{
+    margin-bottom: 20px;
 }
 
 body.project-edit div.superform > .elements > ol > li#errors
@@ -10677,6 +10724,7 @@ body.project-edit div.superform li.element#footer li#buttons input,body.project-
 	box-shadow:2px 2px 0 rgba(0,0,0,.2);
 	padding:8px 16px;
 }
+
 
 
 /*----------------------------------------------------------------------
@@ -11018,11 +11066,6 @@ body.user-register div#main form input[type="submit"]
 /*----------------------------------------------------------------------
  user/profile.css
 ----------------------------------------------------------------------*/
-body.user-profile div#main div.widget,body.community div#main div.widget
-{
-	margin-bottom:10px;
-}
-
 body.user-profile div#main > div.center,body.community div#main > div.center
 {
 	float:left;
@@ -11040,7 +11083,7 @@ div.widget.user-supporters h3.supertitle
 	background-color:#313B96;
 	border-bottom:1px solid #313B96!important;
 	color:#f5f5f5;
-	padding-left:8px;
+	padding-left:20px;
 }
 
 body.user-profile div#main div.discover-group div.widget.project
@@ -12289,7 +12332,7 @@ body.user-profile div.widget.user-mates h3.supertitle
 	font-size:18px;
 	font-weight:400;
 	margin:0;
-	padding:.5em 2px .5em 8px;
+	padding:.5em 2px .5em 20px;
 }
 
 body.user-profile div.widget.user-mates div.categories
@@ -12375,7 +12418,7 @@ body.user-profile .side div.widget.user-mates a.more,div.center div.widget.user-
 
 #glossary-content h3.title
 {
-	background:#FFF url(arrowH2-section.gif) no-repeat scroll -5px -2px;
+	background:#FFF url(/view/css/arrowH2-section.gif) no-repeat scroll -5px -2px;
 	font-size:16px;
 	font-weight:700;
 	margin:0 0 20px;
@@ -12504,7 +12547,7 @@ div.widget.glossary-sidebar-module ul li a:hover
 
 #faq-content h2
 {
-	background:#FFF url(arrowH2-section.gif) no-repeat scroll -5px -2px;
+	background:#FFF url(/view/css/arrowH2-section.gif) no-repeat scroll -5px -2px;
 	border-bottom:2px solid #e7e7e7;
 	font:bold 16px Helvetica, Arial, Geneva, sans-serif;
 	height:30px;
@@ -12913,14 +12956,14 @@ div.widget.blog-content-module ul.share-goteo li.sharetext,#blog-content .post u
 
 div.widget.blog-content-module ul.share-goteo li.twitter a,#blog-content .post ul.share-goteo li.twitter a
 {
-	background:transparent url(twitter.png) scroll no-repeat 0 0;
+	background:transparent url(/view/css/twitter.png) scroll no-repeat 0 0;
 	color:#13c2ec;
 	text-decoration:none;
 }
 
 div.widget.blog-content-module ul.share-goteo li.twitter a:hover,#blog-content .post ul.share-goteo li.twitter a:hover
 {
-	background:transparent url(twitter.png) scroll no-repeat 0 0;
+	background:transparent url(/view/css/twitter.png) scroll no-repeat 0 0;
 	color:#808285;
 	opacity:0.6;
 	text-decoration:none;
@@ -12928,14 +12971,14 @@ div.widget.blog-content-module ul.share-goteo li.twitter a:hover,#blog-content .
 
 div.widget.blog-content-module ul.share-goteo li.facebook a,#blog-content .post ul.share-goteo li.facebook a
 {
-	background:transparent url(facebook.png) scroll no-repeat 0 0;
+	background:transparent url(/view/css/facebook.png) scroll no-repeat 0 0;
 	color:#4a6393;
 	text-decoration:none;
 }
 
 div.widget.blog-content-module ul.share-goteo li.facebook a:hover,#blog-content .post ul.share-goteo li.facebook a:hover
 {
-	background:transparent url(facebook.png) scroll no-repeat 0 0;
+	background:transparent url(/view/css/facebook.png) scroll no-repeat 0 0;
 	color:#808285;
 	opacity:0.6;
 	text-decoration:none;
@@ -13238,7 +13281,7 @@ div.searcher form
 
 #searcher
 {
-	background:url(lupa.png) no-repeat;
+	background:url(/view/css/lupa.png) no-repeat;
 	height:33px;
 	margin-top:-1px;
 	text-indent:-9999px;
@@ -13347,22 +13390,22 @@ div.discover-arrow-right
 
 div.discover-arrow-left a.discover-arrow
 {
-	background:url(arrowslider-sprt.png) scroll no-repeat 0 0;
+	background:url(/view/css/arrowslider-sprt.png) scroll no-repeat 0 0;
 }
 
 div.discover-arrow-left a.discover-arrow:hover
 {
-	background:url(arrowslider-sprt.png) scroll no-repeat 0 -48px;
+	background:url(/view/css/arrowslider-sprt.png) scroll no-repeat 0 -48px;
 }
 
 div.discover-arrow-right a.discover-arrow
 {
-	background:url(arrowslider-sprt.png) scroll no-repeat 0 -24px;
+	background:url(/view/css/arrowslider-sprt.png) scroll no-repeat 0 -24px;
 }
 
 div.discover-arrow-right a.discover-arrow:hover
 {
-	background:url(arrowslider-sprt.png) scroll no-repeat 0 -72px;
+	background:url(/view/css/arrowslider-sprt.png) scroll no-repeat 0 -72px;
 }
 
 
@@ -13437,7 +13480,7 @@ div.field
 
 #about-content h3.title
 {
-	background:#FFF url(arrowH2-section.gif) no-repeat scroll -5px 0;
+	background:#FFF url(/view/css/arrowH2-section.gif) no-repeat scroll -5px 0;
 	font-size:20px;
 	font-weight:700;
 	height:37px;
@@ -14702,194 +14745,139 @@ body.project-show div#main > div.side > div.widget div.invest-notice.end
 /*----------------------------------------------------------------------
  goteo.css
 ----------------------------------------------------------------------*/
-div#sub-header > div,div#sub-header-secondary > div
-{
-	display:block;
-	margin:0 auto;
-	max-width:960px;
+div#sub-header > div,
+div#sub-header-secondary > div {
+	display: block;
+	max-width: 960px;
+	margin: 0 auto;
 }
 
-div#sub-header > div > h2
-{
-	margin:0;
-	padding:0;
+div#sub-header > div > h2 {
+	margin: 0;
+	padding: 0;
 }
 
-div#main
-{
-	clear:both;
-	margin:10px auto;
-	overflow-x:hidden;
-	overflow-y:hidden;
-	position:relative;
-	width:960px;
-	z-index:0;
+div#main {
+	width: 960px;
+	margin: 10px auto;
+	clear: both;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	position: relative;
+	z-index: 0;
 }
 
-div.widget
-{
-	background-color:#FFF;
-	overflow:hidden;
-	padding:15px 20px;
+div.widget {
+	background-color: white;
+	padding: 15px 20px;
+	overflow: hidden;
 }
 
-div.center.home div.widget,div.center.supporters div.widget,div.center.profile div.widget
-{
-	border-bottom:1px dashed silver;
-	margin-bottom:0!important;
+div.center.home div.widget,
+div.center.supporters div.widget,
+div.center.profile div.widget {
+	margin-bottom: 0!important;
+	border-bottom: 1px dashed #c0c0c0;
 }
 
-div.center > div.widget:last-of-type
-{
-	border-bottom:none;
+div.center > div.widget:last-of-type {
+	border-bottom: none;
 }
 
-body.user-profile div#main div.center div.widget.user-mates
-{
-	margin-bottom:0!important;
-	padding-bottom:10px;
+body.user-profile div#main div.center div.widget.user-mates {
+	margin-bottom: 0!important;
+	padding-bottom: 10px;
 }
 
-div.center div.widget:last-child,div.center div.widget.project-media,div.center div.widget.project-supporters,div.center div.widget.worthcracy,div.center div.widget.invest-message
-{
-	border-bottom:none;
+div.center div.widget:last-child,
+div.center div.widget.project-media,
+div.center div.widget.project-supporters,
+div.center div.widget.worthcracy,
+div.center div.widget.invest-message {
+	border-bottom: none;
 }
 
-div.widget .supertitle
-{
-	background-color:#21b0b0;
-	border-bottom:1px solid #21b0b0;
-	color:#f5f5f5;
-	font-size:18px;
-	font-weight:400;
-	margin:0;
-	padding:.5em 2px .5em 8px;
+div.widget .supertitle {
+	font-weight: normal;
+	margin: 0;
+	padding: .5em 2px ;
+	border-bottom: 1px solid #21b0b0;
+	font-size: 18px;
+	background-color: #21b0b0;
+	color: #f5f5f5;
+	padding-left: 8px;
 }
 
-div.widget .title
-{
-	font-size:17px;
-	font-weight:700;
-	padding:0 0 0 24px;
-	text-decoration:none;
-	/*font-size: 16px;
+div.widget .title{
+	font-size: 16px;
 	font-weight: bold;
-	padding: 0 0 0 24px;
-	text-decoration: none;*/
+	/*padding: 0 0 0 24px;*/
+	text-decoration: none;
 }
 
-div.side div.widget h3.title,div.side div.widget h4.title
-{
-	padding-left:0;
+div.side div.widget.project-collaborations h3.title{
+	margin-bottom: 0;
+}
+div.side div.widget.project-collaborations ul{
+	margin-top: 0;
 }
 
-div.side div.widget.project-collaborations h3.title
-{
-	margin-bottom:0;
+body.user-profile div#sub-header h2 {
+	padding-left: 72px;
+	min-height: 55px;
+	position: relative;
+	line-height: 1.2em;
+	font-size: 18px;
+	font-weight: normal;
 }
 
-div.side div.widget.project-collaborations ul
-{
-	margin-top:0;
+body.user-profile div#sub-header h2 img {
+	position: absolute;
+	width: 55px;
+	height: 55px;
+	left: 0;
 }
 
-body.user-profile div#sub-header h2
-{
-	font-size:18px;
-	font-weight:400;
-	line-height:1.2em;
-	min-height:55px;
-	padding-left:72px;
-	position:relative;
+body.user-profile div#sub-header h2 em {
+	display: block;
+	font-weight: bold;
+	font-size: 24px;
+	text-transform: uppercase;
+	font-style: normal;
 }
 
-body.user-profile div#sub-header h2 img
-{
-	height:55px;
-	left:0;
-	position:absolute;
-	width:55px;
+div.read_more {
+	text-align: right;
+	margin-top: 16px;
+}
+div.read_more a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+div.read_more a:hover {
+	color: #20B3B2;
 }
 
-body.user-profile div#sub-header h2 em
-{
-	display:block;
-	font-size:24px;
-	font-style:normal;
-	font-weight:700;
-	text-transform:uppercase;
-}
+div#message{background: none repeat scroll 0 0 #ffa375;color: #333333;padding: 25px 0;font-size: 14px;width: 100%;}
+div#message div#message-content{width:960px;margin:0 auto;position:relative;}
+div#message div#message-content input.message-close{ background:url('/view/css/message-close.png') no-repeat; width:11px;height:10px;border:none;position:absolute;top:-8px;right:0;z-index:100; cursor:pointer;}
+div#message div#message-content ul{list-style:none;margin:0;padding:0;}
 
-div.read_more
-{
-	margin-top:16px;
-	text-align:right;
-}
-
-div.read_more a
-{
-	font-size:12px;
-	text-decoration:none;
-	text-transform:uppercase;
-}
-
-div.read_more a:hover
-{
-	color:#20B3B2;
-}
-
-div#message
-{
-	background:none repeat scroll 0 0 #ffa375;
-	color:#333;
-	font-size:14px;
-	padding:25px 0;
-	width:100%;
-}
-
-div#message div#message-content
-{
-	margin:0 auto;
-	position:relative;
-	width:960px;
-}
-
-div#message div#message-content input.message-close
-{
-	background:url(/view/css/message-close.png) no-repeat;
-	border:none;
-	cursor:pointer;
-	height:10px;
-	position:absolute;
-	right:0;
-	top:-8px;
-	width:11px;
-	z-index:100;
-}
-
-div#message div#message-content ul
-{
-	list-style:none;
-	margin:0;
-	padding:0;
-}
-
-div.side div.widget .title
-{
+div.side div.widget .title {
+	padding-left: 0;
 	background:none;
 }
 
-div.side div.widget.project-collaborations,div.side div.widget.project-rewards
-{
-	padding:0;
+div.side div.widget.project-collaborations,
+div.side div.widget.project-rewards {
+	padding: 0;
 }
-
-div.side div.widget.project-collaborations ul li,div.side div.widget.project-rewards ul li
-{
-	margin-bottom:20px;
-	padding-left:0;
+div.side div.widget.project-collaborations ul li,
+div.side div.widget.project-rewards ul li {
+	padding-left: 0;
+	margin-bottom: 20px;
 }
-
 div.side div.widget.project-collaborations ul li h6,
 div.side div.widget.project-rewards div.title h4.name {
 	padding-left: 42px;
@@ -14897,113 +14885,47 @@ div.side div.widget.project-rewards div.title h4.name {
 	min-height: 32px;
 	line-height: 16px;
 }
-
 div.side div.widget.project-collaborations ul li h6 {
 	margin: 0;
 	font-size: 14px;
 	font-weight: bolder;
 }
 
-div.side div.widget.project-collaborations ul li strong,div.side div.widget.project-rewards div.title h4.name
-{
-	display:inline-block;
-	line-height:16px;
-	min-height:32px;
-	padding-left:42px;
+div.side div.widget.project-rewards div.individual div.title h4.name {
+	display: inline-block;
+	line-height: 16px;
+	margin-bottom: 24px;
 }
 
-div.side div.widget.project-rewards div.individual div.title h4.name
-{
-	display:inline-block;
-	line-height:16px;
-	margin-bottom:24px;
+div.side div.widget.project-collaborations ul li p {
+	margin-top: 16px;
+	word-wrap: break-word;
 }
 
-div.side div.widget.project-collaborations ul li p
-{
-	margin-top:16px;
-	word-wrap:break-word;
+body.project-embed{min-width:250px !important;max-width:320px !important;margin:0;padding:0;background-color:#fff!important;}
+body.project-embed > div#wrapper{width:250px;margin:0;padding:0;}
+body.project-embed > div#wrapper > div.alone-project{width:318px;margin:0;padding:0;}
+body.project-embed > div#wrapper > div.alone-project > div.widget.project{width:260px;margin:0 auto;padding:10px 0 0 0; position:relative;background-color:#fff;}
+body.project-embed > div#wrapper > div.alone-project > div.widget.project a.expand{position:absolute;top:0;bottom:0;width:260px;height:460px;z-index:100}
+body.project-embed > div#wrapper > div.alone-project > div.widget.project.active{background-color:#F8F8F8 !important;}
+div.alone-project > div.widget.project > div.buttons > a.button{padding: 0.6em 1em}
+
+body.project-embed.sp {
+	margin: 0 auto;
 }
-
-body.project-embed
-{
-	background-color:#fff!important;
-	margin:0;
-	max-width:320px!important;
-	min-width:250px!important;
-	padding:0;
+body.project-embed.sp > div#wrapper {
+	width: 320px;
 }
-
-body.project-embed > div#wrapper
-{
-	margin:0;
-	padding:0;
-	width:250px;
+body.project-embed.sp > div#wrapper > div.alone-project > div.widget.project {
+	width: 280px;
 }
-
-body.project-embed > div#wrapper > div.alone-project
-{
-	margin:0;
-	padding:0;
-	width:318px;
+body.project-embed.sp > div#wrapper > div.alone-project > div.widget.project a.expand {
+	width: 280px;
+	padding: 0;
 }
-
-body.project-embed > div#wrapper > div.alone-project > div.widget.project
-{
-	background-color:#fff;
-	margin:0 auto;
-	padding:10px 0 0;
-	position:relative;
-	width:260px;
+body.project-embed.sp > div#wrapper > div.alone-project > div.widget.project div.image a img {
+	width: 100%;
 }
-
-body.project-embed > div#wrapper > div.alone-project > div.widget.project a.expand
-{
-	bottom:0;
-	height:460px;
-	position:absolute;
-	top:0;
-	width:260px;
-	z-index:100;
-}
-
-body.project-embed > div#wrapper > div.alone-project > div.widget.project.active
-{
-	background-color:#F8F8F8!important;
-}
-
-div.alone-project > div.widget.project > div.buttons > a.button
-{
-	padding:.6em 1em;
-}
-
-body.project-embed.sp
-{
-	margin:0 auto;
-}
-
-body.project-embed.sp > div#wrapper
-{
-	width:320px;
-}
-
-body.project-embed.sp > div#wrapper > div.alone-project > div.widget.project
-{
-	width:280px;
-}
-
-body.project-embed.sp > div#wrapper > div.alone-project > div.widget.project a.expand
-{
-	padding:0;
-	width:280px;
-}
-
-body.project-embed.sp > div#wrapper > div.alone-project > div.widget.project div.image a img
-{
-	width:100%;
-}
-
-
 
 
 /*----------------------------------------------------------------------

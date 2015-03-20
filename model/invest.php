@@ -1044,7 +1044,8 @@ namespace Goteo\Model {
          */
         public static function methods () {
             return array (
-                'paypal' => Text::_('Paypal'),
+                //'paypal' => Text::_('Paypal'),
+                'axes' => Text::_('AXES'),
                 'tpv'    => Text::_('Tarjeta'),
                 'cash'   => Text::_('Manual')
             );
