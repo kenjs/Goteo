@@ -1,6 +1,6 @@
 <?php
 /*
- *  Copyright (C) 2012 Platoniq y Fundaciï¿½n Fuentes Abiertas (see README for details)
+ *  Copyright (C) 2012 Platoniq y Fundación Fuentes Abiertas (see README for details)
  *	This file is part of Goteo.
  *
  *  Goteo is free software: you can redistribute it and/or modify
@@ -22,7 +22,7 @@ define('GOTEO_PATH', __DIR__ . DIRECTORY_SEPARATOR);
 if (function_exists('ini_set')) {
     ini_set('include_path', GOTEO_PATH . PATH_SEPARATOR . '.');
 } else {
-    throw new Exception("No puedo aï¿½adir la API GOTEO al include_path.");
+    throw new Exception("No puedo añadir la API GOTEO al include_path.");
 }
 
 // Nodo actual
@@ -32,7 +32,7 @@ define('PEAR', GOTEO_PATH . 'library' . '/' . 'pear' . '/');
 if (function_exists('ini_set')) {
     ini_set('include_path', ini_get('include_path') . PATH_SEPARATOR . PEAR);
 } else {
-    throw new Exception("No puedo aï¿½adir las librerï¿½as PEAR al include_path.");
+    throw new Exception("No puedo añadir las librerías PEAR al include_path.");
 }
 
 /******************************************************
@@ -62,7 +62,7 @@ if (!defined('OAUTH_LIBS')) {
 define('GOTEO_DATA_PATH', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR);
 
 /**
- * Carga de configuraciï¿½n local si existe
+ * Carga de configuración local si existe
  * Si no se carga el real (si existe)
 **/
 if (file_exists('local-settings.php')) //en .gitignore
@@ -71,8 +71,8 @@ elseif (file_exists('live-settings.php')) //se considera en git
     require 'live-settings.php';
 else
     die(<<<EOF
-No se encuentra el archivo de configuraci&oacute;n <strong>local-settings.php</strong>, debes crear este archivo en la raiz.<br />
-Puedes usar el siguiente c&oacute;digo modificado con los credenciales adecuados.<br />
+Can not find the configuration file <strong>local-settings.php</strong>, you must create this file in the root.<br />
+You can use the following code modified with appropriate credentials.<br />
 <pre>
 &lt;?php
 // Metadata
@@ -100,8 +100,8 @@ define('GOTEO_DB_USERNAME', 'db-username');
 define('GOTEO_DB_PASSWORD', 'db-password');
 
 // Mail
-define('GOTEO_MAIL_FROM', 'localgood@yokohamalab.jp');
-define('GOTEO_MAIL_NAME', 'LOCAL GOOD YOKOHAMA');
+define('GOTEO_MAIL_FROM', 'noreply@example.com');
+define('GOTEO_MAIL_NAME', 'example.com');
 define('GOTEO_MAIL_TYPE', 'smtp'); // mail, sendmail or smtp
 define('GOTEO_MAIL_SMTP_AUTH', true);
 define('GOTEO_MAIL_SMTP_SECURE', 'ssl');
@@ -110,17 +110,17 @@ define('GOTEO_MAIL_SMTP_PORT', --portnumber--);
 define('GOTEO_MAIL_SMTP_USERNAME', 'smtp-usermail');
 define('GOTEO_MAIL_SMTP_PASSWORD', 'smtp-password');
 
-define('GOTEO_MAIL', 'localgood@yokohamalab.jp');
-define('GOTEO_CONTACT_MAIL', 'localgood@yokohamalab.jp');
-define('GOTEO_FAIL_MAIL', 'localgood@yokohamalab.jp');
-define('GOTEO_LOG_MAIL', 'localgood@yokohamalab.jp');
+define('GOTEO_MAIL', 'info@example.com');
+define('GOTEO_CONTACT_MAIL', 'info@example.com');
+define('GOTEO_FAIL_MAIL', 'fail@example.com');
+define('GOTEO_LOG_MAIL', 'sitelog@example.com');
 
-//Quota de envio mï¿½ximo para goteo en 24 horas
+//Quota maximum goteo costs in 24 hours
 define('GOTEO_MAIL_QUOTA', 50000);
-//Quota de envio mï¿½ximo para newsletters para goteo en 24 horas
+//Quota maximum for sending goteo newsletters in 24 hours
 define('GOTEO_MAIL_SENDER_QUOTA', round(GOTEO_MAIL_QUOTA * 0.8));
-//clave de Amazon SNS para recopilar bounces automaticamente: 'arn:aws:sns:us-east-1:XXXXXXXXX:amazon-ses-bounces'
-//la URL de informacion debe ser: goteo_url.tld/aws-sns.php
+//Amazon SNS key to collect bounces automatically: 'arn:aws:sns:us-east-1:XXXXXXXXX:amazon-ses-bounces'
+//URL of information must be: goteo_url.tld/aws-sns.php
 define('AWS_SNS_CLIENT_ID', 'XXXXXXXXX');
 define('AWS_SNS_REGION', 'us-east-1');
 define('AWS_SNS_BOUNCES_TOPIC', 'amazon-ses-bounces');
@@ -136,9 +136,9 @@ define('GOTEO_GETTEXT_DOMAIN', 'messages');
 define('GOTEO_GETTEXT_BYPASS_CACHING', true);
 
 // url
-define('SITE_URL', 'http://yokohama.localgood.jp/'); // endpoint url
-define('SRC_URL', 'http://yokohama.localgood.jp/');  // host for statics
-define('SEC_URL', 'http://yokohama.localgood.jp/');  // with SSL certified
+define('SITE_URL', 'http://example.com'); // endpoint url
+define('SRC_URL', 'http://example.com');  // host for statics
+define('SEC_URL', 'http://example.com');  // with SSL certified
 
 //Sessions
 //session handler: php, dynamodb
@@ -231,6 +231,3 @@ else {
     define('GOTEO_EASY', null); // to take user overload easy
 	define('GOTEO_FREE', true); // used somewhere...
 }
-
-$ua = $_SERVER['HTTP_USER_AGENT'];
-
