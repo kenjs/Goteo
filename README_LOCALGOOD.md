@@ -1,4 +1,6 @@
-# Instration (LocalGood Edition)
+# Document for LocalGood Edition
+
+## Instration
 
 * $ git clone https://github.com/LocalGood/Goteo.git .
 * $ git checkout master
@@ -12,7 +14,7 @@
 * Access to /user/login and login by root / root
 * Change your password for security
 
-# Contributed by
+## Contributed by
 
 * Masaki Hidano
 * Souta Ito
