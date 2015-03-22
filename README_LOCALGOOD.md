@@ -22,3 +22,7 @@
 * Naoko Usui
 * Shohei Sato
 * Taiichiro Tokunaga
+
+## Note
+
+LocalGood Edition is currently operated only in Japanese. Nobody test for other languages.
