@@ -40,3 +40,4 @@ CREATE TABLE `user_skill` (
 
 
 alter table project add evaluation TEXT;
+alter table project_lang add evaluation TEXT;
