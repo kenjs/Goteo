@@ -62,19 +62,23 @@ if (!defined('OAUTH_LIBS')) {
 define('GOTEO_DATA_PATH', dirname(__FILE__) . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR);
 
 /**
- * Carga de configuración local si existe
- * Si no se carga el real (si existe)
+ * If exists, loads settings for local environment
+ * If not, loat settings for live environment
 **/
-if (file_exists('local-settings.php')) //en .gitignore
+if (file_exists('local-settings.php')) // ignored for local settings
     require 'local-settings.php';
-elseif (file_exists('live-settings.php')) //se considera en git
+elseif (file_exists('live-settings.php')) // versioned 
     require 'live-settings.php';
 else
     die(<<<EOF
-Can not find the configuration file <strong>local-settings.php</strong>, you must create this file in the root.<br />
-You can use the following code modified with appropriate credentials.<br />
+Setting file <strong>local-settings.php</strong> is not found, crete this file on the document root.<br />
+Use the following code with the correct values for your goteo instance.<br />
 <pre>
 &lt;?php
+
+mb_language("Japanese");
+mb_internal_encoding("UTF-8");
+
 // Metadata
 define('GOTEO_META_TITLE', '--meta-title--');
 define('GOTEO_META_DESCRIPTION', '--meta-description--');
@@ -86,6 +90,12 @@ define('GOTEO_META_COPYRIGHT', '--copyright--');
 define("AWS_KEY", "--------------");
 define("AWS_SECRET", "----------------------------------");
 define("AWS_REGION", "-----------");
+
+//AWS SES Credentials (LocalGood Original)
+define('AWS_SES_SOURCE', '--------------');
+define('AWS_SES_ACCESS', '--------------');
+define('AWS_SES_SECERET', '----------------------------------');
+define('AWS_SES_CHARSET', 'UTF-8');
 
 //Mail management: ses (amazon), phpmailer (php library)
 define("MAIL_HANDLER", "phpmailer");
@@ -115,12 +125,12 @@ define('GOTEO_CONTACT_MAIL', 'info@example.com');
 define('GOTEO_FAIL_MAIL', 'fail@example.com');
 define('GOTEO_LOG_MAIL', 'sitelog@example.com');
 
-//Quota maximum goteo costs in 24 hours
+/* This is to send mailing by Amazon SES*/
+//Quota limit, 24 hours
 define('GOTEO_MAIL_QUOTA', 50000);
-//Quota maximum for sending goteo newsletters in 24 hours
+//Quota limit for newsletters, 24 hours
 define('GOTEO_MAIL_SENDER_QUOTA', round(GOTEO_MAIL_QUOTA * 0.8));
-//Amazon SNS key to collect bounces automatically: 'arn:aws:sns:us-east-1:XXXXXXXXX:amazon-ses-bounces'
-//URL of information must be: goteo_url.tld/aws-sns.php
+// Amazon SNS keys to get bounces automatically: 'arn:aws:sns:us-east-1:XXXXXXXXX:amazon-ses-bounces'
 define('AWS_SNS_CLIENT_ID', 'XXXXXXXXX');
 define('AWS_SNS_REGION', 'us-east-1');
 define('AWS_SNS_BOUNCES_TOPIC', 'amazon-ses-bounces');
@@ -139,6 +149,10 @@ define('GOTEO_GETTEXT_BYPASS_CACHING', true);
 define('SITE_URL', 'http://example.com'); // endpoint url
 define('SRC_URL', 'http://example.com');  // host for statics
 define('SEC_URL', 'http://example.com');  // with SSL certified
+
+// LocalGood Original
+define('LOCALGOOD_WP_BASE_URL', 'http://example.com/');
+define('LOG_PATH', '/path/to/logfiles');
 
 //Sessions
 //session handler: php, dynamodb
