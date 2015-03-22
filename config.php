@@ -116,7 +116,7 @@ define('GOTEO_MAIL_TYPE', 'smtp'); // mail, sendmail or smtp
 define('GOTEO_MAIL_SMTP_AUTH', true);
 define('GOTEO_MAIL_SMTP_SECURE', 'ssl');
 define('GOTEO_MAIL_SMTP_HOST', 'smtp--host');
-define('GOTEO_MAIL_SMTP_PORT', --portnumber--);
+define('GOTEO_MAIL_SMTP_PORT', '--portnumber--');
 define('GOTEO_MAIL_SMTP_USERNAME', 'smtp-usermail');
 define('GOTEO_MAIL_SMTP_PASSWORD', 'smtp-password');
 
@@ -227,10 +227,20 @@ define('RECAPTCHA_PRIVATE_KEY','-----------------------------------');
 /****************************************************
 Google Analytics
 ****************************************************/
-define('GOTEO_ANALYTICS_TRACKER', "<script type=\"text/javascript\">
+define('GOTEO_ANALYTICS_TRACKER', "&ltscript type=\"text/javascript\"&gt
 __your_tracking_js_code_goes_here___
-</script>
+&lt/script&gt
 ");
+
+// For LocalGood Application
+\$ua = \$_SERVER['HTTP_USER_AGENT'];
+if(strpos(\$ua, 'LocalGood/iOS (XXXX)') === 0 || strpos(\$ua, 'LocalGood/Android (XXXX)') === 0 ) {
+    define('PC_VIEW', false);
+    define('VIEW_PATH', 'view/m');
+} else {
+    define('PC_VIEW', true);
+    define('VIEW_PATH', 'view');
+}
 ?&gt;
 </pre>
 EOF
