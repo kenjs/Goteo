@@ -33,7 +33,7 @@
         </div><!--#to_page_top-->
         <div class="inner cf">
             <ul class="footer_link">
-<li class="about"><a href="<?= LOCALGOOD_WP_BASE_URL ?>/about/">LOCAL GOOD YOKOHAMAについて</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/syoutorihikihou/">特定商取引法に基づく表記</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/user_guide/">ユーザーガイド</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/privacypolicy/">プライバシーポリシー</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/mailnews/">メルマガ登録</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/contact/">お問い合わせ</a></li>
+<li class="about"><a href="<?= LOCALGOOD_WP_BASE_URL ?>/about/">LOCAL GOOD TAKEOについて</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/syoutorihikihou/">特定商取引法に基づく表記</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/user_guide/">ユーザーガイド</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/privacypolicy/">プライバシーポリシー</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/mailnews/">メルマガ登録</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/contact/">お問い合わせ</a></li>
             </ul>
             <ul class="sns_link">
                 <li class="fb_btn"><a href="https://www.facebook.com/LOCALGOODYOKOHAMA" target="_blank"><img src="/view/css/fb_btn.png" alt="facebook" /></a></li>
@@ -48,7 +48,7 @@
             <a class="accenture" href="http://www.accenture.com/jp-ja/Pages/index.aspx" target="_blank"><img src="/view/css/accenture_logo.png" alt="accenture" /></a>
             <img class="open_yokohama" src="/view/css/open_yokohama_logo.png" alt="Open Yokohama" />
             <p class="copyright">
-                <span>COPYRIGHT&copy; Local Good YOKOHAMA. Some rights reserved.</span>
+                <span>COPYRIGHT&copy; Local Good TAKEO. Some rights reserved.</span>
             </p>
             <div class="platoniq">
                 <?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>
