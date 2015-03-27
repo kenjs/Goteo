@@ -42,7 +42,7 @@ use Goteo\Library\Text,
     <h1 style="display: none;"><?php echo Text::get('regular-main-header'); ?></h1>
     <div class="head_bar_wrapper">
         <div class="head_bar_inner">
-            <span>横浜の地域課題プラットフォーム</span>
+            <span>武雄の地域課題プラットフォーム</span>
 <?
             if($_SERVER['REQUEST_URI']=="/"):
 ?>
