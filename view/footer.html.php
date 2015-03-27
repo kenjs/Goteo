@@ -48,7 +48,7 @@
             <a class="accenture" href="http://www.accenture.com/jp-ja/Pages/index.aspx" target="_blank"><img src="/view/css/accenture_logo.png" alt="accenture" /></a>
             <img class="open_yokohama" src="/view/css/open_yokohama_logo.png" alt="Open Yokohama" />
             <p class="copyright">
-                <span>COPYRIGHT&copy; Local Good YOKOHAMA. Some rights reserved.</span>
+                <span>COPYRIGHT&copy; Local Good FUKUOKA. Some rights reserved.</span>
             </p>
             <div class="platoniq">
                 <?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>
