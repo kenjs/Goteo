@@ -42,7 +42,7 @@ use Goteo\Library\Text,
     <h1 style="display: none;"><?php echo Text::get('regular-main-header'); ?></h1>
     <div class="head_bar_wrapper">
         <div class="head_bar_inner">
-            <span>横浜の地域課題プラットフォーム</span>
+            <span>北九州の地域課題プラットフォーム</span>
 <?
             if($_SERVER['REQUEST_URI']=="/"):
 ?>
@@ -89,7 +89,7 @@ use Goteo\Library\Text,
                 このまち、わたしから未来を創る
             </div>
         </div>
-        <a class="earth_view" href="http://yokohama.mapping.jp/" target="_blank"><img src="/view/css/header/earth_view_icon.png" alt="Earth View" /></a>
+        <a class="earth_view" href="http://yokohama.mapping.jp/" target="_blank"><img src="/view/css/header/i.png" alt="Earth View" /></a>
     </div>
     <div class="nav_wrapper">
         <div class="nav_inner">
