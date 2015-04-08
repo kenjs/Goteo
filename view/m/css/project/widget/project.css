@@ -221,13 +221,13 @@ body.discover div.widget.project div.meter.activable {
     padding-left: 16px!important;
     padding-right: 16px!important;
 }
-div.widget.project div.meter.activable.active {
+/*div.widget.project div.meter.activable.active {
     background-color: #EBEAEB;
-}
+}*/
 div.widget.project div.meter div.obtained {
     /*display: none;*/
     position: relative;
-    top: -40px;
+    top: 110px;
     text-align: center;
 }
 div.widget.project div.meter h3.title.obtained {
@@ -326,7 +326,7 @@ div.widget.project-support div.graph .minimum .left {
     margin-top: -6px;
 }
 
-div.widget.project div.meter dl *,
+/*div.widget.project div.meter dl *,*/
 div.widget.project dl *,
 div.widget.project-support dl * {
     margin: 0;
@@ -336,9 +336,9 @@ div.widget.project div.meter dl .minimum {
     min-width: 10%;
 }
 
-div.widget.project div.meter dl .optimum {
+/*div.widget.project div.meter dl .optimum {
 	color:#6699cc;
-}
+}*/
 
 div.widget.project div.meter dl .optimum,
 div.widget.project div.meter dl .minimum,

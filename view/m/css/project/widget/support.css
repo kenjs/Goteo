@@ -22,25 +22,28 @@ div.widget.project-support h4.supertitle {
     background-color: #3399cc;
 }
 
-div.widget.project-support dl dt.reached span {
+/*div.widget.project-support dl dt.reached span {
     color: #666633;
-}
+}*/
+/*.meter dl dt.reached span {
+    color: #666633;
+}*/
 
-div.widget.project-support dl dd.supporters {
+/*div.widget.project-support dl dd.supporters {
     width: 118px;
-}
+}*/
 div.widget.project-support dl dd.days strong,
 div.widget.project-support dl dd.supporters strong {
     color: #996666;
 }
 
-div.widget.project-support dl dd.supporters {
+/*div.widget.project-support dl dd.supporters {
     color: #313b96;
-}
+}*/
 
-div.widget.project-support dl dt.supporters span {
+/*div.widget.project-support dl dt.supporters span {
     color: #666633;
-}
+}*/
 
 /* Animated/static meter */
 div.widget.project-support div.meter {

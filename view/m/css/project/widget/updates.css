@@ -258,7 +258,7 @@ div.post-comments div.message blockquote {
 }
 /* end send comment */
 
-/*¥¹¥Þ¥Û*/
+/*ï¿½ï¿½ï¿½Þ¥ï¿½*/
 
 
 body.project-show .project-updates {
@@ -357,8 +357,10 @@ body.project-show .project-updates .post .comments-num {
 }
 
 body.project-show .project-updates .post .comments-num a {
-color: #00ad4e;
-text-decoration: none;
+    color: #00ad4e;
+    font-size: 12px;
+    text-decoration: none;
+    line-height: 16px;
 }
 
 body.project-show .project-updates .widget.post-comments {

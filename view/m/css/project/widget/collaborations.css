@@ -101,5 +101,7 @@ body.project-show div#main div.widget.project-collaborations div.project-widget-
     margin: 0 0 20px 0;
     padding: 0;
     list-style: none;
+
+    line-height: 16px;
 }
 

@@ -129,12 +129,12 @@ body.project-show div.widget.project-summary .gallery-image{
 }*/
 
 div.gallery-image img {
-	margin: 0 auto;
+    display: block;
 	width: auto;
 	max-width: 320px;
 	max-height: 240px;
+    margin: 0 auto;
 }
-
 
 div.post-gallery  ul.slderpag {
     margin: 8px 0 0 0;

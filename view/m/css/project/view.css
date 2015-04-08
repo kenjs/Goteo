@@ -288,6 +288,11 @@ body.project-show div#main > div.center.needs > div.widget.project-schedule {
     margin-bottom: 20px;
 }
 
+body.project-show div#main div.center .widget.project-summary img,
+body.project-show div#main div.center .widget.project-support img {
+    width: 100%!important;
+}
+
 body.project-show div#main div.center div.widget.project-share {
     border-bottom: none;
     margin-bottom: 20px!important;
@@ -533,14 +538,10 @@ body.project-show .widget.user.collapsable .project-widget-box dl dd.links ul li
 }
 
 body.project-show .widget.user.collapsable .project-widget-box dl dd.profile {
-    background: url('/view/css/icon/m/s_task.png')no-repeat 1.5em center;
+    background: url('/view/css/icon/m/s_task.png')no-repeat 1.0em center;
     text-indent: 0;
 }
 
 body.project-show .widget.user.collapsable .project-widget-box dl dd.profile a{
     text-decoration: none;
 }
-
-
-
-
