@@ -157,7 +157,7 @@ namespace Goteo\Controller\Admin {
                     'file' => 'list',
                     'model' => 'skill',
                     'addbutton' => Text::_('New skill'),
-                    'otherbutton' => '<a href="/admin/skills/keywords" class="button">Ver Palabras clave</a>',
+                    'otherbutton' => '<a href="/admin/skills/keywords" class="button">' . Text::get('admin-skill_keyword') . '</a>',
                     'data' => $model::getAll(),
                     'columns' => array(
                         'edit' => '',

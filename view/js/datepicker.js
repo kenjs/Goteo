@@ -467,7 +467,7 @@
 					var tblIndex = $('table', this).index(tblEl.get(0)) - 1;
 					var tmp = new Date(options.current);
 					var fillIt = false;
-                                        var changed = false;
+
 					if (parentEl.is('th')) {
 						if (parentEl.hasClass('datepickerWeek') && options.mode == 'range' && !parentEl.next().hasClass('datepickerDisabled')) {
 							var val = parseInt(parentEl.next().text(), 10);

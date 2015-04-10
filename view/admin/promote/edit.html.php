@@ -65,5 +65,5 @@ $status = Model\Project::status();
     <label><input type="radio" name="active" id="promo-inactive" value="0"<?php if (!$promo->active) echo ' checked="checked"'; ?>/> <?php echo Text::_('NO'); ?></label>
 </p>
 
-    <input type="submit" name="save" value="Guardar" />
+    <input type="submit" name="save" value="<?php echo Text::get('regular-save'); ?>" />
 </form>

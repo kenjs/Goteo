@@ -97,10 +97,10 @@ namespace Goteo\Controller {
                 }
             } elseif (empty($_SESSION['user']) && !empty($_COOKIE['goteo_user'])) {
                 // si tenemos cookie de usuario
-                return new View('view/user/login.html.php', array('username'=>$_COOKIE['goteo_user']));
+                return new View(VIEW_PATH . '/user/login.html.php', array('username'=>$_COOKIE['goteo_user']));
             }
 
-            return new View('view/user/login.html.php');
+            return new View(VIEW_PATH . '/user/login.html.php');
         }
 
         /**

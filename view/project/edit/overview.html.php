@@ -191,7 +191,7 @@ $superform = array(
         'description_group' => array(
             'type' => 'group',
             'children'  => array(                
-                'about' => array(
+                /*'about' => array(
                     'type'      => 'textarea',       
                     'title'     => Text::get('overview-field-about'),
 //                    'required'  => true,
@@ -199,7 +199,7 @@ $superform = array(
 //                    'errors'    => !empty($errors['about']) ? array($errors['about']) : array(),
 //                    'ok'        => !empty($okeys['about']) ? array($okeys['about']) : array(),
                     'value'     => $project->about
-                ),
+                ),*/
                 'motivation' => array(
                     'type'      => 'textarea',       
                     'title'     => Text::get('overview-field-motivation'),
@@ -212,7 +212,7 @@ $superform = array(
                 // video motivacion
                 'video' => array(
                     'type'      => 'textbox',
-                    'required'  => false,
+                    'required'  => true,
                     'title'     => Text::get('overview-field-video'),
                     //'hint'      => Text::get('tooltip-project-video'),
                     'errors'    => !empty($errors['video']) ? array($errors['video']) : array(),
@@ -276,7 +276,7 @@ $superform = array(
         'keywords' => array(
             'type'      => 'textbox',
             'title'     => Text::get('overview-field-keywords'),
-            'required'  => true,
+            'required'  => false,
             //'hint'      => Text::get('tooltip-project-keywords'),
             'errors'    => !empty($errors['keywords']) ? array($errors['keywords']) : array(),
             'ok'        => !empty($okeys['keywords']) ? array($okeys['keywords']) : array(),

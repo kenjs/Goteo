@@ -472,8 +472,9 @@ $(function () {
        event.preventDefault();
     });
 
-    individuals.delegate('li.reward-type input', 'click', function (event) {
+    individuals.delegate('li.reward-type input[type="radio"]', 'click', function (event) {
        var data = {};
+        console.log('aa');
        data[this.name] = '1';
        Superform.update(individuals, data);
     });

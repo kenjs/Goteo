@@ -204,7 +204,7 @@ namespace Goteo\Controller\Admin {
 
                     // si no hay destinatarios, salta a la lista con mensaje de error
                     if (empty($_SESSION['mailing']['receivers'])) {
-                        Message::Error(Text::get'admin-malling-error-norecipient' . $_SESSION['mailing']['filters_txt']);
+                        Message::Error(Text::get('admin-malling-error-norecipient') . $_SESSION['mailing']['filters_txt']);
 
                         throw new Redirection('/admin/mailing/list');
                     }
