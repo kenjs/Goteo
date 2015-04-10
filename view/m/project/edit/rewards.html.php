@@ -207,6 +207,7 @@ foreach ($project->individual_rewards as $individual_reward) {
                             'hint'     => Text::get('tooltip-project-individual_reward-icon-other')
                         )
                     );
+                var_dump($children);
             } else {
                 // como tener children sin tenerlos
                 $children = array(

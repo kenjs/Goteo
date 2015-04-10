@@ -52,7 +52,8 @@
         <meta property="og:url" content="<?php echo SITE_URL ?>" />
 <?php endif; ?>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/m/css/goteo.css" />
+        <?/*<link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/m/css/goteo.css" />*/?>
+        <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/m/css/cssmarge_mobile.css" />
       <!--[if IE]>
       <link href="<?php echo SRC_URL ?>/view/m/css/ie.css" media="screen" rel="stylesheet" type="text/css" />
       <![endif]-->

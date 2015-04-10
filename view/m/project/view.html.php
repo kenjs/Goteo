@@ -98,7 +98,7 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
                             array(
                                 'project' => $project,
                                 'show' => $show,
-//                                'supporters' => $supporters,
+                                'supporters' => $supporters,
                                 'messages' => $messages,
                                 'updates' => $updates
                             )
@@ -207,10 +207,8 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
             <div class="side">
             <?php
             // el lateral es diferente segun el show (y el invest)
-            if ($show != 'home'){
-                echo
-                    new View('view/m/project/widget/support.html.php', array('project' => $project));
-            }
+            echo
+                new View('view/m/project/widget/support.html.php', array('project' => $project));
 
             if ((!empty($project->investors) &&
                 !empty($step) &&
