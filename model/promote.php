@@ -73,7 +73,7 @@ namespace Goteo\Model {
 
             $promos = array();
 
-            $sqlFilter = ($activeonly) ? " AND promote.active = 1 AND status = 3" : '';
+            $sqlFilter = ($activeonly) ? " AND promote.active = 1 AND status >= 3" : '';
 
             $query = static::query("
                 SELECT
@@ -122,7 +122,7 @@ namespace Goteo\Model {
                     project.name as name,
                     project.status as status
                 FROM    project
-                WHERE status = 3
+                WHERE status >= 3
                 AND project.id NOT IN (SELECT project FROM promote WHERE promote.node = :node{$sqlCurr} )
                 ORDER BY name ASC
                 ", array(':node' => $node));

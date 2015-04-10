@@ -41,7 +41,7 @@ if ($reached >= $minimum) {
     $minimum_left = 0;
 
 } else {
-    
+
     $minimum_done = min(100, round(($reached / $minimum) * 100));
     $minimum_done_per = round(($reached / $minimum) * 100);
     $minimum_left = max(0, round((1 - $reached / $minimum) * 100));
@@ -112,17 +112,17 @@ var_dump($over);
             <dt class="optimum"><?php echo Text::get('project-view-metter-optimum'); ?></dt>
             <dd class="optimum"><strong><?php echo \amount_format($optimum) ?></strong><span>円</span></dd>
 
-            <dt class="minimum" style="<?php echo $horizontal ? 'width' : 'height' ?>: <?php echo number_format($minimum_ratio) ?>%"><span><?php echo Text::get('project-view-metter-minimum'); ?></span></dt>
-            <dd class="minimum" style="<?php echo $horizontal ? 'width' : 'height' ?>: <?php echo number_format($minimum_ratio) ?>%"><strong><?php echo \amount_format($minimum) ?><span>円</span></strong></dd>
+            <dt class="minimum" style="<?php echo $horizontal ? 'width' : '' ?>: <?php echo number_format($minimum_ratio) ?>%"><span><?php echo Text::get('project-view-metter-minimum'); ?></span></dt>
+            <dd class="minimum" style="<?php echo $horizontal ? 'width' : '' ?>: <?php echo number_format($minimum_ratio) ?>%"><strong><?php echo \amount_format($minimum) ?></strong><span>円</span></dd>
 
             <dt class="reached"><span><?php echo Text::get('project-view-metter-got'); ?></span></dt>
             <dd class="reached"><strong><?php echo \amount_format($reached) ?></strong><span>円</span></dd>
 
             <dt class="days"><span><?php echo Text::get('project-view-metter-days'); ?></span></dt>
-            <dd class="days"><strong><?php echo number_format($days) ?></strong> <?php echo Text::get('regular-days'); ?></dd>
+            <dd class="days"><strong><?php echo number_format($days) ?></strong><span><?php echo Text::get('regular-days'); ?></span></dd>
 
             <dt class="supporters"><span><?php echo Text::get('project-view-metter-investors'); ?></span></dt>
-            <dd class="supporters"><strong><?php echo number_format($supporters) ?></strong>人</dd>
+            <dd class="supporters"><strong><?php echo number_format($supporters) ?></strong><span>人</span></dd>
 
         </dl>
 

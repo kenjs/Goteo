@@ -210,7 +210,7 @@ body.dashboard div#meter-big dl .minimum > * {
 body.dashboard div.widget.project div.meter dl dd.optimum span {
     height: auto;
     position: relative;
-    right: 3px;
+    /*right: 3px;*/
 }
 
 body.dashboard div#meter-big dl dt.minimum {

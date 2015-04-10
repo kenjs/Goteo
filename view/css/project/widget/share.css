@@ -16,6 +16,13 @@
  *  along with Goteo.  If not, see <http://www.gnu.org/licenses/agpl.txt>.
  *
  */
+
+body.project-show div#main > div.center > div.widget.project-share {
+    max-width: 580px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 div.widget.project-share .title {
     border: none;
 }

@@ -27,6 +27,11 @@ body.community div#main div.widget {
     margin-bottom: 10px;
 }
 
+body.user-profile div#main div.center div.widget.project-supporters {
+    padding: 0;
+}
+
+
 body.user-profile div#main > div.center,
 body.community div#main > div.center {
     width: 620px;

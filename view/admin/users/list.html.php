@@ -208,7 +208,7 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
                 <td><a href="mailto:<?php echo $user->email; ?>"><?php echo $user->email; ?></a></td>
                 <td><?php echo $user->nprojs; ?></td>
                 <td><?php echo \amount_format($user->namount) . Text::_('yen'); ?> </td>
-                <td><?php echo date('Y/m/d H:i:s', strtotime($user->register_date)); ?></td>
+                <td><?php echo date('Y/m/d H:i:s', strtotime(preg_replace('/\//', '-', $user->register_date))); ?></td>
             </tr>
             <tr class="record2">
                 <td><a href="/admin/users/manage/<?php echo $user->id; ?>" title="Gestionar">[<?php echo Text::_("Gestionar"); ?>]</a></td>

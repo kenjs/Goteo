@@ -93,12 +93,6 @@ namespace Goteo\Controller {
                 
             }*/
 
-            // switch PC | mobile view
-//            if(PC_VIEW){
-//                $template = 'view/index.html.php';
-//            }else{
-//                $template = 'view/m/index.html.php';
-//            }
 
             $template = VIEW_PATH . '/index.html.php';
 
@@ -108,7 +102,7 @@ namespace Goteo\Controller {
                     'banners'  => $banners,
                     'posts'    => $posts,
                     'promotes' => $promotes,
-                    'feed'     => $feed,
+                    //'feed'     => $feed,
                     'order'    => $order
                 )
             );

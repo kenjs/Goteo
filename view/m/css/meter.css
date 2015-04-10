@@ -16,76 +16,99 @@ div.widget.project div.meter.activable {
     max-width: 288px;
 }
 div.widget.project div.meter {
-    padding: 4px 0 78px !important;
+    padding: 4px 0 98px !important;
     position: relative;
     height: 20px;
 }
-body.home div.widget.project div.meter dl dt.minimum,
-body.user-profile div.widget.project div.meter dl dt.minimum {
+
+.meter dl dt,
+.meter dl dd {
     position: absolute;
+    width: 96px!important;
+    height: 30px!important;
+    text-align: center;
+}
+
+.meter dl dt {
+    top: 0;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+.meter dl dt.minimum {
     top: 0;
     left: 0;
     color: #cc6600;
-    width: 96px!important;
-    text-align: center;
 }
-body.home div.widget.project div.meter dl dd.minimum,
-body.user-profile div.widget.project div.meter dl dd.minimum {
-    position: relative;
-    font-size: 14px;
-    width: 96px!important;
-    text-align: center;
-    top: -46px;
-    left: 0;
-    color: #cc6600;
-}
-body.home div.widget.project div.meter dl dt.optimum,
-body.user-profile div.widget.project div.meter dl dt.optimum {
-    position: absolute;
+.meter dl dt.optimum {
     top: 0;
     left: 96px;
-    width: 96px;
-    text-align: center;
+    color: #6699cc;
 }
-
-
-body.home div.widget.project div.meter dl dd.optimum,
-body.user-profile div.widget.project div.meter dl dd.optimum{
-    font-size: 14px;
-    font-weight: normal;
-    position: relative;
-    top: -16px;
-    padding-top: 28px;
-    left: 93px;
-    width: 93px;
-    text-align: center;
-    height: 30px;
-    border-left: 1px solid #eee;
-}
-body.home div.widget.project div.meter dl dt.days,
-body.user-profile div.widget.project div.meter dl dt.days{
-    font-size: 12px;
-    position: absolute;
+.meter dl dt.days {
     top: 0;
     right: 0;
-    width: 96px;
-    text-align: center;
 }
-body.home div.widget.project div.meter dl dd.days,
-body.user-profile div.widget.project div.meter dl dd.days{
-    position: absolute;
-    top: -16px;
-    right: 0px;
-    width: 96px;
-    text-align: center;
+.meter dl dt.reached {
+    top: 56px;
+    left: 0;
+}
+.meter dl dt.supporters {
+    top: 56px;
+    left:96px;
+}
+.meter dl dt.days,
+.meter dl dt.reached,
+.meter dl dt.supporters {
+    color: #666600;
+}
+
+
+.meter dl dd {
+    padding-top: 30px;
     font-size: 14px;
-    height: 30px;
-    padding-top: 28px;
-    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
-body.home div.widget.project div.meter dl dd.days strong,
-body.user-profile div.widget.project div.meter dl dd.days strong {
+.meter dl dd.minimum {
+    top: -16px;
+    left: 0;
+    color: #cc6600;
+    border-right: 1px solid #eee;
+}
+.meter dl dd.optimum {
+    top: -16px;
+    left: 96px;
+    color: #6699cc;
+    border-right: 1px solid #eee;
+}
+.meter dl dd.days {
+    top: -16px;
+    right: 0;
+}
+.meter dl dd.reached {
+    top: 40px;
+    left: 0;
+    font-weight: normal;
+    border-right: 1px solid #eee;
+}
+.meter dl dd.supporters {
+    top: 40px;
+    left: 96px;
+    font-weight: normal;
+    border-right: 1px solid #eee;
+}
+div.widget.project div.meter dl dd.minimum span,
+div.widget.project div.meter dl dd.optimum span,
+div.widget.project div.meter dl dd.days span,
+div.widget.project div.meter dl dd.reached span,
+div.widget.project div.meter dl dd.supporters span {
+    font-size: 11px;
+    font-weight: normal;
+}
+.meter dl dd.days strong {
     color: #996666;
+}
+.meter dl dd.supporters strong {
+    color: #990000;
 }
 
 
@@ -102,37 +125,13 @@ div.widget.project div.meter div.graph {
     background-color: #BCCCD8;
     height: 12px;
     border-right: 40px solid #dcdcdc;
-    /*margin: 60px 5px 70px;*/
     margin: 30px 5px 70px;
     position: relative;
 }
 
 div.widget.project div.rewards {
-    /*border-top: 1px solid #d1d3d4;
-    padding: 4px 0 0 !important;
-    position: relative;
-    margin: 20px 12px 8px !important;
-    height: 22px;
-    overflow: hidden;
-
-    top: 32px;*/
     display: none;
 }
-
-
-/* for meter(vertical), active_page:project/home */
-/*div.widget.project div.meter.ver dl,
-div.widget.project-support div.meter.ver dl {
-    top: 0;
-}*/
-
-div.widget.project div.meter dl dd.minimum span,
-div.widget.project div.meter dl dd.optimum span,
-div.widget.project div.meter dl dd.days span {
-    font-size: 12px;
-}
-
-
 
 
 /*--------------------------------------------------
@@ -189,147 +188,6 @@ div.widget.project-support dl {
     position: relative;
     margin: 16px 0 0 0;
 }
-div.widget.project-support dl dt.optimum{
-    color:#6699cc;
-    left: 96px;
-}
-div.widget.project-support dl dd.optimum {
-    position: relative;
-    top: -17px;
-    left: 96px;
-    font-weight: normal;
-    color: #6699cc;
-}
-
-
-div.widget.project-support dl dt.optimum,
-div.widget.project-support dl dt.minimum,
-div.widget.project-support dl dt.days {
-    position: absolute;
-    top: -2px;
-}
-
-div.widget.project div.meter dl dt.optimum,
-div.widget.project div.meter dl dt.minimum,
-div.widget.project-support dl dt.optimum,
-div.widget.project-support dl dt.minimum {
-    font-size: 11px;
-    text-transform: uppercase;
-}
-
-div.widget.project-support dl dt {
-    font-size: 11px;
-}
-
-div.widget.project-support dl dt,
-div.widget.project-support dl dd {
-    width: 96px;
-    text-align: center;
-}
-
-div.widget.project-support dl dd {
-    border-bottom: 1px solid #eee;
-}
-
-div.widget.project-support dl dd.optimum,
-div.widget.project-support dl dd.minimum,
-div.widget.project-support dl dd.days,
-div.widget.project-support dl dd.reached {
-    font-size: 14px;
-}
-
-div.widget.project-support dl dd.optimum,
-div.widget.project-support dl dd.days {
-    top: -16px;
-    height: 30px;
-    padding-top: 30px;
-    border-left: 1px solid #eee;
-}
-
-div.widget.project-support dl dt.days {
-    right: 0;
-    font-size: 11px;
-}
-
-div.widget.project-support dl dd.days {
-    position: absolute;
-    top: -16px;
-    right: 0;
-}
-
-div.widget.project-support dl dt.reached {
-    top: 40px;
-    left: 0;
-    color: #666600;
-    margin-top: 16px;
-}
-
-
-
-div.widget.project-support dl dt.minimum {
-    left: 0;
-    color: #cc6600;
-}
-
-div.widget.project-support dl dd.minimum {
-    position: relative;
-    top: -47px;
-    left: 0;
-    padding-bottom: 9px;
-    color: #cc6600;
-}
-div.side div.widget.project-support dl dd.minimum {
-    top: -46px;
-}
-
-div.widget.project-support dl dd.days {
-    font-size: 12px;
-}
-
-div.widget.project-support dl dd.days strong {
-    font-size: 14px;
-}
-
-div.widget.project-support dl dt.reached,
-div.widget.project-support dl dt.supporters {
-    position: absolute;
-}
-
-
-div.widget.project-support dl dd.reached {
-    position: relative;
-    top: -19px;
-    left: 0;
-    padding-bottom: 8px;
-    color: #990000;
-}
-
-div.widget.project-support dl dt.supporters {
-    top: 56px;
-    left:96px;
-    color: #666600;
-}
-
-div.widget.project-support dl dd.supporters {
-    position: relative;
-    top: -80px;
-    left: 96px;
-    height: 30px;
-    padding-top: 30px;
-    border-left: 1px solid #eee;
-    border-right: 1px solid #eee;
-    font-weight: normal;
-    color: #990000;
-}
-
-body.project-show div.widget.project-support dl dd.supporters {
-    width: 94px;
-}
-
-
-
-
-
 
 /*discoverに適用*/
 
@@ -338,14 +196,8 @@ body.discover div.widget.project div.meter dl dd {
     width: 93px;
     text-align: center;
 }
-body.discover div.widget.project div.meter dl dt {
-    font-size: 11px;
-}
-body.discover div.widget.project div.meter dl dd {
-    font-size: 14px;
-}
 
-body.discover div.widget.project div.meter dl dt.optimum {
+/*body.discover div.widget.project div.meter dl dt.optimum {
     position: absolute;
     top: 0;
     left: 93px;
@@ -359,9 +211,9 @@ body.discover div.widget.project div.meter dl dd.optimum {
     padding-top: 30px;
     border-left: 1px solid #eee;
     font-weight: normal;
-}
+}*/
 
-body.discover div.widget.project div.meter dl dt.minimum {
+/*body.discover div.widget.project div.meter dl dt.minimum {
     position: absolute;
     top: 0px;
     left: 0;
@@ -374,9 +226,9 @@ body.discover div.widget.project div.meter dl dd.minimum {
     left: 0;
     color: #cc6600;
     line-height: 14px;
-}
+}*/
 
-body.discover div.widget.project div.meter dl dt.days {
+/*body.discover div.widget.project div.meter dl dt.days {
     position: absolute;
     top: 0;
     right: 0;
@@ -397,21 +249,13 @@ body.discover div.widget.project div.meter dl dd.days span {
     font-size: 12px;
 }
 
-
-
-/*div.widget.project div.meter dl dd.minimum span,
-div.widget.project div.meter dl dd.optimum span,
-div.widget.project div.meter dl dd.days span {
-    font-size: 12px;
-}*/
-
 div.widget.project div.meter dl dt.minimum span, {
     width: 70px;
-}
+}*/
 
 /*↓dashboard/activityに適用↓*/
 
-body.dashboard.project-edit div.widget.project div.meter dl dt,
+/*body.dashboard.project-edit div.widget.project div.meter dl dt,
 body.dashboard.project-edit div.widget.project div.meter dl dd {
     width: 93px;
     text-align: center;
@@ -485,11 +329,11 @@ body.dashboard.project-edit div.widget.project div.meter dl dd.reached,
 body.dashboard.project-edit div.widget.project div.meter dl dt.supporters,
 body.dashboard.project-edit div.widget.project div.meter dl dd.supporters {
     display: none;
-}
+}*/
 
 /*dashboard/activity サポートしてるプロジェクト*/
 
-body.dashboard.project-edit div.discover-group.discover-group-invest_on div.widget.project div.meter dl dt.minimum {
+/*body.dashboard.project-edit div.discover-group.discover-group-invest_on div.widget.project div.meter dl dt.minimum {
     position: absolute;
     top: 0px;
     color: #cc6600;
@@ -500,5 +344,5 @@ body.dashboard.project-edit div.discover-group.discover-group-invest_on div.widg
     top: -42px;
     color: #cc6600;
     line-height: 14px;
-}
+}*/
 
