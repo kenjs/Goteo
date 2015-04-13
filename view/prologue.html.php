@@ -48,7 +48,7 @@ elseif(strstr($_SERVER['REQUEST_URI'],'project')):
         'title' => $this['project']->name,
         'description' => $description,
         'url' => SITE_URL.$_SERVER['REQUEST_URI'],
-        'image' => array(SITE_URL . $gallery)
+        'image' => array($gallery)
     );
 endif;
 if (!empty($this['posts'])) {
@@ -84,9 +84,9 @@ $blog_post = strpos($ogmeta['url'], '/updates');
     <?php if (isset($ogmeta) && $blog_post === false): ?>
         <meta property="og:title" content="<?php echo $ogmeta['title'] ?>" />
         <? if($_SERVER['REQUEST_URI']=="/"): ?>
-        <meta property="og:type" content="website" />
+            <meta property="og:type" content="website" />
         <? else: ?>
-        <meta property="og:type" content="article" />
+            <meta property="og:type" content="article" />
         <? endif; ?>
         <meta property="og:site_name" content="<?php echo $ogmeta['title'] ?>" />
         <meta property="og:description" content="<?php echo $ogmeta['description'] ?>" />
@@ -109,7 +109,7 @@ $blog_post = strpos($ogmeta['url'], '/updates');
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="<?php echo $ogmeta['title'] ?>" />
         <meta property="og:description" content="<?php echo mb_substr($blog_post->posts[$blog_key]->text, 0, 100).'...'; ?>" />
-        <meta property="og:image" content="<?php echo '/data/cache/' . $_blog->image->name ?>" />
+        <meta property="og:image" content="<?php echo SITE_URL . '/data/cache/' . $_blog->image->name ?>" />
         <meta property="og:url" content="<?php echo htmlspecialchars($ogmeta['url']) ?>" />
         <meta property="og:locale" content="ja_JP" />
         <meta property="fb:app_id" content="<?= OAUTH_FACEBOOK_ID ?>" />
