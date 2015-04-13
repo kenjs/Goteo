@@ -41,14 +41,14 @@ elseif(strstr($_SERVER['REQUEST_URI'],'project')):
     } else {
         $description = $this['project']->description;
     }
-    $i = 1; foreach ($project->gallery as $image) :
+    foreach ($project->gallery as $image) :
         $gallery = $image->getLink(580, 580);
-    $i++; endforeach;
+    endforeach;
     $ogmeta = array(
         'title' => $this['project']->name,
         'description' => $description,
         'url' => SITE_URL.$_SERVER['REQUEST_URI'],
-        'image' => array($gallery)
+        'image' => array(SITE_URL . $gallery)
     );
 endif;
 if (!empty($this['posts'])) {
