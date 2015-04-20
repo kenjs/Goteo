@@ -440,15 +440,15 @@ namespace Goteo\Controller {
                             if ($debug) echo 'Cancelar todo<br />';
 
                             switch ($invest->method) {
-                                case 'paypal':
-                                    $err = array();
-                                    if (Paypal::cancelPreapproval($invest, $err, true)) {
-                                        $log_text = Text::_("Se ha cancelado aporte y preapproval de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s");
-                                    } else {
-                                        $txt_errors = implode('; ', $err);
-                                        $log_text = Text::_("Ha fallado al cancelar el aporte de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores:") . $txt_errors;
-                                    }
-                                    break;
+//                                case 'paypal':
+//                                    $err = array();
+//                                    if (Paypal::cancelPreapproval($invest, $err, true)) {
+//                                        $log_text = Text::_("Se ha cancelado aporte y preapproval de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s");
+//                                    } else {
+//                                        $txt_errors = implode('; ', $err);
+//                                        $log_text = Text::_("Ha fallado al cancelar el aporte de %s de %s mediante PayPal (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores:") . $txt_errors;
+//                                    }
+//                                    break;
                                 case 'axes':
                                     if ($invest->cancel(true)) {
                                         $log_text = Text::_("Contribution is canceled");
