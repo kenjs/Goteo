@@ -76,6 +76,10 @@
 		  <!-- sliders -->
 		  <script type="text/javascript" src="<?php echo SRC_URL ?>/view/m/js/jquery.slides.min.js"></script>
 		  <!-- end sliders -->
+          <!-- meanmenu -->
+            <link type="text/css" href="<?php echo SRC_URL ?>/view/m/css/meanmenu.min.css" rel="stylesheet" media="all" />
+            <script type="text/javascript" src="<?php echo SRC_URL ?>/view/m/js/jquery.meanmenu.min.js"></script>
+            <!-- end meanmenu -->
 
 		  <!-- vigilante de sesi�n -->
 		  <script type="text/javascript" src="<?php echo SITE_URL ?>/view/m/js/watchdog.js"></script>
