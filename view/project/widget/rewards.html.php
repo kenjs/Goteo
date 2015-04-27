@@ -89,7 +89,7 @@ uasort($project->individual_rewards,
                     <p><?php echo htmlspecialchars($social->description)?></p>
                     <?php if (!empty($social->license) && array_key_exists($social->license, $licenses)): ?>
                     <div class="license <?php echo htmlspecialchars($social->license) ?>">
-                        <h<?php echo $level + 4 ?>><span><?php echo Text::get('regular-license'); ?></span></h<?php echo $level + 4 ?>>
+                        <h<?php echo $level + 2 ?>><span><?php echo Text::get('regular-license'); ?></span></h<?php echo $level + 2 ?>>
                         <a href="<?php echo htmlspecialchars($licenses[$social->license]->url) ?>" target="_blank">
                             <strong><?php echo htmlspecialchars($licenses[$social->license]->name) ?></strong>
                         
