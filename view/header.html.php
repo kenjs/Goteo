@@ -86,7 +86,7 @@ use Goteo\Library\Text,
         <div class="inner">
             <h1><a href="<?= LOCALGOOD_WP_BASE_URL ?>"><img src="/view/css/header/logo.png" alt="LOCAL GOOD YOKOHAMA"/></a></h1>
             <div class="catchcopy">
-                このまち、わたしから未来を創る
+                仲間と創る、北九州のあした
             </div>
         </div>
         <a class="earth_view" href="http://yokohama.mapping.jp/" target="_blank"><img src="/view/css/header/earth_view_icon.png" alt="Earth View" /></a>

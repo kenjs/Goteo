@@ -93,7 +93,7 @@ $per = 100 / $cols;
                 <?php elseif (in_array($key, array('edit', 'up', 'down'))) :
                     $id = (is_object($item)) ? $item->id : $item['id'];?>
                     <td width="5%">
-                        <a title="Registro <?php echo $id; ?>" href="<?php echo "{$this['url']}/{$key}/{$id}/{$filter}"; ?>"><?php echo $botones[$key]; ?></a>
+                        <a title="<?php echo Text::get('admin_registro') . $id; ?>" href="<?php echo "{$this['url']}/{$key}/{$id}/{$filter}"; ?>"><?php echo $botones[$key]; ?></a>
                     </td>
                 <?php elseif ($key == 'image') : ?>
                     <td width="<?php echo round($per)-5; ?>%"><?php if (!empty($item->$key)) : ?><img src="<?php echo SRC_URL ?>/image/<?php echo (is_object($item)) ? $item->$key : $item[$key]; ?>/110/110" alt="image" /><?php endif; ?></td>

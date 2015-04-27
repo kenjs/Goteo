@@ -20,14 +20,14 @@
 
 namespace Goteo\Model {
 
-	use Goteo\Library\Text,
+    use Goteo\Library\Text,
         Goteo\Model\Image,
         Goteo\Library\Template,
         Goteo\Library\Mail,
         Goteo\Library\Check,
         Goteo\Library\Message;
 
-	class User extends \Goteo\Core\Model {
+    class User extends \Goteo\Core\Model {
 
         public
             $id = false,
@@ -65,9 +65,9 @@ namespace Goteo\Model {
          * @param type string	$value
          */
         public function __set ($name, $value) {
-	        if($name == "token") {
-	            $this->$name = $this->setToken($value);
-	        }
+            if($name == "token") {
+                $this->$name = $this->setToken($value);
+            }
             $this->$name = $value;
         }
 
@@ -79,20 +79,20 @@ namespace Goteo\Model {
          */
         public function __get ($name) {
             if($name == "token") {
-	            return $this->getToken();
-	        }
-	        if($name == "support") {
-	            return $this->getSupport();
-	        }
-	        if($name == "worth") {
-	            return $this->getWorth();
-	        }
-	        if($name == "amount") {
-	            return $this->getAmount();
-	        }
-	        if($name == "projects") {
-	            return $this->getProjects();
-	        }
+                return $this->getToken();
+            }
+            if($name == "support") {
+                return $this->getSupport();
+            }
+            if($name == "worth") {
+                return $this->getWorth();
+            }
+            if($name == "amount") {
+                return $this->getAmount();
+            }
+            if($name == "projects") {
+                return $this->getProjects();
+            }
             return $this->$name;
         }
 
@@ -127,35 +127,35 @@ namespace Goteo\Model {
                     $data[':lang'] = \LANG;
                     $data[':node'] = \NODE_ID;
 
-					//active = 1 si no se quiere comprovar
-					if(in_array('active',$skip_validations) && $this->active) $data[':active'] = 1;
-					else {
-						// Obtenemos la plantilla para asunto y contenido
-						$template = Template::get(5);
+                    //active = 1 si no se quiere comprovar
+                    if(in_array('active',$skip_validations) && $this->active) $data[':active'] = 1;
+                    else {
+                        // Obtenemos la plantilla para asunto y contenido
+                        $template = Template::get(5);
 
-						// Sustituimos los datos
-						$subject = $template->title;
+                        // Sustituimos los datos
+                        $subject = $template->title;
 
-						// En el contenido:
-						$search  = array('%USERNAME%', '%USERID%', '%ACTIVATEURL%');
-						$replace = array($this->name, $this->id, SITE_URL . '/user/activate/' . $token);
-						$content = \str_replace($search, $replace, $template->text);
+                        // En el contenido:
+                        $search  = array('%USERNAME%', '%USERID%', '%ACTIVATEURL%');
+                        $replace = array($this->name, $this->id, SITE_URL . '/user/activate/' . $token);
+                        $content = \str_replace($search, $replace, $template->text);
 
-						// Activación
-						$mail = new Mail();
-						$mail->to = $this->email;
-						$mail->toName = $this->name;
-						$mail->subject = $subject;
-						$mail->content = $content;
-						$mail->html = true;
-						$mail->template = $template->id;
-						if ($mail->send($errors)) {
-							Message::Info(Text::get('register-confirm_mail-success'));
-						} else {
-							Message::Error(Text::get('register-confirm_mail-fail', GOTEO_MAIL));
-							Message::Error(implode('<br />', $errors));
-						}
-					}
+                        // Activación
+                        $mail = new Mail();
+                        $mail->to = $this->email;
+                        $mail->toName = $this->name;
+                        $mail->subject = $subject;
+                        $mail->content = $content;
+                        $mail->html = true;
+                        $mail->template = $template->id;
+                        if ($mail->send($errors)) {
+                            Message::Info(Text::get('register-confirm_mail-success'));
+                        } else {
+                            Message::Error(Text::get('register-confirm_mail-fail', GOTEO_MAIL));
+                            Message::Error(implode('<br />', $errors));
+                        }
+                    }
                 }
                 else {
                     $data[':id'] = $this->id;
@@ -327,43 +327,43 @@ namespace Goteo\Model {
                     }
                     // Ejecuta SQL.
                     return self::query($query, $data);
-            	} catch(\PDOException $e) {
-                $errors[] = Text::_("No se ha grabado correctamente. ") . $e->getMessage();
+                } catch(\PDOException $e) {
+                    $errors[] = Text::_("No se ha grabado correctamente. ") . $e->getMessage();
                     return false;
-    			}
+                }
             }
             return false;
         }
 
-		public function saveLang (&$errors = array()) {
+        public function saveLang (&$errors = array()) {
 
-			$fields = array(
-				'id'=>'id',
-				'lang'=>'lang',
-				'about'=>'about_lang',
-				'keywords'=>'keywords_lang',
-				'contribution'=>'contribution_lang'
-				);
+            $fields = array(
+                'id'=>'id',
+                'lang'=>'lang',
+                'about'=>'about_lang',
+                'keywords'=>'keywords_lang',
+                'contribution'=>'contribution_lang'
+            );
 
-			$set = '';
-			$values = array();
+            $set = '';
+            $values = array();
 
-			foreach ($fields as $field=>$ffield) {
-				if ($set != '') $set .= ", ";
-				$set .= "`$field` = :$field ";
-				$values[":$field"] = $this->$ffield;
-			}
+            foreach ($fields as $field=>$ffield) {
+                if ($set != '') $set .= ", ";
+                $set .= "`$field` = :$field ";
+                $values[":$field"] = $this->$ffield;
+            }
 
-			try {
-				$sql = "REPLACE INTO user_lang SET " . $set;
-				self::query($sql, $values);
-            	
-				return true;
-			} catch(\PDOException $e) {
+            try {
+                $sql = "REPLACE INTO user_lang SET " . $set;
+                self::query($sql, $values);
+
+                return true;
+            } catch(\PDOException $e) {
                 $errors[] = Text::_("No se ha grabado correctamente. ") . $e->getMessage();
                 return false;
-			}
-		}
+            }
+        }
 
         /**
          * Validación de datos de usuario.
@@ -406,15 +406,15 @@ namespace Goteo\Model {
 
                 // Contraseña
                 if(!in_array('password',$skip_validations))  {
-					if(!empty($this->password)) {
-						if(!Check::password($this->password)) {
-							$errors['password'] = Text::get('error-register-invalid-password');
-						}
-					}
-					else {
-						$errors['password'] = Text::get('error-register-pasword-empty');
-					}
-				}
+                    if(!empty($this->password)) {
+                        if(!Check::password($this->password)) {
+                            $errors['password'] = Text::get('error-register-invalid-password');
+                        }
+                    }
+                    else {
+                        $errors['password'] = Text::get('error-register-pasword-empty');
+                    }
+                }
                 if(!empty($this->userid)) {
                     if(!Check::userid($this->userid)) {
                         $errors['userid'] = Text::get('error-user-userid-invalid');
@@ -772,13 +772,13 @@ namespace Goteo\Model {
             switch ($filters['order']) {
                 case 'name':
                     $sqlOrder .= " ORDER BY name ASC";
-                break;
+                    break;
                 case 'id':
                     $sqlOrder .= " ORDER BY id ASC";
-                break;
+                    break;
                 default:
                     $sqlOrder .= " ORDER BY created DESC";
-                break;
+                    break;
             }
 
             $sql = "SELECT
@@ -795,7 +795,7 @@ namespace Goteo\Model {
                    $sqlOrder
                     LIMIT 999
                     ";
-            
+
             $query = self::query($sql, $values);
             foreach ($query->fetchAll(\PDO::FETCH_CLASS, __CLASS__) as $user) {
 
@@ -812,7 +812,7 @@ namespace Goteo\Model {
 
                 $user->namount = (int) $user->amount;
                 $user->nprojs = (int) count($user->support['projects']);
-                
+
                 $users[] = $user;
             }
             return $users;
@@ -904,7 +904,7 @@ namespace Goteo\Model {
                     ON  user_role.user_id = user.id
                     AND user_role.role_id = 'admin'
                 ";
-            
+
             if ($availableonly) {
                 $sql .= " WHERE id NOT IN (SELECT distinct(user) FROM user_node)";
             }
@@ -922,14 +922,14 @@ namespace Goteo\Model {
         }
 
 
-		/**
-		 * Validación de usuario.
-		 *
-		 * @param string $username Nombre de usuario
-		 * @param string $password Contraseña
-		 * @return obj|false Objeto del usuario, en caso contrario devolverá 'false'.
-		 */
-		public static function login ($username, $password) {
+        /**
+         * Validación de usuario.
+         *
+         * @param string $username Nombre de usuario
+         * @param string $password Contraseña
+         * @return obj|false Objeto del usuario, en caso contrario devolverá 'false'.
+         */
+        public static function login ($username, $password) {
 
             $ok = false;
 
@@ -938,12 +938,12 @@ namespace Goteo\Model {
                         password
                     FROM user
                     WHERE BINARY id = :username",
-				array(
-					':username' => trim($username)
-				)
-			);
+                array(
+                    ':username' => trim($username)
+                )
+            );
 
-			if($row = $query->fetch(\PDO::FETCH_OBJ)) {
+            if($row = $query->fetch(\PDO::FETCH_OBJ)) {
 
                 if  (version_compare(phpversion(), '5.5.0', '>=')) {
                     $ok = password_verify($password, $row->password);
@@ -962,39 +962,39 @@ namespace Goteo\Model {
                     return false;
                 }
 
-			}
-			return false;
-		}
+            }
+            return false;
+        }
 
-		/**
-		 * Comprueba si el usuario está identificado.
-		 *
-		 * @return boolean
-		 */
-		public static function isLogged () {
-			return !empty($_SESSION['user']);
-		}
+        /**
+         * Comprueba si el usuario está identificado.
+         *
+         * @return boolean
+         */
+        public static function isLogged () {
+            return !empty($_SESSION['user']);
+        }
 
-		/**
-		 * Refresca la sesión.
-		 * (Utilizar después de un save)
-		 *
-		 * @return type object	User
-		 */
-		public static function flush () {
-    		if(static::isLogged()) {
-    			return $_SESSION['user'] = self::get($_SESSION['user']->id);
-    		}
-    	}
+        /**
+         * Refresca la sesión.
+         * (Utilizar después de un save)
+         *
+         * @return type object	User
+         */
+        public static function flush () {
+            if(static::isLogged()) {
+                return $_SESSION['user'] = self::get($_SESSION['user']->id);
+            }
+        }
 
-		/**
-		 * Verificacion de recuperacion de contraseña
-		 *
-		 * @param string $username Nombre de usuario
-		 * @param string $email    Email de la cuenta
-		 * @return boolean true|false  Correctos y mail enviado
-		 */
-		public static function recover ($email = null) {
+        /**
+         * Verificacion de recuperacion de contraseña
+         *
+         * @param string $username Nombre de usuario
+         * @param string $email    Email de la cuenta
+         * @return boolean true|false  Correctos y mail enviado
+         */
+        public static function recover ($email = null) {
             $query = self::query("
                     SELECT
                         id,
@@ -1003,11 +1003,11 @@ namespace Goteo\Model {
                     FROM user
                     WHERE BINARY email = :email
                     ",
-				array(
-					':email'    => trim($email)
-				)
-			);
-			if($row = $query->fetchObject()) {
+                array(
+                    ':email'    => trim($email)
+                )
+            );
+            if($row = $query->fetchObject()) {
                 // tenemos id, nombre, email
                 // genero el token
                 $token = md5(uniqid()).'¬'.$row->email.'¬'.date('Y-m-d');
@@ -1034,17 +1034,17 @@ namespace Goteo\Model {
                 if ($mail->send($errors)) {
                     return true;
                 }
-			}
-			return false;
-		}
+            }
+            return false;
+        }
 
-		/**
-		 * Verificacion de darse de baja
-		 *
-		 * @param string $email    Email de la cuenta
-		 * @return boolean true|false  Correctos y mail enviado
-		 */
-		public static function leaving ($email, $message = null) {
+        /**
+         * Verificacion de darse de baja
+         *
+         * @param string $email    Email de la cuenta
+         * @return boolean true|false  Correctos y mail enviado
+         */
+        public static function leaving ($email, $message = null) {
             $query = self::query("
                     SELECT
                         id,
@@ -1055,11 +1055,11 @@ namespace Goteo\Model {
                     AND active = 1
                     AND hide = 0
                     ",
-				array(
-					':email'    => trim($email)
-				)
-			);
-			if($row = $query->fetchObject()) {
+                array(
+                    ':email'    => trim($email)
+                )
+            );
+            if($row = $query->fetchObject()) {
                 // tenemos id, nombre, email
                 // genero el token
                 $token = md5(uniqid()).'¬'.$row->email.'¬'.date('Y-m-d');
@@ -1102,19 +1102,19 @@ namespace Goteo\Model {
                 unset($mail);
 
                 return true;
-			}
-			return false;
-		}
+            }
+            return false;
+        }
 
-    	/**
-    	 * Guarda el Token y envía un correo de confirmación.
-    	 *
-    	 * Usa el separador: ¬
-    	 *
-    	 * @param type string	$token	Formato: '<md5>¬<email>'
-    	 * @return type bool
-    	 */
-    	private function setToken ($token) {
+        /**
+         * Guarda el Token y envía un correo de confirmación.
+         *
+         * Usa el separador: ¬
+         *
+         * @param type string	$token	Formato: '<md5>¬<email>'
+         * @return type bool
+         */
+        private function setToken ($token) {
             if(count($tmp = explode('¬', $token)) > 1) {
                 $email = $tmp[1];
                 if(Check::mail($email)) {
@@ -1144,24 +1144,24 @@ namespace Goteo\Model {
                     return self::query('UPDATE user SET token = :token WHERE id = :id', array(':id' => $this->id, ':token' => $token));
                 }
             }
-    	}
+        }
 
-    	/**
-    	 * Token de confirmación.
-    	 *
-    	 * @return type string
-    	 */
-    	private function getToken () {
+        /**
+         * Token de confirmación.
+         *
+         * @return type string
+         */
+        private function getToken () {
             $query = self::query('SELECT token FROM user WHERE id = ?', array($this->id));
             return $query->fetchColumn(0);
-    	}
+        }
 
         /**
          * Cofinanciación.
          *
          * @return type array
          */
-    	private function getSupport () {
+        private function getSupport () {
             $query = self::query("SELECT DISTINCT(project) FROM invest WHERE user = ? AND status IN ('0', '1', '3')", array($this->id));
             $projects = $query->fetchAll(\PDO::FETCH_ASSOC);
             $query = self::query("SELECT SUM(amount), COUNT(id) FROM invest WHERE user = ? AND status IN ('0', '1', '3')", array($this->id));
@@ -1169,16 +1169,16 @@ namespace Goteo\Model {
             return array('projects' => $projects, 'amount' => $invest[0], 'invests' => $invest[1]);
         }
 
-	    /**
-    	 * Nivel actual de meritocracia. (1-5)
-    	 * [Recalcula y actualiza el registro en db]
-    	 *
-    	 * @return type int	Worth::id
-    	 */
-    	private function getWorth () {
+        /**
+         * Nivel actual de meritocracia. (1-5)
+         * [Recalcula y actualiza el registro en db]
+         *
+         * @return type int	Worth::id
+         */
+        private function getWorth () {
             $query = self::query('SELECT id FROM worthcracy WHERE amount <= ? ORDER BY amount DESC LIMIT 1', array($this->support['amount']));
             $worth = $query->fetchColumn();
-    	    $query = self::query('SELECT worth FROM user WHERE id = ?', array($this->id));
+            $query = self::query('SELECT worth FROM user WHERE id = ?', array($this->id));
             if($worth !== $query->fetchColumn()) {
                 self::query('UPDATE user SET worth = :worth WHERE id = :id', array(':id' => $this->id, ':worth' => $worth));
             }
@@ -1186,22 +1186,22 @@ namespace Goteo\Model {
         }
 
         /**
-    	 * Número de proyectos publicados
-    	 *
-    	 * @return type int	Count(id)
-    	 */
-    	private function getProjects () {
+         * Número de proyectos publicados
+         *
+         * @return type int	Count(id)
+         */
+        private function getProjects () {
             $query = self::query('SELECT COUNT(id) FROM project WHERE owner = ? AND status > 2', array($this->id));
             $num_proj = $query->fetchColumn(0);
             return $num_proj;
         }
 
         /**
-    	 * Cantidad aportada
-    	 *
-    	 * @return type int	Count(id)
-    	 */
-    	private function getAmount () {
+         * Cantidad aportada
+         *
+         * @return type int	Count(id)
+         */
+        private function getAmount () {
             $query = self::query("SELECT SUM(invest.amount) FROM invest WHERE user = ? AND status IN ('0', '1', '3')", array($this->id));
             $amount = $query->fetchColumn(0);
             return $amount;
@@ -1251,13 +1251,13 @@ namespace Goteo\Model {
 
 
             $fields = array(
-                  'contract_name',
-                  'contract_nif',
-                  'phone',
-                  'address',
-                  'zipcode',
-                  'location',
-                  'country'
+                'contract_name',
+                'contract_nif',
+                'phone',
+                'address',
+                'zipcode',
+                'location',
+                'country'
             );
 
             $values = array();
@@ -1272,8 +1272,8 @@ namespace Goteo\Model {
             }
 
             if (!empty($values) && $set != '') {
-                    $values[':user'] = $user;
-                    $sql = "$ins INTO user_personal SET user = :user, " . $set;
+                $values[':user'] = $user;
+                $sql = "$ins INTO user_personal SET user = :user, " . $set;
 
                 try {
                     self::query($sql, $values);
@@ -1326,8 +1326,8 @@ namespace Goteo\Model {
             }
 
             if (!empty($values) && $set != '') {
-                    $values[':user'] = $user;
-                    $sql = "REPLACE INTO user_prefer SET user = :user, " . $set;
+                $values[':user'] = $user;
+                $sql = "REPLACE INTO user_prefer SET user = :user, " . $set;
 
                 try {
                     self::query($sql, $values);
@@ -1342,11 +1342,11 @@ namespace Goteo\Model {
 
         }
 
-		private function getRoles () {
+        private function getRoles () {
 
             $roles = array();
-            
-		    $query = self::query('
+
+            $query = self::query('
 		    	SELECT
 		    		role.id as id,
 		    		role.name as name
@@ -1359,23 +1359,23 @@ namespace Goteo\Model {
             }
             // añadimos el de usuario normal
             $roles['user'] = (object) array('id'=>'user', 'name'=>Text::_('Usuario registrado'));
-            
+
             return $roles;
 
-		}
+        }
 
         /* listado de roles */
-		public static function getRolesList () {
+        public static function getRolesList () {
 
             $roles = array();
 
-		    $query = self::query('SELECT role.id as id, role.name as name FROM role ORDER BY role.name');
+            $query = self::query('SELECT role.id as id, role.name as name FROM role ORDER BY role.name');
             foreach ($query->fetchAll(\PDO::FETCH_OBJ) as $rol) {
                 $roles[$rol->id] = $rol->name;
             }
             return $roles;
 
-		}
+        }
 
 
         /*
@@ -1462,6 +1462,72 @@ namespace Goteo\Model {
 
         }
 
+        //
+        //  DB接続先の横取り
+        //
+        public static function query ($query, $params = null) {
+            /*
+                        try {
 
-	}
+                            $dsn = \GOTEO_DB_DRIVER . ':host=' . \GOTEO_DB_HOST . ';dbname=' . \GOTEO_DB_SCHEMA;
+
+                            if (defined('GOTEO_DB_PORT')) {
+                                $dsn .= ';port=' . \GOTEO_DB_PORT;
+                            }
+
+                            //If you use the UTF-8 encoding, you have to use the fourth parameter :
+                            if (defined('GOTEO_DB_CHARSET') && GOTEO_DB_DRIVER == 'mysql') {
+                                parent::__construct($dsn, \GOTEO_DB_USERNAME, \GOTEO_DB_PASSWORD, array(\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES UTF8"));
+                            }
+                            else {
+                                parent::__construct($dsn, \GOTEO_DB_USERNAME, \GOTEO_DB_PASSWORD);
+                            }
+
+                            $this->setAttribute(static::ATTR_ERRMODE, static::ERRMODE_EXCEPTION);
+                        } catch (\PDOException $e) {
+                            die ('No puede conectar la base de datos');
+                        }
+            */
+            static $db = null;
+
+            if ($db === null) {
+//                $db = new DB;
+                try {
+                    $dsn = \GOTEO_DB_DRIVER . ':host=' . \GOTEO_DB_HOST . ';dbname=' . \COMMON_AUTH_DB_SCHEMA;
+                    $db = new \PDO($dsn, \COMMON_AUTH_DB_USERNAME, \COMMON_AUTH_DB_PASSWORD, array(\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES UTF8"));;
+
+                } catch (\PDOException $e) {
+                    die ('No puede conectar la base de datos');
+                }
+            }
+
+            $params = func_num_args() === 2 && is_array($params) ? $params : array_slice(func_get_args(), 1);
+
+            // ojo que el stripslashes jode el contenido blob al grabar las imagenes
+            if (\get_magic_quotes_gpc ()) {
+                foreach ($params as $key => $value) {
+                    if ($key != ':content') {
+                        $params[$key] = \stripslashes(\stripslashes($value));
+                    }
+                }
+            }
+
+            $result = $db->prepare($query);
+
+            try {
+
+                $result->execute($params);
+
+                return $result;
+
+            } catch (\PDOException $e) {
+                throw new Exception("Error PDO: " . \trace($e));
+            }
+
+        }
+
+
+
+
+    }
 }

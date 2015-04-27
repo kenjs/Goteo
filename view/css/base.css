@@ -97,13 +97,19 @@ header
     margin-left: -180px;
     font-size:24px;
 }
+.header .nav_wrapper {
+    width: 100%;
+    height: 60px;
+    margin: 0 auto;
+    background-color: #D48608;
+}
 
 .header .nav_wrapper .nav_inner {
     width: 960px;
     height: 60px;
     margin: 0 auto;
-    background-color: #ffffff;
     position: relative;
+    background-color: #D48608;
     z-index: 1;
 }
 
@@ -194,6 +200,7 @@ table#font_box td.active {
 }
 */
 
+
 .header .nav_wrapper ul {
     float: left;
     width: 960px;
@@ -202,36 +209,38 @@ table#font_box td.active {
 }
 
 .header .nav_wrapper ul li {
-    color: #000000;
+    color: #000;
     line-height: 1.6em;
     list-style-type: none;
     width: 20%;
     float: left;
-    background-color:#fff;
+    background-color: #D48608;
 }
-
 .header .nav_wrapper ul li ul li {
     width: 20%;
 }
 .header .nav_wrapper ul li ul li a {
     border-right: none;
+    color: #fff;
 }
-
 .header .nav_wrapper ul li a {
+    color: #fff;
     display: block;
     font-size: 16px;
     line-height: 60px;
     text-align: center;
-    border-right: 1px dashed #cccccc;
+    border-right: 1px dashed #aaa;
 }
-
 .header .nav_wrapper ul li:last-child a {
     border-right: none;
 }
-
 .header .nav_wrapper ul li:hover,
 .header .nav_wrapper ul li.active {
-    background-color: #dae121;
+    background-color: #ccc;
+}
+.header .nav_wrapper ul li:hover > a,
+.header .nav_wrapper ul li.active > a {
+    color: #000;
 }
 
 .header .nav_wrapper ul li span {
