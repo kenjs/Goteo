@@ -35,7 +35,7 @@ $(function () {
         // sp nav
         Flipsnap('.flipsnap');
         var flipsnap = Flipsnap('.flipsnap', {
-            distance: 65
+            distance: 70
         });
     }
 
