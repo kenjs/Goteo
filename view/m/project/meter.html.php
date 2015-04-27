@@ -34,7 +34,6 @@ $reached    = $project->invested;
 $supporters = count($project->investors);
 $days       = $project->days;
 
-
 // PHP la pifia (y mucho) con los cálculos en coma flotante
 if ($reached >= $minimum) {
     $minimum_done = round(($reached / $minimum) * 100);
@@ -102,15 +101,19 @@ $minimum_ratio =  min(100, round(($minimum / $optimum) * 100));
             <dt class="minimum" style="<?php echo $horizontal ? 'height' : 'height' ?>: <?php echo number_format($minimum_ratio) ?>%"><span><?php echo Text::get('project-view-metter-minimum'); ?></span></dt>
             <dd class="minimum" style="<?php echo $horizontal ? 'height' : 'height' ?>: <?php echo number_format($minimum_ratio) ?>%"><strong><?php echo \amount_format($minimum) ?></strong><span>円</span></dd>
 
-            <?/*<dt class="reached"><span><?php echo Text::get('project-view-metter-got'); ?></span></dt>
-            <dd class="reached"><strong><?php echo \amount_format($reached) ?> </strong><span>円</span></dd>*/?>
+            <dt class="reached"><span><?php echo Text::get('project-view-metter-got'); ?></span></dt>
+            <dd class="reached"><strong><?php echo \amount_format($reached) ?> </strong><span>円</span></dd>
 
             <dt class="days"><span><?php echo Text::get('project-view-metter-days'); ?></span></dt>
             <dd class="days"><strong><?php echo number_format($days) ?></strong><span><?php echo Text::get('regular-days'); ?></span></dd>
 
-            <?/*<dt class="supporters"><span><?php echo Text::get('project-view-metter-investors'); ?></span></dt>
-            <dd class="supporters"><strong><?php echo number_format($supporters) ?></strong>人</dd>*/?>
+            <dt class="supporters"><span><?php echo Text::get('project-view-metter-investors'); ?></span></dt>
+            <dd class="supporters"><strong><?php echo number_format($supporters) ?></strong>人</dd>
 
+        <?php if ($activable) : ?>
+            <dt class="percent"><?php echo Text::get('project-view-metter-rate'); ?></dt>
+            <dd class="percent"><strong><?php echo number_format($minimum_done_per) ?></strong>%</dd>
+        <?php endif; ?>
         </dl>
 
     <?php /*
@@ -121,10 +124,10 @@ $minimum_ratio =  min(100, round(($minimum / $optimum) * 100));
 
     </div>
 
-<?php if ($activable) : ?>
+<?/*php if ($activable) : ?>
     <div class="obtained">
         <strong><?php echo \amount_format($reached) ?> <span>円</span></strong>
         <span class="percent"><?php echo number_format($minimum_done_per) ?>%</span>
     </div>
-<?php endif; ?>
+<?php endif; */?>
 
