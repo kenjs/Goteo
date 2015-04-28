@@ -22,6 +22,7 @@ body {
     min-height: 100%;
     top: 0;
     position: relative;
+    word-wrap: break-word;
 }
 
 body, td, th, a, a:link, a:visited, a:active, a:hover, input, textarea, button {
@@ -93,7 +94,8 @@ a.button {
     padding: 0;
     line-height: 50px;
     text-align: center;
-    font-size: 16px;
+    /*font-size: 16px;*/
+    font-size: 13px;
     font-weight: bolder;
 }
 
@@ -410,7 +412,7 @@ textarea#leave-message {
 div#header,
 div#super-header {
     position: relative;
-    z-index: 999;
+    z-index: 1;
 }
 
 div#header a,
@@ -1740,9 +1742,13 @@ header
 }
 
 .header .nav_wrapper {
-    background-color: #e5e5e5;
+    background-color: #0098c4;
 }
-
+.header .nav_wrapper h1 {
+    display: block;
+    margin: 0;
+    padding: 6px 0 6px 8px;
+}
 .header h1 {
     padding: 15px 0;
 }
@@ -1768,7 +1774,7 @@ header
     position: relative;
     width: 320px;
     height: 40px;
-    background-color: #e5e5e5;
+    background-color: #e7e7e7;
 }
 
 .header .nav_wrapper ul {
@@ -1783,7 +1789,7 @@ header
     line-height: 1.6em;
     list-style-type: none;
     float: left;
-    background-color:#fff;
+    background-color: #0098c4;
     font-size: 12px;
     padding: 0 16px;
 }
@@ -1797,11 +1803,15 @@ header
     font-size: 12px;
     line-height: 40px;
     text-align: center;
+    color: #fff;
 }
-
 .header .nav_wrapper ul li:hover,
 .header .nav_wrapper ul li.active {
     background-color: #dae121;
+}
+.header .nav_wrapper ul li:hover a,
+.header .nav_wrapper ul li.active a {
+    color: #000;
 }
 
 .header .nav_wrapper ul li span {
@@ -1846,7 +1856,7 @@ footer
 --------------------------------------------------*/
 .footer {
     background-color: #fff;
-    margin-top: 30px;
+    margin-top: 0;
 }
 
 .footer .footer_link_wrapper {
@@ -1863,24 +1873,10 @@ footer
     list-style-type: none;
 }
 
-.footer ul li:last-child {
-    border-right: none;
-}
-
 .footer ul li a {
     padding: 0 8px 0 0;
     font-size: 11px;
     color: #666666;
-}
-
-.footer ul li:first-child a {
-    padding-left: 0;
-}
-
-.footer ul {
-    width: 810px;
-    float: left;
-    margin: 16px 0;
 }
 
 .footer ul a:link {
@@ -1890,7 +1886,8 @@ footer
 .footer .footer_link_wrapper ul {
     width: auto;
     float: none;
-    margin: 0;
+    margin: 0 auto;
+    text-align: center;
 }
 .footer p {
     position: relative;
@@ -1914,10 +1911,9 @@ footer
 }
 
 .footer .copyright {
-    float: right;
     width: 100%;
     margin-top: 16px;
-    font-size: 12px;
+    font-size: 10px;
     line-height: 24px;
     text-align: center;
     color: #666666;
@@ -1962,14 +1958,14 @@ footer
 .footer .platoniq a {
     text-decoration: none;
     color: #666666;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 
 /*--------------------------------------------------
   sp--flipsnap.js
 --------------------------------------------------*/
-.viewport,
+/*.viewport,*/
 .viewport_projectnav,
 .viewport_dashboard{
     width: 320px;
@@ -1978,7 +1974,7 @@ footer
     -webkit-transform: translateZ(0); /* Optional: When heavy at iOS6+ */
 }
 
-.flipsnap:after,
+/*.flipsnap:after,*/
 .flipsnap_projectnav:after,
 .flipsnap_dashboard:after{
     content: '';
@@ -2021,7 +2017,7 @@ body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_
 }
 body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_dashboard li.option {
     float: left;
-    height: 28px;
+    height: 34px;
     padding: 4px 8px;
     border: none;
     color: #666;
@@ -2063,6 +2059,67 @@ body.page .static_page .content {
     height: auto;
     background-color: #f5f3f0;
     padding-bottom: 20px;
+}
+
+
+/*--------------------------------------------------
+  sp--navigation
+--------------------------------------------------*/
+.mean-container .mean-bar,
+.mean-container .mean-nav {
+    background: none;
+    z-index: 1;
+}
+.mean-container a.meanmenu-reveal {
+    color: #0098c4;
+}
+.mean-container .mean-nav ul li a {
+    border-top: 1px solid rgba(0,0,0,.5);
+}
+.mean-container .mean-nav {
+    border-bottom: 1px solid rgba(0,0,0,.5);
+}
+.mean-container .mean-nav ul li li a {
+    border-top: 1px solid rgba(0,0,0,.25);
+}
+.mean-container a.meanmenu-reveal span {
+    background-color: #0098c4;
+}
+.mean-container .mean-nav ul li a.mean-expand {
+    height: 26px;
+    padding: 5px!important;
+    border-left: 1px solid rgba(0,0,0,.4)!important; 
+}
+.mean-container .mean-nav ul li a.mean-expand:hover {
+    background-color: #e6e6e6;
+}
+.mean-container .mean-nav {
+    position: absolute;
+    background-color: #0098c4;
+}
+.mean-container .mean-nav ul li a,
+.mean-container .mean-nav ul li li a {
+    padding: 8px 5%;
+}
+.mean-container .mean-nav ul li li li a {
+    padding: 8px 15%;
+}
+.mean-container .mean-nav ul li a.dashboard_link {
+    display: table;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.mean-container .mean-nav ul li a.dashboard_link span {
+    display: table-cell;
+    width: 80px;
+    vertical-align: middle;
+}
+.header h1 {
+    position: absolute;
+    z-index: 999999;
+}
+.header h1 img {
+    height: 36px;
 }
 
 
@@ -2516,7 +2573,7 @@ div.widget.projects > .title {
 div.widget.projects div.project {
     background-color: #fff;
     padding: 0;
-    padding-bottom: 50px;
+    /*padding-bottom: 50px;*/
     position:relative;
     z-index:98;
     overflow: hidden;
@@ -2965,10 +3022,10 @@ div.superform li.element > h8 {
     font-size: 14px;
 }
 div.superform li.element > h4 {
-    /*font-size: 20px;*/
     font-size: 16px;
-    padding: 0 64px 0 0;
+    padding: 0;
     line-height: 1.2em;
+    margin: 1em 0;
 }
 
 div.superform li.element > h5 {
@@ -3068,12 +3125,12 @@ div.superform li.element:last-child {
 }
 
 div.superform > div.elements > ol > li.element {
-    padding: 0 1em 1em 0;
+    padding: 0;
     overflow: hidden;
     margin: 0 0 16px 0;
 }
 div#main.profile div.superform > div.elements > ol > li.element {
-    padding: 0 1em 1em 0;
+    padding: 0;
 
 }
 
@@ -3109,7 +3166,7 @@ body div.superform > div.elements li.element li.element.inline {
 body div.superform div.elements li#user_avatar .children .elements,
 body div.superform div.elements li#user_webs .children .elements {
     border: 1px dashed #bcbdbf;
-    padding: 0 20px 10px 20px;
+    padding: 10px 20px;
     margin: 20px 0 0 0;
 }
 
@@ -3161,7 +3218,7 @@ div.superform textarea {
     min-height: 27px;
     background-color: #eeeeee;
     border: 1px solid #cccccc;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 div.superform textarea {
@@ -4471,7 +4528,7 @@ body.dashboard div#dashboard-menu li.option a {
 body.dashboard div#dashboard-menu li.option.current a,
 body.dashboard div#dashboard-menu li.option.active a {
     height: 18px;
-    padding-bottom: 9px;
+    padding-bottom: 15px;
     color: #f5f5f5;
     border-bottom: 5px solid #ff9933;
     line-height: 35px;
@@ -4481,8 +4538,7 @@ body.dashboard div#dashboard-menu li.option.active a {
 /* El superform con el fondo blanco */
 body.dashboard div.superform {
     background-color: #ffffff !important;
-    padding-top: 1px !important;
-    padding-left: 20px !important;
+    padding: 10px 20px !important;
     border: none !important;
 }
 
@@ -4764,7 +4820,9 @@ body.project-show div#main div.center div.widget.project-summary.h_ttl {
     border-bottom: none;
 }
 body.project-show div#main div.center div.widget.project-summary.h_ttl h3 {
-    margin: 0;
+    margin: 0 0 4px 0;
+    font-size: 18px;
+    color: #0098c4;
 }
 body.project-show div#main div.center div.widget.project-summary.h_ttl .project-subtitle,
 body.project-show div#main div.center div.widget.project-summary.h_ttl .wants-skills,
@@ -4774,14 +4832,18 @@ body.project-show div#main div.center div.widget.project-summary.h_ttl .categori
     font-size: 11px;
 }
 body.project-show div#main div.center div.widget.project-summary.h_ttl .project-subtitle {
-    margin-bottom: 24px;
+    margin: 0 0 1em 1em;
 }
 body.project-show div#main div.center div.widget.project-summary.h_ttl .wants-skills {
     margin-bottom: 8px;
 }
-body.project-show div#main div.center div.widget.project-summary.h_ttl .categories {
+body.project-show div#main div.center div.widget.project-summary.h_ttl .categories,
+body.project-show div#main div.center div.widget.project-summary.h_ttl .categories h3 {
     font-weight: normal;
     color: #20B3B2;
+    margin: 0;
+}
+body.project-show div#main div.center div.widget.project-summary.h_ttl .categories h3{
     margin: 0;
 }
 
@@ -4813,7 +4875,7 @@ div.widget.project-summary div.goal,
 div.widget.project-summary div.related {
     clear: both;
     /*padding: 0 10px 10px 10px;*/
-    margin: 0;
+    margin: 0 0 10px 0;
 }
 
 div.widget.project-summary div.about h4,
@@ -4822,7 +4884,7 @@ div.widget.project-summary div.goal h4,
 div.widget.project-summary div.related h4 {
     font-size: 16px;
     padding: 0;
-    margin: 0;
+    margin: 0 0 1em 0;
 }
 
 div.widget.project-summary div.prjct-gallery-container div.gallery-image,
@@ -4987,12 +5049,12 @@ div.widget.project-share ul {
 
 div.widget.project-share li {
     display: block;
-    padding-left: 30px;
+    padding-left: 28px;
     float: left;
     min-height: 2em;
     line-height: 2em;
     background: no-repeat left center;
-    min-width: 20%;
+    min-width: 22%;
 }
 
 div.widget.project-share li a {
@@ -5142,6 +5204,7 @@ div.widget.project-message .button {
 /* Detalle de la linea roja (y otras cosillas) en el supertitle del termometro*/
 div.widget.project-support h4.supertitle {
     background-color: #3399cc;
+    font-size: 15px;
 }
 
 div.widget.project-support dl dd.days strong,
@@ -5186,7 +5249,7 @@ div.widget.project-support a.button {
     background: -webkit-linear-gradient(top,  #f2bb67 0%,#ff9900 100%); /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(top,  #f2bb67 0%,#ff9900 100%); /* Opera 11.10+ */
     background: linear-gradient(to bottom,  #f2bb67 0%,#ff9900 100%); /* W3C */
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* Tagmark termometro */
@@ -5222,7 +5285,7 @@ div.widget.project-support div.tagmark.grey {
 
 /* tipografia pequeña para que quepa todo */
 div.widget.project-support div.tagmark span.small {
-    font-size: 0.8em !important;
+    font-size: 0.6em !important;
     font-weight: normal !important;
     line-height: normal;
 }
@@ -5252,7 +5315,7 @@ body.project-show div#main > div.center > div.widget.project-needs {
 
 div.widget.project-needs p.click{
     margin-bottom: 0;
-    padding-left: 4px;
+    padding-left: 1em;
     padding-bottom: 8px;
     border-bottom: 2px solid #C1C1C1;
 }
@@ -5260,7 +5323,7 @@ div.widget.project-needs p.click{
 div.widget.project-needs p.click span.text {
     padding: 0;
     margin: 3px 0 0 10px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: normal;
     clear:left;
 }
@@ -5303,12 +5366,11 @@ div.widget.project-needs dd.min {
 
 div.widget.project-needs .req {
     background:#e3eadc;
+    padding: 16px 0;
 }
 
-div.widget.project-needs .req,
 div.widget.project-needs .noreq {
-    padding-top: 16px;
-    border-bottom: 1px solid #e7e7e7;
+    padding: 16px 0;
 }
 
 div.widget.project-needs #legend .min,
@@ -5350,9 +5412,10 @@ div.widget.project-needs #legend {
 
 div.widget.project-needs h5.summary {
     margin: 0;
-    padding-left: 64px;
+    padding-left: 58px;
     background: no-repeat 16px 50%;
     line-height: 32px;
+    font-size: 14px;
 }
 
 div.widget.project-needs .task h5.summary {
@@ -5662,6 +5725,7 @@ body.project-show div#main.threecols div.widget.project-spread div.widget.projec
 /* Detalle de la linea verde */
 div.widget.project-collaborations h4.supertitle {
     background-color: #33cc99;
+    font-size: 15px;
 }
 
 div.widget.project-collaborations h3.title {
@@ -5711,7 +5775,7 @@ div.widget.project-collaborations a.button {
     background: -webkit-linear-gradient(top,  #66cc99 0%,#339966 100%); /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(top,  #66cc99 0%,#339966 100%); /* Opera 11.10+ */
     background: linear-gradient(to bottom,  #66cc99 0%,#339966 100%); /* W3C */
-    font-size: 14px;
+    font-size: 12px;
     line-height: 50px;
 }
 
@@ -5735,12 +5799,18 @@ body.project-show div#main div.widget.project-collaborations div.project-widget-
 }
 
 body.project-show div#main div.widget.project-collaborations div.project-widget-box ul li {
-    margin: 0 0 20px 0;
+    margin: 0 0 1em 0;
     padding: 0;
     list-style: none;
     line-height: 16px;
 }
-
+body.project-show div#main div.widget.project-collaborations div.project-widget-box h6 {
+    margin: 0 0 1em;
+    font-size: 14px;
+    padding: 7px 0 0 42px;
+    font-weight: bold;
+    text-transform: none;
+}
 
 /*----------------------------------------------------------------------
   project/widget/supporters.css
@@ -5907,6 +5977,7 @@ div.widget.project-supporters .supporters ul li dl dt,
 div.widget.project-supporters .supporters ul li dl dd {
     margin: 0;
     font-size: 12px;
+    text-align: center;
 }
 
 div.widget.project-supporters .supporters ul li dl dt {
@@ -6295,6 +6366,9 @@ div.widget.project-investors h4.supertitle {
 La pagina de aportar, la pagina de retornos, el lateral de retornos
 */
 /* Detalle de la linea verde */
+#rewards-summary h3.supertitle{
+    font-size: 15px;
+}
 #rewards-summary h3.supertitle,
 div.widget.project-rewards h4.supertitle {
     background-color: #ff9933;
@@ -6463,9 +6537,18 @@ div.widget.project-rewards ul li {
     padding: 10px 10px 0 60px;
 }
 
+div.widget.project-rewards ul li h6 {
+    margin: 0 0 1em;
+    font-size: 14px;
+    padding: 7px 0 0 42px;
+    font-weight: bold;
+    text-transform: none;
+}
+
 #rewards-summary ul li,
 #rewards-summary ul li.file .name {
     padding: 10px 10px 0 0;
+    font-size: 12px;
 }
 
 div.widget.project-invest ul li > p,
@@ -6477,7 +6560,7 @@ div.widget.project-rewards ul li > p,
 div.widget.project-invest ul li > .name,
 div.widget.project-rewards ul li > .name,
 #rewards-summary div.social ul li.file h5.name {
-    margin: 0 0 .4em;
+    margin: 0 0 1em;
     font-size: 13px;
     font-weight: bold;
     text-transform: none;
@@ -6531,7 +6614,7 @@ div.widget.project-rewards ul li.service,
 
 body.project-show #rewards-summary ul li h5.name {
     padding: 0 0 0 50px;
-    margin: 0 0 .5em;
+    margin: -18px 0 .5em;
     font-size: 13px;
     font-weight: bold;
 }
@@ -6605,6 +6688,10 @@ div.widget.project-rewards ul li div.license h8,
     padding: 0 0 .2em;
 }
 
+#rewards-summary ul li div.license h6 {
+    font-size: 14px;
+}
+
 div.widget.project-invest ul li div.license a,
 div.widget.project-rewards ul li div.license a,
 #rewards-summary ul li div.license a {
@@ -6630,6 +6717,7 @@ div.widget.project-invest ul li div.license  p,
 div.widget.project-rewards ul li div.license  p,
 #rewards-summary ul li div.license  p {
     margin: .2em 0;
+    font-size: 12px;
 }
 
 div.widget.project-invest ul li div.license.agpl > a strong,
@@ -6794,7 +6882,7 @@ div.widget.project-rewards div.project-widget-box div > ul > li:last-child {
 
 body.project-show div#main div#project-collaborations .project-widget-box {
     background-color: #fff;
-    padding: 0 20px;
+    padding: 20px;
 }
 
 body.project-show div#main div.widget.project-rewards .project-widget-box{
@@ -6817,6 +6905,14 @@ body.project-show div#main div.widget.project-rewards div.social ul li {
 div.widget.project-rewards div.individual ul li div.amount {
     margin-left: 43px;
     font-weight: bold;
+    height: 25px;
+}
+
+div.widget.project-rewards div.individual ul li div.buttons {
+    width: 90%;
+}
+div.widget.project-rewards div.individual ul li div.buttons .violet {
+    line-height: 2.5em;
 }
 
 body.project-show div#main div.widget.project-rewards ul li h4{
@@ -7420,7 +7516,8 @@ div.widget.project-invest h3.beak {
 }
 
 div.widget.project-invest.address table {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto 20px;
 }
 div.widget.project-invest.address table td {
     width: 130px;
@@ -7429,6 +7526,10 @@ div.widget.project-invest.address table tr td label {
     text-align: right;
     padding-right: 5px;
     padding-left: 10px;
+}
+div.widget.project-invest.address p {
+    width: 90%;
+    margin: 0 auto;
 }
 div.widget.project-invest #amount {
     background: url('/view/css/yen/violet/l.png') no-repeat 5px center #E7E7E7;
@@ -7980,8 +8081,14 @@ body.project-show div#main > div.center > div.widget {
     clear: left;
     background-color: #fff;
 }
+body.project-show div#main > div.center > div.widget.project-invest.address {
+    margin: 0 auto;
+    padding: 0 0 20px 0;
+    clear: left;
+    background-color: #fff;
+}
 body.project-show .project-summary {
-    padding: 20px 16px 0;
+    padding: 20px 16px;
 }
 
 body.project-show div#main > div.center > div.widget.project-invest.method input#paymethod {
@@ -8153,7 +8260,7 @@ body.project-show .widget.user.collapsable {
 body.project-show .widget.user.collapsable h3.supertitle {
     background-color: #669900;
     font-weight: normal;
-    font-size: 16px;
+    font-size: 15px;
     height: 40px;
     padding: 0;
     padding-left: 20px;
@@ -8618,8 +8725,8 @@ body.project-edit div#main #project-steps fieldset fieldset > legend {
   user/login.css
 ----------------------------------------------------------------------*/
 body.user-login div#main > div > * {
-    padding: 20px 20px 15px;
-    margin: 0 0 15px;
+    padding: 0 0 10px 0;
+    margin: 0 0 20px;
 }
 
 body.user-login div#main > div h2 {
@@ -8671,10 +8778,15 @@ body.user-login div#main div.register form > div em {
     font-size: 12px;
 }
 
+body.user-login div#main div.register button {
+    margin: 20px 0;
+}
+
 body.user-login div#main div.register label.conditions {
     font-size: 12px;
     line-height: 16px;
     color: #999999;
+    margin: 0 0 1em;
 }
 
 body.user-login div#main div.register label.conditions a {
@@ -8786,14 +8898,10 @@ body.user-login .sign-in-with {
 /*20150408*/
 
 
-.register {
-    background-color: #fff;
-}
-
 body.user-login div#main .login {
     background-color: #fff;
     margin: 20px 0;
-    padding-bottom: 20px;
+    /*padding-bottom: 20px;*/
 }
 
 body.user-login div#main .login p a {
@@ -8827,11 +8935,6 @@ body.user-login div#main .login form input[type="submit"], input[type="reset"], 
     padding: 0;
 }
 
-body.user-login div#main > div > * {
-    padding: 0;
-    margin: 0;
-}
-
 body.user-login div#main h2 {
     background-color: #ff9933;
     font-weight: normal;
@@ -8849,6 +8952,15 @@ body.user-login div#main h2 {
 /*----------------------------------------------------------------------
   user/register.css
 ----------------------------------------------------------------------*/
+
+.register {
+    background-color: #fff;
+}
+
+body.user-login .register form {
+    padding: 0 20px;
+}
+
 body.user-register div#main > div > * {
     padding: 20px;
     background-color: white;
@@ -9622,7 +9734,7 @@ body.user-profile div#sub-header {
 
 body.user-profile div#sub-header div {
     margin-bottom: 0;
-    background-color: #dae121;
+    /*background-color: #dae121;*/
 }
 
 body.user-profile div#main {
@@ -10303,8 +10415,8 @@ body.project-show div.widget.project-summary .gallery-image{
 div.gallery-image img {
     display: block;
     width: auto;
-    max-width: 320px;
-    max-height: 240px;
+    width: 100%;
+    max-height: auto;
     margin: 0 auto;
 }
 
@@ -10649,7 +10761,7 @@ body.discover div#main div.widget.projects div.navi-bar {
 }
 
 body.discover div#main div.searcher {
-    background-color: transparent;
+    background-color: #fff;
     padding-bottom: 0;
     padding-left:0;
     padding-right:0;
@@ -10713,8 +10825,8 @@ div.searcher form {
 .searcher .filter select{
     color:#58595B;
     width:100%;
-    height: 30px;
-    font-size: 0.9em;
+    height: 35px;
+    font-size: 1.5em;
     background-color: #e7e7e7;
     margin: 0;
     margin-top: 10px;
@@ -11243,7 +11355,7 @@ div.widget.project div.meter.activable {
     max-width: 288px;
 }
 div.widget.project div.meter {
-    padding: 4px 0 98px !important;
+    padding: 4px 0 128px !important;
     position: relative;
     height: 20px;
 }
@@ -11283,16 +11395,21 @@ div.widget.project div.meter {
     top: 56px;
     left:96px;
 }
+.meter dl dt.percent {
+    top: 56px;
+    right: 0;
+}
+
 .meter dl dt.days,
 .meter dl dt.reached,
-.meter dl dt.supporters {
+.meter dl dt.supporters,
+.meter dl dt.percent {
     color: #666600;
 }
 
-
 .meter dl dd {
     padding-top: 30px;
-    font-size: 14px;
+    font-size: 12px;
     border-bottom: 1px solid #eee;
 }
 .meter dl dd.minimum {
@@ -11323,6 +11440,12 @@ div.widget.project div.meter {
     font-weight: normal;
     border-right: 1px solid #eee;
 }
+.meter dl dd.percent {
+    top: 40px;
+    right: 0;
+    font-weight: normal;
+}
+
 div.widget.project div.meter dl dd.minimum span,
 div.widget.project div.meter dl dd.optimum span,
 div.widget.project div.meter dl dd.days span,
@@ -11494,7 +11617,7 @@ div.widget h3.title {
     font-weight: normal;
 }
 div.widget .title{
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     padding-left: 6px;
     text-decoration: none;
@@ -11567,7 +11690,7 @@ div.read_more a:hover {
 /** end readmore **/
 
 div#message{background: none repeat scroll 0 0 #ffa375;color: #333333;padding: 25px 0;font-size: 14px;width: 100%;}
-div#message div#message-content{width:960px;margin:0 auto;position:relative;}
+div#message div#message-content{width: 100%;margin:0 auto;position:relative;}
 div#message div#message-content input.message-close{ background:url('/view/css/message-close.png') no-repeat; width:11px;height:10px;border:none;position:absolute;top:-8px;right:0;z-index:100; cursor:pointer;}
 div#message div#message-content ul{list-style:none;margin:0;padding:0;}
 

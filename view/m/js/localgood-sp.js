@@ -31,13 +31,13 @@ $(function () {
         }
     );
 
-    if($('.flipsnap').length > 0){
+    /*if($('.flipsnap').length > 0){
         // sp nav
         Flipsnap('.flipsnap');
         var flipsnap = Flipsnap('.flipsnap', {
             distance: 70
         });
-    }
+    }*/
 
     if($('.flipsnap_projectnav').length > 0){
         // sp project-nav
@@ -54,6 +54,9 @@ $(function () {
             distance: 20
         });
     }
+
+    $('.nav_inner').meanmenu({
+    });
 
     // 投稿画像etcを画面幅に収める
     var post_width = $('.post_body').width();
