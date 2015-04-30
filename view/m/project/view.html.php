@@ -175,6 +175,7 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
                     case 'messages':
                         echo
                             new View('view/m/project/widget/summary.h_ttl.html.php', array('project' => $project)),
+                            new View('view/m/project/widget/collaborations_message.html.php', array('project' => $project,'thread' => $thread)),
                             new View('view/m/project/widget/messages.html.php', array('project' => $project,'thread' => $thread));
                         break;
                    
