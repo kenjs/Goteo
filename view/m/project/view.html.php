@@ -218,7 +218,7 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
                 echo new View('view/m/project/widget/investors.html.php', array('project' => $project));
             }
 
-            if (!empty($project->supports) && $non_flug == 0) {
+            if (!empty($project->supports) && $show !='messages') {
                 echo new View('view/m/project/widget/collaborations.html.php', array('project' => $project));
             }
 
