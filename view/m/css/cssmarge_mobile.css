@@ -1742,7 +1742,7 @@ header
 }
 
 .header .nav_wrapper {
-    background-color: #0098c4;
+    background-color: #D48608;
 }
 .header .nav_wrapper h1 {
     display: block;
@@ -1789,7 +1789,7 @@ header
     line-height: 1.6em;
     list-style-type: none;
     float: left;
-    background-color: #0098c4;
+    background-color: #D48608;
     font-size: 12px;
     padding: 0 16px;
 }
@@ -2077,7 +2077,7 @@ body.page .static_page .content {
 }
 
 .mean-container a.meanmenu-reveal {
-    color: #0098c4;
+    color: #D48608;
 }
 .mean-container .mean-nav ul li a {
     border-top: 1px solid rgba(0,0,0,.5);
@@ -2089,7 +2089,7 @@ body.page .static_page .content {
     border-top: 1px solid rgba(0,0,0,.25);
 }
 .mean-container a.meanmenu-reveal span {
-    background-color: #0098c4;
+    background-color: #D48608;
 }
 .mean-container .mean-nav ul li a.mean-expand {
     height: 26px;
@@ -2101,7 +2101,7 @@ body.page .static_page .content {
 }
 .mean-container .mean-nav {
     position: absolute;
-    background-color: #0098c4;
+    background-color: #D48608;
 }
 .mean-container .mean-nav ul li a,
 .mean-container .mean-nav ul li li a {
@@ -2295,7 +2295,7 @@ div.widget.project.balloon > .title a {
     z-index:99;
     line-height: 1.5em;
     font-size: 18px;
-    color: #0098c4
+    color: #D48608
 }
 
 div.widget.project > .author {
@@ -2720,7 +2720,7 @@ body.home div#main div.widget.projects h3.title{
 }
 body.home div#main div.widget.projects h3.title a {
     font-size: 18px;
-    color: #0098c4;}
+    color: #D48608;}
 body.home div#main div.learn ul.slderpag {
     margin: 8px 0 0 0;
     list-style:none;
@@ -4837,7 +4837,7 @@ body.project-show div#main div.center div.widget.project-summary.h_ttl {
 body.project-show div#main div.center div.widget.project-summary.h_ttl h3 {
     margin: 0 0 8px 0;
     font-size: 18px;
-    color: #0098c4;
+    color: #D48608;
 }
 body.project-show div#main div.center div.widget.project-summary.h_ttl .project-subtitle,
 body.project-show div#main div.center div.widget.project-summary.h_ttl .wants-skills,
@@ -11041,7 +11041,7 @@ a.discover-arrow {
 }
 .widget.projects .discover-group h3.title a {
     font-size: 18px;
-    color: #0098c4;
+    color: #D48608;
 }
 .widget.projects .discover-group h3.ronda {
     padding-top: 0!important;

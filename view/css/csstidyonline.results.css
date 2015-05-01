@@ -1788,7 +1788,7 @@ div .inner
 }
 .header .nav_wrapper 
 {
-	background-color:#0098c4;
+	background-color:#D48608;
 	height:60px;
 	margin:0 auto;
 	position:relative;
@@ -1797,7 +1797,7 @@ div .inner
 }
 .header .nav_wrapper .nav_inner
 {
-	background-color:#0098c4;
+	background-color:#D48608;
 	height:60px;
 	margin:0 auto;
 	position:relative;
@@ -1911,7 +1911,7 @@ table#font_box td.active
 
 .header .nav_wrapper ul li
 {
-	background-color:#0098c4;
+	background-color:#D48608;
 	color:#000;
 	float:left;
 	line-height:1.6em;
@@ -1947,7 +1947,7 @@ table#font_box td.active
 .header .nav_wrapper ul li:hover,
 .header .nav_wrapper ul li.active
 {
-	background-color: #dae121;
+	background-color: #ccc;
 }
 .header .nav_wrapper ul li:hover > a,
 .header .nav_wrapper ul li.active > a
