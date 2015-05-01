@@ -208,9 +208,10 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
             <div class="side">
             <?php
             // el lateral es diferente segun el show (y el invest)
-            echo
-                new View('view/m/project/widget/support.html.php', array('project' => $project));
-
+            if($show !== 'home'){
+                echo
+                    new View('view/m/project/widget/support.html.php', array('project' => $project));
+            }
             if ((!empty($project->investors) &&
                 !empty($step) &&
                 in_array($step, array('start', 'login', 'confirm', 'continue', 'ok', 'fail')) )
