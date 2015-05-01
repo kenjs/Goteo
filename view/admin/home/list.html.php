@@ -81,7 +81,7 @@ $admins = Home::_admins();
 
     </table>
     <?php else : ?>
-    <p>No hay ning&uacute;n elemento lateral en portada</p>
+    <p><?php echo Text::get('admin-home_no_element'); ?></p>
     <?php endif; ?>
 
     <?php if (!empty($side_availables)) : ?>
@@ -98,7 +98,7 @@ $admins = Home::_admins();
         <?php endforeach; ?>
         </select>
         <br />
-        <input type="submit" name="save" value="A&ntilde;adir" />
+        <input type="submit" name="save" value="<?php echo Text::get('form-add-button'); ?>" />
     </p>
 
     </form>
@@ -139,7 +139,7 @@ $admins = Home::_admins();
 
     </table>
     <?php else : ?>
-    <p>No hay ning&uacute;n elemento en portada</p>
+    <p><?php echo Text::get('admin-home_no_element'); ?></p>
     <?php endif; ?>
 
     <?php if (!empty($availables)) : ?>
@@ -156,7 +156,7 @@ $admins = Home::_admins();
         <?php endforeach; ?>
         </select>
         <br />
-        <input type="submit" name="save" value="A&ntilde;adir" />
+        <input type="submit" name="save" value="<?php echo Text::get('form-add-button'); ?>" />
     </p>
 
     </form>
