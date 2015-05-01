@@ -266,12 +266,12 @@ body.project-show div#main > div.side > div.widget .invest-notice{
 }
 
 body.project-show div#main > div.center > div.widget {
-    max-width: 540px;
+    max-width: 580px;
     margin-right: 20px;
     clear: left;
 	padding-bottom: 20px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 body.project-show div#main > div.center > div.widget.project-summary:first-child {
