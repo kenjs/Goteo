@@ -50,7 +50,7 @@ $fields = Content::_fields(); // por tipo de campo
 $types = $fields[$table];
 
 // metemos el todos
-\array_unshift($types, 'Todos los tipos');
+\array_unshift($types, Text::_('Todos los tipos'));
 
 ?>
 <!-- Filtro -->
@@ -64,8 +64,8 @@ $types = $fields[$table];
             <option value="<?php echo $val; ?>"<?php if ($this['filters']['type'] == $val) echo ' selected="selected"';?>><?php echo $opt; ?></option>
         <?php endforeach; ?>
         </select>
-        
-        <label for="filter-<?php echo $id; ?>">Buscar texto:</label>
+
+        <label for="filter-<?php echo $id; ?>"><?php echo Text::_('Buscar texto:') ?></label>
         <input name="<?php echo $id; ?>" value="<?php echo (string) $this['filters']['text']; ?>" />
 
         <input type="submit" name="filter" value="<?php echo Text::_('Buscar') ?>">

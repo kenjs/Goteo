@@ -39,7 +39,7 @@ include 'view/header.html.php'; ?>
 
         <div id="sub-header">
             <div>
-                <h2>Panel principal de traducción</h2>
+                <h2><?php echo Text::get('dashboard-translate-title'); ?></h2>
                 <?php if (defined('ADMIN_BCPATH')) : ?>
                 <blockquote><?php echo ADMIN_BCPATH; ?></blockquote>
                 <?php endif; ?>
