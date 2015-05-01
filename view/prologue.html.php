@@ -41,9 +41,9 @@ elseif(strstr($_SERVER['REQUEST_URI'],'project')):
     } else {
         $description = $this['project']->description;
     }
-    $i = 1; foreach ($project->gallery as $image) :
+    foreach ($project->gallery as $image) :
         $gallery = $image->getLink(580, 580);
-    $i++; endforeach;
+    endforeach;
     $ogmeta = array(
         'title' => $this['project']->name,
         'description' => $description,
@@ -84,9 +84,9 @@ $blog_post = strpos($ogmeta['url'], '/updates');
     <?php if (isset($ogmeta) && $blog_post === false): ?>
         <meta property="og:title" content="<?php echo $ogmeta['title'] ?>" />
         <? if($_SERVER['REQUEST_URI']=="/"): ?>
-        <meta property="og:type" content="website" />
+            <meta property="og:type" content="website" />
         <? else: ?>
-        <meta property="og:type" content="article" />
+            <meta property="og:type" content="article" />
         <? endif; ?>
         <meta property="og:site_name" content="<?php echo $ogmeta['title'] ?>" />
         <meta property="og:description" content="<?php echo $ogmeta['description'] ?>" />
@@ -109,7 +109,7 @@ $blog_post = strpos($ogmeta['url'], '/updates');
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="<?php echo $ogmeta['title'] ?>" />
         <meta property="og:description" content="<?php echo mb_substr($blog_post->posts[$blog_key]->text, 0, 100).'...'; ?>" />
-        <meta property="og:image" content="<?php echo '/data/cache/' . $_blog->image->name ?>" />
+        <meta property="og:image" content="<?php echo SITE_URL . '/data/cache/' . $_blog->image->name ?>" />
         <meta property="og:url" content="<?php echo htmlspecialchars($ogmeta['url']) ?>" />
         <meta property="og:locale" content="ja_JP" />
         <meta property="fb:app_id" content="<?= OAUTH_FACEBOOK_ID ?>" />
@@ -121,7 +121,37 @@ $blog_post = strpos($ogmeta['url'], '/updates');
         <meta property="og:locale" content="ja_JP" />
         <meta property="fb:app_id" content="<?= OAUTH_FACEBOOK_ID ?>" />
     <?php endif; ?>
+
+<?
+    $uri = $_SERVER['REQUEST_URI'];
+    //var_dump($uri);
+?>
+
+    <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/csstidyonline.results.css" />
+
+<?/*
+    <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/footer.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/goteo.css" />
+    <?php if ($uri === '/' || strstr($uri,'/discover') || strstr($uri,'/dashboard')): ?>
+        <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/home.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/project/widget/projects.css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/meter.css" />
+    <?php endif; ?>
+    <?php if (strstr($uri,'/project')): ?>
+        <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/project_view.css" />
+        <?php if (strstr($uri,'/project') && strstr($uri,'/needs')): ?>
+            <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/project/widget/needs.css" />
+        <?php endif; ?>
+    <?php endif; ?>
+
+    <?php if (strstr($uri,'/project/edit')): ?>
+        <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/project_edit.css" />
+    <?php endif; ?>
+*/?>
+
     <?php if (!isset($useJQuery) || !empty($useJQuery)): ?>
         <script type="text/javascript" src="<?php echo SRC_URL ?>/view/js/jquery-1.6.4.min.js"></script>
         <script type="text/javascript" src="<?php echo SRC_URL ?>/view/js/jquery.tipsy.min.js"></script>
@@ -178,7 +208,7 @@ if (isset($fbCode)) : ?>
   js.src = "//connect.facebook.net/<?php echo \Goteo\Library\i18n\Lang::locale(); ?>/all.js#xfbml=1&appId=__YOUR_APP_ID__";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<?php endif;  
+<?php endif;
 *
 */ ?>
 <script type="text/javascript">

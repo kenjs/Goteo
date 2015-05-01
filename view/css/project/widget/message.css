@@ -28,20 +28,10 @@ div.project-message div#bocadillo{
 	height: 50px;
 	margin-top: 8px;
 }
-/*
-div.project-message h3.title{
-	font-size: 20px;
-	font-weight: bold;
-	line-height: 19px;
-	padding-bottom:5px;
-	margin-bottom:12px;
-}*/
 div.project-message button{
 	float:right;
-	/*margin-top: 25px;*/
+    margin-bottom: 0;
 	font-weight: normal;
-	/*padding: 5px 20px;*/
-	margin-bottom: 0;
 	font-style: normal;
 }
 
@@ -54,18 +44,16 @@ div.widget.project-message textarea {
 	height: 50px;
 	margin: 10px -1px -1px;
 	padding: 0.3em 0;
-	width: 525px;
+	/*width: 525px;*/
+    width: 500px;
 	resize:none;
 }
 
 div.widget.project-message a.preview{
 	color: #2EAB58;
 	font-weight: normal;
-	/*left: 52px;*/
-	/*position: relative;*/
 	text-decoration: none;
 	text-transform: uppercase;
-	/*top: 10px;*/
 	font-style: normal;
 	position: absolute;
 	left: 80px;

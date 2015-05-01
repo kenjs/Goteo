@@ -68,7 +68,7 @@ foreach ($project->costs as $cost) {
 
     <?php foreach ($list as $cost): ?>
     <div class="<?php echo htmlspecialchars($type); echo ($cost->req == 1) ? " req" : " noreq"; ?>">
-        <h<?php echo $level+2 ?> class="summary"><?php echo htmlspecialchars($types[$type]) ?></h<?php echo $level+2 ?>>
+        <h<?php echo $level+2 ?> class="summary"><span><?php echo htmlspecialchars($types[$type]) ?></span></h<?php echo $level+2 ?>>
         <p class="click"><span class="text"><?php echo $cost->description ?></span></p>
         <dl id="legend">
             <dt class="min">
@@ -77,6 +77,8 @@ foreach ($project->costs as $cost) {
             <dd class="min">
                 <?php echo $minimum ?>
             </dd>
+        </dl>
+        <dl id="legend">
             <dt class="max">
                 <?php echo Text::get('project-view-metter-optimum'); ?>
             </dt>

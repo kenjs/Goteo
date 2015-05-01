@@ -53,7 +53,8 @@
 <?php endif; ?>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <?php if (!isset($useJQuery) || !empty($useJQuery)): ?>
-        <script type="text/javascript" src="<?php echo SRC_URL ?>/view/m/js/jquery-1.6.4.min.js"></script>
+        <?/*<script type="text/javascript" src="<?php echo SRC_URL ?>/view/m/js/jquery-1.6.4.min.js"></script>*/?>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo SRC_URL ?>/view/m/js/jquery.tipsy.min.js"></script>
           <!-- custom scrollbars -->
           <link type="text/css" href="<?php echo SRC_URL ?>/view/m/css/jquery.jscrollpane.min.css" rel="stylesheet" media="all" />
@@ -63,6 +64,10 @@
 		  <!-- sliders -->
 		  <script type="text/javascript" src="<?php echo SRC_URL ?>/view/m/js/jquery.slides.min.js"></script>
 		  <!-- end sliders -->
+          <!-- meanmenu -->
+            <link type="text/css" href="<?php echo SRC_URL ?>/view/m/css/meanmenu.min.css" rel="stylesheet" media="all" />
+            <script type="text/javascript" src="<?php echo SRC_URL ?>/view/m/js/jquery.meanmenu.min.js"></script>
+            <!-- end meanmenu -->
 
 		  <!-- vigilante de sesi�n -->
 		  <script type="text/javascript" src="<?php echo SITE_URL ?>/view/m/js/watchdog.js"></script>

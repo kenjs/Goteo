@@ -29,7 +29,7 @@ $project = $this['project'];
 $level = $this['level'] ?: 3;
 
 if ($this['global'] === true) {
-    $blank = ' target="_blank"';
+    $blank = ' target="_parent"';
 } else {
     $blank = '';
 }
@@ -144,7 +144,6 @@ if (isset($this['investor']) && is_object($this['investor'])) {
            <?php if ($q >= 5) break; $q++;
            endforeach ?>
         </ul>
-
 
     </div>
 

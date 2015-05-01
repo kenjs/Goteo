@@ -54,9 +54,6 @@ $level = (int) $this['level'] ?: 3;
             <input type="hidden" id="thread" name="thread" value="<?php echo $thread;?>" />
             <div id="bocadillo"></div>
             <textarea id="message-text" name="message" cols="50" rows="5"></textarea>
-            <?php /*
-            <a target="_blank" id="a-preview" href="#preview" class="preview"><?php echo Text::get('regular-preview'); ?></a>
-            */ ?>
             <div style="display:none">
                 <div id="preview" style="width:400px;height:300px;overflow:auto;">
                         
@@ -87,17 +84,16 @@ $level = (int) $this['level'] ?: 3;
                    <a name="message<?php echo $message->id; ?>"></a>
                    <div class="date"><span><?php echo $message->timeago ?>前</span></div>
                    <blockquote><?php echo $message->message; ?></blockquote>
+                <?php if (!empty($_SESSION['user'])) : ?>
                    <div class="actions">
-                        <?php if (!empty($_SESSION['user'])) : ?>
                         <a class="" href="#" onclick="answer('<?php echo $message->id; ?>')"><?php echo Text::get('project-messages-answer_it'); ?></a>
-                        <?php endif; ?>
                         <?php // si puede borrar este mensaje
                         if (\Goteo\Core\ACL::check("/message/delete/{$message->id}/{$project->id}")) : ?>
                                 <a href="/message/delete/<?php echo $message->id; ?>/<?php echo $project->id; ?>"><?php echo Text::get('regular-delete'); ?></a>
                         <?php endif ?>
                    </div>
-
-               </div>
+                <?php endif; ?>
+                </div>
 
                <?php if (!empty($message->responses)) :
                     foreach ($message->responses as $child) : ?>
@@ -114,7 +110,6 @@ $level = (int) $this['level'] ?: 3;
                            </a>
                            </h<?php echo $level ?>>
                            <div class="date"><span><?php echo $child->timeago; ?>前</span></div>
-                           <? $child->timeago; ?>
                            <blockquote><?php echo $child->message; ?></blockquote>
                            <?php // si puede borrar este mensaje
                            if (\Goteo\Core\ACL::check("/message/delete/{$child->id}/{$project->id}")) : ?>
@@ -127,6 +122,4 @@ $level = (int) $this['level'] ?: 3;
                 endif; ?>
 		<?php endforeach; ?>
     </div>
-
-
 </div>

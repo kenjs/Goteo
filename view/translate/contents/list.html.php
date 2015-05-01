@@ -58,13 +58,12 @@ $types = $fields[$table];
     <form id="filter-form" action="/translate/<?php echo $table ?>/list/<?php echo $filter ?>" method="get">
         <input type="hidden" name="table" value="<?php echo $table ?>" />
 
-        <label for="filter-<?php echo $id; ?>">Filtrar por campo:</label>
+        <label for="filter-<?php echo $id; ?>"><?php echo Text::get('dashboard-translate_filter'); ?></label>
         <select id="filter-<?php echo $id; ?>" name="<?php echo $id; ?>" onchange="document.getElementById('filter-form').submit();">
         <?php foreach ($types as $val=>$opt) : ?>
             <option value="<?php echo $val; ?>"<?php if ($this['filters']['type'] == $val) echo ' selected="selected"';?>><?php echo $opt; ?></option>
         <?php endforeach; ?>
         </select>
-
         <label for="filter-<?php echo $id; ?>"><?php echo Text::_('Buscar texto:') ?></label>
         <input name="<?php echo $id; ?>" value="<?php echo (string) $this['filters']['text']; ?>" />
 

@@ -1,27 +1,177 @@
-/*
- *  Copyright (C) 2012 Platoniq y Fundación Fuentes Abiertas (see README for details)
- *	This file is part of Goteo.
- *
- *  Goteo is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU Affero General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  Goteo is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU Affero General Public License for more details.
- *
- *  You should have received a copy of the GNU Affero General Public License
- *  along with Goteo.  If not, see <http://www.gnu.org/licenses/agpl.txt>.
- *
- */
-/**
- * Superform!
- */
- 
-@import url('superform/datepicker.css');
+/*--------------------------------------------------
+ datepicker
+--------------------------------------------------*/
+div.datepicker {
+    position: absolute;
+    cursor: default;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.datepickerContainer {
+    background: white;
+    box-shadow: 4px 4px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 4px 4px 2px rgba(0,0,0,.2);
+    position: relative;
+    z-index: 99999;
+}
+.datepickerBorderT,
+.datepickerBorderB,
+.datepickerBorderL,
+.datepickerBorderR,
+.datepickerBorderTL,
+.datepickerBorderTR,
+.datepickerBorderBL,
+.datepickerBorderBR {
+    display: none;
+}
+.datepickerHidden {
+    display: none;
+}
+div.datepicker table {
+    border-collapse:collapse;
+    width: 100%;
+}
+div.datepicker a {
+    outline: none;
+}
+div.datepicker table td {
+    text-align: right;
+    margin: 0;
+    font-size: 12px;
+    border: none;
+}
 
+div.datepicker table tbody td a {
+    text-decoration: none;
+    color: #1fb0b0;
+    font-size: 12px !important;
+}
+
+div.datepicker table td
+div.datepicker th {
+    text-align: center;
+    color: #999;
+    font-weight: normal;
+}
+div.datepicker tbody th {
+    text-align: left;
+}
+div.datepicker tbody a {
+    display: block;
+}
+
+table.datepickerViewDays tr.datepickerDoW th {
+    padding: .6em .4em;
+    font-weight: normal;
+    color: #666;
+    text-align: center;
+    font-size: 12px;
+}
+
+.datepickerDays td,
+.datepickerDays th,
+tbody.datepickerMonths td,
+tbody.datepickerYears td {
+    padding: .1em;
+}
+
+
+.datepickerDays a,
+tbody.datepickerMonths td a ,
+tbody.datepickerYears td a {
+    line-height: 1em;
+    width: 1.3em;
+    height: 1em;
+    padding: .4em;
+    background-color: #dff2f3;
+    border: 1px solid #1fb0b0;
+}
+
+tbody.datepickerMonths td a,
+tbody.datepickerYears td a {
+    width: 3.15em;
+    height: 3.9em;
+    line-height: 3.9em;
+    text-align: center;
+}
+
+tbody.datepickerDays td.datepickerSelected a {
+    color: white;
+    background-color: #1FB0B0;
+}
+
+
+tbody.datepickerDays td.datepickerNotInMonth.datepickerSelected,
+tbody.datepickerYears td.datepickerSelected,
+tbody.datepickerMonths td.datepickerSelected {
+    background: #17384d;
+}
+
+div.datepicker a:hover {
+    color: white;
+    background-color: #1FB0B0;
+}
+
+td.datepickerNotInMonth a {
+    color: #68c9c9 !important;
+}
+
+
+div.datepicker tbody th {
+    text-align: left;
+}
+.datepickerGoNext a,
+.datepickerGoPrev a,
+.datepickerMonth a {
+    text-align: center;
+    color: white !important;
+}
+
+.datepickerGoNext,
+.datepickerGoPrev,
+.datepickerMonth {
+    height: 2em;
+    padding: .2em;
+    line-height: 2em;
+    background-color: #1FB0B0;
+
+}
+
+.datepickerGoNext a {
+    float: right;
+    width: 2em;
+}
+.datepickerGoPrev a {
+    float: left;
+    width: 2em;
+}
+table.datepickerViewDays tbody.datepickerMonths,
+table.datepickerViewDays tbody.datepickerYears {
+    display: none;
+}
+table.datepickerViewMonths tbody.datepickerDays,
+table.datepickerViewMonths tbody.datepickerYears,
+table.datepickerViewMonths tr.datepickerDoW {
+    display: none;
+}
+table.datepickerViewYears tbody.datepickerDays,
+table.datepickerViewYears tbody.datepickerMonths,
+table.datepickerViewYears tr.datepickerDoW {
+    display: none;
+}
+td.datepickerDisabled a,
+td.datepickerDisabled.datepickerNotInMonth a{
+    color: #333;
+}
+td.datepickerDisabled a:hover {
+    color: #333;
+}
+
+
+/*--------------------------------------------------
+ superform
+--------------------------------------------------*/
 body.js div.superform .jshidden {
     display: none;
 }

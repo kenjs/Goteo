@@ -22,25 +22,18 @@ use Goteo\Core\View,
     Goteo\Model\Project,
     Goteo\Library\Text;
 $projects = Goteo\Model\Project::published("available");
-
-//$promotes = $this['promotes'];
-// random y que solo pinte seis si hubiera más
-/*if (count($promotes) > 6) {
-    shuffle($promotes);
-    $promotes = array_slice($promotes, 0, 6);
-}*/
 ?>
 <div class="widget projects">
 
     <h2 class="title">支援募集中のプロジェクト<?php //echo Text::get('home-projects-header'); ?></h2>
 
-    <?php foreach ($promotes as $promo) : ?>
+    <?php foreach ($projects as $project) :
+
+        ?>
 
         <?php echo new View('view/m/project/widget/project.html.php', array(
-            'project' => $promo->projectData,
-            'balloon' => '<h4>' . htmlspecialchars($promo->title) . '</h4>' .
-                '<blockquote>' . $promo->description . '</blockquote>'
-        )) ?>
+        'project' => $project
+    )) ?>
 
     <?php endforeach ?>
 
