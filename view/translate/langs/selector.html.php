@@ -18,7 +18,8 @@
  *
  */
 
-use Goteo\Library\i18n\Lang;
+use Goteo\Library\i18n\Lang,
+    Goteo\Library\Text;
 
 $langs = Lang::getAll();
 unset($langs['es']); // no se puede traducir a español
@@ -31,7 +32,7 @@ $section = isset($this['table']) ? $this['table'] : $this['section'];
 <div id="lang-selector">
     <form id="selector-form" name="selector_form" action="<?php echo '/translate/select/'.$section.'/'.$this['action'].'/'.$this['id'].'/'.$this['filter'].'&page='.$_GET['page']; ?>" method="post">
     <?php if (!empty($actual->id)) : ?>
-    Estas traduciendo al <strong><?php echo $actual->name ?></strong>. <label for="selector">Cambiar a:</label>
+        <?php echo Text::get('dashboard-translate_lang'); ?><?/*Estas traduciendo al */?><strong><?php echo $actual->name ?></strong>です。 <label for="selector"><?php echo Text::get('dashboard-translate_lang_change'); ?><?/*Cambiar a: */?></label>
     <?php else : ?>
     No has seleccionado un idioma al que traducir. <label for="selector">Traducir a:</label>
     <?php endif; ?>
