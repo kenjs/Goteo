@@ -28,9 +28,9 @@ body.project-edit div#main div.project-preview div.widget {
     margin-bottom: 20px;
 }
 
-body.project-edit div#main div.project-preview div.widget.project-support {
+/*body.project-edit div#main div.project-preview div.widget.project-support {
     min-height: 340px;
-}
+}*/
 
 body.project-edit div#main div.project-preview div.widget.project-support,
 body.project-edit div#main div.project-preview div.widget.project-collaborations,
@@ -76,3 +76,16 @@ body.project-edit div#main div.project-preview div.widget.project-rewards div.am
     margin-left: 0;
 }
 
+
+body.project-edit div#main div.project-preview div.widget.project-support div.buttons {
+    position: relative;
+    top:-100px;
+    left:20px;
+    margin-left:0;
+}
+body.project-edit div#main div.project-preview div.widget.project-support div.invest-notice {
+    position: absolute;
+    top: 360px;
+    width: 290px;
+    left: 20px;
+}

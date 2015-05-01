@@ -522,3 +522,7 @@ div.side div.project-rewards li.manual h6.name span {
     display: table-cell;
     vertical-align: middle;
 }
+
+div.widget.project-rewards ul li div.license h7 {
+    border-bottom: none;
+}

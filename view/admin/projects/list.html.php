@@ -103,7 +103,6 @@ $pagedResults = new \Paginated($this['projects'], 10, isset($_GET['page']) ? $_G
             </tr>
         </table>
     </form>
-    <br clear="both" />
     <a href="/admin/projects/?reset=filters"><?php echo Text::_("Quitar filtros"); ?></a>
 <?php if ($filters['filtered'] != 'yes') : ?>
     <p><?php echo Text::_("Es necesario poner algun filtro, hay demasiados registros!"); ?></p>

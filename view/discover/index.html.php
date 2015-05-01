@@ -77,6 +77,7 @@ include 'view/header.html.php' ?>
             ); ?>
 
     <?php foreach ($this['lists'] as $type=>$list) :
+
         if (array_empty($list))
             continue;
         ?>

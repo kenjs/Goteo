@@ -22,6 +22,10 @@ div.widget.project-schedule {
     padding-right: 0;
 }
 
+div.center div.widget.project-schedule h3 {
+    padding-left: 0;
+}
+
 div.widget.project-schedule table {
     border-collapse: separate;
     width: 100%;

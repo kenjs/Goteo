@@ -34,7 +34,7 @@ $section = isset($this['table']) ? $this['table'] : $this['section'];
     <?php if (!empty($actual->id)) : ?>
         <?php echo Text::get('dashboard-translate_lang'); ?><?/*Estas traduciendo al */?><strong><?php echo $actual->name ?></strong>です。 <label for="selector"><?php echo Text::get('dashboard-translate_lang_change'); ?><?/*Cambiar a: */?></label>
     <?php else : ?>
-    No has seleccionado un idioma al que traducir. <label for="selector">Traducir a:</label>
+        <?php echo Text::get('dashboard-translate_no_select_lang'); ?><label for="selector">Traducir a:</label>
     <?php endif; ?>
     <select id="selector" name="lang" onchange="document.getElementById('selector-form').submit();">
 <!--        <option value="">Seleccionar idioma de traducci&oacute;n</option> -->

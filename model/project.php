@@ -1961,7 +1961,7 @@ namespace Goteo\Model {
                     break;
                 case 'available':
                     // ni edicion ni revision ni cancelados, estan disponibles para verse publicamente
-                    $sql = "SELECT id, name FROM project WHERE status > 2 AND status < 6 $sqlFilter ORDER BY name ASC";
+                    $sql = "SELECT id, name FROM project WHERE status > 2 AND status < 6 $sqlFilter ORDER BY status ASC , created DESC";
                     break;
                 case 'archive':
                     // caducados, financiados o casos de exito

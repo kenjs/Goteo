@@ -349,7 +349,7 @@ if ($step == 'start') : ?>
                     }
                 } else {
                     //When the supporter has selected a reward　--add 141030
-                    var reward = $('#resign_reward').val();
+                    //var reward = $('#resign_reward').val();
                     var name = $('#fullname').val();
                     var add = $('#address').val();
 
