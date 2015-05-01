@@ -288,9 +288,9 @@ ul#pagination li {
     width: auto;
     float: left;
     text-align: center;
-    -moz-box-shadow: 3px 3px 0px #E2E2E2;
-    -webkit-box-shadow: 3px 3px 0px #E2E2E2;
-    box-shadow: 3px 3px 0px #E2E2E2;
+    -moz-box-shadow: 3px 3px 0 #E2E2E2;
+    -webkit-box-shadow: 3px 3px 0 #E2E2E2;
+    box-shadow: 3px 3px 0 #E2E2E2;
 }
 ul#pagination li.selected {
     background:#cde4e5;
@@ -574,7 +574,7 @@ div#sub-header > div > div.slides_container > div.slides_control > div.subhead-b
 }
 
 div#sub-header > div > div.slides_container > div.slides_control > div.subhead-banner .shb-info .col-return p{
-    margin: 0px 0px 4px 0px;
+    margin: 0 0 4px 0px;
     font: normal 11px Helvetica, Arial, Geneva, sans-serif;
 }
 
@@ -636,7 +636,7 @@ div#sub-header > div > div.slides_container > div.slides_control > div.subhead-b
 }
 
 div#sub-header > div > div.slides_container > div.slides_control > div.subhead-banner h2.message{
-    margin:20px 0px 20px 20px;
+    margin:20px 0 20px 20px;
 }
 
 div.subhead-banner h2.message .greenblue{
@@ -753,7 +753,7 @@ div#sub-header > div > h2 .greenblue{
     display: block;
     float: left;
     overflow: hidden;
-    margin: 0px 4px 5px 4px;
+    margin: 0 4px 5px 4px;
 }
 
 .sliderbanners-ctrl li a {
@@ -1335,7 +1335,7 @@ div#footer div.block ul.paginacion li {
     display: block;
     float: left;
     overflow: hidden;
-    margin: 0px 4px 5px 4px;
+    margin: 0 4px 5px 4px;
 }
 
 div#footer div.block ul.paginacion li a {
@@ -1578,7 +1578,7 @@ div#sub-footer div.platoniq a.foundation {
     display: inline-block;
     width: 120px;
     height: 30px;
-    background: url('/view/css/logoFFA.png') no-repeat 0px 5px transparent;
+    background: url('/view/css/logoFFA.png') no-repeat 0 5px transparent;
     text-indent: 2000px;
     line-height: 2000px;
     overflow: hidden;
@@ -1586,14 +1586,14 @@ div#sub-footer div.platoniq a.foundation {
 }
 
 div#sub-footer div.platoniq a.foundation:hover{
-    background: url('/view/css/logoFFA2.png') no-repeat 0px 5px transparent;
+    background: url('/view/css/logoFFA2.png') no-repeat 0 5px transparent;
 }
 
 div#sub-footer div.platoniq a.growby {
     display: inline-block;
     width: 90px;
     height: 30px;
-    background: url('/view/css/agpl.png') no-repeat 0px 0px transparent;
+    background: url('/view/css/agpl.png') no-repeat 0 0 transparent;
     text-indent: 2000px;
     line-height: 2000px;
     overflow: hidden;
@@ -1644,7 +1644,7 @@ div#sub-footer div.platoniq a.poweredby:hover{
     width: 100%;
     text-indent: 2000px;
     line-height: 2000px;
-    margin: 0px 3px;
+    margin: 0 3px;
 }
 
 .slidersponsors-ctrl li.navi a {
@@ -1920,28 +1920,28 @@ footer
     color: #666666;
 }
 
-.footer .foot_bar_inner .accenture {
+.footer .foot_bar_inner .three_center {
     display: block;
     float: left;
     margin-left: 16px;
 }
-.footer .foot_bar_inner .accenture img {
-    width: 80px;
-    height: 33px;
-    margin: 10px 0;
-    text-align: left;
-}
-.footer .foot_bar_inner .labo {
-    display: block;
-    float: left;
-}
-.footer .foot_bar_inner .labo img {
+.footer .foot_bar_inner .three_center img {
     width: auto;
     height: 33px;
     margin: 10px 0;
     text-align: left;
 }
-.footer .foot_bar_inner img.open_yokohama {
+.footer .foot_bar_inner .three_left {
+    display: block;
+    float: left;
+}
+.footer .foot_bar_inner .three_left img {
+    width: auto;
+    height: 33px;
+    margin: 10px 0;
+    text-align: left;
+}
+.footer .foot_bar_inner img.three_right {
     width: auto;
     height: 33px;
     margin: 10px 0;
@@ -2182,7 +2182,7 @@ div.widget.project div.image div.tagmark {
     letter-spacing: 1px;
     margin-top: 8px;
     line-height: 32px;
-    padding: 1px 0px 0px 30px;
+    padding: 1px 0 0 30px;
 }
 
 div.widget.project div.image div.tagmark.green {
@@ -2268,7 +2268,7 @@ div.widget.project div.image div.categories {
 div.widget.project > .title {
     font-size: 14px !important;
     /*height: 2em;*/
-    padding: 0px !important;
+    padding: 0 !important;
     margin: 10px !important;
 }
 
@@ -2299,7 +2299,7 @@ div.widget.project.balloon > .title a {
 }
 
 div.widget.project > .author {
-    padding: 2px 0px 0px 12px;
+    padding: 2px 0 0 12px;
     overflow:hidden;
 }
 
@@ -2386,7 +2386,7 @@ div.widget.project div.meter.active div.graph > div {
 div.widget.project div.meter.active div.graph {
     background: none !important;
     border: none !important;
-    margin: 0px 5px 116px;
+    margin: 0 5px 116px;
 }
 div.widget.project div.meter.active h3.title.obtained,
 div.widget.project div.meter.active div.obtained {
@@ -2734,7 +2734,7 @@ body.home div#main div.learn ul.slderpag li {
     display: block;
     float: left;
     overflow: hidden;
-    margin: 0px 4px 5px 4px;
+    margin: 0 4px 5px 4px;
 }
 
 body.home div#main div.learn ul.slderpag li a {
@@ -3426,7 +3426,7 @@ div.superform div.elements > ol > li.element.slider > div.contents > ul > li > l
 }
 
 div.superform div.elements > ol > li.element.radio {
-    padding: 0px !important;
+    padding: 0 !important;
 }
 
 
@@ -3592,8 +3592,8 @@ div.superform button.image-remove {
     background: url("/view/css/button/cross.png") no-repeat center center !important;
     width: 20px;
     height: 20px;
-    padding: 0px !important;
-    margin: 0px 10px 0px 0px !important;
+    padding: 0 !important;
+    margin: 0 10px 0 0 !important;
 }
 
 div.superform button.image-remove:hover {
@@ -3792,7 +3792,7 @@ body.admin div#main div.admin-side {
 
 body.admin div#main div.admin-menu {
     width: 140px;
-    margin: 0px 10px 0px 0px;
+    margin: 0 10px 0 0px;
 }
 
 body.admin div#main div.admin-menu fieldset {
@@ -3812,7 +3812,7 @@ body.admin div#main div.admin-menu ul {
 
 body.admin div#main div.admin-menu ul li {
     background-color: white;
-    padding: 0px 3px;
+    padding: 0 3px;
     margin-bottom: 1px;
 }
 
@@ -3935,7 +3935,7 @@ body.project-edit div#main.profile div.superform li.element.user_avatar ol {
 
 body.project-edit div#main.profile div.superform li.element.user_avatar li.element.avatar-image {
     padding: 0 2em;
-    margin: 0px !important;
+    margin: 0 !important;
 }
 
 body.project-edit div#main.profile div.superform li.element.user_avatar li.element.avatar img {
@@ -4040,7 +4040,7 @@ body.dashboard div#main div.status {
     float: left;
     color: #bcbdbd;
     border: none !important;
-    padding: 0px !important;
+    padding: 0 !important;
     margin-right: 20px;
 }
 
@@ -4616,8 +4616,8 @@ body.dashboard div#main div.widget.gestrew div.reward span.num{font-size:12pt;}
 body.dashboard div#main div.widget.gestrew div.reward span.aporte > span.euro{ background:url('/view/css/yen/violet/m.png') no-repeat; height:20px; width:20px;display:inline-block;}
 body.dashboard div#main div.widget.gestrew div.reward span.cofinanciadores{color:#40509F;display:block;text-transform:uppercase;margin-left:29px;font-size:8pt;line-height:20px;}
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec{display:block;border-bottom:#8D878E 1px solid;margin-bottom:5px;}
-body.dashboard div#main div.widget.gestrew div.reward ul { list-style: none outside none; padding:0px; margin: 0px 0px 3px 0px; float:none; font-size:12px; }
-body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li { background:none no-repeat scroll 0px 0px transparent; padding: 0px 0px 0px 29px; min-height: 34px; }
+body.dashboard div#main div.widget.gestrew div.reward ul { list-style: none outside none; padding:0px; margin: 0 0 3px 0px; float:none; font-size:12px; }
+body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li { background:none no-repeat scroll 0 0 transparent; padding: 0 0 0 29px; min-height: 34px; }
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.file { background-image: url('/view/css/icon/s/food.png'); }
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.file { background-image: url('/view/css/icon/s/file.png'); }
 body.dashboard div#main div.widget.gestrew div.reward div.tiporec ul li.money { background-image: url('/view/css/icon/s/money.png'); }
@@ -4929,7 +4929,7 @@ div.center div#prjct-gallery  ul.slderpag li {
     display: block;
     float: left;
     overflow: hidden;
-    margin: 0px 4px 5px 4px;
+    margin: 0 4px 5px 4px;
 }
 
 div.widget.project-summary div#prjct-gallery  ul.slderpag li a,
@@ -5276,7 +5276,7 @@ div.widget.project-support div.tagmark {
     text-transform: uppercase;
     width: 235px;
     height: 40px;
-    padding: 0 30px 0px 38px;
+    padding: 0 30px 0 38px;
     font-style: normal;
     letter-spacing: 1px;
     line-height: 40px;
@@ -6006,8 +6006,8 @@ div.widget.project-supporters .supporters ul li h6 a {
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;　
-padding: 10px 10px 10px 70px;
+    bottom: 0;
+    padding: 10px 10px 10px 70px;
     z-index: 9999;
     display: block;
 }
@@ -6146,7 +6146,7 @@ div.widget.project-supporters .supporters ul li dl dd.worthcracy ul li > strong 
 }
 
 div.widget.project-supporters ul#pagination {
-    margin: 10px 0px 0px 0px !important;
+    margin: 10px 0 0 0 !important;
     clear: both;
 }
 
@@ -6532,7 +6532,7 @@ div.widget.project-rewards div.individual ul li.money h4.name {
 
 div.widget.project-rewards > div.individual ul li div.amount span.euro,
 #rewards-summary > div.individual ul li div.amount span.euro {
-    margin: 0px 0px 0px 2px;
+    margin: 0 0 0 2px;
     display: inline-block;
     background-color: #e7e7e7;
     border-right: #e7e7e7 solid 5px;
@@ -7300,7 +7300,7 @@ div.post-comments div.message blockquote {
 }
 
 .project-updates ul#pagination {
-    margin: 0px 0px 10px 0px !important;
+    margin: 0 0 10px 0 !important;
 }
 
 /* escribe tu comentario */
@@ -7711,7 +7711,7 @@ div.widget.project-invest div.individual ul li label input[type="checkbox"] + sp
     display: block;
     width:12px;
     height:12px;
-    background: url("checkbox.png") no-repeat scroll 0 0px transparent;
+    background: url("checkbox.png") no-repeat scroll 0 0 transparent;
     position: absolute;
     margin-top: -15px;
 }
@@ -7721,7 +7721,7 @@ div.widget.project-invest div.individual ul li label input[type="checkbox"]:chec
 }
 
 div.widget.project-invest div.individual ul li.disabled label input[type="checkbox"] + span.chkbox {
-    background: url("/view/css/project/widget/checkbox_disabled.png") no-repeat scroll 0 0px transparent;
+    background: url("/view/css/project/widget/checkbox_disabled.png") no-repeat scroll 0 0 transparent;
 }
 
 div.widget.project-invest p label input[type="checkbox"] {
@@ -7737,7 +7737,7 @@ div.widget.project-invest p label input[type="checkbox"] + span.chkbox {
     display: block;
     width:12px;
     height:12px;
-    background: url("/view/css/project/widget/checkbox_disabled.png") no-repeat scroll 0 0px transparent;
+    background: url("/view/css/project/widget/checkbox_disabled.png") no-repeat scroll 0 0 transparent;
     position: absolute;
     margin-top: -15px;
 }
@@ -8884,7 +8884,7 @@ body.user-login .sign-in-with {
 .sign-in-with > li a {
     padding: 3px 22px 3px 30px;
     text-decoration: none;
-    background: transparent no-repeat 0px 0px;
+    background: transparent no-repeat 0 0px;
     line-height: 22px;
     font-size: 12px;
 }
@@ -10137,7 +10137,7 @@ div.center div.widget.user-message button{float:right;margin-right:8px;}
 
 /*widget スマホ*/
 body.user-profile div#main div.discover-group div.widget.project {
-    margin: 0 auto 0px !important;
+    margin: 0 auto 0 !important;
     border: none;
 }
 
@@ -10213,7 +10213,7 @@ body.community.about div#main div.center div.widget.user-mates .users ul li span
     float:left;
 }
 #glossary-content h3.title {
-    margin: 0px 0px 20px;
+    margin: 0 0 20px;
     padding: 15px 0 10px 30px;
     background: white url('arrowH2-section.gif') no-repeat scroll -5px -2px;
     font-size: 16px;
@@ -10223,11 +10223,11 @@ body.community.about div#main div.center div.widget.user-mates .users ul li span
     background-color: white;
     margin-bottom: 20px;
     margin-top: -20px;
-    padding: 10px 0px 1px;
+    padding: 10px 0 1px;
 }
 #glossary-content h4.supertitle {
     font-size: 16px;
-    margin: 0px 30px;
+    margin: 0 30px;
     border-bottom: 1px solid black;
     font-weight: bold;
     padding-bottom: 5px;
@@ -10345,7 +10345,7 @@ div.widget.faq-sidebar-module {
 }
 div.widget.faq-content-module ol li a.up{
     margin-left: -15px !important;
-    margin-bottom: 0px !important;
+    margin-bottom: 0 !important;
 }
 div.widget.faq-sidebar-module .supertitle {
     border-bottom: 1px solid #58595b;
@@ -10377,7 +10377,7 @@ div.widget.faq-sidebar-module p.ask-content{
 }
 
 div.widget.faq-sidebar-module a.btn-ask{
-    margin: 12px 0px 0px 0px !important;
+    margin: 12px 0 0 0 !important;
     font-weight: bold;
     font-size: 16px;
 }
@@ -10507,7 +10507,7 @@ div.post-gallery  ul.slderpag li{
     display: block;
     float: left;
     overflow: hidden;
-    margin: 0px 4px 5px 4px;
+    margin: 0 4px 5px 4px;
 }
 
 div.post-gallery  ul.slderpag li a{
@@ -11097,7 +11097,7 @@ div.field {
     line-height: 18px;
 }
 #about-content .post {
-    margin: 0px 30px 10px;
+    margin: 0 30px 10px;
 }
 #about-content .post h4 {
     font: 20px "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
@@ -11703,7 +11703,7 @@ div.widget h3.title {
     background-color: #666666;
     font-weight: normal;
     margin: 0;
-    padding: 8px 20px;
+    /*padding: 8px 20px;*/
 }
 div.widget.project-collaborations h5.title{
     padding: 8px 0;
