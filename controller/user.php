@@ -68,7 +68,7 @@ namespace Goteo\Controller {
                 $password = $_POST['password'];
                 if (false !== ($user = (\Goteo\Model\User::login($username, $password)))) {
                     $_SESSION['user'] = $user;
-                    
+
                     // creamos una cookie
                     setcookie("goteo_user", $user->id, time() + 3600 * 24 * 365);
                     
@@ -88,6 +88,9 @@ namespace Goteo\Controller {
                         unset($_SESSION['jumpto']);
                         throw new Redirection($jumpto);
                     } elseif (isset($user->roles['admin']) || isset($user->roles['superadmin'])) {
+                        if(VIEW_PATH === 'view/m'){
+                            throw new Redirection('/dashboard');
+                        }
                         throw new Redirection('/admin');
                     } else {
                         throw new Redirection('/dashboard');
