@@ -1786,10 +1786,18 @@ div .inner
 	position:absolute;
 	top:24px;
 }
-
+.header .nav_wrapper 
+{
+	background-color:#0098c4;
+	height:60px;
+	margin:0 auto;
+	position:relative;
+	width:100%;
+	z-index:1;
+}
 .header .nav_wrapper .nav_inner
 {
-	background-color:#fff;
+	background-color:#0098c4;
 	height:60px;
 	margin:0 auto;
 	position:relative;
@@ -1903,7 +1911,7 @@ table#font_box td.active
 
 .header .nav_wrapper ul li
 {
-	background-color:#fff;
+	background-color:#0098c4;
 	color:#000;
 	float:left;
 	line-height:1.6em;
@@ -1928,6 +1936,7 @@ table#font_box td.active
 	font-size:16px;
 	line-height:60px;
 	text-align:center;
+	color: #fff;
 }
 
 .header .nav_wrapper ul li:last-child a
@@ -1935,9 +1944,15 @@ table#font_box td.active
 	border-right:none;
 }
 
-.header .nav_wrapper ul li:hover,.header .nav_wrapper ul li.active
+.header .nav_wrapper ul li:hover,
+.header .nav_wrapper ul li.active
 {
-	background-color:#dae121;
+	background-color: #dae121;
+}
+.header .nav_wrapper ul li:hover > a,
+.header .nav_wrapper ul li.active > a
+{
+    color:#000;
 }
 
 .header .nav_wrapper ul li span
@@ -2099,7 +2114,21 @@ body.post-type-archive-data .header .inner
 	margin-top:14px;
 }
 
-.footer .foot_bar_inner .accenture
+.footer .foot_bar_inner .three_left
+{
+    display:block;
+    float:left;
+}
+
+.footer .foot_bar_inner .three_left img
+{
+    height:40px;
+    margin:10px 0;
+    text-align:left;
+    width:auto;
+}
+
+.footer .foot_bar_inner .three_center
 {
 	display:block;
 	float:left;
@@ -2107,27 +2136,13 @@ body.post-type-archive-data .header .inner
 	width:100px;
 }
 
-.footer .foot_bar_inner .accenture img
+.footer .foot_bar_inner .three_center img
 {
 	margin:14px 0 10px;
 	text-align:left;
 }
 
-.footer .foot_bar_inner .labo
-{
-	display:block;
-	float:left;
-}
-
-.footer .foot_bar_inner .labo img
-{
-	height:40px;
-	margin:10px 0;
-	text-align:left;
-	width:auto;
-}
-
-.footer .foot_bar_inner img.open_yokohama
+.footer .foot_bar_inner img.three_right
 {
 	height:50px;
 	line-height:40px;
@@ -4356,6 +4371,19 @@ body.admin div.admin-right.projects div.widget p
 {
 	margin:0 0 8px;
 }
+
+body.admin div.admin-right.mailing form dd {
+    margin-left: 0;
+}
+body.admin div.admin-right.mailing form #mail_content {
+    width: 740px;
+    padding: 4px;
+}
+
+body.admin div.admin-right.projects .board a {
+    padding-left: 20px;
+}
+
 
 /*----------------------------------------------------------------------
  dashboard/profile/profile.css
@@ -8612,13 +8640,13 @@ div.side div.widget.user dl dd
 {
 	padding-bottom:0;
     padding-top: 0;
-    height: 36px;
+    /*height: 36px;*/
     line-height: 36px;
 }
 
-div.side div.widget.user dl dd li {
+/*div.side div.widget.user dl dd li {
     line-height: 36px;
-}
+}*/
 
 div.widget.user dl dd.location
 {

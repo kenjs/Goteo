@@ -1856,7 +1856,7 @@ footer
 --------------------------------------------------*/
 .footer {
     background-color: #fff;
-    margin-top: 0;
+    margin-top: 30px;
 }
 
 .footer .footer_link_wrapper {
@@ -1911,9 +1911,10 @@ footer
 }
 
 .footer .copyright {
+    float: right;
     width: 100%;
     margin-top: 16px;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 24px;
     text-align: center;
     color: #666666;
@@ -1958,7 +1959,7 @@ footer
 .footer .platoniq a {
     text-decoration: none;
     color: #666666;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 
@@ -2014,6 +2015,7 @@ body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_
 /* dashboard navigation */
 body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_dashboard {
     width: 1008px;/* 117px(item width) * 4(item count) + 116px */
+    background-color: #3399cc;
 }
 body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_dashboard li.option {
     float: left;
@@ -2067,9 +2069,13 @@ body.page .static_page .content {
 --------------------------------------------------*/
 .mean-container .mean-bar,
 .mean-container .mean-nav {
-    background: none;
     z-index: 1;
+    background-color: #fff;
 }
+.mean-container .mean-bar {
+    padding-bottom: 3px;
+}
+
 .mean-container a.meanmenu-reveal {
     color: #0098c4;
 }
@@ -2088,7 +2094,7 @@ body.page .static_page .content {
 .mean-container .mean-nav ul li a.mean-expand {
     height: 26px;
     padding: 5px!important;
-    border-left: 1px solid rgba(0,0,0,.4)!important; 
+    border-left: 1px solid rgba(0,0,0,.4)!important;
 }
 .mean-container .mean-nav ul li a.mean-expand:hover {
     background-color: #e6e6e6;
@@ -2288,6 +2294,8 @@ div.widget.project.balloon > .title a {
     position:relative;
     z-index:99;
     line-height: 1.5em;
+    font-size: 18px;
+    color: #0098c4
 }
 
 div.widget.project > .author {
@@ -2710,7 +2718,9 @@ body.home div#main div.learn {
 body.home div#main div.widget.projects h3.title{
     margin-left:3px;
 }
-
+body.home div#main div.widget.projects h3.title a {
+    font-size: 18px;
+    color: #0098c4;}
 body.home div#main div.learn ul.slderpag {
     margin: 8px 0 0 0;
     list-style:none;
@@ -4386,26 +4396,32 @@ body.dashboard div#sub-header {
 body.dashboard div#sub-header div.dashboard-header h2,
 body div#sub-header div.dashboard-header h2
 {
-    padding-left: 6px;
-    line-height: 60px;
+    display: table;
+    float: left;
+    width: 77%;
+    height: 56px;
+    padding-left: 5%;
 }
 body.dashboard div#sub-header div.dashboard-header h2 span,
 body div#sub-header div.dashboard-header h2 span.leave
 {
+    display: table-cell;
     font-size: 18px;
     font-weight: bold;
     color: #666666;
+    vertical-align: middle;
+    line-height: 22px;
 }
 
 body.dashboard div#sub-header img{
     float: left;
-    margin-right: 20px;
+    /*margin-right: 20px;*/
 }
 
 body.dashboard div#dashboard-menu {
     display: block;
     font-size: 13px;
-    background-color: #3399cc;
+    /*background-color: #3399cc;*/
 }
 
 body.dashboard div#dashboard-menu ul {
@@ -4816,11 +4832,10 @@ div.widget.project-summary h8 {
 
 /* for project-home h3 */
 body.project-show div#main div.center div.widget.project-summary.h_ttl {
-    /*padding: 20px 16px;*/
     border-bottom: none;
 }
 body.project-show div#main div.center div.widget.project-summary.h_ttl h3 {
-    margin: 0 0 4px 0;
+    margin: 0 0 8px 0;
     font-size: 18px;
     color: #0098c4;
 }
@@ -4831,9 +4846,9 @@ body.project-show div#main div.center div.widget.project-summary.h_ttl .categori
 body.project-show div#main div.center div.widget.project-summary.h_ttl .categories > a {
     font-size: 11px;
 }
-body.project-show div#main div.center div.widget.project-summary.h_ttl .project-subtitle {
+/*body.project-show div#main div.center div.widget.project-summary.h_ttl .project-subtitle {
     margin: 0 0 1em 1em;
-}
+}*/
 body.project-show div#main div.center div.widget.project-summary.h_ttl .wants-skills {
     margin-bottom: 8px;
 }
@@ -4981,14 +4996,14 @@ div.center div#prjct-gallery a.next:hover {
 div.widget.project-summary div.project-motivation-video {
     margin: 10px auto 0;
     padding: 0;
-    width: 312px !important;
+    /*width: 312px !important;*/
     height: 200px;
 }
 
 div.widget.project-media > iframe,
 div.widget.project-media > object,
 div.widget.project-media > embed {
-    width: 312px !important;
+    /*width: 312px !important;*/
     height: 200px !important;
 }
 
@@ -4998,9 +5013,9 @@ div.widget.project-media > embed {
 ----------------------------------------------------------------------*/
 div.widget.project-media {
     padding: 0 !important;
-    width: 312px !important;
-    min-width: 312px !important;
-    max-width: 312px !important;
+    /*width: 312px !important;*/
+    /*min-width: 312px !important;*/
+    /*max-width: 312px !important;*/
     height: 200px;
     margin-right: 0;
 }
@@ -5008,10 +5023,10 @@ div.widget.project-media {
 div.widget.project-media > iframe,
 div.widget.project-media > object,
 div.widget.project-media > embed {
-    min-width: 312px !important;
+    /*min-width: 312px !important;*/
     min-height: 200px !important;
-    width: 312px !important;
-    max-width: 312px !important;
+    /*width: 312px !important;*/
+    /*max-width: 312px !important;*/
     height: 200px !important;
 }
 
@@ -5148,7 +5163,7 @@ div.project-message form{
 
 div.project-message div#bocadillo{
     float: left;
-    width: 50px;
+    width: 34px;
     height: 50px;
     margin-top: 8px;
     background:url('/view/css/bocadillo.jpg') no-repeat;
@@ -5156,6 +5171,7 @@ div.project-message div#bocadillo{
 
 div.project-message button{
     float:right;
+    width: 240px;
     margin-top: 6px;
     margin-bottom: 0;
     font-style: normal;
@@ -5166,7 +5182,7 @@ div.widget.project-message textarea {
     clear: right;
     display: block;
     float: right;
-    width: 250px;
+    width: 240px;
     height: 50px;
     margin-top: 8px;
     padding: 0.3em 0;
@@ -5204,7 +5220,6 @@ div.widget.project-message .button {
 /* Detalle de la linea roja (y otras cosillas) en el supertitle del termometro*/
 div.widget.project-support h4.supertitle {
     background-color: #3399cc;
-    font-size: 15px;
 }
 
 div.widget.project-support dl dd.days strong,
@@ -5314,7 +5329,7 @@ body.project-show div#main > div.center > div.widget.project-needs {
 }
 
 div.widget.project-needs p.click{
-    margin-bottom: 0;
+    margin-bottom: 8px;
     padding-left: 1em;
     padding-bottom: 8px;
     border-bottom: 2px solid #C1C1C1;
@@ -5323,9 +5338,13 @@ div.widget.project-needs p.click{
 div.widget.project-needs p.click span.text {
     padding: 0;
     margin: 3px 0 0 10px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: normal;
     clear:left;
+}
+
+.center div.widget.project-needs p.click span.text {
+    margin-left: 0;
 }
 
 div.widget.project-needs .summary {
@@ -5363,16 +5382,17 @@ div.widget.project-needs dd.max {
 div.widget.project-needs dd.min {
     color: #cc9900;
 }
-
+div.widget.project-needs dd.max {
+    color: #6699cc;
+}
 div.widget.project-needs .req {
     background:#e3eadc;
-    padding: 16px 0;
 }
-
+div.widget.project-needs .req,
 div.widget.project-needs .noreq {
-    padding: 16px 0;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
-
 div.widget.project-needs #legend .min,
 div.widget.project-needs #legend .max {
     float: left;
@@ -5382,23 +5402,24 @@ div.widget.project-needs #legend .max {
 div.widget.project-needs #legend dt.min,
 div.widget.project-needs #legend dt.max {
     display: inline-block;
+    width: 60px;
     margin-right: 4px;
     font-size: 10px;
+    line-height: 32px;
 }
+
 div.widget.project-needs #legend dt.min {
     color: #cc6600;
-    line-height: 32px;
 }
 div.widget.project-needs #legend dt.max {
     color: #6699cc;
-    line-height: 33px;
 }
 div.widget.project-needs #legend dd.min,
 div.widget.project-needs #legend dd.max {
-    width: 90px;
+    width: 120px;
     margin: 0;
 }
-div.widget.project-needs #legend dd.min {
+div.widget.project-needs > #legend dd.min {
     margin-right: 16px;
 }
 div.widget.project-needs #legend dd.max {
@@ -5407,22 +5428,43 @@ div.widget.project-needs #legend dd.max {
 div.widget.project-needs #legend {
     overflow: hidden;
     margin: 0;
-    padding: 0 8px;
+    padding: 0 1em;
+}
+
+div.widget.project-needs .req #legend,
+div.widget.project-needs .noreq #legend {
+    width: 200px;
+    margin: 0 auto;
+}
+div.widget.project-needs .structure #legend dd.min {
+    margin-right: 0;
+}
+
+div.widget.project-needs .req #legend .min,
+div.widget.project-needs .req #legend .max,
+div.widget.project-needs .noreq #legend .min,
+div.widget.project-needs .noreq #legend .max {
+    height: 24px;
 }
 
 div.widget.project-needs h5.summary {
     margin: 0;
+    min-height: 32px;
     padding-left: 58px;
     background: no-repeat 16px 50%;
-    line-height: 32px;
-    font-size: 14px;
+    /*font-size: 14px;*/
 }
 
 div.widget.project-needs .task h5.summary {
+    display: table;
     margin: 0;
+    font-size: 18px;
     background-image: url('/view/css/icon/m/task.png');
 }
-
+div.widget.project-needs .task h5.summary span {
+    display: table-cell;
+    vertical-align: middle;
+}
 div.widget.project-needs .structure h5.summary {
     background-image: url('/view/css/icon/m/structure.png');
 }
@@ -5725,12 +5767,13 @@ body.project-show div#main.threecols div.widget.project-spread div.widget.projec
 /* Detalle de la linea verde */
 div.widget.project-collaborations h4.supertitle {
     background-color: #33cc99;
-    font-size: 15px;
 }
 
-div.widget.project-collaborations h3.title {
+div.widget.project-collaborations h5.title {
     margin-top: 0;
     margin-bottom: 0;
+    color: #58595b;
+    font-weight: bolder;
 }
 
 div.widget.project-collaborations ul {
@@ -5740,14 +5783,15 @@ div.widget.project-collaborations ul {
 }
 
 div.widget.project-collaborations ul li {
-    padding-left: 55px;
+    padding-left: 45px;
     background: none no-repeat left 5px;
     min-height: 32px;
     line-height: 32px;
 }
 
 div.widget.project-collaborations ul li > p {
-    margin:  0 0 1em;
+    margin:  0;
+    line-height: 1.7em;
 }
 
 div.widget.project-collaborations ul li.task {
@@ -5779,8 +5823,7 @@ div.widget.project-collaborations a.button {
     line-height: 50px;
 }
 
-body.project-show div#project-collaborations div.project-widget-box ul li.support.task p {
-    padding: 10px 0 0 0;
+body.project-show div#project-collaborations div.project-widget-box ul li p {
     background: none no-repeat left 5px;
     line-height: 1.7em;
     font-size: 13px;
@@ -5789,27 +5832,38 @@ body.project-show div#project-collaborations div.project-widget-box ul li.suppor
 body.project-show div#main div#project-collaborations .project-widget-box {
     background-color: #fff;
     border-bottom: 1px dashed #c0c0c0;
-    padding: 0 20px;
+}
+.side div#project-collaborations .project-widget-box {
+    padding: 20px 20px 0;
 }
 
 body.project-show div#main div.widget.project-collaborations div.project-widget-box ul {
     margin: 0;
-    padding: 0;
     list-style: none;
 }
-
+body.project-show div#main div.center div.widget.project-collaborations div.project-widget-box ul {
+    padding: 16px;
+}
 body.project-show div#main div.widget.project-collaborations div.project-widget-box ul li {
-    margin: 0 0 1em 0;
-    padding: 0;
+    margin-bottom: 24px;
     list-style: none;
-    line-height: 16px;
+    line-height: 32px;
 }
 body.project-show div#main div.widget.project-collaborations div.project-widget-box h6 {
-    margin: 0 0 1em;
+    display: table;
+    margin: 0 0 10px;
+    min-height: 32px;
     font-size: 14px;
-    padding: 7px 0 0 42px;
     font-weight: bold;
     text-transform: none;
+    line-height: 20px;
+}
+body.project-show div#main .side div.widget.project-collaborations div.project-widget-box h6 {
+    padding-left: 42px;
+}
+body.project-show div#main div.widget.project-collaborations div.project-widget-box h6 span {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 /*----------------------------------------------------------------------
@@ -5883,6 +5937,7 @@ div.widget.project-supporters .supporters ul {
     list-style: none;
     margin: -20px 0 0 0;
     padding: 0;
+    border-top: 1px dashed silver;
 }
 
 div.widget.project-supporters .supporters > ul > li {
@@ -5891,14 +5946,13 @@ div.widget.project-supporters .supporters > ul > li {
     width: 106px;
     height: 4.5em;
     position: relative;
-    border-top: 1px dashed #c0c0c0;
+    border-bottom: 1px dashed #c0c0c0;
     border-right: 1px dashed #c0c0c0;
 }
 div.widget.project-supporters .supporters > ul > li:nth-child(3n+3) {
     width: 106px;
     border-right: none;
 }
-
 div.widget.project-supporters .supporters ul li.active {
     background-color:  #f3f3f3;
 }
@@ -6326,7 +6380,7 @@ div.widget.project-investors .investors ul li dl dd.worthcracy ul li > strong {
 
 /* rediseño
 ************************/
-div.widget.project-supporters .supporters > ul > li {height:103px !important}
+div.widget.project-supporters .supporters > ul > li {height:100px !important}
 div.widget.project-supporters .supporters > ul > li > div.supporter h4{padding-bottom:3px;border-bottom:#D5D5D6 1px solid;overflow:hidden;margin-bottom:6px}
 div.widget.project-supporters .supporters > ul > li > div.supporter h4 > a{
     max-height: 6px;max-width: 175px;overflow: hidden;}
@@ -6382,8 +6436,8 @@ div.widget.project-rewards div.individual,
     background-color: #fff;
 }
 
-div.widget.project-invest div.social h4.title,
-div.widget.project-rewards div.social h4.title,
+div.widget.project-invest div.social h5.title,
+div.widget.project-rewards div.social h5.title,
 #rewards-summary div.social h4.title {
     margin-top: 8px;
     color: #28b258 !important;
@@ -6422,10 +6476,11 @@ div.widget.project-rewards > div.social ul li.active,
     background-color: #d5ebd7;
 }
 
-div.widget.project-invest div.individual h4.title,
-div.widget.project-rewards div.individual h4.title,
+div.widget.project-invest div.individual h5.title,
+div.widget.project-rewards div.individual h5.title,
 #rewards-summary div.individual h4.title {
     color: #96238F !important;
+    margin: 8px 0 0;
 }
 
 div.widget.project-invest > div.individual ul li,
@@ -6537,13 +6592,13 @@ div.widget.project-rewards ul li {
     padding: 10px 10px 0 60px;
 }
 
-div.widget.project-rewards ul li h6 {
+/*div.widget.project-rewards ul li h6 {
     margin: 0 0 1em;
     font-size: 14px;
     padding: 7px 0 0 42px;
     font-weight: bold;
     text-transform: none;
-}
+}*/
 
 #rewards-summary ul li,
 #rewards-summary ul li.file .name {
@@ -6560,7 +6615,7 @@ div.widget.project-rewards ul li > p,
 div.widget.project-invest ul li > .name,
 div.widget.project-rewards ul li > .name,
 #rewards-summary div.social ul li.file h5.name {
-    margin: 0 0 1em;
+    margin: 0 0 .4em;
     font-size: 13px;
     font-weight: bold;
     text-transform: none;
@@ -6717,7 +6772,6 @@ div.widget.project-invest ul li div.license  p,
 div.widget.project-rewards ul li div.license  p,
 #rewards-summary ul li div.license  p {
     margin: .2em 0;
-    font-size: 12px;
 }
 
 div.widget.project-invest ul li div.license.agpl > a strong,
@@ -6882,13 +6936,13 @@ div.widget.project-rewards div.project-widget-box div > ul > li:last-child {
 
 body.project-show div#main div#project-collaborations .project-widget-box {
     background-color: #fff;
-    padding: 20px;
 }
 
 body.project-show div#main div.widget.project-rewards .project-widget-box{
     padding: 0px;
     background-color: #fff;
 }
+
 
 
 body.project-show div#main div.widget.project-rewards div.social {
@@ -6905,7 +6959,6 @@ body.project-show div#main div.widget.project-rewards div.social ul li {
 div.widget.project-rewards div.individual ul li div.amount {
     margin-left: 43px;
     font-weight: bold;
-    height: 25px;
 }
 
 div.widget.project-rewards div.individual ul li div.buttons {
@@ -6915,7 +6968,21 @@ div.widget.project-rewards div.individual ul li div.buttons .violet {
     line-height: 2.5em;
 }
 
-body.project-show div#main div.widget.project-rewards ul li h4{
+.side div.widget.project-rewards div.individual ul li div.buttons {
+    width: 100%;
+}
+.side div.widget.project-rewards a.button {
+    background: linear-gradient(to bottom, #f2bb67 0%,#ff9900 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2bb67', endColorstr='#ff9900',GradientType=0 );
+    font-size: 14px;
+    width: 182px;
+    padding-left: 8px!important;
+    padding-right: 8px!important;
+    margin: 10px auto;
+    display: block;
+}
+
+body.project-show div#main div.widget.project-rewards ul li h6{
     font-size: 14px;
 }
 
@@ -6936,7 +7003,7 @@ body.project-show div#main div.widget.project-rewards div.project-widget-box ul 
 ----------------------------------------------------------------------*/
 div.project-messages div.message {
     background: #e7e7e7 url('/view/css/message/beak/1.png') no-repeat left top;
-    margin-left: 60px;
+    margin-left: 50px;
     overflow: visible;
     position: relative;
     padding: .8em 1em .5em 1.5em;
@@ -6944,7 +7011,7 @@ div.project-messages div.message {
 
 div.project-messages div.child{
     background: #e7e7e7 url('/view/css/message/beak/1.png') no-repeat left top;
-    margin-left: 130px;
+    margin-left: 90px;
     padding: .8em 1em .8em 1.5em;
     overflow: visible;
     position: relative;
@@ -6963,11 +7030,12 @@ div.project-messages div.child {
 div.project-messages div.message .avatar,
 div.project-messages div.child .avatar {
     position: absolute;
-    left: -60px;
+    left: -50px;
     top: 0;
     display: block;
     width: 50px;
     height: 50px;
+    text-align: right;
 }
 
 div.project-messages div.message .user,
@@ -7020,13 +7088,13 @@ div.widget.project-message form {
 }
 
 body.project-show div.widget.project-message form {
-    padding: 0 8px 8px;
+    padding: 16px;
 }
 
 div.project-messages div#project-messages {
-    width: 304px;
-    margin-left: 8px;
-    padding: 8px 0;
+    /*width: 304px;*/
+    /*margin-left: 8px;*/
+    padding: 16px;
 }
 
 
@@ -7073,7 +7141,7 @@ div.widget.project-updates > div {
     margin: 0 0 20px;
 }
 .project-updates .post h4 a {
-    font: bold 18px Helvetica, Arial, Geneva, sans-serif;
+    font-size: 15px;
     margin: 0 0 5px 0;
     text-transform:none;
     color:#535353;
@@ -7277,7 +7345,7 @@ body.project-show .project-updates {
 }
 
 body.project-show .project-updates p {
-    padding: 10px;
+    padding: 16px;
 }
 
 body.project-show div#main .project-updates .post {
@@ -8046,8 +8114,9 @@ body.project-show div#main div.widget {
     margin-bottom: 20px;
 }
 
-body.project-show div#main div.widget.project-support {
+body.project-show div#main div.widget.pr.oject-support {
     border-top: none!important;
+    background-color: #fff;
 }
 
 body.project-show div#main > div.side > div.widget {
@@ -8238,7 +8307,9 @@ div#project-collaborations .project-widget-box h3.title {
 div#project-collaborations .project-widget-box ul li p {
     font-size: 12px;
 }
-
+div.side div#project-collaborations .project-widget-box ul li p {
+    padding-bottom: 16px;
+}
 div.widget.project-support {
     position: relative;
 }
@@ -8290,10 +8361,11 @@ body.project-show .widget.user.collapsable .project-widget-box .image {
     left:16px;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 body.project-show .widget.user.collapsable .project-widget-box .image img {
-    width: 100%;
+    width: auto;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -8386,9 +8458,9 @@ body.project-edit div#sub-header div.project-header{
 
 body.project-edit div#sub-header img{
     float: left;
-    margin-right: 20px;
+    /*margin-right: 20px;
     padding-top: 2px;
-    padding-left: 2px;
+    padding-left: 2px;*/
 }
 
 body.project-edit div#sub-header div.project-subtitle {
@@ -9196,9 +9268,11 @@ div.widget.user-worthcracy h3.title {
 /*for activity*/
 body.dashboard.project-edit .summary div.widget.projects h2.title {
     margin: 0;
-    padding: 16px 16px;
+    padding: 8px 0 8px 20px;
     color: #f5f5f5;
     background-color: #666666;
+    font-weight: normal;
+    line-height: 22px;
 }
 
 
@@ -9212,7 +9286,7 @@ div.widget.user-about {
 
 div.widget.user-about > div {
     border-top: 1px dashed #c0c0c0;
-    padding: 16px 8px 0;
+    padding: 16px 16px 0;
     clear: both;
 }
 
@@ -10958,7 +11032,20 @@ a.discover-arrow {
     display: inline-block;
     vertical-align: middle;
 }
-
+.widget.projects .discover-group .image {
+    margin-bottom: 0;
+}
+.widget.projects .discover-group h3.title {
+    margin: 0!important;
+    padding: 16px 16px 0!important;
+}
+.widget.projects .discover-group h3.title a {
+    font-size: 18px;
+    color: #0098c4;
+}
+.widget.projects .discover-group h3.ronda {
+    padding-top: 0!important;
+}
 
 /*----------------------------------------------------------------------
   tipsy/tipsy.css
@@ -11355,7 +11442,7 @@ div.widget.project div.meter.activable {
     max-width: 288px;
 }
 div.widget.project div.meter {
-    padding: 4px 0 128px !important;
+    padding: 4px 0 148px !important;
     position: relative;
     height: 20px;
 }
@@ -11521,7 +11608,9 @@ div.widget.project-support div.graph {
     margin: 24px 0 0;
     position: relative;
 }
-
+div.center div.widget.project-support div.graph {
+    margin-top: 0;
+}
 div.widget.project div.meter div.graph .optimum,
 div.widget.project-support div.graph > div.optimum {
     height: 19px;
@@ -11610,20 +11699,23 @@ div.widget .supertitle {
 /* heading tag */
 div.widget.project-needs h4,
 div.widget h3.title {
-    margin: 0;
-    padding: 8px 20px;
     color: #f5f5f5;
     background-color: #666666;
     font-weight: normal;
+    margin: 0;
+    padding: 8px 20px;
+}
+div.widget.project-collaborations h5.title{
+    padding: 8px 0;
 }
 div.widget .title{
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
     padding-left: 6px;
     text-decoration: none;
 }
 div.side div.widget h3.title,
-div.side div.widget h4.title{
+div.side div.widget h5.title{
     padding-left: 0;
 }
 
@@ -11708,7 +11800,7 @@ div.side div.widget.project-rewards ul li {
     padding-left: 0;
 }
 div.side div.widget.project-collaborations ul li strong,
-div.side div.widget.project-rewards h4.name {
+div.side div.widget.project-rewards h6.name {
     padding-left: 42px;
     min-height: 33px;
 }
