@@ -31,7 +31,7 @@ $projects = Goteo\Model\Project::published("available");
 
         ?>
 
-        <?php echo new View('view/project/widget/project.html.php', array(
+        <?php echo new View('view/m/project/widget/project.html.php', array(
         'project' => $project
     )) ?>
 
