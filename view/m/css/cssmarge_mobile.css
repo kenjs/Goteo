@@ -1920,28 +1920,28 @@ footer
     color: #666666;
 }
 
-.footer .foot_bar_inner .accenture {
+.footer .foot_bar_inner .three_center {
     display: block;
     float: left;
     margin-left: 16px;
 }
-.footer .foot_bar_inner .accenture img {
-    width: 80px;
-    height: 33px;
-    margin: 10px 0;
-    text-align: left;
-}
-.footer .foot_bar_inner .labo {
-    display: block;
-    float: left;
-}
-.footer .foot_bar_inner .labo img {
+.footer .foot_bar_inner .three_center img {
     width: auto;
     height: 33px;
     margin: 10px 0;
     text-align: left;
 }
-.footer .foot_bar_inner img.open_yokohama {
+.footer .foot_bar_inner .three_left {
+    display: block;
+    float: left;
+}
+.footer .foot_bar_inner .three_left img {
+    width: auto;
+    height: 33px;
+    margin: 10px 0;
+    text-align: left;
+}
+.footer .foot_bar_inner img.three_right {
     width: auto;
     height: 33px;
     margin: 10px 0;
