@@ -151,7 +151,8 @@ if ($step == 'start') : ?>
 
 
 <div class="widget project-invest method">
-    <h<?php echo $level ?> class="beak"><?php echo Text::get('project-invest-continue') ?></h<?php echo $level ?>>
+    <h<?php echo $level ?> class="beak"><?php echo Text::get('project-invest-continue') ?>
+    <p style="color:#ff3300;margin-bottom: 0;">*注意<br />クレジットカードの決済システム上、次ページからの決済申込フォームでは料金が「￥0」と表示されますが、そのまま決済を進めていただくと正常に処理されますのでご安心ください。</p></h<?php echo $level ?>>
             
 <input type="hidden" id="paymethod"  />
 

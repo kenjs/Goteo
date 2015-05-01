@@ -104,12 +104,27 @@ $blog_post = strpos($ogmeta['url'], '/updates');
         <? $_blog = Post::get($this['post'], LANG);
         $blog_post = $this['blog'];
         $blog_key = key($this['blog']->posts);
+        if($_blog->image):
+            ?>
+            <meta property="og:image" content="<?php echo $_blog->image->getLink(500, 285) ?>" />
+            <?
+        else:
+            if (is_array($ogmeta['image'])) :
+                foreach ($ogmeta['image'] as $ogimg) : ?>
+                    <meta property="og:image" content="<?php echo $ogimg ?>" />
+                    <?php
+                endforeach;
+            else :
+                ?>
+                <meta property="og:image" content="<?php echo $ogmeta['image'] ?>" />
+                <?php
+            endif;
+        endif;
         ?>
         <meta property="og:title" content="<?php echo $blog_post->posts[$blog_key]->title . ' / ' . $ogmeta['title']; ?>" />
         <meta property="og:type" content="article" />
         <meta property="og:site_name" content="<?php echo $ogmeta['title'] ?>" />
         <meta property="og:description" content="<?php echo mb_substr($blog_post->posts[$blog_key]->text, 0, 100).'...'; ?>" />
-        <meta property="og:image" content="<?php echo SITE_URL . '/data/cache/' . $_blog->image->name ?>" />
         <meta property="og:url" content="<?php echo htmlspecialchars($ogmeta['url']) ?>" />
         <meta property="og:locale" content="ja_JP" />
         <meta property="fb:app_id" content="<?= OAUTH_FACEBOOK_ID ?>" />
