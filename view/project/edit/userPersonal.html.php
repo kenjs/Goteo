@@ -170,7 +170,7 @@ echo new SuperForm(array(
 
                 'contract_birthdate'  => array(
                     'type'      => 'datebox',
-//                    'required'  => true,
+                    'required'  => false,
                     'size'      => 8,
                     'title'     => Text::get('personal-field-contract_birthdate'),
 //                    'hint'      => Text::get('tooltip-project-contract_birthdate'),

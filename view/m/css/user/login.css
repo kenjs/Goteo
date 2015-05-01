@@ -23,23 +23,24 @@ body.user-login div#main > div {
 
 body.user-login div#main > div > * {
     padding: 20px 20px 15px;
-    background-color: white;
+    /*background-color: white;*/
 	margin: 0 0 15px;
 }
 
 body.user-login div#main > div h2 {
-    margin: 0 0 2em;
+    margin: 0 0 1em;
     font-size: 14px;
     font-weight: bold;
 }
 
 
 body.user-login div#main div.external-login {
-	width: 40%;
+	width: 100%;
 }
 
 body.user-login div#main div.external-login  {
-    padding: 0 20px;
+    padding: 0;
+    background-color: #fff;
 }
 
 body.user-login div#main > div form > div {
@@ -185,5 +186,69 @@ body.user-login .sign-in-with {
 
 .login > div a:hover {
 	color: #20B3B2;
+}
+
+
+/*20150408*/
+
+
+.register {
+    background-color: #fff;
+}
+
+body.user-login div#main .login {
+    /*border-top: 1px dashed #c0c0c0;*/
+    background-color: #fff;
+    margin: 20px 0;
+    padding-bottom: 20px;
+}
+
+body.user-login div#main .login p a {
+    float: none;
+    display: block;
+    text-align: center;
+    margin: 0 auto 0;
+    padding: 0;
+}
+
+body.user-login div#main .login form {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+body.user-login div#main .login form .password {
+    margin: 0 auto 20px;
+}
+
+body.user-login div#main .login form input {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+}
+
+body.user-login div#main .login form input[type="submit"], input[type="reset"], button, a.button {
+    margin: 0 0 20px 0;
+    width: 100%;
+    padding: 0;
+}
+
+body.user-login div#main > div > * {
+    padding: 0;
+    margin: 0;
+}
+
+body.user-login div#main h2 {
+    background-color: #ff9933;
+    font-weight: normal;
+    font-size: 16px;
+    height: 40px;
+    padding: 0;
+    margin: 0 0 20px 0;
+    border-bottom: none;
+    line-height: 40px;
+    color: #ffffff;
+    text-align: center;
 }
 

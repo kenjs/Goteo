@@ -1,22 +1,3 @@
-/*
- *  Copyright (C) 2012 Platoniq y Fundación Fuentes Abiertas (see README for details)
- *	This file is part of Goteo.
- *
- *  Goteo is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU Affero General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  Goteo is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU Affero General Public License for more details.
- *
- *  You should have received a copy of the GNU Affero General Public License
- *  along with Goteo.  If not, see <http://www.gnu.org/licenses/agpl.txt>.
- *
- */
-
 /**
  * Header
  */
@@ -283,101 +264,6 @@ div#sub-header > div > h2 .greenblue{
 }
 /* fin de lo del header verdeazulado */
 
-/* controles del carrusel de banners */
-/*.sliderbanners-ctrl {
-	max-width: 940px;
-	margin: 0 auto;
-	padding:0px;
-    display: block;
-}
-
-.sliderbanners-ctrl a.next,
-.sliderbanners-ctrl a.prev {
-    width: 16px;
-    height: 16px;
-	line-height: 2000px;
-	overflow: hidden;
-	float:left;
-	margin: 8px 0 0 0;
-	cursor:pointer;
-}
-
-.sliderbanners-ctrl a.prev {
-	background: url('small_arrowslider-sprt.png') scroll no-repeat 0 0;
-}
-
-.sliderbanners-ctrl a.prev:hover {
-	background: url('small_arrowslider-sprt.png') scroll no-repeat 0 -32px;
-}
-
-.sliderbanners-ctrl a.next{
-	background: url('small_arrowslider-sprt.png') scroll no-repeat 0 -16px;
-}
-
-.sliderbanners-ctrl a.next:hover {
-	background: url('small_arrowslider-sprt.png') scroll no-repeat 0 -48px;
-}
-
-.sliderbanners-ctrl ul.paginacion {
-	margin: 8px 0 0 0;
-	list-style:none;
-	padding:0px;
-	float:left;
-
-}
-
-.sliderbanners-ctrl ul li {
-	cursor:pointer;
-    display: block;
-    float: left;
-    overflow: hidden;
-	margin: 0px 4px 5px 4px;
-}
-
-.sliderbanners-ctrl li a {
-    width: 10px;
-    height: 12px;
-    margin-top: 2px;
-    background-color: #cdcdce;
-    color: #cdcdce;
-	display:block;
-}
-
-.sliderbanners-ctrl li a:hover {
-    background-color: #20b3b2;
-    color: #20b3b2;
-}
-
-.sliderbanners-ctrl li.current a {
-    background-color: #808184 !important;
-    color: #808184 !important;
-}
-
-.sliderbanners-ctrl li.prev,
-.sliderbanners-ctrl li.next {
-    width: 16px;
-    height: 16px;
-	line-height: 2000px;
-	overflow: hidden;
-}
-
-.sliderbanners-ctrl li.prev {
-	background: url('small_arrowslider-sprt.png') scroll no-repeat 0 0;
-}
-
-.sliderbanners-ctrl li.prev:hover {
-	background: url('small_arrowslider-sprt.png') scroll no-repeat 0 -32px;
-}
-
-.sliderbanners-ctrl li.next {
-	background: url('small_arrowslider-sprt.png') scroll no-repeat 0 -16px;
-}
-
-.sliderbanners-ctrl li.next:hover {
-	background: url('small_arrowslider-sprt.png') scroll no-repeat 0 -48px;
-}*/
-/* fin de los controlers del carrusel de banners*/
-
 /* subheader secundario  */
 div#sub-header-secondary > div > ul.share-goteo{
 	margin: 40px 9px 0 0;
@@ -415,57 +301,6 @@ div#sub-header-secondary > div > ul.share-goteo li.rss a{
 	text-decoration:none;
 }
 /* fin subheader secundario */
-
-div#header div#about {    
-    font-size: 12px;
-    height: 2.2em;
-    overflow: hidden;
-    position: relative;
-    z-index: 9;
-}
-
-div#header div#about ul {
-    margin: 0 auto;
-    max-width: 940px;
-    padding: 0;
-    list-style: none;
-    text-align: right;
-}
-
-div#header div#about ul li {
-    display: inline-block;
-    padding: 0 .5em 0 2em;
-    line-height: 2.2em;
-    height: 2.2em;
-    font-size: 12px;
-}
-
-div#header div#about ul li#lang{
-	background:url('bolita.png') 4px 7px no-repeat;
-	margin-left: 15px;
-    padding-right: 22px;
-    width: 24px;
-}
-
-div#header div#about ul li#lang.active{
-	background:url('bolita.png') 4px 7px no-repeat #808286;
-}
-
-div#header div#about ul li#lang a{
-	background: url('lang-triangulo.png') no-repeat scroll 100% bottom transparent;
-	padding-right: 10px;
-	cursor:default;
-}
-
-div#header div#about ul li#lang a:hover{
-	color:#fff}
-
-div#header div#about ul li > *:hover {
-    color: #8ed9d8;
-}
-
-
-/* fin del carrusel de micronoticias */
 
 /* menu y despelgable dashboard */
 div#header div#menu {
@@ -590,18 +425,18 @@ div#header div#menu > ul > li.search fieldset input[type="submit"]:hover {
     background-color: #8ed9d8;
 }
 
-div#header div#menu > ul > li.community ,
 div#header div#menu > ul > li.login ,
 div#header div#menu > ul > li.dashboard {
     height: 34px;
     position: relative;
-    background-color: #666666;
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
 }
+div#header div#menu > ul > li.login {
+    background-color: #666666;
+}
 
-div#header div#menu > ul > li.community,
 div#header div#menu > ul > li.dashboard {
     background: transparent url('header/down-black.png') no-repeat right 30px;
 }
@@ -619,7 +454,6 @@ div#header div#menu > ul > li.login fieldset > legend {
     display: inline-block;
 }
 
-div#header div#menu > ul > li.community > a,
 div#header div#menu > ul > li.login > a,
 div#header div#menu > ul > li.dashboard > a {
     padding: 2px 6px;
@@ -642,7 +476,6 @@ div#header div#menu > ul > li.login > a {
     -webkit-border-radius: 3px;
 }
 
-div#header div#menu > ul > li.community > a,
 div#header div#menu > ul > li.dashboard > a {
     width: 84px;
     padding-right:10px;

@@ -80,7 +80,7 @@ $lsuf = (LANG != 'es') ? '?lang='.LANG : '';
                 </div>
 
                 <?php foreach ($projects['items'] as $project) :
-                    echo new View('view/project/widget/project.html.php', array(
+                    echo new View('view/m/project/widget/project.html.php', array(
                         'project'   => $project,
                         'balloon' => '<h4>' . htmlspecialchars($this['status'][$project->status]) . '</h4>' .
                             '<blockquote>' . $waitfor[$project->status] . '</blockquote>',

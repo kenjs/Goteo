@@ -117,9 +117,9 @@ body.project-show div#main div.side div#project-collaborations .project-widget-b
 
 
 /* collaborations widget in project-menu'messages' */
-body.project-show div.center.messages div.project-collaborations {
+/*body.project-show div.center.messages div.project-collaborations {
     max-width: 580px;
-}
+}*/
 body.project-show div.center.messages div.project-collaborations ul li {
     margin-top: 20px;
     padding-bottom: 20px;

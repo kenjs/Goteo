@@ -39,5 +39,5 @@ $availables = $this['availables'];
     </select>
 </p>
 
-    <input type="submit" name="save" value="A&ntilde;adir" />
+    <input type="submit" name="save" value="<?php echo Text::get('form-add-button'); ?>" />
 </form>

@@ -1,19 +1,358 @@
-/*
- *  Copyright (C) 2012 Platoniq y Fundación Fuentes Abiertas (see README for details)
- *	This file is part of Goteo.
- *
- *  Goteo is free software: you can redistribute it and/or modify
- *  it under the terms of the GNU Affero General Public License as published by
- *  the Free Software Foundation, either version 3 of the License, or
- *  (at your option) any later version.
- *
- *  Goteo is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- *  GNU Affero General Public License for more details.
- *
- *  You should have received a copy of the GNU Affero General Public License
- *  along with Goteo.  If not, see <http://www.gnu.org/licenses/agpl.txt>.
- *
- */
-@import url('admin/view.css');
+body.admin div#main {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/**
+ * Menu
+*/
+
+body.admin div#sub-header {
+    padding-bottom: 10px;
+}
+
+body.admin div#sub-header div.breadcrumbs,
+body.admin div#sub-header div.breadcrumbs a {
+    color: #58595B;
+    font-size: 18px;
+}
+
+body.admin div#sub-header div.breadcrumbs a:hover {
+    color: #20B2B3;
+}
+
+body.admin div#sub-header div.breadcrumbs strong {
+    color: #20B2B3;
+}
+
+body.admin div#main div.admin-menu,
+body.admin div#main div.admin-home,
+body.admin div#main div.admin-side {
+    float: left;
+}
+body.admin div#main div.admin-right {
+    float: right;
+    width: 790px;
+}
+
+body.admin div#main div.admin-menu {
+    width: 160px;
+    margin: 0px 10px 0px 0px;
+}
+
+body.admin div#main div.admin-menu fieldset {
+    width: 144px;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    border: none;
+}
+
+body.admin div#main div.admin-menu fieldset legend {
+    display: block;
+    width: 144px;
+    padding: 8px;
+    font-weight: bold;
+    background-color: #20B2B3;
+    color: #ffffff;
+}
+
+body.admin div#main div.admin-menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+body.admin div#main div.admin-menu ul li {
+    background-color: white;
+    width: 160px;
+    margin-bottom: 1px;
+    padding: 0;
+}
+
+body.admin div#main div.admin-menu ul li a {
+    display: block;
+    padding: 4px 8px;
+    text-decoration: none;
+}
+
+body.admin div#main div.admin-menu ul li a:hover {
+    color: #20B2B3;
+}
+
+body.admin div#main div.widget {
+    margin-bottom: 10px;
+}
+
+body.admin div#main div.admin-side {
+    width: 300px;
+    margin-left: 10px;
+}
+
+body.admin div#main div.admin-home {
+    width: 440px;
+    margin-left: 0px;
+}
+
+
+body.admin div#main div.board ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 0;
+}
+
+body.admin div#main div.board ul li {
+    display: inline-block;
+    margin-right: 1px;
+}
+
+body.admin div#main div.board ul li a {
+    display: inline-block;
+    padding: .6em 2em .2em .6em;
+    color: black;
+    text-decoration: none;
+}
+
+body.admin div#main div.board ul li a:hover {
+    background-color: #c8babc;
+}
+
+body.admin div#main div.board a {
+    padding: .3em .2em .2em .3em;
+    color: grey;
+    text-decoration: none;
+}
+
+body.admin div#main div.board a:hover {
+    color: black;
+}
+
+body.admin div#main div.widget.report th,
+body.admin div#main div.widget.report td {
+    padding: 2px 10px;
+}
+
+
+/* Feed */
+/* lateral */
+body.admin div#main > div.admin-center > div.admin-side{width:300px}
+body.admin div#main > div.admin-center > div.admin-side > div.widget{margin-bottom:20px}
+body.admin div#main > div.admin-center > div.admin-side > div.widget.feed > div.scroll-pane{height:520px;}
+body.admin div#main > div.admin-center > div.admin-side > div.widget.feed h3{margin-top:0;padding-bottom:10px;border-bottom:1px solid #E95C5C}
+body.admin div#main > div.admin-center > div.admin-side > div.widget.feed > p.categories > a{margin-right:15px;font-size:12px !important;text-transform:uppercase;}
+body.admin div#main > div.admin-center > div.admin-side > div.widget.feed > div.scroll-pane div.subitem{width:230px;padding-left:5px}
+body.admin div#main > div.admin-center > div.admin-side > div.widget.feed div.subitem span.datepub{margin-bottom:5px}
+
+
+/* central */
+body.admin div#main > div.admin-center > div.widget.feed > p.categories > a{margin-right:15px;font-size:12px !important;text-transform:uppercase;}
+body.admin div#main > div.admin-center > div.widget.feed > div.scroll-pane{height:800px}
+body.admin div#main > div.admin-center > div.widget.feed div.subitem{padding-left:5px}
+body.admin div#main > div.admin-center > div.widget.feed div.subitem > span.datepub{float:left;width:100px;margin-right:10px;clear:none;line-height:1.2em}
+body.admin div#main > div.admin-center > div.widget.feed div.subitem > div.content-pub{float:left;width:600px;clear:none;margin-top:0;}
+
+/* Capando el superform */
+body.admin div#main div.admin-center div.superform {
+    float: left;
+    max-width: 750px;
+}
+
+body.admin div#main div.admin-center div.superform > div.elements {
+    border-right: none !important;
+    border-bottom: 1px dashed #B7C2C5;
+}
+
+body.admin div#main div.admin-center div.superform > div.elements > ol > li.element {
+    margin: 0 !important;
+}
+
+body.admin div#main div.admin-center div.superform div.elements > ol > li.required > .title,
+body.admin div#main div.admin-center div.superform div.elements > ol > li.busy > .title {
+    margin: 0 !important;
+    background: none !important;
+}
+
+/* Reestilando botones */
+/*body.admin div#main div.admin-center input[type="submit"],
+body.admin div#main div.admin-center a.button {
+    padding: 0.2em 0.4em !important;
+}*/
+
+/* textarea, under admin */
+body.admin div#main div.admin-center textarea {
+    width: 720px;
+}
+
+/* table style */
+body.admin div.widget.board > table {
+    border-spacing: 0;
+}
+body.admin div.widget.board > table th {
+    background-color: #666666;
+    color: #f5f5f5;
+}
+
+/*--------------------------------------------------
+Each page
+--------------------------------------------------*/
+/* common */
+body.admin div.admin-right > div.widget.board {
+    padding: 0;
+}
+body.admin div.admin-right > div.widget.board.shortcut{
+    padding: 15px 20px;
+}
+body.admin div.admin-right.home div.widget.board,
+body.admin div.admin-right div.widget.board form,
+body.admin div.admin-right > div.widget.board > a,
+body.admin div.admin-right > div.widget.board > p {
+    padding: 15px 20px;
+}
+body.admin div.admin-right div.widget.board > h3.title {
+    padding-left: 20px;
+}
+
+body.admin div.admin-right div.widget.board form table td {
+    border-bottom: none;
+}
+
+body.admin div.admin-right > div.widget.board table td {
+    padding: 8px;
+    border-bottom: 1px dotted #cccccc;
+}
+
+body.admin div.admin-right > div.widget.board table td p {
+    word-break: break-all;
+}
+
+body.admin div.admin-right div.widget.board textarea {
+    width: 500px;
+}
+body.admin div.admin-right div.widget h3.title,
+body.admin div.admin-right div.widget.board h4.title {
+    padding-left: 0;
+}
+
+/* licenses */
+body.admin div.admin-right.licenses div.widget.board > table th.license_name {
+    width: 150px;
+}
+body.admin div.admin-right.licenses div.widget.board > table th.tooltip {
+    width: 230px;
+}
+body.admin div.admin-right.licenses div.widget.board > table th.type {
+    width: 70px;
+}
+/* icons */
+body.admin div.admin-right.icons div.widget.board > table th.tooltip {
+    width: 400px;
+}
+/* templates */
+body.admin div.admin-right.templates div.widget.board > table th.template {
+    width: 240px;
+}
+body.admin div.admin-right.templates div.widget.board > table th.description {
+    width: 400px;
+}
+body.admin div.admin-right.templates div.widget.board input#tpltitle,
+body.admin div.admin-right.templates div.widget.board textarea#tpltext {
+    width: 740px;
+}
+body.admin div.admin-right.templates div.widget.board table td p {
+    width: 400px;
+}
+
+/* projects */
+body.admin div.admin-right.projects > div.widget.board > table td {
+    border-bottom: none;
+}
+
+/* translates */
+body.admin div.admin-right.translates div.widget.board > table th.change_btn {
+
+}
+/* rewards */
+body.admin div.admin-right.rewards div.widget.board > table th.change_btn {
+    width: 50px;
+}
+body.admin div.admin-right.rewards div.widget.board > table th.support_status {
+    width: 60px;
+}
+body.admin div.admin-right.rewards div.widget.board > table th.implementation_status {
+    width: 120px;
+}
+/* users */
+body.admin div.admin-right.users div.widget.board form dl dt {
+    float: left;
+    width: 180px;
+    margin-right: 20px;
+    text-align: right;
+}
+body.admin div.admin-right.users div.widget.board form dl dt,
+body.admin div.admin-right.users div.widget.board form dl dd {
+    margin-bottom: 16px;
+}
+body.admin div.admin-right.users div.widget.board form dl dd.name {
+
+}
+body.admin div.admin-right.users div.widget.board form dl dd.name input[type="submit"] {
+    width: 80px;
+    height: 24px;
+    margin: 0;
+    line-height: 24px;
+    font-size: 14px;
+}
+body.admin div.admin-right.users div.widget.board form dl dd select#role-filter,
+body.admin div.admin-right.users div.widget.board form dl dd select#interest-filter,
+body.admin div.admin-right.users div.widget.board form dl dd select#skill-filter {
+    width: 289px;
+}
+body.admin div.admin-right.users div.widget.board form dl dd input#name-filter {
+    width: 285px;
+    margin: 0;
+    padding: 0;
+}
+body.admin div.admin-right.users > div.widget.board > table tr.record1 td {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+body.admin div.admin-right.users > div.widget.board > table tr.record2 td {
+    padding-top: 0;
+}
+
+/* worth */
+body.admin div.admin-right.worth div.widget.board > table th.edit_btn {
+    width: 60px;
+}
+body.admin div.admin-right.worth div.widget.board > table th.level {
+    width: 300px;
+}
+body.admin div.admin-right.worth div.widget.board > table th.total_support {
+    width: 100px;
+}
+/* promote */
+body.admin div.admin-right.promote div.widget.board > table th.view_btn {
+    width: 60px;
+}
+body.admin div.admin-right.promote div.widget.board > table th.support_status {
+    width: 80px;
+}
+/* newsletter */
+body.admin div.admin-right.newsletter div.widget.board > table th.detail_btn {
+    width: 50px;
+}
+body.admin div.admin-right.newsletter div.widget.board > table th.title {
+    width: 290px;
+}
+
+/* dates */
+body.admin div.admin-right.projects div.widget p {
+    margin: 0 0 8px 0;
+}
+
+/* accounts */
+body.admin div.admin-right.accounts div.widget form label {
+    display: block;
+}

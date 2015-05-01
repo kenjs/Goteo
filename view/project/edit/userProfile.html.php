@@ -153,7 +153,7 @@ echo new SuperForm(array(
         ),
         'user_avatar' => array(
             'type'      => 'group',
-            'required'  => false,
+            'required'  => true,
             'title'     => Text::get('profile-fields-image-title'),
             // 'hint'      => Text::get('tooltip-user-image'),
             'errors'    => !empty($errors['avatar']) ? array($errors['avatar']) : array(),
@@ -216,7 +216,7 @@ echo new SuperForm(array(
         ),
         'user_keywords' => array(
             'type'      => 'textbox',
-            'required'  => true,
+            'required'  => false,
             'size'      => 20,
             'title'     => Text::get('profile-field-keywords'),
             // 'hint'      => Text::get('tooltip-user-keywords'),
@@ -226,7 +226,7 @@ echo new SuperForm(array(
         ),
         'user_contribution' => array(
             'type'      => 'textarea',
-            'required'  => true,
+            'required'  => false,
             'cols'      => 40,
             'rows'      => 4,
             'title'     => Text::get('profile-field-contribution'),

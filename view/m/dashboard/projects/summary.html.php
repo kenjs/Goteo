@@ -52,7 +52,7 @@ if (!$project instanceof  Goteo\Model\Project) {
 
 <div id="meter-big" class="widget collapsable">
 
-    <?php echo new View('view/project/meter_hor_big.html.php', $this) ?>
+    <?php echo new View('view/m/project/meter_hor_big.html.php', $this) ?>
     
 </div>
 

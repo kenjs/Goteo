@@ -98,7 +98,7 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
                             array(
                                 'project' => $project,
                                 'show' => $show,
-//                                'supporters' => $supporters,
+                                'supporters' => $supporters,
                                 'messages' => $messages,
                                 'updates' => $updates
                             )
@@ -175,6 +175,7 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
                     case 'messages':
                         echo
                             new View('view/m/project/widget/summary.h_ttl.html.php', array('project' => $project)),
+                            new View('view/m/project/widget/collaborations_message.html.php', array('project' => $project,'thread' => $thread)),
                             new View('view/m/project/widget/messages.html.php', array('project' => $project,'thread' => $thread));
                         break;
                    
@@ -207,11 +208,10 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
             <div class="side">
             <?php
             // el lateral es diferente segun el show (y el invest)
-            if ($show != 'home'){
+            if($show !== 'home'){
                 echo
                     new View('view/m/project/widget/support.html.php', array('project' => $project));
             }
-
             if ((!empty($project->investors) &&
                 !empty($step) &&
                 in_array($step, array('start', 'login', 'confirm', 'continue', 'ok', 'fail')) )
@@ -219,7 +219,7 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
                 echo new View('view/m/project/widget/investors.html.php', array('project' => $project));
             }
 
-            if (!empty($project->supports) && $non_flug == 0) {
+            if (!empty($project->supports) && $show !='messages') {
                 echo new View('view/m/project/widget/collaborations.html.php', array('project' => $project));
             }
 

@@ -1,11 +1,28 @@
 /*--------------------------------------------------
  common
 --------------------------------------------------*/
-* {
+/** {
     font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', 'メイリオ', Helvetica, Arial, sans-serif;
+}*/
+body {
+    font-family: 'Hiragino Kaku Gothic Pro', 'Meiryo', 'メイリオ', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e7e7e7;
+    font-size: 14px;
+    color: #58595b;
 }
 h1, h2, h3, h4, h5, h6 {
-font-weight: normal;
+    font-weight: normal;
+    margin: 16px 0;
+}
+/*td, th, a, a:link, a:visited, a:active, a:hover, input, textarea, button {
+    font-size: 14px;
+    color: #58595b;
+}*/
+a:link, a:visited, a:active, a:hover {
+    font-size: 14px;
+    color: #58595b;
 }
 
 /*layout*/
@@ -138,62 +155,6 @@ header
     left: 330px;
 }
 
-/*
-.header .head_bar_wrapper .search_box > div,
-table#font_box {
-    float: left;
-}
-
-table#font_box {
-    color: #fff;
-    border-collapse: separate;
-    border-spacing: 4px;
-    margin: 0 10px;
-}
-
-table#font_box th {
-    float: left;
-    color: #666;
-    padding: 2px 4px 0;
-}
-
-table#font_box td {
-    text-align: center;
-    vertical-align: middle;
-    background-color: #666;
-    padding: 0 4px;
-}
-
-table#font_box td a {
-    color: #fff;
-    text-decoration: none;
-}
-
-table#font_box td.changeBtn a.cb_s {
-    font-size: 12px;
-}
-
-table#font_box td.changeBtn a.cb_m {
-    font-size: 12px;
-}
-
-table#font_box td.changeBtn a.cb_l {
-    font-size: 14px;
-}
-
-table#font_box td.active {
-    background-color: #a14547;
-    color: #fff;
-    text-decoration: none;
-}
-*/
-
-/*
-.header .head_bar_wrapper .search_box > div {
-    padding-top: 5px;
-}
-*/
-
 .header .nav_wrapper ul {
     float: left;
     width: 960px;
@@ -277,7 +238,7 @@ body.post-type-archive-data .header .inner {
 footer
 --------------------------------------------------*/
 
-.footer {
+#wrapper > .footer {
     margin-top: 80px;
     background-color: #fff;
     clear:both;
@@ -443,24 +404,21 @@ footer
     #social_bookmark
 --------------------------------------------------*/
 #social_bookmark {
-    float:left;
-    width:350px;
     margin:4px 10px 0 30px;
-}
-
-#social_bookmark #facebook {
-    float: left;
-    width: 160px;
-    overflow: hidden;
-    margin-right: 10px;
 }
 
 #social_bookmark #twitter {
     float: left;
-    width: 100px;
+    width: 95px;
+}
+#social_bookmark #facebook {
+    float: left;
+    width: 155px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+#social_bookmark #___plusone_0 {
+    width: 65px!important;
 }
 
-#social_bookmark #___plusone_0 {
-    width: 70px !important;
-}
 

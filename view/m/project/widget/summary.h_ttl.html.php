@@ -59,10 +59,12 @@ $level = (int) $this['level'] ?: 3;
         endif;
         ?>
     </div>
+    <?php if(!empty($categories)): ?>
     <div class="categories"><h3><?php echo Text::get('project-view-categories-title'); ?></h3>
         <?php $sep = ''; foreach ($categories as $key=>$value) :
             echo $sep.'<a href="/discover/results/'.$key.'">'.htmlspecialchars($value).'</a>';
             $sep = ', '; endforeach; ?>
     </div>
+    <?php endif;?>
 
 </div>

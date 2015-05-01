@@ -191,7 +191,7 @@ div.widget.project div.meter div.obtained strong {
     font-size: 24px;
     font-weight: bold;
     color: #cc6600;
-    padding-right: 20px;
+    padding-right: 8px;
     border-right: 1px solid #a7a9ac;
 }
 div.widget.project div.meter.active h3.title.obtained,
@@ -215,7 +215,7 @@ div.widget.project div.meter div.graph .minimum {
 }
 
 div.widget.project div.meter.hor div.graph .minimum .done {
-    max-width: 220px;
+    max-width: 215px;
 }
 
 div.widget.project div.meter div.graph .minimum .done strong {
@@ -478,20 +478,20 @@ div.widget.project div.meter.active dl dd.minimum {
 div.widget.project-support div.ver div.graph > div.minimum {
     background-color: #dc940f;
     position: relative;
-    min-height: 150px !important;
-    max-height: 190px;
+    min-height: 120px !important;
 }
 div.widget.project-support div.ver div.graph {
     float: left;
     overflow: visible;
     width: 20px;
     margin-left: 14px;
+    padding-top: 22px;
     font-size: 0;
     border-top: 16px solid #ddd;
     background-color: #BCCCD8;
 }
 div.widget.project-support div.graph > div.optimum {
-    height: 50px;
+    height: 30px;
 }
 
 div.widget.project-support div.meter.ver div.graph .minimum .done {
@@ -502,7 +502,7 @@ div.widget.project-support div.meter.ver div.graph .minimum .done {
     overflow: visible;
 }
 div.widget.project-support div.meter.ver div.graph .minimum .done {
-    max-height: 240px;
+    max-height: 212px;
 }
 
 div.widget.project-support div.meter.ver div.graph > div.minimum > div.done strong {
@@ -525,6 +525,7 @@ div.widget.project-support div.meter.ver div.graph > div.minimum {
     overflow: visible;
 }
 
+
 /* only sidebar */
 body.project-show div#main > div.side > div.widget div.meter.ver h3.title.ronda {
     color:#999900;
@@ -533,6 +534,7 @@ body.project-show div#main > div.side > div.widget div.meter.ver h3.title.ronda 
     font-weight: normal;
     text-align: right;
 }
+
 
 body.project-show div#main > div.side > div.widget div.project-widget-box.end div.buttons a {
     display: none;
