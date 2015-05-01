@@ -2138,6 +2138,7 @@ body.post-type-archive-data .header .inner
 
 .footer .foot_bar_inner .three_center img
 {
+    height:40px;
 	margin:14px 0 10px;
 	text-align:left;
 }
@@ -2865,7 +2866,7 @@ body.home .contents_wrapper
 
 
 /*----------------------------------------------------------------------
- superform/datepicker.css
+ datepicker.css
 ----------------------------------------------------------------------*/
 
 div.datepicker
@@ -3915,7 +3916,7 @@ div#main.overview div.superform.aqua #image_upload input[type="submit"],div#main
 
 
 /*----------------------------------------------------------------------
- admin/view.css
+ admin.css
 ----------------------------------------------------------------------*/
 body.admin div#main
 {
