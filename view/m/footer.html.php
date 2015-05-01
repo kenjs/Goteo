@@ -158,10 +158,7 @@ jQuery(document).ready(function($) {
         </div>
         <div class="foot_bar_wrapper">
             <div class="foot_bar_inner cf">
-                <a class="three_left" href="http://yokohamalab.jp/" target="_blank"><img src="/view/css/ycdl_logo.png" alt="Yokohama Community Design Lab." /></a>
-                <a class="three_center" href="http://www.accenture.com/jp-ja/Pages/index.aspx" target="_blank"><img src="/view/css/accenture_logo.png" alt="accenture" /></a>
-                <img class="three_right" src="/view/css/open_yokohama_logo.png" alt="Open Yokohama" />
-
+                <a class="three_left" href="https://www.facebook.com/sociofund/timeline" target="_blank"><img src="/view/css/socio_fund_logo.jpg" alt="ソシオファンド北九州" /></a>
             </div>
         </div>
         <p class="copyright">
