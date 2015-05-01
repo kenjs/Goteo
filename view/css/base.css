@@ -97,12 +97,16 @@ header
     margin-left: -180px;
     font-size:24px;
 }
+.header .nav_wrapper {
+    margin: 0;
+    padding: 0;
+    background-color: #417B55;
+}
 
 .header .nav_wrapper .nav_inner {
     width: 960px;
     height: 60px;
     margin: 0 auto;
-    background-color: #ffffff;
     position: relative;
     z-index: 1;
 }
@@ -207,7 +211,7 @@ table#font_box td.active {
     list-style-type: none;
     width: 20%;
     float: left;
-    background-color:#fff;
+    background-color: #417B55;
 }
 
 .header .nav_wrapper ul li ul li {
@@ -215,6 +219,7 @@ table#font_box td.active {
 }
 .header .nav_wrapper ul li ul li a {
     border-right: none;
+    color: #fff;
 }
 
 .header .nav_wrapper ul li a {
@@ -222,6 +227,7 @@ table#font_box td.active {
     font-size: 16px;
     line-height: 60px;
     text-align: center;
+    color: #fff;
     border-right: 1px dashed #cccccc;
 }
 
@@ -233,7 +239,10 @@ table#font_box td.active {
 .header .nav_wrapper ul li.active {
     background-color: #dae121;
 }
-
+.header .nav_wrapper ul li:hover > a,
+.header .nav_wrapper ul li.active > a {
+    color: #000;
+}
 .header .nav_wrapper ul li span {
     display: block;
     font-size: 12px;
