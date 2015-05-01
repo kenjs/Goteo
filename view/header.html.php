@@ -64,17 +64,6 @@ use Goteo\Library\Text,
                     <div class="fb-like" data-href="<?= $ogmeta['url']; ?>" data-layout="button_count" data-action="recommend" data-show-faces="false" data-share="true"></div>
                 </div>
 
-                <div class="g-plusone" data-size="medium" data-width="60"></div>
-                <script type="text/javascript">
-                    window.___gcfg = {lang: 'ja'};
-
-                    (function() {
-                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                        po.src = 'https://apis.google.com/js/platform.js';
-                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-                    })();
-                </script>
-
                 <div style="clear:both"></div>
             </div><!-- #social_bookmark -->
             <?
@@ -86,7 +75,7 @@ use Goteo\Library\Text,
         <div class="inner">
             <h1><a href="<?= LOCALGOOD_WP_BASE_URL ?>"><img src="/view/css/header/logo.png" alt="LOCAL GOOD YOKOHAMA"/></a></h1>
             <div class="catchcopy">
-                このまち、わたしから未来を創る
+                仲間と創る、北九州のあした
             </div>
         </div>
         <a class="earth_view" href="http://yokohama.mapping.jp/" target="_blank"><img src="/view/css/header/earth_view_icon.png" alt="Earth View" /></a>

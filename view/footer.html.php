@@ -33,20 +33,17 @@
         </div><!--#to_page_top-->
         <div class="inner cf">
             <ul class="footer_link">
-<li class="about"><a href="<?= LOCALGOOD_WP_BASE_URL ?>/about/">LOCAL GOOD KITAQについて</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/syoutorihikihou/">特定商取引法に基づく表記</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/user_guide/">ユーザーガイド</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/privacypolicy/">プライバシーポリシー</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/mailnews/">メルマガ登録</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/contact/">お問い合わせ</a></li>
+<li class="about"><a href="<?= LOCALGOOD_WP_BASE_URL ?>/about/">LOCAL GOOD KITAQについて</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/riyou_kiyaku_menu/">利用規約</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/syoutorihikihou/">特定商取引法に基づく表記</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/user_guide/">ユーザーガイド</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/privacypolicy/">プライバシーポリシー</a></li><li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/contact/">お問い合わせ</a></li>
             </ul>
             <ul class="sns_link">
-                <li class="fb_btn"><a href="https://www.facebook.com/LOCALGOODYOKOHAMA" target="_blank"><img src="/view/css/fb_btn.png" alt="facebook" /></a></li>
-                <li class="tw_btn"><a href="https://twitter.com/LogooYOKOHAMA" target="_blank"><img src="/view/css/tw_btn.png" alt="twitter" /></a></li>
-                <li class="g_plus"><a href="https://plus.google.com/112981975493826894716/" target="_blank"><img src="/view/css/gplus_btn.png" alt="google plus" /></a></li>
+                <li class="fb_btn"><a href="https://www.facebook.com/LOCALGOODKITAQ?fref=ts" target="_blank"><img src="/view/css/fb_btn.png" alt="facebook" /></a></li>
+                <li class="tw_btn"><a href="https://twitter.com/LogooKITAQ" target="_blank"><img src="/view/css/tw_btn.png" alt="twitter" /></a></li>
             </ul>
         </div>
     </div>
     <div class="foot_bar_wrapper">
         <div class="foot_bar_inner cf">
-            <a class="labo" href="http://yokohamalab.jp/" target="_blank"><img src="/view/css/ycdl_logo.png" alt="Yokohama Community Design Lab." /></a>
-            <a class="accenture" href="http://www.accenture.com/jp-ja/Pages/index.aspx" target="_blank"><img src="/view/css/accenture_logo.png" alt="accenture" /></a>
-            <img class="open_yokohama" src="/view/css/open_yokohama_logo.png" alt="Open Yokohama" />
+            <a class="three_left" href="https://www.facebook.com/sociofund/timeline" target="_blank"><img src="/view/css/socio_fund_logo.jpg" alt="ソシオファンド北九州" /></a>
             <p class="copyright">
                 <span>COPYRIGHT&copy; Local Good KITAQ. Some rights reserved.</span>
             </p>
