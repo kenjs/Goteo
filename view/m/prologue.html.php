@@ -52,18 +52,6 @@
         <meta property="og:url" content="<?php echo SITE_URL ?>" />
 <?php endif; ?>
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/m/css/goteo.css" />
-      <!--[if IE]>
-      <link href="<?php echo SRC_URL ?>/view/m/css/ie.css" media="screen" rel="stylesheet" type="text/css" />
-      <![endif]-->
-<?php /*
-        <script type="text/javascript">
-        if(navigator.userAgent.indexOf('Mac') != -1)
-		{
-			document.write ('<link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/m/css/mac.css" />');
-		}
-	    </script>
-*/ ?>
         <?php if (!isset($useJQuery) || !empty($useJQuery)): ?>
         <script type="text/javascript" src="<?php echo SRC_URL ?>/view/m/js/jquery-1.6.4.min.js"></script>
         <script type="text/javascript" src="<?php echo SRC_URL ?>/view/m/js/jquery.tipsy.min.js"></script>
@@ -88,6 +76,19 @@
             <link href="<?php echo SRC_URL ?>/view/m/css/jquery-ui-1.10.3.autocomplete.min.css" rel="stylesheet" />
             <script src="<?php echo SRC_URL ?>/view/m/js/jquery-ui-1.10.3.autocomplete.min.js"></script>
         <?php endif; ?>
+        <?/*<link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/m/css/goteo.css" />*/?>
+        <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/m/css/cssmarge_mobile.css" />
+        <!--[if IE]>
+        <link href="<?php echo SRC_URL ?>/view/m/css/ie.css" media="screen" rel="stylesheet" type="text/css" />
+        <![endif]-->
+        <?php /*
+        <script type="text/javascript">
+        if(navigator.userAgent.indexOf('Mac') != -1)
+		{
+			document.write ('<link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/m/css/mac.css" />');
+		}
+	    </script>
+*/ ?>
 
     </head>
 
