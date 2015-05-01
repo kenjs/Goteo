@@ -2416,27 +2416,14 @@ namespace Goteo\Model {
 
             return $errors;
         }
-        public static function yokohamaLocation () {
+        public static function takeoLocation () {
             return array(
-                1=>Text::get('横浜市'),
-                11=>Text::get('中区'),
-                12=>Text::get('保土ケ谷区'),
-                13=>Text::get('南区'),
-                14=>Text::get('戸塚区'),
-                15=>Text::get('旭区'),
-                16=>Text::get('栄区'),
-                17=>Text::get('泉区'),
-                18=>Text::get('港北区'),
-                19=>Text::get('港南区'),
-                20=>Text::get('瀬谷区'),
-                21=>Text::get('磯子区'),
-                22=>Text::get('神奈川区'),
-                23=>Text::get('緑区'),
-                24=>Text::get('西区'),
-                25=>Text::get('都筑区'),
-                26=>Text::get('金沢区'),
-                27=>Text::get('青葉区'),
-                28=>Text::get('鶴見区')
+                1=>Text::get('武雄市'),
+                11=>Text::get('武雄温泉地区'),
+                12=>Text::get('北方地区'),
+                13=>Text::get('高橋地区'),
+                14=>Text::get('永尾地区'),
+                15=>Text::get('三間坂地区')
             );
         }
     }
