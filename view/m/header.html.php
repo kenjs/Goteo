@@ -27,7 +27,7 @@ use Goteo\Library\Text,
     <h1><?php echo Text::get('regular-main-header'); ?></h1>
 
     <div class="nav_wrapper">
-        <h1><a href="<?= LOCALGOOD_WP_BASE_URL ?>"><img src="/view/m/css/logo.png" alt=""/></a></h1>
+        <h1><a href="<?= LOCALGOOD_WP_BASE_URL ?>"><img src="/view/css/header/logo.png" alt=""/></a></h1>
         <div class="nav_inner viewport">
             <ul class="nav<?/*flipsnap*/?>">
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/earth_view/">課題を知る</a>
