@@ -9035,7 +9035,8 @@ body.project-show div#sub-header div#social_bookmark {
 	position: absolute;
 	right: 0;
 	bottom: 24px;
-	width: 330px;
+	/*width: 330px;*/
+    width: 260px;
 	margin-right: 0;
 }
 body.project-show div#sub-header div#social_bookmark #twitter {

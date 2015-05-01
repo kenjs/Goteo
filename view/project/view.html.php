@@ -104,6 +104,7 @@ $bodyClass = 'project-show'; include 'view/prologue.html.php' ?>
                             <div class="fb-like" data-href="<?= $ogmeta['url']; ?>" data-layout="button_count" data-action="recommend" data-show-faces="false" data-share="true"></div>
                         </div>
 
+                        <?/*
                         <div class="g-plusone" data-size="medium" data-width="60"></div>
                         <script type="text/javascript">
                             window.___gcfg = {lang: 'ja'};
@@ -114,6 +115,7 @@ $bodyClass = 'project-show'; include 'view/prologue.html.php' ?>
                                 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
                             })();
                         </script>
+                        */?>
 
                         <div style="clear:both"></div>
                     </div><!-- #social_bookmark -->
