@@ -1947,7 +1947,7 @@ table#font_box td.active
 .header .nav_wrapper ul li:hover,
 .header .nav_wrapper ul li.active
 {
-	background-color: #dae121;
+	background-color: #ccc;
 }
 .header .nav_wrapper ul li:hover > a,
 .header .nav_wrapper ul li.active > a
