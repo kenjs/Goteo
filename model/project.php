@@ -979,7 +979,8 @@ namespace Goteo\Model {
             }
 
             //puntos
-            $this->setScore($score, 10);
+            $this->setScore($score, 9);
+//            $this->setScore($score, 10);
             /***************** FIN Revisión del paso 1, PERFIL *****************/
 
             /***************** Revisión de campos del paso 2,DATOS PERSONALES *****************/
@@ -1128,9 +1129,9 @@ namespace Goteo\Model {
                  $okeys['overview']['project_location'] = 'ok';
                  ++$score;
             }
-            
 
-            $this->setScore($score, 15);
+            $this->setScore($score, 6);
+//            $this->setScore($score, 15);
             /***************** FIN Revisión del paso 3, DESCRIPCION *****************/
 
             /***************** Revisión de campos del paso 4, COSTES *****************/
@@ -1961,7 +1962,7 @@ namespace Goteo\Model {
                     break;
                 case 'available':
                     // ni edicion ni revision ni cancelados, estan disponibles para verse publicamente
-                    $sql = "SELECT id, name FROM project WHERE status > 2 AND status < 6 $sqlFilter ORDER BY status ASC , created DESC";
+                    $sql = "SELECT id, name FROM project WHERE status > 2 AND status < 6 $sqlFilter ORDER BY status ASC";
                     break;
                 case 'archive':
                     // caducados, financiados o casos de exito
