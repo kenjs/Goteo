@@ -84,7 +84,8 @@ namespace Goteo\Model {
                     IFNULL(promote_lang.title, promote.title) as title,
                     IFNULL(promote_lang.description, promote.description) as description,
                     promote.order as `order`,
-                    promote.active as `active`
+                    promote.active as `active`,
+                    project.days
                 FROM    promote
                 LEFT JOIN promote_lang
                     ON promote_lang.id = promote.id
