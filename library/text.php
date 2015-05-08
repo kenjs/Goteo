@@ -453,7 +453,7 @@ namespace Goteo\Library {
         static public function shareLinks ($url, $title) {
 
             $urls = array(
-                'twitter' => 'http://twitter.com/home?status=' . rawurlencode($title . ': ' . $url . ' #横浜 @LogooYOKOHAMA'),
+            'twitter' => 'http://twitter.com/home?status=' . rawurlencode($title . ': ' . $url . ' #福岡 @LogooFUKUOKA'),
                 'facebook' => 'http://facebook.com/sharer.php?u=' . rawurlencode($url . '&t=' . rawurlencode($title)) 
             );
             
