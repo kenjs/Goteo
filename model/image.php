@@ -363,14 +363,24 @@ die("test");
 		 */
 		public function getLink ($width = 200, $height = 200, $crop = false) {
 
+            $src_url = "";
+            $avatar = self::is_avatar();
+
+            if ($avatar !== false){
+                $ptn = '/' . LG_PLACE_NAME . '/';
+                $src_url = preg_replace($ptn, $avatar['avatar_from'], SRC_URL);
+            } else {
+                $src_url = SRC_URL;
+            }
+
             $tc = $crop ? 'c' : '';
-            
+
             $cache = $this->dir_cache . "{$width}x{$height}{$tc}" . DIRECTORY_SEPARATOR . $this->name;
 
             if (\file_exists($cache)) {
                 return SRC_URL . "/data/cache/{$width}x{$height}{$tc}/{$this->name}";
             } else {
-                return SRC_URL . "/image/{$this->id}/{$width}/{$height}/" . $crop;
+                return $src_url . "/image/{$this->id}/{$width}/{$height}/" . $crop;
             }
 
 		}
@@ -632,6 +642,28 @@ die("test");
     	    return implode(DIRECTORY_SEPARATOR, $pathinfo) . '.' . $new;
     	}
 
-	}
+        /***
+         *
+         */
+        private function is_avatar(){
 
+            if (isset($_SESSION['user']->avatar_from) && ($_SESSION['user']->avatar_from !== "")){
+                try {
+                    $query = static::query("
+                    SELECT
+                        avatar,
+                        avatar_from
+                    FROM user
+                    WHERE avatar = :id AND avatar_from = :avatar_from
+                    ", array(':id' => $this->id, ':avatar_from' => $_SESSION['user']->avatar_from));
+                    $ret = $query->fetchAll(\PDO::FETCH_ASSOC);
+                    return $ret[0];
+                } catch(\PDOException $e) {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        }
+	}
 }
