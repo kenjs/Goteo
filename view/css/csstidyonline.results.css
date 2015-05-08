@@ -2002,9 +2002,10 @@ body.post-type-archive-data .header .inner
 {
 	background-color:#fff;
 	margin:0 auto;
-	padding:0 10px;
 	position:relative;
-	width:940px;
+}
+.footer .footer_link_wrapper .inner {
+    width: 960px;
 }
 
 .footer ul
@@ -2012,7 +2013,7 @@ body.post-type-archive-data .header .inner
 	float:left;
 	margin:16px 0;
 	padding:0;
-	width:810px;
+	width:863px;
 }
 
 .footer ul li
@@ -2054,7 +2055,7 @@ body.post-type-archive-data .header .inner
 .footer ul.sns_link
 {
 	float:right;
-	width:120px;
+	width:90px;
 }
 
 .footer ul.sns_link li
