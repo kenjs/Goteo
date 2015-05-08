@@ -86,23 +86,25 @@ $per = 100 / $cols;
             <tr>
             <?php foreach ($this['columns'] as $key=>$label) : ?>
                 <?php if ($key == 'translate') : ?>
-                    <td width="5%"><?php if ($translator) : ?><a href="/translate/<?php echo $this['model'].'/edit/'.$item->id; ?>" >[<?php echo Text::_("Traducir"); ?>]</a><?php endif; ?>
+                    <td class="w70"><?php if ($translator) : ?><a href="/translate/<?php echo $this['model'].'/edit/'.$item->id; ?>" >[<?php echo Text::_("Traducir"); ?>]</a><?php endif; ?>
                     </td>
                 <?php elseif ($key == 'remove') : ?>
-                    <td width="5%"><a href="<?php echo $this['url']?>/remove/<?php echo (is_object($item)) ? $item->id : $item['id']; ?>" onclick="return confirm('<?php echo Text::_("Seguro que deseas eliminar este registro?"); ?>');">[<?php echo Text::_('Quitar'); ?>]</a></td>
+                    <td class="w70"><a href="<?php echo $this['url']?>/remove/<?php echo (is_object($item)) ? $item->id : $item['id']; ?>" onclick="return confirm('<?php echo Text::_("Seguro que deseas eliminar este registro?"); ?>');">[<?php echo Text::_('Quitar'); ?>]</a></td>
                 <?php elseif (in_array($key, array('edit', 'up', 'down'))) :
-                    $id = (is_object($item)) ? $item->id : $item['id'];?>
-                    <td width="5%">
+                    $id = (is_object($item)) ? $item->id : $item['id'];
+                    $class = ($key == 'edit') ? 'class="w70"' : 'width="5%"';
+                    ?>
+                    <td <?php echo $class; ?>>
                         <a title="<?php echo Text::get('admin_registro') . $id; ?>" href="<?php echo "{$this['url']}/{$key}/{$id}/{$filter}"; ?>"><?php echo $botones[$key]; ?></a>
                     </td>
                 <?php elseif ($key == 'image') : ?>
-                    <td width="<?php echo round($per)-5; ?>%"><?php if (!empty($item->$key)) : ?><img src="<?php echo SRC_URL ?>/image/<?php echo (is_object($item)) ? $item->$key : $item[$key]; ?>/110/110" alt="image" /><?php endif; ?></td>
+                    <td><?php if (!empty($item->$key)) : ?><img src="<?php echo SRC_URL ?>/image/<?php echo (is_object($item)) ? $item->$key : $item[$key]; ?>/110/110" alt="image" /><?php endif; ?></td>
                 <?php elseif ($key == 'name') : ?>
-                   <td width="20%"><?=!empty($item->parent_skill_id) ? "&nbsp;&lfloor;" : ""?><?php echo (is_object($item)) ? $item->$key : $item[$key]; ?></td>
+                   <td class="w200"><?=!empty($item->parent_skill_id) ? "&nbsp;&lfloor;" : ""?><?php echo (is_object($item)) ? $item->$key : $item[$key]; ?></td>
                 <?php elseif ($key == 'order') : ?>
-                   <td width="<?php echo round($per)-5; ?>%"><?=!empty($item->parent_skill_id) ? "&nbsp;&lfloor;" : ""?><?php echo (is_object($item)) ? $item->$key : $item[$key]; ?></td>
+                   <td><?=!empty($item->parent_skill_id) ? "&nbsp;&lfloor;" : ""?><?php echo (is_object($item)) ? $item->$key : $item[$key]; ?></td>
                 <?php else : ?>
-                    <td width="<?php echo round($per)-5; ?>%"><?php echo (is_object($item)) ? $item->$key : $item[$key]; ?></td>
+                    <td><?php echo (is_object($item)) ? $item->$key : $item[$key]; ?></td>
                 <?php endif; ?>
             <?php endforeach; ?>
             </tr>

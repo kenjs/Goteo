@@ -33,7 +33,7 @@ $translator = ACL::check('/translate') ? true : false;
         <thead>
             <tr>
                 <th><!-- Editar --></th>
-                <th><?php echo Text::_('Páginas'); ?></th>
+                <th class="t_title"><?php echo Text::_('Páginas'); ?></th>
                 <th><?php echo Text::_('Descripción'); ?></th>
                 <th><!-- Abrir --></th>
                 <th><!-- Traducir --></th>
@@ -43,8 +43,8 @@ $translator = ACL::check('/translate') ? true : false;
             <?php foreach ($this['pages'] as $page) : ?>
             <tr>
                 <td><a href="/admin/pages/edit/<?php echo $page->id; ?>">[<?php echo Text::_("Editar"); ?>]</a></td>
-                <td><?php echo $page->name; ?></td>
-                <td><?php echo $page->description; ?></td>
+                <td class="w300"><?php echo $page->name; ?></td>
+                <td class="w300"><?php echo $page->description; ?></td>
                 <td><a href="<?php echo $page->url; ?>" target="_blank">[<?php echo Text::_("Ver"); ?>]</a></td>
                 <td>
                 <?php if ($translator && $node == \GOTEO_NODE) : ?>
