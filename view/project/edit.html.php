@@ -73,7 +73,7 @@ include 'view/prologue.html.php';
             <?php echo new View("view/project/edit/{$this['step']}.html.php", $this->getArrayCopy() + array('level' => 3)) ?>
 
             <?php echo $steps ?>
-d
+
         </form>
 
     </div>
