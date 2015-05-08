@@ -66,11 +66,11 @@ $filters = $this['filters'];
         <tbody>
             <?php foreach ($this['templates'] as $template) : ?>
             <tr>
-                <td><a href="/admin/templates/edit/<?php echo $template->id; ?>">[<?php echo Text::_("Editar"); ?>]</a></td>
+                <td class="w70"><a href="/admin/templates/edit/<?php echo $template->id; ?>">[<?php echo Text::_("Editar"); ?>]</a></td>
                 <td><?php echo $template->title; ?></td>
-                <td><?php echo mb_substr($template->text,0,200); ?>...</td>
+                <td><?php echo mb_substr(strip_tags($template->text),0,200); ?>...</td>
                 <?php if ($translator) : ?>
-                <td><a href="/translate/template/edit/<?php echo $template->id; ?>" >[<?php echo Text::_("Traducir"); ?>]</a></td>
+                <td class="w70"><a href="/translate/template/edit/<?php echo $template->id; ?>" >[<?php echo Text::_("Traducir"); ?>]</a></td>
                 <?php endif; ?>
             </tr>
             <?php endforeach; ?>
