@@ -118,24 +118,27 @@ $pagedResults = new \Paginated($this['projects'], 10, isset($_GET['page']) ? $_G
     while ($project = $pagedResults->fetchPagedRow()) : 
 ?>
 <div class="widget board">
-    <table>
+    <table class="t_border">
         <thead>
             <tr>
-                <th style="width: 250px;"><?php echo Text::_("Proyecto"); ?></th> <!-- edit -->
+                <th><?php echo Text::_("Proyecto"); ?></th> <!-- edit -->
                 <th style="min-width: 150px;"><?php echo Text::_("Creador"); ?></th> <!-- mailto -->
-                <th style="min-width: 75px;"><?php echo Text::_("Recibido"); ?></th> <!-- enviado a revision -->
-                <th style="min-width: 80px;"><?php echo Text::_("Estado"); ?></th>
+                <th style="width: 100px;"><?php echo Text::_("Recibido"); ?></th> <!-- enviado a revision -->
+                <th style="min-width: 70px;"><?php echo Text::_("Estado"); ?></th>
                 <th style="min-width: 50px;"><?php echo Text::_("Nodo"); ?></th>
-                <th style="min-width: 50px;"><?php echo Text::_("M&iacute;nimo"); ?></th>
-                <th style="min-width: 50px;"><?php echo Text::_("&Oacute;ptimo"); ?></th>
+                <th style="min-width: 88px;"><?php echo Text::_("M&iacute;nimo"); ?></th>
+                <th style="min-width: 88px;"><?php echo Text::_("&Oacute;ptimo"); ?></th>
             </tr>
         </thead>
 
         <tbody>
             <tr>
                 <td><a href="/project/<?php echo $project->id; ?>" target="_blank" title="Preview"><?php echo $project->name; ?></a></td>
-                <td><a href="mailto:<?php echo $project->user->email; ?>"><?php echo substr($project->user->email, 0, 100); ?></a></td>
-                <td><?php echo date('d-m-Y', strtotime($project->updated)); ?></td>
+                <td style="word-break: break-all;"><a href="mailto:<?php echo $project->user->email; ?>"><?php echo substr($project->user->email, 0, 100); ?></a></td>
+                <?php $s_date = (empty($project->updated)) ? '未完了' : date('y/m/d', strtotime($project->updated)); ?>
+                <?/*<td><?php echo date('Y年m月n日', strtotime($project->updated)); ?></td>*/?>
+                <td><?php echo $s_date; ?></td>
+
                 <td><?php echo ($project->status == 1 && !$project->draft) ? '<span style="color: green;">' . Text::_('En negociación') . '</span>' : $this['status'][$project->status]; ?></td>
                 <td style="text-align: center;"><?php echo $project->node; ?></td>
                 <td style="text-align: right;"><?php echo \amount_format($project->mincost) . Text::_('yen'); ?></td>
