@@ -10696,7 +10696,6 @@ body.project-edit div#main .status #project-score .meter .left
 	top:0;
 }
 
-
 body.project-edit div.superform
 {
 	border:solid #0a0a0a;
@@ -10705,7 +10704,13 @@ body.project-edit div.superform
 
 body.project-edit div.superform > div.hint blockquote
 {
-    margin-bottom: 20px;
+    margin-bottom: 0;
+}
+
+body.project-edit div.superform > div.footer
+{
+    margin-top: 0;
+    padding-bottom: 20px;
 }
 
 body.project-edit div.superform > .elements > ol > li#errors
