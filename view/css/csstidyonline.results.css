@@ -913,10 +913,10 @@ div#header div#about ul li > :hover
 div#header div#menu
 {
 	left:50%;
-	margin-left:202px;
+	margin-left:182px;
 	overflow:visible;
 	position:absolute;
-	top:53px;
+	top:60px;
 	width:288px;
 	z-index:2;
 }
@@ -1781,12 +1781,22 @@ div .inner
 .header .logo_wrapper .catchcopy
 {
 	font-size:24px;
-	left:415px;
+	left:405px;
 	margin-left:-180px;
 	position:absolute;
 	top:24px;
 }
-.header .nav_wrapper 
+
+.header .to_integration_site {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 6px 0;
+}
+.header .to_integration_site a {
+    font-size: 12px;
+}
+.header .nav_wrapper
 {
 	background-color:#D48608;
 	height:60px;
