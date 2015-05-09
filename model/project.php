@@ -1548,6 +1548,8 @@ namespace Goteo\Model {
                 return false;
             }
 
+            $db_prefix = "`" . COMMON_AUTH_DB_SCHEMA . "``.";
+
             self::query("START TRANSACTION");
             try {
                 //borrar todos los registros
@@ -1556,7 +1558,7 @@ namespace Goteo\Model {
                 self::query("DELETE FROM cost WHERE project = ?", array($this->id));
                 self::query("DELETE FROM reward WHERE project = ?", array($this->id));
                 self::query("DELETE FROM support WHERE project = ?", array($this->id));
-                self::query("DELETE FROM image WHERE id IN (SELECT image FROM project_image WHERE project = ?)", array($this->id));
+                self::query("DELETE FROM {$db_prefix}image WHERE id IN (SELECT image FROM project_image WHERE project = ?)", array($this->id));
                 self::query("DELETE FROM project_image WHERE project = ?", array($this->id));
                 self::query("DELETE FROM message WHERE project = ?", array($this->id));
                 self::query("DELETE FROM project_account WHERE project = ?", array($this->id));
