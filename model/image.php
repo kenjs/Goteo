@@ -43,6 +43,7 @@ namespace Goteo\Model {
          * @param type array	$file	Array $_FILES.
          */
         public function __construct ($file) {
+
 			$this->dir_originals = GOTEO_DATA_PATH . 'images' . DIRECTORY_SEPARATOR;
 			$this->dir_cache = GOTEO_DATA_PATH . 'cache' . DIRECTORY_SEPARATOR;
 
@@ -306,14 +307,16 @@ die("test");
 
             $gallery = array();
 
+            $_which = "`" . GOTEO_DB_SCHEMA ."`." . $which;
+
+            $_id = $id;
             try {
-                $sql = "SELECT image FROM {$which}_image WHERE {$which} = ?";
-                $sql .= ($which == 'project') ? " ORDER BY section ASC, `order` ASC, image DESC" : " ORDER BY image ASC";
-                $query = self::query($sql, array($id));
+                $sql = "SELECT image FROM {$_which}_image WHERE {$which} = :id";
+                $sql .= ($which == 'project') ? " ORDER BY {$_which}_image.section ASC, `order` ASC, image DESC" : " ORDER BY image ASC";
+                $query = self::query($sql, array(':id' => $_id));
                 foreach ($query->fetchAll(\PDO::FETCH_ASSOC) as $image) {
                     $gallery[] = self::get($image['image']);
                 }
-
                 return $gallery;
             } catch(\PDOException $e) {
                 return false;
@@ -363,24 +366,16 @@ die("test");
 		 */
 		public function getLink ($width = 200, $height = 200, $crop = false) {
 
-            $src_url = "";
-            $avatar = self::is_avatar();
-
-            if ($avatar !== false){
-                $ptn = '/' . LG_PLACE_NAME . '/';
-                $src_url = preg_replace($ptn, $avatar['avatar_from'], SRC_URL);
-            } else {
-                $src_url = SRC_URL;
-            }
+            $src_url = preg_replace('/[A-Za-z0-9.]+\.localgood/','static.localgood',SRC_URL);
 
             $tc = $crop ? 'c' : '';
 
             $cache = $this->dir_cache . "{$width}x{$height}{$tc}" . DIRECTORY_SEPARATOR . $this->name;
 
             if (\file_exists($cache)) {
-                return SRC_URL . "/data/cache/{$width}x{$height}{$tc}/{$this->name}";
+                return $src_url . "/data/cache/{$width}x{$height}{$tc}/{$this->name}";
             } else {
-                return $src_url . "/image/{$this->id}/{$width}/{$height}/" . $crop;
+                return SRC_URL . "/image/{$this->id}/{$width}/{$height}/" . $crop;
             }
 
 		}
@@ -642,28 +637,43 @@ die("test");
     	    return implode(DIRECTORY_SEPARATOR, $pathinfo) . '.' . $new;
     	}
 
-        /***
-         *
-         */
-        private function is_avatar(){
+        //
+        //  DB接続先の横取り
+        //
+        public static function query ($query, $params = null) {
 
-            if (isset($_SESSION['user']->avatar_from) && ($_SESSION['user']->avatar_from !== "")){
+            static $db = null;
+            if ($db === null) {
                 try {
-                    $query = static::query("
-                    SELECT
-                        avatar,
-                        avatar_from
-                    FROM user
-                    WHERE avatar = :id AND avatar_from = :avatar_from
-                    ", array(':id' => $this->id, ':avatar_from' => $_SESSION['user']->avatar_from));
-                    $ret = $query->fetchAll(\PDO::FETCH_ASSOC);
-                    return $ret[0];
-                } catch(\PDOException $e) {
-                    return false;
+                    $dsn = \GOTEO_DB_DRIVER . ':host=' . \GOTEO_DB_HOST . ';dbname=' . \COMMON_AUTH_DB_SCHEMA;
+                    $db = new \PDO($dsn, \GOTEO_DB_USERNAME, \GOTEO_DB_PASSWORD, array(\PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES UTF8"));;
+                } catch (\PDOException $e) {
+                    die ('No puede conectar la base de datos');
                 }
-            } else {
-                return false;
+            }
+
+            $params = func_num_args() === 2 && is_array($params) ? $params : array_slice(func_get_args(), 1);
+
+            // ojo que el stripslashes jode el contenido blob al grabar las imagenes
+            if (\get_magic_quotes_gpc ()) {
+                foreach ($params as $key => $value) {
+                    if ($key != ':content') {
+                        $params[$key] = \stripslashes(\stripslashes($value));
+                    }
+                }
+            }
+
+            $result = $db->prepare($query);
+
+            try {
+
+                $result->execute($params);
+                return $result;
+
+            } catch (\PDOException $e) {
+                throw new Exception("Error PDO: " . \trace($e));
             }
         }
+
 	}
 }

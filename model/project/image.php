@@ -49,7 +49,8 @@ namespace Goteo\Model\Project {
          */
 	 	public static function get ($id, $section = null) {
             
-            $URL = SITE_URL;
+//            $URL = SITE_URL;
+            $URL = preg_replace('/[A-Za-z0-9.]+\.localgood/','static.localgood',SITE_URL);
             
             
             $array = array ();
