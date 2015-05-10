@@ -39,7 +39,6 @@ namespace Goteo\Model {
             $password, // para gestion de super admin
             $name,
             $location,
-            $avatar_from,
             $avatar = false,
             $about,
             $contribution,
@@ -202,10 +201,8 @@ namespace Goteo\Model {
                         $image = new Image($this->avatar);
                         if ($image->save($errors)) {
                             $data[':avatar'] = $image->id;
-                            $data[':avatar_from'] = LG_PLACE_NAME;
                         } else {
                             unset($data[':avatar']);
-                            unset($data[':avatar_from']);
                         }
                     }
 
@@ -578,7 +575,6 @@ namespace Goteo\Model {
                         user.name as name,
                         user.location as location,
                         user.avatar as avatar,
-                        user.avatar_from,
                         IFNULL(user_lang.about, user.about) as about,
                         IFNULL(user_lang.contribution, user.contribution) as contribution,
                         IFNULL(user_lang.keywords, user.keywords) as keywords,
