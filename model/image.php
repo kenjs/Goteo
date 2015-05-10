@@ -371,7 +371,6 @@ die("test");
             $tc = $crop ? 'c' : '';
 
             $cache = $this->dir_cache . "{$width}x{$height}{$tc}" . DIRECTORY_SEPARATOR . $this->name;
-
             if (\file_exists($cache)) {
                 return $src_url . "/data/cache/{$width}x{$height}{$tc}/{$this->name}";
             } else {
@@ -641,6 +640,8 @@ die("test");
         //  DB接続先の横取り
         //
         public static function query ($query, $params = null) {
+
+            $query = self::queryFilter($query);
 
             static $db = null;
             if ($db === null) {
