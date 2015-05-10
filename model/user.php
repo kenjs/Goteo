@@ -951,8 +951,16 @@ namespace Goteo\Model {
                 } else {
                     $ok = (crypt($password, $row->password) == $row->password);
                 }
-
                 if ($ok) {
+                    $query = self::query("
+                    REPLACE INTO user_login_log (user, node, datetime)
+                    VALUES (:user, :node, :datetime) ",
+                        array(
+                            ':user' => trim($username),
+                            ':node' => LG_PLACE_NAME,
+                            ':datetime' => date('Y-m-d H:i:s')
+                        )
+                    );
                     $user = static::get(trim($username));
                     if(empty($user) ||$user->active) {
                         return $user;
