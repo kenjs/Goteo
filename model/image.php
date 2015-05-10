@@ -371,7 +371,6 @@ die("test");
             $tc = $crop ? 'c' : '';
 
             $cache = $this->dir_cache . "{$width}x{$height}{$tc}" . DIRECTORY_SEPARATOR . $this->name;
-
             if (\file_exists($cache)) {
                 return $src_url . "/data/cache/{$width}x{$height}{$tc}/{$this->name}";
             } else {
