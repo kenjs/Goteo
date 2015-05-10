@@ -341,7 +341,7 @@ die("test");
                 // para usuarios y proyectos que tienen N imagenes
                 // por ahora post solo tiene 1
                 if (\is_string($which) && \in_array($which, self::$types)) {
-                    $sql = "DELETE FROM {$which}_image WHERE image = ?";
+                    $sql = "DELETE FROM `" . \GOTEO_DB_SCHEMA . "`.{$which}_image WHERE image = ?";
                     $query = self::query($sql, array($this->id));
                 }
                 self::query("COMMIT");
@@ -642,7 +642,7 @@ die("test");
         public static function query ($query, $params = null) {
 
             $query = self::queryFilter($query);
-
+            
             static $db = null;
             if ($db === null) {
                 try {
