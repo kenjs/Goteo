@@ -126,6 +126,7 @@ namespace Goteo\Model {
                     $data[':confirmed'] = false;
                     $data[':lang'] = \LANG;
                     $data[':node'] = \NODE_ID;
+                    $data[':home'] = \LG_PLACE_NAME;
 
 					//active = 1 si no se quiere comprovar
 					if(in_array('active',$skip_validations) && $this->active) $data[':active'] = 1;
