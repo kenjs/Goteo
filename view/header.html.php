@@ -79,7 +79,7 @@ use Goteo\Library\Text,
             </div>
             <p class="to_integration_site"><a href="<?= LG_INTEGRATION_URL ?>">LOCAL GOOD全国版トップページ</a></p>
         </div>
-        <a class="earth_view" href="http://yokohama.mapping.jp/" target="_blank"><img src="/view/css/header/earth_view_icon.png" alt="Earth View" /></a>
+        <a class="earth_view" href="<?= LG_MAP_URL ?>" target="_blank"><img src="/view/css/header/earth_view_icon.png" alt="Earth View" /></a>
     </div>
     <div class="nav_wrapper">
         <div class="nav_inner">
