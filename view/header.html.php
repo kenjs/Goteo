@@ -73,7 +73,7 @@ use Goteo\Library\Text,
     </div>
     <div class="logo_wrapper">
         <div class="inner">
-            <h1><a href="<?= LOCALGOOD_WP_BASE_URL ?>"><img src="/view/css/header/logo.png" alt="LOCAL GOOD YOKOHAMA"/></a></h1>
+            <h1><a href="<?= LOCALGOOD_WP_BASE_URL ?>"><img src="/view/css/header/logo.png" alt="LOCAL GOOD KITAQ"/></a></h1>
             <div class="catchcopy">
                 仲間と創る、北九州のあした
             </div>
