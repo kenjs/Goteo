@@ -2040,9 +2040,15 @@ body.post-type-archive-data .header .inner
 	width:125px;
 }
 
-.footer ul li:last-child
-{
-	border-right:none;
+.footer ul.footer_link li.syoutorihikihou {
+    width: 100px;
+    line-height: 16px;
+}
+
+.footer ul.footer_link li.integration {
+    width: 134px;
+    line-height: 16px;
+    border-right: none;
 }
 
 .footer ul li a
@@ -2050,6 +2056,11 @@ body.post-type-archive-data .header .inner
 	color:#666;
 	font-size:12px;
 	padding:0 8px;
+}
+
+.footer ul.footer_link li.syoutorihikihou a,
+.footer ul.footer_link li.integration a {
+    display: inline-block;
 }
 
 .footer ul li:first-child a
@@ -2080,7 +2091,11 @@ body.post-type-archive-data .header .inner
 
 .footer ul.sns_link li a
 {
-	padding:0 5px 0 0;
+	padding:0;
+}
+
+.footer ul.sns_link li a img {
+    vertical-align: middle;
 }
 
 .footer ul.sns_link li.rss img
