@@ -28,11 +28,12 @@ use Goteo\Core\ACL,
     <ul>
         <?/*<li class="home"><a href="/"><?php echo Text::get('regular-home'); ?></a></li>*/?>
         <li class="explore"><a class="button red" href="/discover"><?php echo Text::get('regular-discover'); ?></a></li>
-        <? if( isset( $_SESSION['user']->roles['project_owner'] ) ) { ?>
+        <?/* if( isset( $_SESSION['user']->roles['project_owner'] ) ) { ?>
             <li class="create"><a class="button aqua" href="/project/create"><?php echo Text::get('regular-create'); ?></a></li>
         <? } else { ?>
             <li class="create"><a class="button aqua" href="<?= LOCALGOOD_WP_BASE_URL ?>/user_guide"><?php echo Text::get('regular-create'); ?></a></li>
-        <? } ?>
+        <? } */?>
+        <li class="create"><a class="button aqua" href="<?= LOCALGOOD_WP_BASE_URL ?>/user_guide"><?php echo Text::get('regular-create'); ?></a></li>
         <?/*<li class="search">
                 <form method="get" action="/discover/results">
                     <fieldset>
