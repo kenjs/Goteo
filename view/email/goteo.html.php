@@ -210,7 +210,7 @@ color:#20B3B2;
   
 <div class="disclaimer">
     <?/*<p class="title"><?php echo Text::get('mailer-disclaimer') ?></p>*/?>
-    <p class="goteo-url"><a href="<?php echo SITE_URL ?>" target="_blank">LOCAL GOOD YOKOHAMA</a>（横浜コミュニティデザイン・ラボ）</p>
+    <p class="goteo-url"><a href="<?php echo SITE_URL ?>" target="_blank">LOCAL GOOD FUKUOKA</a>（特定非営利活動法人 AIP）</p>
     <p class="descubre"><a href="<?php echo SITE_URL . '/discover' ?>"><?php echo Text::get('regular-discover'); ?></a></p>
     <p class="crea"><a href="<?php echo SITE_URL . '/project/create' ?>"><?php echo Text::get('regular-create'); ?></a></p>
 </div>
