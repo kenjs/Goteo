@@ -118,8 +118,8 @@ jQuery(document).ready(function($) {
             <div class="block social" style="border-right:#ebe9ea 2px solid;">
                 <h8 class="title"><?php echo Text::get('footer-header-social') ?></h8>
                 <ul>
-                    <li class="twitter"><a href="<?php echo Text::get('social-account-twitter') ?>" target="_blank"><?php echo Text::get('regular-twitter') ?></a></li>
-                    <li class="facebook"><a href="<?php echo Text::get('social-account-facebook') ?>" target="_blank"><?php echo Text::get('regular-facebook') ?></a></li>
+                    <li class="twitter"><a href="<?php echo LG_TWITTER; ?>" target="_blank"><?php echo Text::get('regular-twitter') ?></a></li>
+                    <li class="facebook"><a href="<?php echo LG_FACEBOOK_PAGE; ?>" target="_blank"><?php echo Text::get('regular-facebook') ?></a></li>
                     <li class="identica"><a href="<?php echo Text::get('social-account-identica') ?>" target="_blank"><?php echo Text::get('regular-identica') ?></a></li>
                     <li class="gplus"><a href="<?php echo Text::get('social-account-google') ?>" target="_blank"><?php echo Text::get('regular-google') ?></a></li>
                     <li class="rss"><a rel="alternate" type="application/rss+xml" title="RSS" href="/rss<?php echo $lang ?>" target="_blank"><?php echo Text::get('regular-share-rss'); ?></a></li>
