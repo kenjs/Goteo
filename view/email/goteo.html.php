@@ -215,7 +215,7 @@ color:#20B3B2;
     <p class="crea"><a href="<?php echo SITE_URL . '/project/create' ?>"><?php echo Text::get('regular-create'); ?></a></p>
 </div>
 <div class="follow">ソーシャルリンク<?//php echo Text::get('mail-template-follow'); ?>:<br />
-  <span class="facebook"><a href="<?php echo Text::get('social-account-facebook') ?>">facebook</a></span> |  <span class="twitter"><a href="<?php echo Text::get('social-account-twitter') ?>">twitter</a></span> |   <span class="rss"><a rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo SITE_URL. '/rss' ?>">RSS</a></span></div>
+  <span class="facebook"><a href="<?php echo LG_FACEBOOK_PAGE; ?>">facebook</a></span> |  <span class="twitter"><a href="<?php echo LG_TWITTER; ?>">twitter</a></span> |   <span class="rss"><a rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo SITE_URL. '/rss' ?>">RSS</a></span></div>
 <p>※このメールには直接返送頂けません。</p>
 
 <div class="unsuscribe"><?php echo Text::html('mailer-baja', $this['baja']); ?></div>
