@@ -212,7 +212,7 @@ color:#20B3B2;
     <?/*<p class="title"><?php echo Text::get('mailer-disclaimer') ?></p>*/?>
     <p class="goteo-url"><a href="<?php echo SITE_URL ?>" target="_blank">LOCAL GOOD KITAQ</a>（一般社団法人 ソシオファンド北九州）</p>
     <p class="descubre"><a href="<?php echo SITE_URL . '/discover' ?>"><?php echo Text::get('regular-discover'); ?></a></p>
-    <p class="crea"><a href="<?php echo SITE_URL . '/project/create' ?>"><?php echo Text::get('regular-create'); ?></a></p>
+    <p class="crea"><a href="<?php echo LOCALGOOD_WP_BASE_URL . '/user_guide/' ?>"><?php echo Text::get('regular-create'); ?></a></p>
 </div>
 <div class="follow">ソーシャルリンク<?//php echo Text::get('mail-template-follow'); ?>:<br />
   <span class="facebook"><a href="<?php echo LG_FACEBOOK_PAGE; ?>">facebook</a></span> |  <span class="twitter"><a href="<?php echo LG_TWITTER; ?>">twitter</a></span> |   <span class="rss"><a rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo SITE_URL. '/rss' ?>">RSS</a></span></div>
