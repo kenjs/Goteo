@@ -26,7 +26,7 @@ $bodyClass = 'project-embed';
 if (!PC_VIEW){
     $bodyClass .= ' sp';
 }
-include 'view/prologue.html.php' ?>
+include VIEW_PATH . '/prologue.html.php' ?>
 
 <div class="alone-project">
 <?
@@ -38,4 +38,4 @@ include 'view/prologue.html.php' ?>
     ?>
 </div>
 
-<?php include 'view/epilogue.html.php' ?>
+<?php include VIEW_PATH . 'view/epilogue.html.php' ?>
