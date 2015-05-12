@@ -1,6 +1,6 @@
 <?php
 /*
- *  Copyright (C) 2012 Platoniq y Fundación Fuentes Abiertas (see README for details)
+ *  Copyright (C) 2012 Platoniq y Fundaciï¿½n Fuentes Abiertas (see README for details)
  *	This file is part of Goteo.
  *
  *  Goteo is free software: you can redistribute it and/or modify
@@ -22,7 +22,7 @@ define('GOTEO_PATH', __DIR__ . DIRECTORY_SEPARATOR);
 if (function_exists('ini_set')) {
     ini_set('include_path', GOTEO_PATH . PATH_SEPARATOR . '.');
 } else {
-    throw new Exception("No puedo añadir la API GOTEO al include_path.");
+    throw new Exception("No puedo aï¿½adir la API GOTEO al include_path.");
 }
 
 // Nodo actual
@@ -32,7 +32,7 @@ define('PEAR', GOTEO_PATH . 'library' . '/' . 'pear' . '/');
 if (function_exists('ini_set')) {
     ini_set('include_path', ini_get('include_path') . PATH_SEPARATOR . PEAR);
 } else {
-    throw new Exception("No puedo añadir las librerías PEAR al include_path.");
+    throw new Exception("No puedo aï¿½adir las librerï¿½as PEAR al include_path.");
 }
 
 /******************************************************
@@ -87,17 +87,6 @@ define('GOTEO_META_KEYWORDS', '--keywords--');
 define('GOTEO_META_AUTHOR', '--author--');
 define('GOTEO_META_COPYRIGHT', '--copyright--');
 
-//Amazon Web Services Credentials
-define("AWS_KEY", "--------------");
-define("AWS_SECRET", "----------------------------------");
-define("AWS_REGION", "-----------");
-
-//AWS SES Credentials (LocalGood Original)
-define('AWS_SES_SOURCE', '--------------');
-define('AWS_SES_ACCESS', '--------------');
-define('AWS_SES_SECERET', '----------------------------------');
-define('AWS_SES_CHARSET', 'UTF-8');
-
 //Mail management: ses (amazon), phpmailer (php library)
 define("MAIL_HANDLER", "phpmailer");
 
@@ -109,6 +98,9 @@ define('GOTEO_DB_CHARSET', 'UTF-8');
 define('GOTEO_DB_SCHEMA', 'db-schema');
 define('GOTEO_DB_USERNAME', 'db-username');
 define('GOTEO_DB_PASSWORD', 'db-password');
+
+// LocalGood Common Authentication Database
+define('COMMON_AUTH_DB_SCHEMA', 'db_auth');
 
 // Mail
 define('GOTEO_MAIL_FROM', 'noreply@example.com');
@@ -126,12 +118,12 @@ define('GOTEO_CONTACT_MAIL', 'info@example.com');
 define('GOTEO_FAIL_MAIL', 'fail@example.com');
 define('GOTEO_LOG_MAIL', 'sitelog@example.com');
 
-/* This is to send mailing by Amazon SES*/
-//Quota limit, 24 hours
+//Quota de envio mï¿½ximo para goteo en 24 horas
 define('GOTEO_MAIL_QUOTA', 50000);
-//Quota limit for newsletters, 24 hours
+//Quota de envio mï¿½ximo para newsletters para goteo en 24 horas
 define('GOTEO_MAIL_SENDER_QUOTA', round(GOTEO_MAIL_QUOTA * 0.8));
-// Amazon SNS keys to get bounces automatically: 'arn:aws:sns:us-east-1:XXXXXXXXX:amazon-ses-bounces'
+//clave de Amazon SNS para recopilar bounces automaticamente: 'arn:aws:sns:us-east-1:XXXXXXXXX:amazon-ses-bounces'
+//la URL de informacion debe ser: goteo_url.tld/aws-sns.php
 define('AWS_SNS_CLIENT_ID', 'XXXXXXXXX');
 define('AWS_SNS_REGION', 'us-east-1');
 define('AWS_SNS_BOUNCES_TOPIC', 'amazon-ses-bounces');
@@ -141,8 +133,8 @@ define('AWS_SNS_COMPLAINTS_TOPIC', 'amazon-ses-complaints');
 define('GOTEO_DEFAULT_LANG', 'en');
 // name of the gettext .po file (used for admin only texts at the moment)
 define('GOTEO_GETTEXT_DOMAIN', 'messages');
-// gettext files are cached, to reload a new one requires to restart Apache which is stupid (and annoying while 
-//	developing) this setting tells the langueage code to bypass caching by using a clever file-renaming 
+// gettext files are cached, to reload a new one requires to restart Apache which is stupid (and annoying while
+//	developing) this setting tells the langueage code to bypass caching by using a clever file-renaming
 // mechanism described in http://blog.ghost3k.net/articles/php/11/gettext-caching-in-php
 define('GOTEO_GETTEXT_BYPASS_CACHING', true);
 
@@ -150,10 +142,11 @@ define('GOTEO_GETTEXT_BYPASS_CACHING', true);
 define('SITE_URL', 'http://example.com'); // endpoint url
 define('SRC_URL', 'http://example.com');  // host for statics
 define('SEC_URL', 'http://example.com');  // with SSL certified
-
-// LocalGood Original
 define('LOCALGOOD_WP_BASE_URL', 'http://example.com/');
 define('LOG_PATH', '/path/to/logfiles');
+define('LG_INTEGRATION_URL', 'http://example.com');
+define('LG_NAME', '----------');
+
 
 //Sessions
 //session handler: php, dynamodb
@@ -221,6 +214,11 @@ define('OAUTH_LINKEDIN_SECRET', '-----------------------------------'); //
 // Un secreto inventado cualquiera para encriptar los emails que sirven de secreto en openid
 define('OAUTH_OPENID_SECRET','-----------------------------------');
 
+//SNS link
+define('LG_FACEBOOK_PAGE', '----facebook url----');
+define('LG_TWITTER', '----twitter url----');
+define('LG_GOOGLE_PLUS', '----google plus url----');
+
 // recaptcha ( to be used in /contact form )
 define('RECAPTCHA_PUBLIC_KEY','-----------------------------------');
 define('RECAPTCHA_PRIVATE_KEY','-----------------------------------');
@@ -228,12 +226,38 @@ define('RECAPTCHA_PRIVATE_KEY','-----------------------------------');
 /****************************************************
 Google Analytics
 ****************************************************/
-define('GOTEO_ANALYTICS_TRACKER', "&ltscript type=\"text/javascript\"&gt
+define('GOTEO_ANALYTICS_TRACKER', "<script type=\"text/javascript\">
 __your_tracking_js_code_goes_here___
-&lt/script&gt
+</script>
 ");
 
-// For LocalGood Application
+/****************************************************
+AWS
+****************************************************/
+//Amazon Web Services Credentials
+define("AWS_KEY", "--------------");
+define("AWS_SECRET", "----------------------------------");
+define("AWS_REGION", "-----------");
+
+// Credentials SES
+define('AWS_SES_SOURCE', '--------------');
+define('AWS_SES_ACCESS', '--------------');
+define('AWS_SES_SECERET', '--------------');
+define('AWS_SES_CHARSET', 'UTF-8');
+
+/****************************************************
+AXES
+ ****************************************************/
+define('AXES_CLIENTIP', '----------');
+
+/****************************************************
+CESIUM
+ ****************************************************/
+define('LG_EARTHVIEW', '----- mapping app path -----');
+
+/****************************************************
+Change view type
+ ****************************************************/
 \$ua = \$_SERVER['HTTP_USER_AGENT'];
 if(strpos(\$ua, 'LocalGood/iOS (XXXX)') === 0 || strpos(\$ua, 'LocalGood/Android (XXXX)') === 0 ) {
     define('PC_VIEW', false);
@@ -256,3 +280,5 @@ else {
     define('GOTEO_EASY', null); // to take user overload easy
 	define('GOTEO_FREE', true); // used somewhere...
 }
+
+$ua = $_SERVER['HTTP_USER_AGENT'];
