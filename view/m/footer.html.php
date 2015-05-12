@@ -157,7 +157,7 @@ jQuery(document).ready(function($) {
         </div>
         <div class="foot_bar_wrapper">
             <div class="foot_bar_inner cf">
-                <a class="three_left" href="https://www.facebook.com/sociofund/timeline" target="_blank"><img src="/view/css/socio_fund_logo.jpg" alt="ソシオファンド北九州" /></a>
+                <a class="three_left" href="https://www.facebook.com/sociofund/timeline" target="_blank"><img src="/view/css/logo_socio_fund.png" alt="ソシオファンド北九州" /></a>
             </div>
         </div>
         <p class="copyright">
