@@ -50,8 +50,8 @@
     </div>
     <div class="foot_bar_wrapper">
         <div class="foot_bar_inner cf">
-            <a class="three_left" href="http://npo-aip.or.jp/" target="_blank"><img src="/view/css/logo_aip.jpg" alt="AIP" /></a>
-            <a class="three_center" href="http://www.city.fukuoka.lg.jp/" target="_blank"><img src="/view/css/logo_fukuoka_city.jpg" alt="福岡市" /></a>
+            <a class="three_left" href="http://npo-aip.or.jp/" target="_blank"><img src="/view/css/logo_aip.png" alt="AIP" /></a>
+            <a class="three_center" href="http://www.city.fukuoka.lg.jp/" target="_blank"><img src="/view/css/logo_fukuoka_city.png" alt="福岡市" /></a>
             <p class="copyright">
                 <span>COPYRIGHT&copy; LOCAL GOOD FUKUOKA. Some rights reserved.</span>
             </p>
