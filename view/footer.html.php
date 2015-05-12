@@ -51,7 +51,7 @@
         <div class="foot_bar_inner cf">
             <a class="three_left" href="http://sociofund.org/" target="_blank"><img src="/view/css/socio_fund_logo.jpg" alt="ソシオファンド北九州" /></a>
             <p class="copyright">
-                <span>COPYRIGHT&copy; Local Good KITAQ. Some rights reserved.</span>
+                <span>COPYRIGHT&copy; LOCAL GOOD KITAQ. Some rights reserved.</span>
             </p>
             <div class="platoniq">
                 <?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>
