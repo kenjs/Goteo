@@ -41,8 +41,10 @@ elseif(strstr($_SERVER['REQUEST_URI'],'project')):
     } else {
         $description = $this['project']->description;
     }
-    foreach ($project->gallery as $image) :
+    foreach ($this['project']->gallery as $image) :
+        if(method_exists($image, 'getLink')){
         $gallery = $image->getLink(580, 580);
+        }
     endforeach;
     $ogmeta = array(
         'title' => $this['project']->name,
@@ -127,19 +129,18 @@ $blog_post = strpos($ogmeta['url'], '/updates');
         <meta property="og:description" content="<?php echo mb_substr($blog_post->posts[$blog_key]->text, 0, 100).'...'; ?>" />
         <meta property="og:url" content="<?php echo htmlspecialchars($ogmeta['url']) ?>" />
         <meta property="og:locale" content="ja_JP" />
-        <meta property="fb:app_id" content="<?= OAUTH_FACEBOOK_ID ?>" />
+        <meta property="fb:app_id" content="<? if(defined('OAUTH_FACEBOOK_ID')){echo OAUTH_FACEBOOK_ID;} ?>" />
     <?php else : ?>
         <meta property="og:title" content="<?php echo $ogmeta['title'] ?>" />
-        <meta property="og:description" content="<?php echo GOTEO_META_DESCRIPTION ?>" />
-        <meta property="og:image" content="<?php echo SITE_URL ?>/view/css/header/logo.png" />
-        <meta property="og:url" content="<?php echo SITE_URL ?>" />
+        <meta property="og:description" content="<?php if(defined('GOTEO_META_DESCRIPTION')){echo GOTEO_META_DESCRIPTION;} ?>" />
+        <meta property="og:image" content="<?php if(defined('SITE_URL')){echo SITE_URL;} ?>/view/css/header/logo.png" />
+        <meta property="og:url" content="<?php if(defined('SITE_URL')){echo SITE_URL;} ?>" />
         <meta property="og:locale" content="ja_JP" />
-        <meta property="fb:app_id" content="<?= OAUTH_FACEBOOK_ID ?>" />
+        <meta property="fb:app_id" content="<? if(defined('OAUTH_FACEBOOK_ID')){echo OAUTH_FACEBOOK_ID;} ?>" />
     <?php endif; ?>
 
 <?
     $uri = $_SERVER['REQUEST_URI'];
-    //var_dump($uri);
 ?>
 
     <link rel="stylesheet" type="text/css" href="<?php echo SRC_URL ?>/view/css/csstidyonline.results.css" />
@@ -207,7 +208,7 @@ $blog_post = strpos($ogmeta['url'], '/updates');
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=<?= OAUTH_FACEBOOK_ID ?>&version=v2.0";
+        js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=<? if(defined('OAUTH_FACEBOOK_ID')){echo OAUTH_FACEBOOK_ID;} ?>&version=v2.0";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 <?php
