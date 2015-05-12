@@ -76,17 +76,16 @@ No se encuentra el archivo de configuraci&oacute;n <strong>local-settings.php</s
 Puedes usar el siguiente c&oacute;digo modificado con los credenciales adecuados.<br />
 <pre>
 &lt;?php
+
+mb_language("Japanese");
+mb_internal_encoding("UTF-8");
+
 // Metadata
 define('GOTEO_META_TITLE', '--meta-title--');
 define('GOTEO_META_DESCRIPTION', '--meta-description--');
 define('GOTEO_META_KEYWORDS', '--keywords--');
 define('GOTEO_META_AUTHOR', '--author--');
 define('GOTEO_META_COPYRIGHT', '--copyright--');
-
-//Amazon Web Services Credentials
-define("AWS_KEY", "--------------");
-define("AWS_SECRET", "----------------------------------");
-define("AWS_REGION", "-----------");
 
 //Mail management: ses (amazon), phpmailer (php library)
 define("MAIL_HANDLER", "phpmailer");
@@ -99,6 +98,9 @@ define('GOTEO_DB_CHARSET', 'UTF-8');
 define('GOTEO_DB_SCHEMA', 'db-schema');
 define('GOTEO_DB_USERNAME', 'db-username');
 define('GOTEO_DB_PASSWORD', 'db-password');
+
+// LocalGood Common Authentication Database
+define('COMMON_AUTH_DB_SCHEMA', 'db_auth');
 
 // Mail
 define('GOTEO_MAIL_FROM', 'localgood@yokohamalab.jp');
@@ -140,6 +142,11 @@ define('GOTEO_GETTEXT_BYPASS_CACHING', true);
 define('SITE_URL', 'http://yokohama.localgood.jp/'); // endpoint url
 define('SRC_URL', 'http://yokohama.localgood.jp/');  // host for statics
 define('SEC_URL', 'http://yokohama.localgood.jp/');  // with SSL certified
+define('LOCALGOOD_WP_BASE_URL', '----wp site address----');
+define('LOG_PATH', '/var/www/html/localgood/cf.fukuoka.localgood.jp.il3c.com/htdocs/logs/');
+define('LG_INTEGRATION_URL', '----integration site url----');
+define('LG_NAME', 'LOCAL GOOD FUKUOKA');
+
 
 //Sessions
 //session handler: php, dynamodb
@@ -207,6 +214,11 @@ define('OAUTH_LINKEDIN_SECRET', '-----------------------------------'); //
 // Un secreto inventado cualquiera para encriptar los emails que sirven de secreto en openid
 define('OAUTH_OPENID_SECRET','-----------------------------------');
 
+//SNS link
+define('LG_FACEBOOK_PAGE', '----facebook url----');
+define('LG_TWITTER', '----twitter url----');
+define('LG_GOOGLE_PLUS', '----google plus url----');
+
 // recaptcha ( to be used in /contact form )
 define('RECAPTCHA_PUBLIC_KEY','-----------------------------------');
 define('RECAPTCHA_PRIVATE_KEY','-----------------------------------');
@@ -218,6 +230,42 @@ define('GOTEO_ANALYTICS_TRACKER', "<script type=\"text/javascript\">
 __your_tracking_js_code_goes_here___
 </script>
 ");
+
+/****************************************************
+AWS
+****************************************************/
+//Amazon Web Services Credentials
+define("AWS_KEY", "--------------");
+define("AWS_SECRET", "----------------------------------");
+define("AWS_REGION", "-----------");
+
+// Credentials SES
+define('AWS_SES_SOURCE', '--------------');
+define('AWS_SES_ACCESS', '--------------');
+define('AWS_SES_SECERET', '--------------');
+define('AWS_SES_CHARSET', 'UTF-8');
+
+/****************************************************
+AXES
+ ****************************************************/
+define('AXES_CLIENTIP', '----------');
+
+/****************************************************
+CESIUM
+ ****************************************************/
+define('LG_EARTHVIEW', 'http://map.yokohama.localgood.jp.il3c.com/');
+
+/****************************************************
+Change view type
+ ****************************************************/
+\$ua = \$_SERVER['HTTP_USER_AGENT'];
+if(strpos(\$ua, 'LocalGood/iOS (Yokohama)') === 0 || strpos(\$ua, 'LocalGood/Android (Yokohama)') === 0 ) {
+    define('PC_VIEW', false);
+    define('VIEW_PATH', 'view/m');
+} else {
+    define('PC_VIEW', true);
+    define('VIEW_PATH', 'view');
+}
 ?&gt;
 </pre>
 EOF
@@ -234,4 +282,3 @@ else {
 }
 
 $ua = $_SERVER['HTTP_USER_AGENT'];
-

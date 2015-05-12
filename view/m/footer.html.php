@@ -166,7 +166,7 @@ jQuery(document).ready(function($) {
             </div>
         </div>
         <p class="copyright">
-            <span>&copy; Local Good YOKOHAMA. Some rights reserved.</span>
+            <span>&copy; LOCAL GOOD YOKOHAMA. Some rights reserved.</span>
         </p>
 
         <div class="platoniq">
