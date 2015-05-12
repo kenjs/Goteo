@@ -75,7 +75,7 @@ if (isset($this['investor']) && is_object($this['investor'])) {
         ?>
 
         <?php if (!empty($project->gallery) && (current($project->gallery) instanceof Image)): ?>
-        <a href="<?php echo SITE_URL ?>/project/<?php echo $project->id ?>"<?php echo $blank; ?>><img alt="<?php echo $project->name ?>" src="<?php echo current($project->gallery)->getLink(260, 135, true) ?>" /></a>
+        <a href="<?php echo SITE_URL ?>/project/<?php echo $project->id ?>"<?php echo $blank; ?>><img alt="<?php echo $project->name ?>" src="<?php echo current($project->gallery)->getLink(500, 285, true) ?>" /></a>
         <?php endif ?>
     </div>
 
