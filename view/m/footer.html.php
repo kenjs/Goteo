@@ -164,7 +164,7 @@ jQuery(document).ready(function($) {
             </div>
         </div>
         <p class="copyright">
-            <span>&copy; Local Good FUKUOKA. Some rights reserved.</span>
+            <span>&copy; LOCAL GOOD FUKUOKA. Some rights reserved.</span>
         </p>
 
         <div class="platoniq">

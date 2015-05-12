@@ -53,7 +53,7 @@
             <a class="three_left" href="http://npo-aip.or.jp/" target="_blank"><img src="/view/css/logo_aip.jpg" alt="AIP" /></a>
             <a class="three_center" href="http://www.city.fukuoka.lg.jp/" target="_blank"><img src="/view/css/logo_fukuoka_city.jpg" alt="福岡市" /></a>
             <p class="copyright">
-                <span>COPYRIGHT&copy; Local Good FUKUOKA. Some rights reserved.</span>
+                <span>COPYRIGHT&copy; LOCAL GOOD FUKUOKA. Some rights reserved.</span>
             </p>
             <div class="platoniq">
                 <?php // You are not allowed to remove this links. If so, you'll make a legal fault regarding the release license. You can read it at https://github.com/Goteo/Goteo/blob/master/GNU-AGPL-3.0 ?>
