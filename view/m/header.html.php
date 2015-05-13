@@ -25,7 +25,6 @@ use Goteo\Library\Text,
 
 <div id="header" class="header">
     <h1><?php echo Text::get('regular-main-header'); ?></h1>
-    <p class="to_integration_site"><a href="<?= LG_INTEGRATION_URL ?>">LOCAL GOOD全国版トップページ</a></p>
     <div class="nav_wrapper">
         <h1><a href="<?= LOCALGOOD_WP_BASE_URL ?>"><img src="/view/css/header/logo.png" alt=""/></a></h1>
         <div class="nav_inner viewport">
@@ -38,7 +37,6 @@ use Goteo\Library\Text,
                 </li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/data/">データを見る</a></li>
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/posts_archive/">活動を知る</a></li>
-
                 <li>
                     <a href="/user/login/">支援する</a>
                     <ul class="sub">
@@ -47,6 +45,7 @@ use Goteo\Library\Text,
                         <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/skills/">スキルを活かす</a></li>
                     </ul>
                 </li>
+                <li><a href="<?= LG_INTEGRATION_URL ?>">LOCAL GOOD全国版トップページ</a></li>
             </ul>
         </div>
     </div>
