@@ -53,6 +53,7 @@ namespace Goteo\Model {
             $linkedin,
             $created,
             $modified,
+            $home,
             $interests = array(),
             $skills = array(),
             $webs = array(),
@@ -594,13 +595,14 @@ namespace Goteo\Model {
                     LEFT JOIN user_lang
                         ON  user_lang.id = user.id
                         AND user_lang.lang = :lang
+                        AND user.home = :place_name
                     WHERE user.id = :id
                     ";
 
-                $query = static::query($sql, array(':id' => $id, ':lang' => $lang));
+                $query = static::query($sql, array(':id' => $id, ':lang' => $lang, ':place_name' => LG_PLACE_NAME));
                 $user = $query->fetchObject(__CLASS__);
 
-                if (!$user instanceof  \Goteo\Model\User) {
+                if (!$user instanceof  \Goteo\Model\User ) {
                     return false;
                 }
 
@@ -658,7 +660,7 @@ namespace Goteo\Model {
          * @param  string $node    true|false
          * @return mixed            Array de objetos de usuario activos|todos.
          */
-        public static function getAll ($filters = array()) {
+        public static function getAll ($filters = array(), $home = LG_PLACE_NAME) {
 
             $values = array();
 
@@ -783,6 +785,14 @@ namespace Goteo\Model {
                 break;
             }
 
+            // $homeで絞り込んだ状態でユーザーを返す
+            $sqlInner = '';
+            if (!empty($home)){
+                $values[':user_places'] = $home;
+                $sqlInner = 'INNER JOIN user_login_log ON id = user_login_log.user';
+                $sqlFilter = 'AND user_login_log.node = :user_places ' . $sqlFilter;
+            }
+
             $sql = "SELECT
                         id,
                         name,
@@ -792,12 +802,15 @@ namespace Goteo\Model {
                         DATE_FORMAT(created, '%d/%m/%Y %H:%i:%s') as register_date
                         $sqlCR
                     FROM user
+                    $sqlInner
                     WHERE id IS NOT NULL
                         $sqlFilter
                    $sqlOrder
                     LIMIT 999
                     ";
-            
+
+
+
             $query = self::query($sql, $values);
             foreach ($query->fetchAll(\PDO::FETCH_CLASS, __CLASS__) as $user) {
 

@@ -469,7 +469,7 @@ namespace Goteo\Controller\Admin {
                 }
                 $project = Model\Project::get($invest->project);
                 $userData = Model\User::get($invest->user);
-                
+
                 switch ($invest->method) {
                     case 'paypal':
                         // a ver si tiene cuenta paypal
