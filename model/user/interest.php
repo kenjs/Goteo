@@ -38,7 +38,12 @@ namespace Goteo\Model\User {
 	 	public static function get ($id) {
             $array = array ();
             try {
-                $query = static::query("SELECT interest FROM user_interest WHERE user = ?", array($id));
+                $sqlInnerAdd = "INNER JOIN user_login_log ON user_interest.user = user_login_log.user";
+                $sqlWhereAdd = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
+//                var_dump("SELECT interest FROM user_interest $sqlInnerAdd WHERE user_interest.user = ? $sqlWhere");
+//                exit;
+
+                $query = static::query("SELECT interest FROM user_interest $sqlInnerAdd WHERE user_interest.user = ? $sqlWhereAdd", array($id));
                 $interests = $query->fetchAll();
                 foreach ($interests as $int) {
                     $array[$int[0]] = $int[0];
@@ -71,12 +76,21 @@ namespace Goteo\Model\User {
                         AND category_lang.lang = :lang
 
                         ";
+
+
                 if (!empty($user)) {
+
+                    $sqlInnerAdd = "INNER JOIN user_login_log ON user_interest.user = user_login_log.user";
+                    $sqlWhereAdd = "WHERE user_login_log.node = '" . LG_PLACE_NAME . "'";
+
                     $sql .= "INNER JOIN user_interest
                                 ON  user_interest.interest = category.id
                                 AND user_interest.user = :user
+                                $sqlInnerAdd
+                                $sqlWhereAdd
                                 ";
                     $values[':user'] = $user;
+
                 }
                 $sql .= "ORDER BY name ASC
                         ";
@@ -161,8 +175,11 @@ namespace Goteo\Model\User {
 
                 $values = array(':me'=>$user);
 
-               $sql = "SELECT 
-                            DISTINCT(user_interest.user) as id, 
+                $sqlInnerAdd = "INNER JOIN user_login_log ON user_interest.user = user_login_log.user";
+                $sqlWhereAdd = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
+
+                $sql = "SELECT
+                            DISTINCT(user_interest.user) as id,
                             user.name as name,
                             user.avatar as avatar
                         FROM user_interest
@@ -172,17 +189,20 @@ namespace Goteo\Model\User {
                         INNER JOIN user
                             ON  user.id = user_interest.user
                             AND (user.hide = 0 OR user.hide IS NULL)
+                        $sqlInnerAdd
                         WHERE user_interest.user != :me
+                        $sqlWhereAdd
                         ";
-               if (!empty($category)) {
+                if (!empty($category)) {
                    $sql .= "AND user_interest.interest = :interest
                        ";
                    $values[':interest'] = $category;
-               }
-               $sql .= " ORDER BY RAND()";
-               if (!empty($limit)) {
+                }
+                $sql .= " ORDER BY RAND()";
+                if (!empty($limit)) {
                    $sql .= " LIMIT $limit";
-               }
+                }
+
                 $query = static::query($sql, $values);
                 $shares = $query->fetchAll(\PDO::FETCH_ASSOC);
                 foreach ($shares as $share) {
@@ -217,12 +237,17 @@ namespace Goteo\Model\User {
 
                 $values = array(':interest'=>$category);
 
+                $sqlInnerAdd = "INNER JOIN user_login_log ON user.id = user_login_log.user";
+                $sqlWhereAdd = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
+
                $sql = "SELECT DISTINCT(user_interest.user) as id
                         FROM user_interest
                         INNER JOIN user
                             ON  user.id = user_interest.user
                             AND (user.hide = 0 OR user.hide IS NULL)
+                        $sqlInnerAdd
                         WHERE user_interest.interest = :interest
+                          $sqlWhereAdd
                         ";
 
                 $query = static::query($sql, $values);

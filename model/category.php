@@ -59,6 +59,9 @@ namespace Goteo\Model {
 
             $list = array();
 
+            $sqlInnerAdd = "INNER JOIN user_login_log ON user_interest.user = user_login_log.user";
+            $sqlWhereAdd = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
+
             $sql = "
                 SELECT
                     category.id as id,
@@ -72,7 +75,9 @@ namespace Goteo\Model {
                     (   SELECT
                             COUNT(user_interest.user)
                         FROM user_interest
+                          $sqlInnerAdd
                         WHERE user_interest.interest = category.id
+                        $sqlWhereAdd
                     ) as numUser,
                     category.order as `order`
                 FROM    category

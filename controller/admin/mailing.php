@@ -75,7 +75,6 @@ namespace Goteo\Controller\Admin {
                     $sqlInner  = '';
                     $sqlFilter = '';
 
-
                     // cargamos los destiantarios
                     //----------------------------
                     // por tipo de usuario
@@ -178,6 +177,9 @@ namespace Goteo\Controller\Admin {
                         }
                     }
 
+                    $sqlFilter .= " AND user.home = :user_home";
+                    $values[':user_home'] = LG_PLACE_NAME;
+
                     $sql = "SELECT
                                 user.id as id,
                                 user.id as user,
@@ -194,6 +196,9 @@ namespace Goteo\Controller\Admin {
 
 //                        die('<pre>'.$sql . '<br />'.print_r($values, 1).'</pre>');
 
+//                    var_dump($sql);
+//                    exit;
+
                     if ($query = Model\User::query($sql, $values)) {
                         foreach ($query->fetchAll(\PDO::FETCH_OBJ) as $receiver) {
                             $_SESSION['mailing']['receivers'][$receiver->id] = $receiver;
@@ -201,6 +206,8 @@ namespace Goteo\Controller\Admin {
                     } else {
                         Message::Error(Text::get('SQLの実行に失敗しました！') . '<br />' . $sql . '<pre>'.print_r($values, 1).'</pre>');
                     }
+
+//                    exit;
 
                     // si no hay destinatarios, salta a la lista con mensaje de error
                     if (empty($_SESSION['mailing']['receivers'])) {

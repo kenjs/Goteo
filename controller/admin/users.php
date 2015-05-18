@@ -393,7 +393,8 @@ namespace Goteo\Controller\Admin {
                 case 'list':
                 default:
                     if (!empty($filters['filtered'])) {
-                        $users = Model\User::getAll($filters, $node);
+//                        $users = Model\User::getAll($filters, $node);
+                        $users = Model\User::getAll($filters);
                     } else {
                         $users = array();
                     }
