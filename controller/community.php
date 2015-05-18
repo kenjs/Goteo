@@ -59,6 +59,7 @@ namespace Goteo\Controller {
                         $shares[$catId] = $gente;
                     }
 
+
                     $viewData['category'] = $category;
                     $viewData['categories'] = $categories;
                     $viewData['shares'] = $shares;

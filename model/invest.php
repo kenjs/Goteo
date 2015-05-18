@@ -271,6 +271,9 @@ namespace Goteo\Model {
                 $values[':date_until'] = $filters['date_until'];
             }
 
+            $sqlInnerAdd = "INNER JOIN user_login_log ON invest.user = user_login_log.user";
+            $sqlFilter .= " AND user_login_log.node = '" . LG_PLACE_NAME ."'";
+
             $sql = "SELECT
                         invest.id as id,
                         invest.user as user,
@@ -290,6 +293,7 @@ namespace Goteo\Model {
                     FROM invest
                     INNER JOIN project
                         ON invest.project = project.id
+                    $sqlInnerAdd
                     LEFT JOIN user
                         ON invest.admin = user.id
                     WHERE invest.project IS NOT NULL
@@ -300,7 +304,6 @@ namespace Goteo\Model {
             if ($limited > 0 && is_numeric($limited)) {
                 $sql .= "LIMIT $limited";
             }
-            
             $query = self::query($sql, $values);
             foreach ($query->fetchAll(\PDO::FETCH_CLASS) as $item) {
                 $list[$item->id] = $item;
@@ -537,6 +540,9 @@ namespace Goteo\Model {
             $list = array();
             $values = array();
 
+            $sqlInnerAdd = "INNER JOIN user_login_log ON invest.user = user_login_log.user";
+            $sqlWhereAdd .= " AND user_login_log.node = '" . LG_PLACE_NAME ."'";
+
             $sql = "
                 SELECT
                     user.id as id,
@@ -544,6 +550,7 @@ namespace Goteo\Model {
                 FROM    user
                 INNER JOIN invest
                     ON user.id = invest.user
+                $sqlInnerAdd
                 ";
             if ($node != \GOTEO_NODE) {
                 $sql .= "
@@ -557,6 +564,8 @@ namespace Goteo\Model {
                 $sql .= "WHERE (user.hide = 0 OR user.hide IS NULL)
                     ";
             }
+                $sql .= $sqlWhereAdd;
+
                 $sql .= "
                     GROUP BY user.id
                     ORDER BY user.name ASC
