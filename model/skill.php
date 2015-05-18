@@ -41,6 +41,9 @@ namespace Goteo\Model {
 
             $list = array();
 
+            $sqlInnerAdd = "INNER JOIN user_login_log ON user_skill.user = user_login_log.user";
+            $sqlWhereAdd = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
+
             $sql = "
                 SELECT
                     skill.id as id,
@@ -54,7 +57,9 @@ namespace Goteo\Model {
                     (   SELECT
                             COUNT(user_skill.user)
                         FROM user_skill
+                        $sqlInnerAdd
                         WHERE user_skill.skill = skill.id
+                          $sqlWhereAdd
                     ) as numUser,
                     skill.order as `order`,
                     skill.parent_skill_id as parent_skill_id

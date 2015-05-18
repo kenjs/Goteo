@@ -69,32 +69,39 @@ namespace Goteo\Controller {
                 if (false !== ($user = (\Goteo\Model\User::login($username, $password)))) {
                     $_SESSION['user'] = $user;
 
-                    // creamos una cookie
-                    setcookie("goteo_user", $user->id, time() + 3600 * 24 * 365);
-                    
-                    if (!empty($user->lang)) {
-                        $_SESSION['lang'] = $user->lang;
-                    }
-                    unset($_SESSION['admin_menu']);
-                    if (isset($user->roles['admin'])) {
-                        // (Nodesys)
-                    } else {
-                        unset($_SESSION['admin_node']);
-                    }
-                    if (!empty($_REQUEST['return'])) {
-                        throw new Redirection($_REQUEST['return']);
-                    } elseif (!empty($_SESSION['jumpto'])) {
-                        $jumpto = $_SESSION['jumpto'];
-                        unset($_SESSION['jumpto']);
-                        throw new Redirection($jumpto);
-                    } elseif (isset($user->roles['admin']) || isset($user->roles['superadmin'])) {
-                        if(VIEW_PATH === 'view/m'){
+                    if (!empty($user->home) && $user->home == LG_PLACE_NAME){
+
+                        // creamos una cookie
+                        setcookie("goteo_user", $user->id, time() + 3600 * 24 * 365);
+
+                        if (!empty($user->lang)) {
+                            $_SESSION['lang'] = $user->lang;
+                        }
+                        unset($_SESSION['admin_menu']);
+                        if (isset($user->roles['admin'])) {
+                            // (Nodesys)
+                        } else {
+                            unset($_SESSION['admin_node']);
+                        }
+                        if (!empty($_REQUEST['return'])) {
+                            throw new Redirection($_REQUEST['return']);
+                        } elseif (!empty($_SESSION['jumpto'])) {
+                            $jumpto = $_SESSION['jumpto'];
+                            unset($_SESSION['jumpto']);
+                            throw new Redirection($jumpto);
+                        } elseif (isset($user->roles['admin']) || isset($user->roles['superadmin'])) {
+                            if(VIEW_PATH === 'view/m'){
+                                throw new Redirection('/dashboard');
+                            }
+                            throw new Redirection('/admin');
+                        } else {
                             throw new Redirection('/dashboard');
                         }
-                        throw new Redirection('/admin');
+
                     } else {
-                        throw new Redirection('/dashboard');
+                        Message::Error(Text::get('login-fail'));
                     }
+
                 } else {
                     Message::Error(Text::get('login-fail'));
                 }
@@ -444,7 +451,7 @@ namespace Goteo\Controller {
 
             $user = Model\User::get($id, LANG);
 
-            if (!$user instanceof Model\User || $user->hide) {
+            if (!$user instanceof Model\User || $user->hide || ($user->home != LG_PLACE_NAME) ) {
                 throw new Error('404', Text::html('fatal-error-user'));
             }
 
