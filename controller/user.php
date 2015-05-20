@@ -69,7 +69,7 @@ namespace Goteo\Controller {
                 if (false !== ($user = (\Goteo\Model\User::login($username, $password)))) {
                     $_SESSION['user'] = $user;
 
-                    if (!empty($user->home) && $user->home == LG_PLACE_NAME){
+//                    if (!empty($user->home) && $user->home == LG_PLACE_NAME){
 
                         // creamos una cookie
                         setcookie("goteo_user", $user->id, time() + 3600 * 24 * 365);
@@ -78,7 +78,7 @@ namespace Goteo\Controller {
                             $_SESSION['lang'] = $user->lang;
                         }
                         unset($_SESSION['admin_menu']);
-                        if (isset($user->roles['admin'])) {
+                        if (isset($user->roles['admin'])|| isset($user->roles['localadmin'])) {
                             // (Nodesys)
                         } else {
                             unset($_SESSION['admin_node']);
@@ -89,7 +89,7 @@ namespace Goteo\Controller {
                             $jumpto = $_SESSION['jumpto'];
                             unset($_SESSION['jumpto']);
                             throw new Redirection($jumpto);
-                        } elseif (isset($user->roles['admin']) || isset($user->roles['superadmin'])) {
+                        } elseif (isset($user->roles['admin']) || isset($user->roles['localadmin']) || isset($user->roles['superadmin'])) {
                             if(VIEW_PATH === 'view/m'){
                                 throw new Redirection('/dashboard');
                             }
@@ -98,9 +98,9 @@ namespace Goteo\Controller {
                             throw new Redirection('/dashboard');
                         }
 
-                    } else {
-                        Message::Error(Text::get('login-fail'));
-                    }
+//                    } else {
+//                        Message::Error(Text::get('login-fail'));
+//                    }
 
                 } else {
                     Message::Error(Text::get('login-fail'));
