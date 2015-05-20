@@ -385,6 +385,7 @@ namespace Goteo\Controller {
             } elseif (isset($_SESSION['user']->roles['admin'])) {
                 $menu = self::setMenu('admin', $_SESSION['user']->id);
             } else {
+                // localadminもsuperadminと同様
                 $menu = self::setMenu('superadmin', $_SESSION['user']->id);
             }
 
@@ -615,6 +616,7 @@ namespace Goteo\Controller {
 
                     break;
                 case 'superadmin':
+                case 'localadmin':
                     $menu = array(
                         'contents' => array(
                             'label' => $labels['texts'],

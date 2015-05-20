@@ -177,8 +177,10 @@ namespace Goteo\Controller\Admin {
                         }
                     }
 
-                    $sqlFilter .= " AND user.home = :user_home";
-                    $values[':user_home'] = LG_PLACE_NAME;
+                    if (!isset($_SESSION['user']->roles['root'])){
+                        $sqlFilter .= " AND user.home = :user_home";
+                        $values[':user_home'] = LG_PLACE_NAME;
+                    }
 
                     $sql = "SELECT
                                 user.id as id,
