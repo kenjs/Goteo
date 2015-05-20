@@ -81,7 +81,15 @@ namespace Goteo\Controller\Admin {
                 "noproject_owner" => array (
                     'sql' => "DELETE FROM user_role WHERE role_id = 'project_owner' AND user_id = :user",
                     'log' => Text::_("Quitado de project owner")
-                    )
+                    ),
+                "localadmin" => array (
+                    'sql' => "REPLACE INTO user_role (user_id, role_id) VALUES (:user, 'localadmin')",
+                    'log' => Text::_("Hecho localadmin")
+                ),
+                "nolocaladmin" => array (
+                    'sql' => "DELETE FROM user_role WHERE role_id = 'localadmin' AND user_id = :user",
+                    'log' => Text::_("Quitado de localadmin")
+                )
             );
         }
         
@@ -199,10 +207,10 @@ namespace Goteo\Controller\Admin {
 
                     // operación y acción para el feed
                     $mngSa = static::_manageSubAct();
-                    
+
                     $sql = $mngSa[$subaction]['sql'];
                     $log_action = $mngSa[$subaction]['log'];
-                    
+
                     if (!empty($sql)) {
 
                         $user = Model\User::getMini($id);
@@ -394,7 +402,12 @@ namespace Goteo\Controller\Admin {
                 default:
                     if (!empty($filters['filtered'])) {
 //                        $users = Model\User::getAll($filters, $node);
-                        $users = Model\User::getAll($filters);
+                        if (isset($_SESSION['user']->roles['root'])){
+                            $_home = '';
+                        } else {
+                            $_home = LG_PLACE_NAME;
+                        }
+                        $users = Model\User::getAll($filters, $_home);
                     } else {
                         $users = array();
                     }

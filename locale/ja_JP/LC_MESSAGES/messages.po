@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Goteo\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-13 11:12+0900\n"
-"PO-Revision-Date: 2015-05-15 15:16+0900\n"
+"PO-Revision-Date: 2015-05-20 19:58+0900\n"
 "Last-Translator: Masaki Ike <ike@info-lounge.jp>\n"
 "Language-Team: Goteo translations\n"
 "Language: ja_JP\n"
@@ -587,7 +587,7 @@ msgstr "サービス"
 
 #: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin.php:560
 msgid "Invest"
-msgstr ""
+msgstr "支援"
 
 #: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/accounts.php:116
 #, fuzzy
