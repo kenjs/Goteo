@@ -43,7 +43,7 @@ $filters = $this['filters'];
         <thead>
             <tr>
                 <td><!-- Edit --></td>
-                <th><?php echo Text::_("");?></th> <!-- title -->
+                <th><?//php echo Text::_("");?></th> <!-- title -->
                 <th><?php echo Text::_("Posición");?></th> <!-- order -->
                 <td><!-- Move up --></td>
                 <td><!-- Move down --></td>

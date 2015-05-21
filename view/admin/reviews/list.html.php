@@ -62,15 +62,15 @@ $filters = $this['filters'];
                     <tr>
                         <th width="30%"><?php echo Text::_("Proyecto"); ?></th> <!-- edit -->
                         <th width="20%"><?php echo Text::_("Creador"); ?></th> <!-- mailto -->
-                        <th width="5%">%</th> <!-- segun estado -->
-                        <th width="5%"><?php echo Text::_('Puntos'); ?></th> <!-- segun estado -->
-                        <th>
+                        <th width="7%">%</th> <!-- segun estado -->
+                        <th width="8%"><?php echo Text::_('Puntos'); ?></th> <!-- segun estado -->
+                        <th width="7%">
                             <!-- Iniciar revision si no tiene registro de revision -->
                             <!-- Editar si tiene registro -->
                         </th>
-                        <th><!-- Ver informe si tiene registro --></th>
-                        <th><!-- Cerar si abierta --></th>
-                        <th></th>
+                        <th width="10%"><!-- Ver informe si tiene registro --></th>
+                        <th width="8%"><!-- Cerar si abierta --></th>
+                        <th width="12%"></th>
                     </tr>
                 </thead>
 

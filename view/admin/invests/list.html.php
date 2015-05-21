@@ -88,16 +88,16 @@ $filters = $this['filters'];
     <p><strong><?php echo Text::_('TOTAL'); ?>:</strong>  <?php echo number_format($Total, 0, '', '.') ?> 円</p>
     <p><?php echo Text::_("OJO! Resultado limitado a 999 registros como máximo."); ?></p>
     
-    <table width="100%">
+    <table class="invests_table" width="100%">
         <thead>
             <tr>
-                <th></th>
-                <th><?php echo Text::_("Aporte ID"); ?></th>
-                <th><?php echo Text::_("Fecha"); ?></th>
-                <th><?php echo Text::_("Cofinanciador"); ?></th>
-                <th><?php echo Text::_("Proyecto"); ?></th>
-                <th><?php echo Text::_("Estado"); ?></th>
-                <th><?php echo Text::_("Metodo"); ?></th>
+                <th class="detail"></th>
+                <th class="id"><?php echo Text::_("Aporte ID"); ?></th>
+                <th class="date"><?php echo Text::_("Fecha"); ?></th>
+                <th class="investor"><?php echo Text::_("Cofinanciador"); ?></th>
+                <th class="project"><?php echo Text::_("Proyecto"); ?></th>
+                <th class="status"><?php echo Text::_("Estado"); ?></th>
+                <th class="payment"><?php echo Text::_("Metodo"); ?></th>
                 <th><?php echo Text::_("Estado aporte"); ?></th>
                 <th><?php echo Text::_("Importe"); ?></th>
                 <th><?php echo Text::_("Extra"); ?></th>
@@ -109,15 +109,15 @@ $filters = $this['filters'];
             <tr>
                 <td><a href="/admin/invests/details/<?php echo $invest->id ?>">[<?php echo Text::_("Detalles"); ?>]</a></td>
                 <td><?php echo $invest->id ?></td>
-                <td><?php echo $invest->invested ?></td>
+                <td><?php echo (!empty($invest->invested))?date('y/m/d',strtotime($invest->invested)):''; ?></td>
                 <td><?php echo $this['users'][$invest->user] ?></td>
                 <td><?php echo $this['projects'][$invest->project]; if (!empty($invest->campaign)) echo '<br />('.$this['campaigns'][$invest->campaign].')'; ?></td>
                 <td><?php echo $this['status'][$invest->status] ?></td>
                 <td><?php echo $this['methods'][$invest->method] ?></td>
                 <td><?php echo $this['investStatus'][$invest->investStatus] ?></td>
-                <td><?php echo $invest->amount ?></td>
-                <td><?php echo $invest->charged ?></td>
-                <td><?php echo $invest->returned ?></td>
+                <td><?php echo number_format(intval($invest->amount)) ?></td>
+                <td><?php echo (!empty($invest->charged))?date('y/m/d',strtotime($invest->charged)):''; ?></td>
+                <td><?php echo (!empty($invest->returned))?date('y/m/d',strtotime($invest->returned)):''; ?></td>
                 <td>
                     <?php if ($invest->anonymous == 1)  echo Text::_("Anónimo").' ' ?>
                     <?php if ($invest->resign == 1)  echo Text::_("Donativo").' ' ?>

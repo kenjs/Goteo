@@ -206,8 +206,8 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
                 <td><a href="/user/profile/<?php echo $user->id; ?>" target="_blank" <?php echo ($adminNode != 'goteo') ? 'style="color: green;" title="Admin nodo '.$adminNode.'"' : 'title="Ver perfil público"'; ?>><?php echo substr($user->name, 0, 20); ?></a></td>
                 <td><strong><?php echo substr($user->id, 0, 20); ?></strong></td>
                 <td><a href="mailto:<?php echo $user->email; ?>"><?php echo $user->email; ?></a></td>
-                <td><?php echo $user->nprojs; ?></td>
-                <td><?php echo \amount_format($user->namount) . Text::_('yen'); ?> </td>
+                <td class="pj_count"><?php echo $user->nprojs; ?></td>
+                <td class="admin_amount"><?php echo \amount_format($user->namount) . Text::_('yen'); ?> </td>
                 <td><?php echo date('Y/m/d H:i:s', strtotime(preg_replace('/\//', '-', $user->register_date))); ?></td>
             </tr>
             <tr class="record2">
@@ -229,6 +229,7 @@ $pagedResults = new \Paginated($users, 20, isset($_GET['page']) ? $_GET['page'] 
                     <?php echo $user->admin ? Text::_('Admin') : ''; ?>
                     <?php echo $user->manager ? Text::_('Gestor') : ''; ?>
                     <?php echo $user->vip ? Text::_('VIP') : ''; ?>
+                    <?php echo $user->localadmin ? Text::_('LocalAdmin') : ''; ?>
                 </td>
             </tr>
             <?php endwhile; ?>
