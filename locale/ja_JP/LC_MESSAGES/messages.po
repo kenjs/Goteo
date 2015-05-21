@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Goteo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-13 11:12+0900\n"
-"PO-Revision-Date: 2015-05-20 19:58+0900\n"
+"POT-Creation-Date: 2015-05-20 20:40+0900\n"
+"PO-Revision-Date: 2015-05-20 20:40+0900\n"
 "Last-Translator: Masaki Ike <ike@info-lounge.jp>\n"
 "Language-Team: Goteo translations\n"
 "Language: ja_JP\n"
@@ -555,37 +555,37 @@ msgstr "レベルを編集"
 msgid "Admin"
 msgstr "管理者"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin.php:554
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin.php:555
 msgid "Contenidos"
 msgstr "コンテンツ"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin.php:555
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:421
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin.php:556
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:434
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/home.php:54
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/index.html.php:74
 msgid "Proyectos"
 msgstr "プロジェクト"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin.php:556
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin.php:557
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/index.html.php:75
 msgid "Usuarios"
 msgstr "ユーザー"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin.php:557
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin.php:558
 #: /Users/m454k1/Sites/lg_yokohama_goteo/controller/translate.php:535
 #: /Users/m454k1/Sites/lg_yokohama_goteo/library/text.php:329
 msgid "Portada"
 msgstr "表紙"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin.php:558
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin.php:559
 msgid "Textos y Traducciones"
 msgstr "コンテンツ/マスタ管理"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin.php:559
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin.php:560
 msgid "Servicios"
 msgstr "サービス"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin.php:560
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin.php:561
 msgid "Invest"
 msgstr "支援"
 
@@ -831,7 +831,7 @@ msgstr "課題カテゴリー名"
 msgid "Prioridad"
 msgstr "順番"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/mailing.php:169
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/mailing.php:168
 #, fuzzy
 msgid "Solo se filtran donantes si se envia \"A los: Cofinanciadores\""
 msgstr "共同金融に送信された場合にのみ、ドナーがフィルタリングされます。"
@@ -1218,52 +1218,60 @@ msgstr "翻訳者に追加する"
 msgid "Quitado de project owner"
 msgstr "翻訳者から外す"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:152
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:87
+msgid "Hecho localadmin"
+msgstr ""
+
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:91
+msgid "Quitado de localadmin"
+msgstr ""
+
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:160
 msgid "el email"
 msgstr "eメール"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:156
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:164
 msgid "la contraseña"
 msgstr "パスワード"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:164
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:265
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:172
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:273
 msgid "Operación sobre usuario"
 msgstr "ユーザー操作"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:214
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:222
 #, php-format
 msgid "El admin %s ha %s al usuario %s"
 msgstr "Admin %s has %s to user %s"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:257
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:265
 #, fuzzy
 msgid "Ha FALLADO cuando ha"
 msgstr "彼はときに失敗しました"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:257
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:265
 msgid "al usuario"
 msgstr "ユーザー"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:258
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:266
 #, php-format
 msgid "Al admin %s le ha <strong>FALLADO</strong> cuando ha %s al usuario %s"
 msgstr "Admin %s <strong>FAILED</strong> when %s to user %s"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:324
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:332
 msgid ""
 "No se ha seleccionado ningún idioma, este usuario tendrá problemas en su "
 "panel de traducción!"
 msgstr "翻訳言語が見つかりません。ユーザー設定を確認して下さい"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:356
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:364
 #, fuzzy, php-format
 msgid ""
 "El admin %s ha <span class=\"red\">movido</span> el usuario %s al nodo %s"
 msgstr ""
 "管理者%sはプロジェクト%sの<span class=\"red\">日付を変更</span>しました"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:358
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:366
 #, fuzzy, php-format
 msgid ""
 "Al admin %s le ha <span class=\"red\">fallado al mover</span> el usuario %s "
@@ -1271,46 +1279,46 @@ msgid ""
 msgstr ""
 "管理者%sはプロジェクト%sの<span class=\"red\">日付変更に失敗</span>しました"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:402
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:415
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/newsletter/detail.html.php:42
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/newsletter/list.html.php:88
 msgid "Activo"
 msgstr "アクティブ"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:403
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:416
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/newsletter/detail.html.php:43
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/newsletter/list.html.php:88
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/users/list.html.php:224
 msgid "Inactivo"
 msgstr "非アクティブ"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:409
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:422
 msgid "Solo usuario"
 msgstr "単一ユーザー"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:411
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:424
 msgid "Impulsores"
 msgstr "drivers"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:412
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:425
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/projects/list.html.php:173
 msgid "Cofinanciadores"
 msgstr "支援者"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:413
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:426
 msgid "Colaboradores"
 msgstr "支援者"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:417
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:430
 msgid "Fecha de alta"
 msgstr "登録日"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:418
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:431
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/users/add.html.php:32
 msgid "Nombre público"
 msgstr "公開名"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:419
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:432
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/users/add.html.php:28
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/users/edit.html.php:36
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/users/impersonate.html.php:34
@@ -1319,7 +1327,7 @@ msgstr "公開名"
 msgid "User ID"
 msgstr "ユーザーID"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:420
+#: /Users/m454k1/Sites/lg_yokohama_goteo/controller/admin/users.php:433
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/invests/report.html.php:89
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/invests/report.html.php:123
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/invests/report.html.php:143
@@ -1833,7 +1841,7 @@ msgstr "システム"
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/blog/post/comment.php:197
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/blog/post/tag.php:156
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/blog/post/tag.php:185
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/category.php:163
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/category.php:168
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/criteria.php:126
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/faq.php:207
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/glossary.php:167
@@ -1841,7 +1849,7 @@ msgstr "システム"
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/image.php:126
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/image.php:187
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/info.php:187
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:404
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:407
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/license.php:168
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/news.php:130
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/post.php:270
@@ -1850,12 +1858,12 @@ msgstr "システム"
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/review.php:99
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/review.php:487
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/review.php:506
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/skill.php:202
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/skill.php:207
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/sponsor.php:163
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/user.php:520
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user.php:1304
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user.php:1358
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/interest.php:122
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user.php:1306
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user.php:1360
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/interest.php:136
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/review.php:81
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/skill.php:107
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/translate.php:217
@@ -2243,7 +2251,7 @@ msgid "Error sql al grabar el nivel de meritocracia. "
 msgstr "SQLエラーが発生しました。"
 
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/banner.php:173
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:325
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:328
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/message.php:142
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/review.php:61
 msgid "Falta proyecto"
@@ -2261,10 +2269,10 @@ msgid "Falta texto"
 msgstr "テキストがありません"
 
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/blog/post/tag.php:122
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/category.php:130
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/category.php:135
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/icon.php:141
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/license.php:124
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/skill.php:163
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/skill.php:168
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/sponsor.php:112
 msgid "Falta nombre"
 msgstr "名前がありません"
@@ -2375,79 +2383,79 @@ msgstr "保留"
 msgid "Cumplidos"
 msgstr "達成済み"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:316
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:319
 msgid "La cantidad no es correcta"
 msgstr "数量が正しくありません"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:319
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:322
 msgid "Falta metodo de pago"
 msgstr "支払い方法がありません"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:322
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:325
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/message.php:139
 msgid "Falta usuario"
 msgstr "無効なユーザー"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:372
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:375
 msgid "No ha conseguido Id de aporte"
 msgstr "彼は、IDを指定するために失敗しました"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:454
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:457
 msgid "Envíanos esto: <br />"
 msgstr "これを送信"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1025
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1034
 msgid "Incompleto"
 msgstr "処理未完了"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1026
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1035
 msgid "Preaprobado"
 msgstr "決済待ち（予約中）"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1027
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1036
 msgid "Cobrado"
 msgstr "決済完了"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1028
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1037
 msgid "Cancelado"
 msgstr "キャンセル"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1029
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1038
 msgid "Pagado al proyecto"
 msgstr "支払われたプロジェクト"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1030
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1039
 msgid "Archivado (devuelto)"
 msgstr "プロジェクト不成立（未決済）"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1048
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1057
 msgid "AXES"
 msgstr "AXES"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1049
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1058
 msgid "Tarjeta"
 msgstr "カード"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1050
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1059
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/accounts/list.html.php:123
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/invests/list.html.php:124
 msgid "Manual"
 msgstr "現金"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1103
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1112
 msgid "El aporte PayPal"
 msgstr "PayPalでの支援"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1103
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1119
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1112
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1128
 msgid "no debería estar en estado '"
 msgstr "この状態であるべきではない"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1119
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1128
 msgid "El aporte TPV"
 msgstr "TPVによる支援"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1148
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1157
 msgid ""
 "ATENCION! En segunda ronda pero NO está marcada la fecha de pase a segunda "
 "ronda!"
@@ -2455,7 +2463,7 @@ msgstr ""
 "Admin %s has cancelled the contribution and preapproval of %s of %s via "
 "PayPal (id: %s) to project %s on date %s"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1344
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/invest.php:1353
 msgid "No se ha calculado bien el parametro $act_eq"
 msgstr "$act_eqはまだ計算されていません。"
 
@@ -2639,31 +2647,31 @@ msgstr "表示できるプロジェクトはありません"
 msgid "Algo ha fallado"
 msgstr "完了済み"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user.php:1113
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user.php:1115
 msgid "Admin Goteo"
 msgstr "Goteoの管理者"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user.php:1114
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user.php:1116
 msgid "El usuario "
 msgstr "ユーザー"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user.php:1114
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user.php:1116
 msgid " se da de baja"
 msgstr "精算済"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user.php:1115
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user.php:1117
 msgid "Han solicitado la baja para el mail"
 msgstr "参加者にメールを要請する"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user.php:1115
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user.php:1117
 msgid "que corresponde al usuario"
 msgstr "一致するユーザー"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user.php:1116
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user.php:1118
 msgid "y ha dejado el siguiente mensaje:"
 msgstr "以下のメッセージ届いています"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user.php:1382
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user.php:1384
 msgid "Usuario registrado"
 msgstr "一般ユーザー"
 
@@ -2675,25 +2683,25 @@ msgid ""
 "Los datos no se han guardado correctamente. Por favor, revise los datos."
 msgstr "正常に保存されませんでした。データを確認してください。"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/interest.php:100
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/interest.php:114
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/skill.php:85
 msgid "No hay ningun interes para guardar"
 msgstr "保存する興味がありません"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/interest.php:103
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/interest.php:117
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/review.php:62
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/skill.php:88
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/translate.php:189
 msgid "No hay ningun usuario al que asignar"
 msgstr "担当ユーザーがいません"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/interest.php:146
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/interest.php:160
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/skill.php:131
 #, fuzzy
 msgid "No se ha podido quitar el interes "
 msgstr "ウェブを削除できませんでした"
 
-#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/interest.php:146
+#: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/interest.php:160
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/review.php:105
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/review.php:127
 #: /Users/m454k1/Sites/lg_yokohama_goteo/model/user/review.php:149
@@ -3268,7 +3276,7 @@ msgstr "削除"
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/templates/list.html.php:80
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/texts/list.html.php:95
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/translates/list.html.php:75
-#: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/users/list.html.php:244
+#: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/users/list.html.php:245
 msgid "No se han encontrado registros"
 msgstr "見つかりませんでした"
 
@@ -5018,6 +5026,10 @@ msgstr "ユーザー管理"
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/users/list.html.php:231
 msgid "VIP"
 msgstr ""
+
+#: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/users/list.html.php:232
+msgid "LocalAdmin"
+msgstr "地域管理者"
 
 #: /Users/m454k1/Sites/lg_yokohama_goteo/view/admin/users/manage.html.php:63
 msgid "Authorization"
