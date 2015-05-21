@@ -78,7 +78,7 @@ namespace Goteo\Controller {
                             $_SESSION['lang'] = $user->lang;
                         }
                         unset($_SESSION['admin_menu']);
-                        if (isset($user->roles['admin'])|| isset($user->roles['localadmin'])) {
+                        if (isset($user->roles['admin'])|| $user->isLocalAdmin()) {
                             // (Nodesys)
                         } else {
                             unset($_SESSION['admin_node']);
@@ -89,7 +89,7 @@ namespace Goteo\Controller {
                             $jumpto = $_SESSION['jumpto'];
                             unset($_SESSION['jumpto']);
                             throw new Redirection($jumpto);
-                        } elseif (isset($user->roles['admin']) || isset($user->roles['localadmin']) || isset($user->roles['superadmin'])) {
+                        } elseif (isset($user->roles['admin']) || $user->isLocalAdmin() || isset($user->roles['superadmin'])) {
                             if(VIEW_PATH === 'view/m'){
                                 throw new Redirection('/dashboard');
                             }

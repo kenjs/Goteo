@@ -917,7 +917,7 @@ div#header div#menu
 	overflow:visible;
 	position:absolute;
 	top:60px;
-	width:288px;
+	/*width:288px;*/
 	z-index:2;
 }
 
