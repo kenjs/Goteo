@@ -1485,6 +1485,16 @@ namespace Goteo\Model {
 
         }
 
+        /**
+         *  check localadmin permission
+         */
+        public function isLocalAdmin() {
+            return (
+                (!empty($this->id)) &&
+                (count($this->roles) > 0  && array_key_exists('localadmin',$this->roles)) &&
+                ( isset($this->home) && ($this->home === LG_PLACE_NAME) )
+            );
+        }
 
 	}
 }

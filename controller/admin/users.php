@@ -202,6 +202,7 @@ namespace Goteo\Controller\Admin {
 
                     break;
                 case 'manage':
+                    $user = Model\User::get($id);
 
                     // si llega post: ejecutamos + mensaje + seguimos editando
 
@@ -213,9 +214,18 @@ namespace Goteo\Controller\Admin {
 
                     if (!empty($sql)) {
 
-                        $user = Model\User::getMini($id);
+//                        $user = Model\User::getMini($id);
+                        $ret = "";
 
-                        if (Model\User::query($sql, array(':user'=>$id))) {
+                        if (strpos($subaction,'admin') !== false ){
+                            if (isset($_SESSION['user']->roles['root'])){
+                                $ret = Model\User::query($sql, array(':user'=>$id));
+                            }
+                        } else {
+                            $ret = Model\User::query($sql, array(':user'=>$id));
+                        }
+
+                        if ($ret) {
 
                             // mensaje de ok y volvemos a la gestion del usuario
 //                            Message::Info('Ha <strong>' . $log_action . '</strong> al usuario <strong>'.$user->name.'</strong> CORRECTAMENTE');
@@ -282,7 +292,7 @@ namespace Goteo\Controller\Admin {
                         throw new Redirection('/admin/users/manage/'.$id);
                     }
 
-                    $user = Model\User::get($id);
+//                    $user = Model\User::get($id);
 
                     $viewData = array(
                             'folder' => 'users',
