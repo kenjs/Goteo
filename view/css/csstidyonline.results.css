@@ -4236,7 +4236,7 @@ body.admin div.admin-right div.widget.board form table td
 body.admin div.admin-right > div.widget.board table td
 {
 	border-bottom:1px dotted #ccc;
-	padding:8px;
+	padding:8px 4px;
 }
 
 body.admin table td.w70 {width: 70px;}
@@ -4307,7 +4307,11 @@ body.admin div.admin-right.projects > div.widget.board > table td
 	border-bottom:none;
 }
 
-body.admin div.admin-right.rewards div.widget.board > table th.change_btn
+body.admin div#main div.admin-right.reviews > div.widget.board table td a {
+    padding: 0;
+}
+body.admin div.adm
+in-right.rewards div.widget.board > table th.change_btn
 {
 	width:50px;
 }
@@ -4322,7 +4326,15 @@ body.admin div.admin-right.rewards div.widget.board > table th.implementation_st
 	width:120px;
 }
 
-body.admin div.admin-right.users div.widget.board form dl dt
+body.admin div.admin-right.invests div.widget.board > table.invests_table td {
+    padding: 4px;
+}
+body.admin div#main div.admin-right.invests > div.widget.board table td a {
+    padding: 0;
+}
+
+
+ body.admin div.admin-right.users div.widget.board form dl dt
 {
 	float:left;
 	margin-right:20px;
@@ -4366,6 +4378,12 @@ body.admin div.admin-right.users > div.widget.board > table tr.record2 td
 {
 	padding-top:0;
 }
+body.admin div.admin-right.users > div.widget.board > table tr.record1 td.pj_count {
+    text-align: center;
+}
+body.admin div.admin-right.users > div.widget.board > table tr.record1 td.admin_amount {
+    text-align: right;
+}
 
 body.admin div.admin-right.worth div.widget.board > table th.edit_btn
 {
@@ -4382,6 +4400,9 @@ body.admin div.admin-right.worth div.widget.board > table th.total_support
 	width:100px;
 }
 
+body.admin div.admin-right.promote div.widget.board > table {
+    width: 100%;
+}
 body.admin div.admin-right.promote div.widget.board > table th.view_btn
 {
 	width:60px;
@@ -4390,6 +4411,12 @@ body.admin div.admin-right.promote div.widget.board > table th.view_btn
 body.admin div.admin-right.promote div.widget.board > table th.support_status
 {
 	width:80px;
+}
+body.admin div.admin-right.promote div.widget.board > table td.pj_name {
+    width: 340px;
+}
+body.admin div#main div.admin-right.promote > div.widget.board table td a {
+    padding: 0;
 }
 
 body.admin div.admin-right.newsletter div.widget.board > table th.detail_btn
