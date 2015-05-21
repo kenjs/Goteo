@@ -382,10 +382,9 @@ namespace Goteo\Controller {
             // Supervisor = menus especiales
             if (isset($supervisors[$_SESSION['user']->id])) {
                 $menu = self::setMenu('supervisor', $_SESSION['user']->id);
-            } elseif (isset($_SESSION['user']->roles['admin'])) {
+            } elseif (isset($_SESSION['user']->roles['admin']) || isset($_SESSION['user']->roles['localadmin'])) {
                 $menu = self::setMenu('admin', $_SESSION['user']->id);
             } else {
-                // localadminもsuperadminと同様
                 $menu = self::setMenu('superadmin', $_SESSION['user']->id);
             }
 
@@ -574,6 +573,7 @@ namespace Goteo\Controller {
                     }
 
                     break;
+                case 'localadmin':
                 case 'admin':
                     $menu = array(
                         'contents' => array(
@@ -616,7 +616,6 @@ namespace Goteo\Controller {
 
                     break;
                 case 'superadmin':
-                case 'localadmin':
                     $menu = array(
                         'contents' => array(
                             'label' => $labels['texts'],
