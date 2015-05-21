@@ -46,7 +46,7 @@ $translator = ACL::check('/translate') ? true : false;
             <?php foreach ($this['promoted'] as $promo) : ?>
             <tr>
                 <td><a href="/project/<?php echo $promo->project; ?>" target="_blank" title="<?php echo Text::get(''); ?>">[<?php echo Text::_("Ver"); ?>]</a></td>
-                <td><?php echo ($promo->active) ? '<strong>'.$promo->name.'</strong>' : $promo->name; ?></td>
+                <td class="pj_name"><?php echo ($promo->active) ? '<strong>'.$promo->name.'</strong>' : $promo->name; ?></td>
                 <td><?php echo $promo->status; ?></td>
                 <td><?php echo $promo->order; ?></td>
                 <td><a href="/admin/promote/up/<?php echo $promo->id; ?>">[&uarr;]</a></td>
