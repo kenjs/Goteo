@@ -151,41 +151,56 @@ namespace Goteo\Controller\Admin {
 
                     $user = Model\User::get($id);
 
+                    $permission = false;
+
+                    foreach (array_keys($user->roles) as $_role){
+                        if (strpos($_role,'admin')){
+                            $permission = isset($_SESSION['user']->roles['root']);
+                        }
+                        if ($_role == 'project_owner'){
+                            $permission = (isset($_SESSION['user']->roles['root']) || (isset($_SESSION['user']->roles['localadmin']) && $_SESSION['user']->home === LG_PLACE_NAME));
+                        }
+                    }
+
                     // si llega post: actualizamos
-                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                        $tocado = array();
-                        // para crear se usa el mismo método save del modelo, hay que montar el objeto
-                        if (!empty($_POST['email'])) {
-                            $user->email = $_POST['email'];
-                            $tocado[] = Text::_('el email');
+                    if ($permission) {
+                        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                            $tocado = array();
+                            // para crear se usa el mismo método save del modelo, hay que montar el objeto
+                            if (!empty($_POST['email'])) {
+                                $user->email = $_POST['email'];
+                                $tocado[] = Text::_('el email');
+                            }
+                            if (!empty($_POST['password'])) {
+                                $user->password = $_POST['password'];
+                                $tocado[] = Text::_('la contraseña');
+                            }
+
+                            if (!empty($tocado) && $user->update($errors)) {
+
+                                // Evento Feed
+                                $log = new Feed();
+                                $log->setTarget($user->id, 'user');
+                                $log->populate(Text::_('Operación sobre usuario'), '/admin/users', \vsprintf('El admin %s ha %s del usuario %s', array(
+                                    Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
+                                    Feed::item('relevant', 'Tocado ' . implode(' y ', $tocado)),
+                                    Feed::item('user', $user->name, $user->id)
+                                )));
+                                $log->doAdmin('user');
+                                unset($log);
+
+                                // mensaje de ok y volvemos a la lista de usuarios
+                                Message::Info(Text::get('admin-users-info-update'));
+                                throw new Redirection('/admin/users');
+
+                            } else {
+                                // si hay algun error volvemos a poner los datos en el formulario
+                                $data = $_POST;
+                                Message::Error(Text::get('admin-users-error-save-fail') . implode('<br />', $errors));
+                            }
                         }
-                        if (!empty($_POST['password'])) {
-                            $user->password = $_POST['password'];
-                            $tocado[] = Text::_('la contraseña');
-                        }
-
-                        if(!empty($tocado) && $user->update($errors)) {
-
-                            // Evento Feed
-                            $log = new Feed();
-                            $log->setTarget($user->id, 'user');
-                            $log->populate(Text::_('Operación sobre usuario'), '/admin/users', \vsprintf('El admin %s ha %s del usuario %s', array(
-                                Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id),
-                                Feed::item('relevant', 'Tocado ' . implode (' y ', $tocado)),
-                                Feed::item('user', $user->name, $user->id)
-                            )));
-                            $log->doAdmin('user');
-                            unset($log);
-
-                            // mensaje de ok y volvemos a la lista de usuarios
-                            Message::Info(Text::get('admin-users-info-update'));
-                            throw new Redirection('/admin/users');
-
-                        } else {
-                            // si hay algun error volvemos a poner los datos en el formulario
-                            $data = $_POST;
-                            Message::Error(Text::get('admin-users-error-save-fail').implode('<br />', $errors));
-                        }
+                    } else {
+                        Message::Error(Text::get('admin_no_permission','この操作') . implode('<br />'));
                     }
 
                     // vista de editar usuario
@@ -217,13 +232,25 @@ namespace Goteo\Controller\Admin {
 //                        $user = Model\User::getMini($id);
                         $ret = "";
 
-                        if (strpos($subaction,'admin') !== false ){
+                        // todo 整理したい
+                        //
+                        // root -> 何でも可
+                        // localadmin -> homeでは管理者権限変更以外なら何でも可
+                        //
+                        if (strpos($subaction,'admin') !== false){
                             if (isset($_SESSION['user']->roles['root'])){
                                 $ret = Model\User::query($sql, array(':user'=>$id));
                             }
-                        } else {
-                            $ret = Model\User::query($sql, array(':user'=>$id));
+                        } else{
+                            if($subaction === 'project_owner'){
+                                if (isset($_SESSION['user']->roles['root']) || (isset($_SESSION['user']->roles['localadmin']) && $_SESSION['user']->home === LG_PLACE_NAME) ){
+                                    $ret = Model\User::query($sql, array(':user'=>$id));
+                                }
+                            } else {
+                                $ret = Model\User::query($sql, array(':user'=>$id));
+                            }
                         }
+
 
                         if ($ret) {
 
