@@ -50,11 +50,12 @@ namespace Goteo\Core {
             array_walk($roles, function (&$role) { $role = $role->id; });
 
             // localadminは、home以外の都市ではただのuserに
-//            var_dump($user->id . '/' . ($user->home !== LG_PLACE_NAME) );
-//            var_dump($roles);
-//            exit;
             if ( isset($roles['localadmin']) && ($user->home !== LG_PLACE_NAME) ){
                 unset($roles['localadmin']);
+            }
+            // projectownerも、home以外の都市ではただのuserに
+            if ( isset($roles['project_owner']) && ($user->home !== LG_PLACE_NAME) ){
+                unset($roles['project_owner']);
             }
 
             $query = Model::query("

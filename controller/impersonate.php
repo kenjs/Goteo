@@ -39,33 +39,48 @@ namespace Goteo\Controller {
 
             $admin = $_SESSION['user'];
 
+            // なりすましは root と, localadmin のみ可
+            $permission = (isset($admin->roles['root']) || (isset($admin->roles['localadmin']) && $admin->home === LG_PLACE_NAME));
+
             if ($_SERVER['REQUEST_METHOD'] === 'POST' 
                 && !empty($_POST['id'])
-                && !empty($_POST['impersonate'])) {
+                && !empty($_POST['impersonate'])
+                && $permission) {
 
                 $impersonator = $_SESSION['user']->id;
 
-                session_unset();
-                $_SESSION['user'] = User::get($_POST['id']);
-                $_SESSION['impersonating'] = true;
-                $_SESSION['impersonator'] = $impersonator;
+                $user = User::get($_POST['id']);
 
-                unset($_SESSION['admin_menu']);
-                /*
-                 * Evento Feed
-                 */
-                // Evento Feed
-                $log = new Feed();
-                $log->setTarget($_SESSION['user']->id, 'user');
-                $log->populate('Suplantación usuario (admin)', '/admin/users', \vsprintf('El admin %s ha %s al usuario %s', array(
-                    Feed::item('user', $admin->name, $admin->id),
-                    Feed::item('relevant', 'Suplantado'),
-                    Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id)
-                )));
-                $log->doAdmin('user');
-                unset($log);
+                // adminユーザーへのなりすましはrootのみ
+                foreach (array_keys($user->roles) as $_role){
+                    if (strpos($_role,'admin')){
+                        $permission = isset($admin->roles['root']);
+                    }
+                }
 
+                if ($permission) {
+                    session_unset();
+                    $_SESSION['user'] = $user;
+                    $_SESSION['impersonating'] = true;
+                    $_SESSION['impersonator'] = $impersonator;
 
+                    unset($_SESSION['admin_menu']);
+                    /*
+                     * Evento Feed
+                     */
+                    // Evento Feed
+                    $log = new Feed();
+                    $log->setTarget($_SESSION['user']->id, 'user');
+                    $log->populate('Suplantación usuario (admin)', '/admin/users', \vsprintf('El admin %s ha %s al usuario %s', array(
+                        Feed::item('user', $admin->name, $admin->id),
+                        Feed::item('relevant', 'Suplantado'),
+                        Feed::item('user', $_SESSION['user']->name, $_SESSION['user']->id)
+                    )));
+                    $log->doAdmin('user');
+                    unset($log);
+                } else {
+                    Message::Error(Text::get('impersonate-error'));
+                }
                 throw new Redirection('/dashboard');
                 
             }
