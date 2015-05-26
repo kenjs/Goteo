@@ -27,7 +27,7 @@ use Goteo\Library\Text,
     $(function(){
         $(window).resize(function(){
             var width = $(window).width();
-            if (width <= 1200) {
+            if (width <= 1140) {
                 $('#header').children('.logo_wrapper').children('a').css('display','none');
             } else {
                 $('#header').children('.logo_wrapper').children('a').css('display','block');
