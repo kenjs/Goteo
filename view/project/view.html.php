@@ -85,7 +85,9 @@ $bodyClass = 'project-show'; include 'view/prologue.html.php' ?>
 
                 <div class="project-by"><a href="/user/<?php echo $project->owner; ?>"><?php echo Text::get('regular-by') ?> <?php echo $project->user->name; ?></a></div>
                 <?
-                if(strstr($_SERVER['REQUEST_URI'],'project')):
+                $_value = '/project/' . $project->id;
+                $_url = urldecode($_SERVER['REQUEST_URI']);
+                if(strstr($_url,$_value) && preg_match('/^\/project\/((?!\/).)*$/',$_url)):
                     ?>
                     <div id="social_bookmark">
                         <div id="twitter">
