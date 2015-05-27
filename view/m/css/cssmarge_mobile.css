@@ -2399,12 +2399,12 @@ div.widget.project div.meter div.obtained span.percent {
     color: #a7a9ac;
     padding-left: 15px;
 }
-div.widget.project div.meter h3.title.obtained,
+div.widget.project div.meter h3.title.obtained/*,
 div.widget.project div.meter.active dl > dd,
-div.widget.project div.meter.active dl > dt {
+div.widget.project div.meter.active dl > dt*/ {
     display:none;
 }
-div.widget.project div.meter.active h3.title.investment,
+/*div.widget.project div.meter.active h3.title.investment,
 div.widget.project div.meter.active h3.title.ronda,
 div.widget.project div.meter.active div.graph > div {
     display:none;
@@ -2421,7 +2421,7 @@ div.widget.project div.meter.active div.obtained {
 div.widget.project div.meter.active dl .days {
     display: block !important;
     background-color: #f8f8f8 !important;
-}
+}*/
 /* Hasta aqu� la movida de lo obtenido */
 
 div.widget.project div.meter div.graph  * strong,
