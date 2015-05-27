@@ -2011,6 +2011,7 @@ body.post-type-archive-data .header .inner
 .footer .footer_link_wrapper
 {
 	background-color:#fff;
+    width: 960px;
 	margin:0 auto;
 	position:relative;
 }
