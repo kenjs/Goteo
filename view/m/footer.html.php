@@ -131,11 +131,9 @@ jQuery(document).ready(function($) {
 */?>
 
         <div class="footer_link_wrapper">
-            <?/*
             <div id="to_page_top" style="bottom:0; margin-left: 880px;">
                 <a href="#page_top"><img src="/view/css/page_topBtn.png" alt="ページの上部へ" /></a>
             </div><!--#to_page_top-->
-            */?>
             <div class="inner cf">
                 <ul>
                     <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/about/">LOCAL GOODについて</a></li>
