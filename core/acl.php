@@ -53,10 +53,6 @@ namespace Goteo\Core {
             if ( isset($roles['localadmin']) && ($user->home !== LG_PLACE_NAME) ){
                 unset($roles['localadmin']);
             }
-            // projectownerも、home以外の都市ではただのuserに
-            if ( isset($roles['project_owner']) && ($user->home !== LG_PLACE_NAME) ){
-                unset($roles['project_owner']);
-            }
 
             $query = Model::query("
                 SELECT

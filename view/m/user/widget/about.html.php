@@ -39,7 +39,7 @@ $skills = Skill::getAll(null,true);
         <p><?php echo $user->about ?></p>
     </div>    
     <?php endif ?>
-        
+
     <?php if (!empty($user->interests)): ?>    
     <div class="interests">        
         <h4><?php echo Text::get('profile-interests-header'); ?></h4>
@@ -96,5 +96,8 @@ $skills = Skill::getAll(null,true);
          <p><a href="/user/profile/<?php echo $user->id ?>/message"><?php echo Text::get('regular-send_message')?></a></p>
      </div>
     <?php endif ?>
+    <div class="improper_report">
+        <a href="/user/improper/">このユーザーを通報する</a>
+    </div>
 
 </div>

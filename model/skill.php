@@ -41,8 +41,13 @@ namespace Goteo\Model {
 
             $list = array();
 
-            $sqlInnerAdd = "INNER JOIN user_login_log ON user_skill.user = user_login_log.user";
-            $sqlWhereAdd = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
+            if(User::iAmRoot()){
+                $nodeQuery1 = '';
+                $nodeQuery2 = '';
+            }else{
+                $nodeQuery1 = 'INNER JOIN user_login_log ON user_skill.user = user_login_log.user';
+                $nodeQuery2 = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
+            }
 
             $sql = "
                 SELECT
@@ -57,9 +62,9 @@ namespace Goteo\Model {
                     (   SELECT
                             COUNT(user_skill.user)
                         FROM user_skill
-                        $sqlInnerAdd
+                          $nodeQuery1
                         WHERE user_skill.skill = skill.id
-                          $sqlWhereAdd
+                        $nodeQuery2
                     ) as numUser,
                     skill.order as `order`,
                     skill.parent_skill_id as parent_skill_id
@@ -70,7 +75,7 @@ namespace Goteo\Model {
                 ORDER BY `parent_skill_id` ASC, `order` ASC
                 ";
 
-            $query = static::query($sql, array(':lang'=>\LANG));
+            $query = static::query($sql, array( ':lang'=>\LANG ));
 
             foreach ($query->fetchAll(\PDO::FETCH_CLASS, __CLASS__) as $skill) {
                 $list[$skill->id] = $skill;
@@ -95,6 +100,14 @@ namespace Goteo\Model {
 
             $list = array();
 
+            if(User::iAmRoot()){
+                $nodeQuery1 = '';
+                $nodeQuery2 = '';
+            }else{
+                $nodeQuery1 = 'INNER JOIN user_login_log ON user_skill.user = user_login_log.user';
+                $nodeQuery2 = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
+            }
+
             $sql = "
                 SELECT
                     skill.id as id,
@@ -108,7 +121,9 @@ namespace Goteo\Model {
                     (   SELECT
                             COUNT(user_skill.user)
                         FROM user_skill
+                          $nodeQuery1
                         WHERE user_skill.skill = skill.id
+                        $nodeQuery2
                     ) as numUser,
                     skill.order as `order`,
                     skill.parent_skill_id as parent_skill_id
