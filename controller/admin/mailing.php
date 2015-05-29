@@ -198,8 +198,6 @@ namespace Goteo\Controller\Admin {
 
 //                        die('<pre>'.$sql . '<br />'.print_r($values, 1).'</pre>');
 
-//                    var_dump($sql);
-//                    exit;
 
                     if ($query = Model\User::query($sql, $values)) {
                         foreach ($query->fetchAll(\PDO::FETCH_OBJ) as $receiver) {
@@ -208,8 +206,6 @@ namespace Goteo\Controller\Admin {
                     } else {
                         Message::Error(Text::get('SQLの実行に失敗しました！') . '<br />' . $sql . '<pre>'.print_r($values, 1).'</pre>');
                     }
-
-//                    exit;
 
                     // si no hay destinatarios, salta a la lista con mensaje de error
                     if (empty($_SESSION['mailing']['receivers'])) {

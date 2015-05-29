@@ -28,7 +28,6 @@ use Goteo\Core\Resource,
     Goteo\Library\i18n\Locale,
     Goteo\Library\i18n\Lang;
 
-
 if( !file_exists("config.php") ) {
     $msg = "This instance of Goteo doesn't seem to be configured, please read the deployment guide, configure and try again.";
     error_log($msg);

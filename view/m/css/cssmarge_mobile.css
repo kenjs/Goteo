@@ -9398,6 +9398,16 @@ div.widget.user-about > div.message p a:hover {
     text-decoration: underline;
 }
 
+div.widget.user-about .improper_report {
+    padding: 16px;
+    text-align: right;
+}
+
+div.widget.user-about .improper_report a {
+    color: #808080;
+    font-size: 11px;
+}
+
 
 /*----------------------------------------------------------------------
   user/widget/social.css
