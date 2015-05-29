@@ -407,7 +407,7 @@ namespace Goteo\Controller {
                     }
 
                     if (!$puede) {
-                        Message::Error(Text::get('admin-no_permission', $options[$BC['option']]['label']));
+                        Message::Error(Text::get('admin_no_permission', $options[$BC['option']]['label']));
                         throw new Redirection('/admin');
                     }
                 }

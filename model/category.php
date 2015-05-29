@@ -22,7 +22,7 @@
 namespace Goteo\Model {
 
     use Goteo\Library\Check;
-    
+
     class Category extends \Goteo\Core\Model {
 
         public
@@ -34,52 +34,57 @@ namespace Goteo\Model {
         /*
          *  Devuelve datos de una categoria
          */
-        public static function get ($id) {
-                $query = static::query("
+        public static function get( $id ) {
+            $query    = static::query( "
                     SELECT
                         category.id,
-                        IFNULL(category_lang.name, category.name) as name,
-                        IFNULL(category_lang.description, category.description) as description
+                        IFNULL(category_lang.name, category.name) AS name,
+                        IFNULL(category_lang.description, category.description) AS description
                     FROM    category
                     LEFT JOIN category_lang
                         ON  category_lang.id = category.id
                         AND category_lang.lang = :lang
                     WHERE category.id = :id
-                    ", array(':id' => $id, ':lang'=>\LANG));
-                $category = $query->fetchObject(__CLASS__);
+                    ", array( ':id' => $id, ':lang' => \LANG ) );
+            $category = $query->fetchObject( __CLASS__ );
 
-                return $category;
+            return $category;
         }
 
         /*
-         * Lista de categorias para proyectos
-         * @TODO añadir el numero de usos
+         * Lista de categorias   para proyectos
          */
-        public static function getAll () {
+        public static function getAll() {
 
             $list = array();
 
-            $sqlInnerAdd = "INNER JOIN user_login_log ON user_interest.user = user_login_log.user";
-            $sqlWhereAdd = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
+            //todo 他のメソッドにも展開
+            if(User::iAmRoot()){
+                $nodeQuery1 = '';
+                $nodeQuery2 = '';
+            }else{
+                $nodeQuery1 = 'INNER JOIN user_login_log ON user_interest.user = user_login_log.user';
+                $nodeQuery2 = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
+            }
 
             $sql = "
                 SELECT
-                    category.id as id,
-                    IFNULL(category_lang.name, category.name) as name,
-                    IFNULL(category_lang.description, category.description) as description,
+                    category.id AS id,
+                    IFNULL(category_lang.name, category.name) AS name,
+                    IFNULL(category_lang.description, category.description) AS description,
                     (   SELECT 
                             COUNT(project_category.project)
                         FROM project_category
                         WHERE project_category.category = category.id
-                    ) as numProj,
+                    ) AS numProj,
                     (   SELECT
                             COUNT(user_interest.user)
                         FROM user_interest
-                          $sqlInnerAdd
+                        {$nodeQuery1}
                         WHERE user_interest.interest = category.id
-                        $sqlWhereAdd
-                    ) as numUser,
-                    category.order as `order`
+                        {$nodeQuery2}
+                    ) AS numUser,
+                    category.order AS `order`
                 FROM    category
                 LEFT JOIN category_lang
                     ON  category_lang.id = category.id
@@ -87,10 +92,10 @@ namespace Goteo\Model {
                 ORDER BY `order` ASC
                 ";
 
-            $query = static::query($sql, array(':lang'=>\LANG));
+            $query = static::query( $sql, array( ':lang' => \LANG ) );
 
-            foreach ($query->fetchAll(\PDO::FETCH_CLASS, __CLASS__) as $category) {
-                $list[$category->id] = $category;
+            foreach ( $query->fetchAll( \PDO::FETCH_CLASS, __CLASS__ ) as $category ) {
+                $list[ $category->id ] = $category;
             }
 
             return $list;
@@ -100,14 +105,15 @@ namespace Goteo\Model {
          * Get all categories used in published projects
          *
          * @param void
+         *
          * @return array
          */
-		public static function getList () {
-            $array = array ();
+        public static function getList() {
+            $array = array();
             try {
                 $sql = "SELECT 
-                            category.id as id,
-                            IFNULL(category_lang.name, category.name) as name
+                            category.id AS id,
+                            IFNULL(category_lang.name, category.name) AS name
                         FROM category
                         LEFT JOIN category_lang
                             ON  category_lang.id = category.id
@@ -115,57 +121,68 @@ namespace Goteo\Model {
                         GROUP BY category.id
                         ORDER BY category.order ASC";
 
-                $query = static::query($sql, array(':lang'=>\LANG));
+                $query      = static::query( $sql, array( ':lang' => \LANG ) );
                 $categories = $query->fetchAll();
-                foreach ($categories as $cat) {
+                foreach ( $categories as $cat ) {
                     // la 15 es de testeos
-                    if ($cat[0] == 15) continue;
-                    $array[$cat[0]] = $cat[1];
+                    if ( $cat[0] == 15 ) {
+                        continue;
+                    }
+                    $array[ $cat[0] ] = $cat[1];
                 }
 
                 return $array;
-            } catch(\PDOException $e) {
-				throw new \Goteo\Core\Exception($e->getMessage());
+            } catch ( \PDOException $e ) {
+                throw new \Goteo\Core\Exception( $e->getMessage() );
             }
-		}
-
-        
-        public function validate (&$errors = array()) { 
-            if (empty($this->name))
-                $errors[] = Text::_('Falta nombre');
-
-            if (empty($errors))
-                return true;
-            else
-                return false;
         }
 
-        public function save (&$errors = array()) {
-            if (!$this->validate($errors)) return false;
+
+        public function validate( &$errors = array() ) {
+            if ( empty( $this->name ) ) {
+                $errors[] = Text::_( 'Falta nombre' );
+            }
+
+            if ( empty( $errors ) ) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        public function save( &$errors = array() ) {
+            if ( ! $this->validate( $errors ) ) {
+                return false;
+            }
 
             $fields = array(
                 'id',
                 'name',
                 'description'
-                );
+            );
 
-            $set = '';
+            $set    = '';
             $values = array();
 
-            foreach ($fields as $field) {
-                if ($set != '') $set .= ", ";
+            foreach ( $fields as $field ) {
+                if ( $set != '' ) {
+                    $set .= ", ";
+                }
                 $set .= "`$field` = :$field ";
                 $values[":$field"] = $this->$field;
             }
 
             try {
                 $sql = "REPLACE INTO category SET " . $set;
-                self::query($sql, $values);
-                if (empty($this->id)) $this->id = self::insertId();
+                self::query( $sql, $values );
+                if ( empty( $this->id ) ) {
+                    $this->id = self::insertId();
+                }
 
                 return true;
-            } catch(\PDOException $e) {
-                $errors[] = Text::_("No se ha guardado correctamente. ") . $e->getMessage();
+            } catch ( \PDOException $e ) {
+                $errors[] = Text::_( "No se ha guardado correctamente. " ) . $e->getMessage();
+
                 return false;
             }
         }
@@ -173,10 +190,10 @@ namespace Goteo\Model {
         /*
          * Para quitar una catgoria de la tabla
          */
-        public static function delete ($id) {
-            
+        public static function delete( $id ) {
+
             $sql = "DELETE FROM category WHERE id = :id";
-            if (self::query($sql, array(':id'=>$id))) {
+            if ( self::query( $sql, array( ':id' => $id ) ) ) {
                 return true;
             } else {
                 return false;
@@ -187,37 +204,38 @@ namespace Goteo\Model {
         /*
          * Para que salga antes  (disminuir el order)
          */
-        public static function up ($id) {
-            return Check::reorder($id, 'up', 'category', 'id', 'order');
+        public static function up( $id ) {
+            return Check::reorder( $id, 'up', 'category', 'id', 'order' );
         }
 
         /*
          * Para que salga despues  (aumentar el order)
          */
-        public static function down ($id) {
-            return Check::reorder($id, 'down', 'category', 'id', 'order');
+        public static function down( $id ) {
+            return Check::reorder( $id, 'down', 'category', 'id', 'order' );
         }
 
         /*
          * Orden para añadirlo al final
          */
-        public static function next () {
-            $query = self::query('SELECT MAX(`order`) FROM category');
-            $order = $query->fetchColumn(0);
-            return ++$order;
+        public static function next() {
+            $query = self::query( 'SELECT MAX(`order`) FROM category' );
+            $order = $query->fetchColumn( 0 );
+
+            return ++ $order;
 
         }
-        
+
         /**
          * Get a list of used keywords
          *
          * can be of users, projects or  all
-         * 
+         *
          */
-		public static function getKeyWords () {
-            $array = array ();
+        public static function getKeyWords() {
+            $array = array();
             try {
-                
+
                 $sql = "SELECT 
                             keywords
                         FROM project
@@ -225,37 +243,37 @@ namespace Goteo\Model {
                         AND keywords IS NOT NULL
                         AND keywords != ''
                         ";
-/*
-                     UNION
-                        SELECT 
-                            keywords
-                        FROM user
-                        WHERE keywords IS NOT NULL
-                        AND keywords != ''
-* 
- */
-                $query = static::query($sql);
-                $keywords = $query->fetchAll(\PDO::FETCH_ASSOC);
-                foreach ($keywords as $keyw) {
+                /*
+                                     UNION
+                                        SELECT
+                                            keywords
+                                        FROM user
+                                        WHERE keywords IS NOT NULL
+                                        AND keywords != ''
+                *
+                 */
+                $query    = static::query( $sql );
+                $keywords = $query->fetchAll( \PDO::FETCH_ASSOC );
+                foreach ( $keywords as $keyw ) {
                     $kw = $keyw['keywords'];
 //                    $kw = str_replace('|', ',', $keyw['keywords']);
 //                    $kw = str_replace(array(' ','|'), ',', $keyw['keywords']);
 //                    $kw = str_replace(array('-','.'), '', $kw);
-                    $kwrds = explode(',', $kw);
-                    
-                    foreach ($kwrds as $word) {
-                        $array[] = strtolower(trim($word));
+                    $kwrds = explode( ',', $kw );
+
+                    foreach ( $kwrds as $word ) {
+                        $array[] = strtolower( trim( $word ) );
                     }
                 }
 
-                asort($array);
-                
+                asort( $array );
+
                 return $array;
-            } catch(\PDOException $e) {
-				throw new \Goteo\Core\Exception($e->getMessage());
+            } catch ( \PDOException $e ) {
+                throw new \Goteo\Core\Exception( $e->getMessage() );
             }
-		}
-        
+        }
+
     }
-    
+
 }

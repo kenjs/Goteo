@@ -151,14 +151,11 @@ namespace Goteo\Controller\Admin {
 
                     $user = Model\User::get($id);
 
-                    $permission = false;
+                    $permission = ( isset($_SESSION['user']->roles['root']) || isset($_SESSION['user']->roles['localadmin']) );
 
                     foreach (array_keys($user->roles) as $_role){
                         if (strpos($_role,'admin')){
                             $permission = isset($_SESSION['user']->roles['root']);
-                        }
-                        if ($_role == 'project_owner'){
-                            $permission = (isset($_SESSION['user']->roles['root']) || (isset($_SESSION['user']->roles['localadmin']) && $_SESSION['user']->home === LG_PLACE_NAME));
                         }
                     }
 
@@ -230,27 +227,17 @@ namespace Goteo\Controller\Admin {
                     if (!empty($sql)) {
 
 //                        $user = Model\User::getMini($id);
-                        $ret = "";
+                        $ret = false;
 
                         // todo 整理したい
-                        //
-                        // root -> 何でも可
-                        // localadmin -> homeでは管理者権限変更以外なら何でも可
-                        //
-                        if (strpos($subaction,'admin') !== false){
-                            if (isset($_SESSION['user']->roles['root'])){
-                                $ret = Model\User::query($sql, array(':user'=>$id));
-                            }
-                        } else{
-                            if($subaction === 'project_owner'){
-                                if (isset($_SESSION['user']->roles['root']) || (isset($_SESSION['user']->roles['localadmin']) && $_SESSION['user']->home === LG_PLACE_NAME) ){
-                                    $ret = Model\User::query($sql, array(':user'=>$id));
-                                }
-                            } else {
+                        if (isset($_SESSION['user']->roles['root'])){
+                            // root は何処でも何でも可
+                            $ret = Model\User::query($sql, array(':user'=>$id));
+                        } elseif (isset($_SESSION['user']->roles['localadmin']) && $_SESSION['user']->home === LG_PLACE_NAME){
+                            if ((strpos($subaction,'admin') === false) && (array_search($user->login,LG_PLACE_NAME)) !== false){
                                 $ret = Model\User::query($sql, array(':user'=>$id));
                             }
                         }
-
 
                         if ($ret) {
 

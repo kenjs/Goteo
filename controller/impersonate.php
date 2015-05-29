@@ -40,7 +40,7 @@ namespace Goteo\Controller {
             $admin = $_SESSION['user'];
 
             // なりすましは root と, localadmin のみ可
-            $permission = (isset($admin->roles['root']) || (isset($admin->roles['localadmin']) && $admin->home === LG_PLACE_NAME));
+            $permission = ( isset($admin->roles['root']) || (isset($admin->roles['localadmin']) && $admin->home === LG_PLACE_NAME ));
 
             if ($_SERVER['REQUEST_METHOD'] === 'POST' 
                 && !empty($_POST['id'])

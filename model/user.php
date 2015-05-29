@@ -1,7 +1,7 @@
 <?php
 /*
  *  Copyright (C) 2012 Platoniq y Fundación Fuentes Abiertas (see README for details)
- *	This file is part of Goteo.
+ *    This file is part of Goteo.
  *
  *  Goteo is free software: you can redistribute it and/or modify
  *  it under the terms of the GNU Affero General Public License as published by
@@ -20,14 +20,14 @@
 
 namespace Goteo\Model {
 
-	use Goteo\Library\Text,
+    use Goteo\Library\Text,
         Goteo\Model\Image,
         Goteo\Library\Template,
         Goteo\Library\Mail,
         Goteo\Library\Check,
         Goteo\Library\Message;
 
-	class User extends \Goteo\Core\Model {
+    class User extends \Goteo\Core\Model {
 
         public
             $id = false,
@@ -57,18 +57,19 @@ namespace Goteo\Model {
             $interests = array(),
             $skills = array(),
             $webs = array(),
-            $roles = array();
+            $roles = array(),
+            $login = array();
 
         /**
          * Sobrecarga de métodos 'setter'.
          *
-         * @param type string	$name
-         * @param type string	$value
+         * @param type string    $name
+         * @param type string    $value
          */
         public function __set ($name, $value) {
-	        if($name == "token") {
-	            $this->$name = $this->setToken($value);
-	        }
+            if($name == "token") {
+                $this->$name = $this->setToken($value);
+            }
             $this->$name = $value;
         }
 
@@ -80,20 +81,20 @@ namespace Goteo\Model {
          */
         public function __get ($name) {
             if($name == "token") {
-	            return $this->getToken();
-	        }
-	        if($name == "support") {
-	            return $this->getSupport();
-	        }
-	        if($name == "worth") {
-	            return $this->getWorth();
-	        }
-	        if($name == "amount") {
-	            return $this->getAmount();
-	        }
-	        if($name == "projects") {
-	            return $this->getProjects();
-	        }
+                return $this->getToken();
+            }
+            if($name == "support") {
+                return $this->getSupport();
+            }
+            if($name == "worth") {
+                return $this->getWorth();
+            }
+            if($name == "amount") {
+                return $this->getAmount();
+            }
+            if($name == "projects") {
+                return $this->getProjects();
+            }
             return $this->$name;
         }
 
@@ -101,10 +102,10 @@ namespace Goteo\Model {
          * Guardar usuario.
          * Guarda los valores de la instancia del usuario en la tabla.
          *
-         * @param type array	$errors     	   Errores devueltos pasados por referencia.
-         * @param type array	$skip_validations  Crea el usuario aunque estos campos no sean correctos
+         * @param type array    $errors            Errores devueltos pasados por referencia.
+         * @param type array    $skip_validations  Crea el usuario aunque estos campos no sean correctos
          *                                         password, active
-         * @return type bool	true|false
+         * @return type bool    true|false
          */
         public function save (&$errors = array(),$skip_validations = array()) {
             if($this->validate($errors,$skip_validations)) {
@@ -129,35 +130,35 @@ namespace Goteo\Model {
                     $data[':node'] = \NODE_ID;
                     $data[':home'] = \LG_PLACE_NAME;
 
-					//active = 1 si no se quiere comprovar
-					if(in_array('active',$skip_validations) && $this->active) $data[':active'] = 1;
-					else {
-						// Obtenemos la plantilla para asunto y contenido
-						$template = Template::get(5);
+                    //active = 1 si no se quiere comprovar
+                    if(in_array('active',$skip_validations) && $this->active) $data[':active'] = 1;
+                    else {
+                        // Obtenemos la plantilla para asunto y contenido
+                        $template = Template::get(5);
 
-						// Sustituimos los datos
-						$subject = $template->title;
+                        // Sustituimos los datos
+                        $subject = $template->title;
 
-						// En el contenido:
-						$search  = array('%USERNAME%', '%USERID%', '%ACTIVATEURL%');
-						$replace = array($this->name, $this->id, SITE_URL . '/user/activate/' . $token);
-						$content = \str_replace($search, $replace, $template->text);
+                        // En el contenido:
+                        $search  = array('%USERNAME%', '%USERID%', '%ACTIVATEURL%');
+                        $replace = array($this->name, $this->id, SITE_URL . '/user/activate/' . $token);
+                        $content = \str_replace($search, $replace, $template->text);
 
-						// Activación
-						$mail = new Mail();
-						$mail->to = $this->email;
-						$mail->toName = $this->name;
-						$mail->subject = $subject;
-						$mail->content = $content;
-						$mail->html = true;
-						$mail->template = $template->id;
-						if ($mail->send($errors)) {
-							Message::Info(Text::get('register-confirm_mail-success'));
-						} else {
-							Message::Error(Text::get('register-confirm_mail-fail', GOTEO_MAIL));
-							Message::Error(implode('<br />', $errors));
-						}
-					}
+                        // Activación
+                        $mail = new Mail();
+                        $mail->to = $this->email;
+                        $mail->toName = $this->name;
+                        $mail->subject = $subject;
+                        $mail->content = $content;
+                        $mail->html = true;
+                        $mail->template = $template->id;
+                        if ($mail->send($errors)) {
+                            Message::Info(Text::get('register-confirm_mail-success'));
+                        } else {
+                            Message::Error(Text::get('register-confirm_mail-fail', GOTEO_MAIL));
+                            Message::Error(implode('<br />', $errors));
+                        }
+                    }
                 }
                 else {
                     $data[':id'] = $this->id;
@@ -329,49 +330,49 @@ namespace Goteo\Model {
                     }
                     // Ejecuta SQL.
                     return self::query($query, $data);
-            	} catch(\PDOException $e) {
-                $errors[] = Text::_("No se ha grabado correctamente. ") . $e->getMessage();
+                } catch(\PDOException $e) {
+                    $errors[] = Text::_("No se ha grabado correctamente. ") . $e->getMessage();
                     return false;
-    			}
+                }
             }
             return false;
         }
 
-		public function saveLang (&$errors = array()) {
+        public function saveLang (&$errors = array()) {
 
-			$fields = array(
-				'id'=>'id',
-				'lang'=>'lang',
-				'about'=>'about_lang',
-				'keywords'=>'keywords_lang',
-				'contribution'=>'contribution_lang'
-				);
+            $fields = array(
+                'id'=>'id',
+                'lang'=>'lang',
+                'about'=>'about_lang',
+                'keywords'=>'keywords_lang',
+                'contribution'=>'contribution_lang'
+            );
 
-			$set = '';
-			$values = array();
+            $set = '';
+            $values = array();
 
-			foreach ($fields as $field=>$ffield) {
-				if ($set != '') $set .= ", ";
-				$set .= "`$field` = :$field ";
-				$values[":$field"] = $this->$ffield;
-			}
+            foreach ($fields as $field=>$ffield) {
+                if ($set != '') $set .= ", ";
+                $set .= "`$field` = :$field ";
+                $values[":$field"] = $this->$ffield;
+            }
 
-			try {
-				$sql = "REPLACE INTO user_lang SET " . $set;
-				self::query($sql, $values);
-            	
-				return true;
-			} catch(\PDOException $e) {
+            try {
+                $sql = "REPLACE INTO user_lang SET " . $set;
+                self::query($sql, $values);
+
+                return true;
+            } catch(\PDOException $e) {
                 $errors[] = Text::_("No se ha grabado correctamente. ") . $e->getMessage();
                 return false;
-			}
-		}
+            }
+        }
 
         /**
          * Validación de datos de usuario.
          *
          * @param type array $errors               Errores devueltos pasados por referencia.
-         * @param type array	$skip_validations  Crea el usuario aunque estos campos no sean correctos
+         * @param type array    $skip_validations  Crea el usuario aunque estos campos no sean correctos
          *                                         password, active
          * @return bool true|false
          */
@@ -408,15 +409,15 @@ namespace Goteo\Model {
 
                 // Contraseña
                 if(!in_array('password',$skip_validations))  {
-					if(!empty($this->password)) {
-						if(!Check::password($this->password)) {
-							$errors['password'] = Text::get('error-register-invalid-password');
-						}
-					}
-					else {
-						$errors['password'] = Text::get('error-register-pasword-empty');
-					}
-				}
+                    if(!empty($this->password)) {
+                        if(!Check::password($this->password)) {
+                            $errors['password'] = Text::get('error-register-invalid-password');
+                        }
+                    }
+                    else {
+                        $errors['password'] = Text::get('error-register-pasword-empty');
+                    }
+                }
                 if(!empty($this->userid)) {
                     if(!Check::userid($this->userid)) {
                         $errors['userid'] = Text::get('error-user-userid-invalid');
@@ -569,6 +570,15 @@ namespace Goteo\Model {
          * @return obj|false    Objeto de usuario, en caso contrario devolverÃ¡ 'false'.
          */
         public static function get ($id, $lang = null) {
+
+            if(User::iAmRoot()){
+                $nodeQuery1 = '';
+                $nodeQuery2 = '';
+            }else{
+                $nodeQuery1 = 'INNER JOIN user_login_log ON user_login_log.user = user.id';
+                $nodeQuery2 = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
+            }
+
             try {
                 $sql = "
                     SELECT
@@ -595,11 +605,12 @@ namespace Goteo\Model {
                     LEFT JOIN user_lang
                         ON  user_lang.id = user.id
                         AND user_lang.lang = :lang
-                        AND user.home = :place_name
+                        $nodeQuery1
                     WHERE user.id = :id
+                        $nodeQuery2
                     ";
 
-                $query = static::query($sql, array(':id' => $id, ':lang' => $lang, ':place_name' => LG_PLACE_NAME));
+                $query = static::query($sql, array( ':id' => $id, ':lang' => $lang));
                 $user = $query->fetchObject(__CLASS__);
 
                 if (!$user instanceof  \Goteo\Model\User ) {
@@ -614,6 +625,8 @@ namespace Goteo\Model {
                 $user->interests = User\Interest::get($id);
                 $user->skills = User\Skill::get($id);
                 $user->webs = User\Web::get($id);
+
+                $user->login = $user->hasLoginHere($id);
 
                 // si es traductor cargamos sus idiomas
                 if (isset($user->roles['translator'])) {
@@ -638,6 +651,7 @@ namespace Goteo\Model {
                         email,
                         IFNULL(lang, 'es') as lang
                     FROM user
+
                     WHERE id = :id
                     ", array(':id' => $id));
                 $user = $query->fetchObject(); // stdClass para qno grabar accidentalmente y machacar todo
@@ -776,16 +790,16 @@ namespace Goteo\Model {
             switch ($filters['order']) {
                 case 'name':
                     $sqlOrder .= " ORDER BY name ASC";
-                break;
+                    break;
                 case 'id':
                     $sqlOrder .= " ORDER BY id ASC";
-                break;
+                    break;
                 default:
                     $sqlOrder .= " ORDER BY created DESC";
-                break;
+                    break;
             }
 
-            // $homeで絞り込んだ状態でユーザーを返す
+            // ログイン履歴 で絞り込んだ状態でユーザーを返す
             $sqlInner = '';
             if (!empty($home)){
                 $values[':user_places'] = $home;
@@ -827,7 +841,7 @@ namespace Goteo\Model {
 
                 $user->namount = (int) $user->amount;
                 $user->nprojs = (int) count($user->support['projects']);
-                
+
                 $users[] = $user;
             }
             return $users;
@@ -840,11 +854,21 @@ namespace Goteo\Model {
 
             $list = array();
 
+            if(User::iAmRoot()){
+                $nodeQuery1 = '';
+                $nodeQuery2 = '';
+            }else{
+                $nodeQuery1 = 'INNER JOIN user_login_log ON user_login_log.user = user.id';
+                $nodeQuery2 = "WHERE user_login_log.node = '" . LG_PLACE_NAME . "'";
+            }
+
             $query = static::query("
                 SELECT
                     user.id as id,
                     CONCAT(user.name, ' (', user.email, ')') as name
                 FROM    user
+                  $nodeQuery1
+                $nodeQuery2
                 ");
 
             foreach ($query->fetchAll(\PDO::FETCH_CLASS) as $item) {
@@ -919,7 +943,7 @@ namespace Goteo\Model {
                     ON  user_role.user_id = user.id
                     AND user_role.role_id = 'admin'
                 ";
-            
+
             if ($availableonly) {
                 $sql .= " WHERE id NOT IN (SELECT distinct(user) FROM user_node)";
             }
@@ -937,14 +961,14 @@ namespace Goteo\Model {
         }
 
 
-		/**
-		 * Validación de usuario.
-		 *
-		 * @param string $username Nombre de usuario
-		 * @param string $password Contraseña
-		 * @return obj|false Objeto del usuario, en caso contrario devolverá 'false'.
-		 */
-		public static function login ($username, $password) {
+        /**
+         * Validación de usuario.
+         *
+         * @param string $username Nombre de usuario
+         * @param string $password Contraseña
+         * @return obj|false Objeto del usuario, en caso contrario devolverá 'false'.
+         */
+        public static function login ($username, $password) {
 
             $ok = false;
 
@@ -953,12 +977,12 @@ namespace Goteo\Model {
                         password
                     FROM user
                     WHERE BINARY id = :username",
-				array(
-					':username' => trim($username)
-				)
-			);
+                array(
+                    ':username' => trim($username)
+                )
+            );
 
-			if($row = $query->fetch(\PDO::FETCH_OBJ)) {
+            if($row = $query->fetch(\PDO::FETCH_OBJ)) {
 
                 if  (version_compare(phpversion(), '5.5.0', '>=')) {
                     $ok = password_verify($password, $row->password);
@@ -985,39 +1009,39 @@ namespace Goteo\Model {
                     return false;
                 }
 
-			}
-			return false;
-		}
+            }
+            return false;
+        }
 
-		/**
-		 * Comprueba si el usuario está identificado.
-		 *
-		 * @return boolean
-		 */
-		public static function isLogged () {
-			return !empty($_SESSION['user']);
-		}
+        /**
+         * Comprueba si el usuario está identificado.
+         *
+         * @return boolean
+         */
+        public static function isLogged () {
+            return !empty($_SESSION['user']);
+        }
 
-		/**
-		 * Refresca la sesión.
-		 * (Utilizar después de un save)
-		 *
-		 * @return type object	User
-		 */
-		public static function flush () {
-    		if(static::isLogged()) {
-    			return $_SESSION['user'] = self::get($_SESSION['user']->id);
-    		}
-    	}
+        /**
+         * Refresca la sesión.
+         * (Utilizar después de un save)
+         *
+         * @return type object    User
+         */
+        public static function flush () {
+            if(static::isLogged()) {
+                return $_SESSION['user'] = self::get($_SESSION['user']->id);
+            }
+        }
 
-		/**
-		 * Verificacion de recuperacion de contraseña
-		 *
-		 * @param string $username Nombre de usuario
-		 * @param string $email    Email de la cuenta
-		 * @return boolean true|false  Correctos y mail enviado
-		 */
-		public static function recover ($email = null) {
+        /**
+         * Verificacion de recuperacion de contraseña
+         *
+         * @param string $username Nombre de usuario
+         * @param string $email    Email de la cuenta
+         * @return boolean true|false  Correctos y mail enviado
+         */
+        public static function recover ($email = null) {
             $query = self::query("
                     SELECT
                         id,
@@ -1026,11 +1050,11 @@ namespace Goteo\Model {
                     FROM user
                     WHERE BINARY email = :email
                     ",
-				array(
-					':email'    => trim($email)
-				)
-			);
-			if($row = $query->fetchObject()) {
+                array(
+                    ':email'    => trim($email)
+                )
+            );
+            if($row = $query->fetchObject()) {
                 // tenemos id, nombre, email
                 // genero el token
                 $token = md5(uniqid()).'¬'.$row->email.'¬'.date('Y-m-d');
@@ -1057,32 +1081,36 @@ namespace Goteo\Model {
                 if ($mail->send($errors)) {
                     return true;
                 }
-			}
-			return false;
-		}
+            }
+            return false;
+        }
 
-		/**
-		 * Verificacion de darse de baja
-		 *
-		 * @param string $email    Email de la cuenta
-		 * @return boolean true|false  Correctos y mail enviado
-		 */
-		public static function leaving ($email, $message = null) {
+        /**
+         * Verificacion de darse de baja
+         *
+         * @param string $email    Email de la cuenta
+         * @return boolean true|false  Correctos y mail enviado
+         */
+        public static function leaving ($email, $message = null) {
             $query = self::query("
                     SELECT
                         id,
                         name,
                         email
                     FROM user
+                    INNER JOIN user_login_log
+                    ON user_login_log.user = user.id
                     WHERE BINARY email = :email
                     AND active = 1
                     AND hide = 0
+                    AND user_login_log.node = :node
                     ",
-				array(
-					':email'    => trim($email)
-				)
-			);
-			if($row = $query->fetchObject()) {
+                array(
+                    ':email'    => trim($email),
+                    ':node' => LG_PLACE_NAME
+                )
+            );
+            if($row = $query->fetchObject()) {
                 // tenemos id, nombre, email
                 // genero el token
                 $token = md5(uniqid()).'¬'.$row->email.'¬'.date('Y-m-d');
@@ -1125,19 +1153,19 @@ namespace Goteo\Model {
                 unset($mail);
 
                 return true;
-			}
-			return false;
-		}
+            }
+            return false;
+        }
 
-    	/**
-    	 * Guarda el Token y envía un correo de confirmación.
-    	 *
-    	 * Usa el separador: ¬
-    	 *
-    	 * @param type string	$token	Formato: '<md5>¬<email>'
-    	 * @return type bool
-    	 */
-    	private function setToken ($token) {
+        /**
+         * Guarda el Token y envía un correo de confirmación.
+         *
+         * Usa el separador: ¬
+         *
+         * @param type string    $token    Formato: '<md5>¬<email>'
+         * @return type bool
+         */
+        private function setToken ($token) {
             if(count($tmp = explode('¬', $token)) > 1) {
                 $email = $tmp[1];
                 if(Check::mail($email)) {
@@ -1167,24 +1195,24 @@ namespace Goteo\Model {
                     return self::query('UPDATE user SET token = :token WHERE id = :id', array(':id' => $this->id, ':token' => $token));
                 }
             }
-    	}
+        }
 
-    	/**
-    	 * Token de confirmación.
-    	 *
-    	 * @return type string
-    	 */
-    	private function getToken () {
+        /**
+         * Token de confirmación.
+         *
+         * @return type string
+         */
+        private function getToken () {
             $query = self::query('SELECT token FROM user WHERE id = ?', array($this->id));
             return $query->fetchColumn(0);
-    	}
+        }
 
         /**
          * Cofinanciación.
          *
          * @return type array
          */
-    	private function getSupport () {
+        private function getSupport () {
             $query = self::query("SELECT DISTINCT(project) FROM invest WHERE user = ? AND status IN ('0', '1', '3')", array($this->id));
             $projects = $query->fetchAll(\PDO::FETCH_ASSOC);
             $query = self::query("SELECT SUM(amount), COUNT(id) FROM invest WHERE user = ? AND status IN ('0', '1', '3')", array($this->id));
@@ -1192,16 +1220,16 @@ namespace Goteo\Model {
             return array('projects' => $projects, 'amount' => $invest[0], 'invests' => $invest[1]);
         }
 
-	    /**
-    	 * Nivel actual de meritocracia. (1-5)
-    	 * [Recalcula y actualiza el registro en db]
-    	 *
-    	 * @return type int	Worth::id
-    	 */
-    	private function getWorth () {
+        /**
+         * Nivel actual de meritocracia. (1-5)
+         * [Recalcula y actualiza el registro en db]
+         *
+         * @return type int    Worth::id
+         */
+        private function getWorth () {
             $query = self::query('SELECT id FROM worthcracy WHERE amount <= ? ORDER BY amount DESC LIMIT 1', array($this->support['amount']));
             $worth = $query->fetchColumn();
-    	    $query = self::query('SELECT worth FROM user WHERE id = ?', array($this->id));
+            $query = self::query('SELECT worth FROM user WHERE id = ?', array($this->id));
             if($worth !== $query->fetchColumn()) {
                 self::query('UPDATE user SET worth = :worth WHERE id = :id', array(':id' => $this->id, ':worth' => $worth));
             }
@@ -1209,22 +1237,22 @@ namespace Goteo\Model {
         }
 
         /**
-    	 * Número de proyectos publicados
-    	 *
-    	 * @return type int	Count(id)
-    	 */
-    	private function getProjects () {
+         * Número de proyectos publicados
+         *
+         * @return type int    Count(id)
+         */
+        private function getProjects () {
             $query = self::query('SELECT COUNT(id) FROM project WHERE owner = ? AND status > 2', array($this->id));
             $num_proj = $query->fetchColumn(0);
             return $num_proj;
         }
 
         /**
-    	 * Cantidad aportada
-    	 *
-    	 * @return type int	Count(id)
-    	 */
-    	private function getAmount () {
+         * Cantidad aportada
+         *
+         * @return type int    Count(id)
+         */
+        private function getAmount () {
             $query = self::query("SELECT SUM(invest.amount) FROM invest WHERE user = ? AND status IN ('0', '1', '3')", array($this->id));
             $amount = $query->fetchColumn(0);
             return $amount;
@@ -1236,7 +1264,16 @@ namespace Goteo\Model {
          * @return type array
          */
         public static function getPersonal ($id) {
-            $query = self::query('SELECT
+
+            if(User::iAmRoot()){
+                $nodeQuery1 = '';
+                $nodeQuery2 = '';
+            }else{
+                $nodeQuery1 = 'INNER JOIN user_login_log ON user_personal.user = user_login_log.user';
+                $nodeQuery2 = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
+            }
+
+            $query = self::query("SELECT
                                       contract_name,
                                       contract_nif,
                                       phone,
@@ -1245,7 +1282,9 @@ namespace Goteo\Model {
                                       location,
                                       country
                                   FROM user_personal
-                                  WHERE user = ?'
+                                    $nodeQuery1
+                                  WHERE user_personal.user = ?
+                                  $nodeQuery2"
                 , array($id));
 
             $data = $query->fetchObject();
@@ -1260,27 +1299,30 @@ namespace Goteo\Model {
          */
         public static function setPersonal ($user, $data = array(), $force = false, &$errors = array()) {
 
-            if ($force) {
-                // actualizamos los datos
-                $ins = 'REPLACE';
-            } else {
-                // solo si no existe el registro
-                $ins = 'INSERT';
-                $query = self::query('SELECT user FROM user_personal WHERE user = ?', array($user));
-                if ($query->fetchColumn(0) == $user) {
-                    return false;
+            if(User::hasLoginHere($user)){
+                if ($force) {
+                    // actualizamos los datos
+                    $ins = 'REPLACE';
+                } else {
+                    // solo si no existe el registro
+                    $ins = 'INSERT';
+                    $query = self::query('SELECT user FROM user_personal WHERE user = ?', array($user));
+                    if ($query->fetchColumn(0) == $user) {
+                        return false;
+                    }
                 }
+            }else{
+                return false;
             }
 
-
             $fields = array(
-                  'contract_name',
-                  'contract_nif',
-                  'phone',
-                  'address',
-                  'zipcode',
-                  'location',
-                  'country'
+                'contract_name',
+                'contract_nif',
+                'phone',
+                'address',
+                'zipcode',
+                'location',
+                'country'
             );
 
             $values = array();
@@ -1295,8 +1337,8 @@ namespace Goteo\Model {
             }
 
             if (!empty($values) && $set != '') {
-                    $values[':user'] = $user;
-                    $sql = "$ins INTO user_personal SET user = :user, " . $set;
+                $values[':user'] = $user;
+                $sql = "$ins INTO user_personal SET user = :user, " . $set;
 
                 try {
                     self::query($sql, $values);
@@ -1317,7 +1359,16 @@ namespace Goteo\Model {
          * @return type array
          */
         public static function getPreferences ($id) {
-            $query = self::query('SELECT
+
+            if(User::iAmRoot()){
+                $nodeQuery1 = '';
+                $nodeQuery2 = '';
+            }else{
+                $nodeQuery1 = 'INNER JOIN user_login_log ON user_prefer.user = user_login_log.user';
+                $nodeQuery2 = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
+            }
+
+            $query = self::query("SELECT
                                       updates,
                                       threads,
                                       rounds,
@@ -1325,9 +1376,10 @@ namespace Goteo\Model {
                                       email,
                                       tips
                                   FROM user_prefer
-                                  WHERE user = ?'
-                , array($id));
-
+                                    $nodeQuery1
+                                  WHERE user_prefer.user = :id
+                                  $nodeQuery2"
+                , array( ':id' => $id ));
             $data = $query->fetchObject();
             return $data;
         }
@@ -1349,8 +1401,8 @@ namespace Goteo\Model {
             }
 
             if (!empty($values) && $set != '') {
-                    $values[':user'] = $user;
-                    $sql = "REPLACE INTO user_prefer SET user = :user, " . $set;
+                $values[':user'] = $user;
+                $sql = "REPLACE INTO user_prefer SET user = :user, " . $set;
 
                 try {
                     self::query($sql, $values);
@@ -1365,40 +1417,50 @@ namespace Goteo\Model {
 
         }
 
-		private function getRoles () {
+        private function getRoles () {
 
             $roles = array();
-            
-		    $query = self::query('
-		    	SELECT
-		    		role.id as id,
-		    		role.name as name
-		    	FROM role
-		    	JOIN user_role ON role.id = user_role.role_id
-		    	WHERE user_id = ?
-		    ', array($this->id));
+
+            if(User::iAmRoot()){
+                $nodeQuery1 = '';
+                $nodeQuery2 = '';
+            }else{
+                $nodeQuery1 = 'INNER JOIN user_login_log ON user_role.user_id = user_login_log.user';
+                $nodeQuery2 = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
+            }
+
+            $query = self::query("
+                SELECT
+                    role.id as id,
+                    role.name as name
+                FROM role
+                JOIN user_role ON role.id = user_role.role_id
+                $nodeQuery1
+                WHERE user_role.user_id = :id
+                $nodeQuery2"
+                , array( ':id' => $this->id ));
             foreach ($query->fetchAll(\PDO::FETCH_OBJ) as $rol) {
                 $roles[$rol->id] = $rol;
             }
             // añadimos el de usuario normal
             $roles['user'] = (object) array('id'=>'user', 'name'=>Text::_('Usuario registrado'));
-            
+
             return $roles;
 
-		}
+        }
 
         /* listado de roles */
-		public static function getRolesList () {
+        public static function getRolesList () {
 
             $roles = array();
 
-		    $query = self::query('SELECT role.id as id, role.name as name FROM role ORDER BY role.name');
+            $query = self::query('SELECT role.id as id, role.name as name FROM role ORDER BY role.name');
             foreach ($query->fetchAll(\PDO::FETCH_OBJ) as $rol) {
                 $roles[$rol->id] = $rol->name;
             }
             return $roles;
 
-		}
+        }
 
 
         /*
@@ -1486,15 +1548,66 @@ namespace Goteo\Model {
         }
 
         /**
-         *  check localadmin permission
+         *  check localadmin
          */
-        public function isLocalAdmin() {
-            return (
-                (!empty($this->id)) &&
-                (count($this->roles) > 0  && array_key_exists('localadmin',$this->roles)) &&
-                ( isset($this->home) && ($this->home === LG_PLACE_NAME) )
-            );
+        public static function isLocalAdmin($id = null) {
+            if($id != null){
+                $query = self::query("
+                SELECT *
+                FROM user
+                JOIN user_role ON user.id = user_role.user_id
+                WHERE user.id  = :id
+                AND user.node = :node
+                AND user_role.role_id = 'localadmin'"
+                    , array( ':id' => $id, ':node' => LG_PLACE_NAME ));
+                if($query->fetchAll()){
+                    return true;
+                }else{
+                    return false;
+                }
+            }else if(isset($_SESSION['user'])
+                && isset($_SESSION['user']->roles)
+                && array_key_exists( 'localadmin',$_SESSION['user']->roles)
+                && isset($_SESSION['user']->home)
+                && $_SESSION['user']->home == LG_PLACE_NAME
+            ){
+                return true;
+            }else{
+                return false;
+            }
         }
 
-	}
+        /**
+         *  check root
+         */
+        public static function iAmRoot() {
+            if(isset($_SESSION['user'])
+                     && isset($_SESSION['user']->roles)
+                     && array_key_exists( 'root',$_SESSION['user']->roles)
+            ){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        /*
+         *  get login history
+         */
+        public static function hasLoginHere($id){
+            $login = array();
+
+            $query = self::query('
+                SELECT user_login_log.node
+                FROM user_login_log
+                WHERE user = ?
+            ', array($id));
+            foreach ($query->fetchAll(\PDO::FETCH_ASSOC) as $_place) {
+                $login[] = $_place['node'];
+            }
+            return $login;
+        }
+
+
+    }
 }

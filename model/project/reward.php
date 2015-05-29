@@ -349,8 +349,6 @@ namespace Goteo\Model\Project {
                     $and = " AND";
                 }
 
-                $sqlInnerAdd = "INNER JOIN user_login_log ON user.id = user_login_log.user";
-                $sqlFilter .= " AND user_login_log.node = '" . LG_PLACE_NAME ."'";
 
                 $sql = "SELECT
                             invest_reward.invest as invest,
@@ -368,15 +366,11 @@ namespace Goteo\Model\Project {
                             AND invest.status IN (0, 1, 3)
                         INNER JOIN user
                             ON user.id = invest.user
-                            $sqlFilterUser
-                        $sqlInnerAdd
                         INNER JOIN project
                             ON project.id = invest.project
                             AND project.status IN (3, 4, 5)
-                            $sqlFilterProj
                         INNER JOIN reward
                             ON reward.id = invest_reward.reward
-                        $sqlFilter
                         ";
 
                 $sql .= " ORDER BY user.name ASC";
