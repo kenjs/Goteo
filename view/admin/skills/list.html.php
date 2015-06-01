@@ -47,7 +47,6 @@ $per = 100 / $cols;
 <!-- Filtro -->
 <?php if (!empty($filters)) : ?>
 <div class="widget board">
-    <? var_dump($this); ?>
     <form id="filter-form" action="<?php echo $this['url']; ?>" method="get">
         <?php foreach ($filters as $id=>$fil) : ?>
         <?php if ($fil['type'] == 'select') : ?>

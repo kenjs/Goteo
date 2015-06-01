@@ -85,7 +85,9 @@ $bodyClass = 'project-show'; include 'view/prologue.html.php' ?>
 
                 <div class="project-by"><a href="/user/<?php echo $project->owner; ?>"><?php echo Text::get('regular-by') ?> <?php echo $project->user->name; ?></a></div>
                 <?
-                if(strstr($_SERVER['REQUEST_URI'],'project')):
+                $_value = '/project/' . $project->id;
+                $_url = urldecode($_SERVER['REQUEST_URI']);
+                if(strstr($_url,$_value) && preg_match('/^\/project\/((?!\/).)*$/',$_url)):
                     ?>
                     <div id="social_bookmark">
                         <div id="twitter">
@@ -208,7 +210,11 @@ $bodyClass = 'project-show'; include 'view/prologue.html.php' ?>
 									
                                 case 'ok':
                                     echo
-                                        new View('view/project/widget/investMsg.html.php', array('message' => $step, 'user' => $user)), new View('view/project/widget/spread.html.php',array('project' => $project));
+                                        new View('view/project/widget/investMsg.html.php', array('message' => $step, 'user' => $user));
+                                        if(get_spOS() === 'iOS'){
+                                            new View('view/project/widget/iosMsg.html.php',array('project' => $project));
+                                        }
+                                        new View('view/project/widget/spread.html.php',array('project' => $project));
 										//sacarlo de div#center
 										$printSendMsg=true;										
                                     break;

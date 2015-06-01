@@ -22,6 +22,7 @@
 namespace Goteo\Model\User {
 
     use Goteo\Model\Image;
+    use Goteo\Model\User;
 
     class Interest extends \Goteo\Model\Category {
 
@@ -37,18 +38,26 @@ namespace Goteo\Model\User {
          */
 	 	public static function get ($id) {
             $array = array ();
-            try {
-                $sqlInnerAdd = "INNER JOIN user_login_log ON user_interest.user = user_login_log.user";
-                $sqlWhereAdd = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
-//                var_dump("SELECT interest FROM user_interest $sqlInnerAdd WHERE user_interest.user = ? $sqlWhere");
-//                exit;
 
-                $query = static::query("SELECT interest FROM user_interest $sqlInnerAdd WHERE user_interest.user = ? $sqlWhereAdd", array($id));
+            if(\Goteo\Model\User::iAmRoot()){
+                $nodeQuery1 = '';
+                $nodeQuery2 = '';
+            }else{
+                $nodeQuery1 = 'INNER JOIN user_login_log ON user_interest.user = user_login_log.user';
+                $nodeQuery2 = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
+            }
+
+            try {
+                $query = static::query("SELECT interest
+                FROM user_interest
+                $nodeQuery1
+                WHERE user_interest.user = :id
+                $nodeQuery2
+                ", array( ':id' => $id ));
                 $interests = $query->fetchAll();
                 foreach ($interests as $int) {
                     $array[$int[0]] = $int[0];
                 }
-
                 return $array;
             } catch(\PDOException $e) {
 				throw new \Goteo\Core\Exception($e->getMessage());
@@ -80,20 +89,24 @@ namespace Goteo\Model\User {
 
                 if (!empty($user)) {
 
-                    $sqlInnerAdd = "INNER JOIN user_login_log ON user_interest.user = user_login_log.user";
-                    $sqlWhereAdd = "WHERE user_login_log.node = '" . LG_PLACE_NAME . "'";
+                    if(User::iAmRoot()){
+                        $nodeQuery1 = '';
+                        $nodeQuery2 = '';
+                    }else{
+                        $nodeQuery1 = 'INNER JOIN user_login_log ON user_interest.user = user_login_log.user';
+                        $nodeQuery2 = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
+                    }
 
                     $sql .= "INNER JOIN user_interest
                                 ON  user_interest.interest = category.id
                                 AND user_interest.user = :user
-                                $sqlInnerAdd
-                                $sqlWhereAdd
+                                $nodeQuery1
+                                $nodeQuery2
                                 ";
                     $values[':user'] = $user;
 
                 }
-                $sql .= "ORDER BY name ASC
-                        ";
+                $sql .= "ORDER BY name ASC ";
 
                 $query = static::query($sql, $values);
                 $interests = $query->fetchAll();
@@ -173,10 +186,15 @@ namespace Goteo\Model\User {
              $array = array ();
             try {
 
-                $values = array(':me'=>$user);
+                $values = array( ':me' => $user );
 
-                $sqlInnerAdd = "INNER JOIN user_login_log ON user_interest.user = user_login_log.user";
-                $sqlWhereAdd = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
+                if(User::iAmRoot()){
+                    $nodeQuery1 = '';
+                    $nodeQuery2 = '';
+                }else{
+                    $nodeQuery1 = 'INNER JOIN user_login_log ON user_interest.user = user_login_log.user';
+                    $nodeQuery2 = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
+                }
 
                 $sql = "SELECT
                             DISTINCT(user_interest.user) as id,
@@ -189,9 +207,9 @@ namespace Goteo\Model\User {
                         INNER JOIN user
                             ON  user.id = user_interest.user
                             AND (user.hide = 0 OR user.hide IS NULL)
-                        $sqlInnerAdd
+                        $nodeQuery1
                         WHERE user_interest.user != :me
-                        $sqlWhereAdd
+                        $nodeQuery2
                         ";
                 if (!empty($category)) {
                    $sql .= "AND user_interest.interest = :interest
@@ -233,21 +251,26 @@ namespace Goteo\Model\User {
          */
         public static function shareAll ($category) {
              $array = array ();
+
+            if(User::iAmRoot()){
+                $nodeQuery1 = '';
+                $nodeQuery2 = '';
+            }else{
+                $nodeQuery1 = 'INNER JOIN user_login_log ON user.id = user_login_log.user';
+                $nodeQuery2 = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
+            }
+
             try {
+                $values = array( ':interest' => $category);
 
-                $values = array(':interest'=>$category);
-
-                $sqlInnerAdd = "INNER JOIN user_login_log ON user.id = user_login_log.user";
-                $sqlWhereAdd = "AND user_login_log.node = '" . LG_PLACE_NAME . "'";
-
-               $sql = "SELECT DISTINCT(user_interest.user) as id
+                $sql = "SELECT DISTINCT(user_interest.user) as id
                         FROM user_interest
                         INNER JOIN user
                             ON  user.id = user_interest.user
                             AND (user.hide = 0 OR user.hide IS NULL)
-                        $sqlInnerAdd
+                        $nodeQuery1
                         WHERE user_interest.interest = :interest
-                          $sqlWhereAdd
+                        $nodeQuery2
                         ";
 
                 $query = static::query($sql, $values);

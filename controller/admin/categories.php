@@ -183,7 +183,6 @@ namespace Goteo\Controller\Admin {
                         'translate' => '',
                         'up' => '',
                         'down' => '',
-                        'translate' => '',
                         'remove' => ''
                     ),
                     'url' => "$url"

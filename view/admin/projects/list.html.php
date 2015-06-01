@@ -177,7 +177,7 @@ $pagedResults = new \Paginated($this['projects'], 10, isset($_GET['page']) ? $_G
                 <td colspan="7">
                     :&nbsp;
                     <a href="<?php echo "/admin/projects/dates/{$project->id}"; ?>">[<?php echo Text::_("Fechas"); ?>]</a>
-                    <a href="<?php echo "/admin/projects/accounts/{$project->id}"; ?>">[<?php echo Text::_("Cuentas"); ?>]</a>
+                    <?/*<a href="<?php echo "/admin/projects/accounts/{$project->id}"; ?>">[<?php echo Text::_("Cuentas"); ?>]</a>*/?>
                     <?php if ($project->status < 4) : ?><a href="<?php echo "/admin/projects/rebase/{$project->id}"; ?>" onclick="return confirm('<?php echo Text::_("Esto es MUY DELICADO, seguimos?"); ?>');">[<?php echo Text::_("Id"); ?>]</a><?php endif; ?>
                     &nbsp;|&nbsp;
                     <?php if ($project->status < 2) : ?><a href="<?php echo "/admin/projects/review/{$project->id}"; ?>" onclick="return confirm('<?php echo Text::_("El creador no podrá editarlo más, ok?"); ?>');">[<?php echo Text::_("A revisión"); ?>]</a><?php endif; ?>

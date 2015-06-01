@@ -134,10 +134,6 @@ $worthcracy = Worth::getAll();
         <?php if (!empty($_SESSION['user'])) echo new View('view/m/user/widget/investors.html.php', $this) ?>
         <?php echo new View('view/m/user/widget/sharemates.html.php', $this) ?>
     </div>
-
 </div>
-
-<?php 
-include 'view/m/footer.html.php';
-include 'view/m/epilogue.html.php';
-
+<?php include 'view/m/footer.html.php' ?>
+<?php include 'view/m/epilogue.html.php' ?>

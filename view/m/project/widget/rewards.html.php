@@ -59,7 +59,7 @@ uasort($project->individual_rewards,
                 <p><?php echo nl2br(htmlspecialchars($individual->description))?></p>
 
                 <div class="buttons">
-                    <a class="button violet supportit" href="/project/<?php echo $project->id; ?>/invest"><?php echo Text::get('regular-invest_it'); ?></a>
+                    <a class="button violet supportit" href="lgsafari://<?php echo $_SERVER['HTTP_HOST']; ?>/project/<?php echo $project->id; ?>/invest"><?php echo Text::get('regular-invest_it'); ?></a>
                 </div>
 
                     <?php /* if (!empty($individual->units)) : ?>

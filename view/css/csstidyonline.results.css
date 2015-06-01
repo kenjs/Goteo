@@ -2011,6 +2011,7 @@ body.post-type-archive-data .header .inner
 .footer .footer_link_wrapper
 {
 	background-color:#fff;
+    width: 960px;
 	margin:0 auto;
 	position:relative;
 }
@@ -7461,6 +7462,21 @@ div.widget.project-rewards div.individual h5.title,
 	color: #96238F !important;
 }
 
+#project-rewards div.individual .title a,
+#project-rewards div.social .title a {
+    text-decoration: none;
+    font-size: 16px;
+}
+#project-rewards div.individual .title a:hover,
+#project-rewards div.social .title a:hover {
+    text-decoration: underline;
+}
+#project-rewards div.individual .title a {
+    color: #96238F !important;
+}
+#project-rewards div.social .title a {
+    color: #28b258 !important;
+}
 
 div.widget.project-invest > div.social ul li,
 div.widget.project-rewards > div.social ul li,
@@ -7468,6 +7484,11 @@ div.widget.project-rewards > div.social ul li,
 	background-color: #f3f9f2;
 }
 
+#rewards-summary div.individual h4.title,
+#rewards-summary div.social h4.title {
+    font-size: 18px;
+    margin-left: 16px;
+}
 
 div.widget.project-invest > div.social ul li.active,
 div.widget.project-rewards > div.social ul li.active,
@@ -7487,8 +7508,8 @@ div.widget.project-rewards > div.individual ul li,
 }
 
 div.center #rewards-summary > div.individual ul li {
-	padding-top: 30px;
-	background-position: 10px 36px;
+	padding-top: 24px;
+	background-position: 16px 28px;
 }
 div.center.rewards div.widget.project-rewards-summary div.individual ul li div.amount {
 	top: -24px;
@@ -7524,7 +7545,7 @@ div.widget.project-rewards > div.individual ul li div.amount,
 	text-align: right;
 	color: #96238F;
 	position: relative;
-	top: -30px;
+	top: -24px;
 	right: -10px;
 	text-transform:uppercase;
 	height: 28px;
@@ -7592,9 +7613,13 @@ div.widget.project-invest ul li,
 div.widget.project-rewards ul li,
 #rewards-summary ul li {
 	padding: 10px 10px 10px 60px;
-	background: none no-repeat 10px 14px;
+	background: none no-repeat 16px 14px;
 	min-height: 32px;
 	margin-bottom: 1em;
+}
+#rewards-summary ul li.service,
+#rewards-summary ul li.file {
+    padding-top: 18px;
 }
 
 div.widget.project-invest ul li > p,
@@ -7616,6 +7641,7 @@ div.widget.project-rewards ul li > .name,
 div.center.rewards #rewards-summary ul li > .name {
 	padding-left: 0;
 	width: 540px;
+    font-size: 16px;
 }
 
 div.widget.project-rewards div.social ul li > .name {
@@ -7928,12 +7954,14 @@ div.side div.project-rewards div.social ul li:last-child {
 
 div.side div.project-collaborations li.support h6.name,
 div.side div.project-rewards li.manual h6.name,
-div.side div.project-rewards li.service h6.name {
+div.side div.project-rewards li.service h6.name,
+div.side div.project-rewards li.file h6.name {
     display: table;
 }
 div.side div.project-collaborations li.support h6.name span,
 div.side div.project-rewards li.manual h6.name span,
-div.side div.project-rewards li.service h6.name span{
+div.side div.project-rewards li.service h6.name span,
+div.side div.project-rewards li.file h6.name span{
     display: table-cell;
     vertical-align: middle;
 }

@@ -1619,6 +1619,32 @@ div#sub-footer div.platoniq a.poweredby:hover{
     cursor: default;
 }
 
+
+/*--------------------------------------------------
+to page top
+--------------------------------------------------*/
+
+#to_page_top {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 60px;
+    height: 50px;
+    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.75); /*delete later*/
+}
+
+#to_page_top img {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#to_page_top a {
+    display: block;
+}
+
+
+
 /* Sponsors */
 .slidersponsors-ctrl {
     max-width: 940px;
@@ -1856,7 +1882,7 @@ footer
 --------------------------------------------------*/
 .footer {
     background-color: #fff;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 .footer .footer_link_wrapper {
@@ -2373,12 +2399,12 @@ div.widget.project div.meter div.obtained span.percent {
     color: #a7a9ac;
     padding-left: 15px;
 }
-div.widget.project div.meter h3.title.obtained,
+div.widget.project div.meter h3.title.obtained/*,
 div.widget.project div.meter.active dl > dd,
-div.widget.project div.meter.active dl > dt {
+div.widget.project div.meter.active dl > dt*/ {
     display:none;
 }
-div.widget.project div.meter.active h3.title.investment,
+/*div.widget.project div.meter.active h3.title.investment,
 div.widget.project div.meter.active h3.title.ronda,
 div.widget.project div.meter.active div.graph > div {
     display:none;
@@ -2395,7 +2421,7 @@ div.widget.project div.meter.active div.obtained {
 div.widget.project div.meter.active dl .days {
     display: block !important;
     background-color: #f8f8f8 !important;
-}
+}*/
 /* Hasta aqu� la movida de lo obtenido */
 
 div.widget.project div.meter div.graph  * strong,
@@ -9370,6 +9396,16 @@ div.widget.user-about > div.message p a {
 
 div.widget.user-about > div.message p a:hover {
     text-decoration: underline;
+}
+
+div.widget.user-about .improper_report {
+    padding: 16px;
+    text-align: right;
+}
+
+div.widget.user-about .improper_report a {
+    color: #808080;
+    font-size: 11px;
 }
 
 

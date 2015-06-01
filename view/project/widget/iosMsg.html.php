@@ -17,13 +17,8 @@
  *  along with Goteo.  If not, see <http://www.gnu.org/licenses/agpl.txt>.
  *
  */
-
-use Goteo\Library\Text;
+//var_dump($this);
 ?>
-<div class="widget worthcracy user-worthcracy">
-<h3 class="title"><?php echo Text::get('profile-my_worth-header'); ?></h3>
-<?php if (isset($this['amount'])) : ?>
-    <div class="worth-amount"><?php echo number_format($this['amount'], 0, '',',') ?></div>
-<?php endif ?>
-<?php // include 'view/worth/base.html.php' ?>
+<div class="widget invest-message">
+    <h2><a href="localgood://<?php echo $_SERVER['HTTP_HOST']; ?>/project/">Local Goodアプリへはこちらからお戻り下さい。</a></h2>
 </div>
