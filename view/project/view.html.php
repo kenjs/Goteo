@@ -208,7 +208,11 @@ $bodyClass = 'project-show'; include 'view/prologue.html.php' ?>
 									
                                 case 'ok':
                                     echo
-                                        new View('view/project/widget/investMsg.html.php', array('message' => $step, 'user' => $user)), new View('view/project/widget/spread.html.php',array('project' => $project));
+                                        new View('view/project/widget/investMsg.html.php', array('message' => $step, 'user' => $user));
+                                        if(get_spOS() === 'iOS'){
+                                            new View('view/project/widget/iosMsg.html.php',array('project' => $project));
+                                        }
+                                        new View('view/project/widget/spread.html.php',array('project' => $project));
 										//sacarlo de div#center
 										$printSendMsg=true;										
                                     break;

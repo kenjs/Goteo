@@ -115,5 +115,15 @@ namespace {
      */
     function is_sha1($str) {
         return (bool) preg_match('/^[0-9a-f]{40}$/i', $str);
-    }    
+    }
+
+    function get_spOS() {
+        if(preg_match('/iPod|iPhone/i', $_SERVER['HTTP_USER_AGENT'])) {
+            return 'iOS';
+        }else if(preg_match('/Android.+Mobile/i', $_SERVER['HTTP_USER_AGENT'])) {
+            return 'Android';
+        }
+        return false;
+    }
+
 }
