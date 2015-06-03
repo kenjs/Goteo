@@ -29,6 +29,7 @@ use Goteo\Library\Text,
         <h1><a href="<?= LOCALGOOD_WP_BASE_URL ?>"><img src="/view/css/header/logo.png" alt=""/></a></h1>
         <div class="nav_inner viewport">
             <ul class="nav<?/*flipsnap*/?>">
+
                 <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/earth_view/">課題を知る</a>
                     <ul class="sub">
                         <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/submit_subject/">課題を投稿する</a></li>
