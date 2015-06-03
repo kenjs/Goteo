@@ -211,7 +211,7 @@ namespace Goteo\Controller {
 
             $user = $_SESSION['user'];
 
-            if(!isset($_SESSION['user']->roles['project_owner']) && !isset($_SESSION['user']->roles['localadmin'])) throw new Redirection('/dashboard/profile/');
+            if(!isset($_SESSION['user']->roles['project_owner']) && !(isset($_SESSION['user']->roles['localadmin']) && $_SESSION['user']->home == LG_PLACE_NAME )) throw new Redirection('/dashboard/profile/');
 
             $errors = array();
 
