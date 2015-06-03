@@ -89,7 +89,10 @@ namespace Goteo\Controller {
                         unset($_SESSION['jumpto']);
                         throw new Redirection($jumpto);
                     } elseif (isset($user->roles['admin']) || isset($user->roles['localadmin']) || isset($user->roles['superadmin'])) {
-                        if(VIEW_PATH === 'view/m'){
+
+                        if( VIEW_PATH === 'view/m' ||
+                            (isset($user->roles['localadmin']) && ($user->home !== LG_PLACE_NAME))
+                        ){
                             throw new Redirection('/dashboard');
                         }
                         throw new Redirection('/admin');

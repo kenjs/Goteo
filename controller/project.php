@@ -53,7 +53,7 @@ namespace Goteo\Controller {
         }
 
         public function delete ($id) {
-            if(!isset($_SESSION['user']->roles['project_owner'])) throw new Redirection('/dashboard/profile/');
+            if(!isset($_SESSION['user']->roles['project_owner']) && !isset($_SESSION['user']->roles['localadmin'])) throw new Redirection('/dashboard/profile/');
             $project = Model\Project::get($id);
             $errors = array();
             if ($project->delete($errors)) {
@@ -69,7 +69,8 @@ namespace Goteo\Controller {
 
         //Aunque no esté en estado edición un admin siempre podrá editar un proyecto
         public function edit ($id, $step = 'userProfile') {
-            if(!isset($_SESSION['user']->roles['project_owner'])) throw new Redirection('/dashboard/profile/');
+
+            if( !isset($_SESSION['user']->roles['project_owner']) && !isset($_SESSION['user']->roles['localadmin']) ) throw new Redirection('/dashboard/profile/');
             
             $project = Model\Project::get($id, null);
 
@@ -407,7 +408,7 @@ namespace Goteo\Controller {
         }
 
         public function create () {
-            if(!isset($_SESSION['user']->roles['project_owner'])) throw new Redirection('/dashboard/profile/');
+            if(!isset($_SESSION['user']->roles['project_owner']) && !isset($_SESSION['user']->roles['localadmin'])) throw new Redirection('/dashboard/profile/');
 
             if (empty($_SESSION['user'])) {
                 $_SESSION['jumpto'] = '/project/create';

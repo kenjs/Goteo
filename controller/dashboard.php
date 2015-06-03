@@ -211,7 +211,7 @@ namespace Goteo\Controller {
 
             $user = $_SESSION['user'];
 
-            if(!isset($_SESSION['user']->roles['project_owner'])) throw new Redirection('/dashboard/profile/');
+            if(!isset($_SESSION['user']->roles['project_owner']) && !isset($_SESSION['user']->roles['localadmin'])) throw new Redirection('/dashboard/profile/');
 
             $errors = array();
 
@@ -644,7 +644,7 @@ namespace Goteo\Controller {
 
             $user = $_SESSION['user'];
             $_permission = false;
-            if(isset($_SESSION['user']->roles['project_owner'])){
+            if(isset($_SESSION['user']->roles['project_owner']) || isset($_SESSION['user']->roles['localadmin'])){
                 $_permission = true;
             };
 
