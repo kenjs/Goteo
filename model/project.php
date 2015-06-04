@@ -1548,7 +1548,7 @@ namespace Goteo\Model {
                 return false;
             }
 
-            $db_prefix = "`" . COMMON_AUTH_DB_SCHEMA . "``.";
+            $db_prefix = "`" . COMMON_AUTH_DB_SCHEMA . "`.";
 
             self::query("START TRANSACTION");
             try {
