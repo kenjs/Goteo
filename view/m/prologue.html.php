@@ -24,19 +24,19 @@
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title><?php echo GOTEO_META_TITLE ?></title>
+        <title><?php echo htmlspecialchars(GOTEO_META_TITLE, ENT_QUOTES, 'UTF-8'); ?></title>
         <link rel="icon" type="image/png" href="/favicon.ico" />
-        <meta name="description" content="<?php echo GOTEO_META_DESCRIPTION ?>" />
-        <meta name="keywords" content="<?php echo GOTEO_META_KEYWORDS ?>" />
-        <meta name="author" content="<?php echo GOTEO_META_AUTHOR ?>" />
-        <meta name="copyright" content="<?php echo GOTEO_META_COPYRIGHT ?>" />
+        <meta name="description" content="<?php echo htmlspecialchars(GOTEO_META_DESCRIPTION, ENT_QUOTES, 'UTF-8'); ?>" />
+        <meta name="keywords" content="<?php echo htmlspecialchars(GOTEO_META_KEYWORDS, ENT_QUOTES, 'UTF-8'); ?>" />
+        <meta name="author" content="<?php echo htmlspecialchars(GOTEO_META_AUTHOR, ENT_QUOTES, 'UTF-8'); ?>" />
+        <meta name="copyright" content="<?php echo htmlspecialchars(GOTEO_META_COPYRIGHT, ENT_QUOTES, 'UTF-8'); ?>" />
         <meta name="robots" content="all" />
         <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 <?php if (isset($ogmeta)) : ?>
-        <meta property="og:title" content="<?php echo $ogmeta['title'] ?>" />
+        <meta property="og:title" content="<?php echo htmlspecialchars($ogmeta['title'], ENT_QUOTES, 'UTF-8'); ?>" />
         <meta property="og:type" content="activity" />
         <meta property="og:site_name" content="Goteo.org" />
-        <meta property="og:description" content="<?php echo $ogmeta['description'] ?>" />
+        <meta property="og:description" content="<?php echo htmlspecialchars($ogmeta['description'], ENT_QUOTES, 'UTF-8'); ?>" />
         <?php if (is_array($ogmeta['image'])) :
             foreach ($ogmeta['image'] as $ogimg) : ?>
         <meta property="og:image" content="<?php echo $ogimg ?>" />
@@ -47,7 +47,7 @@
         <meta property="og:url" content="<?php echo $ogmeta['url'] ?>" />
 <?php else : ?>
         <meta property="og:title" content="Goteo.org" />
-        <meta property="og:description" content="<?php echo GOTEO_META_DESCRIPTION ?>" />
+        <meta property="og:description" content="<?php echo htmlspecialchars(GOTEO_META_DESCRIPTION, ENT_QUOTES, 'UTF-8'); ?>" />
         <meta property="og:image" content="<?php echo SITE_URL ?>/goteo_logo.png" />
         <meta property="og:url" content="<?php echo SITE_URL ?>" />
 <?php endif; ?>
