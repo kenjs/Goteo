@@ -19,6 +19,6 @@
  */
 //var_dump($this);
 ?>
-<div class="widget invest-message">
-    <h2><a href="localgood://<?php echo $_SERVER['HTTP_HOST']; ?>/project/">Local Goodアプリへはこちらからお戻り下さい。</a></h2>
+<div class="widget" style="margin-bottom:20px!important;background-color:#e7eb4c">
+    <h2 style="text-align:center;"><a style="font-size:1em;font-weight:bold;" href="localgood://<?php echo $_SERVER['HTTP_HOST']; ?>/project/">Local Goodアプリへはこちらからお戻り下さい。</a></h2>
 </div>
