@@ -75,23 +75,23 @@ $blog_post = strpos($ogmeta['url'], '/updates');
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title><?php echo GOTEO_META_TITLE ?></title>
+    <title><?php echo htmlspecialchars(GOTEO_META_TITLE, ENT_QUOTES, 'UTF-8'); ?></title>
     <link rel="icon" type="image/png" href="/favicon.ico" />
-    <meta name="description" content="<?php echo GOTEO_META_DESCRIPTION ?>" />
-    <meta name="keywords" content="<?php echo GOTEO_META_KEYWORDS ?>" />
-    <meta name="author" content="<?php echo GOTEO_META_AUTHOR ?>" />
-    <meta name="copyright" content="<?php echo GOTEO_META_COPYRIGHT ?>" />
+    <meta name="description" content="<?php echo htmlspecialchars(GOTEO_META_DESCRIPTION, ENT_QUOTES, 'UTF-8'); ?>" />
+    <meta name="keywords" content="<?php echo htmlspecialchars(GOTEO_META_KEYWORDS, ENT_QUOTES, 'UTF-8'); ?>" />
+    <meta name="author" content="<?php echo htmlspecialchars(GOTEO_META_AUTHOR, ENT_QUOTES, 'UTF-8'); ?>" />
+    <meta name="copyright" content="<?php echo htmlspecialchars(GOTEO_META_COPYRIGHT, ENT_QUOTES, 'UTF-8'); ?>" />
     <meta name="robots" content="all" />
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <?php if (isset($ogmeta) && $blog_post === false): ?>
-        <meta property="og:title" content="<?php echo $ogmeta['title'] ?>" />
+        <meta property="og:title" content="<?php echo htmlspecialchars($ogmeta['title'], ENT_QUOTES, 'UTF-8'); ?>" />
         <? if($_SERVER['REQUEST_URI']=="/"): ?>
             <meta property="og:type" content="website" />
         <? else: ?>
             <meta property="og:type" content="article" />
         <? endif; ?>
-        <meta property="og:site_name" content="<?php echo $ogmeta['title'] ?>" />
-        <meta property="og:description" content="<?php echo $ogmeta['description'] ?>" />
+        <meta property="og:site_name" content="<?php echo htmlspecialchars($ogmeta['title'], ENT_QUOTES, 'UTF-8'); ?>" />
+        <meta property="og:description" content="<?php echo htmlspecialchars(strip_tags($ogmeta['description']), ENT_QUOTES, 'UTF-8'); ?>" />
         <?php if (is_array($ogmeta['image'])) :
             foreach ($ogmeta['image'] as $ogimg) : ?>
                 <meta property="og:image" content="<?php echo $ogimg ?>" />
@@ -123,16 +123,16 @@ $blog_post = strpos($ogmeta['url'], '/updates');
             endif;
         endif;
         ?>
-        <meta property="og:title" content="<?php echo $blog_post->posts[$blog_key]->title . ' / ' . $ogmeta['title']; ?>" />
+        <meta property="og:title" content="<?php echo htmlspecialchars($blog_post->posts[$blog_key]->title . ' / ' . $ogmeta['title'], ENT_QUOTES, 'UTF-8'); ?>" />
         <meta property="og:type" content="article" />
-        <meta property="og:site_name" content="<?php echo $ogmeta['title'] ?>" />
-        <meta property="og:description" content="<?php echo mb_substr($blog_post->posts[$blog_key]->text, 0, 100).'...'; ?>" />
-        <meta property="og:url" content="<?php echo htmlspecialchars($ogmeta['url']) ?>" />
+        <meta property="og:site_name" content="<?php echo htmlspecialchars($ogmeta['title'], ENT_QUOTES, 'UTF-8'); ?>" />
+        <meta property="og:description" content="<?php echo htmlspecialchars(strip_tags(mb_substr($blog_post->posts[$blog_key]->text, 0, 100).'...'), ENT_QUOTES, 'UTF-8'); ?>" />
+        <meta property="og:url" content="<?php echo htmlspecialchars($ogmeta['url'], ENT_QUOTES, 'UTF-8'); ?>" />
         <meta property="og:locale" content="ja_JP" />
         <meta property="fb:app_id" content="<? if(defined('OAUTH_FACEBOOK_ID')){echo OAUTH_FACEBOOK_ID;} ?>" />
     <?php else : ?>
-        <meta property="og:title" content="<?php echo $ogmeta['title'] ?>" />
-        <meta property="og:description" content="<?php if(defined('GOTEO_META_DESCRIPTION')){echo GOTEO_META_DESCRIPTION;} ?>" />
+        <meta property="og:title" content="<?php echo htmlspecialchars($ogmeta['title'], ENT_QUOTES, 'UTF-8'); ?>" />
+        <meta property="og:description" content="<?php if(defined('GOTEO_META_DESCRIPTION')){echo htmlspecialchars(strip_tags(GOTEO_META_DESCRIPTION), ENT_QUOTES, 'UTF-8');} ?>" />
         <meta property="og:image" content="<?php if(defined('SITE_URL')){echo SITE_URL;} ?>/view/css/header/logo.png" />
         <meta property="og:url" content="<?php if(defined('SITE_URL')){echo SITE_URL;} ?>" />
         <meta property="og:locale" content="ja_JP" />
