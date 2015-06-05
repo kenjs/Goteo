@@ -53,7 +53,7 @@ namespace Goteo\Controller {
         }
 
         public function delete ($id) {
-            if(!isset($_SESSION['user']->roles['project_owner']) && !(isset($_SESSION['user']->roles['localadmin']) && $_SESSION['user']->home == LG_PLACE_NAME )) throw new Redirection('/dashboard/profile/');
+            if(!isset($_SESSION['user']->roles['project_owner']) && !isset($_SESSION['user']->roles['localadmin'])) throw new Redirection('/dashboard/profile/');
             $project = Model\Project::get($id);
             $errors = array();
             if ($project->delete($errors)) {
@@ -70,7 +70,7 @@ namespace Goteo\Controller {
         //Aunque no esté en estado edición un admin siempre podrá editar un proyecto
         public function edit ($id, $step = 'userProfile') {
 
-            if(!isset($_SESSION['user']->roles['project_owner']) && !(isset($_SESSION['user']->roles['localadmin']) && $_SESSION['user']->home == LG_PLACE_NAME )) throw new Redirection('/dashboard/profile/');
+            if( !isset($_SESSION['user']->roles['project_owner']) && !isset($_SESSION['user']->roles['localadmin']) ) throw new Redirection('/dashboard/profile/');
             
             $project = Model\Project::get($id, null);
 
@@ -408,7 +408,7 @@ namespace Goteo\Controller {
         }
 
         public function create () {
-            if(!isset($_SESSION['user']->roles['project_owner']) && !(isset($_SESSION['user']->roles['localadmin']) && $_SESSION['user']->home == LG_PLACE_NAME )) throw new Redirection('/dashboard/profile/');
+            if(!isset($_SESSION['user']->roles['project_owner']) && !isset($_SESSION['user']->roles['localadmin'])) throw new Redirection('/dashboard/profile/');
 
             if (empty($_SESSION['user'])) {
                 $_SESSION['jumpto'] = '/project/create';
@@ -448,6 +448,12 @@ namespace Goteo\Controller {
 
         private function view ($id, $show, $post = null) {
             $project = Model\Project::get($id, LANG);
+
+            $app_param = is_app() ? '?from=app_ios' : '';
+
+            if (is_app()){
+                Message::Info(Text::get('jump-from-app-invest'));
+            }
 
             // recompensas
             foreach ($project->individual_rewards as &$reward) {
@@ -521,7 +527,7 @@ namespace Goteo\Controller {
                     // si no está en campaña no pueden estar aqui ni de coña
                     if ($project->status != 3) {
                         Message::Info(Text::get('project-invest-closed'));
-                        throw new Redirection('/project/'.$id, Redirection::TEMPORARY);
+                        throw new Redirection('/project/'.$id.$app_param, Redirection::TEMPORARY);
                     }
 
                     $viewData['show'] = 'supporters';
@@ -556,7 +562,7 @@ namespace Goteo\Controller {
                             $step = 'start';
                         } elseif ($step == 'start') {
                             // para cuando salte
-                            $_SESSION['jumpto'] = SEC_URL.'/project/' .  $id . '/invest/#continue';
+                            $_SESSION['jumpto'] = SEC_URL.'/project/' .  $id . '/invest/#continue' . $app_param;
                         } else {
                             $step = 'start';
                         }
