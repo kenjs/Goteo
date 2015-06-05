@@ -275,6 +275,7 @@ die("test");
 		 * @return type object	Image
 		 */
 	    static public function get ($id) {
+            $db_prefix = "`" . GOTEO_DB_SCHEMA ."`.";
             try {
                 $query = static::query("
                     SELECT
