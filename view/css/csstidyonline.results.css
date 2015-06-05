@@ -8303,6 +8303,16 @@ div.widget.project-updates > div
 	overflow:hidden;
 }
 
+.project-updates #social_bookmark
+{
+    width: 620px;
+    margin:12px 0 0;
+}
+
+.project-updates #social_bookmark .fb-comments {
+    margin-top: 8px;
+}
+
 
 /*----------------------------------------------------------------------
  project/widget/invest.css
