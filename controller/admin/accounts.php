@@ -440,6 +440,13 @@ namespace Goteo\Controller\Admin {
                             $errors[] = Text::_('Fallo al cancelar el aporte');
                         }
                         break;
+                    case 'axes':
+                        if ($invest->cancel()) {
+                            $errors[] = Text::_('Aporte cancelado');
+                        } else{
+                            $errors[] = Text::_('Fallo al cancelar el aporte');
+                        }
+                        break;
                 }
 
                 // Evento Feed
