@@ -77,7 +77,7 @@ namespace Goteo\Core {
                     }
                 }
 
-                $ret = preg_match_all('/(FROM|JOIN|TABLE|INTO|INSERT|UPDATE|DELETE)\s+user([A-Za-z_]*)/s', $_query, $_match);
+                $ret = preg_match_all('/(FROM|JOIN|TABLE|INTO|INSERT|UPDATE|DELETE|REPLACE)\s+user([A-Za-z_]*)/s', $_query, $_match);
                 if ($ret > 0){
                     $_matched = array_unique($_match[0]);
                     foreach ( $_matched as $_m ){
