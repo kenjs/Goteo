@@ -11153,7 +11153,8 @@ body.user-login div#main > div.imported_profiles > .imported_profiles_inner
 body.user-login div#main > div.imported_profiles > .imported_profiles_inner > div
 {
 	float:left;
-	width:370px;
+	width:350px;
+    margin-left:20px;
 }
 
 
