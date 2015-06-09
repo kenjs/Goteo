@@ -276,6 +276,16 @@ namespace Goteo\Controller {
                         );
                     }
                 } elseif ($user->save($errors, $skip_validations)) {
+                    // user登録時にはuser_login_logにも書き込む
+                    $query = Model\User::query("
+                    REPLACE INTO user_login_log (user, node, datetime)
+                    VALUES (:user, :node, :datetime) ",
+                        array(
+                            ':user' => trim($user->userid),
+                            ':node' => LG_PLACE_NAME,
+                            ':datetime' => date('Y-m-d H:i:s')
+                        )
+                    );
                     //si el usuario se ha creado correctamente, login en goteo e importacion de datos
                     //y fuerza que pueda logear en caso de que no esté activo
                     if (!$oauth->goteoLogin(true)) {
