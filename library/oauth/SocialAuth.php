@@ -613,7 +613,8 @@ class SocialAuth {
 		if($id = $query->fetchColumn()) {
 			foreach($this->tokens as $provider => $token) {
 				if($token['token']) {
-					$query = Goteo\Core\Model::query("REPLACE user_login (user,provider,oauth_token,oauth_token_secret,provider_id) VALUES (:user,:provider,:token,:secret,:provider_id)",array(':user'=>$goteouser,':provider'=>$provider,':token'=>$token['token'],':secret'=>$token['secret'],':provider_id' => $this->provider_id));
+                    $_provider_id = empty($this->provider_id) ? OAUTH_TWITTER_DUMMY_ID : $this->provider_id;
+                    $query = Goteo\Core\Model::query("REPLACE INTO user_login (user,provider,oauth_token,oauth_token_secret,provider_id) VALUES (:user,:provider,:token,:secret,:provider_id)",array(':user'=>$goteouser,':provider'=>$provider,':token'=>$token['token'],':secret'=>$token['secret'],':provider_id' => $_provider_id));
 				}
 			}
 		}

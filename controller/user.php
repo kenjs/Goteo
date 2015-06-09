@@ -276,8 +276,7 @@ namespace Goteo\Controller {
                         );
                     }
                 } elseif ($user->save($errors, $skip_validations)) {
-                    // user登録時にuser_login_logにも書き込む
-                    // -> メールからのactivate時にUser::getに失敗してしまう為
+                    // user登録時にはuser_login_logにも書き込む
                     $query = Model\User::query("
                     REPLACE INTO user_login_log (user, node, datetime)
                     VALUES (:user, :node, :datetime) ",
