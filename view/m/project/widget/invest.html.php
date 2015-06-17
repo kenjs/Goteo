@@ -333,6 +333,8 @@ if ($step == 'start') : ?>
                    alert('<?php echo Text::slash('invest-alert-lackamount') ?>');
                    return false;
                }
+                console.log(reward);
+
 
                 if (reward == '') {
                     if (confirm('<?php echo Text::slash('invest-alert-noreward') ?>')) {
@@ -349,7 +351,7 @@ if ($step == 'start') : ?>
                     }
                 } else {
                     /* Has elegido las siguientes recompensas */
-                    if (!confirm('<?php echo Text::slash('invest-alert-rewards') ?> '+reward+' ok?')) {
+                    if (!confirm(reward+'<?php echo Text::slash('invest-alert-rewards') ?> ')) {
                         return false;
                     }
                 }
@@ -361,7 +363,7 @@ if ($step == 'start') : ?>
                 }
             }
 
-            return confirm('<?php echo Text::slash('invest-alert-investing') ?> '+amount+' EUR');
+            return confirm(amount+' <?php echo Text::slash('invest-alert-investing') ?>');
         });
 
 /* Seteo inicial por url */

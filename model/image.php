@@ -367,16 +367,20 @@ die("test");
 		 */
 		public function getLink ($width = 200, $height = 200, $crop = false) {
 
+            $ret = "";
+
             $src_url = preg_replace('/[A-Za-z0-9.]+\.localgood/','static.localgood',SRC_URL);
 
             $tc = $crop ? 'c' : '';
 
             $cache = $this->dir_cache . "{$width}x{$height}{$tc}" . DIRECTORY_SEPARATOR . $this->name;
             if (\file_exists($cache)) {
-                return $src_url . "/data/cache/{$width}x{$height}{$tc}/{$this->name}";
+                $ret = $src_url . "/data/cache/{$width}x{$height}{$tc}/{$this->name}";
             } else {
-                return SRC_URL . "/image/{$this->id}/{$width}/{$height}/" . $crop;
+                $ret = SRC_URL . "/image/{$this->id}/{$width}/{$height}/" . $crop;
             }
+
+            return $ret;
 
 		}
 
