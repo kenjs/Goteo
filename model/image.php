@@ -155,10 +155,12 @@ die("test");
             if(!empty($this->tmp)) {
                 $url = $this->tmp;
                 $ch = curl_init();
+                curl_setopt($ch,CURLOPT_FOLLOWLOCATION,true);
+                curl_setopt($ch,CURLOPT_MAXREDIRS, 10);
                 curl_setopt($ch,CURLOPT_URL,$url);
                 curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
                 $profile_image_file = curl_exec( $ch );
-                curl_close();
+                curl_close($ch);
                 file_put_contents($this->dir_originals . $this->name, $profile_image_file);
                 chmod($this->dir_originals . $this->name, 0777);
             }

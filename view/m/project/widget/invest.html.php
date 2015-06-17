@@ -152,7 +152,9 @@ if ($step == 'start') : ?>
 
 
 <div class="widget project-invest method">
-    <h<?php echo $level ?> class="beak"><?php echo Text::get('project-invest-continue') ?></h<?php echo $level ?>>
+    <h<?php echo $level ?> class="beak"><?php echo Text::get('project-invest-continue') ?>
+        <p style="color:#ff3300;margin-bottom: 0;">*注意<br />クレジットカードの決済システム上、次ページからの決済申込フォームでは料金が「￥0」と表示されますが、そのまま決済を進めていただくと正常に処理されますのでご安心ください。</p>
+    </h<?php echo $level ?>>
             
 <input type="hidden" id="paymethod"  />
 
@@ -283,7 +285,7 @@ if ($step == 'start') : ?>
                 reset_reward(i);
             <?php else : ?>
             // si es renuncio
-            if ($('#resign_reward').attr('checked') == 'checked') {
+            if ($('#resign_reward').prop('checked')) {
                 $("#address-header").html('<?php echo Text::slash('invest-donation-header') ?>');
                 /*$("#donation-data").show();*/
                 reset_reward(i);
@@ -312,7 +314,7 @@ if ($step == 'start') : ?>
             }
 
             /* Renuncias pero no has puesto tu NIF para desgravar el donativo */
-            if ($('#resign_reward').attr('checked') == 'checked') {
+            if ($('#resign_reward').prop('checked')) {
                 if ($('#nif').val() == '' && !confirm('<?php echo Text::slash('invest-alert-renounce') ?>')) {
                     $('#nif').focus();
                     return false;
@@ -323,7 +325,7 @@ if ($step == 'start') : ?>
                 /* No has marcado ninguna recompensa, renuncias? */
                 $('input.individual_reward').each(function (i, cb) {
                    var prize = $(this).attr('amount');
-                   if (greater(prize, 0) && $(this).attr('checked') == 'checked') {
+                   if (greater(prize, 0) && $(this).prop('checked')) {
                        reward = $(this).attr('title');
                        chosen = prize;
                    }
@@ -333,20 +335,18 @@ if ($step == 'start') : ?>
                    alert('<?php echo Text::slash('invest-alert-lackamount') ?>');
                    return false;
                }
-                console.log(reward);
-
 
                 if (reward == '') {
                     if (confirm('<?php echo Text::slash('invest-alert-noreward') ?>')) {
-                        if (confirm('<?php echo Text::slash('invest-alert-noreward_renounce') ?>')) {
+//                        if (confirm('<?php //echo Text::slash('invest-alert-noreward_renounce') ?>//')) {
                             $("#address-header").html('<?php echo Text::slash('invest-donation-header') ?>');
                             /*$("#donation-data").show();*/
                             $('#resign_reward').click();
-                            $('#nif').focus();
+//                            $('#nif').focus();
                             return false;
-                        }
+//                        }
                     } else {
-                        $('#nif').focus();
+//                        $('#nif').focus();
                         return false;
                     }
                 } else {
