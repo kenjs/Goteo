@@ -49,8 +49,6 @@ foreach (License::getAll() as $l) {
     $licenses[$l->id] = $l;
 }
 
-$app_param = is_app() ? '?from=app_ios' : '';
-$action = ($step == 'start') ? '/user/login' . $app_param : '/invest/' . $project->id . $app_param;
 ?>
 <div class="widget project-invest project-invest-amount">
     <h<?php echo $level ?> class="title"><?php echo Text::get('invest-amount') ?></h<?php echo $level ?>>
