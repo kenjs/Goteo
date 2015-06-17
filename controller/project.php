@@ -449,12 +449,6 @@ namespace Goteo\Controller {
         private function view ($id, $show, $post = null) {
             $project = Model\Project::get($id, LANG);
 
-            $app_param = is_app() ? '?from=app_ios' : '';
-
-            if (is_app()){
-                Message::Info(Text::get('jump-from-app-invest'));
-            }
-
             // recompensas
             foreach ($project->individual_rewards as &$reward) {
                 $reward->none = false;
@@ -527,7 +521,7 @@ namespace Goteo\Controller {
                     // si no está en campaña no pueden estar aqui ni de coña
                     if ($project->status != 3) {
                         Message::Info(Text::get('project-invest-closed'));
-                        throw new Redirection('/project/'.$id.$app_param, Redirection::TEMPORARY);
+                        throw new Redirection('/project/'.$id, Redirection::TEMPORARY);
                     }
 
                     $viewData['show'] = 'supporters';
@@ -562,7 +556,7 @@ namespace Goteo\Controller {
                             $step = 'start';
                         } elseif ($step == 'start') {
                             // para cuando salte
-                            $_SESSION['jumpto'] = SEC_URL.'/project/' .  $id . '/invest/#continue' . $app_param;
+                            $_SESSION['jumpto'] = SEC_URL.'/project/' .  $id . '/invest/#continue';
                         } else {
                             $step = 'start';
                         }

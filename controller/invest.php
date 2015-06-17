@@ -137,8 +137,9 @@ namespace Goteo\Controller {
                     switch($method) {
                         case 'axes':
                             $viewData = array('invest'=>$invest);
+                            // todo: Mobile対応
                             $view = new View (
-                                "view/invest/axes.html.php",
+                                VIEW_PATH . "/invest/axes.html.php",
                                 $viewData
                             );
                             return $view;

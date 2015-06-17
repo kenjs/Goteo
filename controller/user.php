@@ -54,10 +54,6 @@ namespace Goteo\Controller {
          */
         public function login($username = '') {
 
-            if (is_app()){
-                Message::Info(Text::get('jump-from-app-invest'));
-            }
-
             // si venimos de la página de aportar
             if (isset($_POST['amount'])) {
                 $_SESSION['invest-amount'] = $_POST['amount'];

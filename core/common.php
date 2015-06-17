@@ -126,8 +126,4 @@ namespace {
         return false;
     }
 
-    function is_app() {
-        return (isset($_GET['from']) && ($_GET['from'] == 'app_ios'));
-    }
-
 }
