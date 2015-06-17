@@ -155,10 +155,12 @@ die("test");
             if(!empty($this->tmp)) {
                 $url = $this->tmp;
                 $ch = curl_init();
+                curl_setopt($ch,CURLOPT_FOLLOWLOCATION,true);
+                curl_setopt($ch,CURLOPT_MAXREDIRS, 10);
                 curl_setopt($ch,CURLOPT_URL,$url);
                 curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
                 $profile_image_file = curl_exec( $ch );
-                curl_close();
+                curl_close($ch);
                 file_put_contents($this->dir_originals . $this->name, $profile_image_file);
                 chmod($this->dir_originals . $this->name, 0777);
             }
@@ -367,16 +369,20 @@ die("test");
 		 */
 		public function getLink ($width = 200, $height = 200, $crop = false) {
 
+            $ret = "";
+
             $src_url = preg_replace('/[A-Za-z0-9.]+\.localgood/','static.localgood',SRC_URL);
 
             $tc = $crop ? 'c' : '';
 
             $cache = $this->dir_cache . "{$width}x{$height}{$tc}" . DIRECTORY_SEPARATOR . $this->name;
             if (\file_exists($cache)) {
-                return $src_url . "/data/cache/{$width}x{$height}{$tc}/{$this->name}";
+                $ret = $src_url . "/data/cache/{$width}x{$height}{$tc}/{$this->name}";
             } else {
-                return SRC_URL . "/image/{$this->id}/{$width}/{$height}/" . $crop;
+                $ret = SRC_URL . "/image/{$this->id}/{$width}/{$height}/" . $crop;
             }
+
+            return $ret;
 
 		}
 
