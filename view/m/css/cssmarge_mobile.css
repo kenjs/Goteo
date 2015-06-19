@@ -2385,6 +2385,9 @@ body.discover div.widget.project div.meter.activable {
 .home .meter .obtained {
     display: none;
 }
+body.project-show .project-spread .obtained {
+    display: none;
+}
 div.widget.project div.meter h3.title.obtained {
     padding-left: 5px;
 }
@@ -6550,7 +6553,7 @@ div.widget.project-rewards > div.individual ul li div.amount,
     text-align: right;
     color: #96238F;
     position: relative;
-    top: -10px;
+    top: 0;
     right: -10px;
     text-transform:uppercase;
     height: 28px;
@@ -6620,7 +6623,7 @@ div.widget.project-invest ul li,
 div.widget.project-rewards ul li,
 #rewards-summary ul li,
 #rewards-summary ul li.file .name {
-    background: none no-repeat 10px 14px;
+    background: none no-repeat left 40px;
     min-height: 33px;
 }
 
@@ -6666,6 +6669,7 @@ div.widget.project-rewards div.individual ul li.other h4.name {
     background: none
 }
 
+#rewards-summary div.social ul li.service > h5.name,
 #rewards-summary div.social ul li.file > h5.name {
     padding-left: 42px;
     padding-top: 0;
@@ -6698,15 +6702,18 @@ div.widget.project-rewards ul li.code,
     background-image: url('/view/css/icon/m/code.png');
 }
 
+#rewards-summary div.social ul li.service h5.name {
+    background: url('/view/css/icon/m/service.png') no-repeat left 50%;
+}
 div.widget.project-invest ul li.service,
 div.widget.project-rewards ul li.service,
-#rewards-summary ul li.service {
+#rewards-summary div.individual ul li.service {
     background-image: url('/view/css/icon/m/service.png');
 }
 
 body.project-show #rewards-summary ul li h5.name {
-    padding: 0 0 0 50px;
-    margin: -18px 0 .5em;
+    padding: 0 0 0 42px;
+    margin: 0 0 .5em;
     font-size: 13px;
     font-weight: bold;
 }

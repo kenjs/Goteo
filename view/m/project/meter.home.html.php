@@ -34,7 +34,6 @@ $reached    = $project->invested;
 $supporters = count($project->investors);
 $days       = $project->days;
 
-
 // PHP la pifia (y mucho) con los cálculos en coma flotante
 if ($reached >= $minimum) {
     $minimum_done = round(($reached / $minimum) * 100);

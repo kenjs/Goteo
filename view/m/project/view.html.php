@@ -41,6 +41,7 @@ $categories = Category::getNames($project->id);
 
 $skills = Skill::getNames($project->id);
 
+
 if (!empty($project->investors)) {
     $supporters = ' (' . $project->num_investors . ')';
 } else {
@@ -56,7 +57,6 @@ if (!empty($blog->posts)) {
 } else {
     $updates = '';
 }
-
 
 
 $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
@@ -116,7 +116,8 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
 
             <div class="center <?php echo $show; ?>">
             <?php
-                $non_flug = 0;
+
+            $non_flug = 0;
                 // los modulos centrales son diferentes segun el show
                 switch ($show) {
                     case 'needs':
@@ -197,7 +198,7 @@ $bodyClass = 'project-show'; include 'view/m/prologue.html.php' ?>
                         echo
                             new View('view/m/project/widget/gallery.html.php', array('project' => $project)),
                             new View('view/m/project/widget/summary.h_ttl.html.php', array('project' => $project)),
-                            new View('view/m/project/meter.home.html.php', array('project' => $project, 'lavel' => $lavel)),
+                            new View('view/m/project/meter.home.html.php', array('project' => $project, 'lavel' => $lavel, 'supporters' => $supporters)),
                             new View('view/m/project/widget/summary.html.php', array('project' => $project));
                             ;
                         break;

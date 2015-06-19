@@ -18,7 +18,9 @@
  *
  */
 
-use Goteo\Library\Text;
+use Goteo\Library\Text,
+    Goteo\Model\Invest,
+    Goteo\Model\Project;
 
 $level = (int) $this['level'] ?: 3;
 
