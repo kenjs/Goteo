@@ -19,6 +19,7 @@
  */
 
 use Goteo\Core\View,
+    Goteo\Model\Project,
     Goteo\Library\Text;
 
 $user    = $_SESSION['user'];
