@@ -436,6 +436,7 @@ namespace Goteo\Model {
                 $project->invested = $amount;
                 $project->amount   = $amount;
 
+                $project->investors = Invest::Investors($id);
                 $project->num_investors = Invest::numInvestors($id);
                 $project->num_messegers = Message::numMessegers($id);
 
