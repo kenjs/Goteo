@@ -8234,6 +8234,7 @@ body.project-show div#main > div.center.needs > div.widget.project-schedule {
 body.project-show div#main div.center .widget.project-summary img,
 body.project-show div#main div.center .widget.project-support img {
     width: 100%!important;
+    height: auto;
 }
 
 body.project-show div#main div.center div.widget.project-share {
@@ -9844,11 +9845,18 @@ div.center div.widget.user-mates .users ul > li{
   user/profile.css
 ----------------------------------------------------------------------*/
 body.user-profile #main div.center.profile div.widget.user-about {
-    margin: 0 0 20px 0!important;
     background-color: #fff;
     border-bottom: 1px dashed #c0c0c0;
 }
-
+body.user-profile #main div.center.profile div.widget.user-social {
+    margin-bottom: 20px!important;
+    padding: 16px;
+    background-color: #fff;
+    border-bottom: 1px dashed #c0c0c0;
+}
+body.user-profile #main div.center.profile div.widget.user-social li {
+    float: none;
+}
 body.user-profile div#main div.widget,
 body.community div#main div.widget {
     margin: 0;
