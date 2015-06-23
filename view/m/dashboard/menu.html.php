@@ -20,17 +20,21 @@
 ?>
 <div id="dashboard-menu">
     <?php foreach ($this['menu'] as $section=>$item) : ?>
-    <? if($section == 'profile'): ?>
+    <? if($section === 'profile'): ?>
             <div class="viewport_dashboard">
                 <ul class="flipsnap_dashboard flipsnap">
                 <?php foreach ($item['options'] as $option=>$label) : ?>
+                    <? if ($option != 'public'): ?>
                     <li class="option<?php if ($section == $this['section'] && $option == $this['option']) echo ' current'; ?>">
-                        <? if ($option != 'public'): ?>
                         <a href="/dashboard/<?php echo $section; ?>/<?php echo $option; ?>"><?php echo $label; ?></a>
-                        <? endif; ?>
                     </li>
+                    <? endif; ?>
                 <?php endforeach; ?>
                 </ul>
+                <p class="controls">
+                    <a class="db_prev">&lt;</a>
+                    <a class="db_next">&gt;</a>
+                </p>
             </div>
     <? endif; ?>
     <?php endforeach; ?>
