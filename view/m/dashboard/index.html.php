@@ -38,12 +38,12 @@ include 'view/m/header.html.php'; ?>
                         echo Text::get('dashboard-header-main') . ' / ' . $this['menu'][$this['section']]['label'] . ' / ' . $this['menu'][$this['section']]['options'][$option];
                     } ?></span></h2>
             </div>
+            <? if($this['section'] !== 'activity'): ?>
+                <div class="submenu">
+                    <?php  echo new View ('view/m/dashboard/menu.html.php', $this) ?>
+                </div>
+            <? endif; ?>
         </div>
-
-<?// var_dump($option); ?>
-<? if ($option != 'summary'): ?>
-        <?php  echo new View ('view/m/dashboard/menu.html.php', $this) ?>
-<? endif; ?>
 
 <?php if(isset($_SESSION['messages'])) { include 'view/m/header/message.html.php'; } ?>
 

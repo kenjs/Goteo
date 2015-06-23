@@ -96,8 +96,5 @@ $skills = Skill::getAll(null,true);
          <p><a href="/user/profile/<?php echo $user->id ?>/message"><?php echo Text::get('regular-send_message')?></a></p>
      </div>
     <?php endif ?>
-    <div class="improper_report">
-        <a href="/user/improper/">このユーザーを通報する</a>
-    </div>
 
 </div>

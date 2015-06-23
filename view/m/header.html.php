@@ -42,11 +42,14 @@ use Goteo\Library\Text,
                     <a href="/user/login/">支援する</a>
                     <ul class="sub">
                         <li><a href="/">プロジェクト</a></li>
-                        <?php include 'view/m/header/menu.html.php' ?>
                         <li><a href="<?= LOCALGOOD_WP_BASE_URL ?>/skills/">スキルを活かす</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a class="earth_view" href="<? if(defined('LG_EARTHVIEW')){echo LG_EARTHVIEW;} ?>" target="_blank"><?/*<img src="<?= LOCALGOOD_WP_BASE_URL ?>/images/earth_view_icon.png" alt="Earth View" />*/?>Earth View</a>
+                </li>
                 <li><a href="<?= LG_INTEGRATION_URL ?>">LOCAL GOOD全国版トップページ</a></li>
+                <?php include 'view/m/header/menu.html.php' ?>
             </ul>
         </div>
     </div>
