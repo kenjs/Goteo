@@ -1748,6 +1748,7 @@ div  .inner {
 }
 
 body {
+    position: relative;
     margin: 0;
 }
 
@@ -2008,6 +2009,7 @@ footer
 .viewport_dashboard{
     width: 320px;
     margin: 0 auto;
+    margin-left: 0;
     overflow: hidden;
     -webkit-transform: translateZ(0); /* Optional: When heavy at iOS6+ */
 }
@@ -2026,13 +2028,18 @@ footer
     width: 1130px; /* 320px(item width) * 3(item count) */
 }
 
+body.project-show div#sub-header > div {
+    position: fixed;
+    top: 49px;
+}
+
 /* project-navigation */
 body.project-show div#sub-header div.project-menu.viewport_projectnav {
     background-color: #e7e7e7;
 }
 
 body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav {
-    width: 1048px!important;/* 117px(item width) * 4(item count) + 116px */
+    width: 625px!important;
 }
 
 body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav .item {
@@ -2050,8 +2057,17 @@ body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_
 }
 
 /* dashboard navigation */
+body.dashboard div#main {
+    padding-top: 44px;
+}
+/*body.dashboard.project-edit div.submenu {
+    position: fixed;
+    top: 105px;
+    width: 100%;
+    height: 36px;
+}*/
 body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_dashboard {
-    width: 1008px;/* 117px(item width) * 4(item count) + 116px */
+    width: 345px;/* 117px(item width) * 4(item count) + 116px */
     background-color: #3399cc;
 }
 body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_dashboard li.option {
@@ -2060,11 +2076,74 @@ body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_
     padding: 4px 8px;
     border: none;
     color: #666;
+    border-right: 1px dashed #ccffff;
+}
+body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_dashboard:last-child li.option {
+    padding-right: 0;
+    border-right: none;
 }
 body.dashboard.project-edit div#dashboard-menu div.viewport_dashboard .flipsnap_dashboard li.option a {
     height: 18px;
     line-height: 35px;
 }
+
+
+/* dashboard-menu prev, naxt */
+#dashboard-menu {
+    position: relative;
+}
+body.dashboard div#dashboard-menu ul.flipsnap_dashboard {
+    margin: 0 5%;
+}
+#dashboard-menu .db_prev,
+#dashboard-menu .db_next {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 5%;
+    height: 42px;
+    color: #3399cc;
+    font-size: 12px;
+    text-align: center;
+    line-height: 42px;
+    background: #ccffff;
+}
+#dashboard-menu .db_prev {
+    left: 0;
+}
+#dashboard-menu .db_next {
+    right: 0;
+}
+
+
+/* project-menu prev, naxt */
+.project-menu {
+    position: relative;
+}
+body.project-show div.project-menu ul.flipsnap_projectnav {
+    margin: 0 5%;
+    background: #ffffcc;
+}
+.project-menu .pj_prev,
+.project-menu .pj_next {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 5%;
+    height: 35px;
+    color: #dae121;
+    font-size: 12px;
+    text-align: center;
+    line-height: 35px;
+    background: #999966;
+}
+.project-menu .pj_prev {
+    left: 0;
+}
+.project-menu .pj_next {
+    right: 0;
+}
+
 
 /*----- index -----*/
 .contents_wrapper {
@@ -2110,8 +2189,21 @@ body.page .static_page .content {
     background-color: #fff;
 }
 .mean-container .mean-bar {
+    position: fixed;
     padding-bottom: 3px;
 }
+#wrapper {
+    position: relative;
+    top: 48px;
+}
+.sp #wrapper {
+    top:0;
+}
+#wrapper #header {
+    top: -48px;
+}
+
+
 
 .mean-container a.meanmenu-reveal {
     color: #D48608;
@@ -2140,12 +2232,12 @@ body.page .static_page .content {
     position: absolute;
     background-color: #D48608;
 }
-.mean-container .mean-nav ul li a,
-.mean-container .mean-nav ul li li a {
+.mean-container .mean-nav ul li a {
     padding: 8px 5%;
 }
-.mean-container .mean-nav ul li li li a {
-    padding: 8px 15%;
+.mean-container .mean-nav ul li li a {
+    padding: 8px 10%;
+    opacity: 1;
 }
 .mean-container .mean-nav ul li a.dashboard_link {
     display: table;
@@ -2158,7 +2250,7 @@ body.page .static_page .content {
     vertical-align: middle;
 }
 .header h1 {
-    position: absolute;
+    position: fixed;
     z-index: 999999;
 }
 .header h1 img {
@@ -2188,7 +2280,6 @@ div.widget.project > * {
 }
 
 div.widget.project div.image {
-    height: 200px;
     text-align: center;
     background-color: #deddde;
     margin: 0 0 10px 0;
@@ -2200,8 +2291,8 @@ div.widget.project div.image {
 
 div.widget.project div.image a img {
     display: block;
-    width: auto;
-    height: 100%;
+    max-width: 320px;
+    height: auto;
 }
 
 /** Tagmarks widget **/
@@ -8250,6 +8341,7 @@ body.project-show div#main > div.side > div.widget .title {
 
 body.project-show div#sub-header {
     position: relative;
+    height: 36px;
 }
 body.project-show div#sub-header div.sub-menu p.prev2,
 body.project-show div#sub-header div.sub-menu p.next2 {
@@ -11875,10 +11967,10 @@ body.project-embed{min-width:250px !important;max-width:320px !important;margin:
 body.project-embed > div#wrapper{width:250px;margin:0;padding:0;}
 body.project-embed > div#wrapper > div.alone-project{width:320px;margin:0;padding:0;}
 body.project-embed > div#wrapper > div.alone-project > div.widget.project{width:320px;margin:0;padding:10px 0 0 0; position:relative;background-color:#fff;height:480px;}
-body.project-embed > div#wrapper > div.alone-project > div.widget.project a.expand{position:absolute;top:0;bottom:0;width:100%;z-index:100}
+body.project-embed > div#wrapper > div.alone-project > div.widget.project a.expand{position:absolute;top:0;bottom:0;width:100%;z-index:100,padding:0;}
 body.project-embed > div#wrapper > div.alone-project > div.widget.project.active{background-color:#F8F8F8 !important;}
 div.alone-project > div.widget.project > div.buttons > a.button{padding: 0.6em 1em}
-
+body.project-embed.sp > div#wrapper > div.alone-project > div.widget.project {padding-top: 0}
 
 /*----------------------------------------------------------------------
   home.css

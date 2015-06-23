@@ -42,32 +42,43 @@ $(function () {
         return false;
     });
 
-
-    /*if($('.flipsnap').length > 0){
-        // sp nav
-        Flipsnap('.flipsnap');
-        var flipsnap = Flipsnap('.flipsnap', {
-            distance: 70
-        });
-    }*/
-
-    if($('.flipsnap_projectnav').length > 0){
-        // sp project-nav
-        Flipsnap('.flipsnap_projectnav');
-        var flipsnap = Flipsnap('.flipsnap_projectnav', {
-            distance: 74
-        });
-    }
-
-    if($('.flipsnap_dashboard').length > 0){
-        // sp dashboard-nav
-        Flipsnap('.flipsnap_dashboard');
-        var flipsnap = Flipsnap('.flipsnap_dashboard', {
-            distance: 20
-        });
-    }
+        if($('.flipsnap_projectnav').length > 0){
+            // sp project-nav
+            Flipsnap('.flipsnap_projectnav');
+            var pj_flipsnap = Flipsnap('.flipsnap_projectnav', {
+                distance: 82
+            });
+            var $next = $('.pj_next').click(function() {
+                pj_flipsnap.toNext();
+            });
+            var $prev = $('.pj_prev').click(function() {
+                pj_flipsnap.toPrev();
+            });
+            pj_flipsnap.element.addEventListener('fspointmove', function() {
+                $next.attr('disabled', !pj_flipsnap.hasNext());
+                $prev.attr('disabled', !pj_flipsnap.hasPrev());
+            }, false);
+        }
+        if($('.flipsnap_dashboard').length > 0){
+            // sp dashboard-nav
+            Flipsnap('.flipsnap_dashboard');
+            var db_flipsnap = Flipsnap('.flipsnap_dashboard', {
+                distance: 18
+            });
+            var $next = $('.db_next').click(function() {
+                db_flipsnap.toNext();
+            });
+            var $prev = $('.db_prev').click(function() {
+                db_flipsnap.toPrev();
+            });
+            db_flipsnap.element.addEventListener('fspointmove', function() {
+                $next.attr('disabled', !db_flipsnap.hasNext());
+                $prev.attr('disabled', !db_flipsnap.hasPrev());
+            }, false);
+        }
 
     $('.nav_inner').meanmenu({
+        meanScreenWidth: '960'
     });
 
     // 投稿画像etcを画面幅に収める

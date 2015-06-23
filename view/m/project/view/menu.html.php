@@ -35,5 +35,9 @@ use Goteo\Library\Text; ?>
         </li>
         <?php endforeach ?>
     </ul>
+    <p class="controls">
+        <a class="pj_prev">&lt;</a>
+        <a class="pj_next">&gt;</a>
+    </p>
 </div>
 <?/*<p class="next2"><a><img src="/view/m/css/header/next_btn.png" alt="次へ" /></a></p>*/?>
