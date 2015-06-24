@@ -194,6 +194,9 @@ namespace Goteo\Core {
             return $id;
         }
 
+        public static function localNow () {
+            return date('Y-m-d H:i:s', time());
+        }
     }
 
 }

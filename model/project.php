@@ -436,7 +436,7 @@ namespace Goteo\Model {
                 $project->invested = $amount;
                 $project->amount   = $amount;
 
-                $project->investors = Invest::Investors($id);
+//                $project->investors = Invest::Investors($id);
                 $project->num_investors = Invest::numInvestors($id);
                 $project->num_messegers = Message::numMessegers($id);
 
@@ -1767,8 +1767,9 @@ namespace Goteo\Model {
          */
         public function daysActive() {
             // días desde el published
+            $now_local = $this->localNow();
             $sql = "
-                SELECT DATE_FORMAT(from_unixtime(unix_timestamp(now()) - unix_timestamp(CONCAT(published, DATE_FORMAT(now(), ' %H:%i:%s')))), '%j') as days
+                SELECT DATE_FORMAT(from_unixtime(unix_timestamp('${now_local}') - unix_timestamp(CONCAT(published, DATE_FORMAT('${now_local}', ' %H:%i:%s')))), '%j') as days
                 FROM project
                 WHERE id = ?";
             $query = self::query($sql, array($this->id));
@@ -1784,8 +1785,9 @@ namespace Goteo\Model {
          */
         public function daysRemain($id) {
             // primero, días desde el published
+            $now_local = $this->localNow();
             $sql = "
-                SELECT DATE_FORMAT(from_unixtime(unix_timestamp(now()) - unix_timestamp(published)), '%j') as days
+                SELECT DATE_FORMAT(from_unixtime(unix_timestamp('${now_local}') - unix_timestamp(published)), '%j') as days
                 FROM project
                 WHERE id = ?";
             $query = self::query($sql, array($id));
@@ -2071,10 +2073,11 @@ namespace Goteo\Model {
         public static function review()
         {
             $projects = array();
+            $now_local = static::localNow();
 
             $sql = "SELECT 
                     id, status, 
-                    DATE_FORMAT(from_unixtime(unix_timestamp(now()) - unix_timestamp(published)), '%j') as dias
+                    DATE_FORMAT(from_unixtime(unix_timestamp('${now_local}') - unix_timestamp(published)), '%j') as dias
                 FROM  project 
                 WHERE status IN ('3', '4')
                 HAVING status = 3 OR (status = 4 AND  dias > 138)
@@ -2100,16 +2103,18 @@ namespace Goteo\Model {
         {
             $projects = array();
 
+            $now_local = static::localNow();
+
             $sql = "
                 SELECT project.id as id
                 FROM  project
                 WHERE project.status = 3
                 AND (
-                    (DATE_FORMAT(from_unixtime(unix_timestamp(now()) - unix_timestamp(published)), '%j') >= 35
+                    (DATE_FORMAT(from_unixtime(unix_timestamp('${now_local}') - unix_timestamp(published)), '%j') >= 35
                         AND (passed IS NULL OR passed = '0000-00-00')
                         )
                     OR
-                    (DATE_FORMAT(from_unixtime(unix_timestamp(now()) - unix_timestamp(published)), '%j') >= 75
+                    (DATE_FORMAT(from_unixtime(unix_timestamp('${now_local}') - unix_timestamp(published)), '%j') >= 75
                         AND (success IS NULL OR success = '0000-00-00')
                         )
                     )
@@ -2442,6 +2447,11 @@ namespace Goteo\Model {
                 27=>Text::get('青葉区'),
                 28=>Text::get('鶴見区')
             );
+        }
+        public static function getTotalInvestors($id){
+            $sql = "SELECT COUNT(id) FROM invest WHERE project = ? AND status IN ('0', '1', '3', '4')";
+            $query = self::query($sql, array($id));
+            return ($query->fetchColumn());
         }
     }
 
