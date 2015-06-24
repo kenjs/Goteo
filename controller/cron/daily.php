@@ -240,11 +240,12 @@ namespace Goteo\Controller\Cron {
                     
                     // veamos si ya le avisamos hace una semana
                     // Si ya se mandó esta plantilla (al llegar a los 20 por primera vez) no se envía de nuevo
+                    $now_local = \Goteo\Core\Model::localNow();
                     $sql = "
                         SELECT
                             id,
                             DATE_FORMAT(
-                                from_unixtime(unix_timestamp(now()) - unix_timestamp(date))
+                                from_unixtime(unix_timestamp('${now_local}') - unix_timestamp(date))
                                 , '%j'
                             ) as days
                         FROM mail
@@ -259,7 +260,7 @@ namespace Goteo\Controller\Cron {
                         $sql = "
                             SELECT
                                 DATE_FORMAT(
-                                    from_unixtime(unix_timestamp(now()) - unix_timestamp(date))
+                                    from_unixtime(unix_timestamp('${now_local}') - unix_timestamp(date))
                                     , '%j'
                                 ) as days
                             FROM post

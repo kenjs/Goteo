@@ -245,10 +245,11 @@ namespace Goteo\Library {
         *  Metodo para limpieza de envíos masivos enviados y sus destinatarios
         */
         static public function cleanOld() {
+            $now_local = Model::localNow();
 
             // eliminamos los envíos de hace más de dos días
             Model::query("DELETE FROM mailer_content WHERE active = 0
-             AND DATE_FORMAT(from_unixtime(unix_timestamp(now()) - unix_timestamp(datetime)), '%j') > 2");
+             AND DATE_FORMAT(from_unixtime(unix_timestamp('${now_local}') - unix_timestamp(datetime)), '%j') > 2");
             // eliminamos los destinatarios
             Model::query("DELETE FROM mailer_send WHERE mailing NOT IN (SELECT id FROM mailer_content)");
 

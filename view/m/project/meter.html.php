@@ -19,7 +19,6 @@
  */
 
 use Goteo\Library\Text,
-    Goteo\Model\Invest,
     Goteo\Model\Project;
 
 $level = (int) $this['level'] ?: 3;
@@ -33,7 +32,8 @@ $project = $this['project'];
 $minimum    = $project->mincost;
 $optimum    = $project->maxcost;
 $reached    = $project->invested;
-$supporters = count($project->investors);
+//$supporters = count($project->investors);
+$supporters = $project->getTotalInvestors($project->id);
 $days       = $project->days;
 
 // PHP la pifia (y mucho) con los cálculos en coma flotante

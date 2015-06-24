@@ -27,6 +27,7 @@ namespace Goteo\Controller\Cron {
     class Verify {
 
         public static function process ($debug = false) {
+            $now_local = \Goteo\Core\Model::localNow();
 
             // eliminamos ACL innecesario
             $sql = "DELETE FROM `acl` 
@@ -34,7 +35,7 @@ namespace Goteo\Controller\Cron {
                 AND role_id = 'user' 
                 AND user_id != '*' 
                 AND (url LIKE '%project/edit%'  OR url LIKE '%project/delete%') 
-                AND DATE_FORMAT(from_unixtime(unix_timestamp(now()) - unix_timestamp(`timestamp`)), '%j') > 30
+                AND DATE_FORMAT(from_unixtime(unix_timestamp('${now_local}') - unix_timestamp(`timestamp`)), '%j') > 30
                 ";
             
             // echo $sql . '<br />';
@@ -46,7 +47,7 @@ namespace Goteo\Controller\Cron {
             $sql1 = "DELETE 
                 FROM `feed` 
                 WHERE type != 'goteo' 
-                AND DATE_FORMAT(from_unixtime(unix_timestamp(now()) - unix_timestamp(`datetime`)), '%j') > 30
+                AND DATE_FORMAT(from_unixtime(unix_timestamp('${now_local}') - unix_timestamp(`datetime`)), '%j') > 30
                 AND (url NOT LIKE '%updates%' OR url IS NULL)
                 ";
             
@@ -59,7 +60,7 @@ namespace Goteo\Controller\Cron {
             $sql2 = "DELETE
                 FROM `mail` 
                 WHERE (template != 33 OR template IS NULL)
-                AND DATE_FORMAT(from_unixtime(unix_timestamp(now()) - unix_timestamp(`date`)), '%j') > 30
+                AND DATE_FORMAT(from_unixtime(unix_timestamp('${now_local}') - unix_timestamp(`date`)), '%j') > 30
                 ";
             
             // echo $sql2 . '<br />';
