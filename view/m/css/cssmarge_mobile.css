@@ -2039,7 +2039,7 @@ body.project-show div#sub-header div.project-menu.viewport_projectnav {
 }
 
 body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav {
-    width: 625px!important;
+    width: 650px!important;
 }
 
 body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_projectnav .item {
@@ -2058,7 +2058,7 @@ body.project-show div#sub-header div.project-menu.viewport_projectnav .flipsnap_
 
 /* dashboard navigation */
 body.dashboard div#main {
-    padding-top: 44px;
+    /*padding-top: 44px;*/
 }
 /*body.dashboard.project-edit div.submenu {
     position: fixed;
@@ -2287,6 +2287,7 @@ div.widget.project div.image {
     overflow: hidden;
     position: relative;
     width: 100%;
+    min-height: 180px;
 }
 
 div.widget.project div.image a img {
@@ -2446,6 +2447,12 @@ div.widget.project .skills {
 }
 div.widget.project .skills a {
     font-size: 11px;
+}
+
+div.widget.project-summary > .wants-skills .matched_skill
+{
+    font-size: 11px;
+    background-color:#f99;
 }
 
 div.widget.project > .title a:hover{
@@ -7644,6 +7651,13 @@ body.project-show div#main .project-updates div.widget.blog-comment a.preview{
     display: block;
     width: 60px;
     font-size: 12px;
+}
+
+body.project-show .project-updates #social_bookmark {
+    padding: 10px;
+}
+body.project-show .project-updates #social_bookmark > div {
+    float: left;
 }
 
 
