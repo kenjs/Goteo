@@ -85,8 +85,7 @@ jQuery(document).ready(function($) {
 </div>
 */?>
 
-<?php if(isset($_SESSION['messages'])) { include 'view/m/header/message.html.php'; } ?>
-
+<?php if(isset($_SESSION['messages'])) { include VIEW_PATH . '/header/message.html.php'; } ?>
 
     <div id="main">
         <div class="login">
@@ -114,7 +113,6 @@ jQuery(document).ready(function($) {
 
             </div>
         </div>
-
         <div class="external-login">
             <div>
                 <h2><?php echo Text::get('login-oneclick-header'); ?></h2>
