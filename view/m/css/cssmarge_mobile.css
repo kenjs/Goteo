@@ -1933,7 +1933,7 @@ footer
 }
 
 .foot_bar_wrapper {
-    height: 150px;
+    height: 120px;
     background-color: #e6e6e6;
 }
 
@@ -5459,6 +5459,7 @@ div.widget.project-support div.tagmark.twolines {
 ----------------------------------------------------------------------*/
 body.project-show div#main.threecols {
     padding: 0;
+    background-color: #e7e7e7;
 }
 
 div.widget.project-needs {
