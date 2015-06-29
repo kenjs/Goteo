@@ -33,11 +33,11 @@ $level = (int) $this['level'] ?: 3;
 		});
 		
 		//add fancybox on #a-preview click
-		$("#a-preview").fancybox({
-			'titlePosition'		: 'inside',
-			'transitionIn'		: 'none',
-			'transitionOut'		: 'none'
-		});
+//		$("#a-preview").fancybox({
+//			'titlePosition'		: 'inside',
+//			'transitionIn'		: 'none',
+//			'transitionOut'		: 'none'
+//		});
 	});
 
     function answer(id) {

@@ -33,11 +33,11 @@ $level = (int) $this['level'] ?: 3;
 		});
 		
 		//add fancybox on #a-preview click
-		$("#a-preview").fancybox({
-			'titlePosition'		: 'inside',
-			'transitionIn'		: 'none',
-			'transitionOut'		: 'none'
-		});
+//		$("#a-preview").fancybox({
+//			'titlePosition'		: 'inside',
+//			'transitionIn'		: 'none',
+//			'transitionOut'		: 'none'
+//		});
 	});
 </script>
 <?php if (!empty($_SESSION['user']->id) && $project->status >= 3) : ?>
