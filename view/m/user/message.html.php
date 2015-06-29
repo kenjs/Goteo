@@ -42,11 +42,11 @@ $_SESSION['msg_token'] = uniqid(rand(), true);
 		});
 
 		//add fancybox on #a-preview click
-		$("#a-preview").fancybox({
-			'titlePosition'		: 'inside',
-			'transitionIn'		: 'none',
-			'transitionOut'		: 'none'
-		});
+//		$("#a-preview").fancybox({
+//			'titlePosition'		: 'inside',
+//			'transitionIn'		: 'none',
+//			'transitionOut'		: 'none'
+//		});
 	});
 </script>
 
