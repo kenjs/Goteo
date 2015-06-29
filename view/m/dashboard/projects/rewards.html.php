@@ -241,12 +241,12 @@ switch ($order) {
                         $("#preview").html($("#message").val());
                     });
 
-                    //add fancybox on #a-preview click
-                    $("#a-preview").fancybox({
-                        'titlePosition'		: 'inside',
-                        'transitionIn'		: 'none',
-                        'transitionOut'		: 'none'
-                    });
+//                    //add fancybox on #a-preview click
+//                    $("#a-preview").fancybox({
+//                        'titlePosition'		: 'inside',
+//                        'transitionIn'		: 'none',
+//                        'transitionOut'		: 'none'
+//                    });
                 });
             </script>
             <div id="bocadillo"></div>
