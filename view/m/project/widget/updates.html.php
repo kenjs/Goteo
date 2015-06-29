@@ -86,7 +86,7 @@ $level = (int) $this['level'] ?: 3;
 						<li class="twitter"><a href="<?php echo htmlspecialchars($twitter_url) ?>" target="_blank"><?php echo Text::get('regular-twitter'); ?></a></li>
 						<li class="facebook"><a href="<?php echo htmlspecialchars($facebook_url) ?>" target="_blank"><?php echo Text::get('regular-facebook'); ?></a></li>
 					</ul>
-                    <div class="fb-comments" data-href="<?php echo $share_url; ?>" data-numposts="5" data-colorscheme="light" width="580"></div>
+<!--                    <div class="fb-comments" data-href="--><?php //echo $share_url; ?><!--" data-numposts="5" data-colorscheme="light" width="580"></div>-->
 					<div class="comments-num"><a href="/project/<?php echo $project->id; ?>/updates/<?php echo $post->id; ?>"><?php echo $post->num_comments > 0 ? $post->num_comments . ' ' .Text::get('blog-comments') : Text::get('blog-no_comments'); ?></a></div>
                 </div>
             <?php endwhile; ?>
@@ -132,7 +132,7 @@ $level = (int) $this['level'] ?: 3;
             </script>
 
             <div style="clear:both"></div>
-            <div class="fb-comments" data-href="<?php $permalink; ?>" data-numposts="5" data-colorscheme="light" width="620"></div>
+            <div class="fb-comments" data-href="<?php echo $permalink; ?>" data-numposts="5" data-colorscheme="light" width="620" style="float:none;"></div>
         </div><!-- #social_bookmark -->
     <?php endif; ?>
 </div>
