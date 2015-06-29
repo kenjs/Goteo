@@ -1933,12 +1933,13 @@ footer
 }
 
 .foot_bar_wrapper {
+    height: 150px;
     background-color: #e6e6e6;
 }
 
 .footer .foot_bar_inner {
     overflow: hidden;
-    width: 240px;
+    width: 250px;
     margin: 0 auto;
     color: #999999;
 }
@@ -1949,13 +1950,16 @@ footer
 }
 
 .footer .copyright {
-    float: right;
+    /*float: right;*/
     width: 100%;
-    margin-top: 16px;
     font-size: 12px;
     line-height: 24px;
     text-align: center;
     color: #666666;
+}
+
+.footer .copyright span {
+    font-size: 8px;
 }
 
 .footer .foot_bar_inner .three_center {
@@ -2305,13 +2309,13 @@ div.widget.project div.image div.tagmark {
     font-size: 1.0em;
     font-weight: normal;
     text-transform: uppercase;
-    width: 226px;
+    width: 200px;
     height: 31px;
     font-style: normal;
     letter-spacing: 1px;
     margin-top: 8px;
     line-height: 32px;
-    padding: 1px 0 0 30px;
+    padding: 1px 0 0 8px;
 }
 
 div.widget.project div.image div.tagmark.green {
