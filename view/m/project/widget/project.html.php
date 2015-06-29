@@ -40,11 +40,10 @@ $categories = Category::getNames($project->id, 2);
 if (isset($this['investor']) && is_object($this['investor'])) {
     $investor = $this['investor'];
     $invest = Invest::supported($investor->id, $project->id);
-    exit;
 }
 ?>
 <div class="widget project activable<?php if (isset($this['balloon'])) echo ' balloon' ?>">
-	<?/*<a href="<?php echo SITE_URL ?>/project/<?php echo $project->id ?>" class="expand"></a>*/?>
+	<a href="<?php echo SITE_URL ?>/project/<?php echo $project->id ?>" class="expand"></a>
     <?php if (isset($this['balloon'])): ?>
     <div class="balloon"><?php echo $this['balloon'] ?></div>
     <?php endif ?>

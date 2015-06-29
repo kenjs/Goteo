@@ -73,7 +73,6 @@ include 'view/m/header.html.php'; ?>
             <?php if (!empty($this['section']) && !empty($this['option'])) {
                 echo new View ('view/m/dashboard/'.$this['section'].'/'.$this['option'].'.html.php', $this);
             } ?>
-
         </div>
 <?php
 include 'view/m/footer.html.php';
