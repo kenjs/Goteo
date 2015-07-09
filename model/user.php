@@ -153,7 +153,7 @@ namespace Goteo\Model {
                         $mail->html = true;
                         $mail->template = $template->id;
                         if ($mail->send($errors)) {
-                            Message::Info(Text::get('register-confirm_mail-success'));
+//                            Message::Info(Text::get('register-confirm_mail-success'));
                         } else {
                             Message::Error(Text::get('register-confirm_mail-fail', GOTEO_MAIL));
                             Message::Error(implode('<br />', $errors));
