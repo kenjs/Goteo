@@ -167,7 +167,7 @@ if ($this['action'] == 'none') return;
                 'type'      => 'textarea',
                 'required'  => true,
                 'cols'      => 40,
-                'rows'      => 4,
+                'rows'      => 16,
 //                'title'     => 'Texto de la entrada',
                 'title'     => Text::get('project-updates-text'),
                 'hint'      => Text::get('tooltip-updates-text'),
