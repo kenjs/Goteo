@@ -209,6 +209,8 @@ namespace Goteo\Controller {
          */
         public function projects($option = 'summary', $action = 'list', $id = null) {
 
+            $jump_switch = false;
+
             $user = $_SESSION['user'];
 
             if(!isset($_SESSION['user']->roles['project_owner']) && !(isset($_SESSION['user']->roles['localadmin']) && $_SESSION['user']->home == LG_PLACE_NAME )) throw new Redirection('/dashboard/profile/');
@@ -263,8 +265,17 @@ namespace Goteo\Controller {
                     case 'updates':
                         // verificación: si no llega blog correcto no lo procesamos
                         if (empty($_POST['blog']) || $_POST['blog'] != $blog->id) throw new Redirection('/dashboard/projects/summary');
-                        
+                        if ($action === 'edit' || $action === 'add'){
+                            $jump_switch = true;
+                        }
+
                         list($action, $id) = Dashboard\Projects::process_updates($action, $project, $errors);
+                        if (($action === 'list') && ((bool)$_POST['publish']) && $jump_switch){
+                            $jump_switch = true;
+                        } else {
+                            $jump_switch = false;
+                        }
+
                         break;
                 }
             }
@@ -348,8 +359,15 @@ namespace Goteo\Controller {
                     $viewData['blog'] = $blog;
                     $viewData['posts'] = $posts;
                     $viewData['post'] = $post;
+                    if ($jump_switch){
+                        $_url = explode('/',$_SERVER['REQUEST_URI']);
+                        $_postid = $_url[ max(array_keys($_url)) ];
+                        if (!is_numeric($_postid)){
+                            $_postid = "";
+                        }
+                        throw new Redirection("/project/{$project->id}/updates/{$_postid}");
+                    }
                     break;
-
             }
 
             $viewData['project'] = $project;
