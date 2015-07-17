@@ -281,4 +281,4 @@ else {
 	define('GOTEO_FREE', true); // used somewhere...
 }
 
-$ua = $_SERVER['HTTP_USER_AGENT'];
+$ua = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : "";
