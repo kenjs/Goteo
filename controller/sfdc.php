@@ -20,12 +20,6 @@
 
 namespace Goteo\Controller {
 
-    // for SFDC
-    define('SFDC_EXPORT_FILE_PATH',"/var/www/html/localgood/cf.yokohama.localgood.jp.il3c.com/htdocs/data/sfdc");
-    define('SFDC_EXPORT_FILE_NAME_PROJ',"FM201DUI.csv");
-    define('SFDC_EXPORT_FILE_NAME_DONA',"FM101DUI.csv");
-    define('SFDC_EXPORT_FILE_NAME_USER',"FM101CUI.csv");
-
     use Goteo\Core\DB,
         Goteo\Core\Model,
         Goteo\Model\User,
