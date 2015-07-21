@@ -48,7 +48,7 @@ foreach ($project->errors as $st => $errors) {
         </ul>
         <?php endif ?>
     <?php else : ?>
-        <p><?php echo Text::get('form-errors-total', $total_errors) ?></p>
+        <p><?php echo ($total_errors > 0) ? Text::get('form-errors-total', $total_errors) : "エラーはありません"; ?></p>
         <?php foreach ($project->errors as $st => $errors)  :
             if (!empty($errors)) : ?>
             <h4 class="title"><?php echo Text::get('step-'.$st); ?></h4>

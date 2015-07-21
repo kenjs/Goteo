@@ -51,18 +51,19 @@ extract($_POST);
                 <p class="error"><?php echo $error; ?></p>
                 <?php endif ?>
                 <?php if (!empty($message)): ?>
-                <p><?php echo $message; ?></p>
+                <p class="sendmail"><?php echo $message; ?></p>
+                <?php else: ?>
+                    <form action="/user/recover" method="post">
+                        <div class="email">
+                            <label><?php echo Text::get('login-recover-email-field'); ?>
+                                <input type="text" name="email" value="<?php echo $email?>" /></label>
+                        </div>
+
+                        <input type="submit" name="recover" value="<?php echo Text::get('login-recover-button'); ?>" />
+
+                    </form>
                 <?php endif ?>
 
-                <form action="/user/recover" method="post">
-                    <div class="email">
-                        <label><?php echo Text::get('login-recover-email-field'); ?>
-                        <input type="text" name="email" value="<?php echo $email?>" /></label>
-                    </div>
-
-                    <input type="submit" name="recover" value="<?php echo Text::get('login-recover-button'); ?>" />
-
-                </form>
 
             </div>
         </div>
