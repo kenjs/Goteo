@@ -156,6 +156,9 @@ echo new SuperForm(array(
         'supports' => array(
             'type'      => 'group',
             'title'     => Text::get('supports-fields-support-title'),
+            'class'     => 'supports',
+            'errors'    => !empty($errors["supports"]) ? array($errors["supports"]) : array(),
+            'ok'        => !empty($okeys["supports"]) ? array($okeys["supports"]) : array(),
             // 'hint'      => Text::get('tooltip-project-supports'),
             'children'  => $supports + array(
                 'support-add' => array(

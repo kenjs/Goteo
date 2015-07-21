@@ -25,7 +25,6 @@ use Goteo\Core\View,
 $project = $this['project'];
 $types   = $this['types'];
 $errors = $project->errors ?: array();
-
 // miramos el pruimer paso con errores para mandarlo a ese
 $goto = 'view-step-userProfile';
 foreach ($this['steps'] as $id => $data) {
