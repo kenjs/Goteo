@@ -210,15 +210,25 @@ color:#20B3B2;
   
 <div class="disclaimer">
     <?/*<p class="title"><?php echo Text::get('mailer-disclaimer') ?></p>*/?>
-    <p class="goteo-url"><a href="<?php echo SITE_URL ?>" target="_blank">LOCAL GOOD YOKOHAMA</a>（横浜コミュニティデザイン・ラボ）</p>
-    <p class="descubre"><a href="<?php echo SITE_URL . '/discover' ?>"><?php echo Text::get('regular-discover'); ?></a></p>
-    <p class="crea"><a href="<?php echo LOCALGOOD_WP_BASE_URL . '/user_guide/' ?>"><?php echo Text::get('regular-create'); ?></a></p>
+    <p class="goteo-url"><a href="<?php echo SITE_URL ?>" target="_blank">LOCAL GOOD YOKOHAMA</a><?/*（横浜コミュニティデザイン・ラボ）*/?></p>
+    <?/*<p class="descubre"><a href="<?php echo SITE_URL . '/discover' ?>"><?php echo Text::get('regular-discover'); ?></a></p>
+    <p class="crea"><a href="<?php echo LOCALGOOD_WP_BASE_URL . '/user_guide/' ?>"><?php echo Text::get('regular-create'); ?></a></p>*/?>
+    <p>
+        このメールにお心当たりのない場合は、下記よりメールにてご連絡をお願いします。<br />
+        <a href="mailto:<? echo GOTEO_CONTACT_MAIL; ?>"><? echo GOTEO_CONTACT_MAIL; ?></a>
+    </p>
 </div>
 <div class="follow">ソーシャルリンク<?//php echo Text::get('mail-template-follow'); ?>:<br />
-  <span class="facebook"><a href="<?php echo Text::get('social-account-facebook') ?>">facebook</a></span> |  <span class="twitter"><a href="<?php echo Text::get('social-account-twitter') ?>">twitter</a></span> |   <span class="rss"><a rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo SITE_URL. '/rss' ?>">RSS</a></span></div>
-<p>※このメールには直接返送頂けません。</p>
+      <span class="facebook"><a href="<?php echo Text::get('social-account-facebook') ?>">facebook</a></span> |  <span class="twitter"><a href="<?php echo Text::get('social-account-twitter') ?>">twitter</a></span> |   <span class="rss"><a rel="alternate" type="application/rss+xml" title="RSS" href="<?php echo SITE_URL. '/rss' ?>">RSS</a></span></div>
+<p>
+    ※このメールに関するご要望等ございましたら、下記よりメールにてご連絡をお願いいたします。<br />
+    <a href="mailto:<? echo GOTEO_CONTACT_MAIL; ?>"><? echo GOTEO_CONTACT_MAIL; ?></a>
+</p>
+<div>※今後、本メッセージを受信しないようにする場合は、<a href="<?php echo SITE_URL ?>/dashboard/profile/preferences?email='<?$this['parts1'];?>'">こちらのリンク</a>より、送信設定を解除ください。</div>
 
-<div class="unsuscribe"><?php echo Text::html('mailer-baja', $this['baja']); ?></div>
+    <?
+    /*<div class="unsuscribe"><?php echo Text::html('mailer-baja', $this['baja']); ?></div>*/?>
+
 
 </div>
 

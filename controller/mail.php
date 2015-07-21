@@ -46,7 +46,7 @@ namespace Goteo\Controller {
                         if ($parts[1] == 'any') {
                             return new View ('view/email/newsletter.html.php', array('content'=>$content, 'baja' => ''));
                         } else {
-                                return new View ('view/email/goteo.html.php', array('content'=>$content, 'baja' => $baja));
+                            return new View ('view/email/goteo.html.php', array('content'=>$content, 'baja' => $baja, 'parts1' => $parts[1]));
                         }
                     }
                 }
