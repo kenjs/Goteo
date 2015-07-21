@@ -333,6 +333,7 @@ namespace Goteo\Controller {
                             if ($project->passed($errors)) {
                                 // se crea el registro de contrato
                                 // Recording contract is created
+/*
                                 if (Model\Contract::create($project->id, $errors)) {
                                     echo ' -> Ok:: se ha creado el registro de contrato';
                                 } else {
@@ -341,6 +342,7 @@ namespace Goteo\Controller {
                                         'Fallo al crear registro de contrato para el proyecto '.$project->name.': ' . implode(',', $errors));
                                     echo ' -> semi-Ok: se ha actualiuzado el estado del proyecto pero ha fallado al crear el registro de contrato. ERROR: ' . implode(',', $errors);
                                 }
+*/
                             } else {
                                 @mail(\GOTEO_FAIL_MAIL,
                                     'Fallo al marcar fecha de paso a segunda ronda ' . SITE_URL,
@@ -665,7 +667,6 @@ namespace Goteo\Controller {
 
             }
 
-
             // desbloqueamos
             if (unlink($block_file)) {
                 echo 'Cron '. __FUNCTION__ .' desbloqueado<br />';
@@ -917,7 +918,7 @@ namespace Goteo\Controller {
             Cron\Daily::Projects($debug);
 
             // subcontrolador progreso convocatorias
-            Cron\Daily::Calls($debug);
+//            Cron\Daily::Calls($debug);
             
             
             if ($debug) {
