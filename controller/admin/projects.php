@@ -32,10 +32,10 @@ namespace Goteo\Controller\Admin {
 
     class Projects {
 
-        public static function process ($action = 'list', $id = null, $filters = array()) {
-            
+        public static function process ($action = 'list', $id = null, $filters = array('filtered' => 'yes')) {
             $log_text = null;
             $errors = array();
+            $filters['filtered'] = 'yes';
 
             // multiples usos
             $nodes = array();
