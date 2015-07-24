@@ -29,8 +29,8 @@ namespace Goteo\Controller\Admin {
 
     class Invests {
 
-        public static function process ($action = 'list', $id = null, $filters = array()) {
-
+        public static function process ($action = 'list', $id = null, $filters = array('filtered'=>'yes')) {
+            $filters['filtered'] = 'yes';
             $node = isset($_SESSION['admin_node']) ? $_SESSION['admin_node'] : \GOTEO_NODE;
             
             // métodos de pago

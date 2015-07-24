@@ -97,8 +97,8 @@ namespace Goteo\Controller\Admin {
         
         
         
-        public static function process ($action = 'list', $id = null, $filters = array(), $subaction = '') {
-
+        public static function process ($action = 'list', $id = null, $filters = array('filtered' => 'yes'), $subaction = '') {
+            $filters['filtered'] = 'yes';
             // multiples usos
             $nodes = array();
 
