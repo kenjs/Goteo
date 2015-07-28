@@ -28,7 +28,7 @@ namespace Goteo\Controller {
     class SFDC extends \Goteo\Core\Controller
     {
         // -------------------------------------------------------------------
-        // CSVデータをShift_JIS(CP932)に変換する関数
+        // CSVデータ出力(array to csv)
         // -------------------------------------------------------------------
         private function arr2csv($fields) {
             $fp = fopen('php://temp', 'r+b');
@@ -85,9 +85,7 @@ namespace Goteo\Controller {
                 }// end foreach
             }// end if
             if($chk) $chk = fwrite($fp, $str);
-            if($chk) $chk = fwrite($fp, "\n");          // なぜか CR+LF ではなく"CRとLF"が入ってしまうので次の行で置換している
-//            if($chk) $chk = strtr($chk, "\n", "\r\n");
-
+            if($chk) $chk = fwrite($fp, "\n");
             return $chk;
         }
 
@@ -171,10 +169,6 @@ namespace Goteo\Controller {
                 }
                 $_csv[] = $_assoc_row;
             }
-
-//            header("Content-Type: application/octet-stream");
-//            header("Content-Disposition: attachment; filename=$filename");
-//            echo self::arr2csv($_csv);
 
             $csv = self::arr2csv($_csv);
 //            $fp = fopen(SFDC_EXPORT_FILE_PATH . "/$filename", "ab");
