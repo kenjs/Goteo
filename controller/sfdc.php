@@ -216,7 +216,7 @@ namespace Goteo\Controller {
                 "project_id","project_name","project_category","project_area","project_owner_userID","skill_category","start_date","1st_end_date","2nd_start_date","end_date","project_status","least_price","target_price","del_flg"
             );
 
-            return self::output_csv($assoc_data, $csv_header, $_csv_header, SFDC_EXPORT_FILE_NAME_PROJ);
+            return self::output_csv($assoc_data, $csv_header, $_csv_header, LG_PLACE_NAME . '_' . SFDC_EXPORT_FILE_NAME_PROJ);
         }
 
         public function get_donate_info(){
@@ -249,7 +249,7 @@ namespace Goteo\Controller {
                 "donation_id","customer_id","real_name","project_id","support_category","return","zip_code","address","mail","donation_date","price","donation_status","del_flg"
             );
 
-            return self::output_csv($assoc_data, $csv_header, $_csv_header, SFDC_EXPORT_FILE_NAME_DONA);
+            return self::output_csv($assoc_data, $csv_header, $_csv_header, LG_PLACE_NAME . '_' . SFDC_EXPORT_FILE_NAME_DONA);
         }
 
         public function get_user_info(){
@@ -304,7 +304,7 @@ namespace Goteo\Controller {
                 'user_area_yokohama','user_area_fukuoka','user_area_kitaq'
             );
 
-            return self::output_csv($assoc_data, $csv_header, $_csv_header, SFDC_EXPORT_FILE_NAME_USER);
+            return self::output_csv($assoc_data, $csv_header, $_csv_header, LG_PLACE_NAME . '_' . SFDC_EXPORT_FILE_NAME_USER);
         }
 
     }
