@@ -32,12 +32,16 @@ namespace Goteo\Controller {
         // -------------------------------------------------------------------
         private function arr2csv($fields) {
             $fp = fopen('php://temp', 'r+b');
-            foreach($fields as $field) {
-                self::mb_fputcsv($fp, $field,',','"',true);
+            foreach($fields as $i => $field) {
+                if ($i === 0){
+                    fputcsv($fp, $field);
+                } else {
+                    self::mb_fputcsv($fp, $field,',','"',true);
+                }
             }
             rewind($fp);
             $tmp = str_replace(PHP_EOL, "\r\n", stream_get_contents($fp));
-            return mb_convert_encoding($tmp, 'SJIS-win', 'UTF-8');
+            return mb_convert_encoding($tmp, 'UTF-8', 'auto');
         }
 
         /*
@@ -82,7 +86,7 @@ namespace Goteo\Controller {
             }// end if
             if($chk) $chk = fwrite($fp, $str);
             if($chk) $chk = fwrite($fp, "\n");          // なぜか CR+LF ではなく"CRとLF"が入ってしまうので次の行で置換している
-            if($chk) $chk = strtr($chk, "\n", "\r\n");
+//            if($chk) $chk = strtr($chk, "\n", "\r\n");
 
             return $chk;
         }
@@ -92,7 +96,10 @@ namespace Goteo\Controller {
                 -1 => "処理未完了", 0 => "決済待ち（予約中）", 1 => "決済完了", 2 => "キャンセル", 3 => "支払われたプロジェクト", 4 => "プロジェクト不成立（未決済）"
             );
             $pj_stat_str = array(
-                -1 => "レビュー申請中", "0" => "キャンセル済", "1" => "編集中", "2" => "レビュー中", "3" => "掲載中", "4" => "金額達成", "5" => "お礼実施", "6" => "完了"
+                -1 => "レビュー申請中", 0 => "キャンセル済", 1 => "編集中", 2 => "レビュー中", 3 => "掲載中", 4 => "金額達成", 5 => "お礼実施", 6 => "完了"
+            );
+            $pj_area_str = array(
+                "yokohama" => "横浜", "kitaq" => "北九州", "fukuoka" => "福岡"
             );
 
             $_csv[] = $_csv_header;
@@ -122,11 +129,19 @@ namespace Goteo\Controller {
                     } elseif ($csv_hdr == "input_type"){
                         $_tmprow = "Goteo";
                     } elseif ($csv_hdr == "project_area"){
-                        $_tmprow = LG_PLACE_NAME;
+                        if (array_key_exists(LG_PLACE_NAME,$pj_area_str)){
+                            $_tmprow = $pj_area_str[LG_PLACE_NAME];
+                        }
                     } elseif ($csv_hdr == "target_price") {
                         if (intval($assoc_row[$orig_key]) > 0) {
                             $_tmprow = intval($assoc_row[$orig_key]) + intval($assoc_row['cost_req']);
                         }
+                    } elseif($csv_hdr == "user_area"){
+                        $_area = trim($assoc_row[$orig_key]);
+                        $_area = mb_ereg_replace("yokohama", "横浜", $_area);
+                        $_area = mb_ereg_replace("kitaq", "北九州", $_area);
+                        $_area = mb_ereg_replace("fukuoka", "福岡", $_area);
+                        $_tmprow = $_area;
                     } elseif ($csv_hdr == "user_area_yokohama" ) {
                         $hasstr = strpos($assoc_row["lg_user_area"],'yokohama');
                         $_tmprow = ($hasstr !== false) ? "TRUE" : "FALSE";
@@ -136,14 +151,21 @@ namespace Goteo\Controller {
                     } elseif ($csv_hdr == "user_area_fukuoka" ) {
                         $hasstr = strpos($assoc_row["lg_user_area"], 'fukuoka');
                         $_tmprow = ($hasstr !== false) ? "TRUE" : "FALSE";
-                    } elseif ($csv_hdr == "projectupdate_flg" || $csv_hdr == "returnmail_flg" || $csv_hdr == "projectblog_flg" || $csv_hdr == "newsletter_flg"){
+                    } elseif ($csv_hdr == "projectupdate_flg" || $csv_hdr == "returnmail_flg" || $csv_hdr == "projectblog_flg" || $csv_hdr == "newsletter_flg") {
                         if (!is_null($assoc_row[$orig_key])) {
                             $_tmprow = ($assoc_row[$orig_key] == "1") ? "TRUE" : "FALSE";
                         } else {
                             $_tmprow = "";
                         }
+                    } elseif ($csv_hdr == "zip_code"){
+                        // 数字（とダブルクォーテーション）以外は落とす
+                        $_tmprow = mb_ereg_replace("[^0-9\"\r\n]","",mb_convert_kana($assoc_row[$orig_key], "ns", "utf-8"));
                     } else {
                         $_tmprow = $assoc_row[$orig_key];
+                    }
+                    // 禁則文字を含むデータは空白に
+                    if (strpos($_tmprow,'"') !== false){
+                        $_tmprow = "";
                     }
                     $_assoc_row[] = $_tmprow;
                 }
@@ -155,7 +177,8 @@ namespace Goteo\Controller {
 //            echo self::arr2csv($_csv);
 
             $csv = self::arr2csv($_csv);
-            $fp = fopen(SFDC_EXPORT_FILE_PATH . "/$filename", "ab");
+//            $fp = fopen(SFDC_EXPORT_FILE_PATH . "/$filename", "ab");
+            $fp = fopen(SFDC_EXPORT_FILE_PATH . "/$filename", "wb");
             $written = fwrite($fp, $csv);
             fclose($fp);
 
@@ -283,8 +306,8 @@ namespace Goteo\Controller {
                 "user_area_kitaq" => "user_area_kitaq"
             );
             $_csv_header = array(
-                'customer_id','user_name','user_realname','input_type','zip_code','address','tel','mail','project_category','skill_category','user_area','projectupdate_flg ','returnmail_flg','projectblog_flg ','newsletter_flg','del_flg',
-                "user_area_yokohama","user_area_fukuoka","user_area_kitaq"
+                'customer_id','user_name','user_realname','input_type','zip_code','address','tel','mail','project_category','skill_category','user_area','projectupdate_flg','returnmail_flg','projectblog_flg','newsletter_flg','del_flg',
+                'user_area_yokohama','user_area_fukuoka','user_area_kitaq'
             );
 
             return self::output_csv($assoc_data, $csv_header, $_csv_header, SFDC_EXPORT_FILE_NAME_USER);
