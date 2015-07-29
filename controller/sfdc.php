@@ -115,7 +115,11 @@ namespace Goteo\Controller {
                             $_tmprow = $pj_stat_str[intval($assoc_row[$orig_key])];
                         }
                     } elseif ($csv_hdr == "del_flg"){
-                        $_tmprow = "";
+                        if ($assoc_row['id'] !== "root"){
+                            $_tmprow = ($assoc_row[$orig_key] == 1) ? "TRUE" : "FALSE";
+                        } else {
+                            $_tmprow = "FALSE";
+                        }
                     } elseif (
                         ($csv_hdr == "start_date") || ($csv_hdr == "1st_end_date") || ($csv_hdr == "2nd_start_date") || ($csv_hdr == "end_date") || ($csv_hdr == "donation_date")
                     ){
@@ -263,7 +267,8 @@ namespace Goteo\Controller {
                             user_prefer.threads,
                             user_prefer.rounds,
                             user_prefer.mailing,
-                            user.confirmed
+                            user.confirmed,
+                            user.hide
                         FROM user INNER JOIN user_personal ON user.id = user_personal.user
                         LEFT JOIN ( user_interest INNER JOIN category ON user_interest.interest = category.id ) ON user.id = user_interest.user
                         LEFT JOIN ( user_skill INNER JOIN skill ON user_skill.skill = skill.id ) ON user.id = user_skill.user
@@ -294,7 +299,7 @@ namespace Goteo\Controller {
                 "threads" => "returnmail_flg",
                 "rounds" => "projectblog_flg",
                 "mailing" => "newsletter_flg",
-                "del_flg" => "del_flg",
+                "hide" => "del_flg",
                 "user_area_yokohama" => "user_area_yokohama",
                 "user_area_fukuoka" => "user_area_fukuoka",
                 "user_area_kitaq" => "user_area_kitaq"
@@ -304,7 +309,7 @@ namespace Goteo\Controller {
                 'user_area_yokohama','user_area_fukuoka','user_area_kitaq'
             );
 
-            return self::output_csv($assoc_data, $csv_header, $_csv_header, LG_PLACE_NAME . '_' . SFDC_EXPORT_FILE_NAME_USER);
+            return self::output_csv($assoc_data, $csv_header, $_csv_header, SFDC_EXPORT_FILE_NAME_USER);
         }
 
     }
