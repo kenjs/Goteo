@@ -613,7 +613,16 @@ class SocialAuth {
 		if($id = $query->fetchColumn()) {
 			foreach($this->tokens as $provider => $token) {
 				if($token['token']) {
-                    $_provider_id = empty($this->provider_id) ? OAUTH_TWITTER_DUMMY_ID : $this->provider_id;
+					if(empty($this->provider_id)){
+						if($this->provider == 'twitter'){
+							$_provider_id = $this->user_data['username'];
+						}else{
+							$this->last_error = "SNS認証に失敗しました。";
+							return false;
+						}
+					}else{
+						$_provider_id = $this->provider_id;
+					}
                     $query = Goteo\Core\Model::query("REPLACE INTO user_login (user,provider,oauth_token,oauth_token_secret,provider_id) VALUES (:user,:provider,:token,:secret,:provider_id)",array(':user'=>$goteouser,':provider'=>$provider,':token'=>$token['token'],':secret'=>$token['secret'],':provider_id' => $_provider_id));
 				}
 			}

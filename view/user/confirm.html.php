@@ -41,10 +41,6 @@ if(is_numeric($username) || empty($username)) $username = \Goteo\Core\Model::ide
 if(empty($username)) $username = strtok($email,"@");
 //Falta, si l'usuari existeix, suggerir un altre que estigui disponible...
 
-if ($oauth->original_provider == 'twitter'){
-    $oauth->provider_id = OAUTH_TWITTER_DUMMY_ID;
-}
-
 ?>
 <script type="text/javascript">
 jQuery(document).ready(function($) {
