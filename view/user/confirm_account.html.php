@@ -30,9 +30,6 @@ $user = $this['user'];
 //print_r($user);
 extract($oauth->user_data);
 
-if ($oauth->original_provider == 'twitter'){
-    $oauth->provider_id = OAUTH_TWITTER_DUMMY_ID;
-}
 
 ?>
 <?php if(isset($_SESSION['messages'])) { include 'view/header/message.html.php'; } ?>
