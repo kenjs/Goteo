@@ -62,15 +62,6 @@ if (!defined('OAUTH_LIBS')) {
 $static_dir = preg_replace('/\/[A-Za-z0-9.]+\.localgood/','/static.localgood',dirname(__FILE__));
 define('GOTEO_DATA_PATH', $static_dir . DIRECTORY_SEPARATOR . 'data' . DIRECTORY_SEPARATOR);
 
-/****************************************************
-SFDC
- ****************************************************/
-define('SFDC_EXPORT_FILE_PATH', GOTEO_PATH . "/data/sfdc");
-define('SFDC_EXPORT_FILE_NAME_PROJ',"FM201DUI.csv");
-define('SFDC_EXPORT_FILE_NAME_DONA',"FM101DUI.csv");
-define('SFDC_EXPORT_FILE_NAME_USER',"FM101CUI.csv");
-
-
 /**
  * Carga de configuraci�n local si existe
  * Si no se carga el real (si existe)
