@@ -345,8 +345,13 @@ namespace Goteo\Model {
 
                 // fecha final primera ronda (fecha campaña + 40)
                 if (!empty($project->published)) {
-                    $ptime = strtotime($project->published);
-                    $project->willpass = date('Y-m-d', \mktime(0, 0, 0, date('m', $ptime), date('d', $ptime)+40, date('Y', $ptime)));
+                    if ($project->round === 1){
+                        $ptime = strtotime($project->published);
+                        $project->willpass = date('Y-m-d', \mktime(0, 0, 0, date('m', $ptime), date('d', $ptime)+40, date('Y', $ptime)));
+                    } elseif ($project->round === 2 && !empty($project->passed)){
+                        $pdtime = strtotime($project->passed);
+                        $project->willpass = date('Y-m-d', \mktime(0, 0, 0, date('m', $pdtime), date('d', $pdtime)+40, date('Y', $pdtime)));
+                    }
                 }
 
                 //-----------------------------------------------------------------
