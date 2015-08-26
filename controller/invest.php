@@ -108,6 +108,11 @@ namespace Goteo\Controller {
                     $reward = true;
                 }
 
+                if ( $reward && (empty($_POST['fullname'])||empty($_POST['address']))){
+                    Message::Error(Text::get('invest-required-error'));
+                    throw new Redirection(SEC_URL."/project/$project/invest/?confirm=fail", Redirection::TEMPORARY);
+                }
+
                 // insertamos los datos personales del usuario si no tiene registro aun
                 Model\User::setPersonal($_SESSION['user']->id, $address, false);
 
