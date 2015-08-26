@@ -107,7 +107,7 @@ if ($step == 'start') : ?>
 <?php else : ?>
 <a name="continue"></a>
 <div class="widget project-invest address">
-    <h<?php echo $level ?> class="beak" id="address-header"><?php echo Text::get('invest-address-header') ?></h<?php echo $level ?>>
+    <h<?php echo $level ?> class="beak" id="address-header"><?php echo Text::get('invest-address-header'); ?></h<?php echo $level ?>>
     <table>
         <tr>
             <td>
