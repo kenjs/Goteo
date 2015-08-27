@@ -53,10 +53,10 @@ namespace Goteo\Library {
 //                throw new Exception('Fallo la lista de localizaciones');
 //            }
 
-            $_locations = Project::yokohamaLocation();
-            foreach ( $_locations as $_area ){
-                $results[md5($_area)] = $_area;
-            }
+//            $_locations = Project::yokohamaLocation();
+//            foreach ( $_locations as $_area ){
+//                $results[md5($_area)] = $_area;
+//            }
             return $results;
 		}
 
