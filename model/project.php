@@ -952,7 +952,7 @@ namespace Goteo\Model {
 
             // 7 - 関心のあるプロジェクトカテゴリ
             if (empty($this->user->interests)) {
-                $errors['userProfile']['interests'] = Text::get('カテゴリの選択は必須です。');
+                $errors['userProfile']['interests'] = Text::get('validate-user-field-category');
             } else {
                 $okeys['userProfile']['interests'] = 'ok';
                 ++$score;
@@ -960,7 +960,7 @@ namespace Goteo\Model {
 
             // 8 - スキル
             if (empty($this->user->skills)) {
-                $errors['userProfile']['skills'] = Text::get('スキルの選択は必須です。');
+                $errors['userProfile']['skills'] = Text::get('validate-user-field-skills');
             } else {
                 $okeys['userProfile']['skills'] = 'ok';
                 ++$score;
@@ -1369,7 +1369,7 @@ namespace Goteo\Model {
             $anyerror = false;
             foreach ($this->supports as $support) {
                 if (empty($support->support)) {
-                    $errors['supports']['support-'.$support->id.'-support'] = Text::get('スキル/物品名の入力は必須です');;
+                    $errors['supports']['support-'.$support->id.'-support'] = Text::get('validate-project-support-support');
                     $anyerror = !$anyerror ?: true;
                 }else {
                      $okeys['supports']['support-'.$support->id.'-support'] = 'ok';
@@ -1377,7 +1377,7 @@ namespace Goteo\Model {
                 }
 
                 if (empty($support->description)) {
-                    $errors['supports']['support-'.$support->id.'-description'] = Text::get('内容説明は必須です');;
+                    $errors['supports']['support-'.$support->id.'-description'] = Text::get('validate-project-support-description');;
                     $anyerror = !$anyerror ?: true;
                 }else{
                      $okeys['supports']['support-'.$support->id.'-description'] = 'ok';
@@ -1398,7 +1398,7 @@ namespace Goteo\Model {
                 }
 
                 if(!count($this->skills)){
-                    $errors['supports']['skills'] = Text::get('スキルを選択してください');
+                    $errors['supports']['skills'] = Text::get('validate-project-support-skills');
                 } else {
                     ++$score;
                 }
@@ -2492,6 +2492,7 @@ namespace Goteo\Model {
 
             return $errors;
         }
+/*
         public static function yokohamaLocation () {
             return array(
                 1=>Text::get('横浜市'),
@@ -2515,6 +2516,7 @@ namespace Goteo\Model {
                 28=>Text::get('鶴見区')
             );
         }
+*/
         public static function getTotalInvestors($id){
             $sql = "SELECT COUNT(id) FROM invest WHERE project = ? AND status IN ('0', '1', '3', '4')";
             $query = self::query($sql, array($id));
