@@ -156,11 +156,11 @@ array_walk($rewards, function (&$reward) { $reward = $reward->reward; });
     </dl>
 
     <?php if ($invest->method == 'paypal') : ?>
-        <?php if (!isset($_GET['full'])) : ?>
+        <?php /* if (!isset($_GET['full'])) : ?>
         <p>
             <a href="/admin/accounts/details/<?php echo $invest->id; ?>/?full=show"><?php echo Text::_("Mostrar detalles técnicos"); ?></a>
         </p>
-        <?php endif; ?>
+        <?php endif; */ ?>
 
         <?php if (!empty($invest->transaction)) : ?>
         <dl>
@@ -192,7 +192,7 @@ array_walk($rewards, function (&$reward) { $reward = $reward->reward; });
     } ?>
 </div>
 
-<?php if (isset($_GET['full']) && $_GET['full'] == 'show') : ?>
+<?php /* if (isset($_GET['full']) && $_GET['full'] == 'show') : ?>
 <div class="widget">
     <h3><?php echo Text::_("Detalles técnicos de la transaccion"); ?></h3>
     <?php if (!empty($invest->preapproval)) :
@@ -213,5 +213,5 @@ array_walk($rewards, function (&$reward) { $reward = $reward->reward; });
     </dl>
     <?php endif; ?>
 </div>
-<?php endif; ?>
+<?php endif; */ ?>
 

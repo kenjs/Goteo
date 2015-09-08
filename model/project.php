@@ -998,10 +998,6 @@ namespace Goteo\Model {
                 $okeys['userProfile']['twitter'] = 'ok';
             }
 
-            if (!empty($this->user->linkedin)) {
-                $okeys['userProfile']['linkedin'] = 'ok';
-            }
-
             //puntos
             $this->setScore($score, 9);
 //            $this->setScore($score, 10);

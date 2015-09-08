@@ -194,6 +194,7 @@ namespace Goteo\Controller\Admin {
 
                 // primero cancelar
                 switch ($invest->method) {
+/*
                     case 'paypal':
                         $err = array();
                         if (Paypal::cancelPreapproval($invest, $err)) {
@@ -210,6 +211,8 @@ namespace Goteo\Controller\Admin {
                             }
                         }
                         break;
+*/
+/*
                     case 'tpv':
                         $err = array();
                         if (Tpv::cancelPreapproval($invest, $err)) {
@@ -222,6 +225,7 @@ namespace Goteo\Controller\Admin {
                             $log_text = Text::_("El admin %s ha fallado al solicitar la cancelación del cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores:") . $txt_errors;
                         }
                         break;
+*/
                     case 'cash':
                         if ($invest->cancel()) {
                             $log_text = Text::_("El admin %s ha cancelado aporte manual de %s de %s (id: %s) al proyecto %s del dia %s");
@@ -403,6 +407,7 @@ namespace Goteo\Controller\Admin {
                 }
 
                 switch ($invest->method) {
+/*
                     case 'paypal':
                         $err = array();
                         if (Paypal::cancelPreapproval($invest, $err)) {
@@ -419,6 +424,8 @@ namespace Goteo\Controller\Admin {
                             }
                         }
                         break;
+*/
+                    /*
                     case 'tpv':
                         $err = array();
                         if (Tpv::cancelPreapproval($invest, $err)) {
@@ -431,6 +438,7 @@ namespace Goteo\Controller\Admin {
                             $log_text = Text::_("El admin %s ha fallado al solicitar la cancelación del cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores:") . $txt_errors;
                         }
                         break;
+                    */
                     case 'cash':
                         if ($invest->cancel()) {
                             $log_text = Text::_("El admin %s ha cancelado aporte manual de %s de %s (id: %s) al proyecto %s del dia %s");
@@ -478,6 +486,7 @@ namespace Goteo\Controller\Admin {
                 $userData = Model\User::get($invest->user);
 
                 switch ($invest->method) {
+/*
                     case 'paypal':
                         // a ver si tiene cuenta paypal
                         $projectAccount = Model\Project\Account::get($invest->project);
@@ -520,6 +529,8 @@ namespace Goteo\Controller\Admin {
                             $log_text = Text::_("El admin %s ha fallado al ejecutar el cargo a %s por su aporte de %s mediante PayPal (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores:") . $txt_errors;
                         }
                         break;
+*/
+                    /*
                     case 'tpv':
                         if (Tpv::pay($invest, $errors)) {
                             $errors[] = Text::_('Cargo sermepa correcto');
@@ -531,6 +542,7 @@ namespace Goteo\Controller\Admin {
                             $log_text = Text::_("El admin %s ha fallado al ejecutar el cargo a %s por su aporte de %s mediante TPV (id: %s) al proyecto %s del dia %s <br />Se han dado los siguientes errores:") . $txt_errors;
                         }
                         break;
+                    */
                     case 'cash':
                         $invest->setStatus('1');
                         $errors[] = Text::_('Aporte al contado, nada que ejecutar.');

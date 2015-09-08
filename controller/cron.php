@@ -25,7 +25,7 @@ namespace Goteo\Controller {
         Goteo\Library\Feed,
         Goteo\Library\Template,
         Goteo\Library\Mail,
-        Goteo\Library\Paypal,
+//        Goteo\Library\Paypal,
         Goteo\Library\Tpv;
 
     class Cron extends \Goteo\Core\Controller {
@@ -458,6 +458,7 @@ namespace Goteo\Controller {
                                         $log_text = Text::_("Failed to cancel");
                                     }
                                     break;
+/*
                                 case 'tpv':
                                     // se habre la operación en optra ventana
                                     $err = array();
@@ -468,6 +469,7 @@ namespace Goteo\Controller {
                                         $log_text = Text::_("Ha fallado al anular el cargo tpv de %s de %s mediante TPV (id: %s) al proyecto %s del dia %s. <br />Se han dado los siguientes errores: ") . $txt_errors;
                                     }
                                     break;
+*/
                                 case 'cash':
                                     if ($invest->cancel(true)) {
                                         $log_text = Text::_("Se ha cancelado aporte manual de %s de %s (id: %s) al proyecto %s del dia %s");
@@ -517,6 +519,7 @@ namespace Goteo\Controller {
                                         }
                                     }
                                     break;*/
+/*
                                 case 'paypal':
                                     if (empty($projectAccount->paypal)) {
                                         if ($debug) echo '<br />El proyecto '.$project->name.' no tiene cuenta paypal.<br />';
@@ -572,6 +575,7 @@ namespace Goteo\Controller {
                                         
                                     }
                                     break;
+*/
                                 case 'tpv':
                                     // los cargos con este tpv vienen ejecutados de base
                                     if ($debug) echo ' -> Ok';
@@ -843,7 +847,7 @@ namespace Goteo\Controller {
 
                 $userData = Model\User::getMini($invest->user);
                 echo 'Tratando: Aporte (id: '.$invest->id.') de '.$userData->name.' ['.$userData->email.']<br />';
-
+/*
                 if (Paypal::doPay($invest, $errors)) {
                     echo 'Aporte (id: '.$invest->id.') pagado al proyecto. Ver los detalles en la <a href="/admin/accounts/details/'.$invest->id.'">gestion de transacciones</a><br />';
                     $log_text = Text::_("Se ha realizado el pago de %s PayPal al proyecto %s por el aporte de %s (id: %s) del dia %s");
@@ -854,7 +858,7 @@ namespace Goteo\Controller {
                     $log_text = Text::_("Ha fallado al realizar el pago de %s PayPal al proyecto %s por el aporte de %s (id: %s) del dia %s");
                     Model\Invest::setDetail($invest->id, 'pay-failed', 'Fallo al realizar el pago secundario: ' . implode('<br />', $errors) . '. Proceso cron/doPay');
                 }
-
+*/
                 // Evento Feed
                 $log = new Feed();
                 $log->setTarget($projectData->id);

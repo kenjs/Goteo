@@ -253,12 +253,14 @@ namespace Goteo\Model {
                     case 'online': // Solo pagos online
                         $sqlFilter .= " AND (invest.method = 'tpv' OR invest.method = 'paypal')";
                         break;
+/*
                     case 'paypal': // Paypal pendientes o ok
                         $sqlFilter .= " AND (invest.method = 'paypal' AND (invest.status = -1 OR invest.status = 0))";
                         break;
                     case 'tpv': // Tpv pendientes o ok
                         $sqlFilter .= " AND (invest.method = 'tpv' AND (invest.status = -1 OR invest.status = 1))";
                         break;
+*/
                 }
             }
 
