@@ -80,6 +80,9 @@ Puedes usar el siguiente c&oacute;digo modificado con los credenciales adecuados
 mb_language("Japanese");
 mb_internal_encoding("UTF-8");
 
+// LG Base Name
+define('LG_PLACE_NAME','--lg-place-name--');
+
 // Metadata
 define('GOTEO_META_TITLE', '--meta-title--');
 define('GOTEO_META_DESCRIPTION', '--meta-description--');
@@ -103,8 +106,8 @@ define('GOTEO_DB_PASSWORD', 'db-password');
 define('COMMON_AUTH_DB_SCHEMA', 'db_auth');
 
 // Mail
-define('GOTEO_MAIL_FROM', 'localgood@yokohamalab.jp');
-define('GOTEO_MAIL_NAME', 'LOCAL GOOD YOKOHAMA');
+define('GOTEO_MAIL_FROM', '');
+define('GOTEO_MAIL_NAME', 'LOCAL NIPPON');
 define('GOTEO_MAIL_TYPE', 'smtp'); // mail, sendmail or smtp
 define('GOTEO_MAIL_SMTP_AUTH', true);
 define('GOTEO_MAIL_SMTP_SECURE', 'ssl');
@@ -113,10 +116,10 @@ define('GOTEO_MAIL_SMTP_PORT', --portnumber--);
 define('GOTEO_MAIL_SMTP_USERNAME', 'smtp-usermail');
 define('GOTEO_MAIL_SMTP_PASSWORD', 'smtp-password');
 
-define('GOTEO_MAIL', 'localgood@yokohamalab.jp');
-define('GOTEO_CONTACT_MAIL', 'localgood@yokohamalab.jp');
-define('GOTEO_FAIL_MAIL', 'localgood@yokohamalab.jp');
-define('GOTEO_LOG_MAIL', 'localgood@yokohamalab.jp');
+define('GOTEO_MAIL', '--localnippon-mail-address--');
+define('GOTEO_CONTACT_MAIL', '--localnippon-mail-address--');
+define('GOTEO_FAIL_MAIL', '--localnippon-mail-address--');
+define('GOTEO_LOG_MAIL', '--localnippon-mail-address--');
 
 //Quota de envio m�ximo para goteo en 24 horas
 define('GOTEO_MAIL_QUOTA', 50000);
@@ -139,9 +142,9 @@ define('GOTEO_GETTEXT_DOMAIN', 'messages');
 define('GOTEO_GETTEXT_BYPASS_CACHING', true);
 
 // url
-define('SITE_URL', 'http://yokohama.localgood.jp/'); // endpoint url
-define('SRC_URL', 'http://yokohama.localgood.jp/');  // host for statics
-define('SEC_URL', 'http://yokohama.localgood.jp/');  // with SSL certified
+define('SITE_URL', 'http://localfunding.muji.com/'); // endpoint url
+define('SRC_URL', 'http://localfunding.muji.com/');  // host for statics
+define('SEC_URL', 'http://localfunding.muji.com/');  // with SSL certified
 define('LOCALGOOD_WP_BASE_URL', '----wp site address----');
 define('LOG_PATH', '/var/www/html/localgood/cf.fukuoka.localgood.jp.il3c.com/htdocs/logs/');
 define('LG_INTEGRATION_URL', '----integration site url----');
@@ -152,45 +155,9 @@ define('LG_NAME', 'LOCAL GOOD FUKUOKA');
 //session handler: php, dynamodb
 define("SESSION_HANDLER", "php");
 
-//Files management: s3, file
-define("FILE_HANDLER", "file");
-
-//Log file management: s3, file
-define("LOG_HANDLER", "file");
-
-// environment: local, beta, real
-define("GOTEO_ENV", "local");
-
-//S3 bucket (if you set FILE_HANDLER to s3)
-define("AWS_S3_BUCKET", "static.example.com");
-define("AWS_S3_PREFIX", "");
-
-//bucket para logs (if you set LOG_HANDLER to s3)
-define("AWS_S3_LOG_BUCKET", "bucket");
-define("AWS_S3_LOG_PREFIX", "applogs/");
-
 // Cron params (for cron processes using wget)
 define('CRON_PARAM', '--------------');
 define('CRON_VALUE', '--------------');
-
-
-/****************************************************
-Paypal constants (sandbox)
-* Must set cretentials on library/paypal/paypal_config.php as well
-****************************************************/
-define('PAYPAL_REDIRECT_URL', '---Sandbox/Production-url-----https://www.sandbox.paypal.com/webscr&cmd=');
-define('PAYPAL_DEVELOPER_PORTAL', '--developper-domain--');
-define('PAYPAL_DEVICE_ID', '--domain--');
-define('PAYPAL_APPLICATION_ID', '--PayPal-app-Id---');
-define('PAYPAL_BUSINESS_ACCOUNT', '--mail-like-paypal-account--');
-define('PAYPAL_IP_ADDRESS', '127.0.0.1');
-
-/****************************************************
-TPV [Bank Name] (depends on your bank)
-****************************************************/
-define('TPV_MERCHANT_CODE', 'xxxxxxxxx');
-define('TPV_REDIRECT_URL', '--bank-rest-api-url--');
-define('TPV_ENCRYPT_KEY', 'xxxxxxxxx');
 
 /*
 Any other payment system configuration should be setted here
@@ -207,29 +174,22 @@ define('OAUTH_FACEBOOK_SECRET', '-----------------------------------'); //
 define('OAUTH_TWITTER_ID', '-----------------------------------'); //
 define('OAUTH_TWITTER_SECRET', '-----------------------------------'); //
 
-// Credentials Linkedin app
-define('OAUTH_LINKEDIN_ID', '-----------------------------------'); //
-define('OAUTH_LINKEDIN_SECRET', '-----------------------------------'); //
-
-// Un secreto inventado cualquiera para encriptar los emails que sirven de secreto en openid
-define('OAUTH_OPENID_SECRET','-----------------------------------');
-
 //SNS link
 define('LG_FACEBOOK_PAGE', '----facebook url----');
 define('LG_TWITTER', '----twitter url----');
-define('LG_GOOGLE_PLUS', '----google plus url----');
-
-// recaptcha ( to be used in /contact form )
-define('RECAPTCHA_PUBLIC_KEY','-----------------------------------');
-define('RECAPTCHA_PRIVATE_KEY','-----------------------------------');
 
 /****************************************************
 Google Analytics
 ****************************************************/
-define('GOTEO_ANALYTICS_TRACKER', "<script type=\"text/javascript\">
-__your_tracking_js_code_goes_here___
-</script>
-");
+define('GOTEO_ANALYTICS_TRACKER', "<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', '--your-tracking-ID--', 'auto');
+  ga('send', 'pageview');
+</script>");
 
 /****************************************************
 AWS
@@ -251,15 +211,10 @@ AXES
 define('AXES_CLIENTIP', '----------');
 
 /****************************************************
-CESIUM
- ****************************************************/
-define('LG_EARTHVIEW', 'http://map.yokohama.localgood.jp.il3c.com/');
-
-/****************************************************
 Change view type
  ****************************************************/
-\$ua = \$_SERVER['HTTP_USER_AGENT'];
-if(strpos(\$ua, 'LocalGood/iOS (Yokohama)') === 0 || strpos(\$ua, 'LocalGood/Android (Yokohama)') === 0 ) {
+\$ua = isset(\$_SERVER['HTTP_USER_AGENT']) ? \$_SERVER['HTTP_USER_AGENT'] : "";
+if( !empty(\$ua) && ( preg_match('/iPod|iPhone/i', \$_SERVER['HTTP_USER_AGENT']) === 1 || preg_match('/Android.+Mobile/i', \$_SERVER['HTTP_USER_AGENT']) === 1 ) ) {
     define('PC_VIEW', false);
     define('VIEW_PATH', 'view/m');
 } else {
