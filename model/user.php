@@ -247,10 +247,6 @@ namespace Goteo\Model {
                         $data[':identica'] = $this->identica;
                     }
 
-                    if(isset($this->linkedin)) {
-                        $data[':linkedin'] = $this->linkedin;
-                    }
-
                     // Intereses
                     $interests = User\Interest::get($this->id);
                     if(!empty($this->interests)) {
@@ -461,9 +457,6 @@ namespace Goteo\Model {
             if (\str_replace(Text::get('regular-google-url'), '', $this->google) == '') $this->google = '';
             if (\str_replace(Text::get('regular-twitter-url'), '', $this->twitter) == '') $this->twitter = '';
             if (\str_replace(Text::get('regular-identica-url'), '', $this->identica) == '') $this->identica = '';
-            if (\str_replace(Text::get('regular-linkedin-url'), '', $this->linkedin) == '') $this->linkedin = '';
-
-
 
             return (empty($errors['email']) && empty($errors['password']));
         }
@@ -591,10 +584,7 @@ namespace Goteo\Model {
                         IFNULL(user_lang.contribution, user.contribution) as contribution,
                         IFNULL(user_lang.keywords, user.keywords) as keywords,
                         user.facebook as facebook,
-                        user.google as google,
                         user.twitter as twitter,
-                        user.identica as identica,
-                        user.linkedin as linkedin,
                         user.active as active,
                         user.confirmed as confirmed,
                         user.hide as hide,

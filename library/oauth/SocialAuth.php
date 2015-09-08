@@ -24,7 +24,7 @@ $dir = dirname(__FILE__);
 include_once("$dir/epioauth/EpiCurl.php");
 include_once("$dir/epioauth/EpiOAuth.php");
 include_once("$dir/epioauth/EpiTwitter.php");
-include_once("$dir/linkedinoauth.php");
+//include_once("$dir/linkedinoauth.php");
 include_once("$dir/facebook.class.php");
 include_once("$dir/openid.php");
 
@@ -49,10 +49,10 @@ class SocialAuth {
 	public $original_provider;
 	public $last_error = '';
 	//datos que se recopilan
-	public $user_data = array('username' => null, 'name' => null, 'email' => null, 'profile_image_url' => null, 'website' => null, 'about' => null, 'location'=>null,'twitter'=>null,'facebook'=>null,'google'=>null,'identica'=>null,'linkedin'=>null);
+	public $user_data = array('username' => null, 'name' => null, 'email' => null, 'profile_image_url' => null, 'website' => null, 'about' => null, 'location'=>null,'twitter'=>null,'facebook'=>null);
 	//datos que se importaran (si se puede) a la tabla 'user'
-	public $import_user_data = array('name', 'about', 'location', 'twitter', 'facebook', 'google', 'identica', 'linkedin');
-	public $tokens = array('twitter'=>array('token'=>'','secret'=>''), 'facebook'=>array('token'=>'','secret'=>''), 'linkedin'=>array('token'=>'','secret'=>''), 'openid'=>array('token'=>'','secret'=>'')); //secretos generados en el oauth
+	public $import_user_data = array('name', 'about', 'location', 'twitter', 'facebook');
+	public $tokens = array('twitter'=>array('token'=>'','secret'=>''), 'facebook'=>array('token'=>'','secret'=>''), 'openid'=>array('token'=>'','secret'=>'')); //secretos generados en el oauth
 
 	protected $twitter_id;
 	protected $twitter_secret;
@@ -84,11 +84,8 @@ class SocialAuth {
 		$this->twitter_secret = OAUTH_TWITTER_SECRET;
 		$this->facebook_id = OAUTH_FACEBOOK_ID;
 		$this->facebook_secret = OAUTH_FACEBOOK_SECRET;
-		$this->linkedin_id = OAUTH_LINKEDIN_ID;
-		$this->linkedin_secret = OAUTH_LINKEDIN_SECRET;
-		$this->openid_secret = OAUTH_OPENID_SECRET;
 
-		if(in_array($provider,array('twitter', 'facebook', 'linkedin'))) {
+		if(in_array($provider,array('twitter', 'facebook'))) {
 			$this->provider = $provider;
 			$this->original_provider = $provider;
 		}
@@ -111,9 +108,6 @@ class SocialAuth {
 				break;
 			case 'facebook':
 				return $this->authenticateFacebook();
-				break;
-			case 'linkedin':
-				return $this->authenticateLinkedin();
 				break;
 			case 'openid':
 				return $this->authenticateOpenid();
@@ -240,9 +234,6 @@ class SocialAuth {
 				break;
 			case 'facebook':
 				return $this->loginFacebook();
-				break;
-			case 'linkedin':
-				return $this->loginLinkedin();
 				break;
 			case 'openid':
 				return $this->loginOpenid();

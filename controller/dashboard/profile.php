@@ -46,9 +46,7 @@ namespace Goteo\Controller\Dashboard {
                 'user_contribution' => 'contribution',
                 'user_facebook' => 'facebook',
                 'user_google' => 'google',
-                'user_twitter' => 'twitter',
-                'user_identica' => 'identica',
-                'user_linkedin' => 'linkedin'
+                'user_twitter' => 'twitter'
             );
 
             foreach ($fields as $fieldPost => $fieldTable) {

@@ -435,7 +435,6 @@ namespace Goteo\Controller {
                 $user->contribution = $_POST['user_contribution'];
                 $user->twitter = $_POST['user_twitter'];
                 $user->facebook = $_POST['user_facebook'];
-                $user->linkedin = $_POST['user_linkedin'];
                 // Intereses
                 $user->interests = $_POST['user_interests'];
                 // Páginas Web
