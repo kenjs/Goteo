@@ -267,16 +267,6 @@ $sfid = 'sf-project-profile';
                     'ok'        => !empty($okeys['facebook']) ? array($okeys['facebook']) : array(),
                     'value'     => empty($user->facebook) ? Text::get('regular-facebook-url') : $user->facebook
                 ),
-                'user_google' => array(
-                    'type'      => 'textbox',
-                    'class'     => 'google',
-                    'size'      => 40,
-                    'title'     => Text::get('regular-google'),
-                    // 'hint'      => Text::get('tooltip-user-google'),
-                    'errors'    => !empty($errors['google']) ? array($errors['google']) : array(),
-                    'ok'        => !empty($okeys['google']) ? array($okeys['google']) : array(),
-                    'value'     => empty($user->google) ? Text::get('regular-google-url') : $user->google
-                ),
                 'user_twitter' => array(
                     'type'      => 'textbox',
                     'class'     => 'twitter',

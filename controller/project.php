@@ -610,7 +610,6 @@ namespace Goteo\Controller {
                 'user_keywords' => 'keywords',
                 'user_contribution' => 'contribution',
                 'user_facebook'=>'facebook',
-                'user_google'=>'google',
                 'user_twitter'=>'twitter'
             );
                         

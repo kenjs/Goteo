@@ -22,15 +22,12 @@ use Goteo\Library\Text;
 
 $user = $this['user']
 ?>
-<?php if (!empty($user->facebook) || !empty($user->google) || !empty($user->twitter)): ?>
+<?php if (!empty($user->facebook) || !empty($user->twitter)): ?>
 <div class="widget user-social">
     <h4 class="title"><?php echo Text::get('profile-social-header'); ?></h4>
     <ul>
         <?php if (!empty($user->facebook)): ?>
         <li class="facebook"><a href="<?php echo htmlspecialchars($user->facebook) ?>" target="_blank"><?php echo Text::get('regular-facebook'); ?></a></li>
-        <?php endif ?>
-        <?php if (!empty($user->google)): ?>
-        <li class="google"><a href="<?php echo htmlspecialchars($user->google) ?>" target="_blank"><?php echo Text::get('regular-google'); ?></a></li>
         <?php endif ?>
         <?php if (!empty($user->twitter)): ?>
         <li class="twitter"><a href="<?php echo htmlspecialchars($user->twitter) ?>" target="_blank"><?php echo Text::get('regular-twitter'); ?></a></li>

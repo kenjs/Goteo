@@ -47,10 +47,7 @@ namespace Goteo\Model {
             $confirmed,  // si no ha confirmado el email
             $hide, // si oculto no aparece su avatar en ninguna parte (pero sus aportes cuentan)
             $facebook,
-            $google,
             $twitter,
-            $identica,
-            $linkedin,
             $created,
             $modified,
             $home,
@@ -235,16 +232,8 @@ namespace Goteo\Model {
                         $data[':facebook'] = $this->facebook;
                     }
 
-                    if(isset($this->google)) {
-                        $data[':google'] = $this->google;
-                    }
-
                     if(isset($this->twitter)) {
                         $data[':twitter'] = $this->twitter;
-                    }
-
-                    if(isset($this->identica)) {
-                        $data[':identica'] = $this->identica;
                     }
 
                     // Intereses
@@ -454,9 +443,7 @@ namespace Goteo\Model {
             }
 
             if (\str_replace(Text::get('regular-facebook-url'), '', $this->facebook) == '') $this->facebook = '';
-            if (\str_replace(Text::get('regular-google-url'), '', $this->google) == '') $this->google = '';
             if (\str_replace(Text::get('regular-twitter-url'), '', $this->twitter) == '') $this->twitter = '';
-            if (\str_replace(Text::get('regular-identica-url'), '', $this->identica) == '') $this->identica = '';
 
             return (empty($errors['email']) && empty($errors['password']));
         }

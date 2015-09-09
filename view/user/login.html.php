@@ -64,13 +64,6 @@ if (empty($username) && isset($this['username'])) $username = $this['username'];
                 }
             });
 
-            //view more
-            $('.sign-in-with li.more a').click(function(){
-                $(this).parent().remove();
-                $('.sign-in-with li:hidden').slideDown();
-                return false;
-            });
-
         });
     </script>
 
@@ -139,11 +132,12 @@ if (empty($username) && isset($this['username'])) $username = $this['username'];
                     if($openid) {
                         $key = array_key_exists($openid,$logins) ? $openid : 'openid';
                         echo '<li class="'.strtolower($key).'">'.$logins[$key].'</li>';
-                        echo '<li class="more">&rarr;<a href="#">'.Text::get('login-signin-view-more').'</a></li>';
+//                        echo '<li class="more">&rarr;<a href="#">'.Text::get('login-signin-view-more').'</a></li>';
 
                     }
                     foreach($logins as $k => $v) {
-                        if($key != $k) echo '<li class="'.strtolower($k) .'"'. ( $openid ? ' style="display:none"' :'') .'>'.$v.'</li>';
+//                        if($key != $k) echo '<li class="'.strtolower($k) .'"'. ( $openid ? ' style="display:none"' :'') .'>'.$v.'</li>';
+                        if($key != $k) echo '<li class="'.strtolower($k) .'">'.$v.'</li>';
                     }
                     ?>
 
