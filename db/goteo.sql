@@ -62,7 +62,7 @@ CREATE TABLE `user` (
 -- Volcar la base de datos para la tabla `user`
 --
 
-INSERT INTO `user` VALUES('root', 'Sysadmin', '', '', '', '', '', 1, 91, '', '', '', '', '', '', 0, '', '', '', 1, 1, 'es', 'goteo');
+INSERT INTO `user` VALUES('root', 'Sysadmin', '', '', '$1$L0HUgg5m$BFHWQWxOD/L3ekMBEIMVU.', '', '', 1, 91, '', '', '', '', '', '', 0, '', '', '', 1, 1, 'ja', 'goteo');
 -- --------------------------------------------------------
 
 --
@@ -1680,6 +1680,8 @@ CREATE TABLE `template` (
 CREATE TABLE `template_lang` (
   `id` bigint(20) unsigned NOT NULL,
   `lang` varchar(2) NOT NULL,
+  `name` tinytext,
+  `purpose` tinytext,
   `title` tinytext,
   `text` text,
   UNIQUE KEY `id_lang` (`id`,`lang`)
