@@ -1391,6 +1391,18 @@ CREATE TABLE `project_lang` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `project_skill`
+--
+
+CREATE TABLE `project_skill` (
+  `project` varchar(50) NOT NULL,
+  `skill` int(12) NOT NULL,
+  PRIMARY KEY (`project`,`skill`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `promote`
 --
 
