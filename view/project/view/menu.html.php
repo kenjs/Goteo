@@ -32,8 +32,10 @@ $menu = array(
 <div class="project-menu">
     <ul>
         <?php
+//        var_dump($this['project']->status);
+//        exit;
         foreach ($menu as $id => $show):
-            if ($id == 'evaluation' && empty($this['evaluation'])){
+            if (($id == 'evaluation' && empty($this['evaluation'])) || ($id == 'evaluation' && ($this['project']->status < 4 ))){
                 continue;
             }
             ?>
