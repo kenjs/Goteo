@@ -694,10 +694,10 @@ namespace Goteo\Controller {
                 'location',
                 'country',
 //                'secondary_address',
-                'post_address',
-                'post_zipcode',
-                'post_location',
-                'post_country',
+//                'post_address',
+//                'post_zipcode',
+//                'post_location',
+//                'post_country',
             );
 
             $personalData = array();
