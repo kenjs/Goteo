@@ -693,7 +693,7 @@ namespace Goteo\Controller {
                 'zipcode',
                 'location',
                 'country',
-                'secondary_address',
+//                'secondary_address',
                 'post_address',
                 'post_zipcode',
                 'post_location',
@@ -708,14 +708,14 @@ namespace Goteo\Controller {
                     $personalData[$field] = $_POST[$field];
                 }
             }
-
+/*
             if (!$_POST['secondary_address']) {
                 $project->post_address = null;
                 $project->post_zipcode = null;
                 $project->post_location = null;
                 $project->post_country = null;
             }
-
+*/
             // actualizamos estos datos en los personales del usuario
             if (!empty ($personalData)) {
                 Model\User::setPersonal($project->owner, $personalData, true);
