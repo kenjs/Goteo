@@ -49,7 +49,8 @@
     </div>
     <div class="foot_bar_wrapper">
         <div class="foot_bar_inner cf">
-            <a class="three_left" href="http://sociofund.org/" target="_blank"><img src="/view/css/logo_socio_fund.png" alt="ソシオファンド北九州" /></a>
+            <a class="logo_1" href="http://sociofund.org/" target="_blank"><img src="/view/css/logo_socio_fund.png" alt="ソシオファンド北九州" /></a>
+            <a class="logo_4" href="https://goteo.org/" target="_blank"><img src="/view/css/logo-goteo-H-100.png" alt="Goteo" /></a>
             <p class="copyright">
                 <span>COPYRIGHT&copy; LOCAL GOOD KITAQ. Some rights reserved.</span>
             </p>
