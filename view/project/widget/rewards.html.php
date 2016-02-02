@@ -65,13 +65,15 @@ uasort($project->individual_rewards,
                             <div class="buttons">
                                 <a class="button violet supportit" href="/project/<?php echo $project->id; ?>/invest"><?php echo Text::get('regular-invest_it'); ?></a>
                             </div>
-                            <?/*php if (!empty($individual->units)) : ?>
+                            <?php if (!empty($individual->units)) : ?>
                     <strong><?php echo Text::get('project-rewards-individual_reward-limited'); ?></strong><br />
                     <?php $units = ($individual->units - $individual->taken);
-                    echo Text::html('project-rewards-individual_reward-units_left', $units); ?><br />
+                                echo $units;
+                    // echo Text::html('project-rewards-individual_reward-units_left', $units); ?><br />
                 <?php endif; ?>
+                            <?php /*
                 <div class="investors"><span class="taken"><?php echo $individual->taken; ?></span><?php echo Text::get('project-view-metter-investors'); ?></div>
-*/?>
+ */ ?>
                         </li>
                         <? $count++; ?>
                     <?php endforeach ?>
