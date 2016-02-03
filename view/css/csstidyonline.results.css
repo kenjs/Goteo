@@ -52,6 +52,10 @@ body.admin fieldset {
 	padding: 0;
 }
 
+body.admin input[type="text"].readonly {
+	color:#ccc;
+}
+
 fieldset {
 	display: inline-block;
 	background: transparent;
